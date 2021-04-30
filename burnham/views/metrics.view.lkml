@@ -522,5 +522,85 @@ view: metrics {
     type: count
   }
 
+  measure: counter__glean_error_io {
+    type: sum
+    sql: ${metrics__counter__glean_error_io} ;;
+  }
+
+  measure: counter__glean_error_io_client_count {
+    type: count_distinct
+    sql: case when ${metrics__counter__glean_error_io} > 0 then ${client_info__client_id} ;;
+  }
+
+  measure: counter__glean_error_preinit_tasks_overflow {
+    type: sum
+    sql: ${metrics__counter__glean_error_preinit_tasks_overflow} ;;
+  }
+
+  measure: counter__glean_error_preinit_tasks_overflow_client_count {
+    type: count_distinct
+    sql: case when ${metrics__counter__glean_error_preinit_tasks_overflow} > 0 then ${client_info__client_id} ;;
+  }
+
+  measure: counter__glean_time_invalid_timezone_offset {
+    type: sum
+    sql: ${metrics__counter__glean_time_invalid_timezone_offset} ;;
+  }
+
+  measure: counter__glean_time_invalid_timezone_offset_client_count {
+    type: count_distinct
+    sql: case when ${metrics__counter__glean_time_invalid_timezone_offset} > 0 then ${client_info__client_id} ;;
+  }
+
+  measure: counter__glean_upload_deleted_pings_after_quota_hit {
+    type: sum
+    sql: ${metrics__counter__glean_upload_deleted_pings_after_quota_hit} ;;
+  }
+
+  measure: counter__glean_upload_deleted_pings_after_quota_hit_client_count {
+    type: count_distinct
+    sql: case when ${metrics__counter__glean_upload_deleted_pings_after_quota_hit} > 0 then ${client_info__client_id} ;;
+  }
+
+  measure: counter__glean_upload_pending_pings {
+    type: sum
+    sql: ${metrics__counter__glean_upload_pending_pings} ;;
+  }
+
+  measure: counter__glean_upload_pending_pings_client_count {
+    type: count_distinct
+    sql: case when ${metrics__counter__glean_upload_pending_pings} > 0 then ${client_info__client_id} ;;
+  }
+
+  measure: counter__glean_validation_app_forceclosed_count {
+    type: sum
+    sql: ${metrics__counter__glean_validation_app_forceclosed_count} ;;
+  }
+
+  measure: counter__glean_validation_app_forceclosed_count_client_count {
+    type: count_distinct
+    sql: case when ${metrics__counter__glean_validation_app_forceclosed_count} > 0 then ${client_info__client_id} ;;
+  }
+
+  measure: counter__glean_validation_baseline_ping_count {
+    type: sum
+    sql: ${metrics__counter__glean_validation_baseline_ping_count} ;;
+  }
+
+  measure: counter__glean_validation_baseline_ping_count_client_count {
+    type: count_distinct
+    sql: case when ${metrics__counter__glean_validation_baseline_ping_count} > 0 then ${client_info__client_id} ;;
+  }
+
+  measure: counter__glean_validation_foreground_count {
+    type: sum
+    sql: ${metrics__counter__glean_validation_foreground_count} ;;
+  }
+
+  measure: counter__glean_validation_foreground_count_client_count {
+    type: count_distinct
+    sql: case when ${metrics__counter__glean_validation_foreground_count} > 0 then ${client_info__client_id} ;;
+  }
+
   sql_table_name: `mozdata.burnham.metrics` ;;
 }

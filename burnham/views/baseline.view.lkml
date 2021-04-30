@@ -432,5 +432,15 @@ view: baseline {
     type: count
   }
 
+  measure: counter__glean_validation_metrics_ping_count {
+    type: sum
+    sql: ${metrics__counter__glean_validation_metrics_ping_count} ;;
+  }
+
+  measure: counter__glean_validation_metrics_ping_count_client_count {
+    type: count_distinct
+    sql: case when ${metrics__counter__glean_validation_metrics_ping_count} > 0 then ${client_info__client_id} ;;
+  }
+
   sql_table_name: `mozdata.burnham.baseline` ;;
 }
