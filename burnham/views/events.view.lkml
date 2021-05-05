@@ -227,7 +227,7 @@ view: events {
 
     link: {
       label: "Glean Dictionary reference for Jwe"
-      url: "https://dictionary.telemetry.mozilla.org/apps/events/metrics/jwe"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/jwe"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }

@@ -229,7 +229,7 @@ view: baseline {
 
     link: {
       label: "Glean Dictionary reference for Glean Validation Metrics Ping Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/baseline/metrics/glean_validation_metrics_ping_count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_metrics_ping_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -242,7 +242,7 @@ view: baseline {
 
     link: {
       label: "Glean Dictionary reference for Glean Validation First Run Hour"
-      url: "https://dictionary.telemetry.mozilla.org/apps/baseline/metrics/glean_validation_first_run_hour"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_first_run_hour"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -253,7 +253,7 @@ view: baseline {
 
     link: {
       label: "Glean Dictionary reference for Jwe"
-      url: "https://dictionary.telemetry.mozilla.org/apps/baseline/metrics/jwe"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/jwe"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -296,7 +296,7 @@ view: baseline {
 
     link: {
       label: "Glean Dictionary reference for Glean Baseline Locale"
-      url: "https://dictionary.telemetry.mozilla.org/apps/baseline/metrics/glean_baseline_locale"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_baseline_locale"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -309,7 +309,7 @@ view: baseline {
 
     link: {
       label: "Glean Dictionary reference for Time Unit"
-      url: "https://dictionary.telemetry.mozilla.org/apps/baseline/metrics/time_unit"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/time_unit"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -322,7 +322,7 @@ view: baseline {
 
     link: {
       label: "Glean Dictionary reference for Value"
-      url: "https://dictionary.telemetry.mozilla.org/apps/baseline/metrics/value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -474,7 +474,7 @@ view: baseline {
 
     link: {
       label: "Glean Dictionary reference for Glean Validation Metrics Ping Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/baseline/metrics/glean_validation_metrics_ping_count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_metrics_ping_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -485,7 +485,7 @@ view: baseline {
 
     link: {
       label: "Glean Dictionary reference for Glean Validation Metrics Ping Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/baseline/metrics/glean_validation_metrics_ping_count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_metrics_ping_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }

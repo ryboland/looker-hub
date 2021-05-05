@@ -229,7 +229,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Core Migration Successful"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_core_migration_successful"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_core_migration_successful"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -242,7 +242,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Error Preinit Tasks Timeout"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_error_preinit_tasks_timeout"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_error_preinit_tasks_timeout"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -255,7 +255,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Error Io"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_error_io"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_error_io"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -268,7 +268,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Error Preinit Tasks Overflow"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_error_preinit_tasks_overflow"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_error_preinit_tasks_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -281,7 +281,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Time Invalid Timezone Offset"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_time_invalid_timezone_offset"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_time_invalid_timezone_offset"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -294,7 +294,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Upload Deleted Pings After Quota Hit"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_upload_deleted_pings_after_quota_hit"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_upload_deleted_pings_after_quota_hit"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -307,7 +307,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Upload Pending Pings"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_upload_pending_pings"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_upload_pending_pings"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -320,7 +320,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Validation App Forceclosed Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_validation_app_forceclosed_count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_app_forceclosed_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -333,7 +333,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Validation Baseline Ping Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_validation_baseline_ping_count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_baseline_ping_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -346,7 +346,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Validation Foreground Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_validation_foreground_count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_foreground_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -359,7 +359,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Validation First Run Hour"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_validation_first_run_hour"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_first_run_hour"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -370,7 +370,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Jwe"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/jwe"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/jwe"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -418,7 +418,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Sum"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/sum"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -429,7 +429,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Values"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/values"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/values"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -442,7 +442,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Sum"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/sum"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -453,7 +453,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Values"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/values"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/values"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -466,7 +466,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Sum"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/sum"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -477,7 +477,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Values"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/values"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/values"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -490,7 +490,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Ping Reason"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/ping_reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/ping_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -642,7 +642,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Error Io"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_error_io"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_error_io"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -653,7 +653,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Error Io"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_error_io"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_error_io"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -664,7 +664,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Error Preinit Tasks Overflow"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_error_preinit_tasks_overflow"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_error_preinit_tasks_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -675,7 +675,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Error Preinit Tasks Overflow"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_error_preinit_tasks_overflow"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_error_preinit_tasks_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -686,7 +686,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Time Invalid Timezone Offset"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_time_invalid_timezone_offset"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_time_invalid_timezone_offset"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -697,7 +697,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Time Invalid Timezone Offset"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_time_invalid_timezone_offset"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_time_invalid_timezone_offset"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -708,7 +708,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Upload Deleted Pings After Quota Hit"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_upload_deleted_pings_after_quota_hit"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_upload_deleted_pings_after_quota_hit"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -719,7 +719,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Upload Deleted Pings After Quota Hit"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_upload_deleted_pings_after_quota_hit"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_upload_deleted_pings_after_quota_hit"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -730,7 +730,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Upload Pending Pings"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_upload_pending_pings"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_upload_pending_pings"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -741,7 +741,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Upload Pending Pings"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_upload_pending_pings"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_upload_pending_pings"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -752,7 +752,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Validation App Forceclosed Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_validation_app_forceclosed_count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_app_forceclosed_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -763,7 +763,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Validation App Forceclosed Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_validation_app_forceclosed_count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_app_forceclosed_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -774,7 +774,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Validation Baseline Ping Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_validation_baseline_ping_count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_baseline_ping_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -785,7 +785,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Validation Baseline Ping Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_validation_baseline_ping_count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_baseline_ping_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -796,7 +796,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Validation Foreground Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_validation_foreground_count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_foreground_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -807,7 +807,7 @@ view: metrics {
 
     link: {
       label: "Glean Dictionary reference for Glean Validation Foreground Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/metrics/metrics/glean_validation_foreground_count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_foreground_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
