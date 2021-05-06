@@ -1,82 +1,4 @@
-view: baseline {
-  dimension: metrics__timespan__glean_baseline_duration__value {
-    sql: ${TABLE}.metrics.timespan.glean_baseline_duration.value ;;
-    type: number
-    group_label: "Glean Baseline"
-    group_item_label: "Duration Value"
-
-    link: {
-      label: "Glean Dictionary reference for Glean Baseline Duration Value"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_baseline_duration"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
-  dimension: metrics__string__glean_baseline_locale {
-    sql: ${TABLE}.metrics.string.glean_baseline_locale ;;
-    type: string
-    group_label: "Glean Baseline"
-    group_item_label: "Locale"
-
-    link: {
-      label: "Glean Dictionary reference for Glean Baseline Locale"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_baseline_locale"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
-  dimension: metrics__datetime__glean_validation_first_run_hour {
-    sql: ${TABLE}.metrics.datetime.glean_validation_first_run_hour ;;
-    type: string
-    group_label: "Glean Validation"
-    group_item_label: "First Run Hour"
-
-    link: {
-      label: "Glean Dictionary reference for Glean Validation First Run Hour"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_first_run_hour"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
-  dimension: metrics__timespan__glean_baseline_duration__value {
-    sql: ${TABLE}.metrics.timespan.glean_baseline_duration.value ;;
-    type: number
-    group_label: "Glean Baseline"
-    group_item_label: "Duration Value"
-
-    link: {
-      label: "Glean Dictionary reference for Glean Baseline Duration Value"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_baseline_duration"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
-  dimension: metrics__string__glean_baseline_locale {
-    sql: ${TABLE}.metrics.string.glean_baseline_locale ;;
-    type: string
-    group_label: "Glean Baseline"
-    group_item_label: "Locale"
-
-    link: {
-      label: "Glean Dictionary reference for Glean Baseline Locale"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_baseline_locale"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
-  dimension: metrics__counter__glean_validation_metrics_ping_count {
-    sql: ${TABLE}.metrics.counter.glean_validation_metrics_ping_count ;;
-    type: number
-    group_label: "Glean Validation"
-    group_item_label: "Metrics Ping Count"
-
-    link: {
-      label: "Glean Dictionary reference for Glean Validation Metrics Ping Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_metrics_ping_count"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
+view: metrics_table {
   dimension: additional_properties {
     sql: ${TABLE}.additional_properties ;;
     type: string
@@ -299,6 +221,166 @@ view: baseline {
     group_item_label: "Version"
   }
 
+  dimension: metrics__boolean__glean_core_migration_successful {
+    sql: ${TABLE}.metrics.boolean.glean_core_migration_successful ;;
+    type: yesno
+    group_label: "Metrics Boolean"
+    group_item_label: "Glean Core Migration Successful"
+  }
+
+  dimension: metrics__boolean__glean_error_preinit_tasks_timeout {
+    sql: ${TABLE}.metrics.boolean.glean_error_preinit_tasks_timeout ;;
+    type: yesno
+    group_label: "Metrics Boolean"
+    group_item_label: "Glean Error Preinit Tasks Timeout"
+  }
+
+  dimension: metrics__counter__glean_error_io {
+    sql: ${TABLE}.metrics.counter.glean_error_io ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Glean Error Io"
+  }
+
+  dimension: metrics__counter__glean_error_preinit_tasks_overflow {
+    sql: ${TABLE}.metrics.counter.glean_error_preinit_tasks_overflow ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Glean Error Preinit Tasks Overflow"
+  }
+
+  dimension: metrics__counter__glean_time_invalid_timezone_offset {
+    sql: ${TABLE}.metrics.counter.glean_time_invalid_timezone_offset ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Glean Time Invalid Timezone Offset"
+  }
+
+  dimension: metrics__counter__glean_upload_deleted_pings_after_quota_hit {
+    sql: ${TABLE}.metrics.counter.glean_upload_deleted_pings_after_quota_hit ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Glean Upload Deleted Pings After Quota Hit"
+  }
+
+  dimension: metrics__counter__glean_upload_pending_pings {
+    sql: ${TABLE}.metrics.counter.glean_upload_pending_pings ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Glean Upload Pending Pings"
+  }
+
+  dimension: metrics__counter__glean_validation_app_forceclosed_count {
+    sql: ${TABLE}.metrics.counter.glean_validation_app_forceclosed_count ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Glean Validation App Forceclosed Count"
+  }
+
+  dimension: metrics__counter__glean_validation_baseline_ping_count {
+    sql: ${TABLE}.metrics.counter.glean_validation_baseline_ping_count ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Glean Validation Baseline Ping Count"
+  }
+
+  dimension: metrics__counter__glean_validation_foreground_count {
+    sql: ${TABLE}.metrics.counter.glean_validation_foreground_count ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Glean Validation Foreground Count"
+  }
+
+  dimension: metrics__datetime__glean_validation_first_run_hour {
+    sql: ${TABLE}.metrics.datetime.glean_validation_first_run_hour ;;
+    type: string
+    group_label: "Metrics Datetime"
+    group_item_label: "Glean Validation First Run Hour"
+  }
+
+  dimension: metrics__jwe {
+    sql: ${TABLE}.metrics.jwe ;;
+    hidden: yes
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_label {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
+    hidden: yes
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_overflow {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
+    hidden: yes
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_state {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
+    hidden: yes
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_value {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
+    hidden: yes
+  }
+
+  dimension: metrics__labeled_counter__glean_upload_ping_upload_failure {
+    sql: ${TABLE}.metrics.labeled_counter.glean_upload_ping_upload_failure ;;
+    hidden: yes
+  }
+
+  dimension: metrics__labeled_counter__glean_validation_pings_submitted {
+    sql: ${TABLE}.metrics.labeled_counter.glean_validation_pings_submitted ;;
+    hidden: yes
+  }
+
+  dimension: metrics__labeled_rate {
+    sql: ${TABLE}.metrics.labeled_rate ;;
+    hidden: yes
+  }
+
+  dimension: metrics__memory_distribution__glean_database_size__sum {
+    sql: ${TABLE}.metrics.memory_distribution.glean_database_size.sum ;;
+    type: number
+    group_label: "Metrics Memory Distribution Glean Database Size"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__memory_distribution__glean_database_size__values {
+    sql: ${TABLE}.metrics.memory_distribution.glean_database_size.values ;;
+    hidden: yes
+  }
+
+  dimension: metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__sum {
+    sql: ${TABLE}.metrics.memory_distribution.glean_upload_discarded_exceeding_pings_size.sum ;;
+    type: number
+    group_label: "Metrics Memory Distribution Glean Upload Discarded Exceeding Pings Size"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values {
+    sql: ${TABLE}.metrics.memory_distribution.glean_upload_discarded_exceeding_pings_size.values ;;
+    hidden: yes
+  }
+
+  dimension: metrics__memory_distribution__glean_upload_pending_pings_directory_size__sum {
+    sql: ${TABLE}.metrics.memory_distribution.glean_upload_pending_pings_directory_size.sum ;;
+    type: number
+    group_label: "Metrics Memory Distribution Glean Upload Pending Pings Directory Size"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__memory_distribution__glean_upload_pending_pings_directory_size__values {
+    sql: ${TABLE}.metrics.memory_distribution.glean_upload_pending_pings_directory_size.values ;;
+    hidden: yes
+  }
+
+  dimension: metrics__string__ping_reason {
+    sql: ${TABLE}.metrics.string.ping_reason ;;
+    type: string
+    group_label: "Metrics String"
+    group_item_label: "Ping Reason"
+  }
+
   dimension: normalized_app_name {
     sql: ${TABLE}.normalized_app_name ;;
     type: string
@@ -431,36 +513,5 @@ view: baseline {
     ]
   }
 
-  measure: clients {
-    type: count_distinct
-    sql: ${client_info__client_id} ;;
-  }
-
-  measure: ping_count {
-    type: count
-  }
-
-  measure: glean_validation_metrics_ping_count {
-    type: sum
-    sql: ${metrics__counter__glean_validation_metrics_ping_count} ;;
-
-    link: {
-      label: "Glean Dictionary reference for Glean Validation Metrics Ping Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_metrics_ping_count"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
-  measure: glean_validation_metrics_ping_count_client_count {
-    type: count_distinct
-    sql: case when ${metrics__counter__glean_validation_metrics_ping_count} > 0 then ${client_info__client_id} ;;
-
-    link: {
-      label: "Glean Dictionary reference for Glean Validation Metrics Ping Count"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_validation_metrics_ping_count"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
-  sql_table_name: `mozdata.burnham.baseline` ;;
+  sql_table_name: `mozdata.burnham.metrics` ;;
 }

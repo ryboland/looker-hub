@@ -25,19 +25,6 @@ view: discovery {
     }
   }
 
-  dimension: metrics__labeled_counter__technology_space_travel {
-    sql: ${TABLE}.metrics.labeled_counter.technology_space_travel ;;
-    type: string
-    group_label: "Technology"
-    group_item_label: "Space Travel"
-
-    link: {
-      label: "Glean Dictionary reference for Technology Space Travel"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/technology_space_travel"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
   dimension: metrics__string__test_burnham_mission {
     sql: ${TABLE}.metrics.string.test_burnham_mission ;;
     type: string
@@ -60,19 +47,6 @@ view: discovery {
     link: {
       label: "Glean Dictionary reference for Test Burnham Position"
       url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/test_burnham_position"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
-  dimension: metrics__labeled_counter__test_burnham_space_travel {
-    sql: ${TABLE}.metrics.labeled_counter.test_burnham_space_travel ;;
-    type: string
-    group_label: "Test Burnham"
-    group_item_label: "Space Travel"
-
-    link: {
-      label: "Glean Dictionary reference for Test Burnham Space Travel"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/test_burnham_space_travel"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -138,84 +112,6 @@ view: discovery {
     link: {
       label: "Glean Dictionary reference for Test Run"
       url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/test_run"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_label {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
-    type: string
-    group_label: "Glean Error"
-    group_item_label: "Invalid Label"
-
-    link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_error_invalid_label"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
-    type: string
-    group_label: "Glean Error"
-    group_item_label: "Invalid Overflow"
-
-    link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_error_invalid_overflow"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_state {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
-    type: string
-    group_label: "Glean Error"
-    group_item_label: "Invalid State"
-
-    link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_error_invalid_state"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_value {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
-    type: string
-    group_label: "Glean Error"
-    group_item_label: "Invalid Value"
-
-    link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_error_invalid_value"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_label {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
-    type: string
-    group_label: "Glean Error"
-    group_item_label: "Invalid Label"
-
-    link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_error_invalid_label"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_value {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
-    type: string
-    group_label: "Glean Error"
-    group_item_label: "Invalid Value"
-
-    link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
-      url: "https://dictionary.telemetry.mozilla.org/apps/burnham/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
