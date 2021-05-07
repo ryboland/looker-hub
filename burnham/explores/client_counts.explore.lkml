@@ -12,9 +12,8 @@ explore: client_counts {
 
   query: cohort_analysis {
     description: "Client Counts of weekly cohorts over the past N days."
-    dimension: days_since_first_seen
-    dimension: first_seen_week
-    measure: client_count
+    dimensions: [days_since_first_seen, first_seen_week]
+    measures: [client_count]
     pivots: [first_seen_week]
     filters: [
       submission_date: "8 weeks",
@@ -28,9 +27,8 @@ explore: client_counts {
 
   query: build_breakdown {
     description: "Number of clients per build."
-    dimension: submission_date
-    dimension: app_build
-    measure: client_count
+    dimensions: [submission_date, app_build]
+    measures: [client_count]
     pivots: [app_build]
     sorts: [
       submission_date: asc,
