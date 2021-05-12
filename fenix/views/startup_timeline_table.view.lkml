@@ -455,6 +455,7 @@ view: startup_timeline_table {
 
   parameter: channel {
     type: unquoted
+    default_value: "mozdata.org_mozilla_firefox.startup_timeline"
 
     allowed_value: {
       label: "Release"

@@ -434,6 +434,7 @@ view: installation_table {
 
   parameter: channel {
     type: unquoted
+    default_value: "mozdata.org_mozilla_firefox.installation"
 
     allowed_value: {
       label: "Release"

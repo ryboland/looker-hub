@@ -440,6 +440,7 @@ view: bookmarks_sync_table {
 
   parameter: channel {
     type: unquoted
+    default_value: "mozdata.org_mozilla_firefox.bookmarks_sync"
 
     allowed_value: {
       label: "Release"

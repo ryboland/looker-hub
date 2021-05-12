@@ -420,6 +420,7 @@ view: first_session_table {
 
   parameter: channel {
     type: unquoted
+    default_value: "mozdata.org_mozilla_firefox.first_session"
 
     allowed_value: {
       label: "Release"

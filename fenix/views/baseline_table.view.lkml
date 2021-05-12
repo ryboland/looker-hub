@@ -452,6 +452,7 @@ view: baseline_table {
 
   parameter: channel {
     type: unquoted
+    default_value: "mozdata.org_mozilla_firefox.baseline"
 
     allowed_value: {
       label: "Release"

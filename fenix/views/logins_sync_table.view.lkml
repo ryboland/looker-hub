@@ -435,6 +435,7 @@ view: logins_sync_table {
 
   parameter: channel {
     type: unquoted
+    default_value: "mozdata.org_mozilla_firefox.logins_sync"
 
     allowed_value: {
       label: "Release"

@@ -5939,6 +5939,7 @@ view: metrics_table {
 
   parameter: channel {
     type: unquoted
+    default_value: "mozdata.org_mozilla_firefox.metrics"
 
     allowed_value: {
       label: "Release"
