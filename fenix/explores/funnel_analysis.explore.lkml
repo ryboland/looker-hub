@@ -31,3 +31,7 @@ explore: funnel_analysis {
 
   sql_always_where: ${funnel_analysis.submission_date} >= '2010-01-01' ;;
 }
+
+explore: event_names {
+  hidden: yes
+}
