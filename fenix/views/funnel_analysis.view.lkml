@@ -80,7 +80,7 @@ view: funnel_analysis {
 
 view: event_types {
   derived_table: {
-    sql: SELECT mozfun.event_analysis.aggregate_match_strings( ARRAY_AGG( mozfun.event_analysis.event_index_to_match_string(index))) AS match_string FROM `mozdata.org_mozilla_firefox.event_types` WHERE {% condition category %} event_types.category {% endcondition %} AND {% condition event %} event_types.event {% endcondition %} ;;
+    sql: SELECT mozfun.event_analysis.aggregate_match_strings( ARRAY_AGG( mozfun.event_analysis.event_index_to_match_string(index))) AS match_string FROM `mozdata.org_mozilla_firefox.event_types` WHERE {% condition category %} category {% endcondition %} AND {% condition event %} event {% endcondition %} ;;
   }
 
   filter: category {
