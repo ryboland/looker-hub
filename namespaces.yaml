@@ -538,6 +538,7 @@ search:
   owners:
   - mmccorquodale@mozilla.com
   - xluo@mozilla.com
+  pretty_name: Search
   views:
     mobile_search_clients_engines_sources_daily:
       tables:
