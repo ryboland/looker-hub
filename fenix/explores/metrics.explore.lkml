@@ -31,11 +31,6 @@ explore: metrics {
     sql: CROSS JOIN UNNEST(${metrics.metrics__labeled_counter__engine_tab_kills}) AS metrics__metrics__labeled_counter__engine_tab_kills ;;
   }
 
-  join: metrics__metrics__labeled_counter__engine_tab_kills {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__labeled_counter__engine_tab_kills}) AS metrics__metrics__labeled_counter__engine_tab_kills ;;
-  }
-
   join: metrics__metrics__labeled_counter__metrics_search_count {
     relationship: one_to_many
     sql: CROSS JOIN UNNEST(${metrics.metrics__labeled_counter__metrics_search_count}) AS metrics__metrics__labeled_counter__metrics_search_count ;;
@@ -119,11 +114,6 @@ explore: metrics {
   join: metrics__metrics__labeled_counter__media_audio_backend {
     relationship: one_to_many
     sql: CROSS JOIN UNNEST(${metrics.metrics__labeled_counter__media_audio_backend}) AS metrics__metrics__labeled_counter__media_audio_backend ;;
-  }
-
-  join: metrics__metrics__labeled_counter__media_audio_init_failure {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__labeled_counter__media_audio_init_failure}) AS metrics__metrics__labeled_counter__media_audio_init_failure ;;
   }
 
   join: metrics__metrics__labeled_counter__media_audio_init_failure {

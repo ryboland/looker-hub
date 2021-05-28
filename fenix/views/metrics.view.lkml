@@ -133,8 +133,8 @@ at the time its content process got killed.
 
   dimension: metrics__labeled_counter__engine_tab_kills {
     sql: ${TABLE}.metrics.labeled_counter.engine_tab_kills ;;
-    group_label: "Engine"
-    group_item_label: "Tab Kills"
+    group_label: "Engine Tab"
+    group_item_label: "Kills"
 
     link: {
       label: "Glean Dictionary reference for Engine Tab Kills"
@@ -179,23 +179,6 @@ time its content process got killed.
 
     description: "Measures the age of the engine session of a foreground (selected) tab
 at the time its content process got killed.
-"
-  }
-
-  dimension: metrics__labeled_counter__engine_tab_kills {
-    sql: ${TABLE}.metrics.labeled_counter.engine_tab_kills ;;
-    group_label: "Engine Tab"
-    group_item_label: "Kills"
-
-    link: {
-      label: "Glean Dictionary reference for Engine Tab Kills"
-      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/engine_tab_kills"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-
-    hidden: yes
-    description: "How often was the content process of a foreground (selected) or
-background tab killed.
 "
   }
 
@@ -3063,22 +3046,6 @@ documented in the ping's pings.yaml file.
 
   dimension: metrics__labeled_counter__media_audio_init_failure {
     sql: ${TABLE}.metrics.labeled_counter.media_audio_init_failure ;;
-    group_label: "Media Audio"
-    group_item_label: "Init Failure"
-
-    link: {
-      label: "Glean Dictionary reference for Media Audio Init Failure"
-      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/media_audio_init_failure"
-      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
-    }
-
-    hidden: yes
-    description: "Failure occurs when initializing the audio stream.
-"
-  }
-
-  dimension: metrics__labeled_counter__media_audio_init_failure {
-    sql: ${TABLE}.metrics.labeled_counter.media_audio_init_failure ;;
     group_label: "Media"
     group_item_label: "Audio Init Failure"
 
@@ -4745,29 +4712,6 @@ view: metrics__metrics__labeled_counter__engine_tab_kills {
   }
 }
 
-view: metrics__metrics__labeled_counter__engine_tab_kills {
-  dimension: key {
-    type: string
-    sql: ${TABLE}.key ;;
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-
-  measure: count {
-    type: sum
-    sql: ${value} ;;
-  }
-
-  measure: client_count {
-    type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
-  }
-}
-
 view: metrics__metrics__labeled_counter__metrics_search_count {
   dimension: key {
     type: string
@@ -5137,29 +5081,6 @@ view: metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
 }
 
 view: metrics__metrics__labeled_counter__media_audio_backend {
-  dimension: key {
-    type: string
-    sql: ${TABLE}.key ;;
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-
-  measure: count {
-    type: sum
-    sql: ${value} ;;
-  }
-
-  measure: client_count {
-    type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
-  }
-}
-
-view: metrics__metrics__labeled_counter__media_audio_init_failure {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
