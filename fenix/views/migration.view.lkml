@@ -2377,10 +2377,6 @@ view: migration__metrics__labeled_counter__glean_error_invalid_label {
     type: count_distinct
     sql: case when ${value} > 0 then ${migration.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a metric was set with an invalid label.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: migration__metrics__labeled_counter__glean_error_invalid_overflow {
@@ -2404,10 +2400,6 @@ view: migration__metrics__labeled_counter__glean_error_invalid_overflow {
     type: count_distinct
     sql: case when ${value} > 0 then ${migration.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a metric was set a value that overflowed.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: migration__metrics__labeled_counter__glean_error_invalid_state {
@@ -2431,10 +2423,6 @@ view: migration__metrics__labeled_counter__glean_error_invalid_state {
     type: count_distinct
     sql: case when ${value} > 0 then ${migration.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a timing metric was used incorrectly.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: migration__metrics__labeled_counter__glean_error_invalid_value {
@@ -2458,10 +2446,6 @@ view: migration__metrics__labeled_counter__glean_error_invalid_value {
     type: count_distinct
     sql: case when ${value} > 0 then ${migration.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a metric was set to an invalid value.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: migration__metrics__labeled_counter__migration_bookmarks_migrated {
@@ -2485,9 +2469,6 @@ view: migration__metrics__labeled_counter__migration_bookmarks_migrated {
     type: count_distinct
     sql: case when ${value} > 0 then ${migration.client_info__client_id} ;;
   }
-
-  description: "Counters describing how bookmark migration went; should add-up to 'migration.bookmarks.detected'.
-"
 }
 
 view: migration__metrics__labeled_counter__migration_history_migrated {
@@ -2511,9 +2492,6 @@ view: migration__metrics__labeled_counter__migration_history_migrated {
     type: count_distinct
     sql: case when ${value} > 0 then ${migration.client_info__client_id} ;;
   }
-
-  description: "Counters describing how history migration went; should add-up to 'migration.history.detected'.
-"
 }
 
 view: migration__metrics__labeled_counter__migration_logins_failure_counts {
@@ -2537,7 +2515,4 @@ view: migration__metrics__labeled_counter__migration_logins_failure_counts {
     type: count_distinct
     sql: case when ${value} > 0 then ${migration.client_info__client_id} ;;
   }
-
-  description: "How many logins failed to be migrated, and in which ways?
-"
 }

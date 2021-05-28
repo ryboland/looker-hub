@@ -4674,10 +4674,6 @@ view: metrics__metrics__labeled_counter__browser_search_ad_clicks {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Records clicks of adverts on SERP pages.
-The key format is `<provider-name>`.
-"
 }
 
 view: metrics__metrics__labeled_counter__browser_search_in_content {
@@ -4701,9 +4697,6 @@ view: metrics__metrics__labeled_counter__browser_search_in_content {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Records the type of interaction a user has on SERP pages.
-"
 }
 
 view: metrics__metrics__labeled_counter__browser_search_with_ads {
@@ -4727,10 +4720,6 @@ view: metrics__metrics__labeled_counter__browser_search_with_ads {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Records counts of SERP pages with adverts displayed.
-The key format is `<provider-name>`.
-"
 }
 
 view: metrics__metrics__labeled_counter__engine_tab_kills {
@@ -4754,10 +4743,6 @@ view: metrics__metrics__labeled_counter__engine_tab_kills {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "How often was the content process of a foreground (selected) or
-background tab killed.
-"
 }
 
 view: metrics__metrics__labeled_counter__engine_tab_kills {
@@ -4781,10 +4766,6 @@ view: metrics__metrics__labeled_counter__engine_tab_kills {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "How often was the content process of a foreground (selected) or
-background tab killed.
-"
 }
 
 view: metrics__metrics__labeled_counter__metrics_search_count {
@@ -4808,18 +4789,6 @@ view: metrics__metrics__labeled_counter__metrics_search_count {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "The labels for this counter are `<search-engine-name>.<source>`.
-
-If the search engine is bundled with Fenix `search-engine-name` will be
-the name of the search engine. If it's a custom search engine (defined:
-https://github.com/mozilla-mobile/fenix/issues/1607) the value will be
-`custom`.
-
-`source` will be: `action`, `suggestion`, `widget`, `shortcut`, `topsite`
-(depending on the source from which the search started). Also added the
-`other` option for the source but it should never enter on this case.
-"
 }
 
 view: metrics__metrics__labeled_counter__perf_startup_startup_type {
@@ -4843,57 +4812,6 @@ view: metrics__metrics__labeled_counter__perf_startup_startup_type {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Indicates how the browser was started. The label is divided into two
-variables. `state` is how cached the browser is when started. `path` is
-what code path we are expected to take. Together, they create a combined
-label: `state_path`. For brevity, the specific states are documented in
-the [Fenix perf
-glossary](https://wiki.mozilla.org/index.php?title=Performance/Fenix/Glossary).
-<br><br>
-This implementation is intended to be simple, not comprehensive. We list
-the implications below.
-
-<br><br>
-These ways of opening the app undesirably adds events to our primary
-buckets (non-`unknown` cases):
-<br>- App switcher cold/warm: `cold/warm_` + duplicates path from
-previous launch
-<br>- Home screen shortcuts: `*_view`
-<br>- An Intent is sent internally that's uses `ACTION_MAIN` or
-`ACTION_VIEW` could be: `*_main/view` (unknown if this ever happens)
-<br>- A command-line launch uses `ACTION_MAIN` or `ACTION_VIEW` could be:
-`*_main/view`
-
-<br><br>
-These ways of opening the app undesirably do not add their events to our
-primary buckets:
-<br>- Close and reopen the app very quickly: no event is recorded.
-
-<br><br>
-These ways of opening the app don't affect our primary buckets:
-<br>- App switcher hot: `hot_unknown`
-<br>- PWA (all states): `unknown_unknown`
-<br>- Custom tab: `unknown_view`
-<br>- Cold start where a service or other non-activity starts the process
-(not manually tested) - this seems to happen if you have the homescreen
-widget: `unknown_*`
-<br>- Another activity is drawn before HomeActivity (e.g. widget voice
-search): `unknown_*`
-<br>- Widget text search: `*_unknown`
-
-<br><br>
-In addition to the events above, the `unknown` state may be chosen when we
-were unable to determine a cause due to implementation details or the API
-was used incorrectly. We may be able to record the events listed above
-into different buckets but we kept the implementation simple for now.
-<br><br>
-N.B.: for implementation simplicity, we duplicate the logic in app that
-determines `path` so it's not perfectly accurate. In one way, we record we
-is intended to happen rather than what actually happened (e.g. the user
-may click a link so we record VIEW but the app does a MAIN by going to the
-homescreen because the link was invalid).
-"
 }
 
 view: metrics__metrics__labeled_counter__glean_error_invalid_label {
@@ -4917,10 +4835,6 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_label {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a metric was set with an invalid label.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: metrics__metrics__labeled_counter__glean_error_invalid_overflow {
@@ -4944,10 +4858,6 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_overflow {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a metric was set a value that overflowed.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: metrics__metrics__labeled_counter__glean_error_invalid_state {
@@ -4971,10 +4881,6 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_state {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a timing metric was used incorrectly.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: metrics__metrics__labeled_counter__glean_error_invalid_value {
@@ -4998,10 +4904,6 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_value {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a metric was set to an invalid value.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
@@ -5025,11 +4927,6 @@ view: metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Counts the number of ping upload failures, by type of failure.
-This includes failures for all ping types,
-though the counts appear in the next successfully sent `metrics` ping.
-"
 }
 
 view: metrics__metrics__labeled_counter__glean_validation_pings_submitted {
@@ -5053,16 +4950,6 @@ view: metrics__metrics__labeled_counter__glean_validation_pings_submitted {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "A count of the pings submitted, by ping type.
-
-This metric appears in both the metrics and baseline pings.
-
-- On the metrics ping, the counts include the number of pings sent since
-  the last metrics ping (including the last metrics ping)
-- On the baseline ping, the counts include the number of pings send since
-  the last baseline ping (including the last baseline ping)
-"
 }
 
 view: metrics__metrics__labeled_counter__logins_store_read_query_error_count {
@@ -5086,9 +4973,6 @@ view: metrics__metrics__labeled_counter__logins_store_read_query_error_count {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "The total number of errors encountered during read operations on the logins store, labeled by type. It is intended to be used together with `read_query_count` to measure the overall error rate of read operations on the logins store.
-"
 }
 
 view: metrics__metrics__labeled_counter__logins_store_unlock_error_count {
@@ -5112,9 +4996,6 @@ view: metrics__metrics__labeled_counter__logins_store_unlock_error_count {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "The number of errors encountered when unlocking the logins store, labeled by type. It is intended to be used together with `unlock_count` to measure the overall error rate of unlocking the logins store.
-"
 }
 
 view: metrics__metrics__labeled_counter__logins_store_write_query_error_count {
@@ -5138,9 +5019,6 @@ view: metrics__metrics__labeled_counter__logins_store_write_query_error_count {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "The total number of errors encountered during write operations on the logins store, labeled by type. It is intended to be used together with `write_query_count` to measure the overall error rate of write operations on the logins store.
-"
 }
 
 view: metrics__metrics__labeled_counter__avif_bit_depth {
@@ -5164,9 +5042,6 @@ view: metrics__metrics__labeled_counter__avif_bit_depth {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Bits per pixel of AVIF image.
-"
 }
 
 view: metrics__metrics__labeled_counter__avif_decode_result {
@@ -5190,9 +5065,6 @@ view: metrics__metrics__labeled_counter__avif_decode_result {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Decode result of AVIF image.
-"
 }
 
 view: metrics__metrics__labeled_counter__avif_decoder {
@@ -5216,9 +5088,6 @@ view: metrics__metrics__labeled_counter__avif_decoder {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Decoder of AVIF image.
-"
 }
 
 view: metrics__metrics__labeled_counter__avif_yuv_color_space {
@@ -5242,9 +5111,6 @@ view: metrics__metrics__labeled_counter__avif_yuv_color_space {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "YUV color space of AVIF image.
-"
 }
 
 view: metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
@@ -5268,9 +5134,6 @@ view: metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "The reason that `gfx.content.frame_time.from_paint` recorded a slow (>200ms) result, if any.
-"
 }
 
 view: metrics__metrics__labeled_counter__media_audio_backend {
@@ -5294,9 +5157,6 @@ view: metrics__metrics__labeled_counter__media_audio_backend {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "The operating system audio backend
-"
 }
 
 view: metrics__metrics__labeled_counter__media_audio_init_failure {
@@ -5320,9 +5180,6 @@ view: metrics__metrics__labeled_counter__media_audio_init_failure {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Failure occurs when initializing the audio stream.
-"
 }
 
 view: metrics__metrics__labeled_counter__media_audio_init_failure {
@@ -5346,9 +5203,6 @@ view: metrics__metrics__labeled_counter__media_audio_init_failure {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Failure occurs when initializing the audio stream.
-"
 }
 
 view: metrics__metrics__labeled_counter__crash_metrics_crash_count {
@@ -5372,10 +5226,6 @@ view: metrics__metrics__labeled_counter__crash_metrics_crash_count {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "Counts the number of crashes that occur in the application. This measures only the counts of each crash in association with the labeled type of the crash. The labels correspond to the types of crashes handled by lib-crash.
-Deprecated: `native_code_crash` replaced by `fatal_native_code_crash` and `nonfatal_native_code_crash`
-"
 }
 
 view: metrics__metrics__labeled_counter__places_manager_read_query_error_count {
@@ -5399,9 +5249,6 @@ view: metrics__metrics__labeled_counter__places_manager_read_query_error_count {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "The total number of errors encountered during read operations on the places store, labeled by type. It is intended to be used together with `read_query_count` to measure the overall error rate of read operations on the places store.
-"
 }
 
 view: metrics__metrics__labeled_counter__places_manager_write_query_error_count {
@@ -5425,7 +5272,4 @@ view: metrics__metrics__labeled_counter__places_manager_write_query_error_count 
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
   }
-
-  description: "The total number of errors encountered during write operations on the places store, labeled by type. It is intended to be used together with `write_query_count` to measure the overall error rate of write operations on the places store.
-"
 }

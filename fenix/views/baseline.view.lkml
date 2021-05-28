@@ -712,10 +712,6 @@ view: baseline__metrics__labeled_counter__browser_search_ad_clicks {
     type: count_distinct
     sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
   }
-
-  description: "Records clicks of adverts on SERP pages.
-The key format is `<provider-name>`.
-"
 }
 
 view: baseline__metrics__labeled_counter__browser_search_in_content {
@@ -739,9 +735,6 @@ view: baseline__metrics__labeled_counter__browser_search_in_content {
     type: count_distinct
     sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
   }
-
-  description: "Records the type of interaction a user has on SERP pages.
-"
 }
 
 view: baseline__metrics__labeled_counter__browser_search_with_ads {
@@ -765,10 +758,6 @@ view: baseline__metrics__labeled_counter__browser_search_with_ads {
     type: count_distinct
     sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
   }
-
-  description: "Records counts of SERP pages with adverts displayed.
-The key format is `<provider-name>`.
-"
 }
 
 view: baseline__metrics__labeled_counter__metrics_search_count {
@@ -792,18 +781,6 @@ view: baseline__metrics__labeled_counter__metrics_search_count {
     type: count_distinct
     sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
   }
-
-  description: "The labels for this counter are `<search-engine-name>.<source>`.
-
-If the search engine is bundled with Fenix `search-engine-name` will be
-the name of the search engine. If it's a custom search engine (defined:
-https://github.com/mozilla-mobile/fenix/issues/1607) the value will be
-`custom`.
-
-`source` will be: `action`, `suggestion`, `widget`, `shortcut`, `topsite`
-(depending on the source from which the search started). Also added the
-`other` option for the source but it should never enter on this case.
-"
 }
 
 view: baseline__metrics__labeled_counter__glean_error_invalid_label {
@@ -827,10 +804,6 @@ view: baseline__metrics__labeled_counter__glean_error_invalid_label {
     type: count_distinct
     sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a metric was set with an invalid label.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: baseline__metrics__labeled_counter__glean_error_invalid_overflow {
@@ -854,10 +827,6 @@ view: baseline__metrics__labeled_counter__glean_error_invalid_overflow {
     type: count_distinct
     sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a metric was set a value that overflowed.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: baseline__metrics__labeled_counter__glean_error_invalid_state {
@@ -881,10 +850,6 @@ view: baseline__metrics__labeled_counter__glean_error_invalid_state {
     type: count_distinct
     sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a timing metric was used incorrectly.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: baseline__metrics__labeled_counter__glean_error_invalid_value {
@@ -908,10 +873,6 @@ view: baseline__metrics__labeled_counter__glean_error_invalid_value {
     type: count_distinct
     sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a metric was set to an invalid value.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: baseline__metrics__labeled_counter__glean_validation_pings_submitted {
@@ -935,14 +896,4 @@ view: baseline__metrics__labeled_counter__glean_validation_pings_submitted {
     type: count_distinct
     sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
   }
-
-  description: "A count of the pings submitted, by ping type.
-
-This metric appears in both the metrics and baseline pings.
-
-- On the metrics ping, the counts include the number of pings sent since
-  the last metrics ping (including the last metrics ping)
-- On the baseline ping, the counts include the number of pings send since
-  the last baseline ping (including the last baseline ping)
-"
 }

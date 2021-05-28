@@ -576,10 +576,6 @@ view: installation__metrics__labeled_counter__glean_error_invalid_label {
     type: count_distinct
     sql: case when ${value} > 0 then ${installation.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a metric was set with an invalid label.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: installation__metrics__labeled_counter__glean_error_invalid_overflow {
@@ -603,10 +599,6 @@ view: installation__metrics__labeled_counter__glean_error_invalid_overflow {
     type: count_distinct
     sql: case when ${value} > 0 then ${installation.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a metric was set a value that overflowed.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: installation__metrics__labeled_counter__glean_error_invalid_state {
@@ -630,10 +622,6 @@ view: installation__metrics__labeled_counter__glean_error_invalid_state {
     type: count_distinct
     sql: case when ${value} > 0 then ${installation.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a timing metric was used incorrectly.
-The labels are the `category.name` identifier of the metric.
-"
 }
 
 view: installation__metrics__labeled_counter__glean_error_invalid_value {
@@ -657,8 +645,4 @@ view: installation__metrics__labeled_counter__glean_error_invalid_value {
     type: count_distinct
     sql: case when ${value} > 0 then ${installation.client_info__client_id} ;;
   }
-
-  description: "Counts the number of times a metric was set to an invalid value.
-The labels are the `category.name` identifier of the metric.
-"
 }
