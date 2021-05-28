@@ -4621,6 +4621,8 @@ Deprecated: `native_code_crash` replaced by `fatal_native_code_crash` and `nonfa
 }
 
 view: metrics__metrics__labeled_counter__browser_search_ad_clicks {
+  label: "metrics__labeled_counter__browser_search_ad_clicks"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4644,6 +4646,8 @@ view: metrics__metrics__labeled_counter__browser_search_ad_clicks {
 }
 
 view: metrics__metrics__labeled_counter__browser_search_in_content {
+  label: "metrics__labeled_counter__browser_search_in_content"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4667,6 +4671,8 @@ view: metrics__metrics__labeled_counter__browser_search_in_content {
 }
 
 view: metrics__metrics__labeled_counter__browser_search_with_ads {
+  label: "metrics__labeled_counter__browser_search_with_ads"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4690,6 +4696,8 @@ view: metrics__metrics__labeled_counter__browser_search_with_ads {
 }
 
 view: metrics__metrics__labeled_counter__engine_tab_kills {
+  label: "metrics__labeled_counter__engine_tab_kills"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4713,6 +4721,8 @@ view: metrics__metrics__labeled_counter__engine_tab_kills {
 }
 
 view: metrics__metrics__labeled_counter__metrics_search_count {
+  label: "metrics__labeled_counter__metrics_search_count"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4736,6 +4746,8 @@ view: metrics__metrics__labeled_counter__metrics_search_count {
 }
 
 view: metrics__metrics__labeled_counter__perf_startup_startup_type {
+  label: "metrics__labeled_counter__perf_startup_startup_type"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4759,6 +4771,8 @@ view: metrics__metrics__labeled_counter__perf_startup_startup_type {
 }
 
 view: metrics__metrics__labeled_counter__glean_error_invalid_label {
+  label: "metrics__labeled_counter__glean_error_invalid_label"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4782,6 +4796,8 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_label {
 }
 
 view: metrics__metrics__labeled_counter__glean_error_invalid_overflow {
+  label: "metrics__labeled_counter__glean_error_invalid_overflow"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4805,6 +4821,8 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_overflow {
 }
 
 view: metrics__metrics__labeled_counter__glean_error_invalid_state {
+  label: "metrics__labeled_counter__glean_error_invalid_state"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4828,6 +4846,8 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_state {
 }
 
 view: metrics__metrics__labeled_counter__glean_error_invalid_value {
+  label: "metrics__labeled_counter__glean_error_invalid_value"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4851,6 +4871,8 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_value {
 }
 
 view: metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
+  label: "metrics__labeled_counter__glean_upload_ping_upload_failure"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4874,6 +4896,8 @@ view: metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
 }
 
 view: metrics__metrics__labeled_counter__glean_validation_pings_submitted {
+  label: "metrics__labeled_counter__glean_validation_pings_submitted"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4897,6 +4921,8 @@ view: metrics__metrics__labeled_counter__glean_validation_pings_submitted {
 }
 
 view: metrics__metrics__labeled_counter__logins_store_read_query_error_count {
+  label: "metrics__labeled_counter__logins_store_read_query_error_count"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4920,6 +4946,8 @@ view: metrics__metrics__labeled_counter__logins_store_read_query_error_count {
 }
 
 view: metrics__metrics__labeled_counter__logins_store_unlock_error_count {
+  label: "metrics__labeled_counter__logins_store_unlock_error_count"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4943,6 +4971,8 @@ view: metrics__metrics__labeled_counter__logins_store_unlock_error_count {
 }
 
 view: metrics__metrics__labeled_counter__logins_store_write_query_error_count {
+  label: "metrics__labeled_counter__logins_store_write_query_error_count"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4966,6 +4996,8 @@ view: metrics__metrics__labeled_counter__logins_store_write_query_error_count {
 }
 
 view: metrics__metrics__labeled_counter__avif_bit_depth {
+  label: "metrics__labeled_counter__avif_bit_depth"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -4989,6 +5021,8 @@ view: metrics__metrics__labeled_counter__avif_bit_depth {
 }
 
 view: metrics__metrics__labeled_counter__avif_decode_result {
+  label: "metrics__labeled_counter__avif_decode_result"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5012,6 +5046,8 @@ view: metrics__metrics__labeled_counter__avif_decode_result {
 }
 
 view: metrics__metrics__labeled_counter__avif_decoder {
+  label: "metrics__labeled_counter__avif_decoder"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5035,6 +5071,8 @@ view: metrics__metrics__labeled_counter__avif_decoder {
 }
 
 view: metrics__metrics__labeled_counter__avif_yuv_color_space {
+  label: "metrics__labeled_counter__avif_yuv_color_space"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5058,6 +5096,8 @@ view: metrics__metrics__labeled_counter__avif_yuv_color_space {
 }
 
 view: metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
+  label: "metrics__labeled_counter__gfx_content_frame_time_reason"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5081,6 +5121,8 @@ view: metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
 }
 
 view: metrics__metrics__labeled_counter__media_audio_backend {
+  label: "metrics__labeled_counter__media_audio_backend"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5104,6 +5146,8 @@ view: metrics__metrics__labeled_counter__media_audio_backend {
 }
 
 view: metrics__metrics__labeled_counter__media_audio_init_failure {
+  label: "metrics__labeled_counter__media_audio_init_failure"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5127,6 +5171,8 @@ view: metrics__metrics__labeled_counter__media_audio_init_failure {
 }
 
 view: metrics__metrics__labeled_counter__crash_metrics_crash_count {
+  label: "metrics__labeled_counter__crash_metrics_crash_count"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5150,6 +5196,8 @@ view: metrics__metrics__labeled_counter__crash_metrics_crash_count {
 }
 
 view: metrics__metrics__labeled_counter__places_manager_read_query_error_count {
+  label: "metrics__labeled_counter__places_manager_read_query_error_count"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5173,6 +5221,8 @@ view: metrics__metrics__labeled_counter__places_manager_read_query_error_count {
 }
 
 view: metrics__metrics__labeled_counter__places_manager_write_query_error_count {
+  label: "metrics__labeled_counter__places_manager_write_query_error_count"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;

@@ -2357,6 +2357,8 @@ The labels are the `category.name` identifier of the metric.
 }
 
 view: migration__metrics__labeled_counter__glean_error_invalid_label {
+  label: "metrics__labeled_counter__glean_error_invalid_label"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -2380,6 +2382,8 @@ view: migration__metrics__labeled_counter__glean_error_invalid_label {
 }
 
 view: migration__metrics__labeled_counter__glean_error_invalid_overflow {
+  label: "metrics__labeled_counter__glean_error_invalid_overflow"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -2403,6 +2407,8 @@ view: migration__metrics__labeled_counter__glean_error_invalid_overflow {
 }
 
 view: migration__metrics__labeled_counter__glean_error_invalid_state {
+  label: "metrics__labeled_counter__glean_error_invalid_state"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -2426,6 +2432,8 @@ view: migration__metrics__labeled_counter__glean_error_invalid_state {
 }
 
 view: migration__metrics__labeled_counter__glean_error_invalid_value {
+  label: "metrics__labeled_counter__glean_error_invalid_value"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -2449,6 +2457,8 @@ view: migration__metrics__labeled_counter__glean_error_invalid_value {
 }
 
 view: migration__metrics__labeled_counter__migration_bookmarks_migrated {
+  label: "metrics__labeled_counter__migration_bookmarks_migrated"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -2472,6 +2482,8 @@ view: migration__metrics__labeled_counter__migration_bookmarks_migrated {
 }
 
 view: migration__metrics__labeled_counter__migration_history_migrated {
+  label: "metrics__labeled_counter__migration_history_migrated"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -2495,6 +2507,8 @@ view: migration__metrics__labeled_counter__migration_history_migrated {
 }
 
 view: migration__metrics__labeled_counter__migration_logins_failure_counts {
+  label: "metrics__labeled_counter__migration_logins_failure_counts"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;

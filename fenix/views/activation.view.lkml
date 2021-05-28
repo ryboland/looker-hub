@@ -492,6 +492,8 @@ The labels are the `category.name` identifier of the metric.
 }
 
 view: activation__metrics__labeled_counter__glean_error_invalid_label {
+  label: "metrics__labeled_counter__glean_error_invalid_label"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -515,6 +517,8 @@ view: activation__metrics__labeled_counter__glean_error_invalid_label {
 }
 
 view: activation__metrics__labeled_counter__glean_error_invalid_overflow {
+  label: "metrics__labeled_counter__glean_error_invalid_overflow"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -538,6 +542,8 @@ view: activation__metrics__labeled_counter__glean_error_invalid_overflow {
 }
 
 view: activation__metrics__labeled_counter__glean_error_invalid_state {
+  label: "metrics__labeled_counter__glean_error_invalid_state"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -561,6 +567,8 @@ view: activation__metrics__labeled_counter__glean_error_invalid_state {
 }
 
 view: activation__metrics__labeled_counter__glean_error_invalid_value {
+  label: "metrics__labeled_counter__glean_error_invalid_value"
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
