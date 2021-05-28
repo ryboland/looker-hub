@@ -4639,7 +4639,7 @@ view: metrics__metrics__labeled_counter__browser_search_ad_clicks {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4662,7 +4662,7 @@ view: metrics__metrics__labeled_counter__browser_search_in_content {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4685,7 +4685,7 @@ view: metrics__metrics__labeled_counter__browser_search_with_ads {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4708,7 +4708,7 @@ view: metrics__metrics__labeled_counter__engine_tab_kills {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4731,7 +4731,7 @@ view: metrics__metrics__labeled_counter__metrics_search_count {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4754,7 +4754,7 @@ view: metrics__metrics__labeled_counter__perf_startup_startup_type {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4777,7 +4777,7 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_label {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4800,7 +4800,7 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_overflow {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4823,7 +4823,7 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_state {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4846,7 +4846,7 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_value {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4869,7 +4869,7 @@ view: metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4892,7 +4892,7 @@ view: metrics__metrics__labeled_counter__glean_validation_pings_submitted {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4915,7 +4915,7 @@ view: metrics__metrics__labeled_counter__logins_store_read_query_error_count {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4938,7 +4938,7 @@ view: metrics__metrics__labeled_counter__logins_store_unlock_error_count {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4961,7 +4961,7 @@ view: metrics__metrics__labeled_counter__logins_store_write_query_error_count {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -4984,7 +4984,7 @@ view: metrics__metrics__labeled_counter__avif_bit_depth {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -5007,7 +5007,7 @@ view: metrics__metrics__labeled_counter__avif_decode_result {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -5030,7 +5030,7 @@ view: metrics__metrics__labeled_counter__avif_decoder {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -5053,7 +5053,7 @@ view: metrics__metrics__labeled_counter__avif_yuv_color_space {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -5076,7 +5076,7 @@ view: metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -5099,7 +5099,7 @@ view: metrics__metrics__labeled_counter__media_audio_backend {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -5122,7 +5122,7 @@ view: metrics__metrics__labeled_counter__media_audio_init_failure {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -5145,7 +5145,7 @@ view: metrics__metrics__labeled_counter__crash_metrics_crash_count {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -5168,7 +5168,7 @@ view: metrics__metrics__labeled_counter__places_manager_read_query_error_count {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }
 
@@ -5191,6 +5191,6 @@ view: metrics__metrics__labeled_counter__places_manager_write_query_error_count 
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
   }
 }

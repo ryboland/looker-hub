@@ -2375,7 +2375,7 @@ view: migration__metrics__labeled_counter__glean_error_invalid_label {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${migration.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
   }
 }
 
@@ -2398,7 +2398,7 @@ view: migration__metrics__labeled_counter__glean_error_invalid_overflow {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${migration.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
   }
 }
 
@@ -2421,7 +2421,7 @@ view: migration__metrics__labeled_counter__glean_error_invalid_state {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${migration.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
   }
 }
 
@@ -2444,7 +2444,7 @@ view: migration__metrics__labeled_counter__glean_error_invalid_value {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${migration.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
   }
 }
 
@@ -2467,7 +2467,7 @@ view: migration__metrics__labeled_counter__migration_bookmarks_migrated {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${migration.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
   }
 }
 
@@ -2490,7 +2490,7 @@ view: migration__metrics__labeled_counter__migration_history_migrated {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${migration.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
   }
 }
 
@@ -2513,6 +2513,6 @@ view: migration__metrics__labeled_counter__migration_logins_failure_counts {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${migration.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
   }
 }

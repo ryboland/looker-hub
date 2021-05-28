@@ -710,7 +710,7 @@ view: baseline__metrics__labeled_counter__browser_search_ad_clicks {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${baseline.client_info__client_id} end ;;
   }
 }
 
@@ -733,7 +733,7 @@ view: baseline__metrics__labeled_counter__browser_search_in_content {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${baseline.client_info__client_id} end ;;
   }
 }
 
@@ -756,7 +756,7 @@ view: baseline__metrics__labeled_counter__browser_search_with_ads {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${baseline.client_info__client_id} end ;;
   }
 }
 
@@ -779,7 +779,7 @@ view: baseline__metrics__labeled_counter__metrics_search_count {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${baseline.client_info__client_id} end ;;
   }
 }
 
@@ -802,7 +802,7 @@ view: baseline__metrics__labeled_counter__glean_error_invalid_label {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${baseline.client_info__client_id} end ;;
   }
 }
 
@@ -825,7 +825,7 @@ view: baseline__metrics__labeled_counter__glean_error_invalid_overflow {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${baseline.client_info__client_id} end ;;
   }
 }
 
@@ -848,7 +848,7 @@ view: baseline__metrics__labeled_counter__glean_error_invalid_state {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${baseline.client_info__client_id} end ;;
   }
 }
 
@@ -871,7 +871,7 @@ view: baseline__metrics__labeled_counter__glean_error_invalid_value {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${baseline.client_info__client_id} end ;;
   }
 }
 
@@ -894,6 +894,6 @@ view: baseline__metrics__labeled_counter__glean_validation_pings_submitted {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${baseline.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${baseline.client_info__client_id} end ;;
   }
 }

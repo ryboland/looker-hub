@@ -574,7 +574,7 @@ view: installation__metrics__labeled_counter__glean_error_invalid_label {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${installation.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${installation.client_info__client_id} end ;;
   }
 }
 
@@ -597,7 +597,7 @@ view: installation__metrics__labeled_counter__glean_error_invalid_overflow {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${installation.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${installation.client_info__client_id} end ;;
   }
 }
 
@@ -620,7 +620,7 @@ view: installation__metrics__labeled_counter__glean_error_invalid_state {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${installation.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${installation.client_info__client_id} end ;;
   }
 }
 
@@ -643,6 +643,6 @@ view: installation__metrics__labeled_counter__glean_error_invalid_value {
 
   measure: client_count {
     type: count_distinct
-    sql: case when ${value} > 0 then ${installation.client_info__client_id} ;;
+    sql: case when ${value} > 0 then ${installation.client_info__client_id} end ;;
   }
 }
