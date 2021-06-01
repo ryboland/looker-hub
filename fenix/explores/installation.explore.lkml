@@ -30,4 +30,24 @@ explore: installation {
     relationship: one_to_many
     sql: CROSS JOIN UNNEST(${installation.metrics__labeled_counter__glean_error_invalid_value}) AS installation__metrics__labeled_counter__glean_error_invalid_value ;;
   }
+
+  join: suggest__installation__metrics__labeled_counter__glean_error_invalid_label {
+    relationship: one_to_many
+    sql: CROSS JOIN UNNEST(${installation.installation__metrics__labeled_counter__glean_error_invalid_label}) AS suggest__installation__metrics__labeled_counter__glean_error_invalid_label ;;
+  }
+
+  join: suggest__installation__metrics__labeled_counter__glean_error_invalid_overflow {
+    relationship: one_to_many
+    sql: CROSS JOIN UNNEST(${installation.installation__metrics__labeled_counter__glean_error_invalid_overflow}) AS suggest__installation__metrics__labeled_counter__glean_error_invalid_overflow ;;
+  }
+
+  join: suggest__installation__metrics__labeled_counter__glean_error_invalid_state {
+    relationship: one_to_many
+    sql: CROSS JOIN UNNEST(${installation.installation__metrics__labeled_counter__glean_error_invalid_state}) AS suggest__installation__metrics__labeled_counter__glean_error_invalid_state ;;
+  }
+
+  join: suggest__installation__metrics__labeled_counter__glean_error_invalid_value {
+    relationship: one_to_many
+    sql: CROSS JOIN UNNEST(${installation.installation__metrics__labeled_counter__glean_error_invalid_value}) AS suggest__installation__metrics__labeled_counter__glean_error_invalid_value ;;
+  }
 }

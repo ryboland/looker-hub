@@ -473,6 +473,78 @@ The labels are the `category.name` identifier of the metric.
   sql_table_name: `{% parameter channel %}` ;;
 }
 
+view: suggest__sync__metrics__labeled_counter__glean_error_invalid_label {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.sync,
+unnest(metrics.labeled_counter.glean_error_invalid_label) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__sync__metrics__labeled_counter__glean_error_invalid_overflow {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.sync,
+unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__sync__metrics__labeled_counter__glean_error_invalid_state {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.sync,
+unnest(metrics.labeled_counter.glean_error_invalid_state) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__sync__metrics__labeled_counter__glean_error_invalid_value {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.sync,
+unnest(metrics.labeled_counter.glean_error_invalid_value) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
 view: sync__metrics__labeled_counter__glean_error_invalid_label {
   label: "Labeled Counter Glean Error Invalid Label"
 

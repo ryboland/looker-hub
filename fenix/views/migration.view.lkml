@@ -2530,3 +2530,129 @@ view: migration__metrics__labeled_counter__migration_logins_failure_counts {
     sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
   }
 }
+
+view: suggest__migration__metrics__labeled_counter__glean_error_invalid_label {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox_beta.migration,
+unnest(metrics.labeled_counter.glean_error_invalid_label) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__migration__metrics__labeled_counter__glean_error_invalid_overflow {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox_beta.migration,
+unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__migration__metrics__labeled_counter__glean_error_invalid_state {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox_beta.migration,
+unnest(metrics.labeled_counter.glean_error_invalid_state) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__migration__metrics__labeled_counter__glean_error_invalid_value {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox_beta.migration,
+unnest(metrics.labeled_counter.glean_error_invalid_value) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__migration__metrics__labeled_counter__migration_bookmarks_migrated {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox_beta.migration,
+unnest(metrics.labeled_counter.migration_bookmarks_migrated) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__migration__metrics__labeled_counter__migration_history_migrated {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox_beta.migration,
+unnest(metrics.labeled_counter.migration_history_migrated) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__migration__metrics__labeled_counter__migration_logins_failure_counts {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox_beta.migration,
+unnest(metrics.labeled_counter.migration_logins_failure_counts) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}

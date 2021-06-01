@@ -4984,6 +4984,106 @@ Deprecated: `native_code_crash` replaced by `fatal_native_code_crash` and `nonfa
   sql_table_name: `{% parameter channel %}` ;;
 }
 
+view: metrics__metrics__labeled_counter__avif_bit_depth {
+  label: "Labeled Counter Avif Bit Depth"
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+  }
+}
+
+view: metrics__metrics__labeled_counter__avif_decode_result {
+  label: "Labeled Counter Avif Decode Result"
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+  }
+}
+
+view: metrics__metrics__labeled_counter__avif_decoder {
+  label: "Labeled Counter Avif Decoder"
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+  }
+}
+
+view: metrics__metrics__labeled_counter__avif_yuv_color_space {
+  label: "Labeled Counter Avif Yuv Color Space"
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+  }
+}
+
 view: metrics__metrics__labeled_counter__browser_search_ad_clicks {
   label: "Labeled Counter Browser Search Ad Clicks"
 
@@ -5059,6 +5159,31 @@ view: metrics__metrics__labeled_counter__browser_search_with_ads {
   }
 }
 
+view: metrics__metrics__labeled_counter__crash_metrics_crash_count {
+  label: "Labeled Counter Crash Metrics Crash Count"
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+  }
+}
+
 view: metrics__metrics__labeled_counter__engine_tab_kills {
   label: "Labeled Counter Engine Tab Kills"
 
@@ -5084,33 +5209,8 @@ view: metrics__metrics__labeled_counter__engine_tab_kills {
   }
 }
 
-view: metrics__metrics__labeled_counter__metrics_search_count {
-  label: "Labeled Counter Metrics Search Count"
-
-  dimension: key {
-    type: string
-    sql: ${TABLE}.key ;;
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-
-  measure: count {
-    type: sum
-    sql: ${value} ;;
-  }
-
-  measure: client_count {
-    type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
-  }
-}
-
-view: metrics__metrics__labeled_counter__perf_startup_startup_type {
-  label: "Labeled Counter Perf Startup Startup Type"
+view: metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
+  label: "Labeled Counter Gfx Content Frame Time Reason"
 
   dimension: key {
     type: string
@@ -5359,131 +5459,6 @@ view: metrics__metrics__labeled_counter__logins_store_write_query_error_count {
   }
 }
 
-view: metrics__metrics__labeled_counter__avif_bit_depth {
-  label: "Labeled Counter Avif Bit Depth"
-
-  dimension: key {
-    type: string
-    sql: ${TABLE}.key ;;
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-
-  measure: count {
-    type: sum
-    sql: ${value} ;;
-  }
-
-  measure: client_count {
-    type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
-  }
-}
-
-view: metrics__metrics__labeled_counter__avif_decode_result {
-  label: "Labeled Counter Avif Decode Result"
-
-  dimension: key {
-    type: string
-    sql: ${TABLE}.key ;;
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-
-  measure: count {
-    type: sum
-    sql: ${value} ;;
-  }
-
-  measure: client_count {
-    type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
-  }
-}
-
-view: metrics__metrics__labeled_counter__avif_decoder {
-  label: "Labeled Counter Avif Decoder"
-
-  dimension: key {
-    type: string
-    sql: ${TABLE}.key ;;
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-
-  measure: count {
-    type: sum
-    sql: ${value} ;;
-  }
-
-  measure: client_count {
-    type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
-  }
-}
-
-view: metrics__metrics__labeled_counter__avif_yuv_color_space {
-  label: "Labeled Counter Avif Yuv Color Space"
-
-  dimension: key {
-    type: string
-    sql: ${TABLE}.key ;;
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-
-  measure: count {
-    type: sum
-    sql: ${value} ;;
-  }
-
-  measure: client_count {
-    type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
-  }
-}
-
-view: metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
-  label: "Labeled Counter Gfx Content Frame Time Reason"
-
-  dimension: key {
-    type: string
-    sql: ${TABLE}.key ;;
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-
-  measure: count {
-    type: sum
-    sql: ${value} ;;
-  }
-
-  measure: client_count {
-    type: count_distinct
-    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
-  }
-}
-
 view: metrics__metrics__labeled_counter__media_audio_backend {
   label: "Labeled Counter Media Audio Backend"
 
@@ -5534,8 +5509,33 @@ view: metrics__metrics__labeled_counter__media_audio_init_failure {
   }
 }
 
-view: metrics__metrics__labeled_counter__crash_metrics_crash_count {
-  label: "Labeled Counter Crash Metrics Crash Count"
+view: metrics__metrics__labeled_counter__metrics_search_count {
+  label: "Labeled Counter Metrics Search Count"
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+  }
+}
+
+view: metrics__metrics__labeled_counter__perf_startup_startup_type {
+  label: "Labeled Counter Perf Startup Startup Type"
 
   dimension: key {
     type: string
@@ -5606,5 +5606,455 @@ view: metrics__metrics__labeled_counter__places_manager_write_query_error_count 
   measure: client_count {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__avif_bit_depth {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.avif_bit_depth) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__avif_decode_result {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.avif_decode_result) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__avif_decoder {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.avif_decoder) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__avif_yuv_color_space {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.avif_yuv_color_space) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__browser_search_ad_clicks {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.browser_search_ad_clicks) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__browser_search_in_content {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.browser_search_in_content) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__browser_search_with_ads {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.browser_search_with_ads) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__crash_metrics_crash_count {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.crash_metrics_crash_count) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__engine_tab_kills {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.engine_tab_kills) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.gfx_content_frame_time_reason) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.glean_error_invalid_label) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.glean_error_invalid_state) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.glean_error_invalid_value) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.glean_upload_ping_upload_failure) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitted {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.glean_validation_pings_submitted) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__logins_store_read_query_error_count {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.logins_store_read_query_error_count) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__logins_store_unlock_error_count {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.logins_store_unlock_error_count) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__logins_store_write_query_error_count {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.logins_store_write_query_error_count) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__media_audio_backend {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.media_audio_backend) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__media_audio_init_failure {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.media_audio_init_failure) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__metrics_search_count {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.metrics_search_count) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__perf_startup_startup_type {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.perf_startup_startup_type) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__places_manager_read_query_error_count {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.places_manager_read_query_error_count) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__places_manager_write_query_error_count {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.metrics,
+unnest(metrics.labeled_counter.places_manager_write_query_error_count) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
   }
 }

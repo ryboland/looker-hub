@@ -766,31 +766,6 @@ view: baseline__metrics__labeled_counter__browser_search_with_ads {
   }
 }
 
-view: baseline__metrics__labeled_counter__metrics_search_count {
-  label: "Labeled Counter Metrics Search Count"
-
-  dimension: key {
-    type: string
-    sql: ${TABLE}.key ;;
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-
-  measure: count {
-    type: sum
-    sql: ${value} ;;
-  }
-
-  measure: client_count {
-    type: count_distinct
-    sql: case when ${value} > 0 then ${baseline.client_info__client_id} end ;;
-  }
-}
-
 view: baseline__metrics__labeled_counter__glean_error_invalid_label {
   label: "Labeled Counter Glean Error Invalid Label"
 
@@ -913,5 +888,192 @@ view: baseline__metrics__labeled_counter__glean_validation_pings_submitted {
   measure: client_count {
     type: count_distinct
     sql: case when ${value} > 0 then ${baseline.client_info__client_id} end ;;
+  }
+}
+
+view: baseline__metrics__labeled_counter__metrics_search_count {
+  label: "Labeled Counter Metrics Search Count"
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${baseline.client_info__client_id} end ;;
+  }
+}
+
+view: suggest__baseline__metrics__labeled_counter__browser_search_ad_clicks {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.baseline,
+unnest(metrics.labeled_counter.browser_search_ad_clicks) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__baseline__metrics__labeled_counter__browser_search_in_content {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.baseline,
+unnest(metrics.labeled_counter.browser_search_in_content) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__baseline__metrics__labeled_counter__browser_search_with_ads {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.baseline,
+unnest(metrics.labeled_counter.browser_search_with_ads) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_label {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.baseline,
+unnest(metrics.labeled_counter.glean_error_invalid_label) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_overflow {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.baseline,
+unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_state {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.baseline,
+unnest(metrics.labeled_counter.glean_error_invalid_state) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_value {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.baseline,
+unnest(metrics.labeled_counter.glean_error_invalid_value) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__baseline__metrics__labeled_counter__glean_validation_pings_submitted {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.baseline,
+unnest(metrics.labeled_counter.glean_validation_pings_submitted) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__baseline__metrics__labeled_counter__metrics_search_count {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.baseline,
+unnest(metrics.labeled_counter.metrics_search_count) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
   }
 }

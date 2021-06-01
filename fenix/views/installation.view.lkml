@@ -654,3 +654,75 @@ view: installation__metrics__labeled_counter__glean_error_invalid_value {
     sql: case when ${value} > 0 then ${installation.client_info__client_id} end ;;
   }
 }
+
+view: suggest__installation__metrics__labeled_counter__glean_error_invalid_label {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.installation,
+unnest(metrics.labeled_counter.glean_error_invalid_label) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__installation__metrics__labeled_counter__glean_error_invalid_overflow {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.installation,
+unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__installation__metrics__labeled_counter__glean_error_invalid_state {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.installation,
+unnest(metrics.labeled_counter.glean_error_invalid_state) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__installation__metrics__labeled_counter__glean_error_invalid_value {
+  hidden: yes
+
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.installation,
+unnest(metrics.labeled_counter.glean_error_invalid_value) as m
+order by key desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
