@@ -424,6 +424,27 @@ view: metrics_table {
     group_item_label: "Preferences Voice Search Enabled"
   }
 
+  dimension: metrics__counter__credit_cards_autofill_card {
+    sql: ${TABLE}.metrics.counter.credit_cards_autofill_card ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Credit Cards Autofill Card"
+  }
+
+  dimension: metrics__counter__credit_cards_delete_card {
+    sql: ${TABLE}.metrics.counter.credit_cards_delete_card ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Credit Cards Delete Card"
+  }
+
+  dimension: metrics__counter__credit_cards_manual_save {
+    sql: ${TABLE}.metrics.counter.credit_cards_manual_save ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Credit Cards Manual Save"
+  }
+
   dimension: metrics__counter__events_normal_and_private_uri_count {
     sql: ${TABLE}.metrics.counter.events_normal_and_private_uri_count ;;
     type: number
@@ -513,6 +534,27 @@ view: metrics_table {
     type: number
     group_label: "Metrics Counter"
     group_item_label: "Logins Store Write Query Count"
+  }
+
+  dimension: metrics__counter__metrics_credit_cards_autofill_count {
+    sql: ${TABLE}.metrics.counter.metrics_credit_cards_autofill_count ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Metrics Credit Cards Autofill Count"
+  }
+
+  dimension: metrics__counter__metrics_credit_cards_deleted_count {
+    sql: ${TABLE}.metrics.counter.metrics_credit_cards_deleted_count ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Metrics Credit Cards Deleted Count"
+  }
+
+  dimension: metrics__counter__metrics_credit_cards_saved_count {
+    sql: ${TABLE}.metrics.counter.metrics_credit_cards_saved_count ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Metrics Credit Cards Saved Count"
   }
 
   dimension: metrics__counter__metrics_desktop_bookmarks_count {
@@ -2741,6 +2783,370 @@ view: metrics_table {
 
   dimension: metrics__timing_distribution__javascript_gc_total_time__values {
     sql: ${TABLE}.metrics.timing_distribution.javascript_gc_total_time.values ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_baseline_compile_time__bucket_count {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_baseline_compile_time.bucket_count ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Baseline Compile Time"
+    group_item_label: "Bucket Count"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_baseline_compile_time__histogram_type {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_baseline_compile_time.histogram_type ;;
+    type: string
+    group_label: "Metrics Timing Distribution Javascript Pageload Baseline Compile Time"
+    group_item_label: "Histogram Type"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_baseline_compile_time__overflow {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_baseline_compile_time.overflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Baseline Compile Time"
+    group_item_label: "Overflow"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_baseline_compile_time__range {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_baseline_compile_time.range ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_baseline_compile_time__sum {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_baseline_compile_time.sum ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Baseline Compile Time"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_baseline_compile_time__time_unit {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_baseline_compile_time.time_unit ;;
+    type: string
+    group_label: "Metrics Timing Distribution Javascript Pageload Baseline Compile Time"
+    group_item_label: "Time Unit"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_baseline_compile_time__underflow {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_baseline_compile_time.underflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Baseline Compile Time"
+    group_item_label: "Underflow"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_baseline_compile_time__values {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_baseline_compile_time.values ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_delazification_time__bucket_count {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_delazification_time.bucket_count ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Delazification Time"
+    group_item_label: "Bucket Count"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_delazification_time__histogram_type {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_delazification_time.histogram_type ;;
+    type: string
+    group_label: "Metrics Timing Distribution Javascript Pageload Delazification Time"
+    group_item_label: "Histogram Type"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_delazification_time__overflow {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_delazification_time.overflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Delazification Time"
+    group_item_label: "Overflow"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_delazification_time__range {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_delazification_time.range ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_delazification_time__sum {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_delazification_time.sum ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Delazification Time"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_delazification_time__time_unit {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_delazification_time.time_unit ;;
+    type: string
+    group_label: "Metrics Timing Distribution Javascript Pageload Delazification Time"
+    group_item_label: "Time Unit"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_delazification_time__underflow {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_delazification_time.underflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Delazification Time"
+    group_item_label: "Underflow"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_delazification_time__values {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_delazification_time.values ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_execution_time__bucket_count {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_execution_time.bucket_count ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Execution Time"
+    group_item_label: "Bucket Count"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_execution_time__histogram_type {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_execution_time.histogram_type ;;
+    type: string
+    group_label: "Metrics Timing Distribution Javascript Pageload Execution Time"
+    group_item_label: "Histogram Type"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_execution_time__overflow {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_execution_time.overflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Execution Time"
+    group_item_label: "Overflow"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_execution_time__range {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_execution_time.range ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_execution_time__sum {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_execution_time.sum ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Execution Time"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_execution_time__time_unit {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_execution_time.time_unit ;;
+    type: string
+    group_label: "Metrics Timing Distribution Javascript Pageload Execution Time"
+    group_item_label: "Time Unit"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_execution_time__underflow {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_execution_time.underflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Execution Time"
+    group_item_label: "Underflow"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_execution_time__values {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_execution_time.values ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_gc_time__bucket_count {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_gc_time.bucket_count ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Gc Time"
+    group_item_label: "Bucket Count"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_gc_time__histogram_type {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_gc_time.histogram_type ;;
+    type: string
+    group_label: "Metrics Timing Distribution Javascript Pageload Gc Time"
+    group_item_label: "Histogram Type"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_gc_time__overflow {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_gc_time.overflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Gc Time"
+    group_item_label: "Overflow"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_gc_time__range {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_gc_time.range ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_gc_time__sum {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_gc_time.sum ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Gc Time"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_gc_time__time_unit {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_gc_time.time_unit ;;
+    type: string
+    group_label: "Metrics Timing Distribution Javascript Pageload Gc Time"
+    group_item_label: "Time Unit"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_gc_time__underflow {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_gc_time.underflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Gc Time"
+    group_item_label: "Underflow"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_gc_time__values {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_gc_time.values ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_parse_time__bucket_count {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_parse_time.bucket_count ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Parse Time"
+    group_item_label: "Bucket Count"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_parse_time__histogram_type {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_parse_time.histogram_type ;;
+    type: string
+    group_label: "Metrics Timing Distribution Javascript Pageload Parse Time"
+    group_item_label: "Histogram Type"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_parse_time__overflow {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_parse_time.overflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Parse Time"
+    group_item_label: "Overflow"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_parse_time__range {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_parse_time.range ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_parse_time__sum {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_parse_time.sum ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Parse Time"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_parse_time__time_unit {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_parse_time.time_unit ;;
+    type: string
+    group_label: "Metrics Timing Distribution Javascript Pageload Parse Time"
+    group_item_label: "Time Unit"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_parse_time__underflow {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_parse_time.underflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Parse Time"
+    group_item_label: "Underflow"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_parse_time__values {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_parse_time.values ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_protect_time__bucket_count {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_protect_time.bucket_count ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Protect Time"
+    group_item_label: "Bucket Count"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_protect_time__histogram_type {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_protect_time.histogram_type ;;
+    type: string
+    group_label: "Metrics Timing Distribution Javascript Pageload Protect Time"
+    group_item_label: "Histogram Type"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_protect_time__overflow {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_protect_time.overflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Protect Time"
+    group_item_label: "Overflow"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_protect_time__range {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_protect_time.range ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_protect_time__sum {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_protect_time.sum ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Protect Time"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_protect_time__time_unit {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_protect_time.time_unit ;;
+    type: string
+    group_label: "Metrics Timing Distribution Javascript Pageload Protect Time"
+    group_item_label: "Time Unit"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_protect_time__underflow {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_protect_time.underflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Protect Time"
+    group_item_label: "Underflow"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_protect_time__values {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_protect_time.values ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_xdr_encode_time__bucket_count {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_xdr_encode_time.bucket_count ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Xdr Encode Time"
+    group_item_label: "Bucket Count"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_xdr_encode_time__histogram_type {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_xdr_encode_time.histogram_type ;;
+    type: string
+    group_label: "Metrics Timing Distribution Javascript Pageload Xdr Encode Time"
+    group_item_label: "Histogram Type"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_xdr_encode_time__overflow {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_xdr_encode_time.overflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Xdr Encode Time"
+    group_item_label: "Overflow"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_xdr_encode_time__range {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_xdr_encode_time.range ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_xdr_encode_time__sum {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_xdr_encode_time.sum ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Xdr Encode Time"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_xdr_encode_time__time_unit {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_xdr_encode_time.time_unit ;;
+    type: string
+    group_label: "Metrics Timing Distribution Javascript Pageload Xdr Encode Time"
+    group_item_label: "Time Unit"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_xdr_encode_time__underflow {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_xdr_encode_time.underflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Javascript Pageload Xdr Encode Time"
+    group_item_label: "Underflow"
+  }
+
+  dimension: metrics__timing_distribution__javascript_pageload_xdr_encode_time__values {
+    sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_xdr_encode_time.values ;;
     hidden: yes
   }
 
