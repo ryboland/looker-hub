@@ -32,17 +32,17 @@ explore: custom {
 }
 
 explore: suggest__custom__metrics__labeled_counter__glean_error_invalid_label {
-  hidden: yes
+  hidden: no
 }
 
 explore: suggest__custom__metrics__labeled_counter__glean_error_invalid_overflow {
-  hidden: yes
+  hidden: no
 }
 
 explore: suggest__custom__metrics__labeled_counter__glean_error_invalid_state {
-  hidden: yes
+  hidden: no
 }
 
 explore: suggest__custom__metrics__labeled_counter__glean_error_invalid_value {
-  hidden: yes
+  hidden: no
 }
