@@ -1351,7 +1351,7 @@ view: suggest__custom__metrics__labeled_counter__glean_error_invalid_label {
     count(*) as n
 from mozdata.org_mozilla_bergamot.custom as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp, interval 2 day))
+where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
 order by key desc ;;
   }
 
@@ -1368,7 +1368,7 @@ view: suggest__custom__metrics__labeled_counter__glean_error_invalid_overflow {
     count(*) as n
 from mozdata.org_mozilla_bergamot.custom as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp, interval 2 day))
+where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
 order by key desc ;;
   }
 
@@ -1385,7 +1385,7 @@ view: suggest__custom__metrics__labeled_counter__glean_error_invalid_state {
     count(*) as n
 from mozdata.org_mozilla_bergamot.custom as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp, interval 2 day))
+where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
 order by key desc ;;
   }
 
@@ -1402,7 +1402,7 @@ view: suggest__custom__metrics__labeled_counter__glean_error_invalid_value {
     count(*) as n
 from mozdata.org_mozilla_bergamot.custom as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp, interval 2 day))
+where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
 order by key desc ;;
   }
 
