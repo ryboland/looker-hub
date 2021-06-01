@@ -2362,6 +2362,8 @@ view: migration__metrics__labeled_counter__glean_error_invalid_label {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_label
+    suggest_dimension: suggest__migration__metrics__labeled_counter__glean_error_invalid_label.key
   }
 
   dimension: value {
@@ -2387,6 +2389,8 @@ view: migration__metrics__labeled_counter__glean_error_invalid_overflow {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_overflow
+    suggest_dimension: suggest__migration__metrics__labeled_counter__glean_error_invalid_overflow.key
   }
 
   dimension: value {
@@ -2412,6 +2416,8 @@ view: migration__metrics__labeled_counter__glean_error_invalid_state {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_state
+    suggest_dimension: suggest__migration__metrics__labeled_counter__glean_error_invalid_state.key
   }
 
   dimension: value {
@@ -2437,6 +2443,8 @@ view: migration__metrics__labeled_counter__glean_error_invalid_value {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_value
+    suggest_dimension: suggest__migration__metrics__labeled_counter__glean_error_invalid_value.key
   }
 
   dimension: value {
@@ -2462,6 +2470,8 @@ view: migration__metrics__labeled_counter__migration_bookmarks_migrated {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__migration__metrics__labeled_counter__migration_bookmarks_migrated
+    suggest_dimension: suggest__migration__metrics__labeled_counter__migration_bookmarks_migrated.key
   }
 
   dimension: value {
@@ -2487,6 +2497,8 @@ view: migration__metrics__labeled_counter__migration_history_migrated {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__migration__metrics__labeled_counter__migration_history_migrated
+    suggest_dimension: suggest__migration__metrics__labeled_counter__migration_history_migrated.key
   }
 
   dimension: value {
@@ -2512,6 +2524,8 @@ view: migration__metrics__labeled_counter__migration_logins_failure_counts {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__migration__metrics__labeled_counter__migration_logins_failure_counts
+    suggest_dimension: suggest__migration__metrics__labeled_counter__migration_logins_failure_counts.key
   }
 
   dimension: value {
@@ -2532,14 +2546,13 @@ view: migration__metrics__labeled_counter__migration_logins_failure_counts {
 }
 
 view: suggest__migration__metrics__labeled_counter__glean_error_invalid_label {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox_beta.migration,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -2550,14 +2563,13 @@ order by key desc ;;
 }
 
 view: suggest__migration__metrics__labeled_counter__glean_error_invalid_overflow {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox_beta.migration,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -2568,14 +2580,13 @@ order by key desc ;;
 }
 
 view: suggest__migration__metrics__labeled_counter__glean_error_invalid_state {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox_beta.migration,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -2586,14 +2597,13 @@ order by key desc ;;
 }
 
 view: suggest__migration__metrics__labeled_counter__glean_error_invalid_value {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox_beta.migration,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -2604,14 +2614,13 @@ order by key desc ;;
 }
 
 view: suggest__migration__metrics__labeled_counter__migration_bookmarks_migrated {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox_beta.migration,
 unnest(metrics.labeled_counter.migration_bookmarks_migrated) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -2622,14 +2631,13 @@ order by key desc ;;
 }
 
 view: suggest__migration__metrics__labeled_counter__migration_history_migrated {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox_beta.migration,
 unnest(metrics.labeled_counter.migration_history_migrated) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -2640,14 +2648,13 @@ order by key desc ;;
 }
 
 view: suggest__migration__metrics__labeled_counter__migration_logins_failure_counts {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox_beta.migration,
 unnest(metrics.labeled_counter.migration_logins_failure_counts) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 

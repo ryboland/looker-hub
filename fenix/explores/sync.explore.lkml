@@ -11,26 +11,6 @@ explore: sync {
     ]
   }
 
-  join: suggest__sync__metrics__labeled_counter__glean_error_invalid_label {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${sync.sync__metrics__labeled_counter__glean_error_invalid_label}) AS suggest__sync__metrics__labeled_counter__glean_error_invalid_label ;;
-  }
-
-  join: suggest__sync__metrics__labeled_counter__glean_error_invalid_overflow {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${sync.sync__metrics__labeled_counter__glean_error_invalid_overflow}) AS suggest__sync__metrics__labeled_counter__glean_error_invalid_overflow ;;
-  }
-
-  join: suggest__sync__metrics__labeled_counter__glean_error_invalid_state {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${sync.sync__metrics__labeled_counter__glean_error_invalid_state}) AS suggest__sync__metrics__labeled_counter__glean_error_invalid_state ;;
-  }
-
-  join: suggest__sync__metrics__labeled_counter__glean_error_invalid_value {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${sync.sync__metrics__labeled_counter__glean_error_invalid_value}) AS suggest__sync__metrics__labeled_counter__glean_error_invalid_value ;;
-  }
-
   join: sync__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
     sql: CROSS JOIN UNNEST(${sync.metrics__labeled_counter__glean_error_invalid_label}) AS sync__metrics__labeled_counter__glean_error_invalid_label ;;
@@ -50,4 +30,20 @@ explore: sync {
     relationship: one_to_many
     sql: CROSS JOIN UNNEST(${sync.metrics__labeled_counter__glean_error_invalid_value}) AS sync__metrics__labeled_counter__glean_error_invalid_value ;;
   }
+}
+
+explore: suggest__sync__metrics__labeled_counter__glean_error_invalid_label {
+  hidden: yes
+}
+
+explore: suggest__sync__metrics__labeled_counter__glean_error_invalid_overflow {
+  hidden: yes
+}
+
+explore: suggest__sync__metrics__labeled_counter__glean_error_invalid_state {
+  hidden: yes
+}
+
+explore: suggest__sync__metrics__labeled_counter__glean_error_invalid_value {
+  hidden: yes
 }

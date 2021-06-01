@@ -135,129 +135,104 @@ explore: metrics {
     relationship: one_to_many
     sql: CROSS JOIN UNNEST(${metrics.metrics__labeled_counter__places_manager_write_query_error_count}) AS metrics__metrics__labeled_counter__places_manager_write_query_error_count ;;
   }
+}
 
-  join: suggest__metrics__metrics__labeled_counter__avif_bit_depth {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__avif_bit_depth}) AS suggest__metrics__metrics__labeled_counter__avif_bit_depth ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__avif_bit_depth {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__avif_decode_result {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__avif_decode_result}) AS suggest__metrics__metrics__labeled_counter__avif_decode_result ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__avif_decode_result {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__avif_decoder {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__avif_decoder}) AS suggest__metrics__metrics__labeled_counter__avif_decoder ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__avif_decoder {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__avif_yuv_color_space {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__avif_yuv_color_space}) AS suggest__metrics__metrics__labeled_counter__avif_yuv_color_space ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__avif_yuv_color_space {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__browser_search_ad_clicks {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__browser_search_ad_clicks}) AS suggest__metrics__metrics__labeled_counter__browser_search_ad_clicks ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__browser_search_ad_clicks {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__browser_search_in_content {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__browser_search_in_content}) AS suggest__metrics__metrics__labeled_counter__browser_search_in_content ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__browser_search_in_content {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__browser_search_with_ads {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__browser_search_with_ads}) AS suggest__metrics__metrics__labeled_counter__browser_search_with_ads ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__browser_search_with_ads {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__crash_metrics_crash_count {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__crash_metrics_crash_count}) AS suggest__metrics__metrics__labeled_counter__crash_metrics_crash_count ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__crash_metrics_crash_count {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__engine_tab_kills {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__engine_tab_kills}) AS suggest__metrics__metrics__labeled_counter__engine_tab_kills ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__engine_tab_kills {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__gfx_content_frame_time_reason}) AS suggest__metrics__metrics__labeled_counter__gfx_content_frame_time_reason ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__glean_error_invalid_label}) AS suggest__metrics__metrics__labeled_counter__glean_error_invalid_label ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__glean_error_invalid_overflow}) AS suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__glean_error_invalid_state}) AS suggest__metrics__metrics__labeled_counter__glean_error_invalid_state ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__glean_error_invalid_value}) AS suggest__metrics__metrics__labeled_counter__glean_error_invalid_value ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__glean_upload_ping_upload_failure}) AS suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failure ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitted {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__glean_validation_pings_submitted}) AS suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitted ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitted {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__logins_store_read_query_error_count {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__logins_store_read_query_error_count}) AS suggest__metrics__metrics__labeled_counter__logins_store_read_query_error_count ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__logins_store_read_query_error_count {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__logins_store_unlock_error_count {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__logins_store_unlock_error_count}) AS suggest__metrics__metrics__labeled_counter__logins_store_unlock_error_count ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__logins_store_unlock_error_count {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__logins_store_write_query_error_count {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__logins_store_write_query_error_count}) AS suggest__metrics__metrics__labeled_counter__logins_store_write_query_error_count ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__logins_store_write_query_error_count {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__media_audio_backend {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__media_audio_backend}) AS suggest__metrics__metrics__labeled_counter__media_audio_backend ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__media_audio_backend {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__media_audio_init_failure {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__media_audio_init_failure}) AS suggest__metrics__metrics__labeled_counter__media_audio_init_failure ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__media_audio_init_failure {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__metrics_search_count {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__metrics_search_count}) AS suggest__metrics__metrics__labeled_counter__metrics_search_count ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__metrics_search_count {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__perf_startup_startup_type {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__perf_startup_startup_type}) AS suggest__metrics__metrics__labeled_counter__perf_startup_startup_type ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__perf_startup_startup_type {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__places_manager_read_query_error_count {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__places_manager_read_query_error_count}) AS suggest__metrics__metrics__labeled_counter__places_manager_read_query_error_count ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__places_manager_read_query_error_count {
+  hidden: yes
+}
 
-  join: suggest__metrics__metrics__labeled_counter__places_manager_write_query_error_count {
-    relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${metrics.metrics__metrics__labeled_counter__places_manager_write_query_error_count}) AS suggest__metrics__metrics__labeled_counter__places_manager_write_query_error_count ;;
-  }
+explore: suggest__metrics__metrics__labeled_counter__places_manager_write_query_error_count {
+  hidden: yes
 }

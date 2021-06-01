@@ -1242,6 +1242,8 @@ view: custom__metrics__labeled_counter__glean_error_invalid_label {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__custom__metrics__labeled_counter__glean_error_invalid_label
+    suggest_dimension: suggest__custom__metrics__labeled_counter__glean_error_invalid_label.key
   }
 
   dimension: value {
@@ -1267,6 +1269,8 @@ view: custom__metrics__labeled_counter__glean_error_invalid_overflow {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__custom__metrics__labeled_counter__glean_error_invalid_overflow
+    suggest_dimension: suggest__custom__metrics__labeled_counter__glean_error_invalid_overflow.key
   }
 
   dimension: value {
@@ -1292,6 +1296,8 @@ view: custom__metrics__labeled_counter__glean_error_invalid_state {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__custom__metrics__labeled_counter__glean_error_invalid_state
+    suggest_dimension: suggest__custom__metrics__labeled_counter__glean_error_invalid_state.key
   }
 
   dimension: value {
@@ -1317,6 +1323,8 @@ view: custom__metrics__labeled_counter__glean_error_invalid_value {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__custom__metrics__labeled_counter__glean_error_invalid_value
+    suggest_dimension: suggest__custom__metrics__labeled_counter__glean_error_invalid_value.key
   }
 
   dimension: value {
@@ -1337,14 +1345,13 @@ view: custom__metrics__labeled_counter__glean_error_invalid_value {
 }
 
 view: suggest__custom__metrics__labeled_counter__glean_error_invalid_label {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_bergamot.custom,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -1355,14 +1362,13 @@ order by key desc ;;
 }
 
 view: suggest__custom__metrics__labeled_counter__glean_error_invalid_overflow {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_bergamot.custom,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -1373,14 +1379,13 @@ order by key desc ;;
 }
 
 view: suggest__custom__metrics__labeled_counter__glean_error_invalid_state {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_bergamot.custom,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -1391,14 +1396,13 @@ order by key desc ;;
 }
 
 view: suggest__custom__metrics__labeled_counter__glean_error_invalid_value {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_bergamot.custom,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 

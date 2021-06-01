@@ -4990,6 +4990,8 @@ view: metrics__metrics__labeled_counter__avif_bit_depth {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__avif_bit_depth
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__avif_bit_depth.key
   }
 
   dimension: value {
@@ -5015,6 +5017,8 @@ view: metrics__metrics__labeled_counter__avif_decode_result {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__avif_decode_result
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__avif_decode_result.key
   }
 
   dimension: value {
@@ -5040,6 +5044,8 @@ view: metrics__metrics__labeled_counter__avif_decoder {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__avif_decoder
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__avif_decoder.key
   }
 
   dimension: value {
@@ -5065,6 +5071,8 @@ view: metrics__metrics__labeled_counter__avif_yuv_color_space {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__avif_yuv_color_space
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__avif_yuv_color_space.key
   }
 
   dimension: value {
@@ -5090,6 +5098,8 @@ view: metrics__metrics__labeled_counter__browser_search_ad_clicks {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__browser_search_ad_clicks
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__browser_search_ad_clicks.key
   }
 
   dimension: value {
@@ -5115,6 +5125,8 @@ view: metrics__metrics__labeled_counter__browser_search_in_content {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__browser_search_in_content
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__browser_search_in_content.key
   }
 
   dimension: value {
@@ -5140,6 +5152,8 @@ view: metrics__metrics__labeled_counter__browser_search_with_ads {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__browser_search_with_ads
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__browser_search_with_ads.key
   }
 
   dimension: value {
@@ -5165,6 +5179,8 @@ view: metrics__metrics__labeled_counter__crash_metrics_crash_count {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__crash_metrics_crash_count
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__crash_metrics_crash_count.key
   }
 
   dimension: value {
@@ -5190,6 +5206,8 @@ view: metrics__metrics__labeled_counter__engine_tab_kills {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__engine_tab_kills
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__engine_tab_kills.key
   }
 
   dimension: value {
@@ -5215,6 +5233,8 @@ view: metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__gfx_content_frame_time_reason
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__gfx_content_frame_time_reason.key
   }
 
   dimension: value {
@@ -5240,6 +5260,8 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_label {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label.key
   }
 
   dimension: value {
@@ -5265,6 +5287,8 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_overflow {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow.key
   }
 
   dimension: value {
@@ -5290,6 +5314,8 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_state {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state.key
   }
 
   dimension: value {
@@ -5315,6 +5341,8 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_value {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value.key
   }
 
   dimension: value {
@@ -5340,6 +5368,8 @@ view: metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failure
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failure.key
   }
 
   dimension: value {
@@ -5365,6 +5395,8 @@ view: metrics__metrics__labeled_counter__glean_validation_pings_submitted {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitted
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitted.key
   }
 
   dimension: value {
@@ -5390,6 +5422,8 @@ view: metrics__metrics__labeled_counter__logins_store_read_query_error_count {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__logins_store_read_query_error_count
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__logins_store_read_query_error_count.key
   }
 
   dimension: value {
@@ -5415,6 +5449,8 @@ view: metrics__metrics__labeled_counter__logins_store_unlock_error_count {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__logins_store_unlock_error_count
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__logins_store_unlock_error_count.key
   }
 
   dimension: value {
@@ -5440,6 +5476,8 @@ view: metrics__metrics__labeled_counter__logins_store_write_query_error_count {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__logins_store_write_query_error_count
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__logins_store_write_query_error_count.key
   }
 
   dimension: value {
@@ -5465,6 +5503,8 @@ view: metrics__metrics__labeled_counter__media_audio_backend {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__media_audio_backend
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__media_audio_backend.key
   }
 
   dimension: value {
@@ -5490,6 +5530,8 @@ view: metrics__metrics__labeled_counter__media_audio_init_failure {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__media_audio_init_failure
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__media_audio_init_failure.key
   }
 
   dimension: value {
@@ -5515,6 +5557,8 @@ view: metrics__metrics__labeled_counter__metrics_search_count {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__metrics_search_count
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__metrics_search_count.key
   }
 
   dimension: value {
@@ -5540,6 +5584,8 @@ view: metrics__metrics__labeled_counter__perf_startup_startup_type {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__perf_startup_startup_type
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__perf_startup_startup_type.key
   }
 
   dimension: value {
@@ -5565,6 +5611,8 @@ view: metrics__metrics__labeled_counter__places_manager_read_query_error_count {
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__places_manager_read_query_error_count
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__places_manager_read_query_error_count.key
   }
 
   dimension: value {
@@ -5590,6 +5638,8 @@ view: metrics__metrics__labeled_counter__places_manager_write_query_error_count 
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__places_manager_write_query_error_count
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__places_manager_write_query_error_count.key
   }
 
   dimension: value {
@@ -5610,14 +5660,13 @@ view: metrics__metrics__labeled_counter__places_manager_write_query_error_count 
 }
 
 view: suggest__metrics__metrics__labeled_counter__avif_bit_depth {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.avif_bit_depth) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5628,14 +5677,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__avif_decode_result {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.avif_decode_result) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5646,14 +5694,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__avif_decoder {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.avif_decoder) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5664,14 +5711,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__avif_yuv_color_space {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.avif_yuv_color_space) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5682,14 +5728,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__browser_search_ad_clicks {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.browser_search_ad_clicks) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5700,14 +5745,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__browser_search_in_content {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.browser_search_in_content) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5718,14 +5762,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__browser_search_with_ads {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.browser_search_with_ads) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5736,14 +5779,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__crash_metrics_crash_count {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.crash_metrics_crash_count) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5754,14 +5796,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__engine_tab_kills {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.engine_tab_kills) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5772,14 +5813,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.gfx_content_frame_time_reason) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5790,14 +5830,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5808,14 +5847,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5826,14 +5864,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5844,14 +5881,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5862,14 +5898,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.glean_upload_ping_upload_failure) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5880,14 +5915,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitted {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.glean_validation_pings_submitted) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5898,14 +5932,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__logins_store_read_query_error_count {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.logins_store_read_query_error_count) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5916,14 +5949,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__logins_store_unlock_error_count {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.logins_store_unlock_error_count) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5934,14 +5966,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__logins_store_write_query_error_count {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.logins_store_write_query_error_count) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5952,14 +5983,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__media_audio_backend {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.media_audio_backend) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5970,14 +6000,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__media_audio_init_failure {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.media_audio_init_failure) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -5988,14 +6017,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__metrics_search_count {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.metrics_search_count) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -6006,14 +6034,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__perf_startup_startup_type {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.perf_startup_startup_type) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -6024,14 +6051,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__places_manager_read_query_error_count {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.places_manager_read_query_error_count) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
@@ -6042,14 +6068,13 @@ order by key desc ;;
 }
 
 view: suggest__metrics__metrics__labeled_counter__places_manager_write_query_error_count {
-  hidden: yes
-
   derived_table: {
     sql: select
     m.key,
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics,
 unnest(metrics.labeled_counter.places_manager_write_query_error_count) as m
+where date(submission_date) > date_sub(date(submission_timestamp, interval 2 day))
 order by key desc ;;
   }
 
