@@ -670,7 +670,7 @@ view: suggest__installation__metrics__labeled_counter__glean_error_invalid_label
     count(*) as n
 from mozdata.org_mozilla_firefox.installation as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
-where date(submission_timestamp) > date_sub(current_date, interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 3 day)
 group by key
 order by n desc ;;
   }
@@ -688,7 +688,7 @@ view: suggest__installation__metrics__labeled_counter__glean_error_invalid_overf
     count(*) as n
 from mozdata.org_mozilla_firefox.installation as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
-where date(submission_timestamp) > date_sub(current_date, interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 3 day)
 group by key
 order by n desc ;;
   }
@@ -706,7 +706,7 @@ view: suggest__installation__metrics__labeled_counter__glean_error_invalid_state
     count(*) as n
 from mozdata.org_mozilla_firefox.installation as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
-where date(submission_timestamp) > date_sub(current_date, interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 3 day)
 group by key
 order by n desc ;;
   }
@@ -724,7 +724,7 @@ view: suggest__installation__metrics__labeled_counter__glean_error_invalid_value
     count(*) as n
 from mozdata.org_mozilla_firefox.installation as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
-where date(submission_timestamp) > date_sub(current_date, interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 3 day)
 group by key
 order by n desc ;;
   }
