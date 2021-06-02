@@ -138,101 +138,101 @@ explore: metrics {
 }
 
 explore: suggest__metrics__metrics__labeled_counter__avif_bit_depth {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__avif_decode_result {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__avif_decoder {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__avif_yuv_color_space {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__browser_search_ad_clicks {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__browser_search_in_content {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__browser_search_with_ads {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__crash_metrics_crash_count {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__engine_tab_kills {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitted {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__logins_store_read_query_error_count {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__logins_store_unlock_error_count {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__logins_store_write_query_error_count {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__media_audio_backend {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__media_audio_init_failure {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__metrics_search_count {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__perf_startup_startup_type {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__places_manager_read_query_error_count {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__places_manager_write_query_error_count {
-  hidden: no
+  hidden: yes
 }

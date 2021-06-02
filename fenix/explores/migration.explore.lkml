@@ -48,29 +48,29 @@ explore: migration {
 }
 
 explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_label {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_overflow {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_state {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_value {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__migration__metrics__labeled_counter__migration_bookmarks_migrated {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__migration__metrics__labeled_counter__migration_history_migrated {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__migration__metrics__labeled_counter__migration_logins_failure_counts {
-  hidden: no
+  hidden: yes
 }

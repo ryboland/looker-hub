@@ -58,37 +58,37 @@ explore: baseline {
 }
 
 explore: suggest__baseline__metrics__labeled_counter__browser_search_ad_clicks {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__baseline__metrics__labeled_counter__browser_search_in_content {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__baseline__metrics__labeled_counter__browser_search_with_ads {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__baseline__metrics__labeled_counter__glean_error_invalid_label {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__baseline__metrics__labeled_counter__glean_error_invalid_overflow {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__baseline__metrics__labeled_counter__glean_error_invalid_state {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__baseline__metrics__labeled_counter__glean_error_invalid_value {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__baseline__metrics__labeled_counter__glean_validation_pings_submitted {
-  hidden: no
+  hidden: yes
 }
 
 explore: suggest__baseline__metrics__labeled_counter__metrics_search_count {
-  hidden: no
+  hidden: yes
 }
