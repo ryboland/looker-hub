@@ -2,6 +2,7 @@ include: "/looker-hub/fenix/views/installation.view.lkml"
 
 explore: installation {
   sql_always_where: ${installation.submission_date} >= '2010-01-01' ;;
+  description: "Explore for the installation ping. This ping is intended to capture the source of the installation"
   view_name: installation
 
   always_filter: {

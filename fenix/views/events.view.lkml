@@ -110,7 +110,6 @@ The labels are the `category.name` identifier of the metric.
   dimension: client_info__client_id {
     sql: ${TABLE}.client_info.client_id ;;
     hidden: yes
-    primary_key: yes
   }
 
   dimension: client_info__device_manufacturer {
@@ -165,6 +164,7 @@ The labels are the `category.name` identifier of the metric.
   dimension: document_id {
     sql: ${TABLE}.document_id ;;
     hidden: yes
+    primary_key: yes
   }
 
   dimension: events {

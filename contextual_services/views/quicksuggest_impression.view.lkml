@@ -17,12 +17,12 @@ view: quicksuggest_impression {
   dimension: context_id {
     sql: ${TABLE}.context_id ;;
     hidden: yes
-    primary_key: yes
   }
 
   dimension: document_id {
     sql: ${TABLE}.document_id ;;
     hidden: yes
+    primary_key: yes
   }
 
   dimension: experiments {

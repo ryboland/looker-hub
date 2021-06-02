@@ -70,7 +70,6 @@ view: new_profile {
   dimension: client_id {
     sql: ${TABLE}.client_id ;;
     hidden: yes
-    primary_key: yes
   }
 
   dimension: creation_date {
@@ -81,6 +80,7 @@ view: new_profile {
   dimension: document_id {
     sql: ${TABLE}.document_id ;;
     hidden: yes
+    primary_key: yes
   }
 
   dimension: environment__addons__active_addons {
