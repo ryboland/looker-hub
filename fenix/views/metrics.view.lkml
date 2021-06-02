@@ -5666,7 +5666,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_bit_depth {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.avif_bit_depth) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5684,7 +5684,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_decode_result {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.avif_decode_result) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5702,7 +5702,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_decoder {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.avif_decoder) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5720,7 +5720,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_yuv_color_space {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.avif_yuv_color_space) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5738,7 +5738,7 @@ view: suggest__metrics__metrics__labeled_counter__browser_search_ad_clicks {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.browser_search_ad_clicks) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5756,7 +5756,7 @@ view: suggest__metrics__metrics__labeled_counter__browser_search_in_content {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.browser_search_in_content) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5774,7 +5774,7 @@ view: suggest__metrics__metrics__labeled_counter__browser_search_with_ads {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.browser_search_with_ads) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5792,7 +5792,7 @@ view: suggest__metrics__metrics__labeled_counter__crash_metrics_crash_count {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.crash_metrics_crash_count) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5810,7 +5810,7 @@ view: suggest__metrics__metrics__labeled_counter__engine_tab_kills {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.engine_tab_kills) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5828,7 +5828,7 @@ view: suggest__metrics__metrics__labeled_counter__gfx_content_frame_time_reason 
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.gfx_content_frame_time_reason) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5846,7 +5846,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5864,7 +5864,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5882,7 +5882,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5900,7 +5900,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5918,7 +5918,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failu
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.glean_upload_ping_upload_failure) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5936,7 +5936,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitt
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.glean_validation_pings_submitted) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5954,7 +5954,7 @@ view: suggest__metrics__metrics__labeled_counter__logins_store_read_query_error_
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.logins_store_read_query_error_count) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5972,7 +5972,7 @@ view: suggest__metrics__metrics__labeled_counter__logins_store_unlock_error_coun
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.logins_store_unlock_error_count) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -5990,7 +5990,7 @@ view: suggest__metrics__metrics__labeled_counter__logins_store_write_query_error
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.logins_store_write_query_error_count) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -6008,7 +6008,7 @@ view: suggest__metrics__metrics__labeled_counter__media_audio_backend {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.media_audio_backend) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -6026,7 +6026,7 @@ view: suggest__metrics__metrics__labeled_counter__media_audio_init_failure {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.media_audio_init_failure) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -6044,7 +6044,7 @@ view: suggest__metrics__metrics__labeled_counter__metrics_search_count {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.metrics_search_count) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -6062,7 +6062,7 @@ view: suggest__metrics__metrics__labeled_counter__perf_startup_startup_type {
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.perf_startup_startup_type) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -6080,7 +6080,7 @@ view: suggest__metrics__metrics__labeled_counter__places_manager_read_query_erro
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.places_manager_read_query_error_count) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
@@ -6098,7 +6098,7 @@ view: suggest__metrics__metrics__labeled_counter__places_manager_write_query_err
     count(*) as n
 from mozdata.org_mozilla_firefox.metrics as t,
 unnest(metrics.labeled_counter.places_manager_write_query_error_count) as m
-where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
+where date(submission_timestamp) > date_sub(current_date, interval 2 day)
 group by key
 order by n desc ;;
   }
