@@ -2553,7 +2553,8 @@ view: suggest__migration__metrics__labeled_counter__glean_error_invalid_label {
 from mozdata.org_mozilla_firefox_beta.migration as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -2570,7 +2571,8 @@ view: suggest__migration__metrics__labeled_counter__glean_error_invalid_overflow
 from mozdata.org_mozilla_firefox_beta.migration as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -2587,7 +2589,8 @@ view: suggest__migration__metrics__labeled_counter__glean_error_invalid_state {
 from mozdata.org_mozilla_firefox_beta.migration as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -2604,7 +2607,8 @@ view: suggest__migration__metrics__labeled_counter__glean_error_invalid_value {
 from mozdata.org_mozilla_firefox_beta.migration as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -2621,7 +2625,8 @@ view: suggest__migration__metrics__labeled_counter__migration_bookmarks_migrated
 from mozdata.org_mozilla_firefox_beta.migration as t,
 unnest(metrics.labeled_counter.migration_bookmarks_migrated) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -2638,7 +2643,8 @@ view: suggest__migration__metrics__labeled_counter__migration_history_migrated {
 from mozdata.org_mozilla_firefox_beta.migration as t,
 unnest(metrics.labeled_counter.migration_history_migrated) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -2655,7 +2661,8 @@ view: suggest__migration__metrics__labeled_counter__migration_logins_failure_cou
 from mozdata.org_mozilla_firefox_beta.migration as t,
 unnest(metrics.labeled_counter.migration_logins_failure_counts) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {

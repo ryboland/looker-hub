@@ -607,7 +607,8 @@ view: suggest__activation__metrics__labeled_counter__glean_error_invalid_label {
 from mozdata.org_mozilla_firefox.activation as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -624,7 +625,8 @@ view: suggest__activation__metrics__labeled_counter__glean_error_invalid_overflo
 from mozdata.org_mozilla_firefox.activation as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -641,7 +643,8 @@ view: suggest__activation__metrics__labeled_counter__glean_error_invalid_state {
 from mozdata.org_mozilla_firefox.activation as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -658,7 +661,8 @@ view: suggest__activation__metrics__labeled_counter__glean_error_invalid_value {
 from mozdata.org_mozilla_firefox.activation as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {

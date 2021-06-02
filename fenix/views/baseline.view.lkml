@@ -942,7 +942,8 @@ view: suggest__baseline__metrics__labeled_counter__browser_search_ad_clicks {
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.browser_search_ad_clicks) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -959,7 +960,8 @@ view: suggest__baseline__metrics__labeled_counter__browser_search_in_content {
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.browser_search_in_content) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -976,7 +978,8 @@ view: suggest__baseline__metrics__labeled_counter__browser_search_with_ads {
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.browser_search_with_ads) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -993,7 +996,8 @@ view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_label {
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -1010,7 +1014,8 @@ view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_overflow 
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -1027,7 +1032,8 @@ view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_state {
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -1044,7 +1050,8 @@ view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_value {
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -1061,7 +1068,8 @@ view: suggest__baseline__metrics__labeled_counter__glean_validation_pings_submit
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.glean_validation_pings_submitted) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
@@ -1078,7 +1086,8 @@ view: suggest__baseline__metrics__labeled_counter__metrics_search_count {
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.metrics_search_count) as m
 where date(submission_timestamp) > date_sub(date(submission_timestamp), interval 2 day)
-order by key desc ;;
+group by key
+order by n desc ;;
   }
 
   dimension: key {
