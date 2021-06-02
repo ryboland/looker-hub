@@ -17,6 +17,7 @@ view: quicksuggest_click {
   dimension: context_id {
     sql: ${TABLE}.context_id ;;
     hidden: yes
+    primary_key: yes
   }
 
   dimension: document_id {

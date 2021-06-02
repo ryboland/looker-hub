@@ -1214,6 +1214,7 @@ The labels are the `category.name` identifier of the metric.
   dimension: client_info__client_id {
     sql: ${TABLE}.client_info.client_id ;;
     hidden: yes
+    primary_key: yes
   }
 
   dimension: client_info__device_manufacturer {
@@ -2359,6 +2360,13 @@ The labels are the `category.name` identifier of the metric.
 view: migration__metrics__labeled_counter__glean_error_invalid_label {
   label: "Labeled Counter Glean Error Invalid Label"
 
+  dimension: client_id {
+    type: string
+    sql: ${migration.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -2385,6 +2393,13 @@ view: migration__metrics__labeled_counter__glean_error_invalid_label {
 
 view: migration__metrics__labeled_counter__glean_error_invalid_overflow {
   label: "Labeled Counter Glean Error Invalid Overflow"
+
+  dimension: client_id {
+    type: string
+    sql: ${migration.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -2413,6 +2428,13 @@ view: migration__metrics__labeled_counter__glean_error_invalid_overflow {
 view: migration__metrics__labeled_counter__glean_error_invalid_state {
   label: "Labeled Counter Glean Error Invalid State"
 
+  dimension: client_id {
+    type: string
+    sql: ${migration.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -2439,6 +2461,13 @@ view: migration__metrics__labeled_counter__glean_error_invalid_state {
 
 view: migration__metrics__labeled_counter__glean_error_invalid_value {
   label: "Labeled Counter Glean Error Invalid Value"
+
+  dimension: client_id {
+    type: string
+    sql: ${migration.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -2467,6 +2496,13 @@ view: migration__metrics__labeled_counter__glean_error_invalid_value {
 view: migration__metrics__labeled_counter__migration_bookmarks_migrated {
   label: "Labeled Counter Migration Bookmarks Migrated"
 
+  dimension: client_id {
+    type: string
+    sql: ${migration.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -2494,6 +2530,13 @@ view: migration__metrics__labeled_counter__migration_bookmarks_migrated {
 view: migration__metrics__labeled_counter__migration_history_migrated {
   label: "Labeled Counter Migration History Migrated"
 
+  dimension: client_id {
+    type: string
+    sql: ${migration.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -2520,6 +2563,13 @@ view: migration__metrics__labeled_counter__migration_history_migrated {
 
 view: migration__metrics__labeled_counter__migration_logins_failure_counts {
   label: "Labeled Counter Migration Logins Failure Counts"
+
+  dimension: client_id {
+    type: string
+    sql: ${migration.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string

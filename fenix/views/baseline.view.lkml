@@ -294,6 +294,7 @@ This metric appears in both the metrics and baseline pings.
   dimension: client_info__client_id {
     sql: ${TABLE}.client_info.client_id ;;
     hidden: yes
+    primary_key: yes
   }
 
   dimension: client_info__device_manufacturer {
@@ -694,6 +695,13 @@ This metric appears in both the metrics and baseline pings.
 view: baseline__metrics__labeled_counter__browser_search_ad_clicks {
   label: "Labeled Counter Browser Search Ad Clicks"
 
+  dimension: client_id {
+    type: string
+    sql: ${baseline.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -720,6 +728,13 @@ view: baseline__metrics__labeled_counter__browser_search_ad_clicks {
 
 view: baseline__metrics__labeled_counter__browser_search_in_content {
   label: "Labeled Counter Browser Search In Content"
+
+  dimension: client_id {
+    type: string
+    sql: ${baseline.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -748,6 +763,13 @@ view: baseline__metrics__labeled_counter__browser_search_in_content {
 view: baseline__metrics__labeled_counter__browser_search_with_ads {
   label: "Labeled Counter Browser Search With Ads"
 
+  dimension: client_id {
+    type: string
+    sql: ${baseline.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -774,6 +796,13 @@ view: baseline__metrics__labeled_counter__browser_search_with_ads {
 
 view: baseline__metrics__labeled_counter__glean_error_invalid_label {
   label: "Labeled Counter Glean Error Invalid Label"
+
+  dimension: client_id {
+    type: string
+    sql: ${baseline.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -802,6 +831,13 @@ view: baseline__metrics__labeled_counter__glean_error_invalid_label {
 view: baseline__metrics__labeled_counter__glean_error_invalid_overflow {
   label: "Labeled Counter Glean Error Invalid Overflow"
 
+  dimension: client_id {
+    type: string
+    sql: ${baseline.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -828,6 +864,13 @@ view: baseline__metrics__labeled_counter__glean_error_invalid_overflow {
 
 view: baseline__metrics__labeled_counter__glean_error_invalid_state {
   label: "Labeled Counter Glean Error Invalid State"
+
+  dimension: client_id {
+    type: string
+    sql: ${baseline.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -856,6 +899,13 @@ view: baseline__metrics__labeled_counter__glean_error_invalid_state {
 view: baseline__metrics__labeled_counter__glean_error_invalid_value {
   label: "Labeled Counter Glean Error Invalid Value"
 
+  dimension: client_id {
+    type: string
+    sql: ${baseline.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -883,6 +933,13 @@ view: baseline__metrics__labeled_counter__glean_error_invalid_value {
 view: baseline__metrics__labeled_counter__glean_validation_pings_submitted {
   label: "Labeled Counter Glean Validation Pings Submitted"
 
+  dimension: client_id {
+    type: string
+    sql: ${baseline.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -909,6 +966,13 @@ view: baseline__metrics__labeled_counter__glean_validation_pings_submitted {
 
 view: baseline__metrics__labeled_counter__metrics_search_count {
   label: "Labeled Counter Metrics Search Count"
+
+  dimension: client_id {
+    type: string
+    sql: ${baseline.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string

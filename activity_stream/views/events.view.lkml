@@ -22,6 +22,7 @@ view: events {
   dimension: client_id {
     sql: ${TABLE}.client_id ;;
     hidden: yes
+    primary_key: yes
   }
 
   dimension: document_id {

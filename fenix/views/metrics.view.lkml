@@ -3987,6 +3987,7 @@ Deprecated: `native_code_crash` replaced by `fatal_native_code_crash` and `nonfa
   dimension: client_info__client_id {
     sql: ${TABLE}.client_info.client_id ;;
     hidden: yes
+    primary_key: yes
   }
 
   dimension: client_info__device_manufacturer {
@@ -4987,6 +4988,13 @@ Deprecated: `native_code_crash` replaced by `fatal_native_code_crash` and `nonfa
 view: metrics__metrics__labeled_counter__avif_bit_depth {
   label: "Labeled Counter Avif Bit Depth"
 
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5013,6 +5021,13 @@ view: metrics__metrics__labeled_counter__avif_bit_depth {
 
 view: metrics__metrics__labeled_counter__avif_decode_result {
   label: "Labeled Counter Avif Decode Result"
+
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -5041,6 +5056,13 @@ view: metrics__metrics__labeled_counter__avif_decode_result {
 view: metrics__metrics__labeled_counter__avif_decoder {
   label: "Labeled Counter Avif Decoder"
 
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5067,6 +5089,13 @@ view: metrics__metrics__labeled_counter__avif_decoder {
 
 view: metrics__metrics__labeled_counter__avif_yuv_color_space {
   label: "Labeled Counter Avif Yuv Color Space"
+
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -5095,6 +5124,13 @@ view: metrics__metrics__labeled_counter__avif_yuv_color_space {
 view: metrics__metrics__labeled_counter__browser_search_ad_clicks {
   label: "Labeled Counter Browser Search Ad Clicks"
 
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5121,6 +5157,13 @@ view: metrics__metrics__labeled_counter__browser_search_ad_clicks {
 
 view: metrics__metrics__labeled_counter__browser_search_in_content {
   label: "Labeled Counter Browser Search In Content"
+
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -5149,6 +5192,13 @@ view: metrics__metrics__labeled_counter__browser_search_in_content {
 view: metrics__metrics__labeled_counter__browser_search_with_ads {
   label: "Labeled Counter Browser Search With Ads"
 
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5175,6 +5225,13 @@ view: metrics__metrics__labeled_counter__browser_search_with_ads {
 
 view: metrics__metrics__labeled_counter__crash_metrics_crash_count {
   label: "Labeled Counter Crash Metrics Crash Count"
+
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -5203,6 +5260,13 @@ view: metrics__metrics__labeled_counter__crash_metrics_crash_count {
 view: metrics__metrics__labeled_counter__engine_tab_kills {
   label: "Labeled Counter Engine Tab Kills"
 
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5229,6 +5293,13 @@ view: metrics__metrics__labeled_counter__engine_tab_kills {
 
 view: metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
   label: "Labeled Counter Gfx Content Frame Time Reason"
+
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -5257,6 +5328,13 @@ view: metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
 view: metrics__metrics__labeled_counter__glean_error_invalid_label {
   label: "Labeled Counter Glean Error Invalid Label"
 
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5283,6 +5361,13 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_label {
 
 view: metrics__metrics__labeled_counter__glean_error_invalid_overflow {
   label: "Labeled Counter Glean Error Invalid Overflow"
+
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -5311,6 +5396,13 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_overflow {
 view: metrics__metrics__labeled_counter__glean_error_invalid_state {
   label: "Labeled Counter Glean Error Invalid State"
 
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5337,6 +5429,13 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_state {
 
 view: metrics__metrics__labeled_counter__glean_error_invalid_value {
   label: "Labeled Counter Glean Error Invalid Value"
+
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -5365,6 +5464,13 @@ view: metrics__metrics__labeled_counter__glean_error_invalid_value {
 view: metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
   label: "Labeled Counter Glean Upload Ping Upload Failure"
 
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5391,6 +5497,13 @@ view: metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
 
 view: metrics__metrics__labeled_counter__glean_validation_pings_submitted {
   label: "Labeled Counter Glean Validation Pings Submitted"
+
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -5419,6 +5532,13 @@ view: metrics__metrics__labeled_counter__glean_validation_pings_submitted {
 view: metrics__metrics__labeled_counter__logins_store_read_query_error_count {
   label: "Labeled Counter Logins Store Read Query Error Count"
 
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5445,6 +5565,13 @@ view: metrics__metrics__labeled_counter__logins_store_read_query_error_count {
 
 view: metrics__metrics__labeled_counter__logins_store_unlock_error_count {
   label: "Labeled Counter Logins Store Unlock Error Count"
+
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -5473,6 +5600,13 @@ view: metrics__metrics__labeled_counter__logins_store_unlock_error_count {
 view: metrics__metrics__labeled_counter__logins_store_write_query_error_count {
   label: "Labeled Counter Logins Store Write Query Error Count"
 
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5499,6 +5633,13 @@ view: metrics__metrics__labeled_counter__logins_store_write_query_error_count {
 
 view: metrics__metrics__labeled_counter__media_audio_backend {
   label: "Labeled Counter Media Audio Backend"
+
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -5527,6 +5668,13 @@ view: metrics__metrics__labeled_counter__media_audio_backend {
 view: metrics__metrics__labeled_counter__media_audio_init_failure {
   label: "Labeled Counter Media Audio Init Failure"
 
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5553,6 +5701,13 @@ view: metrics__metrics__labeled_counter__media_audio_init_failure {
 
 view: metrics__metrics__labeled_counter__metrics_search_count {
   label: "Labeled Counter Metrics Search Count"
+
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -5581,6 +5736,13 @@ view: metrics__metrics__labeled_counter__metrics_search_count {
 view: metrics__metrics__labeled_counter__perf_startup_startup_type {
   label: "Labeled Counter Perf Startup Startup Type"
 
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5608,6 +5770,13 @@ view: metrics__metrics__labeled_counter__perf_startup_startup_type {
 view: metrics__metrics__labeled_counter__places_manager_read_query_error_count {
   label: "Labeled Counter Places Manager Read Query Error Count"
 
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -5634,6 +5803,13 @@ view: metrics__metrics__labeled_counter__places_manager_read_query_error_count {
 
 view: metrics__metrics__labeled_counter__places_manager_write_query_error_count {
   label: "Labeled Counter Places Manager Write Query Error Count"
+
+  dimension: client_id {
+    type: string
+    sql: ${metrics.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string

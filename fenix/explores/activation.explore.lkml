@@ -13,22 +13,26 @@ explore: activation {
 
   join: activation__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_label}) AS activation__metrics__labeled_counter__glean_error_invalid_label ;;
+    sql: LEFT JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_label}) AS activation__metrics__labeled_counter__glean_error_invalid_label ;;
+    sql_on: ${activation.client_info__client_id} = ${activation__metrics__labeled_counter__glean_error_invalid_label.client_id} ;;
   }
 
   join: activation__metrics__labeled_counter__glean_error_invalid_overflow {
     relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_overflow}) AS activation__metrics__labeled_counter__glean_error_invalid_overflow ;;
+    sql: LEFT JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_overflow}) AS activation__metrics__labeled_counter__glean_error_invalid_overflow ;;
+    sql_on: ${activation.client_info__client_id} = ${activation__metrics__labeled_counter__glean_error_invalid_overflow.client_id} ;;
   }
 
   join: activation__metrics__labeled_counter__glean_error_invalid_state {
     relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_state}) AS activation__metrics__labeled_counter__glean_error_invalid_state ;;
+    sql: LEFT JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_state}) AS activation__metrics__labeled_counter__glean_error_invalid_state ;;
+    sql_on: ${activation.client_info__client_id} = ${activation__metrics__labeled_counter__glean_error_invalid_state.client_id} ;;
   }
 
   join: activation__metrics__labeled_counter__glean_error_invalid_value {
     relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_value}) AS activation__metrics__labeled_counter__glean_error_invalid_value ;;
+    sql: LEFT JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_value}) AS activation__metrics__labeled_counter__glean_error_invalid_value ;;
+    sql_on: ${activation.client_info__client_id} = ${activation__metrics__labeled_counter__glean_error_invalid_value.client_id} ;;
   }
 }
 

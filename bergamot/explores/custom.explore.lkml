@@ -12,22 +12,26 @@ explore: custom {
 
   join: custom__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_label}) AS custom__metrics__labeled_counter__glean_error_invalid_label ;;
+    sql: LEFT JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_label}) AS custom__metrics__labeled_counter__glean_error_invalid_label ;;
+    sql_on: ${custom.client_info__client_id} = ${custom__metrics__labeled_counter__glean_error_invalid_label.client_id} ;;
   }
 
   join: custom__metrics__labeled_counter__glean_error_invalid_overflow {
     relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_overflow}) AS custom__metrics__labeled_counter__glean_error_invalid_overflow ;;
+    sql: LEFT JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_overflow}) AS custom__metrics__labeled_counter__glean_error_invalid_overflow ;;
+    sql_on: ${custom.client_info__client_id} = ${custom__metrics__labeled_counter__glean_error_invalid_overflow.client_id} ;;
   }
 
   join: custom__metrics__labeled_counter__glean_error_invalid_state {
     relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_state}) AS custom__metrics__labeled_counter__glean_error_invalid_state ;;
+    sql: LEFT JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_state}) AS custom__metrics__labeled_counter__glean_error_invalid_state ;;
+    sql_on: ${custom.client_info__client_id} = ${custom__metrics__labeled_counter__glean_error_invalid_state.client_id} ;;
   }
 
   join: custom__metrics__labeled_counter__glean_error_invalid_value {
     relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_value}) AS custom__metrics__labeled_counter__glean_error_invalid_value ;;
+    sql: LEFT JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_value}) AS custom__metrics__labeled_counter__glean_error_invalid_value ;;
+    sql_on: ${custom.client_info__client_id} = ${custom__metrics__labeled_counter__glean_error_invalid_value.client_id} ;;
   }
 }
 

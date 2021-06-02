@@ -27,6 +27,7 @@ view: mobile_search_clients_engines_sources_daily {
   dimension: client_id {
     sql: ${TABLE}.client_id ;;
     hidden: yes
+    primary_key: yes
   }
 
   dimension: country {

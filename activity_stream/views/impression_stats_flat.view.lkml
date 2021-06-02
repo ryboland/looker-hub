@@ -17,6 +17,7 @@ view: impression_stats_flat {
   dimension: client_id {
     sql: ${TABLE}.client_id ;;
     hidden: yes
+    primary_key: yes
   }
 
   dimension: country_code {

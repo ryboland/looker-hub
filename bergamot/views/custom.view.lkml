@@ -709,6 +709,7 @@ The labels are the `category.name` identifier of the metric.
   dimension: client_info__client_id {
     sql: ${TABLE}.client_info.client_id ;;
     hidden: yes
+    primary_key: yes
   }
 
   dimension: client_info__device_manufacturer {
@@ -1239,6 +1240,13 @@ The labels are the `category.name` identifier of the metric.
 view: custom__metrics__labeled_counter__glean_error_invalid_label {
   label: "Labeled Counter Glean Error Invalid Label"
 
+  dimension: client_id {
+    type: string
+    sql: ${custom.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -1265,6 +1273,13 @@ view: custom__metrics__labeled_counter__glean_error_invalid_label {
 
 view: custom__metrics__labeled_counter__glean_error_invalid_overflow {
   label: "Labeled Counter Glean Error Invalid Overflow"
+
+  dimension: client_id {
+    type: string
+    sql: ${custom.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
@@ -1293,6 +1308,13 @@ view: custom__metrics__labeled_counter__glean_error_invalid_overflow {
 view: custom__metrics__labeled_counter__glean_error_invalid_state {
   label: "Labeled Counter Glean Error Invalid State"
 
+  dimension: client_id {
+    type: string
+    sql: ${custom.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
   dimension: key {
     type: string
     sql: ${TABLE}.key ;;
@@ -1319,6 +1341,13 @@ view: custom__metrics__labeled_counter__glean_error_invalid_state {
 
 view: custom__metrics__labeled_counter__glean_error_invalid_value {
   label: "Labeled Counter Glean Error Invalid Value"
+
+  dimension: client_id {
+    type: string
+    sql: ${custom.client_info__client_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
 
   dimension: key {
     type: string
