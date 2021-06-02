@@ -13,152 +13,127 @@ explore: metrics {
 
   join: metrics__metrics__labeled_counter__avif_bit_depth {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__avif_bit_depth}) AS metrics__metrics__labeled_counter__avif_bit_depth ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__avif_bit_depth.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__avif_bit_depth}) AS metrics__metrics__labeled_counter__avif_bit_depth ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__avif_bit_depth.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__avif_decode_result {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__avif_decode_result}) AS metrics__metrics__labeled_counter__avif_decode_result ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__avif_decode_result.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__avif_decode_result}) AS metrics__metrics__labeled_counter__avif_decode_result ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__avif_decode_result.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__avif_decoder {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__avif_decoder}) AS metrics__metrics__labeled_counter__avif_decoder ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__avif_decoder.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__avif_decoder}) AS metrics__metrics__labeled_counter__avif_decoder ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__avif_decoder.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__avif_yuv_color_space {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__avif_yuv_color_space}) AS metrics__metrics__labeled_counter__avif_yuv_color_space ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__avif_yuv_color_space.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__avif_yuv_color_space}) AS metrics__metrics__labeled_counter__avif_yuv_color_space ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__avif_yuv_color_space.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__browser_search_ad_clicks {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__browser_search_ad_clicks}) AS metrics__metrics__labeled_counter__browser_search_ad_clicks ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__browser_search_ad_clicks.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__browser_search_ad_clicks}) AS metrics__metrics__labeled_counter__browser_search_ad_clicks ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__browser_search_ad_clicks.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__browser_search_in_content {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__browser_search_in_content}) AS metrics__metrics__labeled_counter__browser_search_in_content ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__browser_search_in_content.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__browser_search_in_content}) AS metrics__metrics__labeled_counter__browser_search_in_content ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__browser_search_in_content.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__browser_search_with_ads {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__browser_search_with_ads}) AS metrics__metrics__labeled_counter__browser_search_with_ads ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__browser_search_with_ads.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__browser_search_with_ads}) AS metrics__metrics__labeled_counter__browser_search_with_ads ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__browser_search_with_ads.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__crash_metrics_crash_count {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__crash_metrics_crash_count}) AS metrics__metrics__labeled_counter__crash_metrics_crash_count ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__crash_metrics_crash_count.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__crash_metrics_crash_count}) AS metrics__metrics__labeled_counter__crash_metrics_crash_count ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__crash_metrics_crash_count.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__engine_tab_kills {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__engine_tab_kills}) AS metrics__metrics__labeled_counter__engine_tab_kills ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__engine_tab_kills.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__engine_tab_kills}) AS metrics__metrics__labeled_counter__engine_tab_kills ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__engine_tab_kills.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__gfx_content_frame_time_reason}) AS metrics__metrics__labeled_counter__gfx_content_frame_time_reason ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__gfx_content_frame_time_reason.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__gfx_content_frame_time_reason}) AS metrics__metrics__labeled_counter__gfx_content_frame_time_reason ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__gfx_content_frame_time_reason.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__glean_error_invalid_label}) AS metrics__metrics__labeled_counter__glean_error_invalid_label ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__glean_error_invalid_label.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__glean_error_invalid_label}) AS metrics__metrics__labeled_counter__glean_error_invalid_label ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__glean_error_invalid_label.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__glean_error_invalid_overflow {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__glean_error_invalid_overflow}) AS metrics__metrics__labeled_counter__glean_error_invalid_overflow ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__glean_error_invalid_overflow.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__glean_error_invalid_overflow}) AS metrics__metrics__labeled_counter__glean_error_invalid_overflow ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__glean_error_invalid_overflow.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__glean_error_invalid_state {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__glean_error_invalid_state}) AS metrics__metrics__labeled_counter__glean_error_invalid_state ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__glean_error_invalid_state.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__glean_error_invalid_state}) AS metrics__metrics__labeled_counter__glean_error_invalid_state ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__glean_error_invalid_state.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__glean_error_invalid_value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__glean_error_invalid_value}) AS metrics__metrics__labeled_counter__glean_error_invalid_value ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__glean_error_invalid_value.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__glean_error_invalid_value}) AS metrics__metrics__labeled_counter__glean_error_invalid_value ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__glean_error_invalid_value.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__glean_upload_ping_upload_failure}) AS metrics__metrics__labeled_counter__glean_upload_ping_upload_failure ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__glean_upload_ping_upload_failure.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__glean_upload_ping_upload_failure}) AS metrics__metrics__labeled_counter__glean_upload_ping_upload_failure ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__glean_upload_ping_upload_failure.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__glean_validation_pings_submitted {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__glean_validation_pings_submitted}) AS metrics__metrics__labeled_counter__glean_validation_pings_submitted ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__glean_validation_pings_submitted.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__glean_validation_pings_submitted}) AS metrics__metrics__labeled_counter__glean_validation_pings_submitted ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__glean_validation_pings_submitted.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__logins_store_read_query_error_count {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__logins_store_read_query_error_count}) AS metrics__metrics__labeled_counter__logins_store_read_query_error_count ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__logins_store_read_query_error_count.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__logins_store_read_query_error_count}) AS metrics__metrics__labeled_counter__logins_store_read_query_error_count ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__logins_store_read_query_error_count.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__logins_store_unlock_error_count {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__logins_store_unlock_error_count}) AS metrics__metrics__labeled_counter__logins_store_unlock_error_count ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__logins_store_unlock_error_count.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__logins_store_unlock_error_count}) AS metrics__metrics__labeled_counter__logins_store_unlock_error_count ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__logins_store_unlock_error_count.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__logins_store_write_query_error_count {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__logins_store_write_query_error_count}) AS metrics__metrics__labeled_counter__logins_store_write_query_error_count ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__logins_store_write_query_error_count.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__logins_store_write_query_error_count}) AS metrics__metrics__labeled_counter__logins_store_write_query_error_count ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__logins_store_write_query_error_count.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__media_audio_backend {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__media_audio_backend}) AS metrics__metrics__labeled_counter__media_audio_backend ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__media_audio_backend.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__media_audio_backend}) AS metrics__metrics__labeled_counter__media_audio_backend ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__media_audio_backend.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__media_audio_init_failure {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__media_audio_init_failure}) AS metrics__metrics__labeled_counter__media_audio_init_failure ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__media_audio_init_failure.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__media_audio_init_failure}) AS metrics__metrics__labeled_counter__media_audio_init_failure ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__media_audio_init_failure.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__metrics_search_count {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__metrics_search_count}) AS metrics__metrics__labeled_counter__metrics_search_count ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__metrics_search_count.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__metrics_search_count}) AS metrics__metrics__labeled_counter__metrics_search_count ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__metrics_search_count.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__perf_startup_startup_type {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__perf_startup_startup_type}) AS metrics__metrics__labeled_counter__perf_startup_startup_type ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__perf_startup_startup_type.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__perf_startup_startup_type}) AS metrics__metrics__labeled_counter__perf_startup_startup_type ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__perf_startup_startup_type.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__places_manager_read_query_error_count {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__places_manager_read_query_error_count}) AS metrics__metrics__labeled_counter__places_manager_read_query_error_count ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__places_manager_read_query_error_count.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__places_manager_read_query_error_count}) AS metrics__metrics__labeled_counter__places_manager_read_query_error_count ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__places_manager_read_query_error_count.client_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__places_manager_write_query_error_count {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__places_manager_write_query_error_count}) AS metrics__metrics__labeled_counter__places_manager_write_query_error_count ;;
-    sql_on: ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__places_manager_write_query_error_count.client_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__places_manager_write_query_error_count}) AS metrics__metrics__labeled_counter__places_manager_write_query_error_count ON ${metrics.client_info__client_id} = ${metrics__metrics__labeled_counter__places_manager_write_query_error_count.client_id} ;;
   }
 }
 

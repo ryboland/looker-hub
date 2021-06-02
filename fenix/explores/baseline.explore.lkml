@@ -13,56 +13,47 @@ explore: baseline {
 
   join: baseline__metrics__labeled_counter__browser_search_ad_clicks {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__browser_search_ad_clicks}) AS baseline__metrics__labeled_counter__browser_search_ad_clicks ;;
-    sql_on: ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__browser_search_ad_clicks.client_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__browser_search_ad_clicks}) AS baseline__metrics__labeled_counter__browser_search_ad_clicks ON ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__browser_search_ad_clicks.client_id} ;;
   }
 
   join: baseline__metrics__labeled_counter__browser_search_in_content {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__browser_search_in_content}) AS baseline__metrics__labeled_counter__browser_search_in_content ;;
-    sql_on: ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__browser_search_in_content.client_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__browser_search_in_content}) AS baseline__metrics__labeled_counter__browser_search_in_content ON ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__browser_search_in_content.client_id} ;;
   }
 
   join: baseline__metrics__labeled_counter__browser_search_with_ads {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__browser_search_with_ads}) AS baseline__metrics__labeled_counter__browser_search_with_ads ;;
-    sql_on: ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__browser_search_with_ads.client_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__browser_search_with_ads}) AS baseline__metrics__labeled_counter__browser_search_with_ads ON ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__browser_search_with_ads.client_id} ;;
   }
 
   join: baseline__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_label}) AS baseline__metrics__labeled_counter__glean_error_invalid_label ;;
-    sql_on: ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__glean_error_invalid_label.client_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_label}) AS baseline__metrics__labeled_counter__glean_error_invalid_label ON ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__glean_error_invalid_label.client_id} ;;
   }
 
   join: baseline__metrics__labeled_counter__glean_error_invalid_overflow {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_overflow}) AS baseline__metrics__labeled_counter__glean_error_invalid_overflow ;;
-    sql_on: ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__glean_error_invalid_overflow.client_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_overflow}) AS baseline__metrics__labeled_counter__glean_error_invalid_overflow ON ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__glean_error_invalid_overflow.client_id} ;;
   }
 
   join: baseline__metrics__labeled_counter__glean_error_invalid_state {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_state}) AS baseline__metrics__labeled_counter__glean_error_invalid_state ;;
-    sql_on: ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__glean_error_invalid_state.client_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_state}) AS baseline__metrics__labeled_counter__glean_error_invalid_state ON ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__glean_error_invalid_state.client_id} ;;
   }
 
   join: baseline__metrics__labeled_counter__glean_error_invalid_value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_value}) AS baseline__metrics__labeled_counter__glean_error_invalid_value ;;
-    sql_on: ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__glean_error_invalid_value.client_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_value}) AS baseline__metrics__labeled_counter__glean_error_invalid_value ON ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__glean_error_invalid_value.client_id} ;;
   }
 
   join: baseline__metrics__labeled_counter__glean_validation_pings_submitted {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_validation_pings_submitted}) AS baseline__metrics__labeled_counter__glean_validation_pings_submitted ;;
-    sql_on: ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__glean_validation_pings_submitted.client_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_validation_pings_submitted}) AS baseline__metrics__labeled_counter__glean_validation_pings_submitted ON ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__glean_validation_pings_submitted.client_id} ;;
   }
 
   join: baseline__metrics__labeled_counter__metrics_search_count {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__metrics_search_count}) AS baseline__metrics__labeled_counter__metrics_search_count ;;
-    sql_on: ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__metrics_search_count.client_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__metrics_search_count}) AS baseline__metrics__labeled_counter__metrics_search_count ON ${baseline.client_info__client_id} = ${baseline__metrics__labeled_counter__metrics_search_count.client_id} ;;
   }
 }
 
