@@ -12,22 +12,22 @@ explore: custom {
 
   join: custom__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_label}) AS custom__metrics__labeled_counter__glean_error_invalid_label ;;
+    sql: CROSS JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_label}) AS custom__metrics__labeled_counter__glean_error_invalid_label ;;
   }
 
   join: custom__metrics__labeled_counter__glean_error_invalid_overflow {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_overflow}) AS custom__metrics__labeled_counter__glean_error_invalid_overflow ;;
+    sql: CROSS JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_overflow}) AS custom__metrics__labeled_counter__glean_error_invalid_overflow ;;
   }
 
   join: custom__metrics__labeled_counter__glean_error_invalid_state {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_state}) AS custom__metrics__labeled_counter__glean_error_invalid_state ;;
+    sql: CROSS JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_state}) AS custom__metrics__labeled_counter__glean_error_invalid_state ;;
   }
 
   join: custom__metrics__labeled_counter__glean_error_invalid_value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_value}) AS custom__metrics__labeled_counter__glean_error_invalid_value ;;
+    sql: CROSS JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_value}) AS custom__metrics__labeled_counter__glean_error_invalid_value ;;
   }
 }
 

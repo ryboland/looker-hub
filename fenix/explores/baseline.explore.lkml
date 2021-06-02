@@ -13,47 +13,47 @@ explore: baseline {
 
   join: baseline__metrics__labeled_counter__browser_search_ad_clicks {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__browser_search_ad_clicks}) AS baseline__metrics__labeled_counter__browser_search_ad_clicks ;;
+    sql: CROSS JOIN UNNEST(${baseline.metrics__labeled_counter__browser_search_ad_clicks}) AS baseline__metrics__labeled_counter__browser_search_ad_clicks ;;
   }
 
   join: baseline__metrics__labeled_counter__browser_search_in_content {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__browser_search_in_content}) AS baseline__metrics__labeled_counter__browser_search_in_content ;;
+    sql: CROSS JOIN UNNEST(${baseline.metrics__labeled_counter__browser_search_in_content}) AS baseline__metrics__labeled_counter__browser_search_in_content ;;
   }
 
   join: baseline__metrics__labeled_counter__browser_search_with_ads {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__browser_search_with_ads}) AS baseline__metrics__labeled_counter__browser_search_with_ads ;;
+    sql: CROSS JOIN UNNEST(${baseline.metrics__labeled_counter__browser_search_with_ads}) AS baseline__metrics__labeled_counter__browser_search_with_ads ;;
   }
 
   join: baseline__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_label}) AS baseline__metrics__labeled_counter__glean_error_invalid_label ;;
+    sql: CROSS JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_label}) AS baseline__metrics__labeled_counter__glean_error_invalid_label ;;
   }
 
   join: baseline__metrics__labeled_counter__glean_error_invalid_overflow {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_overflow}) AS baseline__metrics__labeled_counter__glean_error_invalid_overflow ;;
+    sql: CROSS JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_overflow}) AS baseline__metrics__labeled_counter__glean_error_invalid_overflow ;;
   }
 
   join: baseline__metrics__labeled_counter__glean_error_invalid_state {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_state}) AS baseline__metrics__labeled_counter__glean_error_invalid_state ;;
+    sql: CROSS JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_state}) AS baseline__metrics__labeled_counter__glean_error_invalid_state ;;
   }
 
   join: baseline__metrics__labeled_counter__glean_error_invalid_value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_value}) AS baseline__metrics__labeled_counter__glean_error_invalid_value ;;
+    sql: CROSS JOIN UNNEST(${baseline.metrics__labeled_counter__glean_error_invalid_value}) AS baseline__metrics__labeled_counter__glean_error_invalid_value ;;
   }
 
   join: baseline__metrics__labeled_counter__glean_validation_pings_submitted {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__glean_validation_pings_submitted}) AS baseline__metrics__labeled_counter__glean_validation_pings_submitted ;;
+    sql: CROSS JOIN UNNEST(${baseline.metrics__labeled_counter__glean_validation_pings_submitted}) AS baseline__metrics__labeled_counter__glean_validation_pings_submitted ;;
   }
 
   join: baseline__metrics__labeled_counter__metrics_search_count {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__metrics_search_count}) AS baseline__metrics__labeled_counter__metrics_search_count ;;
+    sql: CROSS JOIN UNNEST(${baseline.metrics__labeled_counter__metrics_search_count}) AS baseline__metrics__labeled_counter__metrics_search_count ;;
   }
 }
 
