@@ -13,22 +13,22 @@ explore: activation {
 
   join: activation__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_label}) AS activation__metrics__labeled_counter__glean_error_invalid_label ;;
+    sql: LEFT JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_label}) AS activation__metrics__labeled_counter__glean_error_invalid_label ;;
   }
 
   join: activation__metrics__labeled_counter__glean_error_invalid_overflow {
     relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_overflow}) AS activation__metrics__labeled_counter__glean_error_invalid_overflow ;;
+    sql: LEFT JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_overflow}) AS activation__metrics__labeled_counter__glean_error_invalid_overflow ;;
   }
 
   join: activation__metrics__labeled_counter__glean_error_invalid_state {
     relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_state}) AS activation__metrics__labeled_counter__glean_error_invalid_state ;;
+    sql: LEFT JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_state}) AS activation__metrics__labeled_counter__glean_error_invalid_state ;;
   }
 
   join: activation__metrics__labeled_counter__glean_error_invalid_value {
     relationship: one_to_many
-    sql: CROSS JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_value}) AS activation__metrics__labeled_counter__glean_error_invalid_value ;;
+    sql: LEFT JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_value}) AS activation__metrics__labeled_counter__glean_error_invalid_value ;;
   }
 }
 
