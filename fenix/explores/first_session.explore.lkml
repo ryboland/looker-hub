@@ -11,7 +11,5 @@ explore: first_session {
     ]
   }
 
-  description: "Explore for the first_session ping. This ping is intended to capture the source of the app install
-on the first session.
-"
+  description: "Explore for the first_session ping. This ping is intended to capture the source of the app install on the first session."
 }

@@ -11,13 +11,5 @@ explore: startup_timeline {
     ]
   }
 
-  description: "Explore for the startup_timeline ping. This ping is intended to provide an understanding of startup performance.
-
-In addition to being captured on real devices, the ping data was prematurely
-optimized into this separate ping to be isolated from other metrics to be
-more easily captured by performance testing automation but that hasn't
-happened in practice. We would have removed it but implementation
-details don't make that possible:
-https://github.com/mozilla-mobile/fenix/issues/17972#issuecomment-781002987
-"
+  description: "Explore for the startup_timeline ping. This ping is intended to provide an understanding of startup performance. In addition to being captured on real devices, the ping data was prematurely optimized into this separate ping to be isolated from other metrics to be more easily captured by performance testing automation but that hasn't happened in practice. We would have removed it but implementation details don't make that possible: https://github.com/mozilla-mobile/fenix/issues/17972#issuecomment-781002987"
 }

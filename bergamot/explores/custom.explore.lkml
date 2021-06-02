@@ -10,6 +10,5 @@ explore: custom {
     ]
   }
 
-  description: "Explore for the custom ping. A custom ping, sending time is fully controlled by the application.
-"
+  description: "Explore for the custom ping. A custom ping, sending time is fully controlled by the application."
 }

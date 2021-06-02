@@ -11,6 +11,5 @@ explore: installation {
     ]
   }
 
-  description: "Explore for the installation ping. This ping is intended to capture the source of the installation
-"
+  description: "Explore for the installation ping. This ping is intended to capture the source of the installation"
 }

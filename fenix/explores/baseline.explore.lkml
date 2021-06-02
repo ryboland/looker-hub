@@ -11,10 +11,5 @@ explore: baseline {
     ]
   }
 
-  description: "Explore for the baseline ping. This ping is intended to provide metrics that are managed by the library
-itself, and not explicitly set by the application or included in the
-application's `metrics.yaml` file.
-The `baseline` ping is automatically sent when the application is moved to
-the background.
-"
+  description: "Explore for the baseline ping. This ping is intended to provide metrics that are managed by the library itself, and not explicitly set by the application or included in the application's `metrics.yaml` file. The `baseline` ping is automatically sent when the application is moved to the background."
 }

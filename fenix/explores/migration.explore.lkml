@@ -11,6 +11,5 @@ explore: migration {
     ]
   }
 
-  description: "Explore for the migration ping. A ping sent after a Fennec->Fenix migration was completed.
-"
+  description: "Explore for the migration ping. A ping sent after a Fennec->Fenix migration was completed."
 }
