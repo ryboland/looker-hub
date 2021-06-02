@@ -549,9 +549,9 @@ order by n desc ;;
 view: sync__metrics__labeled_counter__glean_error_invalid_label {
   label: "Labeled Counter Glean Error Invalid Label"
 
-  dimension: client_id {
+  dimension: document_id {
     type: string
-    sql: ${sync.client_info__client_id} ;;
+    sql: ${sync.document_id} ;;
     primary_key: yes
     hidden: yes
   }
@@ -583,9 +583,9 @@ view: sync__metrics__labeled_counter__glean_error_invalid_label {
 view: sync__metrics__labeled_counter__glean_error_invalid_overflow {
   label: "Labeled Counter Glean Error Invalid Overflow"
 
-  dimension: client_id {
+  dimension: document_id {
     type: string
-    sql: ${sync.client_info__client_id} ;;
+    sql: ${sync.document_id} ;;
     primary_key: yes
     hidden: yes
   }
@@ -617,9 +617,9 @@ view: sync__metrics__labeled_counter__glean_error_invalid_overflow {
 view: sync__metrics__labeled_counter__glean_error_invalid_state {
   label: "Labeled Counter Glean Error Invalid State"
 
-  dimension: client_id {
+  dimension: document_id {
     type: string
-    sql: ${sync.client_info__client_id} ;;
+    sql: ${sync.document_id} ;;
     primary_key: yes
     hidden: yes
   }
@@ -651,9 +651,9 @@ view: sync__metrics__labeled_counter__glean_error_invalid_state {
 view: sync__metrics__labeled_counter__glean_error_invalid_value {
   label: "Labeled Counter Glean Error Invalid Value"
 
-  dimension: client_id {
+  dimension: document_id {
     type: string
-    sql: ${sync.client_info__client_id} ;;
+    sql: ${sync.document_id} ;;
     primary_key: yes
     hidden: yes
   }
