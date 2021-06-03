@@ -2,6 +2,7 @@ include: "/looker-hub/fenix/views/events.view.lkml"
 
 explore: events {
   sql_always_where: ${events.submission_date} >= '2010-01-01' ;;
+  view_label: " Events"
   description: "Explore for the events ping. The events ping's purpose is to transport all of the event metric information. The `events` ping is automatically sent when the application becomes inactive."
   view_name: events
 

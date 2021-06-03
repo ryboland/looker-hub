@@ -253,7 +253,7 @@ This metric appears in both the metrics and baseline pings.
 
   dimension: additional_properties {
     sql: ${TABLE}.additional_properties ;;
-    type: string
+    hidden: yes
   }
 
   dimension: client_info__android_sdk_version {
@@ -1005,7 +1005,8 @@ view: suggest__baseline__metrics__labeled_counter__browser_search_ad_clicks {
     count(*) as n
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.browser_search_ad_clicks) as m
-where date(submission_timestamp) > date_sub(current_date, interval 3 day)
+where date(submission_timestamp) > date_sub(current_date, interval 90 day)
+    and sample_id = 0
 group by key
 order by n desc ;;
   }
@@ -1023,7 +1024,8 @@ view: suggest__baseline__metrics__labeled_counter__browser_search_in_content {
     count(*) as n
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.browser_search_in_content) as m
-where date(submission_timestamp) > date_sub(current_date, interval 3 day)
+where date(submission_timestamp) > date_sub(current_date, interval 90 day)
+    and sample_id = 0
 group by key
 order by n desc ;;
   }
@@ -1041,7 +1043,8 @@ view: suggest__baseline__metrics__labeled_counter__browser_search_with_ads {
     count(*) as n
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.browser_search_with_ads) as m
-where date(submission_timestamp) > date_sub(current_date, interval 3 day)
+where date(submission_timestamp) > date_sub(current_date, interval 90 day)
+    and sample_id = 0
 group by key
 order by n desc ;;
   }
@@ -1059,7 +1062,8 @@ view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_label {
     count(*) as n
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
-where date(submission_timestamp) > date_sub(current_date, interval 3 day)
+where date(submission_timestamp) > date_sub(current_date, interval 90 day)
+    and sample_id = 0
 group by key
 order by n desc ;;
   }
@@ -1077,7 +1081,8 @@ view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_overflow 
     count(*) as n
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
-where date(submission_timestamp) > date_sub(current_date, interval 3 day)
+where date(submission_timestamp) > date_sub(current_date, interval 90 day)
+    and sample_id = 0
 group by key
 order by n desc ;;
   }
@@ -1095,7 +1100,8 @@ view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_state {
     count(*) as n
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
-where date(submission_timestamp) > date_sub(current_date, interval 3 day)
+where date(submission_timestamp) > date_sub(current_date, interval 90 day)
+    and sample_id = 0
 group by key
 order by n desc ;;
   }
@@ -1113,7 +1119,8 @@ view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_value {
     count(*) as n
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
-where date(submission_timestamp) > date_sub(current_date, interval 3 day)
+where date(submission_timestamp) > date_sub(current_date, interval 90 day)
+    and sample_id = 0
 group by key
 order by n desc ;;
   }
@@ -1131,7 +1138,8 @@ view: suggest__baseline__metrics__labeled_counter__glean_validation_pings_submit
     count(*) as n
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.glean_validation_pings_submitted) as m
-where date(submission_timestamp) > date_sub(current_date, interval 3 day)
+where date(submission_timestamp) > date_sub(current_date, interval 90 day)
+    and sample_id = 0
 group by key
 order by n desc ;;
   }
@@ -1149,7 +1157,8 @@ view: suggest__baseline__metrics__labeled_counter__metrics_search_count {
     count(*) as n
 from mozdata.org_mozilla_firefox.baseline as t,
 unnest(metrics.labeled_counter.metrics_search_count) as m
-where date(submission_timestamp) > date_sub(current_date, interval 3 day)
+where date(submission_timestamp) > date_sub(current_date, interval 90 day)
+    and sample_id = 0
 group by key
 order by n desc ;;
   }

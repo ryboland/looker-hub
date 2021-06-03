@@ -85,7 +85,7 @@ The labels are the `category.name` identifier of the metric.
 
   dimension: additional_properties {
     sql: ${TABLE}.additional_properties ;;
-    type: string
+    hidden: yes
   }
 
   dimension: client_info__android_sdk_version {
@@ -481,7 +481,8 @@ view: suggest__sync__metrics__labeled_counter__glean_error_invalid_label {
     count(*) as n
 from mozdata.org_mozilla_firefox.sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
-where date(submission_timestamp) > date_sub(current_date, interval 3 day)
+where date(submission_timestamp) > date_sub(current_date, interval 90 day)
+    and sample_id = 0
 group by key
 order by n desc ;;
   }
@@ -499,7 +500,8 @@ view: suggest__sync__metrics__labeled_counter__glean_error_invalid_overflow {
     count(*) as n
 from mozdata.org_mozilla_firefox.sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
-where date(submission_timestamp) > date_sub(current_date, interval 3 day)
+where date(submission_timestamp) > date_sub(current_date, interval 90 day)
+    and sample_id = 0
 group by key
 order by n desc ;;
   }
@@ -517,7 +519,8 @@ view: suggest__sync__metrics__labeled_counter__glean_error_invalid_state {
     count(*) as n
 from mozdata.org_mozilla_firefox.sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
-where date(submission_timestamp) > date_sub(current_date, interval 3 day)
+where date(submission_timestamp) > date_sub(current_date, interval 90 day)
+    and sample_id = 0
 group by key
 order by n desc ;;
   }
@@ -535,7 +538,8 @@ view: suggest__sync__metrics__labeled_counter__glean_error_invalid_value {
     count(*) as n
 from mozdata.org_mozilla_firefox.sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
-where date(submission_timestamp) > date_sub(current_date, interval 3 day)
+where date(submission_timestamp) > date_sub(current_date, interval 90 day)
+    and sample_id = 0
 group by key
 order by n desc ;;
   }
