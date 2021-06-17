@@ -77,6 +77,7 @@ contextual_services:
   glean_app: false
   owners:
   - mmccorquodale@mozilla.com
+  - rburwei@mozilla.com
   pretty_name: Contextual Services
   spoke: looker-spoke-private
   views:
