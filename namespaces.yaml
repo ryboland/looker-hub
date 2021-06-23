@@ -548,7 +548,7 @@ firefox_accounts:
   views:
     events:
       tables:
-        base_table: mozdata.firefox_accounts.fxa_content_auth_oauth_events
+      - base_table: mozdata.firefox_accounts.fxa_content_auth_oauth_events
         events_table_view: fxa_events_table
       type: events_view
     events_daily_table:
@@ -572,7 +572,7 @@ firefox_accounts:
       type: table_view
     growth_accounting:
       tables:
-      - table: mozdata.firefox_accounts.users_services_daily_v1
+      - table: mozdata.firefox_accounts.fxa_users_last_seen
       type: growth_accounting_view
 firefox_ios:
   explores:
