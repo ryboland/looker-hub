@@ -558,12 +558,12 @@ firefox_accounts:
       type: table_view
     funnel_analysis:
       tables:
-      - event_type_1: event_types
-        event_type_2: event_types
-        event_type_3: event_types
-        event_type_4: event_types
-        event_types: mozdata.firefox_accounts.event_types
+      - event_types: mozdata.firefox_accounts.event_types
         funnel_analysis: events_daily_table
+        step_1: event_types
+        step_2: event_types
+        step_3: event_types
+        step_4: event_types
       type: funnel_analysis_view
     fxa_events_table:
       tables:

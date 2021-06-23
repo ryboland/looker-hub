@@ -10,6 +10,26 @@ explore: funnel_analysis {
     ]
   }
 
+  join: step_1 {
+    relationship: many_to_one
+    type: cross
+  }
+
+  join: step_2 {
+    relationship: many_to_one
+    type: cross
+  }
+
+  join: step_3 {
+    relationship: many_to_one
+    type: cross
+  }
+
+  join: step_4 {
+    relationship: many_to_one
+    type: cross
+  }
+
   sql_always_where: ${funnel_analysis.submission_date} >= '2010-01-01' ;;
 }
 
