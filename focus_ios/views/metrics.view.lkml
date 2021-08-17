@@ -1,7 +1,320 @@
 view: metrics {
+  dimension: metrics__memory_distribution__glean_database_size__sum {
+    sql: ${TABLE}.metrics.memory_distribution.glean_database_size.sum ;;
+    type: number
+    group_label: "Glean Database"
+    group_item_label: "Size Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Database Size Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_database_size"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The size of the database file at startup.
+"
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_label {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
+    group_label: "Glean Error"
+    group_item_label: "Invalid Label"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_error_invalid_label"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counts the number of times a metric was set with an invalid label.
+The labels are the `category.name` identifier of the metric.
+"
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_overflow {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
+    group_label: "Glean Error"
+    group_item_label: "Invalid Overflow"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_error_invalid_overflow"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counts the number of times a metric was set a value that overflowed.
+The labels are the `category.name` identifier of the metric.
+"
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_state {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
+    group_label: "Glean Error"
+    group_item_label: "Invalid State"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Invalid State"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_error_invalid_state"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counts the number of times a timing metric was used incorrectly.
+The labels are the `category.name` identifier of the metric.
+"
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_value {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
+    group_label: "Glean Error"
+    group_item_label: "Invalid Value"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_error_invalid_value"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counts the number of times a metric was set to an invalid value.
+The labels are the `category.name` identifier of the metric.
+"
+  }
+
+  dimension: metrics__counter__glean_error_io {
+    sql: ${TABLE}.metrics.counter.glean_error_io ;;
+    type: number
+    group_label: "Glean Error"
+    group_item_label: "Io"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Io"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_error_io"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The number of times we encountered an IO error
+when writing a pending ping to disk.
+"
+  }
+
+  dimension: metrics__counter__glean_error_preinit_tasks_overflow {
+    sql: ${TABLE}.metrics.counter.glean_error_preinit_tasks_overflow ;;
+    type: number
+    group_label: "Glean Error"
+    group_item_label: "Preinit Tasks Overflow"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Preinit Tasks Overflow"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_error_preinit_tasks_overflow"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The number of tasks queued in the pre-initialization buffer.
+Only sent if the buffer overflows.
+"
+  }
+
+  dimension: metrics__boolean__glean_error_preinit_tasks_timeout {
+    sql: ${TABLE}.metrics.boolean.glean_error_preinit_tasks_timeout ;;
+    type: yesno
+    group_label: "Glean Error"
+    group_item_label: "Preinit Tasks Timeout"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Preinit Tasks Timeout"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_error_preinit_tasks_timeout"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Set to true if the tasks that are queued prior to Glean initialization time out."
+  }
+
+  dimension: metrics__counter__glean_time_invalid_timezone_offset {
+    sql: ${TABLE}.metrics.counter.glean_time_invalid_timezone_offset ;;
+    type: number
+    group_label: "Glean Time"
+    group_item_label: "Invalid Timezone Offset"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Time Invalid Timezone Offset"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_time_invalid_timezone_offset"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Counts the number of times we encountered an invalid timezone offset
+when trying to get the current time.
+A timezone offset is invalid if it is outside [-24h, +24h].
+If invalid a UTC offset is used (+0h).
+"
+  }
+
+  dimension: metrics__counter__glean_upload_deleted_pings_after_quota_hit {
+    sql: ${TABLE}.metrics.counter.glean_upload_deleted_pings_after_quota_hit ;;
+    type: number
+    group_label: "Glean Upload"
+    group_item_label: "Deleted Pings After Quota Hit"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Upload Deleted Pings After Quota Hit"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_upload_deleted_pings_after_quota_hit"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The number of pings deleted after the quota
+for the size of the pending pings directory or number of files is hit.
+Since quota is only calculated for the pending pings directory,
+and deletion request ping live in a different directory,
+deletion request pings are never deleted.
+"
+  }
+
+  dimension: metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__sum {
+    sql: ${TABLE}.metrics.memory_distribution.glean_upload_discarded_exceeding_pings_size.sum ;;
+    type: number
+    group_label: "Glean Upload"
+    group_item_label: "Discarded Exceeding Pings Size Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Upload Discarded Exceeding Pings Size Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_upload_discarded_exceeding_pings_size"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The size of pings that exceeded the maximum ping size allowed for upload.
+"
+  }
+
+  dimension: metrics__counter__glean_upload_pending_pings {
+    sql: ${TABLE}.metrics.counter.glean_upload_pending_pings ;;
+    type: number
+    group_label: "Glean Upload"
+    group_item_label: "Pending Pings"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Upload Pending Pings"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_upload_pending_pings"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The total number of pending pings at startup.
+This does not include deletion-request pings.
+"
+  }
+
+  dimension: metrics__memory_distribution__glean_upload_pending_pings_directory_size__sum {
+    sql: ${TABLE}.metrics.memory_distribution.glean_upload_pending_pings_directory_size.sum ;;
+    type: number
+    group_label: "Glean Upload"
+    group_item_label: "Pending Pings Directory Size Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Upload Pending Pings Directory Size Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_upload_pending_pings_directory_size"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The size of the pending pings directory upon initialization of Glean.
+This does not include the size of the deletion request pings directory.
+"
+  }
+
+  dimension: metrics__labeled_counter__glean_upload_ping_upload_failure {
+    sql: ${TABLE}.metrics.labeled_counter.glean_upload_ping_upload_failure ;;
+    group_label: "Glean Upload"
+    group_item_label: "Ping Upload Failure"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Upload Ping Upload Failure"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_upload_ping_upload_failure"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counts the number of ping upload failures, by type of failure.
+This includes failures for all ping types,
+though the counts appear in the next successfully sent `metrics` ping.
+"
+  }
+
+  dimension: metrics__datetime__glean_validation_first_run_hour {
+    sql: ${TABLE}.metrics.datetime.glean_validation_first_run_hour ;;
+    type: string
+    group_label: "Glean Validation"
+    group_item_label: "First Run Hour"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Validation First Run Hour"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_validation_first_run_hour"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The hour of the first run of the application.
+"
+  }
+
+  dimension: metrics__counter__glean_validation_foreground_count {
+    sql: ${TABLE}.metrics.counter.glean_validation_foreground_count ;;
+    type: number
+    group_label: "Glean Validation"
+    group_item_label: "Foreground Count"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Validation Foreground Count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_validation_foreground_count"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "On mobile, the number of times the application went to foreground.
+"
+  }
+
+  dimension: metrics__labeled_counter__glean_validation_pings_submitted {
+    sql: ${TABLE}.metrics.labeled_counter.glean_validation_pings_submitted ;;
+    group_label: "Glean Validation"
+    group_item_label: "Pings Submitted"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Validation Pings Submitted"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_validation_pings_submitted"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "A count of the pings submitted, by ping type.
+
+This metric appears in both the metrics and baseline pings.
+
+- On the metrics ping, the counts include the number of pings sent since
+  the last metrics ping (including the last metrics ping)
+- On the baseline ping, the counts include the number of pings send since
+  the last baseline ping (including the last baseline ping)
+"
+  }
+
+  dimension: metrics__string__ping_reason {
+    sql: ${TABLE}.metrics.string.ping_reason ;;
+    type: string
+    group_label: "Glean"
+    group_item_label: "Ping Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Ping Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/ping_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The optional reason the ping was submitted.
+The specific values for reason are specific to each ping, and are
+documented in the ping's pings.yaml file.
+"
+  }
+
   dimension: additional_properties {
     sql: ${TABLE}.additional_properties ;;
-    type: string
+    hidden: yes
   }
 
   dimension: client_info__android_sdk_version {
@@ -96,6 +409,7 @@ view: metrics {
   dimension: document_id {
     sql: ${TABLE}.document_id ;;
     hidden: yes
+    primary_key: yes
   }
 
   dimension: events {
@@ -165,6 +479,13 @@ view: metrics {
     group_item_label: "X Debug Id"
   }
 
+  dimension: metadata__header__x_foxsec_ip_reputation {
+    sql: ${TABLE}.metadata.header.x_foxsec_ip_reputation ;;
+    type: string
+    group_label: "Metadata Header"
+    group_item_label: "X Foxsec Ip Reputation"
+  }
+
   dimension: metadata__header__x_pingsender_version {
     sql: ${TABLE}.metadata.header.x_pingsender_version ;;
     type: string
@@ -177,6 +498,13 @@ view: metrics {
     type: string
     group_label: "Metadata Header"
     group_item_label: "X Source Tags"
+  }
+
+  dimension: metadata__header__x_telemetry_agent {
+    sql: ${TABLE}.metadata.header.x_telemetry_agent ;;
+    type: string
+    group_label: "Metadata Header"
+    group_item_label: "X Telemetry Agent"
   }
 
   dimension: metadata__isp__db_version {
@@ -219,145 +547,6 @@ view: metrics {
     type: string
     group_label: "Metadata User Agent"
     group_item_label: "Version"
-  }
-
-  dimension: metrics__boolean__glean_error_preinit_tasks_timeout {
-    sql: ${TABLE}.metrics.boolean.glean_error_preinit_tasks_timeout ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Glean Error Preinit Tasks Timeout"
-  }
-
-  dimension: metrics__counter__glean_error_io {
-    sql: ${TABLE}.metrics.counter.glean_error_io ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Glean Error Io"
-  }
-
-  dimension: metrics__counter__glean_error_preinit_tasks_overflow {
-    sql: ${TABLE}.metrics.counter.glean_error_preinit_tasks_overflow ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Glean Error Preinit Tasks Overflow"
-  }
-
-  dimension: metrics__counter__glean_time_invalid_timezone_offset {
-    sql: ${TABLE}.metrics.counter.glean_time_invalid_timezone_offset ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Glean Time Invalid Timezone Offset"
-  }
-
-  dimension: metrics__counter__glean_upload_deleted_pings_after_quota_hit {
-    sql: ${TABLE}.metrics.counter.glean_upload_deleted_pings_after_quota_hit ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Glean Upload Deleted Pings After Quota Hit"
-  }
-
-  dimension: metrics__counter__glean_upload_pending_pings {
-    sql: ${TABLE}.metrics.counter.glean_upload_pending_pings ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Glean Upload Pending Pings"
-  }
-
-  dimension: metrics__counter__glean_validation_foreground_count {
-    sql: ${TABLE}.metrics.counter.glean_validation_foreground_count ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Glean Validation Foreground Count"
-  }
-
-  dimension: metrics__datetime__glean_validation_first_run_hour {
-    sql: ${TABLE}.metrics.datetime.glean_validation_first_run_hour ;;
-    type: string
-    group_label: "Metrics Datetime"
-    group_item_label: "Glean Validation First Run Hour"
-  }
-
-  dimension: metrics__jwe {
-    sql: ${TABLE}.metrics.jwe ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_label {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_state {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_value {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__glean_upload_ping_upload_failure {
-    sql: ${TABLE}.metrics.labeled_counter.glean_upload_ping_upload_failure ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__glean_validation_pings_submitted {
-    sql: ${TABLE}.metrics.labeled_counter.glean_validation_pings_submitted ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_rate {
-    sql: ${TABLE}.metrics.labeled_rate ;;
-    hidden: yes
-  }
-
-  dimension: metrics__memory_distribution__glean_database_size__sum {
-    sql: ${TABLE}.metrics.memory_distribution.glean_database_size.sum ;;
-    type: number
-    group_label: "Metrics Memory Distribution Glean Database Size"
-    group_item_label: "Sum"
-  }
-
-  dimension: metrics__memory_distribution__glean_database_size__values {
-    sql: ${TABLE}.metrics.memory_distribution.glean_database_size.values ;;
-    hidden: yes
-  }
-
-  dimension: metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__sum {
-    sql: ${TABLE}.metrics.memory_distribution.glean_upload_discarded_exceeding_pings_size.sum ;;
-    type: number
-    group_label: "Metrics Memory Distribution Glean Upload Discarded Exceeding Pings Size"
-    group_item_label: "Sum"
-  }
-
-  dimension: metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values {
-    sql: ${TABLE}.metrics.memory_distribution.glean_upload_discarded_exceeding_pings_size.values ;;
-    hidden: yes
-  }
-
-  dimension: metrics__memory_distribution__glean_upload_pending_pings_directory_size__sum {
-    sql: ${TABLE}.metrics.memory_distribution.glean_upload_pending_pings_directory_size.sum ;;
-    type: number
-    group_label: "Metrics Memory Distribution Glean Upload Pending Pings Directory Size"
-    group_item_label: "Sum"
-  }
-
-  dimension: metrics__memory_distribution__glean_upload_pending_pings_directory_size__values {
-    sql: ${TABLE}.metrics.memory_distribution.glean_upload_pending_pings_directory_size.values ;;
-    hidden: yes
-  }
-
-  dimension: metrics__string__ping_reason {
-    sql: ${TABLE}.metrics.string.ping_reason ;;
-    type: string
-    group_label: "Metrics String"
-    group_item_label: "Ping Reason"
   }
 
   dimension: normalized_app_name {
@@ -442,8 +631,7 @@ view: metrics {
       quarter,
       year,
     ]
-    group_label: "Metadata Header"
-    group_item_label: "Parsed Date"
+    label: "Metadata Header: Parsed Date"
   }
 
   dimension_group: ping_info__parsed_end {
@@ -458,8 +646,7 @@ view: metrics {
       quarter,
       year,
     ]
-    group_label: "Ping Info"
-    group_item_label: "Parsed End Time"
+    label: "Ping Info: Parsed End Time"
   }
 
   dimension_group: ping_info__parsed_start {
@@ -474,8 +661,7 @@ view: metrics {
       quarter,
       year,
     ]
-    group_label: "Ping Info"
-    group_item_label: "Parsed Start Time"
+    label: "Ping Info: Parsed Start Time"
   }
 
   dimension_group: submission {
@@ -501,5 +687,473 @@ view: metrics {
     type: count
   }
 
+  measure: glean_error_io {
+    type: sum
+    sql: ${metrics__counter__glean_error_io} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Io"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_error_io"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: glean_error_io_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__glean_error_io: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Io"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_error_io"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: glean_error_preinit_tasks_overflow {
+    type: sum
+    sql: ${metrics__counter__glean_error_preinit_tasks_overflow} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Preinit Tasks Overflow"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_error_preinit_tasks_overflow"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: glean_error_preinit_tasks_overflow_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__glean_error_preinit_tasks_overflow: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Preinit Tasks Overflow"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_error_preinit_tasks_overflow"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: glean_time_invalid_timezone_offset {
+    type: sum
+    sql: ${metrics__counter__glean_time_invalid_timezone_offset} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Glean Time Invalid Timezone Offset"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_time_invalid_timezone_offset"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: glean_time_invalid_timezone_offset_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__glean_time_invalid_timezone_offset: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Glean Time Invalid Timezone Offset"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_time_invalid_timezone_offset"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: glean_upload_deleted_pings_after_quota_hit {
+    type: sum
+    sql: ${metrics__counter__glean_upload_deleted_pings_after_quota_hit} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Glean Upload Deleted Pings After Quota Hit"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_upload_deleted_pings_after_quota_hit"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: glean_upload_deleted_pings_after_quota_hit_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__glean_upload_deleted_pings_after_quota_hit: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Glean Upload Deleted Pings After Quota Hit"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_upload_deleted_pings_after_quota_hit"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: glean_upload_pending_pings {
+    type: sum
+    sql: ${metrics__counter__glean_upload_pending_pings} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Glean Upload Pending Pings"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_upload_pending_pings"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: glean_upload_pending_pings_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__glean_upload_pending_pings: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Glean Upload Pending Pings"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_upload_pending_pings"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: glean_validation_foreground_count {
+    type: sum
+    sql: ${metrics__counter__glean_validation_foreground_count} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Glean Validation Foreground Count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_validation_foreground_count"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: glean_validation_foreground_count_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__glean_validation_foreground_count: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Glean Validation Foreground Count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/focus_ios/metrics/glean_validation_foreground_count"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
   sql_table_name: `mozdata.org_mozilla_ios_focus.metrics` ;;
+}
+
+view: metrics__metrics__labeled_counter__glean_error_invalid_label {
+  label: "Glean Error - Invalid Label"
+
+  dimension: document_id {
+    type: string
+    sql: ${metrics.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+  }
+}
+
+view: metrics__metrics__labeled_counter__glean_error_invalid_overflow {
+  label: "Glean Error - Invalid Overflow"
+
+  dimension: document_id {
+    type: string
+    sql: ${metrics.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+  }
+}
+
+view: metrics__metrics__labeled_counter__glean_error_invalid_state {
+  label: "Glean Error - Invalid State"
+
+  dimension: document_id {
+    type: string
+    sql: ${metrics.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+  }
+}
+
+view: metrics__metrics__labeled_counter__glean_error_invalid_value {
+  label: "Glean Error - Invalid Value"
+
+  dimension: document_id {
+    type: string
+    sql: ${metrics.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+  }
+}
+
+view: metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
+  label: "Glean Upload - Ping Upload Failure"
+
+  dimension: document_id {
+    type: string
+    sql: ${metrics.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failure
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failure.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+  }
+}
+
+view: metrics__metrics__labeled_counter__glean_validation_pings_submitted {
+  label: "Glean Validation - Pings Submitted"
+
+  dimension: document_id {
+    type: string
+    sql: ${metrics.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitted
+    suggest_dimension: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitted.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_ios_focus.metrics as t,
+unnest(metrics.labeled_counter.glean_error_invalid_label) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_ios_focus.metrics as t,
+unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_ios_focus.metrics as t,
+unnest(metrics.labeled_counter.glean_error_invalid_state) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_ios_focus.metrics as t,
+unnest(metrics.labeled_counter.glean_error_invalid_value) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_ios_focus.metrics as t,
+unnest(metrics.labeled_counter.glean_upload_ping_upload_failure) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitted {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_ios_focus.metrics as t,
+unnest(metrics.labeled_counter.glean_validation_pings_submitted) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
 }

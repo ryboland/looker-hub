@@ -1,7 +1,1179 @@
 view: migration {
+  dimension: metrics__labeled_counter__glean_error_invalid_label {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
+    group_label: "Glean Error"
+    group_item_label: "Invalid Label"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_label"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counts the number of times a metric was set with an invalid label.
+The labels are the `category.name` identifier of the metric.
+"
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_overflow {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
+    group_label: "Glean Error"
+    group_item_label: "Invalid Overflow"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_overflow"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counts the number of times a metric was set a value that overflowed.
+The labels are the `category.name` identifier of the metric.
+"
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_state {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
+    group_label: "Glean Error"
+    group_item_label: "Invalid State"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Invalid State"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_state"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counts the number of times a timing metric was used incorrectly.
+The labels are the `category.name` identifier of the metric.
+"
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_value {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
+    group_label: "Glean Error"
+    group_item_label: "Invalid Value"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_value"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counts the number of times a metric was set to an invalid value.
+The labels are the `category.name` identifier of the metric.
+"
+  }
+
+  dimension: metrics__boolean__migration_addons_any_failures {
+    sql: ${TABLE}.metrics.boolean.migration_addons_any_failures ;;
+    type: yesno
+    group_label: "Migration Addons"
+    group_item_label: "Any Failures"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Addons Any Failures"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_any_failures"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Did this migration encounter any failures (exceptions)?
+"
+  }
+
+  dimension: metrics__counter__migration_addons_failed_addons {
+    sql: ${TABLE}.metrics.counter.migration_addons_failed_addons ;;
+    type: number
+    group_label: "Migration Addons"
+    group_item_label: "Failed Addons"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Addons Failed Addons"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_failed_addons"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "How many addons failed to migrate?
+"
+  }
+
+  dimension: metrics__counter__migration_addons_failure_reason {
+    sql: ${TABLE}.metrics.counter.migration_addons_failure_reason ;;
+    type: number
+    group_label: "Migration Addons"
+    group_item_label: "Failure Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Addons Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration failed. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__counter__migration_addons_migrated_addons {
+    sql: ${TABLE}.metrics.counter.migration_addons_migrated_addons ;;
+    type: number
+    group_label: "Migration Addons"
+    group_item_label: "Migrated Addons"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Addons Migrated Addons"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_migrated_addons"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "How many addons were migrated?
+"
+  }
+
+  dimension: metrics__counter__migration_addons_success_reason {
+    sql: ${TABLE}.metrics.counter.migration_addons_success_reason ;;
+    type: number
+    group_label: "Migration Addons"
+    group_item_label: "Success Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Addons Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration succeeded. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__timespan__migration_addons_total_duration__value {
+    sql: ${TABLE}.metrics.timespan.migration_addons_total_duration.value ;;
+    type: number
+    group_label: "Migration Addons"
+    group_item_label: "Total Duration Value"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Addons Total Duration Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_total_duration"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total duration of this migration.
+"
+  }
+
+  dimension: metrics__boolean__migration_bookmarks_any_failures {
+    sql: ${TABLE}.metrics.boolean.migration_bookmarks_any_failures ;;
+    type: yesno
+    group_label: "Migration Bookmarks"
+    group_item_label: "Any Failures"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Bookmarks Any Failures"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_any_failures"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Did this migration encounter any failures (exceptions)?
+"
+  }
+
+  dimension: metrics__counter__migration_bookmarks_detected {
+    sql: ${TABLE}.metrics.counter.migration_bookmarks_detected ;;
+    type: number
+    group_label: "Migration Bookmarks"
+    group_item_label: "Detected"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Bookmarks Detected"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_detected"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total number of detected bookmarks prior to a migration.
+"
+  }
+
+  dimension: metrics__timespan__migration_bookmarks_duration__value {
+    sql: ${TABLE}.metrics.timespan.migration_bookmarks_duration.value ;;
+    type: number
+    group_label: "Migration Bookmarks"
+    group_item_label: "Duration Value"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Bookmarks Duration Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_duration"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Duration of the bookmarks migration (Rust operations).
+"
+  }
+
+  dimension: metrics__counter__migration_bookmarks_failure_reason {
+    sql: ${TABLE}.metrics.counter.migration_bookmarks_failure_reason ;;
+    type: number
+    group_label: "Migration Bookmarks"
+    group_item_label: "Failure Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Bookmarks Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration failed. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__labeled_counter__migration_bookmarks_migrated {
+    sql: ${TABLE}.metrics.labeled_counter.migration_bookmarks_migrated ;;
+    group_label: "Migration Bookmarks"
+    group_item_label: "Migrated"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Bookmarks Migrated"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_migrated"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counters describing how bookmark migration went; should add-up to 'migration.bookmarks.detected'.
+"
+  }
+
+  dimension: metrics__counter__migration_bookmarks_success_reason {
+    sql: ${TABLE}.metrics.counter.migration_bookmarks_success_reason ;;
+    type: number
+    group_label: "Migration Bookmarks"
+    group_item_label: "Success Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Bookmarks Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration succeeded. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__timespan__migration_bookmarks_total_duration__value {
+    sql: ${TABLE}.metrics.timespan.migration_bookmarks_total_duration.value ;;
+    type: number
+    group_label: "Migration Bookmarks"
+    group_item_label: "Total Duration Value"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Bookmarks Total Duration Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_total_duration"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total duration of this migration.
+"
+  }
+
+  dimension: metrics__boolean__migration_fxa_any_failures {
+    sql: ${TABLE}.metrics.boolean.migration_fxa_any_failures ;;
+    type: yesno
+    group_label: "Migration Fxa"
+    group_item_label: "Any Failures"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Any Failures"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_any_failures"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Did this migration encounter any failures (exceptions)?
+"
+  }
+
+  dimension: metrics__string__migration_fxa_bad_auth_state {
+    sql: ${TABLE}.metrics.string.migration_fxa_bad_auth_state ;;
+    type: string
+    group_label: "Migration Fxa"
+    group_item_label: "Bad Auth State"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Bad Auth State"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_bad_auth_state"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "If we couldn't migrate due to a bad auth state, what was it?
+"
+  }
+
+  dimension: metrics__counter__migration_fxa_failure_reason {
+    sql: ${TABLE}.metrics.counter.migration_fxa_failure_reason ;;
+    type: number
+    group_label: "Migration Fxa"
+    group_item_label: "Failure Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration failed. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__string__migration_fxa_failure_reason_rust {
+    sql: ${TABLE}.metrics.string.migration_fxa_failure_reason_rust ;;
+    type: string
+    group_label: "Migration Fxa"
+    group_item_label: "Failure Reason Rust"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Failure Reason Rust"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_failure_reason_rust"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration failed (rust exception).
+"
+  }
+
+  dimension: metrics__boolean__migration_fxa_has_custom_idp_server {
+    sql: ${TABLE}.metrics.boolean.migration_fxa_has_custom_idp_server ;;
+    type: yesno
+    group_label: "Migration Fxa"
+    group_item_label: "Has Custom Idp Server"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Has Custom Idp Server"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_has_custom_idp_server"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Is custom idp server configured?
+"
+  }
+
+  dimension: metrics__boolean__migration_fxa_has_custom_token_server {
+    sql: ${TABLE}.metrics.boolean.migration_fxa_has_custom_token_server ;;
+    type: yesno
+    group_label: "Migration Fxa"
+    group_item_label: "Has Custom Token Server"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Has Custom Token Server"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_has_custom_token_server"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Is custom token server configured?
+"
+  }
+
+  dimension: metrics__counter__migration_fxa_success_reason {
+    sql: ${TABLE}.metrics.counter.migration_fxa_success_reason ;;
+    type: number
+    group_label: "Migration Fxa"
+    group_item_label: "Success Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration succeeded. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__timespan__migration_fxa_total_duration__value {
+    sql: ${TABLE}.metrics.timespan.migration_fxa_total_duration.value ;;
+    type: number
+    group_label: "Migration Fxa"
+    group_item_label: "Total Duration Value"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Total Duration Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_total_duration"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total duration of this migration.
+"
+  }
+
+  dimension: metrics__string__migration_fxa_unsupported_account_version {
+    sql: ${TABLE}.metrics.string.migration_fxa_unsupported_account_version ;;
+    type: string
+    group_label: "Migration Fxa"
+    group_item_label: "Unsupported Account Version"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Unsupported Account Version"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_unsupported_account_version"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "What is the detected unsupported account version?
+"
+  }
+
+  dimension: metrics__string__migration_fxa_unsupported_pickle_version {
+    sql: ${TABLE}.metrics.string.migration_fxa_unsupported_pickle_version ;;
+    type: string
+    group_label: "Migration Fxa"
+    group_item_label: "Unsupported Pickle Version"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Unsupported Pickle Version"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_unsupported_pickle_version"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "What is the detected unsupported pickle version?
+"
+  }
+
+  dimension: metrics__string__migration_fxa_unsupported_state_version {
+    sql: ${TABLE}.metrics.string.migration_fxa_unsupported_state_version ;;
+    type: string
+    group_label: "Migration Fxa"
+    group_item_label: "Unsupported State Version"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Unsupported State Version"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_unsupported_state_version"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "What is the detected unsupported state version?
+"
+  }
+
+  dimension: metrics__boolean__migration_gecko_any_failures {
+    sql: ${TABLE}.metrics.boolean.migration_gecko_any_failures ;;
+    type: yesno
+    group_label: "Migration Gecko"
+    group_item_label: "Any Failures"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Gecko Any Failures"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_gecko_any_failures"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Did this migration encounter any failures (exceptions)?
+"
+  }
+
+  dimension: metrics__counter__migration_gecko_failure_reason {
+    sql: ${TABLE}.metrics.counter.migration_gecko_failure_reason ;;
+    type: number
+    group_label: "Migration Gecko"
+    group_item_label: "Failure Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Gecko Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_gecko_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration failed. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__counter__migration_gecko_success_reason {
+    sql: ${TABLE}.metrics.counter.migration_gecko_success_reason ;;
+    type: number
+    group_label: "Migration Gecko"
+    group_item_label: "Success Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Gecko Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_gecko_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration succeeded. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__timespan__migration_gecko_total_duration__value {
+    sql: ${TABLE}.metrics.timespan.migration_gecko_total_duration.value ;;
+    type: number
+    group_label: "Migration Gecko"
+    group_item_label: "Total Duration Value"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Gecko Total Duration Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_gecko_total_duration"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total duration of this migration.
+"
+  }
+
+  dimension: metrics__boolean__migration_history_any_failures {
+    sql: ${TABLE}.metrics.boolean.migration_history_any_failures ;;
+    type: yesno
+    group_label: "Migration History"
+    group_item_label: "Any Failures"
+
+    link: {
+      label: "Glean Dictionary reference for Migration History Any Failures"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_any_failures"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Did this migration encounter any failures (exceptions)?
+"
+  }
+
+  dimension: metrics__counter__migration_history_detected {
+    sql: ${TABLE}.metrics.counter.migration_history_detected ;;
+    type: number
+    group_label: "Migration History"
+    group_item_label: "Detected"
+
+    link: {
+      label: "Glean Dictionary reference for Migration History Detected"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_detected"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total number of detected history items prior to a migration.
+"
+  }
+
+  dimension: metrics__timespan__migration_history_duration__value {
+    sql: ${TABLE}.metrics.timespan.migration_history_duration.value ;;
+    type: number
+    group_label: "Migration History"
+    group_item_label: "Duration Value"
+
+    link: {
+      label: "Glean Dictionary reference for Migration History Duration Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_duration"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Duration of the history migration (Rust operations).
+"
+  }
+
+  dimension: metrics__counter__migration_history_failure_reason {
+    sql: ${TABLE}.metrics.counter.migration_history_failure_reason ;;
+    type: number
+    group_label: "Migration History"
+    group_item_label: "Failure Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration History Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration failed. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__labeled_counter__migration_history_migrated {
+    sql: ${TABLE}.metrics.labeled_counter.migration_history_migrated ;;
+    group_label: "Migration History"
+    group_item_label: "Migrated"
+
+    link: {
+      label: "Glean Dictionary reference for Migration History Migrated"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_migrated"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counters describing how history migration went; should add-up to 'migration.history.detected'.
+"
+  }
+
+  dimension: metrics__counter__migration_history_success_reason {
+    sql: ${TABLE}.metrics.counter.migration_history_success_reason ;;
+    type: number
+    group_label: "Migration History"
+    group_item_label: "Success Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration History Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration succeeded. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__timespan__migration_history_total_duration__value {
+    sql: ${TABLE}.metrics.timespan.migration_history_total_duration.value ;;
+    type: number
+    group_label: "Migration History"
+    group_item_label: "Total Duration Value"
+
+    link: {
+      label: "Glean Dictionary reference for Migration History Total Duration Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_total_duration"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total duration of this migration.
+"
+  }
+
+  dimension: metrics__boolean__migration_logins_any_failures {
+    sql: ${TABLE}.metrics.boolean.migration_logins_any_failures ;;
+    type: yesno
+    group_label: "Migration Logins"
+    group_item_label: "Any Failures"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Any Failures"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_any_failures"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Did this migration encounter any failures (exceptions)?
+"
+  }
+
+  dimension: metrics__counter__migration_logins_detected {
+    sql: ${TABLE}.metrics.counter.migration_logins_detected ;;
+    type: number
+    group_label: "Migration Logins"
+    group_item_label: "Detected"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Detected"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_detected"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "How many logins were detected?
+"
+  }
+
+  dimension: metrics__labeled_counter__migration_logins_failure_counts {
+    sql: ${TABLE}.metrics.labeled_counter.migration_logins_failure_counts ;;
+    group_label: "Migration Logins"
+    group_item_label: "Failure Counts"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Failure Counts"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_failure_counts"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "How many logins failed to be migrated, and in which ways?
+"
+  }
+
+  dimension: metrics__counter__migration_logins_failure_reason {
+    sql: ${TABLE}.metrics.counter.migration_logins_failure_reason ;;
+    type: number
+    group_label: "Migration Logins"
+    group_item_label: "Failure Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration failed. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__counter__migration_logins_success_reason {
+    sql: ${TABLE}.metrics.counter.migration_logins_success_reason ;;
+    type: number
+    group_label: "Migration Logins"
+    group_item_label: "Success Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration succeeded. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__timespan__migration_logins_total_duration__value {
+    sql: ${TABLE}.metrics.timespan.migration_logins_total_duration.value ;;
+    type: number
+    group_label: "Migration Logins"
+    group_item_label: "Total Duration Value"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Total Duration Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_total_duration"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total duration of this migration.
+"
+  }
+
+  dimension: metrics__counter__migration_logins_unsupported_db_version {
+    sql: ${TABLE}.metrics.counter.migration_logins_unsupported_db_version ;;
+    type: number
+    group_label: "Migration Logins"
+    group_item_label: "Unsupported Db Version"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Unsupported Db Version"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_unsupported_db_version"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "If we couldn't migrate due to an unsupported db version, what was it?
+"
+  }
+
+  dimension: metrics__boolean__migration_open_tabs_any_failures {
+    sql: ${TABLE}.metrics.boolean.migration_open_tabs_any_failures ;;
+    type: yesno
+    group_label: "Migration Open Tabs"
+    group_item_label: "Any Failures"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Open Tabs Any Failures"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_any_failures"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Did this migration encounter any failures (exceptions)?
+"
+  }
+
+  dimension: metrics__counter__migration_open_tabs_detected {
+    sql: ${TABLE}.metrics.counter.migration_open_tabs_detected ;;
+    type: number
+    group_label: "Migration Open Tabs"
+    group_item_label: "Detected"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Open Tabs Detected"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_detected"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Number of detected open tabs.
+"
+  }
+
+  dimension: metrics__counter__migration_open_tabs_failure_reason {
+    sql: ${TABLE}.metrics.counter.migration_open_tabs_failure_reason ;;
+    type: number
+    group_label: "Migration Open Tabs"
+    group_item_label: "Failure Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Open Tabs Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration failed. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__counter__migration_open_tabs_migrated {
+    sql: ${TABLE}.metrics.counter.migration_open_tabs_migrated ;;
+    type: number
+    group_label: "Migration Open Tabs"
+    group_item_label: "Migrated"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Open Tabs Migrated"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_migrated"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Number of migrated open tabs.
+"
+  }
+
+  dimension: metrics__counter__migration_open_tabs_success_reason {
+    sql: ${TABLE}.metrics.counter.migration_open_tabs_success_reason ;;
+    type: number
+    group_label: "Migration Open Tabs"
+    group_item_label: "Success Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Open Tabs Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration succeeded. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__timespan__migration_open_tabs_total_duration__value {
+    sql: ${TABLE}.metrics.timespan.migration_open_tabs_total_duration.value ;;
+    type: number
+    group_label: "Migration Open Tabs"
+    group_item_label: "Total Duration Value"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Open Tabs Total Duration Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_total_duration"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total duration of this migration.
+"
+  }
+
+  dimension: metrics__boolean__migration_pinned_sites_any_failures {
+    sql: ${TABLE}.metrics.boolean.migration_pinned_sites_any_failures ;;
+    type: yesno
+    group_label: "Migration Pinned Sites"
+    group_item_label: "Any Failures"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Pinned Sites Any Failures"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_any_failures"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Did this migration encounter any failures (exceptions)?
+"
+  }
+
+  dimension: metrics__counter__migration_pinned_sites_detected_pinned_sites {
+    sql: ${TABLE}.metrics.counter.migration_pinned_sites_detected_pinned_sites ;;
+    type: number
+    group_label: "Migration Pinned Sites"
+    group_item_label: "Detected Pinned Sites"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Pinned Sites Detected Pinned Sites"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_detected_pinned_sites"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "How many pinned sites were detected?
+"
+  }
+
+  dimension: metrics__counter__migration_pinned_sites_failure_reason {
+    sql: ${TABLE}.metrics.counter.migration_pinned_sites_failure_reason ;;
+    type: number
+    group_label: "Migration Pinned Sites"
+    group_item_label: "Failure Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Pinned Sites Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration failed. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__counter__migration_pinned_sites_migrated_pinned_sites {
+    sql: ${TABLE}.metrics.counter.migration_pinned_sites_migrated_pinned_sites ;;
+    type: number
+    group_label: "Migration Pinned Sites"
+    group_item_label: "Migrated Pinned Sites"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Pinned Sites Migrated Pinned Sites"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_migrated_pinned_sites"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "How many pinned sites were migrated?
+"
+  }
+
+  dimension: metrics__counter__migration_pinned_sites_success_reason {
+    sql: ${TABLE}.metrics.counter.migration_pinned_sites_success_reason ;;
+    type: number
+    group_label: "Migration Pinned Sites"
+    group_item_label: "Success Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Pinned Sites Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration succeeded. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__timespan__migration_pinned_sites_total_duration__value {
+    sql: ${TABLE}.metrics.timespan.migration_pinned_sites_total_duration.value ;;
+    type: number
+    group_label: "Migration Pinned Sites"
+    group_item_label: "Total Duration Value"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Pinned Sites Total Duration Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_total_duration"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total duration of this migration.
+"
+  }
+
+  dimension: metrics__boolean__migration_search_any_failures {
+    sql: ${TABLE}.metrics.boolean.migration_search_any_failures ;;
+    type: yesno
+    group_label: "Migration Search"
+    group_item_label: "Any Failures"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Search Any Failures"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_search_any_failures"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Did this migration encounter any failures (exceptions)?
+"
+  }
+
+  dimension: metrics__counter__migration_search_failure_reason {
+    sql: ${TABLE}.metrics.counter.migration_search_failure_reason ;;
+    type: number
+    group_label: "Migration Search"
+    group_item_label: "Failure Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Search Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_search_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration failed. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__counter__migration_search_success_reason {
+    sql: ${TABLE}.metrics.counter.migration_search_success_reason ;;
+    type: number
+    group_label: "Migration Search"
+    group_item_label: "Success Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Search Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_search_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration succeeded. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__timespan__migration_search_total_duration__value {
+    sql: ${TABLE}.metrics.timespan.migration_search_total_duration.value ;;
+    type: number
+    group_label: "Migration Search"
+    group_item_label: "Total Duration Value"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Search Total Duration Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_search_total_duration"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total duration of this migration.
+"
+  }
+
+  dimension: metrics__boolean__migration_settings_any_failures {
+    sql: ${TABLE}.metrics.boolean.migration_settings_any_failures ;;
+    type: yesno
+    group_label: "Migration Settings"
+    group_item_label: "Any Failures"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Settings Any Failures"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_settings_any_failures"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Did this migration encounter any failures (exceptions)?
+"
+  }
+
+  dimension: metrics__counter__migration_settings_failure_reason {
+    sql: ${TABLE}.metrics.counter.migration_settings_failure_reason ;;
+    type: number
+    group_label: "Migration Settings"
+    group_item_label: "Failure Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Settings Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_settings_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration failed. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__counter__migration_settings_success_reason {
+    sql: ${TABLE}.metrics.counter.migration_settings_success_reason ;;
+    type: number
+    group_label: "Migration Settings"
+    group_item_label: "Success Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Settings Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_settings_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration succeeded. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__boolean__migration_settings_telemetry_enabled {
+    sql: ${TABLE}.metrics.boolean.migration_settings_telemetry_enabled ;;
+    type: yesno
+    group_label: "Migration Settings"
+    group_item_label: "Telemetry Enabled"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Settings Telemetry Enabled"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_settings_telemetry_enabled"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Is telemetry enabled after this migration?
+"
+  }
+
+  dimension: metrics__timespan__migration_settings_total_duration__value {
+    sql: ${TABLE}.metrics.timespan.migration_settings_total_duration.value ;;
+    type: number
+    group_label: "Migration Settings"
+    group_item_label: "Total Duration Value"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Settings Total Duration Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_settings_total_duration"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total duration of this migration.
+"
+  }
+
+  dimension: metrics__boolean__migration_telemetry_identifiers_any_failures {
+    sql: ${TABLE}.metrics.boolean.migration_telemetry_identifiers_any_failures ;;
+    type: yesno
+    group_label: "Migration Telemetry Identifiers"
+    group_item_label: "Any Failures"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Any Failures"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_any_failures"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Did this migration encounter any failures (exceptions)?
+"
+  }
+
+  dimension: metrics__counter__migration_telemetry_identifiers_failure_reason {
+    sql: ${TABLE}.metrics.counter.migration_telemetry_identifiers_failure_reason ;;
+    type: number
+    group_label: "Migration Telemetry Identifiers"
+    group_item_label: "Failure Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration failed. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__uuid__migration_telemetry_identifiers_fennec_client_id {
+    sql: ${TABLE}.metrics.uuid.migration_telemetry_identifiers_fennec_client_id ;;
+    type: string
+    group_label: "Migration Telemetry Identifiers"
+    group_item_label: "Fennec Client Id"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Fennec Client Id"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_fennec_client_id"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Records clientID of the migrated Fennec profile.
+"
+  }
+
+  dimension: metrics__datetime__migration_telemetry_identifiers_fennec_profile_creation_date {
+    sql: ${TABLE}.metrics.datetime.migration_telemetry_identifiers_fennec_profile_creation_date ;;
+    type: string
+    group_label: "Migration Telemetry Identifiers"
+    group_item_label: "Fennec Profile Creation Date"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Fennec Profile Creation Date"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_fennec_profile_creation_date"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Records when the migrated Fennec profile was created.
+"
+  }
+
+  dimension: metrics__counter__migration_telemetry_identifiers_success_reason {
+    sql: ${TABLE}.metrics.counter.migration_telemetry_identifiers_success_reason ;;
+    type: number
+    group_label: "Migration Telemetry Identifiers"
+    group_item_label: "Success Reason"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Why this migration succeeded. See codes in TelemetryHelpers.kt
+"
+  }
+
+  dimension: metrics__timespan__migration_telemetry_identifiers_total_duration__value {
+    sql: ${TABLE}.metrics.timespan.migration_telemetry_identifiers_total_duration.value ;;
+    type: number
+    group_label: "Migration Telemetry Identifiers"
+    group_item_label: "Total Duration Value"
+
+    link: {
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Total Duration Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_total_duration"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total duration of this migration.
+"
+  }
+
   dimension: additional_properties {
     sql: ${TABLE}.additional_properties ;;
-    type: string
+    hidden: yes
   }
 
   dimension: client_info__android_sdk_version {
@@ -96,6 +1268,7 @@ view: migration {
   dimension: document_id {
     sql: ${TABLE}.document_id ;;
     hidden: yes
+    primary_key: yes
   }
 
   dimension: events {
@@ -165,6 +1338,13 @@ view: migration {
     group_item_label: "X Debug Id"
   }
 
+  dimension: metadata__header__x_foxsec_ip_reputation {
+    sql: ${TABLE}.metadata.header.x_foxsec_ip_reputation ;;
+    type: string
+    group_label: "Metadata Header"
+    group_item_label: "X Foxsec Ip Reputation"
+  }
+
   dimension: metadata__header__x_pingsender_version {
     sql: ${TABLE}.metadata.header.x_pingsender_version ;;
     type: string
@@ -177,6 +1357,13 @@ view: migration {
     type: string
     group_label: "Metadata Header"
     group_item_label: "X Source Tags"
+  }
+
+  dimension: metadata__header__x_telemetry_agent {
+    sql: ${TABLE}.metadata.header.x_telemetry_agent ;;
+    type: string
+    group_label: "Metadata Header"
+    group_item_label: "X Telemetry Agent"
   }
 
   dimension: metadata__isp__db_version {
@@ -219,609 +1406,6 @@ view: migration {
     type: string
     group_label: "Metadata User Agent"
     group_item_label: "Version"
-  }
-
-  dimension: metrics__boolean__migration_addons_any_failures {
-    sql: ${TABLE}.metrics.boolean.migration_addons_any_failures ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Migration Addons Any Failures"
-  }
-
-  dimension: metrics__boolean__migration_bookmarks_any_failures {
-    sql: ${TABLE}.metrics.boolean.migration_bookmarks_any_failures ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Migration Bookmarks Any Failures"
-  }
-
-  dimension: metrics__boolean__migration_fxa_any_failures {
-    sql: ${TABLE}.metrics.boolean.migration_fxa_any_failures ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Migration Fxa Any Failures"
-  }
-
-  dimension: metrics__boolean__migration_fxa_has_custom_idp_server {
-    sql: ${TABLE}.metrics.boolean.migration_fxa_has_custom_idp_server ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Migration Fxa Has Custom Idp Server"
-  }
-
-  dimension: metrics__boolean__migration_fxa_has_custom_token_server {
-    sql: ${TABLE}.metrics.boolean.migration_fxa_has_custom_token_server ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Migration Fxa Has Custom Token Server"
-  }
-
-  dimension: metrics__boolean__migration_gecko_any_failures {
-    sql: ${TABLE}.metrics.boolean.migration_gecko_any_failures ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Migration Gecko Any Failures"
-  }
-
-  dimension: metrics__boolean__migration_history_any_failures {
-    sql: ${TABLE}.metrics.boolean.migration_history_any_failures ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Migration History Any Failures"
-  }
-
-  dimension: metrics__boolean__migration_logins_any_failures {
-    sql: ${TABLE}.metrics.boolean.migration_logins_any_failures ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Migration Logins Any Failures"
-  }
-
-  dimension: metrics__boolean__migration_open_tabs_any_failures {
-    sql: ${TABLE}.metrics.boolean.migration_open_tabs_any_failures ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Migration Open Tabs Any Failures"
-  }
-
-  dimension: metrics__boolean__migration_pinned_sites_any_failures {
-    sql: ${TABLE}.metrics.boolean.migration_pinned_sites_any_failures ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Migration Pinned Sites Any Failures"
-  }
-
-  dimension: metrics__boolean__migration_search_any_failures {
-    sql: ${TABLE}.metrics.boolean.migration_search_any_failures ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Migration Search Any Failures"
-  }
-
-  dimension: metrics__boolean__migration_settings_any_failures {
-    sql: ${TABLE}.metrics.boolean.migration_settings_any_failures ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Migration Settings Any Failures"
-  }
-
-  dimension: metrics__boolean__migration_settings_telemetry_enabled {
-    sql: ${TABLE}.metrics.boolean.migration_settings_telemetry_enabled ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Migration Settings Telemetry Enabled"
-  }
-
-  dimension: metrics__boolean__migration_telemetry_identifiers_any_failures {
-    sql: ${TABLE}.metrics.boolean.migration_telemetry_identifiers_any_failures ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Migration Telemetry Identifiers Any Failures"
-  }
-
-  dimension: metrics__counter__migration_addons_failed_addons {
-    sql: ${TABLE}.metrics.counter.migration_addons_failed_addons ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Addons Failed Addons"
-  }
-
-  dimension: metrics__counter__migration_addons_failure_reason {
-    sql: ${TABLE}.metrics.counter.migration_addons_failure_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Addons Failure Reason"
-  }
-
-  dimension: metrics__counter__migration_addons_migrated_addons {
-    sql: ${TABLE}.metrics.counter.migration_addons_migrated_addons ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Addons Migrated Addons"
-  }
-
-  dimension: metrics__counter__migration_addons_success_reason {
-    sql: ${TABLE}.metrics.counter.migration_addons_success_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Addons Success Reason"
-  }
-
-  dimension: metrics__counter__migration_bookmarks_detected {
-    sql: ${TABLE}.metrics.counter.migration_bookmarks_detected ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Bookmarks Detected"
-  }
-
-  dimension: metrics__counter__migration_bookmarks_failure_reason {
-    sql: ${TABLE}.metrics.counter.migration_bookmarks_failure_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Bookmarks Failure Reason"
-  }
-
-  dimension: metrics__counter__migration_bookmarks_success_reason {
-    sql: ${TABLE}.metrics.counter.migration_bookmarks_success_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Bookmarks Success Reason"
-  }
-
-  dimension: metrics__counter__migration_fxa_failure_reason {
-    sql: ${TABLE}.metrics.counter.migration_fxa_failure_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Fxa Failure Reason"
-  }
-
-  dimension: metrics__counter__migration_fxa_success_reason {
-    sql: ${TABLE}.metrics.counter.migration_fxa_success_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Fxa Success Reason"
-  }
-
-  dimension: metrics__counter__migration_gecko_failure_reason {
-    sql: ${TABLE}.metrics.counter.migration_gecko_failure_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Gecko Failure Reason"
-  }
-
-  dimension: metrics__counter__migration_gecko_success_reason {
-    sql: ${TABLE}.metrics.counter.migration_gecko_success_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Gecko Success Reason"
-  }
-
-  dimension: metrics__counter__migration_history_detected {
-    sql: ${TABLE}.metrics.counter.migration_history_detected ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration History Detected"
-  }
-
-  dimension: metrics__counter__migration_history_failure_reason {
-    sql: ${TABLE}.metrics.counter.migration_history_failure_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration History Failure Reason"
-  }
-
-  dimension: metrics__counter__migration_history_success_reason {
-    sql: ${TABLE}.metrics.counter.migration_history_success_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration History Success Reason"
-  }
-
-  dimension: metrics__counter__migration_logins_detected {
-    sql: ${TABLE}.metrics.counter.migration_logins_detected ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Logins Detected"
-  }
-
-  dimension: metrics__counter__migration_logins_failure_reason {
-    sql: ${TABLE}.metrics.counter.migration_logins_failure_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Logins Failure Reason"
-  }
-
-  dimension: metrics__counter__migration_logins_success_reason {
-    sql: ${TABLE}.metrics.counter.migration_logins_success_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Logins Success Reason"
-  }
-
-  dimension: metrics__counter__migration_logins_unsupported_db_version {
-    sql: ${TABLE}.metrics.counter.migration_logins_unsupported_db_version ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Logins Unsupported Db Version"
-  }
-
-  dimension: metrics__counter__migration_open_tabs_detected {
-    sql: ${TABLE}.metrics.counter.migration_open_tabs_detected ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Open Tabs Detected"
-  }
-
-  dimension: metrics__counter__migration_open_tabs_failure_reason {
-    sql: ${TABLE}.metrics.counter.migration_open_tabs_failure_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Open Tabs Failure Reason"
-  }
-
-  dimension: metrics__counter__migration_open_tabs_migrated {
-    sql: ${TABLE}.metrics.counter.migration_open_tabs_migrated ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Open Tabs Migrated"
-  }
-
-  dimension: metrics__counter__migration_open_tabs_success_reason {
-    sql: ${TABLE}.metrics.counter.migration_open_tabs_success_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Open Tabs Success Reason"
-  }
-
-  dimension: metrics__counter__migration_pinned_sites_detected_pinned_sites {
-    sql: ${TABLE}.metrics.counter.migration_pinned_sites_detected_pinned_sites ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Pinned Sites Detected Pinned Sites"
-  }
-
-  dimension: metrics__counter__migration_pinned_sites_failure_reason {
-    sql: ${TABLE}.metrics.counter.migration_pinned_sites_failure_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Pinned Sites Failure Reason"
-  }
-
-  dimension: metrics__counter__migration_pinned_sites_migrated_pinned_sites {
-    sql: ${TABLE}.metrics.counter.migration_pinned_sites_migrated_pinned_sites ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Pinned Sites Migrated Pinned Sites"
-  }
-
-  dimension: metrics__counter__migration_pinned_sites_success_reason {
-    sql: ${TABLE}.metrics.counter.migration_pinned_sites_success_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Pinned Sites Success Reason"
-  }
-
-  dimension: metrics__counter__migration_search_failure_reason {
-    sql: ${TABLE}.metrics.counter.migration_search_failure_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Search Failure Reason"
-  }
-
-  dimension: metrics__counter__migration_search_success_reason {
-    sql: ${TABLE}.metrics.counter.migration_search_success_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Search Success Reason"
-  }
-
-  dimension: metrics__counter__migration_settings_failure_reason {
-    sql: ${TABLE}.metrics.counter.migration_settings_failure_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Settings Failure Reason"
-  }
-
-  dimension: metrics__counter__migration_settings_success_reason {
-    sql: ${TABLE}.metrics.counter.migration_settings_success_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Settings Success Reason"
-  }
-
-  dimension: metrics__counter__migration_telemetry_identifiers_failure_reason {
-    sql: ${TABLE}.metrics.counter.migration_telemetry_identifiers_failure_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Telemetry Identifiers Failure Reason"
-  }
-
-  dimension: metrics__counter__migration_telemetry_identifiers_success_reason {
-    sql: ${TABLE}.metrics.counter.migration_telemetry_identifiers_success_reason ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Migration Telemetry Identifiers Success Reason"
-  }
-
-  dimension: metrics__datetime__migration_telemetry_identifiers_fennec_profile_creation_date {
-    sql: ${TABLE}.metrics.datetime.migration_telemetry_identifiers_fennec_profile_creation_date ;;
-    type: string
-    group_label: "Metrics Datetime"
-    group_item_label: "Migration Telemetry Identifiers Fennec Profile Creation Date"
-  }
-
-  dimension: metrics__jwe {
-    sql: ${TABLE}.metrics.jwe ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_label {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_state {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_value {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__migration_bookmarks_migrated {
-    sql: ${TABLE}.metrics.labeled_counter.migration_bookmarks_migrated ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__migration_history_migrated {
-    sql: ${TABLE}.metrics.labeled_counter.migration_history_migrated ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__migration_logins_failure_counts {
-    sql: ${TABLE}.metrics.labeled_counter.migration_logins_failure_counts ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_rate {
-    sql: ${TABLE}.metrics.labeled_rate ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_string__migration_migration_versions {
-    sql: ${TABLE}.metrics.labeled_string.migration_migration_versions ;;
-    hidden: yes
-  }
-
-  dimension: metrics__string__migration_fxa_bad_auth_state {
-    sql: ${TABLE}.metrics.string.migration_fxa_bad_auth_state ;;
-    type: string
-    group_label: "Metrics String"
-    group_item_label: "Migration Fxa Bad Auth State"
-  }
-
-  dimension: metrics__string__migration_fxa_failure_reason_rust {
-    sql: ${TABLE}.metrics.string.migration_fxa_failure_reason_rust ;;
-    type: string
-    group_label: "Metrics String"
-    group_item_label: "Migration Fxa Failure Reason Rust"
-  }
-
-  dimension: metrics__string__migration_fxa_unsupported_account_version {
-    sql: ${TABLE}.metrics.string.migration_fxa_unsupported_account_version ;;
-    type: string
-    group_label: "Metrics String"
-    group_item_label: "Migration Fxa Unsupported Account Version"
-  }
-
-  dimension: metrics__string__migration_fxa_unsupported_pickle_version {
-    sql: ${TABLE}.metrics.string.migration_fxa_unsupported_pickle_version ;;
-    type: string
-    group_label: "Metrics String"
-    group_item_label: "Migration Fxa Unsupported Pickle Version"
-  }
-
-  dimension: metrics__string__migration_fxa_unsupported_state_version {
-    sql: ${TABLE}.metrics.string.migration_fxa_unsupported_state_version ;;
-    type: string
-    group_label: "Metrics String"
-    group_item_label: "Migration Fxa Unsupported State Version"
-  }
-
-  dimension: metrics__timespan__migration_addons_total_duration__time_unit {
-    sql: ${TABLE}.metrics.timespan.migration_addons_total_duration.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Migration Addons Total Duration"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__migration_addons_total_duration__value {
-    sql: ${TABLE}.metrics.timespan.migration_addons_total_duration.value ;;
-    type: number
-    group_label: "Metrics Timespan Migration Addons Total Duration"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__timespan__migration_bookmarks_duration__time_unit {
-    sql: ${TABLE}.metrics.timespan.migration_bookmarks_duration.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Migration Bookmarks Duration"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__migration_bookmarks_duration__value {
-    sql: ${TABLE}.metrics.timespan.migration_bookmarks_duration.value ;;
-    type: number
-    group_label: "Metrics Timespan Migration Bookmarks Duration"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__timespan__migration_bookmarks_total_duration__time_unit {
-    sql: ${TABLE}.metrics.timespan.migration_bookmarks_total_duration.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Migration Bookmarks Total Duration"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__migration_bookmarks_total_duration__value {
-    sql: ${TABLE}.metrics.timespan.migration_bookmarks_total_duration.value ;;
-    type: number
-    group_label: "Metrics Timespan Migration Bookmarks Total Duration"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__timespan__migration_fxa_total_duration__time_unit {
-    sql: ${TABLE}.metrics.timespan.migration_fxa_total_duration.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Migration Fxa Total Duration"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__migration_fxa_total_duration__value {
-    sql: ${TABLE}.metrics.timespan.migration_fxa_total_duration.value ;;
-    type: number
-    group_label: "Metrics Timespan Migration Fxa Total Duration"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__timespan__migration_gecko_total_duration__time_unit {
-    sql: ${TABLE}.metrics.timespan.migration_gecko_total_duration.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Migration Gecko Total Duration"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__migration_gecko_total_duration__value {
-    sql: ${TABLE}.metrics.timespan.migration_gecko_total_duration.value ;;
-    type: number
-    group_label: "Metrics Timespan Migration Gecko Total Duration"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__timespan__migration_history_duration__time_unit {
-    sql: ${TABLE}.metrics.timespan.migration_history_duration.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Migration History Duration"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__migration_history_duration__value {
-    sql: ${TABLE}.metrics.timespan.migration_history_duration.value ;;
-    type: number
-    group_label: "Metrics Timespan Migration History Duration"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__timespan__migration_history_total_duration__time_unit {
-    sql: ${TABLE}.metrics.timespan.migration_history_total_duration.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Migration History Total Duration"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__migration_history_total_duration__value {
-    sql: ${TABLE}.metrics.timespan.migration_history_total_duration.value ;;
-    type: number
-    group_label: "Metrics Timespan Migration History Total Duration"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__timespan__migration_logins_total_duration__time_unit {
-    sql: ${TABLE}.metrics.timespan.migration_logins_total_duration.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Migration Logins Total Duration"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__migration_logins_total_duration__value {
-    sql: ${TABLE}.metrics.timespan.migration_logins_total_duration.value ;;
-    type: number
-    group_label: "Metrics Timespan Migration Logins Total Duration"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__timespan__migration_open_tabs_total_duration__time_unit {
-    sql: ${TABLE}.metrics.timespan.migration_open_tabs_total_duration.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Migration Open Tabs Total Duration"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__migration_open_tabs_total_duration__value {
-    sql: ${TABLE}.metrics.timespan.migration_open_tabs_total_duration.value ;;
-    type: number
-    group_label: "Metrics Timespan Migration Open Tabs Total Duration"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__timespan__migration_pinned_sites_total_duration__time_unit {
-    sql: ${TABLE}.metrics.timespan.migration_pinned_sites_total_duration.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Migration Pinned Sites Total Duration"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__migration_pinned_sites_total_duration__value {
-    sql: ${TABLE}.metrics.timespan.migration_pinned_sites_total_duration.value ;;
-    type: number
-    group_label: "Metrics Timespan Migration Pinned Sites Total Duration"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__timespan__migration_search_total_duration__time_unit {
-    sql: ${TABLE}.metrics.timespan.migration_search_total_duration.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Migration Search Total Duration"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__migration_search_total_duration__value {
-    sql: ${TABLE}.metrics.timespan.migration_search_total_duration.value ;;
-    type: number
-    group_label: "Metrics Timespan Migration Search Total Duration"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__timespan__migration_settings_total_duration__time_unit {
-    sql: ${TABLE}.metrics.timespan.migration_settings_total_duration.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Migration Settings Total Duration"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__migration_settings_total_duration__value {
-    sql: ${TABLE}.metrics.timespan.migration_settings_total_duration.value ;;
-    type: number
-    group_label: "Metrics Timespan Migration Settings Total Duration"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__timespan__migration_telemetry_identifiers_total_duration__time_unit {
-    sql: ${TABLE}.metrics.timespan.migration_telemetry_identifiers_total_duration.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Migration Telemetry Identifiers Total Duration"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__migration_telemetry_identifiers_total_duration__value {
-    sql: ${TABLE}.metrics.timespan.migration_telemetry_identifiers_total_duration.value ;;
-    type: number
-    group_label: "Metrics Timespan Migration Telemetry Identifiers Total Duration"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__uuid__migration_telemetry_identifiers_fennec_client_id {
-    sql: ${TABLE}.metrics.uuid.migration_telemetry_identifiers_fennec_client_id ;;
-    type: string
-    group_label: "Metrics Uuid"
-    group_item_label: "Migration Telemetry Identifiers Fennec Client Id"
   }
 
   dimension: normalized_app_name {
@@ -906,8 +1490,7 @@ view: migration {
       quarter,
       year,
     ]
-    group_label: "Metadata Header"
-    group_item_label: "Parsed Date"
+    label: "Metadata Header: Parsed Date"
   }
 
   dimension_group: ping_info__parsed_end {
@@ -922,8 +1505,7 @@ view: migration {
       quarter,
       year,
     ]
-    group_label: "Ping Info"
-    group_item_label: "Parsed End Time"
+    label: "Ping Info: Parsed End Time"
   }
 
   dimension_group: ping_info__parsed_start {
@@ -938,8 +1520,7 @@ view: migration {
       quarter,
       year,
     ]
-    group_label: "Ping Info"
-    group_item_label: "Parsed Start Time"
+    label: "Ping Info: Parsed Start Time"
   }
 
   dimension_group: submission {
@@ -965,8 +1546,809 @@ view: migration {
     type: count
   }
 
+  measure: migration_addons_failed_addons {
+    type: sum
+    sql: ${metrics__counter__migration_addons_failed_addons} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Addons Failed Addons"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_failed_addons"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_addons_failed_addons_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_addons_failed_addons: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Addons Failed Addons"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_failed_addons"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_addons_failure_reason {
+    type: sum
+    sql: ${metrics__counter__migration_addons_failure_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Addons Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_addons_failure_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_addons_failure_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Addons Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_addons_migrated_addons {
+    type: sum
+    sql: ${metrics__counter__migration_addons_migrated_addons} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Addons Migrated Addons"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_migrated_addons"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_addons_migrated_addons_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_addons_migrated_addons: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Addons Migrated Addons"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_migrated_addons"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_addons_success_reason {
+    type: sum
+    sql: ${metrics__counter__migration_addons_success_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Addons Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_addons_success_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_addons_success_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Addons Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_bookmarks_detected {
+    type: sum
+    sql: ${metrics__counter__migration_bookmarks_detected} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Bookmarks Detected"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_detected"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_bookmarks_detected_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_bookmarks_detected: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Bookmarks Detected"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_detected"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_bookmarks_failure_reason {
+    type: sum
+    sql: ${metrics__counter__migration_bookmarks_failure_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Bookmarks Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_bookmarks_failure_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_bookmarks_failure_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Bookmarks Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_bookmarks_success_reason {
+    type: sum
+    sql: ${metrics__counter__migration_bookmarks_success_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Bookmarks Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_bookmarks_success_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_bookmarks_success_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Bookmarks Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_fxa_failure_reason {
+    type: sum
+    sql: ${metrics__counter__migration_fxa_failure_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_fxa_failure_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_fxa_failure_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_fxa_success_reason {
+    type: sum
+    sql: ${metrics__counter__migration_fxa_success_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_fxa_success_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_fxa_success_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Fxa Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_gecko_failure_reason {
+    type: sum
+    sql: ${metrics__counter__migration_gecko_failure_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Gecko Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_gecko_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_gecko_failure_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_gecko_failure_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Gecko Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_gecko_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_gecko_success_reason {
+    type: sum
+    sql: ${metrics__counter__migration_gecko_success_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Gecko Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_gecko_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_gecko_success_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_gecko_success_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Gecko Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_gecko_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_history_detected {
+    type: sum
+    sql: ${metrics__counter__migration_history_detected} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration History Detected"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_detected"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_history_detected_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_history_detected: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration History Detected"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_detected"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_history_failure_reason {
+    type: sum
+    sql: ${metrics__counter__migration_history_failure_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration History Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_history_failure_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_history_failure_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration History Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_history_success_reason {
+    type: sum
+    sql: ${metrics__counter__migration_history_success_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration History Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_history_success_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_history_success_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration History Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_logins_detected {
+    type: sum
+    sql: ${metrics__counter__migration_logins_detected} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Detected"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_detected"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_logins_detected_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_logins_detected: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Detected"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_detected"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_logins_failure_reason {
+    type: sum
+    sql: ${metrics__counter__migration_logins_failure_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_logins_failure_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_logins_failure_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_logins_success_reason {
+    type: sum
+    sql: ${metrics__counter__migration_logins_success_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_logins_success_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_logins_success_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_logins_unsupported_db_version {
+    type: sum
+    sql: ${metrics__counter__migration_logins_unsupported_db_version} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Unsupported Db Version"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_unsupported_db_version"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_logins_unsupported_db_version_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_logins_unsupported_db_version: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Logins Unsupported Db Version"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_unsupported_db_version"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_open_tabs_detected {
+    type: sum
+    sql: ${metrics__counter__migration_open_tabs_detected} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Open Tabs Detected"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_detected"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_open_tabs_detected_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_open_tabs_detected: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Open Tabs Detected"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_detected"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_open_tabs_failure_reason {
+    type: sum
+    sql: ${metrics__counter__migration_open_tabs_failure_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Open Tabs Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_open_tabs_failure_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_open_tabs_failure_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Open Tabs Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_open_tabs_migrated {
+    type: sum
+    sql: ${metrics__counter__migration_open_tabs_migrated} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Open Tabs Migrated"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_migrated"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_open_tabs_migrated_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_open_tabs_migrated: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Open Tabs Migrated"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_migrated"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_open_tabs_success_reason {
+    type: sum
+    sql: ${metrics__counter__migration_open_tabs_success_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Open Tabs Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_open_tabs_success_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_open_tabs_success_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Open Tabs Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_pinned_sites_detected_pinned_sites {
+    type: sum
+    sql: ${metrics__counter__migration_pinned_sites_detected_pinned_sites} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Pinned Sites Detected Pinned Sites"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_detected_pinned_sites"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_pinned_sites_detected_pinned_sites_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_pinned_sites_detected_pinned_sites: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Pinned Sites Detected Pinned Sites"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_detected_pinned_sites"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_pinned_sites_failure_reason {
+    type: sum
+    sql: ${metrics__counter__migration_pinned_sites_failure_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Pinned Sites Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_pinned_sites_failure_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_pinned_sites_failure_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Pinned Sites Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_pinned_sites_migrated_pinned_sites {
+    type: sum
+    sql: ${metrics__counter__migration_pinned_sites_migrated_pinned_sites} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Pinned Sites Migrated Pinned Sites"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_migrated_pinned_sites"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_pinned_sites_migrated_pinned_sites_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_pinned_sites_migrated_pinned_sites: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Pinned Sites Migrated Pinned Sites"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_migrated_pinned_sites"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_pinned_sites_success_reason {
+    type: sum
+    sql: ${metrics__counter__migration_pinned_sites_success_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Pinned Sites Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_pinned_sites_success_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_pinned_sites_success_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Pinned Sites Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_search_failure_reason {
+    type: sum
+    sql: ${metrics__counter__migration_search_failure_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Search Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_search_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_search_failure_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_search_failure_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Search Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_search_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_search_success_reason {
+    type: sum
+    sql: ${metrics__counter__migration_search_success_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Search Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_search_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_search_success_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_search_success_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Search Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_search_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_settings_failure_reason {
+    type: sum
+    sql: ${metrics__counter__migration_settings_failure_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Settings Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_settings_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_settings_failure_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_settings_failure_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Settings Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_settings_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_settings_success_reason {
+    type: sum
+    sql: ${metrics__counter__migration_settings_success_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Settings Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_settings_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_settings_success_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_settings_success_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Settings Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_settings_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_telemetry_identifiers_failure_reason {
+    type: sum
+    sql: ${metrics__counter__migration_telemetry_identifiers_failure_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_telemetry_identifiers_failure_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_telemetry_identifiers_failure_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Failure Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_failure_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_telemetry_identifiers_success_reason {
+    type: sum
+    sql: ${metrics__counter__migration_telemetry_identifiers_success_reason} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: migration_telemetry_identifiers_success_reason_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__migration_telemetry_identifiers_success_reason: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Success Reason"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_success_reason"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
   parameter: channel {
     type: unquoted
+    default_value: "mozdata.org_mozilla_firefox_beta.migration"
 
     allowed_value: {
       label: "Beta"
@@ -980,4 +2362,375 @@ view: migration {
   }
 
   sql_table_name: `{% parameter channel %}` ;;
+}
+
+view: migration__metrics__labeled_counter__glean_error_invalid_label {
+  label: "Glean Error - Invalid Label"
+
+  dimension: document_id {
+    type: string
+    sql: ${migration.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_label
+    suggest_dimension: suggest__migration__metrics__labeled_counter__glean_error_invalid_label.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
+  }
+}
+
+view: migration__metrics__labeled_counter__glean_error_invalid_overflow {
+  label: "Glean Error - Invalid Overflow"
+
+  dimension: document_id {
+    type: string
+    sql: ${migration.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_overflow
+    suggest_dimension: suggest__migration__metrics__labeled_counter__glean_error_invalid_overflow.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
+  }
+}
+
+view: migration__metrics__labeled_counter__glean_error_invalid_state {
+  label: "Glean Error - Invalid State"
+
+  dimension: document_id {
+    type: string
+    sql: ${migration.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_state
+    suggest_dimension: suggest__migration__metrics__labeled_counter__glean_error_invalid_state.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
+  }
+}
+
+view: migration__metrics__labeled_counter__glean_error_invalid_value {
+  label: "Glean Error - Invalid Value"
+
+  dimension: document_id {
+    type: string
+    sql: ${migration.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_value
+    suggest_dimension: suggest__migration__metrics__labeled_counter__glean_error_invalid_value.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
+  }
+}
+
+view: migration__metrics__labeled_counter__migration_bookmarks_migrated {
+  label: "Migration Bookmarks - Migrated"
+
+  dimension: document_id {
+    type: string
+    sql: ${migration.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__migration__metrics__labeled_counter__migration_bookmarks_migrated
+    suggest_dimension: suggest__migration__metrics__labeled_counter__migration_bookmarks_migrated.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
+  }
+}
+
+view: migration__metrics__labeled_counter__migration_history_migrated {
+  label: "Migration History - Migrated"
+
+  dimension: document_id {
+    type: string
+    sql: ${migration.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__migration__metrics__labeled_counter__migration_history_migrated
+    suggest_dimension: suggest__migration__metrics__labeled_counter__migration_history_migrated.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
+  }
+}
+
+view: migration__metrics__labeled_counter__migration_logins_failure_counts {
+  label: "Migration Logins - Failure Counts"
+
+  dimension: document_id {
+    type: string
+    sql: ${migration.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__migration__metrics__labeled_counter__migration_logins_failure_counts
+    suggest_dimension: suggest__migration__metrics__labeled_counter__migration_logins_failure_counts.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${migration.client_info__client_id} end ;;
+  }
+}
+
+view: suggest__migration__metrics__labeled_counter__glean_error_invalid_label {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox_beta.migration as t,
+unnest(metrics.labeled_counter.glean_error_invalid_label) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__migration__metrics__labeled_counter__glean_error_invalid_overflow {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox_beta.migration as t,
+unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__migration__metrics__labeled_counter__glean_error_invalid_state {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox_beta.migration as t,
+unnest(metrics.labeled_counter.glean_error_invalid_state) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__migration__metrics__labeled_counter__glean_error_invalid_value {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox_beta.migration as t,
+unnest(metrics.labeled_counter.glean_error_invalid_value) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__migration__metrics__labeled_counter__migration_bookmarks_migrated {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox_beta.migration as t,
+unnest(metrics.labeled_counter.migration_bookmarks_migrated) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__migration__metrics__labeled_counter__migration_history_migrated {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox_beta.migration as t,
+unnest(metrics.labeled_counter.migration_history_migrated) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__migration__metrics__labeled_counter__migration_logins_failure_counts {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox_beta.migration as t,
+unnest(metrics.labeled_counter.migration_logins_failure_counts) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
 }

@@ -1,7 +1,222 @@
 view: startup_timeline {
+  dimension: metrics__counter__startup_timeline_clock_ticks_per_second {
+    sql: ${TABLE}.metrics.counter.startup_timeline_clock_ticks_per_second ;;
+    type: number
+    group_label: "Startup Timeline"
+    group_item_label: "Clock Ticks Per Second"
+
+    link: {
+      label: "Glean Dictionary reference for Startup Timeline Clock Ticks Per Second"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_clock_ticks_per_second"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The number of clock tick time units that occur in one second on this
+particular device. This value is expected to be used in conjunction with
+the `framework_start` metric.
+"
+  }
+
+  dimension: metrics__quantity__startup_timeline_clock_ticks_per_second_v2 {
+    sql: ${TABLE}.metrics.quantity.startup_timeline_clock_ticks_per_second_v2 ;;
+    type: number
+    group_label: "Startup Timeline"
+    group_item_label: "Clock Ticks Per Second V2"
+
+    link: {
+      label: "Glean Dictionary reference for Startup Timeline Clock Ticks Per Second V2"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_clock_ticks_per_second_v2"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The number of clock tick time units that occur in one second on this
+particular device. This value is expected to be used in conjunction with
+the `framework_primary/secondary` metrics.
+"
+  }
+
+  dimension: metrics__timespan__startup_timeline_framework_primary__value {
+    sql: ${TABLE}.metrics.timespan.startup_timeline_framework_primary.value ;;
+    type: number
+    group_label: "Startup Timeline"
+    group_item_label: "Framework Primary Value"
+
+    link: {
+      label: "Glean Dictionary reference for Startup Timeline Framework Primary Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_framework_primary"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The duration the Android framework takes to start before letting us run
+code in `*Application.init` when this device has
+`clock_ticks_per_second_v2` equal to 100: if it's not equal to 100, then
+this value is captured in `framework_secondary`. We split this into two
+metrics to make it easier to analyze in GLAM. We split on 100 because
+when we did our initial brief analysis -
+https://sql.telemetry.mozilla.org/queries/75591 - the results for clocks
+ticks were overwhelmingly 100.
+
+The duration is calculated from `appInitTimestamp -
+processStartTimestamp`. `processStartTimestamp` is derived from the clock
+tick time unit, which is expected to be less granular than nanoseconds.
+Therefore, we convert and round our timestamps to clock ticks before
+computing the difference and convert back to nanoseconds to report.
+
+For debugging purposes, `clock_ticks_per_second_v2`, which may vary
+between devices, is also reported as a metric
+"
+  }
+
+  dimension: metrics__timespan__startup_timeline_framework_secondary__value {
+    sql: ${TABLE}.metrics.timespan.startup_timeline_framework_secondary.value ;;
+    type: number
+    group_label: "Startup Timeline"
+    group_item_label: "Framework Secondary Value"
+
+    link: {
+      label: "Glean Dictionary reference for Startup Timeline Framework Secondary Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_framework_secondary"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The duration the Android framework takes to start before letting us run
+code in `*Application.init` when this device has
+`clock_ticks_per_second_v2` not equal to 100. For more details on this
+metric, see `framework_primary`
+"
+  }
+
+  dimension: metrics__timespan__startup_timeline_framework_start__value {
+    sql: ${TABLE}.metrics.timespan.startup_timeline_framework_start.value ;;
+    type: number
+    group_label: "Startup Timeline"
+    group_item_label: "Framework Start Value"
+
+    link: {
+      label: "Glean Dictionary reference for Startup Timeline Framework Start Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_framework_start"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The duration the Android framework takes to start before letting us run
+code in `*Application.init`. This is calculated from `appInitTimestamp -
+processStartTimestamp`. `processStartTimestamp` is derived from the clock
+tick time unit, which is expected to be less granular than nanoseconds.
+Therefore, we convert and round our timestamps to clock ticks before
+computing the difference and convert back to nanoseconds to report.
+
+For debugging purposes, `clock_ticks_per_second`, which may vary between
+devices, is also reported as a metric
+"
+  }
+
+  dimension: metrics__boolean__startup_timeline_framework_start_error {
+    sql: ${TABLE}.metrics.boolean.startup_timeline_framework_start_error ;;
+    type: yesno
+    group_label: "Startup Timeline"
+    group_item_label: "Framework Start Error"
+
+    link: {
+      label: "Glean Dictionary reference for Startup Timeline Framework Start Error"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_framework_start_error"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "An error when attempting to record `framework_primary/secondary` - the
+application init timestamp returned a negative value - which is likely
+indicative of a bug in the implementation.
+"
+  }
+
+  dimension: metrics__boolean__startup_timeline_framework_start_read_error {
+    sql: ${TABLE}.metrics.boolean.startup_timeline_framework_start_read_error ;;
+    type: yesno
+    group_label: "Startup Timeline"
+    group_item_label: "Framework Start Read Error"
+
+    link: {
+      label: "Glean Dictionary reference for Startup Timeline Framework Start Read Error"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_framework_start_read_error"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "An error when attempting to read stats from /proc pseudo-filesystem -
+privacy managers can block access to reading these files -
+the application will catch a file reading exception.
+"
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_label {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
+    group_label: "Glean Error"
+    group_item_label: "Invalid Label"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_label"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counts the number of times a metric was set with an invalid label.
+The labels are the `category.name` identifier of the metric.
+"
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_overflow {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
+    group_label: "Glean Error"
+    group_item_label: "Invalid Overflow"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_overflow"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counts the number of times a metric was set a value that overflowed.
+The labels are the `category.name` identifier of the metric.
+"
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_state {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
+    group_label: "Glean Error"
+    group_item_label: "Invalid State"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Invalid State"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_state"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counts the number of times a timing metric was used incorrectly.
+The labels are the `category.name` identifier of the metric.
+"
+  }
+
+  dimension: metrics__labeled_counter__glean_error_invalid_value {
+    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
+    group_label: "Glean Error"
+    group_item_label: "Invalid Value"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_value"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    hidden: yes
+    description: "Counts the number of times a metric was set to an invalid value.
+The labels are the `category.name` identifier of the metric.
+"
+  }
+
   dimension: additional_properties {
     sql: ${TABLE}.additional_properties ;;
-    type: string
+    hidden: yes
   }
 
   dimension: client_info__android_sdk_version {
@@ -96,6 +311,7 @@ view: startup_timeline {
   dimension: document_id {
     sql: ${TABLE}.document_id ;;
     hidden: yes
+    primary_key: yes
   }
 
   dimension: events {
@@ -165,6 +381,13 @@ view: startup_timeline {
     group_item_label: "X Debug Id"
   }
 
+  dimension: metadata__header__x_foxsec_ip_reputation {
+    sql: ${TABLE}.metadata.header.x_foxsec_ip_reputation ;;
+    type: string
+    group_label: "Metadata Header"
+    group_item_label: "X Foxsec Ip Reputation"
+  }
+
   dimension: metadata__header__x_pingsender_version {
     sql: ${TABLE}.metadata.header.x_pingsender_version ;;
     type: string
@@ -177,6 +400,13 @@ view: startup_timeline {
     type: string
     group_label: "Metadata Header"
     group_item_label: "X Source Tags"
+  }
+
+  dimension: metadata__header__x_telemetry_agent {
+    sql: ${TABLE}.metadata.header.x_telemetry_agent ;;
+    type: string
+    group_label: "Metadata Header"
+    group_item_label: "X Telemetry Agent"
   }
 
   dimension: metadata__isp__db_version {
@@ -219,106 +449,6 @@ view: startup_timeline {
     type: string
     group_label: "Metadata User Agent"
     group_item_label: "Version"
-  }
-
-  dimension: metrics__boolean__startup_timeline_framework_start_error {
-    sql: ${TABLE}.metrics.boolean.startup_timeline_framework_start_error ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Startup Timeline Framework Start Error"
-  }
-
-  dimension: metrics__boolean__startup_timeline_framework_start_read_error {
-    sql: ${TABLE}.metrics.boolean.startup_timeline_framework_start_read_error ;;
-    type: yesno
-    group_label: "Metrics Boolean"
-    group_item_label: "Startup Timeline Framework Start Read Error"
-  }
-
-  dimension: metrics__counter__startup_timeline_clock_ticks_per_second {
-    sql: ${TABLE}.metrics.counter.startup_timeline_clock_ticks_per_second ;;
-    type: number
-    group_label: "Metrics Counter"
-    group_item_label: "Startup Timeline Clock Ticks Per Second"
-  }
-
-  dimension: metrics__jwe {
-    sql: ${TABLE}.metrics.jwe ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_label {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_state {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_counter__glean_error_invalid_value {
-    sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
-    hidden: yes
-  }
-
-  dimension: metrics__labeled_rate {
-    sql: ${TABLE}.metrics.labeled_rate ;;
-    hidden: yes
-  }
-
-  dimension: metrics__quantity__startup_timeline_clock_ticks_per_second_v2 {
-    sql: ${TABLE}.metrics.quantity.startup_timeline_clock_ticks_per_second_v2 ;;
-    type: number
-    group_label: "Metrics Quantity"
-    group_item_label: "Startup Timeline Clock Ticks Per Second V2"
-  }
-
-  dimension: metrics__timespan__startup_timeline_framework_primary__time_unit {
-    sql: ${TABLE}.metrics.timespan.startup_timeline_framework_primary.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Startup Timeline Framework Primary"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__startup_timeline_framework_primary__value {
-    sql: ${TABLE}.metrics.timespan.startup_timeline_framework_primary.value ;;
-    type: number
-    group_label: "Metrics Timespan Startup Timeline Framework Primary"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__timespan__startup_timeline_framework_secondary__time_unit {
-    sql: ${TABLE}.metrics.timespan.startup_timeline_framework_secondary.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Startup Timeline Framework Secondary"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__startup_timeline_framework_secondary__value {
-    sql: ${TABLE}.metrics.timespan.startup_timeline_framework_secondary.value ;;
-    type: number
-    group_label: "Metrics Timespan Startup Timeline Framework Secondary"
-    group_item_label: "Value"
-  }
-
-  dimension: metrics__timespan__startup_timeline_framework_start__time_unit {
-    sql: ${TABLE}.metrics.timespan.startup_timeline_framework_start.time_unit ;;
-    type: string
-    group_label: "Metrics Timespan Startup Timeline Framework Start"
-    group_item_label: "Time Unit"
-  }
-
-  dimension: metrics__timespan__startup_timeline_framework_start__value {
-    sql: ${TABLE}.metrics.timespan.startup_timeline_framework_start.value ;;
-    type: number
-    group_label: "Metrics Timespan Startup Timeline Framework Start"
-    group_item_label: "Value"
   }
 
   dimension: normalized_app_name {
@@ -403,8 +533,7 @@ view: startup_timeline {
       quarter,
       year,
     ]
-    group_label: "Metadata Header"
-    group_item_label: "Parsed Date"
+    label: "Metadata Header: Parsed Date"
   }
 
   dimension_group: ping_info__parsed_end {
@@ -419,8 +548,7 @@ view: startup_timeline {
       quarter,
       year,
     ]
-    group_label: "Ping Info"
-    group_item_label: "Parsed End Time"
+    label: "Ping Info: Parsed End Time"
   }
 
   dimension_group: ping_info__parsed_start {
@@ -435,8 +563,7 @@ view: startup_timeline {
       quarter,
       year,
     ]
-    group_label: "Ping Info"
-    group_item_label: "Parsed Start Time"
+    label: "Ping Info: Parsed Start Time"
   }
 
   dimension_group: submission {
@@ -462,8 +589,34 @@ view: startup_timeline {
     type: count
   }
 
+  measure: startup_timeline_clock_ticks_per_second {
+    type: sum
+    sql: ${metrics__counter__startup_timeline_clock_ticks_per_second} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Startup Timeline Clock Ticks Per Second"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_clock_ticks_per_second"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: startup_timeline_clock_ticks_per_second_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__startup_timeline_clock_ticks_per_second: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Startup Timeline Clock Ticks Per Second"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_clock_ticks_per_second"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
   parameter: channel {
     type: unquoted
+    default_value: "mozdata.org_mozilla_firefox.startup_timeline"
 
     allowed_value: {
       label: "Release"
@@ -482,4 +635,216 @@ view: startup_timeline {
   }
 
   sql_table_name: `{% parameter channel %}` ;;
+}
+
+view: startup_timeline__metrics__labeled_counter__glean_error_invalid_label {
+  label: "Glean Error - Invalid Label"
+
+  dimension: document_id {
+    type: string
+    sql: ${startup_timeline.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__startup_timeline__metrics__labeled_counter__glean_error_invalid_label
+    suggest_dimension: suggest__startup_timeline__metrics__labeled_counter__glean_error_invalid_label.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${startup_timeline.client_info__client_id} end ;;
+  }
+}
+
+view: startup_timeline__metrics__labeled_counter__glean_error_invalid_overflow {
+  label: "Glean Error - Invalid Overflow"
+
+  dimension: document_id {
+    type: string
+    sql: ${startup_timeline.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__startup_timeline__metrics__labeled_counter__glean_error_invalid_overflow
+    suggest_dimension: suggest__startup_timeline__metrics__labeled_counter__glean_error_invalid_overflow.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${startup_timeline.client_info__client_id} end ;;
+  }
+}
+
+view: startup_timeline__metrics__labeled_counter__glean_error_invalid_state {
+  label: "Glean Error - Invalid State"
+
+  dimension: document_id {
+    type: string
+    sql: ${startup_timeline.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__startup_timeline__metrics__labeled_counter__glean_error_invalid_state
+    suggest_dimension: suggest__startup_timeline__metrics__labeled_counter__glean_error_invalid_state.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${startup_timeline.client_info__client_id} end ;;
+  }
+}
+
+view: startup_timeline__metrics__labeled_counter__glean_error_invalid_value {
+  label: "Glean Error - Invalid Value"
+
+  dimension: document_id {
+    type: string
+    sql: ${startup_timeline.document_id} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__startup_timeline__metrics__labeled_counter__glean_error_invalid_value
+    suggest_dimension: suggest__startup_timeline__metrics__labeled_counter__glean_error_invalid_value.key
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${startup_timeline.client_info__client_id} end ;;
+  }
+}
+
+view: suggest__startup_timeline__metrics__labeled_counter__glean_error_invalid_label {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.startup_timeline as t,
+unnest(metrics.labeled_counter.glean_error_invalid_label) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__startup_timeline__metrics__labeled_counter__glean_error_invalid_overflow {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.startup_timeline as t,
+unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__startup_timeline__metrics__labeled_counter__glean_error_invalid_state {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.startup_timeline as t,
+unnest(metrics.labeled_counter.glean_error_invalid_state) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
+}
+
+view: suggest__startup_timeline__metrics__labeled_counter__glean_error_invalid_value {
+  derived_table: {
+    sql: select
+    m.key,
+    count(*) as n
+from mozdata.org_mozilla_firefox.startup_timeline as t,
+unnest(metrics.labeled_counter.glean_error_invalid_value) as m
+where date(submission_timestamp) > date_sub(current_date, interval 30 day)
+    and sample_id = 0
+group by key
+order by n desc ;;
+  }
+
+  dimension: key {
+    type: string
+    sql: ${TABLE}.key ;;
+  }
 }
