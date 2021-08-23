@@ -1,35 +1,3 @@
-activity_stream:
-  explores:
-    event_counts:
-      type: ping_explore
-      views:
-        base_view: events
-    pocket_tile_impressions:
-      type: ping_explore
-      views:
-        base_view: impression_stats_flat
-    session_counts:
-      type: ping_explore
-      views:
-        base_view: sessions
-  glean_app: false
-  owners:
-  - najiang@mozilla.com
-  pretty_name: Activity Stream
-  spoke: looker-spoke-default
-  views:
-    events:
-      tables:
-      - table: mozdata.activity_stream.events
-      type: ping_view
-    impression_stats_flat:
-      tables:
-      - table: mozdata.activity_stream.impression_stats_flat
-      type: ping_view
-    sessions:
-      tables:
-      - table: mozdata.activity_stream.sessions
-      type: ping_view
 bergamot:
   explores:
     custom:
@@ -51,198 +19,6 @@ bergamot:
       - channel: null
         table: mozdata.org_mozilla_bergamot.custom
       type: table_view
-burnham:
-  explores:
-    baseline:
-      type: glean_ping_explore
-      views:
-        base_view: baseline
-    client_counts:
-      type: client_counts_explore
-      views:
-        base_view: client_counts
-        extended_view: baseline_clients_daily_table
-    discovery:
-      type: glean_ping_explore
-      views:
-        base_view: discovery
-    events:
-      type: events_explore
-      views:
-        base_view: events
-        extended_view: events_unnested_table
-    growth_accounting:
-      type: growth_accounting_explore
-      views:
-        base_view: growth_accounting
-    metrics:
-      type: glean_ping_explore
-      views:
-        base_view: metrics
-    space_ship_ready:
-      type: glean_ping_explore
-      views:
-        base_view: space_ship_ready
-    starbase46:
-      type: glean_ping_explore
-      views:
-        base_view: starbase46
-  glean_app: true
-  owners:
-  - rpierzina@mozilla.com
-  pretty_name: Burnham
-  spoke: looker-spoke-default
-  views:
-    baseline:
-      tables:
-      - table: mozdata.burnham.baseline
-      type: glean_ping_view
-    baseline_clients_daily_table:
-      tables:
-      - channel: null
-        table: mozdata.burnham.baseline_clients_daily
-      type: table_view
-    baseline_clients_first_seen_table:
-      tables:
-      - channel: null
-        table: mozdata.burnham.baseline_clients_first_seen
-      type: table_view
-    baseline_clients_last_seen_table:
-      tables:
-      - channel: null
-        table: mozdata.burnham.baseline_clients_last_seen
-      type: table_view
-    baseline_table:
-      tables:
-      - channel: null
-        table: mozdata.burnham.baseline
-      type: table_view
-    client_counts:
-      tables:
-      - table: mozdata.burnham.baseline_clients_daily
-      type: client_counts_view
-    discovery:
-      tables:
-      - table: mozdata.burnham.discovery
-      type: glean_ping_view
-    discovery_table:
-      tables:
-      - channel: null
-        table: mozdata.burnham.discovery
-      type: table_view
-    events:
-      tables:
-      - base_table: mozdata.burnham.events_unnested
-        events_table_view: events_unnested_table
-      type: events_view
-    events_table:
-      tables:
-      - channel: null
-        table: mozdata.burnham.events
-      type: table_view
-    events_unnested_table:
-      tables:
-      - channel: null
-        table: mozdata.burnham.events_unnested
-      type: table_view
-    growth_accounting:
-      tables:
-      - table: mozdata.burnham.baseline_clients_last_seen
-      type: growth_accounting_view
-    metrics:
-      tables:
-      - table: mozdata.burnham.metrics
-      type: glean_ping_view
-    metrics_table:
-      tables:
-      - channel: null
-        table: mozdata.burnham.metrics
-      type: table_view
-    space_ship_ready:
-      tables:
-      - table: mozdata.burnham.space_ship_ready
-      type: glean_ping_view
-    space_ship_ready_table:
-      tables:
-      - channel: null
-        table: mozdata.burnham.space_ship_ready
-      type: table_view
-    starbase46:
-      tables:
-      - table: mozdata.burnham.starbase46
-      type: glean_ping_view
-    starbase46_table:
-      tables:
-      - channel: null
-        table: mozdata.burnham.starbase46
-      type: table_view
-contextual_services:
-  connection: bigquery-oauth
-  explores:
-    event_aggregates:
-      type: ping_explore
-      views:
-        base_view: event_aggregates
-    quicksuggest_clicks:
-      type: ping_explore
-      views:
-        base_view: quicksuggest_click
-    quicksuggest_impressions:
-      type: ping_explore
-      views:
-        base_view: quicksuggest_impression
-    topsites_clicks:
-      type: ping_explore
-      views:
-        base_view: topsites_click
-    topsites_impressions:
-      type: ping_explore
-      views:
-        base_view: topsites_impression
-  glean_app: false
-  owners:
-  - mmccorquodale@mozilla.com
-  - rburwei@mozilla.com
-  pretty_name: Contextual Services
-  spoke: looker-spoke-private
-  views:
-    event_aggregates:
-      tables:
-      - table: mozdata.contextual_services.event_aggregates
-      type: ping_view
-    quicksuggest_click:
-      tables:
-      - table: mozdata.contextual_services.quicksuggest_click
-      type: ping_view
-    quicksuggest_impression:
-      tables:
-      - table: mozdata.contextual_services.quicksuggest_impression
-      type: ping_view
-    topsites_click:
-      tables:
-      - table: mozdata.contextual_services.topsites_click
-      type: ping_view
-    topsites_impression:
-      tables:
-      - table: mozdata.contextual_services.topsites_impression
-      type: ping_view
-duet:
-  glean_app: false
-  owners:
-  - ascholtz@mozilla.com
-  pretty_name: DUET
-  spoke: looker-spoke-default
-  views:
-    install:
-      tables:
-      - channel: release
-        table: mozdata.firefox_installer.install
-      type: ping_view
-    new_profile:
-      tables:
-      - channel: release
-        table: mozdata.telemetry.new_profile
-      type: ping_view
 fenix:
   explores:
     activation:
@@ -318,7 +94,6 @@ fenix:
   owners:
   - frank@mozilla.com
   - mdroettboom@mozilla.com
-  - vzare@mozilla.com
   pretty_name: Firefox for Android
   spoke: looker-spoke-default
   views:
@@ -650,60 +425,6 @@ fenix:
       - channel: nightly
         table: mozdata.org_mozilla_fenix.tabs_sync
       type: table_view
-firefox_accounts:
-  explores:
-    event_counts:
-      type: events_explore
-      views:
-        base_view: events
-        extended_view: fxa_events_table
-    funnel_analysis:
-      type: funnel_analysis_explore
-      views:
-        base_view: funnel_analysis
-    growth_accounting:
-      type: growth_accounting_explore
-      views:
-        base_view: growth_accounting
-  glean_app: false
-  owners:
-  - loines@mozilla.com
-  pretty_name: Firefox Accounts
-  spoke: looker-spoke-default
-  views:
-    events:
-      tables:
-      - base_table: mozdata.firefox_accounts.fxa_content_auth_oauth_events
-        events_table_view: fxa_events_table
-      type: events_view
-    events_daily_table:
-      tables:
-      - channel: release
-        table: mozdata.firefox_accounts.events_daily
-      type: table_view
-    funnel_analysis:
-      tables:
-      - event_types: mozdata.firefox_accounts.event_types
-        funnel_analysis: events_daily_table
-        step_1: event_types
-        step_2: event_types
-        step_3: event_types
-        step_4: event_types
-      type: funnel_analysis_view
-    fxa_events_table:
-      tables:
-      - channel: release
-        table: mozdata.firefox_accounts.fxa_content_auth_oauth_events
-      type: table_view
-    fxa_first_seen_table:
-      tables:
-      - channel: release
-        table: mozdata.firefox_accounts.fxa_users_first_seen
-      type: table_view
-    growth_accounting:
-      tables:
-      - table: mozdata.firefox_accounts.fxa_users_last_seen
-      type: growth_accounting_view
 firefox_ios:
   explores:
     baseline:
@@ -727,7 +448,6 @@ firefox_ios:
   owners:
   - tlong@mozilla.com
   - frank@mozilla.com
-  - athomas@mozilla.com
   pretty_name: Firefox for iOS
   spoke: looker-spoke-default
   views:
@@ -1067,29 +787,13 @@ mozilla_vpn:
       type: glean_ping_explore
       views:
         base_view: main
-  glean_app: false
+  glean_app: true
   owners:
   - vpn@mozilla.com
   - amarchesini@mozilla.com
-  - dthorn@mozilla.com
   pretty_name: Mozilla VPN
   spoke: looker-spoke-default
   views:
-    devices:
-      tables:
-      - channel: release
-        table: mozdata.mozilla_vpn.devices
-      type: table_view
-    funnel_fxa_login_to_protected:
-      tables:
-      - channel: release
-        table: mozdata.mozilla_vpn.funnel_fxa_login_to_protected
-      type: table_view
-    funnel_ga_to_subscriptions:
-      tables:
-      - channel: release
-        table: mozdata.mozilla_vpn.funnel_ga_to_subscriptions
-      type: table_view
     main:
       tables:
       - table: mozdata.mozillavpn.main
@@ -1099,50 +803,3 @@ mozilla_vpn:
       - channel: null
         table: mozdata.mozillavpn.main
       type: table_view
-    retention_by_subscription:
-      tables:
-      - channel: release
-        table: mozdata.mozilla_vpn.retention_by_subscription
-      type: table_view
-    site_metrics_summary:
-      tables:
-      - channel: release
-        table: mozdata.mozilla_vpn.site_metrics_summary
-      type: table_view
-    subscriptions:
-      tables:
-      - channel: release
-        table: mozdata.mozilla_vpn.all_subscriptions
-      type: table_view
-revenue:
-  connection: bigquery-oauth
-  glean_app: false
-  owners:
-  - akomarzewski@mozilla.com
-  pretty_name: Revenue
-  spoke: looker-spoke-private
-search:
-  explores:
-    desktop_search_counts:
-      type: ping_explore
-      views:
-        base_view: search_clients_engines_sources_daily
-    mobile_search_counts:
-      type: ping_explore
-      views:
-        base_view: mobile_search_clients_engines_sources_daily
-  glean_app: false
-  owners:
-  - mmccorquodale@mozilla.com
-  - xluo@mozilla.com
-  pretty_name: Search
-  spoke: looker-spoke-default
-  views:
-    mobile_search_clients_engines_sources_daily:
-      tables:
-      - table: mozdata.search.mobile_search_clients_engines_sources_daily
-      type: ping_view
-    search_clients_engines_sources_daily:
-      tables:
-      - table: mozdata.search.search_clients_engines_sources_daily
-      type: ping_view
