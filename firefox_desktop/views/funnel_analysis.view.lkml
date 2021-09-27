@@ -1,4 +1,4 @@
-include: "events_daily.view.lkml"
+include: "events_daily_table.view.lkml"
 
 view: funnel_analysis {
   extends: [events_daily_table]

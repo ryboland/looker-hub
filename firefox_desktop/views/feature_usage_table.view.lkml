@@ -1,4 +1,4 @@
-view: feature_usage {
+view: feature_usage_table {
   dimension: active_hours_sum {
     sql: ${TABLE}.active_hours_sum ;;
     type: number

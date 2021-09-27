@@ -1,7 +1,7 @@
-include: "baseline_clients_daily_table.view.lkml"
+include: "clients_daily_table.view.lkml"
 
 view: client_counts {
-  extends: [baseline_clients_daily_table]
+  extends: [clients_daily_table]
 
   dimension: have_completed_period {
     type: yesno

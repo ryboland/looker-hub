@@ -1,4 +1,9 @@
-view: clients_daily {
+view: clients_last_seen_table {
+  dimension: _sample_id_string {
+    sql: ${TABLE}._sample_id_string ;;
+    type: string
+  }
+
   dimension: aborts_content_sum {
     sql: ${TABLE}.aborts_content_sum ;;
     type: number
@@ -27,6 +32,11 @@ view: clients_daily {
   dimension: active_hours_sum {
     sql: ${TABLE}.active_hours_sum ;;
     type: number
+  }
+
+  dimension: activity_segments_v1 {
+    sql: ${TABLE}.activity_segments_v1 ;;
+    type: string
   }
 
   dimension: ad_clicks {
@@ -229,6 +239,101 @@ view: clients_daily {
 
   dimension: crashes_detected_plugin_sum {
     sql: ${TABLE}.crashes_detected_plugin_sum ;;
+    type: number
+  }
+
+  dimension: days_created_profile_bits {
+    sql: ${TABLE}.days_created_profile_bits ;;
+    type: number
+  }
+
+  dimension: days_had_8_active_ticks_bits {
+    sql: ${TABLE}.days_had_8_active_ticks_bits ;;
+    type: number
+  }
+
+  dimension: days_interacted_bits {
+    sql: ${TABLE}.days_interacted_bits ;;
+    type: number
+  }
+
+  dimension: days_opened_dev_tools_bits {
+    sql: ${TABLE}.days_opened_dev_tools_bits ;;
+    type: number
+  }
+
+  dimension: days_seen_bits {
+    sql: ${TABLE}.days_seen_bits ;;
+    type: number
+  }
+
+  dimension: days_seen_in_experiment {
+    sql: ${TABLE}.days_seen_in_experiment ;;
+    hidden: yes
+  }
+
+  dimension: days_since_created_profile {
+    sql: ${TABLE}.days_since_created_profile ;;
+    type: number
+  }
+
+  dimension: days_since_first_seen {
+    sql: ${TABLE}.days_since_first_seen ;;
+    type: number
+  }
+
+  dimension: days_since_had_8_active_ticks {
+    sql: ${TABLE}.days_since_had_8_active_ticks ;;
+    type: number
+  }
+
+  dimension: days_since_interacted {
+    sql: ${TABLE}.days_since_interacted ;;
+    type: number
+  }
+
+  dimension: days_since_opened_dev_tools {
+    sql: ${TABLE}.days_since_opened_dev_tools ;;
+    type: number
+  }
+
+  dimension: days_since_second_seen {
+    sql: ${TABLE}.days_since_second_seen ;;
+    type: number
+  }
+
+  dimension: days_since_seen {
+    sql: ${TABLE}.days_since_seen ;;
+    type: number
+  }
+
+  dimension: days_since_visited_10_uri {
+    sql: ${TABLE}.days_since_visited_10_uri ;;
+    type: number
+  }
+
+  dimension: days_since_visited_1_uri {
+    sql: ${TABLE}.days_since_visited_1_uri ;;
+    type: number
+  }
+
+  dimension: days_since_visited_5_uri {
+    sql: ${TABLE}.days_since_visited_5_uri ;;
+    type: number
+  }
+
+  dimension: days_visited_10_uri_bits {
+    sql: ${TABLE}.days_visited_10_uri_bits ;;
+    type: number
+  }
+
+  dimension: days_visited_1_uri_bits {
+    sql: ${TABLE}.days_visited_1_uri_bits ;;
+    type: number
+  }
+
+  dimension: days_visited_5_uri_bits {
+    sql: ${TABLE}.days_visited_5_uri_bits ;;
     type: number
   }
 
@@ -547,8 +652,33 @@ view: clients_daily {
     type: number
   }
 
+  dimension: is_allweek_regular_v1 {
+    sql: ${TABLE}.is_allweek_regular_v1 ;;
+    type: yesno
+  }
+
+  dimension: is_core_active_v1 {
+    sql: ${TABLE}.is_core_active_v1 ;;
+    type: yesno
+  }
+
   dimension: is_default_browser {
     sql: ${TABLE}.is_default_browser ;;
+    type: yesno
+  }
+
+  dimension: is_new_or_resurrected_v3 {
+    sql: ${TABLE}.is_new_or_resurrected_v3 ;;
+    type: yesno
+  }
+
+  dimension: is_regular_user_v3 {
+    sql: ${TABLE}.is_regular_user_v3 ;;
+    type: yesno
+  }
+
+  dimension: is_weekday_regular_v1 {
+    sql: ${TABLE}.is_weekday_regular_v1 ;;
     type: yesno
   }
 
@@ -577,19 +707,19 @@ view: clients_daily {
     type: number
   }
 
-  dimension: n_created_pictureinpicture {
-    sql: ${TABLE}.n_created_pictureinpicture ;;
-    type: number
+  dimension: new_profile_14_day_activated_v1 {
+    sql: ${TABLE}.new_profile_14_day_activated_v1 ;;
+    type: yesno
   }
 
-  dimension: n_logged_event {
-    sql: ${TABLE}.n_logged_event ;;
-    type: number
+  dimension: new_profile_21_day_activated_v1 {
+    sql: ${TABLE}.new_profile_21_day_activated_v1 ;;
+    type: yesno
   }
 
-  dimension: n_viewed_protection_report {
-    sql: ${TABLE}.n_viewed_protection_report ;;
-    type: number
+  dimension: new_profile_7_day_activated_v1 {
+    sql: ${TABLE}.new_profile_7_day_activated_v1 ;;
+    type: yesno
   }
 
   dimension: normalized_channel {
@@ -1407,6 +1537,21 @@ view: clients_daily {
     type: number
   }
 
+  dimension_group: first_run {
+    sql: ${TABLE}.first_run_date ;;
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year,
+    ]
+    convert_tz: no
+    datatype: date
+  }
+
   dimension_group: first_seen {
     sql: ${TABLE}.first_seen_date ;;
     type: time
@@ -1452,21 +1597,6 @@ view: clients_daily {
     datatype: date
   }
 
-  dimension_group: submission_date_s3 {
-    sql: ${TABLE}.submission_date_s3 ;;
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year,
-    ]
-    convert_tz: no
-    datatype: date
-  }
-
   dimension_group: submission_timestamp_min {
     sql: ${TABLE}.submission_timestamp_min ;;
     type: time
@@ -1481,5 +1611,5 @@ view: clients_daily {
     ]
   }
 
-  sql_table_name: `mozdata.telemetry.clients_daily` ;;
+  sql_table_name: `mozdata.telemetry.clients_last_seen` ;;
 }
