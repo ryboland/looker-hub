@@ -14,42 +14,42 @@ explore: baseline {
 
   join: baseline__events {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.events}) AS baseline__events ON ${baseline.document_id} = ${baseline__events.document_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline.events}) AS baseline__events ;;
   }
 
   join: baseline__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.events__extra}) AS baseline__events__extra ON ${baseline.document_id} = ${baseline__events__extra.document_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline__events.events__extra}) AS baseline__events__extra ;;
   }
 
   join: baseline__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__jwe}) AS baseline__metrics__jwe ON ${baseline.document_id} = ${baseline__metrics__jwe.document_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline__metrics.metrics__jwe}) AS baseline__metrics__jwe ;;
   }
 
   join: baseline__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_rate}) AS baseline__metrics__labeled_rate ON ${baseline.document_id} = ${baseline__metrics__labeled_rate.document_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline__metrics.metrics__labeled_rate}) AS baseline__metrics__labeled_rate ;;
   }
 
   join: baseline__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_rate__value}) AS baseline__metrics__labeled_rate__value ON ${baseline.document_id} = ${baseline__metrics__labeled_rate__value.document_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline__metrics__labeled_rate.metrics__labeled_rate__value}) AS baseline__metrics__labeled_rate__value ;;
   }
 
   join: baseline__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__text}) AS baseline__metrics__text ON ${baseline.document_id} = ${baseline__metrics__text.document_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline__metrics.metrics__text}) AS baseline__metrics__text ;;
   }
 
   join: baseline__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__url}) AS baseline__metrics__url ON ${baseline.document_id} = ${baseline__metrics__url.document_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline__metrics.metrics__url}) AS baseline__metrics__url ;;
   }
 
   join: baseline__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.ping_info__experiments}) AS baseline__ping_info__experiments ON ${baseline.document_id} = ${baseline__ping_info__experiments.document_id} ;;
+    sql: LEFT JOIN UNNEST(${baseline__ping_info.ping_info__experiments}) AS baseline__ping_info__experiments ;;
   }
 
   join: baseline__metrics__labeled_counter__glean_error_invalid_label {

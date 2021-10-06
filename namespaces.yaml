@@ -1370,19 +1370,3 @@ search:
       tables:
       - table: mozdata.search.search_clients_engines_sources_daily
       type: ping_view
-sync:
-  explores:
-    sync:
-      type: ping_explore
-      views:
-        base_view: sync
-  glean_app: false
-  owners:
-  - ascholtz@mozilla.com
-  pretty_name: Sync
-  spoke: looker-spoke-default
-  views:
-    sync:
-      tables:
-      - table: mozdata.telemetry.sync
-      type: ping_view

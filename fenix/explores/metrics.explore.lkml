@@ -15,617 +15,617 @@ explore: metrics {
 
   join: metrics__events {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.events}) AS metrics__events ON ${metrics.document_id} = ${metrics__events.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.events}) AS metrics__events ;;
   }
 
   join: metrics__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.events__extra}) AS metrics__events__extra ON ${metrics.document_id} = ${metrics__events__extra.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__events.events__extra}) AS metrics__events__extra ;;
   }
 
   join: metrics__metrics__custom_distribution__geckoview_document_site_origins__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__custom_distribution__geckoview_document_site_origins__values}) AS metrics__metrics__custom_distribution__geckoview_document_site_origins__values ON ${metrics.document_id} = ${metrics__metrics__custom_distribution__geckoview_document_site_origins__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__custom_distribution__geckoview_document_site_origins.metrics__custom_distribution__geckoview_document_site_origins__values}) AS metrics__metrics__custom_distribution__geckoview_document_site_origins__values ;;
   }
 
   join: metrics__metrics__custom_distribution__geckoview_per_document_site_origins__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__custom_distribution__geckoview_per_document_site_origins__values}) AS metrics__metrics__custom_distribution__geckoview_per_document_site_origins__values ON ${metrics.document_id} = ${metrics__metrics__custom_distribution__geckoview_per_document_site_origins__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__custom_distribution__geckoview_per_document_site_origins.metrics__custom_distribution__geckoview_per_document_site_origins__values}) AS metrics__metrics__custom_distribution__geckoview_per_document_site_origins__values ;;
   }
 
   join: metrics__metrics__custom_distribution__gfx_checkerboard_peak_pixel_count__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__custom_distribution__gfx_checkerboard_peak_pixel_count__values}) AS metrics__metrics__custom_distribution__gfx_checkerboard_peak_pixel_count__values ON ${metrics.document_id} = ${metrics__metrics__custom_distribution__gfx_checkerboard_peak_pixel_count__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__custom_distribution__gfx_checkerboard_peak_pixel_count.metrics__custom_distribution__gfx_checkerboard_peak_pixel_count__values}) AS metrics__metrics__custom_distribution__gfx_checkerboard_peak_pixel_count__values ;;
   }
 
   join: metrics__metrics__custom_distribution__gfx_checkerboard_severity__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__custom_distribution__gfx_checkerboard_severity__values}) AS metrics__metrics__custom_distribution__gfx_checkerboard_severity__values ON ${metrics.document_id} = ${metrics__metrics__custom_distribution__gfx_checkerboard_severity__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__custom_distribution__gfx_checkerboard_severity.metrics__custom_distribution__gfx_checkerboard_severity__values}) AS metrics__metrics__custom_distribution__gfx_checkerboard_severity__values ;;
   }
 
   join: metrics__metrics__custom_distribution__gfx_content_frame_time_from_paint__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__custom_distribution__gfx_content_frame_time_from_paint__values}) AS metrics__metrics__custom_distribution__gfx_content_frame_time_from_paint__values ON ${metrics.document_id} = ${metrics__metrics__custom_distribution__gfx_content_frame_time_from_paint__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__custom_distribution__gfx_content_frame_time_from_paint.metrics__custom_distribution__gfx_content_frame_time_from_paint__values}) AS metrics__metrics__custom_distribution__gfx_content_frame_time_from_paint__values ;;
   }
 
   join: metrics__metrics__custom_distribution__gfx_content_frame_time_from_vsync__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__custom_distribution__gfx_content_frame_time_from_vsync__values}) AS metrics__metrics__custom_distribution__gfx_content_frame_time_from_vsync__values ON ${metrics.document_id} = ${metrics__metrics__custom_distribution__gfx_content_frame_time_from_vsync__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__custom_distribution__gfx_content_frame_time_from_vsync.metrics__custom_distribution__gfx_content_frame_time_from_vsync__values}) AS metrics__metrics__custom_distribution__gfx_content_frame_time_from_vsync__values ;;
   }
 
   join: metrics__metrics__custom_distribution__gfx_content_frame_time_with_svg__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__custom_distribution__gfx_content_frame_time_with_svg__values}) AS metrics__metrics__custom_distribution__gfx_content_frame_time_with_svg__values ON ${metrics.document_id} = ${metrics__metrics__custom_distribution__gfx_content_frame_time_with_svg__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__custom_distribution__gfx_content_frame_time_with_svg.metrics__custom_distribution__gfx_content_frame_time_with_svg__values}) AS metrics__metrics__custom_distribution__gfx_content_frame_time_with_svg__values ;;
   }
 
   join: metrics__metrics__custom_distribution__gfx_content_frame_time_without_resource_upload__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__custom_distribution__gfx_content_frame_time_without_resource_upload__values}) AS metrics__metrics__custom_distribution__gfx_content_frame_time_without_resource_upload__values ON ${metrics.document_id} = ${metrics__metrics__custom_distribution__gfx_content_frame_time_without_resource_upload__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__custom_distribution__gfx_content_frame_time_without_resource_upload.metrics__custom_distribution__gfx_content_frame_time_without_resource_upload__values}) AS metrics__metrics__custom_distribution__gfx_content_frame_time_without_resource_upload__values ;;
   }
 
   join: metrics__metrics__custom_distribution__gfx_content_frame_time_without_upload__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__custom_distribution__gfx_content_frame_time_without_upload__values}) AS metrics__metrics__custom_distribution__gfx_content_frame_time_without_upload__values ON ${metrics.document_id} = ${metrics__metrics__custom_distribution__gfx_content_frame_time_without_upload__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__custom_distribution__gfx_content_frame_time_without_upload.metrics__custom_distribution__gfx_content_frame_time_without_upload__values}) AS metrics__metrics__custom_distribution__gfx_content_frame_time_without_upload__values ;;
   }
 
   join: metrics__metrics__custom_distribution__js_baseline_compile_percentage__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__custom_distribution__js_baseline_compile_percentage__values}) AS metrics__metrics__custom_distribution__js_baseline_compile_percentage__values ON ${metrics.document_id} = ${metrics__metrics__custom_distribution__js_baseline_compile_percentage__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__custom_distribution__js_baseline_compile_percentage.metrics__custom_distribution__js_baseline_compile_percentage__values}) AS metrics__metrics__custom_distribution__js_baseline_compile_percentage__values ;;
   }
 
   join: metrics__metrics__custom_distribution__js_delazification_percentage__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__custom_distribution__js_delazification_percentage__values}) AS metrics__metrics__custom_distribution__js_delazification_percentage__values ON ${metrics.document_id} = ${metrics__metrics__custom_distribution__js_delazification_percentage__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__custom_distribution__js_delazification_percentage.metrics__custom_distribution__js_delazification_percentage__values}) AS metrics__metrics__custom_distribution__js_delazification_percentage__values ;;
   }
 
   join: metrics__metrics__custom_distribution__js_execution_percentage__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__custom_distribution__js_execution_percentage__values}) AS metrics__metrics__custom_distribution__js_execution_percentage__values ON ${metrics.document_id} = ${metrics__metrics__custom_distribution__js_execution_percentage__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__custom_distribution__js_execution_percentage.metrics__custom_distribution__js_execution_percentage__values}) AS metrics__metrics__custom_distribution__js_execution_percentage__values ;;
   }
 
   join: metrics__metrics__custom_distribution__js_xdr_encode_percentage__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__custom_distribution__js_xdr_encode_percentage__values}) AS metrics__metrics__custom_distribution__js_xdr_encode_percentage__values ON ${metrics.document_id} = ${metrics__metrics__custom_distribution__js_xdr_encode_percentage__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__custom_distribution__js_xdr_encode_percentage.metrics__custom_distribution__js_xdr_encode_percentage__values}) AS metrics__metrics__custom_distribution__js_xdr_encode_percentage__values ;;
   }
 
   join: metrics__metrics__custom_distribution__performance_clone_deserialize_items__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__custom_distribution__performance_clone_deserialize_items__values}) AS metrics__metrics__custom_distribution__performance_clone_deserialize_items__values ON ${metrics.document_id} = ${metrics__metrics__custom_distribution__performance_clone_deserialize_items__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__custom_distribution__performance_clone_deserialize_items.metrics__custom_distribution__performance_clone_deserialize_items__values}) AS metrics__metrics__custom_distribution__performance_clone_deserialize_items__values ;;
   }
 
   join: metrics__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__jwe}) AS metrics__metrics__jwe ON ${metrics.document_id} = ${metrics__metrics__jwe.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics.metrics__jwe}) AS metrics__metrics__jwe ;;
   }
 
   join: metrics__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_rate}) AS metrics__metrics__labeled_rate ON ${metrics.document_id} = ${metrics__metrics__labeled_rate.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics.metrics__labeled_rate}) AS metrics__metrics__labeled_rate ;;
   }
 
   join: metrics__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_rate__value}) AS metrics__metrics__labeled_rate__value ON ${metrics.document_id} = ${metrics__metrics__labeled_rate__value.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__labeled_rate.metrics__labeled_rate__value}) AS metrics__metrics__labeled_rate__value ;;
   }
 
   join: metrics__metrics__memory_distribution__glean_database_size__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__memory_distribution__glean_database_size__values}) AS metrics__metrics__memory_distribution__glean_database_size__values ON ${metrics.document_id} = ${metrics__metrics__memory_distribution__glean_database_size__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__memory_distribution__glean_database_size.metrics__memory_distribution__glean_database_size__values}) AS metrics__metrics__memory_distribution__glean_database_size__values ;;
   }
 
   join: metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values}) AS metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values ON ${metrics.document_id} = ${metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size.metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values}) AS metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values ;;
   }
 
   join: metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__memory_distribution__glean_upload_pending_pings_directory_size__values}) AS metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values ON ${metrics.document_id} = ${metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size.metrics__memory_distribution__glean_upload_pending_pings_directory_size__values}) AS metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values ;;
   }
 
   join: metrics__metrics__memory_distribution__performance_clone_deserialize_size__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__memory_distribution__performance_clone_deserialize_size__values}) AS metrics__metrics__memory_distribution__performance_clone_deserialize_size__values ON ${metrics.document_id} = ${metrics__metrics__memory_distribution__performance_clone_deserialize_size__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__memory_distribution__performance_clone_deserialize_size.metrics__memory_distribution__performance_clone_deserialize_size__values}) AS metrics__metrics__memory_distribution__performance_clone_deserialize_size__values ;;
   }
 
   join: metrics__metrics__memory_distribution__storage_stats_app_bytes__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__memory_distribution__storage_stats_app_bytes__values}) AS metrics__metrics__memory_distribution__storage_stats_app_bytes__values ON ${metrics.document_id} = ${metrics__metrics__memory_distribution__storage_stats_app_bytes__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__memory_distribution__storage_stats_app_bytes.metrics__memory_distribution__storage_stats_app_bytes__values}) AS metrics__metrics__memory_distribution__storage_stats_app_bytes__values ;;
   }
 
   join: metrics__metrics__memory_distribution__storage_stats_cache_bytes__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__memory_distribution__storage_stats_cache_bytes__values}) AS metrics__metrics__memory_distribution__storage_stats_cache_bytes__values ON ${metrics.document_id} = ${metrics__metrics__memory_distribution__storage_stats_cache_bytes__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__memory_distribution__storage_stats_cache_bytes.metrics__memory_distribution__storage_stats_cache_bytes__values}) AS metrics__metrics__memory_distribution__storage_stats_cache_bytes__values ;;
   }
 
   join: metrics__metrics__memory_distribution__storage_stats_data_dir_bytes__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__memory_distribution__storage_stats_data_dir_bytes__values}) AS metrics__metrics__memory_distribution__storage_stats_data_dir_bytes__values ON ${metrics.document_id} = ${metrics__metrics__memory_distribution__storage_stats_data_dir_bytes__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__memory_distribution__storage_stats_data_dir_bytes.metrics__memory_distribution__storage_stats_data_dir_bytes__values}) AS metrics__metrics__memory_distribution__storage_stats_data_dir_bytes__values ;;
   }
 
   join: metrics__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__text}) AS metrics__metrics__text ON ${metrics.document_id} = ${metrics__metrics__text.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics.metrics__text}) AS metrics__metrics__text ;;
   }
 
   join: metrics__metrics__timing_distribution__engine_tab_kill_background_age__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__engine_tab_kill_background_age__values}) AS metrics__metrics__timing_distribution__engine_tab_kill_background_age__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__engine_tab_kill_background_age__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__engine_tab_kill_background_age.metrics__timing_distribution__engine_tab_kill_background_age__values}) AS metrics__metrics__timing_distribution__engine_tab_kill_background_age__values ;;
   }
 
   join: metrics__metrics__timing_distribution__engine_tab_kill_foreground_age__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__engine_tab_kill_foreground_age__values}) AS metrics__metrics__timing_distribution__engine_tab_kill_foreground_age__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__engine_tab_kill_foreground_age__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__engine_tab_kill_foreground_age.metrics__timing_distribution__engine_tab_kill_foreground_age__values}) AS metrics__metrics__timing_distribution__engine_tab_kill_foreground_age__values ;;
   }
 
   join: metrics__metrics__timing_distribution__geckoview_content_process_lifetime__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__geckoview_content_process_lifetime__values}) AS metrics__metrics__timing_distribution__geckoview_content_process_lifetime__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__geckoview_content_process_lifetime__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__geckoview_content_process_lifetime.metrics__timing_distribution__geckoview_content_process_lifetime__values}) AS metrics__metrics__timing_distribution__geckoview_content_process_lifetime__values ;;
   }
 
   join: metrics__metrics__timing_distribution__geckoview_page_load_progress_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__geckoview_page_load_progress_time__values}) AS metrics__metrics__timing_distribution__geckoview_page_load_progress_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__geckoview_page_load_progress_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__geckoview_page_load_progress_time.metrics__timing_distribution__geckoview_page_load_progress_time__values}) AS metrics__metrics__timing_distribution__geckoview_page_load_progress_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__geckoview_page_load_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__geckoview_page_load_time__values}) AS metrics__metrics__timing_distribution__geckoview_page_load_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__geckoview_page_load_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__geckoview_page_load_time.metrics__timing_distribution__geckoview_page_load_time__values}) AS metrics__metrics__timing_distribution__geckoview_page_load_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__geckoview_page_reload_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__geckoview_page_reload_time__values}) AS metrics__metrics__timing_distribution__geckoview_page_reload_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__geckoview_page_reload_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__geckoview_page_reload_time.metrics__timing_distribution__geckoview_page_reload_time__values}) AS metrics__metrics__timing_distribution__geckoview_page_reload_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__geckoview_startup_runtime__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__geckoview_startup_runtime__values}) AS metrics__metrics__timing_distribution__geckoview_startup_runtime__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__geckoview_startup_runtime__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__geckoview_startup_runtime.metrics__timing_distribution__geckoview_startup_runtime__values}) AS metrics__metrics__timing_distribution__geckoview_startup_runtime__values ;;
   }
 
   join: metrics__metrics__timing_distribution__gfx_checkerboard_duration__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__gfx_checkerboard_duration__values}) AS metrics__metrics__timing_distribution__gfx_checkerboard_duration__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__gfx_checkerboard_duration__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__gfx_checkerboard_duration.metrics__timing_distribution__gfx_checkerboard_duration__values}) AS metrics__metrics__timing_distribution__gfx_checkerboard_duration__values ;;
   }
 
   join: metrics__metrics__timing_distribution__gfx_checkerboard_potential_duration__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__gfx_checkerboard_potential_duration__values}) AS metrics__metrics__timing_distribution__gfx_checkerboard_potential_duration__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__gfx_checkerboard_potential_duration__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__gfx_checkerboard_potential_duration.metrics__timing_distribution__gfx_checkerboard_potential_duration__values}) AS metrics__metrics__timing_distribution__gfx_checkerboard_potential_duration__values ;;
   }
 
   join: metrics__metrics__timing_distribution__gfx_composite_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__gfx_composite_time__values}) AS metrics__metrics__timing_distribution__gfx_composite_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__gfx_composite_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__gfx_composite_time.metrics__timing_distribution__gfx_composite_time__values}) AS metrics__metrics__timing_distribution__gfx_composite_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__gfx_content_full_paint_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__gfx_content_full_paint_time__values}) AS metrics__metrics__timing_distribution__gfx_content_full_paint_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__gfx_content_full_paint_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__gfx_content_full_paint_time.metrics__timing_distribution__gfx_content_full_paint_time__values}) AS metrics__metrics__timing_distribution__gfx_content_full_paint_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__gfx_content_paint_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__gfx_content_paint_time__values}) AS metrics__metrics__timing_distribution__gfx_content_paint_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__gfx_content_paint_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__gfx_content_paint_time.metrics__timing_distribution__gfx_content_paint_time__values}) AS metrics__metrics__timing_distribution__gfx_content_paint_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__gfx_scroll_present_latency__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__gfx_scroll_present_latency__values}) AS metrics__metrics__timing_distribution__gfx_scroll_present_latency__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__gfx_scroll_present_latency__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__gfx_scroll_present_latency.metrics__timing_distribution__gfx_scroll_present_latency__values}) AS metrics__metrics__timing_distribution__gfx_scroll_present_latency__values ;;
   }
 
   join: metrics__metrics__timing_distribution__gfx_status_framebuild_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__gfx_status_framebuild_time__values}) AS metrics__metrics__timing_distribution__gfx_status_framebuild_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__gfx_status_framebuild_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__gfx_status_framebuild_time.metrics__timing_distribution__gfx_status_framebuild_time__values}) AS metrics__metrics__timing_distribution__gfx_status_framebuild_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__gfx_status_sceneswap_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__gfx_status_sceneswap_time__values}) AS metrics__metrics__timing_distribution__gfx_status_sceneswap_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__gfx_status_sceneswap_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__gfx_status_sceneswap_time.metrics__timing_distribution__gfx_status_sceneswap_time__values}) AS metrics__metrics__timing_distribution__gfx_status_sceneswap_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__gfx_webrender_framebuild_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__gfx_webrender_framebuild_time__values}) AS metrics__metrics__timing_distribution__gfx_webrender_framebuild_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__gfx_webrender_framebuild_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__gfx_webrender_framebuild_time.metrics__timing_distribution__gfx_webrender_framebuild_time__values}) AS metrics__metrics__timing_distribution__gfx_webrender_framebuild_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__gfx_webrender_render_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__gfx_webrender_render_time__values}) AS metrics__metrics__timing_distribution__gfx_webrender_render_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__gfx_webrender_render_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__gfx_webrender_render_time.metrics__timing_distribution__gfx_webrender_render_time__values}) AS metrics__metrics__timing_distribution__gfx_webrender_render_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__gfx_webrender_scenebuild_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__gfx_webrender_scenebuild_time__values}) AS metrics__metrics__timing_distribution__gfx_webrender_scenebuild_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__gfx_webrender_scenebuild_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__gfx_webrender_scenebuild_time.metrics__timing_distribution__gfx_webrender_scenebuild_time__values}) AS metrics__metrics__timing_distribution__gfx_webrender_scenebuild_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__gfx_webrender_sceneswap_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__gfx_webrender_sceneswap_time__values}) AS metrics__metrics__timing_distribution__gfx_webrender_sceneswap_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__gfx_webrender_sceneswap_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__gfx_webrender_sceneswap_time.metrics__timing_distribution__gfx_webrender_sceneswap_time__values}) AS metrics__metrics__timing_distribution__gfx_webrender_sceneswap_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_gc_compact_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_gc_compact_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_compact_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_gc_compact_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_gc_compact_time.metrics__timing_distribution__javascript_gc_compact_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_compact_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_gc_mark_roots_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_gc_mark_roots_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_mark_roots_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_gc_mark_roots_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_gc_mark_roots_time.metrics__timing_distribution__javascript_gc_mark_roots_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_mark_roots_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_gc_mark_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_gc_mark_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_mark_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_gc_mark_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_gc_mark_time.metrics__timing_distribution__javascript_gc_mark_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_mark_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_gc_minor_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_gc_minor_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_minor_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_gc_minor_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_gc_minor_time.metrics__timing_distribution__javascript_gc_minor_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_minor_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_gc_prepare_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_gc_prepare_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_prepare_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_gc_prepare_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_gc_prepare_time.metrics__timing_distribution__javascript_gc_prepare_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_prepare_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_gc_slice_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_gc_slice_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_slice_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_gc_slice_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_gc_slice_time.metrics__timing_distribution__javascript_gc_slice_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_slice_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_gc_sweep_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_gc_sweep_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_sweep_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_gc_sweep_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_gc_sweep_time.metrics__timing_distribution__javascript_gc_sweep_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_sweep_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_gc_total_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_gc_total_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_total_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_gc_total_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_gc_total_time.metrics__timing_distribution__javascript_gc_total_time__values}) AS metrics__metrics__timing_distribution__javascript_gc_total_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_pageload_baseline_compile_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_pageload_baseline_compile_time__values}) AS metrics__metrics__timing_distribution__javascript_pageload_baseline_compile_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_pageload_baseline_compile_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_pageload_baseline_compile_time.metrics__timing_distribution__javascript_pageload_baseline_compile_time__values}) AS metrics__metrics__timing_distribution__javascript_pageload_baseline_compile_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_pageload_delazification_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_pageload_delazification_time__values}) AS metrics__metrics__timing_distribution__javascript_pageload_delazification_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_pageload_delazification_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_pageload_delazification_time.metrics__timing_distribution__javascript_pageload_delazification_time__values}) AS metrics__metrics__timing_distribution__javascript_pageload_delazification_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_pageload_execution_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_pageload_execution_time__values}) AS metrics__metrics__timing_distribution__javascript_pageload_execution_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_pageload_execution_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_pageload_execution_time.metrics__timing_distribution__javascript_pageload_execution_time__values}) AS metrics__metrics__timing_distribution__javascript_pageload_execution_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_pageload_gc_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_pageload_gc_time__values}) AS metrics__metrics__timing_distribution__javascript_pageload_gc_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_pageload_gc_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_pageload_gc_time.metrics__timing_distribution__javascript_pageload_gc_time__values}) AS metrics__metrics__timing_distribution__javascript_pageload_gc_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_pageload_parse_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_pageload_parse_time__values}) AS metrics__metrics__timing_distribution__javascript_pageload_parse_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_pageload_parse_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_pageload_parse_time.metrics__timing_distribution__javascript_pageload_parse_time__values}) AS metrics__metrics__timing_distribution__javascript_pageload_parse_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_pageload_protect_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_pageload_protect_time__values}) AS metrics__metrics__timing_distribution__javascript_pageload_protect_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_pageload_protect_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_pageload_protect_time.metrics__timing_distribution__javascript_pageload_protect_time__values}) AS metrics__metrics__timing_distribution__javascript_pageload_protect_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__javascript_pageload_xdr_encode_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__javascript_pageload_xdr_encode_time__values}) AS metrics__metrics__timing_distribution__javascript_pageload_xdr_encode_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__javascript_pageload_xdr_encode_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__javascript_pageload_xdr_encode_time.metrics__timing_distribution__javascript_pageload_xdr_encode_time__values}) AS metrics__metrics__timing_distribution__javascript_pageload_xdr_encode_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__js_bytecode_caching_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__js_bytecode_caching_time__values}) AS metrics__metrics__timing_distribution__js_bytecode_caching_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__js_bytecode_caching_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__js_bytecode_caching_time.metrics__timing_distribution__js_bytecode_caching_time__values}) AS metrics__metrics__timing_distribution__js_bytecode_caching_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__logins_store_read_query_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__logins_store_read_query_time__values}) AS metrics__metrics__timing_distribution__logins_store_read_query_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__logins_store_read_query_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__logins_store_read_query_time.metrics__timing_distribution__logins_store_read_query_time__values}) AS metrics__metrics__timing_distribution__logins_store_read_query_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__logins_store_unlock_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__logins_store_unlock_time__values}) AS metrics__metrics__timing_distribution__logins_store_unlock_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__logins_store_unlock_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__logins_store_unlock_time.metrics__timing_distribution__logins_store_unlock_time__values}) AS metrics__metrics__timing_distribution__logins_store_unlock_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__logins_store_write_query_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__logins_store_write_query_time__values}) AS metrics__metrics__timing_distribution__logins_store_write_query_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__logins_store_write_query_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__logins_store_write_query_time.metrics__timing_distribution__logins_store_write_query_time__values}) AS metrics__metrics__timing_distribution__logins_store_write_query_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__network_cache_hit_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__network_cache_hit_time__values}) AS metrics__metrics__timing_distribution__network_cache_hit_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__network_cache_hit_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__network_cache_hit_time.metrics__timing_distribution__network_cache_hit_time__values}) AS metrics__metrics__timing_distribution__network_cache_hit_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__network_dns_end__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__network_dns_end__values}) AS metrics__metrics__timing_distribution__network_dns_end__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__network_dns_end__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__network_dns_end.metrics__timing_distribution__network_dns_end__values}) AS metrics__metrics__timing_distribution__network_dns_end__values ;;
   }
 
   join: metrics__metrics__timing_distribution__network_dns_start__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__network_dns_start__values}) AS metrics__metrics__timing_distribution__network_dns_start__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__network_dns_start__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__network_dns_start.metrics__timing_distribution__network_dns_start__values}) AS metrics__metrics__timing_distribution__network_dns_start__values ;;
   }
 
   join: metrics__metrics__timing_distribution__network_first_from_cache__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__network_first_from_cache__values}) AS metrics__metrics__timing_distribution__network_first_from_cache__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__network_first_from_cache__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__network_first_from_cache.metrics__timing_distribution__network_first_from_cache__values}) AS metrics__metrics__timing_distribution__network_first_from_cache__values ;;
   }
 
   join: metrics__metrics__timing_distribution__network_font_download_end__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__network_font_download_end__values}) AS metrics__metrics__timing_distribution__network_font_download_end__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__network_font_download_end__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__network_font_download_end.metrics__timing_distribution__network_font_download_end__values}) AS metrics__metrics__timing_distribution__network_font_download_end__values ;;
   }
 
   join: metrics__metrics__timing_distribution__network_tcp_connection__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__network_tcp_connection__values}) AS metrics__metrics__timing_distribution__network_tcp_connection__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__network_tcp_connection__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__network_tcp_connection.metrics__timing_distribution__network_tcp_connection__values}) AS metrics__metrics__timing_distribution__network_tcp_connection__values ;;
   }
 
   join: metrics__metrics__timing_distribution__network_tls_handshake__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__network_tls_handshake__values}) AS metrics__metrics__timing_distribution__network_tls_handshake__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__network_tls_handshake__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__network_tls_handshake.metrics__timing_distribution__network_tls_handshake__values}) AS metrics__metrics__timing_distribution__network_tls_handshake__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_awesomebar_bookmark_suggestions__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_awesomebar_bookmark_suggestions__values}) AS metrics__metrics__timing_distribution__perf_awesomebar_bookmark_suggestions__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_awesomebar_bookmark_suggestions__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_awesomebar_bookmark_suggestions.metrics__timing_distribution__perf_awesomebar_bookmark_suggestions__values}) AS metrics__metrics__timing_distribution__perf_awesomebar_bookmark_suggestions__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_awesomebar_clipboard_suggestions__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_awesomebar_clipboard_suggestions__values}) AS metrics__metrics__timing_distribution__perf_awesomebar_clipboard_suggestions__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_awesomebar_clipboard_suggestions__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_awesomebar_clipboard_suggestions.metrics__timing_distribution__perf_awesomebar_clipboard_suggestions__values}) AS metrics__metrics__timing_distribution__perf_awesomebar_clipboard_suggestions__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_awesomebar_history_suggestions__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_awesomebar_history_suggestions__values}) AS metrics__metrics__timing_distribution__perf_awesomebar_history_suggestions__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_awesomebar_history_suggestions__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_awesomebar_history_suggestions.metrics__timing_distribution__perf_awesomebar_history_suggestions__values}) AS metrics__metrics__timing_distribution__perf_awesomebar_history_suggestions__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_awesomebar_search_engine_suggestions__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_awesomebar_search_engine_suggestions__values}) AS metrics__metrics__timing_distribution__perf_awesomebar_search_engine_suggestions__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_awesomebar_search_engine_suggestions__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_awesomebar_search_engine_suggestions.metrics__timing_distribution__perf_awesomebar_search_engine_suggestions__values}) AS metrics__metrics__timing_distribution__perf_awesomebar_search_engine_suggestions__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_awesomebar_session_suggestions__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_awesomebar_session_suggestions__values}) AS metrics__metrics__timing_distribution__perf_awesomebar_session_suggestions__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_awesomebar_session_suggestions__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_awesomebar_session_suggestions.metrics__timing_distribution__perf_awesomebar_session_suggestions__values}) AS metrics__metrics__timing_distribution__perf_awesomebar_session_suggestions__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_awesomebar_shortcuts_suggestions__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_awesomebar_shortcuts_suggestions__values}) AS metrics__metrics__timing_distribution__perf_awesomebar_shortcuts_suggestions__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_awesomebar_shortcuts_suggestions__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_awesomebar_shortcuts_suggestions.metrics__timing_distribution__perf_awesomebar_shortcuts_suggestions__values}) AS metrics__metrics__timing_distribution__perf_awesomebar_shortcuts_suggestions__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_awesomebar_synced_tabs_suggestions__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_awesomebar_synced_tabs_suggestions__values}) AS metrics__metrics__timing_distribution__perf_awesomebar_synced_tabs_suggestions__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_awesomebar_synced_tabs_suggestions__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_awesomebar_synced_tabs_suggestions.metrics__timing_distribution__perf_awesomebar_synced_tabs_suggestions__values}) AS metrics__metrics__timing_distribution__perf_awesomebar_synced_tabs_suggestions__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_startup_app_on_create_to_glean_init__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_startup_app_on_create_to_glean_init__values}) AS metrics__metrics__timing_distribution__perf_startup_app_on_create_to_glean_init__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_startup_app_on_create_to_glean_init__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_startup_app_on_create_to_glean_init.metrics__timing_distribution__perf_startup_app_on_create_to_glean_init__values}) AS metrics__metrics__timing_distribution__perf_startup_app_on_create_to_glean_init__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_startup_app_on_create_to_megazord_init__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_startup_app_on_create_to_megazord_init__values}) AS metrics__metrics__timing_distribution__perf_startup_app_on_create_to_megazord_init__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_startup_app_on_create_to_megazord_init__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_startup_app_on_create_to_megazord_init.metrics__timing_distribution__perf_startup_app_on_create_to_megazord_init__values}) AS metrics__metrics__timing_distribution__perf_startup_app_on_create_to_megazord_init__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_startup_app_on_create_to_setup_in_main__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_startup_app_on_create_to_setup_in_main__values}) AS metrics__metrics__timing_distribution__perf_startup_app_on_create_to_setup_in_main__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_startup_app_on_create_to_setup_in_main__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_startup_app_on_create_to_setup_in_main.metrics__timing_distribution__perf_startup_app_on_create_to_setup_in_main__values}) AS metrics__metrics__timing_distribution__perf_startup_app_on_create_to_setup_in_main__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_startup_application_on_create__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_startup_application_on_create__values}) AS metrics__metrics__timing_distribution__perf_startup_application_on_create__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_startup_application_on_create__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_startup_application_on_create.metrics__timing_distribution__perf_startup_application_on_create__values}) AS metrics__metrics__timing_distribution__perf_startup_application_on_create__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_startup_base_bfragment_on_create_view__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_startup_base_bfragment_on_create_view__values}) AS metrics__metrics__timing_distribution__perf_startup_base_bfragment_on_create_view__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_startup_base_bfragment_on_create_view__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_startup_base_bfragment_on_create_view.metrics__timing_distribution__perf_startup_base_bfragment_on_create_view__values}) AS metrics__metrics__timing_distribution__perf_startup_base_bfragment_on_create_view__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_startup_base_bfragment_on_view_created__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_startup_base_bfragment_on_view_created__values}) AS metrics__metrics__timing_distribution__perf_startup_base_bfragment_on_view_created__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_startup_base_bfragment_on_view_created__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_startup_base_bfragment_on_view_created.metrics__timing_distribution__perf_startup_base_bfragment_on_view_created__values}) AS metrics__metrics__timing_distribution__perf_startup_base_bfragment_on_view_created__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_startup_cold_main_app_to_first_frame__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_startup_cold_main_app_to_first_frame__values}) AS metrics__metrics__timing_distribution__perf_startup_cold_main_app_to_first_frame__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_startup_cold_main_app_to_first_frame__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_startup_cold_main_app_to_first_frame.metrics__timing_distribution__perf_startup_cold_main_app_to_first_frame__values}) AS metrics__metrics__timing_distribution__perf_startup_cold_main_app_to_first_frame__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_startup_cold_unknwn_app_to_first_frame__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_startup_cold_unknwn_app_to_first_frame__values}) AS metrics__metrics__timing_distribution__perf_startup_cold_unknwn_app_to_first_frame__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_startup_cold_unknwn_app_to_first_frame__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_startup_cold_unknwn_app_to_first_frame.metrics__timing_distribution__perf_startup_cold_unknwn_app_to_first_frame__values}) AS metrics__metrics__timing_distribution__perf_startup_cold_unknwn_app_to_first_frame__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_startup_cold_view_app_to_first_frame__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_startup_cold_view_app_to_first_frame__values}) AS metrics__metrics__timing_distribution__perf_startup_cold_view_app_to_first_frame__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_startup_cold_view_app_to_first_frame__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_startup_cold_view_app_to_first_frame.metrics__timing_distribution__perf_startup_cold_view_app_to_first_frame__values}) AS metrics__metrics__timing_distribution__perf_startup_cold_view_app_to_first_frame__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_startup_home_activity_on_create__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_startup_home_activity_on_create__values}) AS metrics__metrics__timing_distribution__perf_startup_home_activity_on_create__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_startup_home_activity_on_create__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_startup_home_activity_on_create.metrics__timing_distribution__perf_startup_home_activity_on_create__values}) AS metrics__metrics__timing_distribution__perf_startup_home_activity_on_create__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_startup_home_activity_on_start__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_startup_home_activity_on_start__values}) AS metrics__metrics__timing_distribution__perf_startup_home_activity_on_start__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_startup_home_activity_on_start__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_startup_home_activity_on_start.metrics__timing_distribution__perf_startup_home_activity_on_start__values}) AS metrics__metrics__timing_distribution__perf_startup_home_activity_on_start__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_startup_home_fragment_on_create_view__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_startup_home_fragment_on_create_view__values}) AS metrics__metrics__timing_distribution__perf_startup_home_fragment_on_create_view__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_startup_home_fragment_on_create_view__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_startup_home_fragment_on_create_view.metrics__timing_distribution__perf_startup_home_fragment_on_create_view__values}) AS metrics__metrics__timing_distribution__perf_startup_home_fragment_on_create_view__values ;;
   }
 
   join: metrics__metrics__timing_distribution__perf_startup_home_fragment_on_view_created__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__perf_startup_home_fragment_on_view_created__values}) AS metrics__metrics__timing_distribution__perf_startup_home_fragment_on_view_created__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__perf_startup_home_fragment_on_view_created__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__perf_startup_home_fragment_on_view_created.metrics__timing_distribution__perf_startup_home_fragment_on_view_created__values}) AS metrics__metrics__timing_distribution__perf_startup_home_fragment_on_view_created__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_clone_deserialize_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_clone_deserialize_time__values}) AS metrics__metrics__timing_distribution__performance_clone_deserialize_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_clone_deserialize_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_clone_deserialize_time.metrics__timing_distribution__performance_clone_deserialize_time__values}) AS metrics__metrics__timing_distribution__performance_clone_deserialize_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_interaction_keypress_present_latency__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_interaction_keypress_present_latency__values}) AS metrics__metrics__timing_distribution__performance_interaction_keypress_present_latency__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_interaction_keypress_present_latency__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_interaction_keypress_present_latency.metrics__timing_distribution__performance_interaction_keypress_present_latency__values}) AS metrics__metrics__timing_distribution__performance_interaction_keypress_present_latency__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_interaction_mouseup_click_present_latency__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_interaction_mouseup_click_present_latency__values}) AS metrics__metrics__timing_distribution__performance_interaction_mouseup_click_present_latency__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_interaction_mouseup_click_present_latency__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_interaction_mouseup_click_present_latency.metrics__timing_distribution__performance_interaction_mouseup_click_present_latency__values}) AS metrics__metrics__timing_distribution__performance_interaction_mouseup_click_present_latency__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_interaction_tab_switch_composite__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_interaction_tab_switch_composite__values}) AS metrics__metrics__timing_distribution__performance_interaction_tab_switch_composite__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_interaction_tab_switch_composite__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_interaction_tab_switch_composite.metrics__timing_distribution__performance_interaction_tab_switch_composite__values}) AS metrics__metrics__timing_distribution__performance_interaction_tab_switch_composite__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_page_non_blank_paint__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_page_non_blank_paint__values}) AS metrics__metrics__timing_distribution__performance_page_non_blank_paint__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_page_non_blank_paint__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_page_non_blank_paint.metrics__timing_distribution__performance_page_non_blank_paint__values}) AS metrics__metrics__timing_distribution__performance_page_non_blank_paint__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_page_total_content_page_load__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_page_total_content_page_load__values}) AS metrics__metrics__timing_distribution__performance_page_total_content_page_load__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_page_total_content_page_load__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_page_total_content_page_load.metrics__timing_distribution__performance_page_total_content_page_load__values}) AS metrics__metrics__timing_distribution__performance_page_total_content_page_load__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_pageload_dcl__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_pageload_dcl__values}) AS metrics__metrics__timing_distribution__performance_pageload_dcl__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_pageload_dcl__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_pageload_dcl.metrics__timing_distribution__performance_pageload_dcl__values}) AS metrics__metrics__timing_distribution__performance_pageload_dcl__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_pageload_dcl_responsestart__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_pageload_dcl_responsestart__values}) AS metrics__metrics__timing_distribution__performance_pageload_dcl_responsestart__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_pageload_dcl_responsestart__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_pageload_dcl_responsestart.metrics__timing_distribution__performance_pageload_dcl_responsestart__values}) AS metrics__metrics__timing_distribution__performance_pageload_dcl_responsestart__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_pageload_fcp__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_pageload_fcp__values}) AS metrics__metrics__timing_distribution__performance_pageload_fcp__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_pageload_fcp__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_pageload_fcp.metrics__timing_distribution__performance_pageload_fcp__values}) AS metrics__metrics__timing_distribution__performance_pageload_fcp__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_pageload_fcp_responsestart__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_pageload_fcp_responsestart__values}) AS metrics__metrics__timing_distribution__performance_pageload_fcp_responsestart__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_pageload_fcp_responsestart__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_pageload_fcp_responsestart.metrics__timing_distribution__performance_pageload_fcp_responsestart__values}) AS metrics__metrics__timing_distribution__performance_pageload_fcp_responsestart__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_pageload_load_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_pageload_load_time__values}) AS metrics__metrics__timing_distribution__performance_pageload_load_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_pageload_load_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_pageload_load_time.metrics__timing_distribution__performance_pageload_load_time__values}) AS metrics__metrics__timing_distribution__performance_pageload_load_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_pageload_load_time_responsestart__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_pageload_load_time_responsestart__values}) AS metrics__metrics__timing_distribution__performance_pageload_load_time_responsestart__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_pageload_load_time_responsestart__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_pageload_load_time_responsestart.metrics__timing_distribution__performance_pageload_load_time_responsestart__values}) AS metrics__metrics__timing_distribution__performance_pageload_load_time_responsestart__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_pageload_req_anim_frame_callback__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_pageload_req_anim_frame_callback__values}) AS metrics__metrics__timing_distribution__performance_pageload_req_anim_frame_callback__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_pageload_req_anim_frame_callback__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_pageload_req_anim_frame_callback.metrics__timing_distribution__performance_pageload_req_anim_frame_callback__values}) AS metrics__metrics__timing_distribution__performance_pageload_req_anim_frame_callback__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_responsiveness_req_anim_frame_callback__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_responsiveness_req_anim_frame_callback__values}) AS metrics__metrics__timing_distribution__performance_responsiveness_req_anim_frame_callback__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_responsiveness_req_anim_frame_callback__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_responsiveness_req_anim_frame_callback.metrics__timing_distribution__performance_responsiveness_req_anim_frame_callback__values}) AS metrics__metrics__timing_distribution__performance_responsiveness_req_anim_frame_callback__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_time_dom_complete__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_time_dom_complete__values}) AS metrics__metrics__timing_distribution__performance_time_dom_complete__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_time_dom_complete__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_time_dom_complete.metrics__timing_distribution__performance_time_dom_complete__values}) AS metrics__metrics__timing_distribution__performance_time_dom_complete__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_time_dom_content_loaded_end__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_time_dom_content_loaded_end__values}) AS metrics__metrics__timing_distribution__performance_time_dom_content_loaded_end__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_time_dom_content_loaded_end__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_time_dom_content_loaded_end.metrics__timing_distribution__performance_time_dom_content_loaded_end__values}) AS metrics__metrics__timing_distribution__performance_time_dom_content_loaded_end__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_time_dom_content_loaded_start__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_time_dom_content_loaded_start__values}) AS metrics__metrics__timing_distribution__performance_time_dom_content_loaded_start__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_time_dom_content_loaded_start__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_time_dom_content_loaded_start.metrics__timing_distribution__performance_time_dom_content_loaded_start__values}) AS metrics__metrics__timing_distribution__performance_time_dom_content_loaded_start__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_time_dom_interactive__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_time_dom_interactive__values}) AS metrics__metrics__timing_distribution__performance_time_dom_interactive__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_time_dom_interactive__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_time_dom_interactive.metrics__timing_distribution__performance_time_dom_interactive__values}) AS metrics__metrics__timing_distribution__performance_time_dom_interactive__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_time_load_event_end__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_time_load_event_end__values}) AS metrics__metrics__timing_distribution__performance_time_load_event_end__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_time_load_event_end__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_time_load_event_end.metrics__timing_distribution__performance_time_load_event_end__values}) AS metrics__metrics__timing_distribution__performance_time_load_event_end__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_time_load_event_end_no_preload__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_time_load_event_end_no_preload__values}) AS metrics__metrics__timing_distribution__performance_time_load_event_end_no_preload__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_time_load_event_end_no_preload__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_time_load_event_end_no_preload.metrics__timing_distribution__performance_time_load_event_end_no_preload__values}) AS metrics__metrics__timing_distribution__performance_time_load_event_end_no_preload__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_time_load_event_end_preload__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_time_load_event_end_preload__values}) AS metrics__metrics__timing_distribution__performance_time_load_event_end_preload__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_time_load_event_end_preload__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_time_load_event_end_preload.metrics__timing_distribution__performance_time_load_event_end_preload__values}) AS metrics__metrics__timing_distribution__performance_time_load_event_end_preload__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_time_load_event_start__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_time_load_event_start__values}) AS metrics__metrics__timing_distribution__performance_time_load_event_start__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_time_load_event_start__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_time_load_event_start.metrics__timing_distribution__performance_time_load_event_start__values}) AS metrics__metrics__timing_distribution__performance_time_load_event_start__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_time_load_event_start_no_preload__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_time_load_event_start_no_preload__values}) AS metrics__metrics__timing_distribution__performance_time_load_event_start_no_preload__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_time_load_event_start_no_preload__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_time_load_event_start_no_preload.metrics__timing_distribution__performance_time_load_event_start_no_preload__values}) AS metrics__metrics__timing_distribution__performance_time_load_event_start_no_preload__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_time_load_event_start_preload__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_time_load_event_start_preload__values}) AS metrics__metrics__timing_distribution__performance_time_load_event_start_preload__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_time_load_event_start_preload__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_time_load_event_start_preload.metrics__timing_distribution__performance_time_load_event_start_preload__values}) AS metrics__metrics__timing_distribution__performance_time_load_event_start_preload__values ;;
   }
 
   join: metrics__metrics__timing_distribution__performance_time_response_start__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__performance_time_response_start__values}) AS metrics__metrics__timing_distribution__performance_time_response_start__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__performance_time_response_start__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__performance_time_response_start.metrics__timing_distribution__performance_time_response_start__values}) AS metrics__metrics__timing_distribution__performance_time_response_start__values ;;
   }
 
   join: metrics__metrics__timing_distribution__places_manager_read_query_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__places_manager_read_query_time__values}) AS metrics__metrics__timing_distribution__places_manager_read_query_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__places_manager_read_query_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__places_manager_read_query_time.metrics__timing_distribution__places_manager_read_query_time__values}) AS metrics__metrics__timing_distribution__places_manager_read_query_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__places_manager_scan_query_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__places_manager_scan_query_time__values}) AS metrics__metrics__timing_distribution__places_manager_scan_query_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__places_manager_scan_query_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__places_manager_scan_query_time.metrics__timing_distribution__places_manager_scan_query_time__values}) AS metrics__metrics__timing_distribution__places_manager_scan_query_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__places_manager_write_query_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__places_manager_write_query_time__values}) AS metrics__metrics__timing_distribution__places_manager_write_query_time__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__places_manager_write_query_time__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__places_manager_write_query_time.metrics__timing_distribution__places_manager_write_query_time__values}) AS metrics__metrics__timing_distribution__places_manager_write_query_time__values ;;
   }
 
   join: metrics__metrics__timing_distribution__storage_stats_query_stats_duration__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__storage_stats_query_stats_duration__values}) AS metrics__metrics__timing_distribution__storage_stats_query_stats_duration__values ON ${metrics.document_id} = ${metrics__metrics__timing_distribution__storage_stats_query_stats_duration__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__storage_stats_query_stats_duration.metrics__timing_distribution__storage_stats_query_stats_duration__values}) AS metrics__metrics__timing_distribution__storage_stats_query_stats_duration__values ;;
   }
 
   join: metrics__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__url}) AS metrics__metrics__url ON ${metrics.document_id} = ${metrics__metrics__url.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics.metrics__url}) AS metrics__metrics__url ;;
   }
 
   join: metrics__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.ping_info__experiments}) AS metrics__ping_info__experiments ON ${metrics.document_id} = ${metrics__ping_info__experiments.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics__ping_info.ping_info__experiments}) AS metrics__ping_info__experiments ;;
   }
 
   join: metrics__metrics__labeled_counter__avif_alpha {

@@ -15,42 +15,42 @@ explore: first_session {
 
   join: first_session__events {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.events}) AS first_session__events ON ${first_session.document_id} = ${first_session__events.document_id} ;;
+    sql: LEFT JOIN UNNEST(${first_session.events}) AS first_session__events ;;
   }
 
   join: first_session__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.events__extra}) AS first_session__events__extra ON ${first_session.document_id} = ${first_session__events__extra.document_id} ;;
+    sql: LEFT JOIN UNNEST(${first_session__events.events__extra}) AS first_session__events__extra ;;
   }
 
   join: first_session__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.metrics__jwe}) AS first_session__metrics__jwe ON ${first_session.document_id} = ${first_session__metrics__jwe.document_id} ;;
+    sql: LEFT JOIN UNNEST(${first_session__metrics.metrics__jwe}) AS first_session__metrics__jwe ;;
   }
 
   join: first_session__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.metrics__labeled_rate}) AS first_session__metrics__labeled_rate ON ${first_session.document_id} = ${first_session__metrics__labeled_rate.document_id} ;;
+    sql: LEFT JOIN UNNEST(${first_session__metrics.metrics__labeled_rate}) AS first_session__metrics__labeled_rate ;;
   }
 
   join: first_session__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.metrics__labeled_rate__value}) AS first_session__metrics__labeled_rate__value ON ${first_session.document_id} = ${first_session__metrics__labeled_rate__value.document_id} ;;
+    sql: LEFT JOIN UNNEST(${first_session__metrics__labeled_rate.metrics__labeled_rate__value}) AS first_session__metrics__labeled_rate__value ;;
   }
 
   join: first_session__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.metrics__text}) AS first_session__metrics__text ON ${first_session.document_id} = ${first_session__metrics__text.document_id} ;;
+    sql: LEFT JOIN UNNEST(${first_session__metrics.metrics__text}) AS first_session__metrics__text ;;
   }
 
   join: first_session__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.metrics__url}) AS first_session__metrics__url ON ${first_session.document_id} = ${first_session__metrics__url.document_id} ;;
+    sql: LEFT JOIN UNNEST(${first_session__metrics.metrics__url}) AS first_session__metrics__url ;;
   }
 
   join: first_session__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.ping_info__experiments}) AS first_session__ping_info__experiments ON ${first_session.document_id} = ${first_session__ping_info__experiments.document_id} ;;
+    sql: LEFT JOIN UNNEST(${first_session__ping_info.ping_info__experiments}) AS first_session__ping_info__experiments ;;
   }
 
   join: first_session__metrics__labeled_counter__glean_error_invalid_label {

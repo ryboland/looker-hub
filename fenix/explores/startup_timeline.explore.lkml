@@ -15,42 +15,42 @@ explore: startup_timeline {
 
   join: startup_timeline__events {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.events}) AS startup_timeline__events ON ${startup_timeline.document_id} = ${startup_timeline__events.document_id} ;;
+    sql: LEFT JOIN UNNEST(${startup_timeline.events}) AS startup_timeline__events ;;
   }
 
   join: startup_timeline__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.events__extra}) AS startup_timeline__events__extra ON ${startup_timeline.document_id} = ${startup_timeline__events__extra.document_id} ;;
+    sql: LEFT JOIN UNNEST(${startup_timeline__events.events__extra}) AS startup_timeline__events__extra ;;
   }
 
   join: startup_timeline__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.metrics__jwe}) AS startup_timeline__metrics__jwe ON ${startup_timeline.document_id} = ${startup_timeline__metrics__jwe.document_id} ;;
+    sql: LEFT JOIN UNNEST(${startup_timeline__metrics.metrics__jwe}) AS startup_timeline__metrics__jwe ;;
   }
 
   join: startup_timeline__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.metrics__labeled_rate}) AS startup_timeline__metrics__labeled_rate ON ${startup_timeline.document_id} = ${startup_timeline__metrics__labeled_rate.document_id} ;;
+    sql: LEFT JOIN UNNEST(${startup_timeline__metrics.metrics__labeled_rate}) AS startup_timeline__metrics__labeled_rate ;;
   }
 
   join: startup_timeline__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.metrics__labeled_rate__value}) AS startup_timeline__metrics__labeled_rate__value ON ${startup_timeline.document_id} = ${startup_timeline__metrics__labeled_rate__value.document_id} ;;
+    sql: LEFT JOIN UNNEST(${startup_timeline__metrics__labeled_rate.metrics__labeled_rate__value}) AS startup_timeline__metrics__labeled_rate__value ;;
   }
 
   join: startup_timeline__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.metrics__text}) AS startup_timeline__metrics__text ON ${startup_timeline.document_id} = ${startup_timeline__metrics__text.document_id} ;;
+    sql: LEFT JOIN UNNEST(${startup_timeline__metrics.metrics__text}) AS startup_timeline__metrics__text ;;
   }
 
   join: startup_timeline__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.metrics__url}) AS startup_timeline__metrics__url ON ${startup_timeline.document_id} = ${startup_timeline__metrics__url.document_id} ;;
+    sql: LEFT JOIN UNNEST(${startup_timeline__metrics.metrics__url}) AS startup_timeline__metrics__url ;;
   }
 
   join: startup_timeline__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.ping_info__experiments}) AS startup_timeline__ping_info__experiments ON ${startup_timeline.document_id} = ${startup_timeline__ping_info__experiments.document_id} ;;
+    sql: LEFT JOIN UNNEST(${startup_timeline__ping_info.ping_info__experiments}) AS startup_timeline__ping_info__experiments ;;
   }
 
   join: startup_timeline__metrics__labeled_counter__glean_error_invalid_label {

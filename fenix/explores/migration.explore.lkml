@@ -15,47 +15,47 @@ explore: migration {
 
   join: migration__events {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${migration.events}) AS migration__events ON ${migration.document_id} = ${migration__events.document_id} ;;
+    sql: LEFT JOIN UNNEST(${migration.events}) AS migration__events ;;
   }
 
   join: migration__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${migration.events__extra}) AS migration__events__extra ON ${migration.document_id} = ${migration__events__extra.document_id} ;;
+    sql: LEFT JOIN UNNEST(${migration__events.events__extra}) AS migration__events__extra ;;
   }
 
   join: migration__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${migration.metrics__jwe}) AS migration__metrics__jwe ON ${migration.document_id} = ${migration__metrics__jwe.document_id} ;;
+    sql: LEFT JOIN UNNEST(${migration__metrics.metrics__jwe}) AS migration__metrics__jwe ;;
   }
 
   join: migration__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${migration.metrics__labeled_rate}) AS migration__metrics__labeled_rate ON ${migration.document_id} = ${migration__metrics__labeled_rate.document_id} ;;
+    sql: LEFT JOIN UNNEST(${migration__metrics.metrics__labeled_rate}) AS migration__metrics__labeled_rate ;;
   }
 
   join: migration__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${migration.metrics__labeled_rate__value}) AS migration__metrics__labeled_rate__value ON ${migration.document_id} = ${migration__metrics__labeled_rate__value.document_id} ;;
+    sql: LEFT JOIN UNNEST(${migration__metrics__labeled_rate.metrics__labeled_rate__value}) AS migration__metrics__labeled_rate__value ;;
   }
 
   join: migration__metrics__labeled_string__migration_migration_versions {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${migration.metrics__labeled_string__migration_migration_versions}) AS migration__metrics__labeled_string__migration_migration_versions ON ${migration.document_id} = ${migration__metrics__labeled_string__migration_migration_versions.document_id} ;;
+    sql: LEFT JOIN UNNEST(${migration__metrics__labeled_string.metrics__labeled_string__migration_migration_versions}) AS migration__metrics__labeled_string__migration_migration_versions ;;
   }
 
   join: migration__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${migration.metrics__text}) AS migration__metrics__text ON ${migration.document_id} = ${migration__metrics__text.document_id} ;;
+    sql: LEFT JOIN UNNEST(${migration__metrics.metrics__text}) AS migration__metrics__text ;;
   }
 
   join: migration__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${migration.metrics__url}) AS migration__metrics__url ON ${migration.document_id} = ${migration__metrics__url.document_id} ;;
+    sql: LEFT JOIN UNNEST(${migration__metrics.metrics__url}) AS migration__metrics__url ;;
   }
 
   join: migration__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${migration.ping_info__experiments}) AS migration__ping_info__experiments ON ${migration.document_id} = ${migration__ping_info__experiments.document_id} ;;
+    sql: LEFT JOIN UNNEST(${migration__ping_info.ping_info__experiments}) AS migration__ping_info__experiments ;;
   }
 
   join: migration__metrics__labeled_counter__glean_error_invalid_label {

@@ -15,42 +15,42 @@ explore: installation {
 
   join: installation__events {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${installation.events}) AS installation__events ON ${installation.document_id} = ${installation__events.document_id} ;;
+    sql: LEFT JOIN UNNEST(${installation.events}) AS installation__events ;;
   }
 
   join: installation__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${installation.events__extra}) AS installation__events__extra ON ${installation.document_id} = ${installation__events__extra.document_id} ;;
+    sql: LEFT JOIN UNNEST(${installation__events.events__extra}) AS installation__events__extra ;;
   }
 
   join: installation__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${installation.metrics__jwe}) AS installation__metrics__jwe ON ${installation.document_id} = ${installation__metrics__jwe.document_id} ;;
+    sql: LEFT JOIN UNNEST(${installation__metrics.metrics__jwe}) AS installation__metrics__jwe ;;
   }
 
   join: installation__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${installation.metrics__labeled_rate}) AS installation__metrics__labeled_rate ON ${installation.document_id} = ${installation__metrics__labeled_rate.document_id} ;;
+    sql: LEFT JOIN UNNEST(${installation__metrics.metrics__labeled_rate}) AS installation__metrics__labeled_rate ;;
   }
 
   join: installation__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${installation.metrics__labeled_rate__value}) AS installation__metrics__labeled_rate__value ON ${installation.document_id} = ${installation__metrics__labeled_rate__value.document_id} ;;
+    sql: LEFT JOIN UNNEST(${installation__metrics__labeled_rate.metrics__labeled_rate__value}) AS installation__metrics__labeled_rate__value ;;
   }
 
   join: installation__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${installation.metrics__text}) AS installation__metrics__text ON ${installation.document_id} = ${installation__metrics__text.document_id} ;;
+    sql: LEFT JOIN UNNEST(${installation__metrics.metrics__text}) AS installation__metrics__text ;;
   }
 
   join: installation__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${installation.metrics__url}) AS installation__metrics__url ON ${installation.document_id} = ${installation__metrics__url.document_id} ;;
+    sql: LEFT JOIN UNNEST(${installation__metrics.metrics__url}) AS installation__metrics__url ;;
   }
 
   join: installation__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${installation.ping_info__experiments}) AS installation__ping_info__experiments ON ${installation.document_id} = ${installation__ping_info__experiments.document_id} ;;
+    sql: LEFT JOIN UNNEST(${installation__ping_info.ping_info__experiments}) AS installation__ping_info__experiments ;;
   }
 
   join: installation__metrics__labeled_counter__glean_error_invalid_label {
