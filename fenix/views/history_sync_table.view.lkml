@@ -540,7 +540,7 @@ The labels are the `category.name` identifier of the metric.
   sql_table_name: `{% parameter channel %}` ;;
 }
 
-view: history_sync_table__client_info__events {
+view: history_sync_table__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -562,7 +562,7 @@ view: history_sync_table__client_info__events {
   }
 }
 
-view: history_sync_table__client_info__events__extra {
+view: history_sync_table__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -574,7 +574,7 @@ view: history_sync_table__client_info__events__extra {
   }
 }
 
-view: history_sync_table__client_info__events__metadata__metrics__counter__datetime__jwe {
+view: history_sync_table__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -586,7 +586,7 @@ view: history_sync_table__client_info__events__metadata__metrics__counter__datet
   }
 }
 
-view: history_sync_table__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate {
+view: history_sync_table__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -598,7 +598,7 @@ view: history_sync_table__client_info__events__metadata__metrics__counter__datet
   }
 }
 
-view: history_sync_table__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value {
+view: history_sync_table__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -619,7 +619,7 @@ view: history_sync_table__client_info__events__metadata__metrics__counter__datet
   }
 }
 
-view: history_sync_table__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__history_sync_failure_reason {
+view: history_sync_table__metrics__labeled_string__history_sync_failure_reason {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -631,7 +631,7 @@ view: history_sync_table__client_info__events__metadata__metrics__counter__datet
   }
 }
 
-view: history_sync_table__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text {
+view: history_sync_table__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -643,7 +643,7 @@ view: history_sync_table__client_info__events__metadata__metrics__counter__datet
   }
 }
 
-view: history_sync_table__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url {
+view: history_sync_table__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -655,7 +655,7 @@ view: history_sync_table__client_info__events__metadata__metrics__counter__datet
   }
 }
 
-view: history_sync_table__client_info__events__metadata__metrics__ping_info__experiments {
+view: history_sync_table__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

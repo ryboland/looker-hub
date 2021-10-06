@@ -570,7 +570,7 @@ view: sync {
   sql_table_name: `mozdata.telemetry.sync` ;;
 }
 
-view: sync__application__metadata__payload__devices {
+view: sync__payload__devices {
   dimension: id {
     sql: ${TABLE}.id ;;
     type: string
@@ -597,7 +597,7 @@ view: sync__application__metadata__payload__devices {
   }
 }
 
-view: sync__application__metadata__payload__devices__events {
+view: sync__payload__events {
   dimension: f0_ {
     sql: ${TABLE}.f0_ ;;
     type: number
@@ -629,7 +629,7 @@ view: sync__application__metadata__payload__devices__events {
   }
 }
 
-view: sync__application__metadata__payload__devices__events__f5_ {
+view: sync__payload__events__f5_ {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -641,7 +641,7 @@ view: sync__application__metadata__payload__devices__events__f5_ {
   }
 }
 
-view: sync__application__metadata__payload__devices__events__histograms__migrations {
+view: sync__payload__migrations {
   dimension: entries {
     sql: ${TABLE}.entries ;;
     type: number
@@ -673,7 +673,7 @@ view: sync__application__metadata__payload__devices__events__histograms__migrati
   }
 }
 
-view: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs {
+view: sync__payload__syncs {
   dimension: device_id {
     sql: ${TABLE}.device_id ;;
     type: string
@@ -762,7 +762,7 @@ view: sync__application__metadata__payload__devices__events__histograms__migrati
   }
 }
 
-view: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices {
+view: sync__payload__syncs__devices {
   dimension: id {
     sql: ${TABLE}.id ;;
     type: string
@@ -779,7 +779,7 @@ view: sync__application__metadata__payload__devices__events__histograms__migrati
   }
 }
 
-view: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines {
+view: sync__payload__syncs__engines {
   dimension: failure_reason__code {
     sql: ${TABLE}.failure_reason.code ;;
     type: number
@@ -923,7 +923,7 @@ view: sync__application__metadata__payload__devices__events__histograms__migrati
   }
 }
 
-view: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing {
+view: sync__payload__syncs__engines__outgoing {
   dimension: failed {
     sql: ${TABLE}.failed ;;
     type: number
@@ -935,7 +935,7 @@ view: sync__application__metadata__payload__devices__events__histograms__migrati
   }
 }
 
-view: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing__steps {
+view: sync__payload__syncs__engines__steps {
   dimension: counts {
     sql: ${TABLE}.counts ;;
     hidden: yes
@@ -952,7 +952,7 @@ view: sync__application__metadata__payload__devices__events__histograms__migrati
   }
 }
 
-view: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing__steps__counts {
+view: sync__payload__syncs__engines__steps__counts {
   dimension: count {
     sql: ${TABLE}.count ;;
     type: number
@@ -964,7 +964,7 @@ view: sync__application__metadata__payload__devices__events__histograms__migrati
   }
 }
 
-view: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing__steps__validation__failure_reason__problems {
+view: sync__payload__syncs__engines__validation__problems {
   dimension: count {
     sql: ${TABLE}.count ;;
     type: number

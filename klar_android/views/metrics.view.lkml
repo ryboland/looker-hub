@@ -1522,7 +1522,7 @@ Deprecated: `native_code_crash` replaced by `fatal_native_code_crash` and `nonfa
   sql_table_name: `mozdata.org_mozilla_klar.metrics` ;;
 }
 
-view: metrics__client_info__events {
+view: metrics__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -1544,7 +1544,7 @@ view: metrics__client_info__events {
   }
 }
 
-view: metrics__client_info__events__extra {
+view: metrics__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1556,7 +1556,7 @@ view: metrics__client_info__events__extra {
   }
 }
 
-view: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe {
+view: metrics__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1568,7 +1568,7 @@ view: metrics__client_info__events__metadata__metrics__boolean__counter__datetim
   }
 }
 
-view: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate {
+view: metrics__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1580,7 +1580,7 @@ view: metrics__client_info__events__metadata__metrics__boolean__counter__datetim
   }
 }
 
-view: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__value {
+view: metrics__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1601,7 +1601,7 @@ view: metrics__client_info__events__metadata__metrics__boolean__counter__datetim
   }
 }
 
-view: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__values {
+view: metrics__metrics__memory_distribution__glean_database_size__values {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1613,7 +1613,7 @@ view: metrics__client_info__events__metadata__metrics__boolean__counter__datetim
   }
 }
 
-view: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__glean_upload_discarded_exceeding_pings_size__values {
+view: metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1625,7 +1625,7 @@ view: metrics__client_info__events__metadata__metrics__boolean__counter__datetim
   }
 }
 
-view: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__glean_upload_discarded_exceeding_pings_size__glean_upload_pending_pings_directory_size__values {
+view: metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1637,7 +1637,7 @@ view: metrics__client_info__events__metadata__metrics__boolean__counter__datetim
   }
 }
 
-view: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__quantity__string__text {
+view: metrics__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1649,7 +1649,7 @@ view: metrics__client_info__events__metadata__metrics__boolean__counter__datetim
   }
 }
 
-view: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__quantity__string__text__url {
+view: metrics__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1661,7 +1661,7 @@ view: metrics__client_info__events__metadata__metrics__boolean__counter__datetim
   }
 }
 
-view: metrics__client_info__events__metadata__metrics__ping_info__experiments {
+view: metrics__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

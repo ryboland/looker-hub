@@ -1543,7 +1543,7 @@ view: new_profile {
   sql_table_name: `mozdata.telemetry.new_profile` ;;
 }
 
-view: new_profile__application__environment__addons__active_addons {
+view: new_profile__environment__addons__active_addons {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1673,7 +1673,7 @@ view: new_profile__application__environment__addons__active_addons {
   }
 }
 
-view: new_profile__application__environment__addons__active_addons__active_experiment__active_gm_plugins {
+view: new_profile__environment__addons__active_gm_plugins {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1702,7 +1702,7 @@ view: new_profile__application__environment__addons__active_addons__active_exper
   }
 }
 
-view: new_profile__application__environment__addons__active_addons__active_experiment__active_gm_plugins__active_plugins {
+view: new_profile__environment__addons__active_plugins {
   dimension: blocklisted {
     sql: ${TABLE}.blocklisted ;;
     type: yesno
@@ -1744,7 +1744,7 @@ view: new_profile__application__environment__addons__active_addons__active_exper
   }
 }
 
-view: new_profile__application__environment__addons__build__experiments {
+view: new_profile__environment__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1772,7 +1772,7 @@ view: new_profile__application__environment__addons__build__experiments {
   }
 }
 
-view: new_profile__application__environment__addons__build__experiments__partner__profile__services__settings__attribution__default_private_search_engine_data__default_search_engine_data__intl__sandbox__update__user_prefs {
+view: new_profile__environment__settings__user_prefs {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1784,7 +1784,7 @@ view: new_profile__application__environment__addons__build__experiments__partner
   }
 }
 
-view: new_profile__application__environment__addons__build__experiments__partner__profile__services__settings__system__cpu__device__gfx__adapters {
+view: new_profile__environment__system__gfx__adapters {
   dimension: description {
     sql: ${TABLE}.description ;;
     type: string
@@ -1836,7 +1836,7 @@ view: new_profile__application__environment__addons__build__experiments__partner
   }
 }
 
-view: new_profile__application__environment__addons__build__experiments__partner__profile__services__settings__system__cpu__device__gfx__adapters__features__monitors {
+view: new_profile__environment__system__gfx__monitors {
   dimension: pseudo_display {
     sql: ${TABLE}.pseudo_display ;;
     type: yesno

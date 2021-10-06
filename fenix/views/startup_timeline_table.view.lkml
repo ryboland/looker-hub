@@ -560,7 +560,7 @@ the `framework_primary/secondary` metrics.
   sql_table_name: `{% parameter channel %}` ;;
 }
 
-view: startup_timeline_table__client_info__events {
+view: startup_timeline_table__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -582,7 +582,7 @@ view: startup_timeline_table__client_info__events {
   }
 }
 
-view: startup_timeline_table__client_info__events__extra {
+view: startup_timeline_table__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -594,7 +594,7 @@ view: startup_timeline_table__client_info__events__extra {
   }
 }
 
-view: startup_timeline_table__client_info__events__metadata__metrics__boolean__counter__jwe {
+view: startup_timeline_table__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -606,7 +606,7 @@ view: startup_timeline_table__client_info__events__metadata__metrics__boolean__c
   }
 }
 
-view: startup_timeline_table__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate {
+view: startup_timeline_table__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -618,7 +618,7 @@ view: startup_timeline_table__client_info__events__metadata__metrics__boolean__c
   }
 }
 
-view: startup_timeline_table__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__value {
+view: startup_timeline_table__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -639,7 +639,7 @@ view: startup_timeline_table__client_info__events__metadata__metrics__boolean__c
   }
 }
 
-view: startup_timeline_table__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__quantity__text {
+view: startup_timeline_table__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -651,7 +651,7 @@ view: startup_timeline_table__client_info__events__metadata__metrics__boolean__c
   }
 }
 
-view: startup_timeline_table__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__quantity__text__timespan__url {
+view: startup_timeline_table__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -663,7 +663,7 @@ view: startup_timeline_table__client_info__events__metadata__metrics__boolean__c
   }
 }
 
-view: startup_timeline_table__client_info__events__metadata__metrics__ping_info__experiments {
+view: startup_timeline_table__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

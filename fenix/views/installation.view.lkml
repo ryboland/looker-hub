@@ -614,7 +614,7 @@ The labels are the `category.name` identifier of the metric.
   sql_table_name: `{% parameter channel %}` ;;
 }
 
-view: installation__client_info__events {
+view: installation__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -636,7 +636,7 @@ view: installation__client_info__events {
   }
 }
 
-view: installation__client_info__events__extra {
+view: installation__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -648,7 +648,7 @@ view: installation__client_info__events__extra {
   }
 }
 
-view: installation__client_info__events__metadata__metrics__datetime__jwe {
+view: installation__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -660,7 +660,7 @@ view: installation__client_info__events__metadata__metrics__datetime__jwe {
   }
 }
 
-view: installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate {
+view: installation__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -672,7 +672,7 @@ view: installation__client_info__events__metadata__metrics__datetime__jwe__label
   }
 }
 
-view: installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__value {
+view: installation__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -693,7 +693,7 @@ view: installation__client_info__events__metadata__metrics__datetime__jwe__label
   }
 }
 
-view: installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text {
+view: installation__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -705,7 +705,7 @@ view: installation__client_info__events__metadata__metrics__datetime__jwe__label
   }
 }
 
-view: installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text__url {
+view: installation__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -717,7 +717,7 @@ view: installation__client_info__events__metadata__metrics__datetime__jwe__label
   }
 }
 
-view: installation__client_info__events__metadata__metrics__ping_info__experiments {
+view: installation__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

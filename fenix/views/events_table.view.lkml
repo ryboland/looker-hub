@@ -474,7 +474,7 @@ The labels are the `category.name` identifier of the metric.
   sql_table_name: `{% parameter channel %}` ;;
 }
 
-view: events_table__client_info__events {
+view: events_table__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -496,7 +496,7 @@ view: events_table__client_info__events {
   }
 }
 
-view: events_table__client_info__events__extra {
+view: events_table__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -508,7 +508,7 @@ view: events_table__client_info__events__extra {
   }
 }
 
-view: events_table__client_info__events__metadata__metrics__jwe {
+view: events_table__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -520,7 +520,7 @@ view: events_table__client_info__events__metadata__metrics__jwe {
   }
 }
 
-view: events_table__client_info__events__metadata__metrics__jwe__labeled_rate {
+view: events_table__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -532,7 +532,7 @@ view: events_table__client_info__events__metadata__metrics__jwe__labeled_rate {
   }
 }
 
-view: events_table__client_info__events__metadata__metrics__jwe__labeled_rate__value {
+view: events_table__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -553,7 +553,7 @@ view: events_table__client_info__events__metadata__metrics__jwe__labeled_rate__v
   }
 }
 
-view: events_table__client_info__events__metadata__metrics__jwe__labeled_rate__text {
+view: events_table__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -565,7 +565,7 @@ view: events_table__client_info__events__metadata__metrics__jwe__labeled_rate__t
   }
 }
 
-view: events_table__client_info__events__metadata__metrics__jwe__labeled_rate__text__url {
+view: events_table__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -577,7 +577,7 @@ view: events_table__client_info__events__metadata__metrics__jwe__labeled_rate__t
   }
 }
 
-view: events_table__client_info__events__metadata__metrics__ping_info__experiments {
+view: events_table__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

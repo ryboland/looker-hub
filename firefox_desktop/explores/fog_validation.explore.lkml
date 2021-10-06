@@ -12,44 +12,44 @@ explore: fog_validation {
     ]
   }
 
-  join: fog_validation__client_info__events {
+  join: fog_validation__events {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events}) AS fog_validation__client_info__events ON ${fog_validation.document_id} = ${fog_validation__client_info__events.document_id} ;;
+    sql: LEFT JOIN UNNEST(${fog_validation.events}) AS fog_validation__events ON ${fog_validation.document_id} = ${fog_validation__events.document_id} ;;
   }
 
-  join: fog_validation__client_info__events__extra {
+  join: fog_validation__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events__extra}) AS fog_validation__client_info__events__extra ON ${fog_validation.document_id} = ${fog_validation__client_info__events__extra.document_id} ;;
+    sql: LEFT JOIN UNNEST(${fog_validation.events__extra}) AS fog_validation__events__extra ON ${fog_validation.document_id} = ${fog_validation__events__extra.document_id} ;;
   }
 
-  join: fog_validation__client_info__events__metadata__metrics__boolean__jwe {
+  join: fog_validation__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events__metadata__metrics__boolean__jwe}) AS fog_validation__client_info__events__metadata__metrics__boolean__jwe ON ${fog_validation.document_id} = ${fog_validation__client_info__events__metadata__metrics__boolean__jwe.document_id} ;;
+    sql: LEFT JOIN UNNEST(${fog_validation.metrics__jwe}) AS fog_validation__metrics__jwe ON ${fog_validation.document_id} = ${fog_validation__metrics__jwe.document_id} ;;
   }
 
-  join: fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate {
+  join: fog_validation__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events__metadata__metrics__boolean__jwe__labeled_rate}) AS fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate ON ${fog_validation.document_id} = ${fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate.document_id} ;;
+    sql: LEFT JOIN UNNEST(${fog_validation.metrics__labeled_rate}) AS fog_validation__metrics__labeled_rate ON ${fog_validation.document_id} = ${fog_validation__metrics__labeled_rate.document_id} ;;
   }
 
-  join: fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__value {
+  join: fog_validation__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events__metadata__metrics__boolean__jwe__labeled_rate__value}) AS fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__value ON ${fog_validation.document_id} = ${fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__value.document_id} ;;
+    sql: LEFT JOIN UNNEST(${fog_validation.metrics__labeled_rate__value}) AS fog_validation__metrics__labeled_rate__value ON ${fog_validation.document_id} = ${fog_validation__metrics__labeled_rate__value.document_id} ;;
   }
 
-  join: fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text {
+  join: fog_validation__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text}) AS fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text ON ${fog_validation.document_id} = ${fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text.document_id} ;;
+    sql: LEFT JOIN UNNEST(${fog_validation.metrics__text}) AS fog_validation__metrics__text ON ${fog_validation.document_id} = ${fog_validation__metrics__text.document_id} ;;
   }
 
-  join: fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text__url {
+  join: fog_validation__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text__url}) AS fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text__url ON ${fog_validation.document_id} = ${fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text__url.document_id} ;;
+    sql: LEFT JOIN UNNEST(${fog_validation.metrics__url}) AS fog_validation__metrics__url ON ${fog_validation.document_id} = ${fog_validation__metrics__url.document_id} ;;
   }
 
-  join: fog_validation__client_info__events__metadata__metrics__ping_info__experiments {
+  join: fog_validation__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events__metadata__metrics__ping_info__experiments}) AS fog_validation__client_info__events__metadata__metrics__ping_info__experiments ON ${fog_validation.document_id} = ${fog_validation__client_info__events__metadata__metrics__ping_info__experiments.document_id} ;;
+    sql: LEFT JOIN UNNEST(${fog_validation.ping_info__experiments}) AS fog_validation__ping_info__experiments ON ${fog_validation.document_id} = ${fog_validation__ping_info__experiments.document_id} ;;
   }
 
   join: fog_validation__metrics__labeled_counter__glean_error_invalid_label {

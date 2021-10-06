@@ -503,7 +503,7 @@ The labels are the `category.name` identifier of the metric.
   sql_table_name: `mozdata.org_mozilla_klar.activation` ;;
 }
 
-view: activation__client_info__events {
+view: activation__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -525,7 +525,7 @@ view: activation__client_info__events {
   }
 }
 
-view: activation__client_info__events__extra {
+view: activation__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -537,7 +537,7 @@ view: activation__client_info__events__extra {
   }
 }
 
-view: activation__client_info__events__metadata__metrics__jwe {
+view: activation__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -549,7 +549,7 @@ view: activation__client_info__events__metadata__metrics__jwe {
   }
 }
 
-view: activation__client_info__events__metadata__metrics__jwe__labeled_rate {
+view: activation__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -561,7 +561,7 @@ view: activation__client_info__events__metadata__metrics__jwe__labeled_rate {
   }
 }
 
-view: activation__client_info__events__metadata__metrics__jwe__labeled_rate__value {
+view: activation__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -582,7 +582,7 @@ view: activation__client_info__events__metadata__metrics__jwe__labeled_rate__val
   }
 }
 
-view: activation__client_info__events__metadata__metrics__jwe__labeled_rate__text {
+view: activation__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -594,7 +594,7 @@ view: activation__client_info__events__metadata__metrics__jwe__labeled_rate__tex
   }
 }
 
-view: activation__client_info__events__metadata__metrics__jwe__labeled_rate__text__url {
+view: activation__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -606,7 +606,7 @@ view: activation__client_info__events__metadata__metrics__jwe__labeled_rate__tex
   }
 }
 
-view: activation__client_info__events__metadata__metrics__ping_info__experiments {
+view: activation__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

@@ -13,49 +13,49 @@ explore: addresses_sync {
     ]
   }
 
-  join: addresses_sync__client_info__events {
+  join: addresses_sync__events {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.client_info__events}) AS addresses_sync__client_info__events ON ${addresses_sync.document_id} = ${addresses_sync__client_info__events.document_id} ;;
+    sql: LEFT JOIN UNNEST(${addresses_sync.events}) AS addresses_sync__events ON ${addresses_sync.document_id} = ${addresses_sync__events.document_id} ;;
   }
 
-  join: addresses_sync__client_info__events__extra {
+  join: addresses_sync__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.client_info__events__extra}) AS addresses_sync__client_info__events__extra ON ${addresses_sync.document_id} = ${addresses_sync__client_info__events__extra.document_id} ;;
+    sql: LEFT JOIN UNNEST(${addresses_sync.events__extra}) AS addresses_sync__events__extra ON ${addresses_sync.document_id} = ${addresses_sync__events__extra.document_id} ;;
   }
 
-  join: addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe {
+  join: addresses_sync__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.client_info__events__metadata__metrics__counter__datetime__jwe}) AS addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe ON ${addresses_sync.document_id} = ${addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe.document_id} ;;
+    sql: LEFT JOIN UNNEST(${addresses_sync.metrics__jwe}) AS addresses_sync__metrics__jwe ON ${addresses_sync.document_id} = ${addresses_sync__metrics__jwe.document_id} ;;
   }
 
-  join: addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate {
+  join: addresses_sync__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate}) AS addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate ON ${addresses_sync.document_id} = ${addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate.document_id} ;;
+    sql: LEFT JOIN UNNEST(${addresses_sync.metrics__labeled_rate}) AS addresses_sync__metrics__labeled_rate ON ${addresses_sync.document_id} = ${addresses_sync__metrics__labeled_rate.document_id} ;;
   }
 
-  join: addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value {
+  join: addresses_sync__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value}) AS addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value ON ${addresses_sync.document_id} = ${addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value.document_id} ;;
+    sql: LEFT JOIN UNNEST(${addresses_sync.metrics__labeled_rate__value}) AS addresses_sync__metrics__labeled_rate__value ON ${addresses_sync.document_id} = ${addresses_sync__metrics__labeled_rate__value.document_id} ;;
   }
 
-  join: addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__addresses_sync_failure_reason {
+  join: addresses_sync__metrics__labeled_string__addresses_sync_failure_reason {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__addresses_sync_failure_reason}) AS addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__addresses_sync_failure_reason ON ${addresses_sync.document_id} = ${addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__addresses_sync_failure_reason.document_id} ;;
+    sql: LEFT JOIN UNNEST(${addresses_sync.metrics__labeled_string__addresses_sync_failure_reason}) AS addresses_sync__metrics__labeled_string__addresses_sync_failure_reason ON ${addresses_sync.document_id} = ${addresses_sync__metrics__labeled_string__addresses_sync_failure_reason.document_id} ;;
   }
 
-  join: addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text {
+  join: addresses_sync__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text}) AS addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text ON ${addresses_sync.document_id} = ${addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text.document_id} ;;
+    sql: LEFT JOIN UNNEST(${addresses_sync.metrics__text}) AS addresses_sync__metrics__text ON ${addresses_sync.document_id} = ${addresses_sync__metrics__text.document_id} ;;
   }
 
-  join: addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url {
+  join: addresses_sync__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url}) AS addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url ON ${addresses_sync.document_id} = ${addresses_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url.document_id} ;;
+    sql: LEFT JOIN UNNEST(${addresses_sync.metrics__url}) AS addresses_sync__metrics__url ON ${addresses_sync.document_id} = ${addresses_sync__metrics__url.document_id} ;;
   }
 
-  join: addresses_sync__client_info__events__metadata__metrics__ping_info__experiments {
+  join: addresses_sync__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.client_info__events__metadata__metrics__ping_info__experiments}) AS addresses_sync__client_info__events__metadata__metrics__ping_info__experiments ON ${addresses_sync.document_id} = ${addresses_sync__client_info__events__metadata__metrics__ping_info__experiments.document_id} ;;
+    sql: LEFT JOIN UNNEST(${addresses_sync.ping_info__experiments}) AS addresses_sync__ping_info__experiments ON ${addresses_sync.document_id} = ${addresses_sync__ping_info__experiments.document_id} ;;
   }
 
   join: addresses_sync__metrics__labeled_counter__addresses_sync_incoming {

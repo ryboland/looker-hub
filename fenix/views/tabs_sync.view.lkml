@@ -635,7 +635,7 @@ The labels are the `category.name` identifier of the metric.
   sql_table_name: `{% parameter channel %}` ;;
 }
 
-view: tabs_sync__client_info__events {
+view: tabs_sync__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -657,7 +657,7 @@ view: tabs_sync__client_info__events {
   }
 }
 
-view: tabs_sync__client_info__events__extra {
+view: tabs_sync__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -669,7 +669,7 @@ view: tabs_sync__client_info__events__extra {
   }
 }
 
-view: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe {
+view: tabs_sync__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -681,7 +681,7 @@ view: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe 
   }
 }
 
-view: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate {
+view: tabs_sync__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -693,7 +693,7 @@ view: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe_
   }
 }
 
-view: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value {
+view: tabs_sync__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -714,7 +714,7 @@ view: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe_
   }
 }
 
-view: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__tabs_sync_failure_reason {
+view: tabs_sync__metrics__labeled_string__tabs_sync_failure_reason {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -726,7 +726,7 @@ view: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe_
   }
 }
 
-view: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text {
+view: tabs_sync__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -738,7 +738,7 @@ view: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe_
   }
 }
 
-view: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url {
+view: tabs_sync__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -750,7 +750,7 @@ view: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe_
   }
 }
 
-view: tabs_sync__client_info__events__metadata__metrics__ping_info__experiments {
+view: tabs_sync__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

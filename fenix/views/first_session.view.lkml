@@ -596,7 +596,7 @@ The labels are the `category.name` identifier of the metric.
   sql_table_name: `{% parameter channel %}` ;;
 }
 
-view: first_session__client_info__events {
+view: first_session__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -618,7 +618,7 @@ view: first_session__client_info__events {
   }
 }
 
-view: first_session__client_info__events__extra {
+view: first_session__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -630,7 +630,7 @@ view: first_session__client_info__events__extra {
   }
 }
 
-view: first_session__client_info__events__metadata__metrics__datetime__jwe {
+view: first_session__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -642,7 +642,7 @@ view: first_session__client_info__events__metadata__metrics__datetime__jwe {
   }
 }
 
-view: first_session__client_info__events__metadata__metrics__datetime__jwe__labeled_rate {
+view: first_session__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -654,7 +654,7 @@ view: first_session__client_info__events__metadata__metrics__datetime__jwe__labe
   }
 }
 
-view: first_session__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__value {
+view: first_session__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -675,7 +675,7 @@ view: first_session__client_info__events__metadata__metrics__datetime__jwe__labe
   }
 }
 
-view: first_session__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text {
+view: first_session__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -687,7 +687,7 @@ view: first_session__client_info__events__metadata__metrics__datetime__jwe__labe
   }
 }
 
-view: first_session__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text__url {
+view: first_session__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -699,7 +699,7 @@ view: first_session__client_info__events__metadata__metrics__datetime__jwe__labe
   }
 }
 
-view: first_session__client_info__events__metadata__metrics__ping_info__experiments {
+view: first_session__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

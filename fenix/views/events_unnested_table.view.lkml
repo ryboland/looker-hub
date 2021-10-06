@@ -382,7 +382,7 @@ view: events_unnested_table {
   sql_table_name: `mozdata.fenix.events_unnested` ;;
 }
 
-view: events_unnested_table__client_info__event_extra {
+view: events_unnested_table__event_extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -394,7 +394,7 @@ view: events_unnested_table__client_info__event_extra {
   }
 }
 
-view: events_unnested_table__client_info__event_extra__metadata__ping_info__experiments {
+view: events_unnested_table__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

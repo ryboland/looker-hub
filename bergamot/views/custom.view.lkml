@@ -1394,7 +1394,7 @@ The labels are the `category.name` identifier of the metric.
   sql_table_name: `mozdata.org_mozilla_bergamot.custom` ;;
 }
 
-view: custom__client_info__events {
+view: custom__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -1416,7 +1416,7 @@ view: custom__client_info__events {
   }
 }
 
-view: custom__client_info__events__extra {
+view: custom__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1428,7 +1428,7 @@ view: custom__client_info__events__extra {
   }
 }
 
-view: custom__client_info__events__metadata__metrics__counter__jwe {
+view: custom__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1440,7 +1440,7 @@ view: custom__client_info__events__metadata__metrics__counter__jwe {
   }
 }
 
-view: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate {
+view: custom__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1452,7 +1452,7 @@ view: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate
   }
 }
 
-view: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__value {
+view: custom__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1473,7 +1473,7 @@ view: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate
   }
 }
 
-view: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__quantity__string__text {
+view: custom__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1485,7 +1485,7 @@ view: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate
   }
 }
 
-view: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__quantity__string__text__timespan__url {
+view: custom__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1497,7 +1497,7 @@ view: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate
   }
 }
 
-view: custom__client_info__events__metadata__metrics__ping_info__experiments {
+view: custom__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

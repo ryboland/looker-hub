@@ -541,7 +541,7 @@ ping is from Adjust and will remain static across installs.
   sql_table_name: `{% parameter channel %}` ;;
 }
 
-view: installation_table__client_info__events {
+view: installation_table__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -563,7 +563,7 @@ view: installation_table__client_info__events {
   }
 }
 
-view: installation_table__client_info__events__extra {
+view: installation_table__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -575,7 +575,7 @@ view: installation_table__client_info__events__extra {
   }
 }
 
-view: installation_table__client_info__events__metadata__metrics__datetime__jwe {
+view: installation_table__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -587,7 +587,7 @@ view: installation_table__client_info__events__metadata__metrics__datetime__jwe 
   }
 }
 
-view: installation_table__client_info__events__metadata__metrics__datetime__jwe__labeled_rate {
+view: installation_table__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -599,7 +599,7 @@ view: installation_table__client_info__events__metadata__metrics__datetime__jwe_
   }
 }
 
-view: installation_table__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__value {
+view: installation_table__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -620,7 +620,7 @@ view: installation_table__client_info__events__metadata__metrics__datetime__jwe_
   }
 }
 
-view: installation_table__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text {
+view: installation_table__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -632,7 +632,7 @@ view: installation_table__client_info__events__metadata__metrics__datetime__jwe_
   }
 }
 
-view: installation_table__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text__url {
+view: installation_table__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -644,7 +644,7 @@ view: installation_table__client_info__events__metadata__metrics__datetime__jwe_
   }
 }
 
-view: installation_table__client_info__events__metadata__metrics__ping_info__experiments {
+view: installation_table__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

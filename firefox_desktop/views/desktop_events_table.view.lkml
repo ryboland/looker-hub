@@ -168,7 +168,7 @@ view: desktop_events_table__event_map_values {
   }
 }
 
-view: desktop_events_table__event_map_values__experiments {
+view: desktop_events_table__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

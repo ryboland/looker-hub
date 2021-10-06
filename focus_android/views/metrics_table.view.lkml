@@ -826,7 +826,7 @@ documented in the ping's pings.yaml file.
   sql_table_name: `mozdata.org_mozilla_focus.metrics` ;;
 }
 
-view: metrics_table__client_info__events {
+view: metrics_table__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -848,7 +848,7 @@ view: metrics_table__client_info__events {
   }
 }
 
-view: metrics_table__client_info__events__extra {
+view: metrics_table__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -860,7 +860,7 @@ view: metrics_table__client_info__events__extra {
   }
 }
 
-view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe {
+view: metrics_table__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -872,7 +872,7 @@ view: metrics_table__client_info__events__metadata__metrics__boolean__counter__d
   }
 }
 
-view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate {
+view: metrics_table__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -884,7 +884,7 @@ view: metrics_table__client_info__events__metadata__metrics__boolean__counter__d
   }
 }
 
-view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__value {
+view: metrics_table__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -905,7 +905,7 @@ view: metrics_table__client_info__events__metadata__metrics__boolean__counter__d
   }
 }
 
-view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__values {
+view: metrics_table__metrics__memory_distribution__glean_database_size__values {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -917,7 +917,7 @@ view: metrics_table__client_info__events__metadata__metrics__boolean__counter__d
   }
 }
 
-view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__glean_upload_discarded_exceeding_pings_size__values {
+view: metrics_table__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -929,7 +929,7 @@ view: metrics_table__client_info__events__metadata__metrics__boolean__counter__d
   }
 }
 
-view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__glean_upload_discarded_exceeding_pings_size__glean_upload_pending_pings_directory_size__values {
+view: metrics_table__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -941,7 +941,7 @@ view: metrics_table__client_info__events__metadata__metrics__boolean__counter__d
   }
 }
 
-view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__quantity__string__text {
+view: metrics_table__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -953,7 +953,7 @@ view: metrics_table__client_info__events__metadata__metrics__boolean__counter__d
   }
 }
 
-view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__quantity__string__text__url {
+view: metrics_table__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -965,7 +965,7 @@ view: metrics_table__client_info__events__metadata__metrics__boolean__counter__d
   }
 }
 
-view: metrics_table__client_info__events__metadata__metrics__ping_info__experiments {
+view: metrics_table__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

@@ -581,7 +581,7 @@ The labels are the `category.name` identifier of the metric.
   sql_table_name: `mozdata.firefox_desktop_background_update.background_update` ;;
 }
 
-view: background_update_table__client_info__events {
+view: background_update_table__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -603,7 +603,7 @@ view: background_update_table__client_info__events {
   }
 }
 
-view: background_update_table__client_info__events__extra {
+view: background_update_table__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -615,7 +615,7 @@ view: background_update_table__client_info__events__extra {
   }
 }
 
-view: background_update_table__client_info__events__metadata__metrics__boolean__jwe {
+view: background_update_table__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -627,7 +627,7 @@ view: background_update_table__client_info__events__metadata__metrics__boolean__
   }
 }
 
-view: background_update_table__client_info__events__metadata__metrics__boolean__jwe__labeled_rate {
+view: background_update_table__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -639,7 +639,7 @@ view: background_update_table__client_info__events__metadata__metrics__boolean__
   }
 }
 
-view: background_update_table__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__value {
+view: background_update_table__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -660,7 +660,7 @@ view: background_update_table__client_info__events__metadata__metrics__boolean__
   }
 }
 
-view: background_update_table__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__string_list__text {
+view: background_update_table__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -672,7 +672,7 @@ view: background_update_table__client_info__events__metadata__metrics__boolean__
   }
 }
 
-view: background_update_table__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__string_list__text__url {
+view: background_update_table__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -684,7 +684,7 @@ view: background_update_table__client_info__events__metadata__metrics__boolean__
   }
 }
 
-view: background_update_table__client_info__events__metadata__metrics__ping_info__experiments {
+view: background_update_table__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

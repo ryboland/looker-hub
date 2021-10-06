@@ -531,7 +531,7 @@ The labels are the `category.name` identifier of the metric.
   sql_table_name: `{% parameter channel %}` ;;
 }
 
-view: creditcards_sync_table__client_info__events {
+view: creditcards_sync_table__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -553,7 +553,7 @@ view: creditcards_sync_table__client_info__events {
   }
 }
 
-view: creditcards_sync_table__client_info__events__extra {
+view: creditcards_sync_table__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -565,7 +565,7 @@ view: creditcards_sync_table__client_info__events__extra {
   }
 }
 
-view: creditcards_sync_table__client_info__events__metadata__metrics__counter__datetime__jwe {
+view: creditcards_sync_table__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -577,7 +577,7 @@ view: creditcards_sync_table__client_info__events__metadata__metrics__counter__d
   }
 }
 
-view: creditcards_sync_table__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate {
+view: creditcards_sync_table__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -589,7 +589,7 @@ view: creditcards_sync_table__client_info__events__metadata__metrics__counter__d
   }
 }
 
-view: creditcards_sync_table__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value {
+view: creditcards_sync_table__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -610,7 +610,7 @@ view: creditcards_sync_table__client_info__events__metadata__metrics__counter__d
   }
 }
 
-view: creditcards_sync_table__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__creditcards_sync_failure_reason {
+view: creditcards_sync_table__metrics__labeled_string__creditcards_sync_failure_reason {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -622,7 +622,7 @@ view: creditcards_sync_table__client_info__events__metadata__metrics__counter__d
   }
 }
 
-view: creditcards_sync_table__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text {
+view: creditcards_sync_table__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -634,7 +634,7 @@ view: creditcards_sync_table__client_info__events__metadata__metrics__counter__d
   }
 }
 
-view: creditcards_sync_table__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url {
+view: creditcards_sync_table__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -646,7 +646,7 @@ view: creditcards_sync_table__client_info__events__metadata__metrics__counter__d
   }
 }
 
-view: creditcards_sync_table__client_info__events__metadata__metrics__ping_info__experiments {
+view: creditcards_sync_table__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

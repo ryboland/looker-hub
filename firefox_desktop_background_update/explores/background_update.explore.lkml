@@ -12,44 +12,44 @@ explore: background_update {
     ]
   }
 
-  join: background_update__client_info__events {
+  join: background_update__events {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.client_info__events}) AS background_update__client_info__events ON ${background_update.document_id} = ${background_update__client_info__events.document_id} ;;
+    sql: LEFT JOIN UNNEST(${background_update.events}) AS background_update__events ON ${background_update.document_id} = ${background_update__events.document_id} ;;
   }
 
-  join: background_update__client_info__events__extra {
+  join: background_update__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.client_info__events__extra}) AS background_update__client_info__events__extra ON ${background_update.document_id} = ${background_update__client_info__events__extra.document_id} ;;
+    sql: LEFT JOIN UNNEST(${background_update.events__extra}) AS background_update__events__extra ON ${background_update.document_id} = ${background_update__events__extra.document_id} ;;
   }
 
-  join: background_update__client_info__events__metadata__metrics__boolean__jwe {
+  join: background_update__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.client_info__events__metadata__metrics__boolean__jwe}) AS background_update__client_info__events__metadata__metrics__boolean__jwe ON ${background_update.document_id} = ${background_update__client_info__events__metadata__metrics__boolean__jwe.document_id} ;;
+    sql: LEFT JOIN UNNEST(${background_update.metrics__jwe}) AS background_update__metrics__jwe ON ${background_update.document_id} = ${background_update__metrics__jwe.document_id} ;;
   }
 
-  join: background_update__client_info__events__metadata__metrics__boolean__jwe__labeled_rate {
+  join: background_update__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.client_info__events__metadata__metrics__boolean__jwe__labeled_rate}) AS background_update__client_info__events__metadata__metrics__boolean__jwe__labeled_rate ON ${background_update.document_id} = ${background_update__client_info__events__metadata__metrics__boolean__jwe__labeled_rate.document_id} ;;
+    sql: LEFT JOIN UNNEST(${background_update.metrics__labeled_rate}) AS background_update__metrics__labeled_rate ON ${background_update.document_id} = ${background_update__metrics__labeled_rate.document_id} ;;
   }
 
-  join: background_update__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__value {
+  join: background_update__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.client_info__events__metadata__metrics__boolean__jwe__labeled_rate__value}) AS background_update__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__value ON ${background_update.document_id} = ${background_update__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__value.document_id} ;;
+    sql: LEFT JOIN UNNEST(${background_update.metrics__labeled_rate__value}) AS background_update__metrics__labeled_rate__value ON ${background_update.document_id} = ${background_update__metrics__labeled_rate__value.document_id} ;;
   }
 
-  join: background_update__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__string_list__text {
+  join: background_update__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__string_list__text}) AS background_update__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__string_list__text ON ${background_update.document_id} = ${background_update__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__string_list__text.document_id} ;;
+    sql: LEFT JOIN UNNEST(${background_update.metrics__text}) AS background_update__metrics__text ON ${background_update.document_id} = ${background_update__metrics__text.document_id} ;;
   }
 
-  join: background_update__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__string_list__text__url {
+  join: background_update__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__string_list__text__url}) AS background_update__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__string_list__text__url ON ${background_update.document_id} = ${background_update__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__string_list__text__url.document_id} ;;
+    sql: LEFT JOIN UNNEST(${background_update.metrics__url}) AS background_update__metrics__url ON ${background_update.document_id} = ${background_update__metrics__url.document_id} ;;
   }
 
-  join: background_update__client_info__events__metadata__metrics__ping_info__experiments {
+  join: background_update__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.client_info__events__metadata__metrics__ping_info__experiments}) AS background_update__client_info__events__metadata__metrics__ping_info__experiments ON ${background_update.document_id} = ${background_update__client_info__events__metadata__metrics__ping_info__experiments.document_id} ;;
+    sql: LEFT JOIN UNNEST(${background_update.ping_info__experiments}) AS background_update__ping_info__experiments ON ${background_update.document_id} = ${background_update__ping_info__experiments.document_id} ;;
   }
 
   join: background_update__metrics__labeled_counter__glean_error_invalid_label {

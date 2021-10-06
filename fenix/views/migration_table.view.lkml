@@ -950,7 +950,7 @@ view: migration_table {
   sql_table_name: `{% parameter channel %}` ;;
 }
 
-view: migration_table__client_info__events {
+view: migration_table__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -972,7 +972,7 @@ view: migration_table__client_info__events {
   }
 }
 
-view: migration_table__client_info__events__extra {
+view: migration_table__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -984,7 +984,7 @@ view: migration_table__client_info__events__extra {
   }
 }
 
-view: migration_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe {
+view: migration_table__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -996,7 +996,7 @@ view: migration_table__client_info__events__metadata__metrics__boolean__counter_
   }
 }
 
-view: migration_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate {
+view: migration_table__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1008,7 +1008,7 @@ view: migration_table__client_info__events__metadata__metrics__boolean__counter_
   }
 }
 
-view: migration_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__value {
+view: migration_table__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1029,7 +1029,7 @@ view: migration_table__client_info__events__metadata__metrics__boolean__counter_
   }
 }
 
-view: migration_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__labeled_string__migration_migration_versions {
+view: migration_table__metrics__labeled_string__migration_migration_versions {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1041,7 +1041,7 @@ view: migration_table__client_info__events__metadata__metrics__boolean__counter_
   }
 }
 
-view: migration_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__labeled_string__string__text {
+view: migration_table__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1053,7 +1053,7 @@ view: migration_table__client_info__events__metadata__metrics__boolean__counter_
   }
 }
 
-view: migration_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__labeled_string__string__text__timespan__url {
+view: migration_table__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -1065,7 +1065,7 @@ view: migration_table__client_info__events__metadata__metrics__boolean__counter_
   }
 }
 
-view: migration_table__client_info__events__metadata__metrics__ping_info__experiments {
+view: migration_table__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

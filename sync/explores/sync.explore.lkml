@@ -10,58 +10,58 @@ explore: sync {
     ]
   }
 
-  join: sync__application__metadata__payload__devices {
+  join: sync__payload__devices {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync__application__metadata__payload.devices}) AS sync__application__metadata__payload__devices ;;
+    sql: LEFT JOIN UNNEST(${sync__payload.devices}) AS sync__payload__devices ;;
   }
 
-  join: sync__application__metadata__payload__devices__events {
+  join: sync__payload__events {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync__application__metadata__payload__devices.events}) AS sync__application__metadata__payload__devices__events ;;
+    sql: LEFT JOIN UNNEST(${sync__payload.events}) AS sync__payload__events ;;
   }
 
-  join: sync__application__metadata__payload__devices__events__f5_ {
+  join: sync__payload__events__f5_ {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync__application__metadata__payload__devices__events.f5_}) AS sync__application__metadata__payload__devices__events__f5_ ;;
+    sql: LEFT JOIN UNNEST(${sync__payload__events.f5_}) AS sync__payload__events__f5_ ;;
   }
 
-  join: sync__application__metadata__payload__devices__events__histograms__migrations {
+  join: sync__payload__migrations {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync__application__metadata__payload__devices__events__histograms.migrations}) AS sync__application__metadata__payload__devices__events__histograms__migrations ;;
+    sql: LEFT JOIN UNNEST(${sync__payload.migrations}) AS sync__payload__migrations ;;
   }
 
-  join: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs {
+  join: sync__payload__syncs {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync__application__metadata__payload__devices__events__histograms__migrations__os.syncs}) AS sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs ;;
+    sql: LEFT JOIN UNNEST(${sync__payload.syncs}) AS sync__payload__syncs ;;
   }
 
-  join: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices {
+  join: sync__payload__syncs__devices {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs.devices}) AS sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices ;;
+    sql: LEFT JOIN UNNEST(${sync__payload__syncs.devices}) AS sync__payload__syncs__devices ;;
   }
 
-  join: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines {
+  join: sync__payload__syncs__engines {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices.engines}) AS sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines ;;
+    sql: LEFT JOIN UNNEST(${sync__payload__syncs.engines}) AS sync__payload__syncs__engines ;;
   }
 
-  join: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing {
+  join: sync__payload__syncs__engines__outgoing {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming.outgoing}) AS sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing ;;
+    sql: LEFT JOIN UNNEST(${sync__payload__syncs__engines.outgoing}) AS sync__payload__syncs__engines__outgoing ;;
   }
 
-  join: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing__steps {
+  join: sync__payload__syncs__engines__steps {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing.steps}) AS sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing__steps ;;
+    sql: LEFT JOIN UNNEST(${sync__payload__syncs__engines.steps}) AS sync__payload__syncs__engines__steps ;;
   }
 
-  join: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing__steps__counts {
+  join: sync__payload__syncs__engines__steps__counts {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing__steps.counts}) AS sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing__steps__counts ;;
+    sql: LEFT JOIN UNNEST(${sync__payload__syncs__engines__steps.counts}) AS sync__payload__syncs__engines__steps__counts ;;
   }
 
-  join: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing__steps__validation__failure_reason__problems {
+  join: sync__payload__syncs__engines__validation__problems {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing__steps__validation__failure_reason.problems}) AS sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing__steps__validation__failure_reason__problems ;;
+    sql: LEFT JOIN UNNEST(${sync__payload__syncs__engines__validation.problems}) AS sync__payload__syncs__engines__validation__problems ;;
   }
 }

@@ -320,7 +320,7 @@ view: search_clients_engines_sources_daily__experiments {
   }
 }
 
-view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_searchmode_bookmarkmenu_sum {
+view: search_clients_engines_sources_daily__scalar_parent_urlbar_searchmode_bookmarkmenu_sum {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -332,7 +332,7 @@ view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_se
   }
 }
 
-view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_searchmode_bookmarkmenu_sum__scalar_parent_urlbar_searchmode_handoff_sum {
+view: search_clients_engines_sources_daily__scalar_parent_urlbar_searchmode_handoff_sum {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -344,7 +344,7 @@ view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_se
   }
 }
 
-view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_searchmode_bookmarkmenu_sum__scalar_parent_urlbar_searchmode_handoff_sum__scalar_parent_urlbar_searchmode_keywordoffer_sum {
+view: search_clients_engines_sources_daily__scalar_parent_urlbar_searchmode_keywordoffer_sum {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -356,7 +356,7 @@ view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_se
   }
 }
 
-view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_searchmode_bookmarkmenu_sum__scalar_parent_urlbar_searchmode_handoff_sum__scalar_parent_urlbar_searchmode_keywordoffer_sum__scalar_parent_urlbar_searchmode_oneoff_sum {
+view: search_clients_engines_sources_daily__scalar_parent_urlbar_searchmode_oneoff_sum {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -368,7 +368,7 @@ view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_se
   }
 }
 
-view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_searchmode_bookmarkmenu_sum__scalar_parent_urlbar_searchmode_handoff_sum__scalar_parent_urlbar_searchmode_keywordoffer_sum__scalar_parent_urlbar_searchmode_oneoff_sum__scalar_parent_urlbar_searchmode_other_sum {
+view: search_clients_engines_sources_daily__scalar_parent_urlbar_searchmode_other_sum {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -380,7 +380,7 @@ view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_se
   }
 }
 
-view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_searchmode_bookmarkmenu_sum__scalar_parent_urlbar_searchmode_handoff_sum__scalar_parent_urlbar_searchmode_keywordoffer_sum__scalar_parent_urlbar_searchmode_oneoff_sum__scalar_parent_urlbar_searchmode_other_sum__scalar_parent_urlbar_searchmode_shortcut_sum {
+view: search_clients_engines_sources_daily__scalar_parent_urlbar_searchmode_shortcut_sum {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -392,7 +392,7 @@ view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_se
   }
 }
 
-view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_searchmode_bookmarkmenu_sum__scalar_parent_urlbar_searchmode_handoff_sum__scalar_parent_urlbar_searchmode_keywordoffer_sum__scalar_parent_urlbar_searchmode_oneoff_sum__scalar_parent_urlbar_searchmode_other_sum__scalar_parent_urlbar_searchmode_shortcut_sum__scalar_parent_urlbar_searchmode_tabmenu_sum {
+view: search_clients_engines_sources_daily__scalar_parent_urlbar_searchmode_tabmenu_sum {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -404,7 +404,7 @@ view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_se
   }
 }
 
-view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_searchmode_bookmarkmenu_sum__scalar_parent_urlbar_searchmode_handoff_sum__scalar_parent_urlbar_searchmode_keywordoffer_sum__scalar_parent_urlbar_searchmode_oneoff_sum__scalar_parent_urlbar_searchmode_other_sum__scalar_parent_urlbar_searchmode_shortcut_sum__scalar_parent_urlbar_searchmode_tabmenu_sum__scalar_parent_urlbar_searchmode_tabtosearch_onboard_sum {
+view: search_clients_engines_sources_daily__scalar_parent_urlbar_searchmode_tabtosearch_onboard_sum {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -416,7 +416,7 @@ view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_se
   }
 }
 
-view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_searchmode_bookmarkmenu_sum__scalar_parent_urlbar_searchmode_handoff_sum__scalar_parent_urlbar_searchmode_keywordoffer_sum__scalar_parent_urlbar_searchmode_oneoff_sum__scalar_parent_urlbar_searchmode_other_sum__scalar_parent_urlbar_searchmode_shortcut_sum__scalar_parent_urlbar_searchmode_tabmenu_sum__scalar_parent_urlbar_searchmode_tabtosearch_onboard_sum__scalar_parent_urlbar_searchmode_tabtosearch_sum {
+view: search_clients_engines_sources_daily__scalar_parent_urlbar_searchmode_tabtosearch_sum {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -428,7 +428,7 @@ view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_se
   }
 }
 
-view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_searchmode_bookmarkmenu_sum__scalar_parent_urlbar_searchmode_handoff_sum__scalar_parent_urlbar_searchmode_keywordoffer_sum__scalar_parent_urlbar_searchmode_oneoff_sum__scalar_parent_urlbar_searchmode_other_sum__scalar_parent_urlbar_searchmode_shortcut_sum__scalar_parent_urlbar_searchmode_tabmenu_sum__scalar_parent_urlbar_searchmode_tabtosearch_onboard_sum__scalar_parent_urlbar_searchmode_tabtosearch_sum__scalar_parent_urlbar_searchmode_topsites_newtab_sum {
+view: search_clients_engines_sources_daily__scalar_parent_urlbar_searchmode_topsites_newtab_sum {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -440,7 +440,7 @@ view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_se
   }
 }
 
-view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_searchmode_bookmarkmenu_sum__scalar_parent_urlbar_searchmode_handoff_sum__scalar_parent_urlbar_searchmode_keywordoffer_sum__scalar_parent_urlbar_searchmode_oneoff_sum__scalar_parent_urlbar_searchmode_other_sum__scalar_parent_urlbar_searchmode_shortcut_sum__scalar_parent_urlbar_searchmode_tabmenu_sum__scalar_parent_urlbar_searchmode_tabtosearch_onboard_sum__scalar_parent_urlbar_searchmode_tabtosearch_sum__scalar_parent_urlbar_searchmode_topsites_newtab_sum__scalar_parent_urlbar_searchmode_topsites_urlbar_sum {
+view: search_clients_engines_sources_daily__scalar_parent_urlbar_searchmode_topsites_urlbar_sum {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -452,7 +452,7 @@ view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_se
   }
 }
 
-view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_searchmode_bookmarkmenu_sum__scalar_parent_urlbar_searchmode_handoff_sum__scalar_parent_urlbar_searchmode_keywordoffer_sum__scalar_parent_urlbar_searchmode_oneoff_sum__scalar_parent_urlbar_searchmode_other_sum__scalar_parent_urlbar_searchmode_shortcut_sum__scalar_parent_urlbar_searchmode_tabmenu_sum__scalar_parent_urlbar_searchmode_tabtosearch_onboard_sum__scalar_parent_urlbar_searchmode_tabtosearch_sum__scalar_parent_urlbar_searchmode_topsites_newtab_sum__scalar_parent_urlbar_searchmode_topsites_urlbar_sum__scalar_parent_urlbar_searchmode_touchbar_sum {
+view: search_clients_engines_sources_daily__scalar_parent_urlbar_searchmode_touchbar_sum {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -464,7 +464,7 @@ view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_se
   }
 }
 
-view: search_clients_engines_sources_daily__experiments__scalar_parent_urlbar_searchmode_bookmarkmenu_sum__scalar_parent_urlbar_searchmode_handoff_sum__scalar_parent_urlbar_searchmode_keywordoffer_sum__scalar_parent_urlbar_searchmode_oneoff_sum__scalar_parent_urlbar_searchmode_other_sum__scalar_parent_urlbar_searchmode_shortcut_sum__scalar_parent_urlbar_searchmode_tabmenu_sum__scalar_parent_urlbar_searchmode_tabtosearch_onboard_sum__scalar_parent_urlbar_searchmode_tabtosearch_sum__scalar_parent_urlbar_searchmode_topsites_newtab_sum__scalar_parent_urlbar_searchmode_topsites_urlbar_sum__scalar_parent_urlbar_searchmode_touchbar_sum__scalar_parent_urlbar_searchmode_typed_sum {
+view: search_clients_engines_sources_daily__scalar_parent_urlbar_searchmode_typed_sum {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

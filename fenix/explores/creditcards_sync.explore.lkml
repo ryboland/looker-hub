@@ -13,49 +13,49 @@ explore: creditcards_sync {
     ]
   }
 
-  join: creditcards_sync__client_info__events {
+  join: creditcards_sync__events {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${creditcards_sync.client_info__events}) AS creditcards_sync__client_info__events ON ${creditcards_sync.document_id} = ${creditcards_sync__client_info__events.document_id} ;;
+    sql: LEFT JOIN UNNEST(${creditcards_sync.events}) AS creditcards_sync__events ON ${creditcards_sync.document_id} = ${creditcards_sync__events.document_id} ;;
   }
 
-  join: creditcards_sync__client_info__events__extra {
+  join: creditcards_sync__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${creditcards_sync.client_info__events__extra}) AS creditcards_sync__client_info__events__extra ON ${creditcards_sync.document_id} = ${creditcards_sync__client_info__events__extra.document_id} ;;
+    sql: LEFT JOIN UNNEST(${creditcards_sync.events__extra}) AS creditcards_sync__events__extra ON ${creditcards_sync.document_id} = ${creditcards_sync__events__extra.document_id} ;;
   }
 
-  join: creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe {
+  join: creditcards_sync__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${creditcards_sync.client_info__events__metadata__metrics__counter__datetime__jwe}) AS creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe ON ${creditcards_sync.document_id} = ${creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe.document_id} ;;
+    sql: LEFT JOIN UNNEST(${creditcards_sync.metrics__jwe}) AS creditcards_sync__metrics__jwe ON ${creditcards_sync.document_id} = ${creditcards_sync__metrics__jwe.document_id} ;;
   }
 
-  join: creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate {
+  join: creditcards_sync__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${creditcards_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate}) AS creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate ON ${creditcards_sync.document_id} = ${creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate.document_id} ;;
+    sql: LEFT JOIN UNNEST(${creditcards_sync.metrics__labeled_rate}) AS creditcards_sync__metrics__labeled_rate ON ${creditcards_sync.document_id} = ${creditcards_sync__metrics__labeled_rate.document_id} ;;
   }
 
-  join: creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value {
+  join: creditcards_sync__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${creditcards_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value}) AS creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value ON ${creditcards_sync.document_id} = ${creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value.document_id} ;;
+    sql: LEFT JOIN UNNEST(${creditcards_sync.metrics__labeled_rate__value}) AS creditcards_sync__metrics__labeled_rate__value ON ${creditcards_sync.document_id} = ${creditcards_sync__metrics__labeled_rate__value.document_id} ;;
   }
 
-  join: creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__creditcards_sync_failure_reason {
+  join: creditcards_sync__metrics__labeled_string__creditcards_sync_failure_reason {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${creditcards_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__creditcards_sync_failure_reason}) AS creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__creditcards_sync_failure_reason ON ${creditcards_sync.document_id} = ${creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__creditcards_sync_failure_reason.document_id} ;;
+    sql: LEFT JOIN UNNEST(${creditcards_sync.metrics__labeled_string__creditcards_sync_failure_reason}) AS creditcards_sync__metrics__labeled_string__creditcards_sync_failure_reason ON ${creditcards_sync.document_id} = ${creditcards_sync__metrics__labeled_string__creditcards_sync_failure_reason.document_id} ;;
   }
 
-  join: creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text {
+  join: creditcards_sync__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${creditcards_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text}) AS creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text ON ${creditcards_sync.document_id} = ${creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text.document_id} ;;
+    sql: LEFT JOIN UNNEST(${creditcards_sync.metrics__text}) AS creditcards_sync__metrics__text ON ${creditcards_sync.document_id} = ${creditcards_sync__metrics__text.document_id} ;;
   }
 
-  join: creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url {
+  join: creditcards_sync__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${creditcards_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url}) AS creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url ON ${creditcards_sync.document_id} = ${creditcards_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url.document_id} ;;
+    sql: LEFT JOIN UNNEST(${creditcards_sync.metrics__url}) AS creditcards_sync__metrics__url ON ${creditcards_sync.document_id} = ${creditcards_sync__metrics__url.document_id} ;;
   }
 
-  join: creditcards_sync__client_info__events__metadata__metrics__ping_info__experiments {
+  join: creditcards_sync__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${creditcards_sync.client_info__events__metadata__metrics__ping_info__experiments}) AS creditcards_sync__client_info__events__metadata__metrics__ping_info__experiments ON ${creditcards_sync.document_id} = ${creditcards_sync__client_info__events__metadata__metrics__ping_info__experiments.document_id} ;;
+    sql: LEFT JOIN UNNEST(${creditcards_sync.ping_info__experiments}) AS creditcards_sync__ping_info__experiments ON ${creditcards_sync.document_id} = ${creditcards_sync__ping_info__experiments.document_id} ;;
   }
 
   join: creditcards_sync__metrics__labeled_counter__creditcards_sync_incoming {

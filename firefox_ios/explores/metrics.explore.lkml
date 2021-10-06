@@ -13,59 +13,59 @@ explore: metrics {
     ]
   }
 
-  join: metrics__client_info__events {
+  join: metrics__events {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.client_info__events}) AS metrics__client_info__events ON ${metrics.document_id} = ${metrics__client_info__events.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.events}) AS metrics__events ON ${metrics.document_id} = ${metrics__events.document_id} ;;
   }
 
-  join: metrics__client_info__events__extra {
+  join: metrics__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.client_info__events__extra}) AS metrics__client_info__events__extra ON ${metrics.document_id} = ${metrics__client_info__events__extra.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.events__extra}) AS metrics__events__extra ON ${metrics.document_id} = ${metrics__events__extra.document_id} ;;
   }
 
-  join: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe {
+  join: metrics__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.client_info__events__metadata__metrics__boolean__counter__datetime__jwe}) AS metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe ON ${metrics.document_id} = ${metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__jwe}) AS metrics__metrics__jwe ON ${metrics.document_id} = ${metrics__metrics__jwe.document_id} ;;
   }
 
-  join: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate {
+  join: metrics__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate}) AS metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate ON ${metrics.document_id} = ${metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_rate}) AS metrics__metrics__labeled_rate ON ${metrics.document_id} = ${metrics__metrics__labeled_rate.document_id} ;;
   }
 
-  join: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__value {
+  join: metrics__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__value}) AS metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__value ON ${metrics.document_id} = ${metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__value.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_rate__value}) AS metrics__metrics__labeled_rate__value ON ${metrics.document_id} = ${metrics__metrics__labeled_rate__value.document_id} ;;
   }
 
-  join: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__values {
+  join: metrics__metrics__memory_distribution__glean_database_size__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__values}) AS metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__values ON ${metrics.document_id} = ${metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__memory_distribution__glean_database_size__values}) AS metrics__metrics__memory_distribution__glean_database_size__values ON ${metrics.document_id} = ${metrics__metrics__memory_distribution__glean_database_size__values.document_id} ;;
   }
 
-  join: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__glean_upload_discarded_exceeding_pings_size__values {
+  join: metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__glean_upload_discarded_exceeding_pings_size__values}) AS metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__glean_upload_discarded_exceeding_pings_size__values ON ${metrics.document_id} = ${metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__glean_upload_discarded_exceeding_pings_size__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values}) AS metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values ON ${metrics.document_id} = ${metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values.document_id} ;;
   }
 
-  join: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__glean_upload_discarded_exceeding_pings_size__glean_upload_pending_pings_directory_size__values {
+  join: metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__glean_upload_discarded_exceeding_pings_size__glean_upload_pending_pings_directory_size__values}) AS metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__glean_upload_discarded_exceeding_pings_size__glean_upload_pending_pings_directory_size__values ON ${metrics.document_id} = ${metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__glean_upload_discarded_exceeding_pings_size__glean_upload_pending_pings_directory_size__values.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__memory_distribution__glean_upload_pending_pings_directory_size__values}) AS metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values ON ${metrics.document_id} = ${metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values.document_id} ;;
   }
 
-  join: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__string__text {
+  join: metrics__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__string__text}) AS metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__string__text ON ${metrics.document_id} = ${metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__string__text.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__text}) AS metrics__metrics__text ON ${metrics.document_id} = ${metrics__metrics__text.document_id} ;;
   }
 
-  join: metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__string__text__url {
+  join: metrics__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__string__text__url}) AS metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__string__text__url ON ${metrics.document_id} = ${metrics__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__string__text__url.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__url}) AS metrics__metrics__url ON ${metrics.document_id} = ${metrics__metrics__url.document_id} ;;
   }
 
-  join: metrics__client_info__events__metadata__metrics__ping_info__experiments {
+  join: metrics__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.client_info__events__metadata__metrics__ping_info__experiments}) AS metrics__client_info__events__metadata__metrics__ping_info__experiments ON ${metrics.document_id} = ${metrics__client_info__events__metadata__metrics__ping_info__experiments.document_id} ;;
+    sql: LEFT JOIN UNNEST(${metrics.ping_info__experiments}) AS metrics__ping_info__experiments ON ${metrics.document_id} = ${metrics__ping_info__experiments.document_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__bookmarks_add {

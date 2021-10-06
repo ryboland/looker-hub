@@ -565,7 +565,7 @@ This metric appears in both the metrics and baseline pings.
   sql_table_name: `mozdata.org_mozilla_ios_klar.baseline` ;;
 }
 
-view: baseline__client_info__events {
+view: baseline__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -587,7 +587,7 @@ view: baseline__client_info__events {
   }
 }
 
-view: baseline__client_info__events__extra {
+view: baseline__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -599,7 +599,7 @@ view: baseline__client_info__events__extra {
   }
 }
 
-view: baseline__client_info__events__metadata__metrics__datetime__jwe {
+view: baseline__metrics__jwe {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -611,7 +611,7 @@ view: baseline__client_info__events__metadata__metrics__datetime__jwe {
   }
 }
 
-view: baseline__client_info__events__metadata__metrics__datetime__jwe__labeled_rate {
+view: baseline__metrics__labeled_rate {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -623,7 +623,7 @@ view: baseline__client_info__events__metadata__metrics__datetime__jwe__labeled_r
   }
 }
 
-view: baseline__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__value {
+view: baseline__metrics__labeled_rate__value {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -644,7 +644,7 @@ view: baseline__client_info__events__metadata__metrics__datetime__jwe__labeled_r
   }
 }
 
-view: baseline__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text {
+view: baseline__metrics__text {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -656,7 +656,7 @@ view: baseline__client_info__events__metadata__metrics__datetime__jwe__labeled_r
   }
 }
 
-view: baseline__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text__timespan__url {
+view: baseline__metrics__url {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -668,7 +668,7 @@ view: baseline__client_info__events__metadata__metrics__datetime__jwe__labeled_r
   }
 }
 
-view: baseline__client_info__events__metadata__metrics__ping_info__experiments {
+view: baseline__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
