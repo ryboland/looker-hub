@@ -1394,6 +1394,130 @@ The labels are the `category.name` identifier of the metric.
   sql_table_name: `mozdata.org_mozilla_bergamot.custom` ;;
 }
 
+view: custom__client_info__events {
+  dimension: category {
+    sql: ${TABLE}.category ;;
+    type: string
+  }
+
+  dimension: extra {
+    sql: ${TABLE}.extra ;;
+    hidden: yes
+  }
+
+  dimension: name {
+    sql: ${TABLE}.name ;;
+    type: string
+  }
+
+  dimension: timestamp {
+    sql: ${TABLE}.timestamp ;;
+    type: number
+  }
+}
+
+view: custom__client_info__events__extra {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: custom__client_info__events__metadata__metrics__counter__jwe {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+}
+
+view: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__value {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value__denominator {
+    sql: ${TABLE}.value.denominator ;;
+    type: number
+    group_label: "Value"
+    group_item_label: "Denominator"
+  }
+
+  dimension: value__numerator {
+    sql: ${TABLE}.value.numerator ;;
+    type: number
+    group_label: "Value"
+    group_item_label: "Numerator"
+  }
+}
+
+view: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__quantity__string__text {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__quantity__string__text__timespan__url {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: custom__client_info__events__metadata__metrics__ping_info__experiments {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value__branch {
+    sql: ${TABLE}.value.branch ;;
+    type: string
+    group_label: "Value"
+    group_item_label: "Branch"
+  }
+
+  dimension: value__extra__type {
+    sql: ${TABLE}.value.extra.type ;;
+    type: string
+    group_label: "Value Extra"
+    group_item_label: "Type"
+  }
+}
+
 view: custom__metrics__labeled_counter__glean_error_invalid_label {
   label: "Glean Error - Invalid Label"
 

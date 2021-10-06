@@ -12,6 +12,46 @@ explore: custom {
     ]
   }
 
+  join: custom__client_info__events {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${custom.client_info__events}) AS custom__client_info__events ON ${custom.document_id} = ${custom__client_info__events.document_id} ;;
+  }
+
+  join: custom__client_info__events__extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${custom.client_info__events__extra}) AS custom__client_info__events__extra ON ${custom.document_id} = ${custom__client_info__events__extra.document_id} ;;
+  }
+
+  join: custom__client_info__events__metadata__metrics__counter__jwe {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${custom.client_info__events__metadata__metrics__counter__jwe}) AS custom__client_info__events__metadata__metrics__counter__jwe ON ${custom.document_id} = ${custom__client_info__events__metadata__metrics__counter__jwe.document_id} ;;
+  }
+
+  join: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${custom.client_info__events__metadata__metrics__counter__jwe__labeled_rate}) AS custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate ON ${custom.document_id} = ${custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate.document_id} ;;
+  }
+
+  join: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__value {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${custom.client_info__events__metadata__metrics__counter__jwe__labeled_rate__value}) AS custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__value ON ${custom.document_id} = ${custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__value.document_id} ;;
+  }
+
+  join: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__quantity__string__text {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${custom.client_info__events__metadata__metrics__counter__jwe__labeled_rate__quantity__string__text}) AS custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__quantity__string__text ON ${custom.document_id} = ${custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__quantity__string__text.document_id} ;;
+  }
+
+  join: custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__quantity__string__text__timespan__url {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${custom.client_info__events__metadata__metrics__counter__jwe__labeled_rate__quantity__string__text__timespan__url}) AS custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__quantity__string__text__timespan__url ON ${custom.document_id} = ${custom__client_info__events__metadata__metrics__counter__jwe__labeled_rate__quantity__string__text__timespan__url.document_id} ;;
+  }
+
+  join: custom__client_info__events__metadata__metrics__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${custom.client_info__events__metadata__metrics__ping_info__experiments}) AS custom__client_info__events__metadata__metrics__ping_info__experiments ON ${custom.document_id} = ${custom__client_info__events__metadata__metrics__ping_info__experiments.document_id} ;;
+  }
+
   join: custom__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${custom.metrics__labeled_counter__glean_error_invalid_label}) AS custom__metrics__labeled_counter__glean_error_invalid_label ON ${custom.document_id} = ${custom__metrics__labeled_counter__glean_error_invalid_label.document_id} ;;

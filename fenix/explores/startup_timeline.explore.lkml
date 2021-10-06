@@ -13,6 +13,46 @@ explore: startup_timeline {
     ]
   }
 
+  join: startup_timeline__client_info__events {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${startup_timeline.client_info__events}) AS startup_timeline__client_info__events ON ${startup_timeline.document_id} = ${startup_timeline__client_info__events.document_id} ;;
+  }
+
+  join: startup_timeline__client_info__events__extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${startup_timeline.client_info__events__extra}) AS startup_timeline__client_info__events__extra ON ${startup_timeline.document_id} = ${startup_timeline__client_info__events__extra.document_id} ;;
+  }
+
+  join: startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${startup_timeline.client_info__events__metadata__metrics__boolean__counter__jwe}) AS startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe ON ${startup_timeline.document_id} = ${startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe.document_id} ;;
+  }
+
+  join: startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${startup_timeline.client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate}) AS startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate ON ${startup_timeline.document_id} = ${startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate.document_id} ;;
+  }
+
+  join: startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__value {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${startup_timeline.client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__value}) AS startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__value ON ${startup_timeline.document_id} = ${startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__value.document_id} ;;
+  }
+
+  join: startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__quantity__text {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${startup_timeline.client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__quantity__text}) AS startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__quantity__text ON ${startup_timeline.document_id} = ${startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__quantity__text.document_id} ;;
+  }
+
+  join: startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__quantity__text__timespan__url {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${startup_timeline.client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__quantity__text__timespan__url}) AS startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__quantity__text__timespan__url ON ${startup_timeline.document_id} = ${startup_timeline__client_info__events__metadata__metrics__boolean__counter__jwe__labeled_rate__quantity__text__timespan__url.document_id} ;;
+  }
+
+  join: startup_timeline__client_info__events__metadata__metrics__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${startup_timeline.client_info__events__metadata__metrics__ping_info__experiments}) AS startup_timeline__client_info__events__metadata__metrics__ping_info__experiments ON ${startup_timeline.document_id} = ${startup_timeline__client_info__events__metadata__metrics__ping_info__experiments.document_id} ;;
+  }
+
   join: startup_timeline__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${startup_timeline.metrics__labeled_counter__glean_error_invalid_label}) AS startup_timeline__metrics__labeled_counter__glean_error_invalid_label ON ${startup_timeline.document_id} = ${startup_timeline__metrics__labeled_counter__glean_error_invalid_label.document_id} ;;

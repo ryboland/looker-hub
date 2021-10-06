@@ -13,6 +13,51 @@ explore: tabs_sync {
     ]
   }
 
+  join: tabs_sync__client_info__events {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${tabs_sync.client_info__events}) AS tabs_sync__client_info__events ON ${tabs_sync.document_id} = ${tabs_sync__client_info__events.document_id} ;;
+  }
+
+  join: tabs_sync__client_info__events__extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${tabs_sync.client_info__events__extra}) AS tabs_sync__client_info__events__extra ON ${tabs_sync.document_id} = ${tabs_sync__client_info__events__extra.document_id} ;;
+  }
+
+  join: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${tabs_sync.client_info__events__metadata__metrics__counter__datetime__jwe}) AS tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe ON ${tabs_sync.document_id} = ${tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe.document_id} ;;
+  }
+
+  join: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${tabs_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate}) AS tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate ON ${tabs_sync.document_id} = ${tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate.document_id} ;;
+  }
+
+  join: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${tabs_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value}) AS tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value ON ${tabs_sync.document_id} = ${tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value.document_id} ;;
+  }
+
+  join: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__tabs_sync_failure_reason {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${tabs_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__tabs_sync_failure_reason}) AS tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__tabs_sync_failure_reason ON ${tabs_sync.document_id} = ${tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__tabs_sync_failure_reason.document_id} ;;
+  }
+
+  join: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${tabs_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text}) AS tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text ON ${tabs_sync.document_id} = ${tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text.document_id} ;;
+  }
+
+  join: tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${tabs_sync.client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url}) AS tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url ON ${tabs_sync.document_id} = ${tabs_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url.document_id} ;;
+  }
+
+  join: tabs_sync__client_info__events__metadata__metrics__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${tabs_sync.client_info__events__metadata__metrics__ping_info__experiments}) AS tabs_sync__client_info__events__metadata__metrics__ping_info__experiments ON ${tabs_sync.document_id} = ${tabs_sync__client_info__events__metadata__metrics__ping_info__experiments.document_id} ;;
+  }
+
   join: tabs_sync__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${tabs_sync.metrics__labeled_counter__glean_error_invalid_label}) AS tabs_sync__metrics__labeled_counter__glean_error_invalid_label ON ${tabs_sync.document_id} = ${tabs_sync__metrics__labeled_counter__glean_error_invalid_label.document_id} ;;

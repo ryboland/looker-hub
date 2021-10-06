@@ -13,6 +13,46 @@ explore: installation {
     ]
   }
 
+  join: installation__client_info__events {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${installation.client_info__events}) AS installation__client_info__events ON ${installation.document_id} = ${installation__client_info__events.document_id} ;;
+  }
+
+  join: installation__client_info__events__extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${installation.client_info__events__extra}) AS installation__client_info__events__extra ON ${installation.document_id} = ${installation__client_info__events__extra.document_id} ;;
+  }
+
+  join: installation__client_info__events__metadata__metrics__datetime__jwe {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${installation.client_info__events__metadata__metrics__datetime__jwe}) AS installation__client_info__events__metadata__metrics__datetime__jwe ON ${installation.document_id} = ${installation__client_info__events__metadata__metrics__datetime__jwe.document_id} ;;
+  }
+
+  join: installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${installation.client_info__events__metadata__metrics__datetime__jwe__labeled_rate}) AS installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate ON ${installation.document_id} = ${installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate.document_id} ;;
+  }
+
+  join: installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__value {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${installation.client_info__events__metadata__metrics__datetime__jwe__labeled_rate__value}) AS installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__value ON ${installation.document_id} = ${installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__value.document_id} ;;
+  }
+
+  join: installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${installation.client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text}) AS installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text ON ${installation.document_id} = ${installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text.document_id} ;;
+  }
+
+  join: installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text__url {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${installation.client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text__url}) AS installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text__url ON ${installation.document_id} = ${installation__client_info__events__metadata__metrics__datetime__jwe__labeled_rate__string__text__url.document_id} ;;
+  }
+
+  join: installation__client_info__events__metadata__metrics__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${installation.client_info__events__metadata__metrics__ping_info__experiments}) AS installation__client_info__events__metadata__metrics__ping_info__experiments ON ${installation.document_id} = ${installation__client_info__events__metadata__metrics__ping_info__experiments.document_id} ;;
+  }
+
   join: installation__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${installation.metrics__labeled_counter__glean_error_invalid_label}) AS installation__metrics__labeled_counter__glean_error_invalid_label ON ${installation.document_id} = ${installation__metrics__labeled_counter__glean_error_invalid_label.document_id} ;;

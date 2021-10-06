@@ -722,3 +722,163 @@ documented in the ping's pings.yaml file.
 
   sql_table_name: `mozdata.org_mozilla_ios_focus.metrics` ;;
 }
+
+view: metrics_table__client_info__events {
+  dimension: category {
+    sql: ${TABLE}.category ;;
+    type: string
+  }
+
+  dimension: extra {
+    sql: ${TABLE}.extra ;;
+    hidden: yes
+  }
+
+  dimension: name {
+    sql: ${TABLE}.name ;;
+    type: string
+  }
+
+  dimension: timestamp {
+    sql: ${TABLE}.timestamp ;;
+    type: number
+  }
+}
+
+view: metrics_table__client_info__events__extra {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+}
+
+view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__value {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value__denominator {
+    sql: ${TABLE}.value.denominator ;;
+    type: number
+    group_label: "Value"
+    group_item_label: "Denominator"
+  }
+
+  dimension: value__numerator {
+    sql: ${TABLE}.value.numerator ;;
+    type: number
+    group_label: "Value"
+    group_item_label: "Numerator"
+  }
+}
+
+view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__glean_upload_discarded_exceeding_pings_size__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__glean_database_size__glean_upload_discarded_exceeding_pings_size__glean_upload_pending_pings_directory_size__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__quantity__string__text {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: metrics_table__client_info__events__metadata__metrics__boolean__counter__datetime__jwe__labeled_rate__memory_distribution__quantity__string__text__url {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: metrics_table__client_info__events__metadata__metrics__ping_info__experiments {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value__branch {
+    sql: ${TABLE}.value.branch ;;
+    type: string
+    group_label: "Value"
+    group_item_label: "Branch"
+  }
+
+  dimension: value__extra__type {
+    sql: ${TABLE}.value.extra.type ;;
+    type: string
+    group_label: "Value Extra"
+    group_item_label: "Type"
+  }
+}

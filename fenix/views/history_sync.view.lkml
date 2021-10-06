@@ -653,6 +653,142 @@ The labels are the `category.name` identifier of the metric.
   sql_table_name: `{% parameter channel %}` ;;
 }
 
+view: history_sync__client_info__events {
+  dimension: category {
+    sql: ${TABLE}.category ;;
+    type: string
+  }
+
+  dimension: extra {
+    sql: ${TABLE}.extra ;;
+    hidden: yes
+  }
+
+  dimension: name {
+    sql: ${TABLE}.name ;;
+    type: string
+  }
+
+  dimension: timestamp {
+    sql: ${TABLE}.timestamp ;;
+    type: number
+  }
+}
+
+view: history_sync__client_info__events__extra {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: history_sync__client_info__events__metadata__metrics__counter__datetime__jwe {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: history_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+}
+
+view: history_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__value {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value__denominator {
+    sql: ${TABLE}.value.denominator ;;
+    type: number
+    group_label: "Value"
+    group_item_label: "Denominator"
+  }
+
+  dimension: value__numerator {
+    sql: ${TABLE}.value.numerator ;;
+    type: number
+    group_label: "Value"
+    group_item_label: "Numerator"
+  }
+}
+
+view: history_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__history_sync_failure_reason {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: history_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: history_sync__client_info__events__metadata__metrics__counter__datetime__jwe__labeled_rate__labeled_string__string__text__url {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: history_sync__client_info__events__metadata__metrics__ping_info__experiments {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value__branch {
+    sql: ${TABLE}.value.branch ;;
+    type: string
+    group_label: "Value"
+    group_item_label: "Branch"
+  }
+
+  dimension: value__extra__type {
+    sql: ${TABLE}.value.extra.type ;;
+    type: string
+    group_label: "Value Extra"
+    group_item_label: "Type"
+  }
+}
+
 view: history_sync__metrics__labeled_counter__glean_error_invalid_label {
   label: "Glean Error - Invalid Label"
 

@@ -12,6 +12,46 @@ explore: fog_validation {
     ]
   }
 
+  join: fog_validation__client_info__events {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events}) AS fog_validation__client_info__events ON ${fog_validation.document_id} = ${fog_validation__client_info__events.document_id} ;;
+  }
+
+  join: fog_validation__client_info__events__extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events__extra}) AS fog_validation__client_info__events__extra ON ${fog_validation.document_id} = ${fog_validation__client_info__events__extra.document_id} ;;
+  }
+
+  join: fog_validation__client_info__events__metadata__metrics__boolean__jwe {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events__metadata__metrics__boolean__jwe}) AS fog_validation__client_info__events__metadata__metrics__boolean__jwe ON ${fog_validation.document_id} = ${fog_validation__client_info__events__metadata__metrics__boolean__jwe.document_id} ;;
+  }
+
+  join: fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events__metadata__metrics__boolean__jwe__labeled_rate}) AS fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate ON ${fog_validation.document_id} = ${fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate.document_id} ;;
+  }
+
+  join: fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__value {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events__metadata__metrics__boolean__jwe__labeled_rate__value}) AS fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__value ON ${fog_validation.document_id} = ${fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__value.document_id} ;;
+  }
+
+  join: fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text}) AS fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text ON ${fog_validation.document_id} = ${fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text.document_id} ;;
+  }
+
+  join: fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text__url {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text__url}) AS fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text__url ON ${fog_validation.document_id} = ${fog_validation__client_info__events__metadata__metrics__boolean__jwe__labeled_rate__string__text__url.document_id} ;;
+  }
+
+  join: fog_validation__client_info__events__metadata__metrics__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${fog_validation.client_info__events__metadata__metrics__ping_info__experiments}) AS fog_validation__client_info__events__metadata__metrics__ping_info__experiments ON ${fog_validation.document_id} = ${fog_validation__client_info__events__metadata__metrics__ping_info__experiments.document_id} ;;
+  }
+
   join: fog_validation__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${fog_validation.metrics__labeled_counter__glean_error_invalid_label}) AS fog_validation__metrics__labeled_counter__glean_error_invalid_label ON ${fog_validation.document_id} = ${fog_validation__metrics__labeled_counter__glean_error_invalid_label.document_id} ;;

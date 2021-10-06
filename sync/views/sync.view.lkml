@@ -569,3 +569,409 @@ view: sync {
 
   sql_table_name: `mozdata.telemetry.sync` ;;
 }
+
+view: sync__application__metadata__payload__devices {
+  dimension: id {
+    sql: ${TABLE}.id ;;
+    type: string
+  }
+
+  dimension: os {
+    sql: ${TABLE}.os ;;
+    type: string
+  }
+
+  dimension: sync_id {
+    sql: ${TABLE}.sync_id ;;
+    type: string
+  }
+
+  dimension: type {
+    sql: ${TABLE}.type ;;
+    type: string
+  }
+
+  dimension: version {
+    sql: ${TABLE}.version ;;
+    type: string
+  }
+}
+
+view: sync__application__metadata__payload__devices__events {
+  dimension: f0_ {
+    sql: ${TABLE}.f0_ ;;
+    type: number
+  }
+
+  dimension: f1_ {
+    sql: ${TABLE}.f1_ ;;
+    type: string
+  }
+
+  dimension: f2_ {
+    sql: ${TABLE}.f2_ ;;
+    type: string
+  }
+
+  dimension: f3_ {
+    sql: ${TABLE}.f3_ ;;
+    type: string
+  }
+
+  dimension: f4_ {
+    sql: ${TABLE}.f4_ ;;
+    type: string
+  }
+
+  dimension: f5_ {
+    sql: ${TABLE}.f5_ ;;
+    hidden: yes
+  }
+}
+
+view: sync__application__metadata__payload__devices__events__f5_ {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: sync__application__metadata__payload__devices__events__histograms__migrations {
+  dimension: entries {
+    sql: ${TABLE}.entries ;;
+    type: number
+  }
+
+  dimension: entries_successful {
+    sql: ${TABLE}.entries_successful ;;
+    type: number
+  }
+
+  dimension: extensions {
+    sql: ${TABLE}.extensions ;;
+    type: number
+  }
+
+  dimension: extensions_successful {
+    sql: ${TABLE}.extensions_successful ;;
+    type: number
+  }
+
+  dimension: open_failure {
+    sql: ${TABLE}.open_failure ;;
+    type: yesno
+  }
+
+  dimension: type {
+    sql: ${TABLE}.type ;;
+    type: string
+  }
+}
+
+view: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs {
+  dimension: device_id {
+    sql: ${TABLE}.device_id ;;
+    type: string
+  }
+
+  dimension: devices {
+    sql: ${TABLE}.devices ;;
+    hidden: yes
+  }
+
+  dimension: did_login {
+    sql: ${TABLE}.did_login ;;
+    type: yesno
+  }
+
+  dimension: engines {
+    sql: ${TABLE}.engines ;;
+    hidden: yes
+  }
+
+  dimension: failure_reason__code {
+    sql: ${TABLE}.failure_reason.code ;;
+    type: number
+    group_label: "Failure Reason"
+    group_item_label: "Code"
+  }
+
+  dimension: failure_reason__error {
+    sql: ${TABLE}.failure_reason.error ;;
+    type: string
+    group_label: "Failure Reason"
+    group_item_label: "Error"
+  }
+
+  dimension: failure_reason__from {
+    sql: ${TABLE}.failure_reason.from ;;
+    type: string
+    group_label: "Failure Reason"
+    group_item_label: "From"
+  }
+
+  dimension: failure_reason__name {
+    sql: ${TABLE}.failure_reason.name ;;
+    type: string
+    group_label: "Failure Reason"
+    group_item_label: "Name"
+  }
+
+  dimension: restarted {
+    sql: ${TABLE}.restarted ;;
+    type: yesno
+  }
+
+  dimension: status__service {
+    sql: ${TABLE}.status.service ;;
+    type: string
+    group_label: "Status"
+    group_item_label: "Service"
+  }
+
+  dimension: status__sync {
+    sql: ${TABLE}.status.sync ;;
+    type: string
+    group_label: "Status"
+    group_item_label: "Sync"
+  }
+
+  dimension: took {
+    sql: ${TABLE}.took ;;
+    type: number
+  }
+
+  dimension: uid {
+    sql: ${TABLE}.uid ;;
+    type: string
+  }
+
+  dimension: when {
+    sql: ${TABLE}.when ;;
+    type: number
+  }
+
+  dimension: why {
+    sql: ${TABLE}.why ;;
+    type: string
+  }
+}
+
+view: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices {
+  dimension: id {
+    sql: ${TABLE}.id ;;
+    type: string
+  }
+
+  dimension: os {
+    sql: ${TABLE}.os ;;
+    type: string
+  }
+
+  dimension: version {
+    sql: ${TABLE}.version ;;
+    type: string
+  }
+}
+
+view: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines {
+  dimension: failure_reason__code {
+    sql: ${TABLE}.failure_reason.code ;;
+    type: number
+    group_label: "Failure Reason"
+    group_item_label: "Code"
+  }
+
+  dimension: failure_reason__error {
+    sql: ${TABLE}.failure_reason.error ;;
+    type: string
+    group_label: "Failure Reason"
+    group_item_label: "Error"
+  }
+
+  dimension: failure_reason__from {
+    sql: ${TABLE}.failure_reason.from ;;
+    type: string
+    group_label: "Failure Reason"
+    group_item_label: "From"
+  }
+
+  dimension: failure_reason__name {
+    sql: ${TABLE}.failure_reason.name ;;
+    type: string
+    group_label: "Failure Reason"
+    group_item_label: "Name"
+  }
+
+  dimension: incoming__applied {
+    sql: ${TABLE}.incoming.applied ;;
+    type: number
+    group_label: "Incoming"
+    group_item_label: "Applied"
+  }
+
+  dimension: incoming__failed {
+    sql: ${TABLE}.incoming.failed ;;
+    type: number
+    group_label: "Incoming"
+    group_item_label: "Failed"
+  }
+
+  dimension: incoming__new_failed {
+    sql: ${TABLE}.incoming.new_failed ;;
+    type: number
+    group_label: "Incoming"
+    group_item_label: "New Failed"
+  }
+
+  dimension: incoming__reconciled {
+    sql: ${TABLE}.incoming.reconciled ;;
+    type: number
+    group_label: "Incoming"
+    group_item_label: "Reconciled"
+  }
+
+  dimension: incoming__succeeded {
+    sql: ${TABLE}.incoming.succeeded ;;
+    type: number
+    group_label: "Incoming"
+    group_item_label: "Succeeded"
+  }
+
+  dimension: name {
+    sql: ${TABLE}.name ;;
+    type: string
+  }
+
+  dimension: outgoing {
+    sql: ${TABLE}.outgoing ;;
+    hidden: yes
+  }
+
+  dimension: status {
+    sql: ${TABLE}.status ;;
+    type: string
+  }
+
+  dimension: steps {
+    sql: ${TABLE}.steps ;;
+    hidden: yes
+  }
+
+  dimension: took {
+    sql: ${TABLE}.took ;;
+    type: number
+  }
+
+  dimension: validation__checked {
+    sql: ${TABLE}.validation.checked ;;
+    type: number
+    group_label: "Validation"
+    group_item_label: "Checked"
+  }
+
+  dimension: validation__failure_reason__code {
+    sql: ${TABLE}.validation.failure_reason.code ;;
+    type: number
+    group_label: "Validation Failure Reason"
+    group_item_label: "Code"
+  }
+
+  dimension: validation__failure_reason__error {
+    sql: ${TABLE}.validation.failure_reason.error ;;
+    type: string
+    group_label: "Validation Failure Reason"
+    group_item_label: "Error"
+  }
+
+  dimension: validation__failure_reason__from {
+    sql: ${TABLE}.validation.failure_reason.from ;;
+    type: string
+    group_label: "Validation Failure Reason"
+    group_item_label: "From"
+  }
+
+  dimension: validation__failure_reason__name {
+    sql: ${TABLE}.validation.failure_reason.name ;;
+    type: string
+    group_label: "Validation Failure Reason"
+    group_item_label: "Name"
+  }
+
+  dimension: validation__problems {
+    sql: ${TABLE}.validation.problems ;;
+    hidden: yes
+  }
+
+  dimension: validation__took {
+    sql: ${TABLE}.validation.took ;;
+    type: number
+    group_label: "Validation"
+    group_item_label: "Took"
+  }
+
+  dimension: validation__version {
+    sql: ${TABLE}.validation.version ;;
+    type: number
+    group_label: "Validation"
+    group_item_label: "Version"
+  }
+}
+
+view: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing {
+  dimension: failed {
+    sql: ${TABLE}.failed ;;
+    type: number
+  }
+
+  dimension: sent {
+    sql: ${TABLE}.sent ;;
+    type: number
+  }
+}
+
+view: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing__steps {
+  dimension: counts {
+    sql: ${TABLE}.counts ;;
+    hidden: yes
+  }
+
+  dimension: name {
+    sql: ${TABLE}.name ;;
+    type: string
+  }
+
+  dimension: took {
+    sql: ${TABLE}.took ;;
+    type: number
+  }
+}
+
+view: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing__steps__counts {
+  dimension: count {
+    sql: ${TABLE}.count ;;
+    type: number
+  }
+
+  dimension: name {
+    sql: ${TABLE}.name ;;
+    type: string
+  }
+}
+
+view: sync__application__metadata__payload__devices__events__histograms__migrations__os__syncs__devices__engines__failure_reason__incoming__outgoing__steps__validation__failure_reason__problems {
+  dimension: count {
+    sql: ${TABLE}.count ;;
+    type: number
+  }
+
+  dimension: name {
+    sql: ${TABLE}.name ;;
+    type: string
+  }
+}

@@ -13,6 +13,46 @@ explore: activation {
     ]
   }
 
+  join: activation__client_info__events {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${activation.client_info__events}) AS activation__client_info__events ON ${activation.document_id} = ${activation__client_info__events.document_id} ;;
+  }
+
+  join: activation__client_info__events__extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${activation.client_info__events__extra}) AS activation__client_info__events__extra ON ${activation.document_id} = ${activation__client_info__events__extra.document_id} ;;
+  }
+
+  join: activation__client_info__events__metadata__metrics__jwe {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${activation.client_info__events__metadata__metrics__jwe}) AS activation__client_info__events__metadata__metrics__jwe ON ${activation.document_id} = ${activation__client_info__events__metadata__metrics__jwe.document_id} ;;
+  }
+
+  join: activation__client_info__events__metadata__metrics__jwe__labeled_rate {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${activation.client_info__events__metadata__metrics__jwe__labeled_rate}) AS activation__client_info__events__metadata__metrics__jwe__labeled_rate ON ${activation.document_id} = ${activation__client_info__events__metadata__metrics__jwe__labeled_rate.document_id} ;;
+  }
+
+  join: activation__client_info__events__metadata__metrics__jwe__labeled_rate__value {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${activation.client_info__events__metadata__metrics__jwe__labeled_rate__value}) AS activation__client_info__events__metadata__metrics__jwe__labeled_rate__value ON ${activation.document_id} = ${activation__client_info__events__metadata__metrics__jwe__labeled_rate__value.document_id} ;;
+  }
+
+  join: activation__client_info__events__metadata__metrics__jwe__labeled_rate__string__text {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${activation.client_info__events__metadata__metrics__jwe__labeled_rate__string__text}) AS activation__client_info__events__metadata__metrics__jwe__labeled_rate__string__text ON ${activation.document_id} = ${activation__client_info__events__metadata__metrics__jwe__labeled_rate__string__text.document_id} ;;
+  }
+
+  join: activation__client_info__events__metadata__metrics__jwe__labeled_rate__string__text__url {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${activation.client_info__events__metadata__metrics__jwe__labeled_rate__string__text__url}) AS activation__client_info__events__metadata__metrics__jwe__labeled_rate__string__text__url ON ${activation.document_id} = ${activation__client_info__events__metadata__metrics__jwe__labeled_rate__string__text__url.document_id} ;;
+  }
+
+  join: activation__client_info__events__metadata__metrics__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${activation.client_info__events__metadata__metrics__ping_info__experiments}) AS activation__client_info__events__metadata__metrics__ping_info__experiments ON ${activation.document_id} = ${activation__client_info__events__metadata__metrics__ping_info__experiments.document_id} ;;
+  }
+
   join: activation__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_label}) AS activation__metrics__labeled_counter__glean_error_invalid_label ON ${activation.document_id} = ${activation__metrics__labeled_counter__glean_error_invalid_label.document_id} ;;
