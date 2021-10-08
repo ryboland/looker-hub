@@ -19,7 +19,7 @@ explore: custom {
 
   join: custom__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${custom.events__extra}) AS custom__events__extra ;;
+    sql: LEFT JOIN UNNEST(${custom__events.extra}) AS custom__events__extra ;;
   }
 
   join: custom__metrics__jwe {
@@ -34,7 +34,7 @@ explore: custom {
 
   join: custom__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${custom.metrics__labeled_rate__value}) AS custom__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${custom__metrics__labeled_rate.value}) AS custom__metrics__labeled_rate__value ;;
   }
 
   join: custom__metrics__text {

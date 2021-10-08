@@ -20,7 +20,7 @@ explore: sync {
 
   join: sync__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync.events__extra}) AS sync__events__extra ;;
+    sql: LEFT JOIN UNNEST(${sync__events.extra}) AS sync__events__extra ;;
   }
 
   join: sync__metrics__jwe {
@@ -35,7 +35,7 @@ explore: sync {
 
   join: sync__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync.metrics__labeled_rate__value}) AS sync__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${sync__metrics__labeled_rate.value}) AS sync__metrics__labeled_rate__value ;;
   }
 
   join: sync__metrics__labeled_string__sync_failure_reason {

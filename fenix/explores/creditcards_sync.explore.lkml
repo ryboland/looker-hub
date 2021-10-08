@@ -20,7 +20,7 @@ explore: creditcards_sync {
 
   join: creditcards_sync__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${creditcards_sync.events__extra}) AS creditcards_sync__events__extra ;;
+    sql: LEFT JOIN UNNEST(${creditcards_sync__events.extra}) AS creditcards_sync__events__extra ;;
   }
 
   join: creditcards_sync__metrics__jwe {
@@ -35,7 +35,7 @@ explore: creditcards_sync {
 
   join: creditcards_sync__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${creditcards_sync.metrics__labeled_rate__value}) AS creditcards_sync__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${creditcards_sync__metrics__labeled_rate.value}) AS creditcards_sync__metrics__labeled_rate__value ;;
   }
 
   join: creditcards_sync__metrics__labeled_string__creditcards_sync_failure_reason {

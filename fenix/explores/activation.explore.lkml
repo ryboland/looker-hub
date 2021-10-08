@@ -20,7 +20,7 @@ explore: activation {
 
   join: activation__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${activation.events__extra}) AS activation__events__extra ;;
+    sql: LEFT JOIN UNNEST(${activation__events.extra}) AS activation__events__extra ;;
   }
 
   join: activation__metrics__jwe {
@@ -35,7 +35,7 @@ explore: activation {
 
   join: activation__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${activation.metrics__labeled_rate__value}) AS activation__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${activation__metrics__labeled_rate.value}) AS activation__metrics__labeled_rate__value ;;
   }
 
   join: activation__metrics__text {

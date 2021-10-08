@@ -19,7 +19,7 @@ explore: baseline {
 
   join: baseline__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.events__extra}) AS baseline__events__extra ;;
+    sql: LEFT JOIN UNNEST(${baseline__events.extra}) AS baseline__events__extra ;;
   }
 
   join: baseline__metrics__jwe {
@@ -34,7 +34,7 @@ explore: baseline {
 
   join: baseline__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_rate__value}) AS baseline__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${baseline__metrics__labeled_rate.value}) AS baseline__metrics__labeled_rate__value ;;
   }
 
   join: baseline__metrics__text {

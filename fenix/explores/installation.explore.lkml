@@ -20,7 +20,7 @@ explore: installation {
 
   join: installation__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${installation.events__extra}) AS installation__events__extra ;;
+    sql: LEFT JOIN UNNEST(${installation__events.extra}) AS installation__events__extra ;;
   }
 
   join: installation__metrics__jwe {
@@ -35,7 +35,7 @@ explore: installation {
 
   join: installation__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${installation.metrics__labeled_rate__value}) AS installation__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${installation__metrics__labeled_rate.value}) AS installation__metrics__labeled_rate__value ;;
   }
 
   join: installation__metrics__text {

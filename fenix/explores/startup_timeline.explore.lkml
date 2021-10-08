@@ -20,7 +20,7 @@ explore: startup_timeline {
 
   join: startup_timeline__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.events__extra}) AS startup_timeline__events__extra ;;
+    sql: LEFT JOIN UNNEST(${startup_timeline__events.extra}) AS startup_timeline__events__extra ;;
   }
 
   join: startup_timeline__metrics__jwe {
@@ -35,7 +35,7 @@ explore: startup_timeline {
 
   join: startup_timeline__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.metrics__labeled_rate__value}) AS startup_timeline__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${startup_timeline__metrics__labeled_rate.value}) AS startup_timeline__metrics__labeled_rate__value ;;
   }
 
   join: startup_timeline__metrics__text {

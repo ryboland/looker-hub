@@ -19,7 +19,7 @@ explore: fog_validation {
 
   join: fog_validation__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.events__extra}) AS fog_validation__events__extra ;;
+    sql: LEFT JOIN UNNEST(${fog_validation__events.extra}) AS fog_validation__events__extra ;;
   }
 
   join: fog_validation__metrics__jwe {
@@ -34,7 +34,7 @@ explore: fog_validation {
 
   join: fog_validation__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.metrics__labeled_rate__value}) AS fog_validation__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${fog_validation__metrics__labeled_rate.value}) AS fog_validation__metrics__labeled_rate__value ;;
   }
 
   join: fog_validation__metrics__text {

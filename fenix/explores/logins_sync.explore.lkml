@@ -20,7 +20,7 @@ explore: logins_sync {
 
   join: logins_sync__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${logins_sync.events__extra}) AS logins_sync__events__extra ;;
+    sql: LEFT JOIN UNNEST(${logins_sync__events.extra}) AS logins_sync__events__extra ;;
   }
 
   join: logins_sync__metrics__jwe {
@@ -35,7 +35,7 @@ explore: logins_sync {
 
   join: logins_sync__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${logins_sync.metrics__labeled_rate__value}) AS logins_sync__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${logins_sync__metrics__labeled_rate.value}) AS logins_sync__metrics__labeled_rate__value ;;
   }
 
   join: logins_sync__metrics__labeled_string__logins_sync_failure_reason {

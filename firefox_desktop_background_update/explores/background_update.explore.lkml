@@ -19,7 +19,7 @@ explore: background_update {
 
   join: background_update__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.events__extra}) AS background_update__events__extra ;;
+    sql: LEFT JOIN UNNEST(${background_update__events.extra}) AS background_update__events__extra ;;
   }
 
   join: background_update__metrics__jwe {
@@ -34,7 +34,7 @@ explore: background_update {
 
   join: background_update__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.metrics__labeled_rate__value}) AS background_update__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${background_update__metrics__labeled_rate.value}) AS background_update__metrics__labeled_rate__value ;;
   }
 
   join: background_update__metrics__text {

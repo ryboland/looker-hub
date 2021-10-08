@@ -20,7 +20,7 @@ explore: bookmarks_sync {
 
   join: bookmarks_sync__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${bookmarks_sync.events__extra}) AS bookmarks_sync__events__extra ;;
+    sql: LEFT JOIN UNNEST(${bookmarks_sync__events.extra}) AS bookmarks_sync__events__extra ;;
   }
 
   join: bookmarks_sync__metrics__jwe {
@@ -35,7 +35,7 @@ explore: bookmarks_sync {
 
   join: bookmarks_sync__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${bookmarks_sync.metrics__labeled_rate__value}) AS bookmarks_sync__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${bookmarks_sync__metrics__labeled_rate.value}) AS bookmarks_sync__metrics__labeled_rate__value ;;
   }
 
   join: bookmarks_sync__metrics__labeled_string__bookmarks_sync_failure_reason {

@@ -20,7 +20,7 @@ explore: first_session {
 
   join: first_session__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.events__extra}) AS first_session__events__extra ;;
+    sql: LEFT JOIN UNNEST(${first_session__events.extra}) AS first_session__events__extra ;;
   }
 
   join: first_session__metrics__jwe {
@@ -35,7 +35,7 @@ explore: first_session {
 
   join: first_session__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.metrics__labeled_rate__value}) AS first_session__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${first_session__metrics__labeled_rate.value}) AS first_session__metrics__labeled_rate__value ;;
   }
 
   join: first_session__metrics__text {

@@ -20,7 +20,7 @@ explore: addresses_sync {
 
   join: addresses_sync__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.events__extra}) AS addresses_sync__events__extra ;;
+    sql: LEFT JOIN UNNEST(${addresses_sync__events.extra}) AS addresses_sync__events__extra ;;
   }
 
   join: addresses_sync__metrics__jwe {
@@ -35,7 +35,7 @@ explore: addresses_sync {
 
   join: addresses_sync__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.metrics__labeled_rate__value}) AS addresses_sync__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${addresses_sync__metrics__labeled_rate.value}) AS addresses_sync__metrics__labeled_rate__value ;;
   }
 
   join: addresses_sync__metrics__labeled_string__addresses_sync_failure_reason {

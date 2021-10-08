@@ -20,7 +20,7 @@ explore: metrics {
 
   join: metrics__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.events__extra}) AS metrics__events__extra ;;
+    sql: LEFT JOIN UNNEST(${metrics__events.extra}) AS metrics__events__extra ;;
   }
 
   join: metrics__metrics__jwe {
@@ -35,7 +35,7 @@ explore: metrics {
 
   join: metrics__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_rate__value}) AS metrics__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${metrics__metrics__labeled_rate.value}) AS metrics__metrics__labeled_rate__value ;;
   }
 
   join: metrics__metrics__memory_distribution__glean_database_size__values {

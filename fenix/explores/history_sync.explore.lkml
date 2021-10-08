@@ -20,7 +20,7 @@ explore: history_sync {
 
   join: history_sync__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${history_sync.events__extra}) AS history_sync__events__extra ;;
+    sql: LEFT JOIN UNNEST(${history_sync__events.extra}) AS history_sync__events__extra ;;
   }
 
   join: history_sync__metrics__jwe {
@@ -35,7 +35,7 @@ explore: history_sync {
 
   join: history_sync__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${history_sync.metrics__labeled_rate__value}) AS history_sync__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${history_sync__metrics__labeled_rate.value}) AS history_sync__metrics__labeled_rate__value ;;
   }
 
   join: history_sync__metrics__labeled_string__history_sync_failure_reason {
