@@ -320,5 +320,5 @@ view: subscriptions {
     ]
   }
 
-  sql_table_name: `mozdata.mozilla_vpn.all_subscriptions` ;;
+  sql_table_name: `moz-fx-data-shared-prod.mozilla_vpn.all_subscriptions` ;;
 }

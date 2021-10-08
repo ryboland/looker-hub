@@ -99,7 +99,7 @@ view: urlbar_clients_daily {
     sql: ${client_id} ;;
   }
 
-  sql_table_name: `mozdata.telemetry.urlbar_clients_daily` ;;
+  sql_table_name: `moz-fx-data-shared-prod.telemetry.urlbar_clients_daily` ;;
 }
 
 view: urlbar_clients_daily__count_picked_by_position {

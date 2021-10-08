@@ -19,37 +19,37 @@ explore: custom {
 
   join: custom__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${custom__events.events__extra}) AS custom__events__extra ;;
+    sql: LEFT JOIN UNNEST(${custom.events__extra}) AS custom__events__extra ;;
   }
 
   join: custom__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${custom__metrics.metrics__jwe}) AS custom__metrics__jwe ;;
+    sql: LEFT JOIN UNNEST(${custom.metrics__jwe}) AS custom__metrics__jwe ;;
   }
 
   join: custom__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${custom__metrics.metrics__labeled_rate}) AS custom__metrics__labeled_rate ;;
+    sql: LEFT JOIN UNNEST(${custom.metrics__labeled_rate}) AS custom__metrics__labeled_rate ;;
   }
 
   join: custom__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${custom__metrics__labeled_rate.metrics__labeled_rate__value}) AS custom__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${custom.metrics__labeled_rate__value}) AS custom__metrics__labeled_rate__value ;;
   }
 
   join: custom__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${custom__metrics.metrics__text}) AS custom__metrics__text ;;
+    sql: LEFT JOIN UNNEST(${custom.metrics__text}) AS custom__metrics__text ;;
   }
 
   join: custom__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${custom__metrics.metrics__url}) AS custom__metrics__url ;;
+    sql: LEFT JOIN UNNEST(${custom.metrics__url}) AS custom__metrics__url ;;
   }
 
   join: custom__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${custom__ping_info.ping_info__experiments}) AS custom__ping_info__experiments ;;
+    sql: LEFT JOIN UNNEST(${custom.ping_info__experiments}) AS custom__ping_info__experiments ;;
   }
 
   join: custom__metrics__labeled_counter__glean_error_invalid_label {

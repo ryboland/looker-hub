@@ -118,7 +118,7 @@ view: impression_stats_flat {
     sql: ${client_id} ;;
   }
 
-  sql_table_name: `mozdata.activity_stream.impression_stats_flat` ;;
+  sql_table_name: `moz-fx-data-shared-prod.activity_stream.impression_stats_flat` ;;
 }
 
 view: impression_stats_flat__experiments {

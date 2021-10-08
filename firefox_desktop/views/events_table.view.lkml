@@ -451,7 +451,7 @@ The labels are the `category.name` identifier of the metric.
     description: "Time when the ingestion edge server accepted this message"
   }
 
-  sql_table_name: `mozdata.firefox_desktop.events` ;;
+  sql_table_name: `moz-fx-data-shared-prod.firefox_desktop.events` ;;
 }
 
 view: events_table__events {

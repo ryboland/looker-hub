@@ -175,5 +175,5 @@ view: baseline_clients_last_seen_table {
     datatype: date
   }
 
-  sql_table_name: `mozdata.org_mozilla_ios_focus.baseline_clients_last_seen` ;;
+  sql_table_name: `moz-fx-data-shared-prod.org_mozilla_ios_focus.baseline_clients_last_seen` ;;
 }

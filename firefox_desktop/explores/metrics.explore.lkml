@@ -19,67 +19,67 @@ explore: metrics {
 
   join: metrics__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics__events.events__extra}) AS metrics__events__extra ;;
+    sql: LEFT JOIN UNNEST(${metrics.events__extra}) AS metrics__events__extra ;;
   }
 
   join: metrics__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics__metrics.metrics__jwe}) AS metrics__metrics__jwe ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__jwe}) AS metrics__metrics__jwe ;;
   }
 
   join: metrics__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics__metrics.metrics__labeled_rate}) AS metrics__metrics__labeled_rate ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_rate}) AS metrics__metrics__labeled_rate ;;
   }
 
   join: metrics__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics__metrics__labeled_rate.metrics__labeled_rate__value}) AS metrics__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_rate__value}) AS metrics__metrics__labeled_rate__value ;;
   }
 
   join: metrics__metrics__memory_distribution__fog_ipc_buffer_sizes__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics__metrics__memory_distribution__fog_ipc_buffer_sizes.metrics__memory_distribution__fog_ipc_buffer_sizes__values}) AS metrics__metrics__memory_distribution__fog_ipc_buffer_sizes__values ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__memory_distribution__fog_ipc_buffer_sizes__values}) AS metrics__metrics__memory_distribution__fog_ipc_buffer_sizes__values ;;
   }
 
   join: metrics__metrics__memory_distribution__glean_database_size__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics__metrics__memory_distribution__glean_database_size.metrics__memory_distribution__glean_database_size__values}) AS metrics__metrics__memory_distribution__glean_database_size__values ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__memory_distribution__glean_database_size__values}) AS metrics__metrics__memory_distribution__glean_database_size__values ;;
   }
 
   join: metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size.metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values}) AS metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values}) AS metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values ;;
   }
 
   join: metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size.metrics__memory_distribution__glean_upload_pending_pings_directory_size__values}) AS metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__memory_distribution__glean_upload_pending_pings_directory_size__values}) AS metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values ;;
   }
 
   join: metrics__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics__metrics.metrics__text}) AS metrics__metrics__text ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__text}) AS metrics__metrics__text ;;
   }
 
   join: metrics__metrics__timing_distribution__fog_ipc_flush_durations__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__fog_ipc_flush_durations.metrics__timing_distribution__fog_ipc_flush_durations__values}) AS metrics__metrics__timing_distribution__fog_ipc_flush_durations__values ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__fog_ipc_flush_durations__values}) AS metrics__metrics__timing_distribution__fog_ipc_flush_durations__values ;;
   }
 
   join: metrics__metrics__timing_distribution__paint_build_displaylist_time__values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics__metrics__timing_distribution__paint_build_displaylist_time.metrics__timing_distribution__paint_build_displaylist_time__values}) AS metrics__metrics__timing_distribution__paint_build_displaylist_time__values ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__timing_distribution__paint_build_displaylist_time__values}) AS metrics__metrics__timing_distribution__paint_build_displaylist_time__values ;;
   }
 
   join: metrics__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics__metrics.metrics__url}) AS metrics__metrics__url ;;
+    sql: LEFT JOIN UNNEST(${metrics.metrics__url}) AS metrics__metrics__url ;;
   }
 
   join: metrics__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics__ping_info.ping_info__experiments}) AS metrics__ping_info__experiments ;;
+    sql: LEFT JOIN UNNEST(${metrics.ping_info__experiments}) AS metrics__ping_info__experiments ;;
   }
 
   join: metrics__metrics__labeled_counter__glean_error_invalid_label {

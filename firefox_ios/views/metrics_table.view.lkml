@@ -540,6 +540,16 @@ default browser onboarding is clicked.
 "
   }
 
+  dimension: metrics__counter__firefox_home_page_jump_back_in_group_opened {
+    sql: ${TABLE}.metrics.counter.firefox_home_page_jump_back_in_group_opened ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Firefox Home Page Jump Back In Group Opened"
+    description: "Counts the number of times a user taps to open an
+existing group from the Jump Back In section
+"
+  }
+
   dimension: metrics__counter__firefox_home_page_jump_back_in_section_view {
     sql: ${TABLE}.metrics.counter.firefox_home_page_jump_back_in_section_view ;;
     type: number
@@ -1698,21 +1708,21 @@ tracking-protection that is enabled. One of:
 
   parameter: channel {
     type: unquoted
-    default_value: "mozdata.firefox_ios.metrics"
+    default_value: "moz-fx-data-shared-prod.firefox_ios.metrics"
 
     allowed_value: {
       label: "Release"
-      value: "mozdata.firefox_ios.metrics"
+      value: "moz-fx-data-shared-prod.firefox_ios.metrics"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "mozdata.org_mozilla_ios_firefoxbeta.metrics"
+      value: "moz-fx-data-shared-prod.org_mozilla_ios_firefoxbeta.metrics"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "mozdata.org_mozilla_ios_fennec.metrics"
+      value: "moz-fx-data-shared-prod.org_mozilla_ios_fennec.metrics"
     }
   }
 

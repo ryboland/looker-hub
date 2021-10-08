@@ -24,5 +24,5 @@ view: fxa_first_seen_table {
     datatype: date
   }
 
-  sql_table_name: `mozdata.firefox_accounts.fxa_users_first_seen` ;;
+  sql_table_name: `moz-fx-data-shared-prod.firefox_accounts.fxa_users_first_seen` ;;
 }

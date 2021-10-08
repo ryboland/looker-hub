@@ -8,7 +8,7 @@ explore: baseline {
 
   always_filter: {
     filters: [
-      channel: "mozdata.firefox^_ios.baseline",
+      channel: "moz-fx-data-shared-prod.firefox^_ios.baseline",
       submission_date: "28 days",
     ]
   }
@@ -20,37 +20,37 @@ explore: baseline {
 
   join: baseline__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline__events.events__extra}) AS baseline__events__extra ;;
+    sql: LEFT JOIN UNNEST(${baseline.events__extra}) AS baseline__events__extra ;;
   }
 
   join: baseline__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline__metrics.metrics__jwe}) AS baseline__metrics__jwe ;;
+    sql: LEFT JOIN UNNEST(${baseline.metrics__jwe}) AS baseline__metrics__jwe ;;
   }
 
   join: baseline__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline__metrics.metrics__labeled_rate}) AS baseline__metrics__labeled_rate ;;
+    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_rate}) AS baseline__metrics__labeled_rate ;;
   }
 
   join: baseline__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline__metrics__labeled_rate.metrics__labeled_rate__value}) AS baseline__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_rate__value}) AS baseline__metrics__labeled_rate__value ;;
   }
 
   join: baseline__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline__metrics.metrics__text}) AS baseline__metrics__text ;;
+    sql: LEFT JOIN UNNEST(${baseline.metrics__text}) AS baseline__metrics__text ;;
   }
 
   join: baseline__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline__metrics.metrics__url}) AS baseline__metrics__url ;;
+    sql: LEFT JOIN UNNEST(${baseline.metrics__url}) AS baseline__metrics__url ;;
   }
 
   join: baseline__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${baseline__ping_info.ping_info__experiments}) AS baseline__ping_info__experiments ;;
+    sql: LEFT JOIN UNNEST(${baseline.ping_info__experiments}) AS baseline__ping_info__experiments ;;
   }
 
   join: baseline__metrics__labeled_counter__glean_error_invalid_label {

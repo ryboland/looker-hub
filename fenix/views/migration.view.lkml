@@ -2437,21 +2437,21 @@ The labels are the `category.name` identifier of the metric.
 
   parameter: channel {
     type: unquoted
-    default_value: "mozdata.fenix.migration"
+    default_value: "moz-fx-data-shared-prod.fenix.migration"
 
     allowed_value: {
       label: "Release"
-      value: "mozdata.fenix.migration"
+      value: "moz-fx-data-shared-prod.fenix.migration"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "mozdata.org_mozilla_firefox_beta.migration"
+      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.migration"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "mozdata.org_mozilla_fenix.migration"
+      value: "moz-fx-data-shared-prod.org_mozilla_fenix.migration"
     }
   }
 
@@ -2900,7 +2900,7 @@ view: suggest__migration__metrics__labeled_counter__glean_error_invalid_label {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.migration as t,
+from moz-fx-data-shared-prod.fenix.migration as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2919,7 +2919,7 @@ view: suggest__migration__metrics__labeled_counter__glean_error_invalid_overflow
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.migration as t,
+from moz-fx-data-shared-prod.fenix.migration as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2938,7 +2938,7 @@ view: suggest__migration__metrics__labeled_counter__glean_error_invalid_state {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.migration as t,
+from moz-fx-data-shared-prod.fenix.migration as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2957,7 +2957,7 @@ view: suggest__migration__metrics__labeled_counter__glean_error_invalid_value {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.migration as t,
+from moz-fx-data-shared-prod.fenix.migration as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2976,7 +2976,7 @@ view: suggest__migration__metrics__labeled_counter__migration_bookmarks_migrated
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.migration as t,
+from moz-fx-data-shared-prod.fenix.migration as t,
 unnest(metrics.labeled_counter.migration_bookmarks_migrated) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2995,7 +2995,7 @@ view: suggest__migration__metrics__labeled_counter__migration_history_migrated {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.migration as t,
+from moz-fx-data-shared-prod.fenix.migration as t,
 unnest(metrics.labeled_counter.migration_history_migrated) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -3014,7 +3014,7 @@ view: suggest__migration__metrics__labeled_counter__migration_logins_failure_cou
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.migration as t,
+from moz-fx-data-shared-prod.fenix.migration as t,
 unnest(metrics.labeled_counter.migration_logins_failure_counts) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0

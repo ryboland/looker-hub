@@ -473,21 +473,21 @@ and only sent with the activation ping.
 
   parameter: channel {
     type: unquoted
-    default_value: "mozdata.fenix.activation"
+    default_value: "moz-fx-data-shared-prod.fenix.activation"
 
     allowed_value: {
       label: "Release"
-      value: "mozdata.fenix.activation"
+      value: "moz-fx-data-shared-prod.fenix.activation"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "mozdata.org_mozilla_firefox_beta.activation"
+      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.activation"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "mozdata.org_mozilla_fenix.activation"
+      value: "moz-fx-data-shared-prod.org_mozilla_fenix.activation"
     }
   }
 

@@ -28,5 +28,5 @@ view: experiment_cumulative_search_count {
     ]
   }
 
-  sql_table_name: `mozdata.telemetry.experiment_cumulative_search_count` ;;
+  sql_table_name: `moz-fx-data-shared-prod.telemetry.experiment_cumulative_search_count` ;;
 }

@@ -532,7 +532,7 @@ The labels are the `category.name` identifier of the metric.
     type: count
   }
 
-  sql_table_name: `mozdata.firefox_desktop.fog_validation` ;;
+  sql_table_name: `moz-fx-data-shared-prod.firefox_desktop.fog_validation` ;;
 }
 
 view: fog_validation__events {
@@ -836,7 +836,7 @@ view: suggest__fog_validation__metrics__labeled_counter__glean_error_invalid_lab
     sql: select
     m.key,
     count(*) as n
-from mozdata.firefox_desktop.fog_validation as t,
+from moz-fx-data-shared-prod.firefox_desktop.fog_validation as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -855,7 +855,7 @@ view: suggest__fog_validation__metrics__labeled_counter__glean_error_invalid_ove
     sql: select
     m.key,
     count(*) as n
-from mozdata.firefox_desktop.fog_validation as t,
+from moz-fx-data-shared-prod.firefox_desktop.fog_validation as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -874,7 +874,7 @@ view: suggest__fog_validation__metrics__labeled_counter__glean_error_invalid_sta
     sql: select
     m.key,
     count(*) as n
-from mozdata.firefox_desktop.fog_validation as t,
+from moz-fx-data-shared-prod.firefox_desktop.fog_validation as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -893,7 +893,7 @@ view: suggest__fog_validation__metrics__labeled_counter__glean_error_invalid_val
     sql: select
     m.key,
     count(*) as n
-from mozdata.firefox_desktop.fog_validation as t,
+from moz-fx-data-shared-prod.firefox_desktop.fog_validation as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0

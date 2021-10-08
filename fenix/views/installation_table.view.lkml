@@ -520,21 +520,21 @@ ping is from Adjust and will remain static across installs.
 
   parameter: channel {
     type: unquoted
-    default_value: "mozdata.fenix.installation"
+    default_value: "moz-fx-data-shared-prod.fenix.installation"
 
     allowed_value: {
       label: "Release"
-      value: "mozdata.fenix.installation"
+      value: "moz-fx-data-shared-prod.fenix.installation"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "mozdata.org_mozilla_firefox_beta.installation"
+      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.installation"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "mozdata.org_mozilla_fenix.installation"
+      value: "moz-fx-data-shared-prod.org_mozilla_fenix.installation"
     }
   }
 

@@ -411,7 +411,7 @@ view: sessions {
     type: count
   }
 
-  sql_table_name: `mozdata.activity_stream.sessions` ;;
+  sql_table_name: `moz-fx-data-shared-prod.activity_stream.sessions` ;;
 }
 
 view: sessions__experiments {

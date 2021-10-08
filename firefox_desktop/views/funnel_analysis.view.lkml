@@ -92,7 +92,7 @@ view: funnel_analysis {
 
 view: event_types {
   derived_table: {
-    sql: SELECT mozfun.event_analysis.aggregate_match_strings( ARRAY_AGG( mozfun.event_analysis.event_index_to_match_string(index))) AS match_string FROM mozdata.telemetry.event_types WHERE {% condition category %} category {% endcondition %} AND {% condition event %} event {% endcondition %} ;;
+    sql: SELECT mozfun.event_analysis.aggregate_match_strings( ARRAY_AGG( mozfun.event_analysis.event_index_to_match_string(index))) AS match_string FROM moz-fx-data-shared-prod.telemetry.event_types WHERE {% condition category %} category {% endcondition %} AND {% condition event %} event {% endcondition %} ;;
   }
 
   filter: category {
@@ -133,7 +133,7 @@ view: step_4 {
 
 view: event_names {
   derived_table: {
-    sql: SELECT category,   event,   property.key AS property_name,   property_value.key AS property_value, FROM mozdata.telemetry.event_types LEFT JOIN UNNEST(event_properties) AS property LEFT JOIN UNNEST(property.value) AS property_value ;;
+    sql: SELECT category,   event,   property.key AS property_name,   property_value.key AS property_value, FROM moz-fx-data-shared-prod.telemetry.event_types LEFT JOIN UNNEST(event_properties) AS property LEFT JOIN UNNEST(property.value) AS property_value ;;
   }
 
   dimension: category {

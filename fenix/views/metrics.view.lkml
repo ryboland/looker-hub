@@ -2339,6 +2339,78 @@ documented in the ping's pings.yaml file.
 "
   }
 
+  dimension: metrics__counter__logins_store_migration_num_failed {
+    label: "Logins Store Migration Num Failed"
+    hidden: no
+    sql: ${TABLE}.metrics.counter.logins_store_migration_num_failed ;;
+    type: number
+    group_label: "Logins Store"
+    group_item_label: "Migration Num Failed"
+
+    link: {
+      label: "Glean Dictionary reference for Logins Store Migration Num Failed"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_migration_num_failed"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The total number of login records which failed to migrate
+"
+  }
+
+  dimension: metrics__counter__logins_store_migration_num_processed {
+    label: "Logins Store Migration Num Processed"
+    hidden: no
+    sql: ${TABLE}.metrics.counter.logins_store_migration_num_processed ;;
+    type: number
+    group_label: "Logins Store"
+    group_item_label: "Migration Num Processed"
+
+    link: {
+      label: "Glean Dictionary reference for Logins Store Migration Num Processed"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_migration_num_processed"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The total number of login records processed by the migration
+"
+  }
+
+  dimension: metrics__counter__logins_store_migration_num_succeeded {
+    label: "Logins Store Migration Num Succeeded"
+    hidden: no
+    sql: ${TABLE}.metrics.counter.logins_store_migration_num_succeeded ;;
+    type: number
+    group_label: "Logins Store"
+    group_item_label: "Migration Num Succeeded"
+
+    link: {
+      label: "Glean Dictionary reference for Logins Store Migration Num Succeeded"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_migration_num_succeeded"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The total number of login records successfully migrated
+"
+  }
+
+  dimension: metrics__timespan__logins_store_migration_total_duration__value {
+    label: "Logins Store Migration Total Duration Value"
+    hidden: no
+    sql: ${TABLE}.metrics.timespan.logins_store_migration_total_duration.value ;;
+    type: number
+    group_label: "Logins Store"
+    group_item_label: "Migration Total Duration Value"
+
+    link: {
+      label: "Glean Dictionary reference for Logins Store Migration Total Duration Value"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_migration_total_duration"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "How long the migration tool
+"
+  }
+
   dimension: metrics__counter__logins_store_read_query_count {
     label: "Logins Store Read Query Count"
     hidden: no
@@ -5749,6 +5821,81 @@ Deprecated: `native_code_crash` replaced by `fatal_native_code_crash` and `nonfa
     }
   }
 
+  measure: logins_store_migration_num_failed {
+    type: sum
+    sql: ${metrics__counter__logins_store_migration_num_failed} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Logins Store Migration Num Failed"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_migration_num_failed"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: logins_store_migration_num_failed_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__logins_store_migration_num_failed: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Logins Store Migration Num Failed"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_migration_num_failed"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: logins_store_migration_num_processed {
+    type: sum
+    sql: ${metrics__counter__logins_store_migration_num_processed} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Logins Store Migration Num Processed"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_migration_num_processed"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: logins_store_migration_num_processed_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__logins_store_migration_num_processed: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Logins Store Migration Num Processed"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_migration_num_processed"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: logins_store_migration_num_succeeded {
+    type: sum
+    sql: ${metrics__counter__logins_store_migration_num_succeeded} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Logins Store Migration Num Succeeded"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_migration_num_succeeded"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: logins_store_migration_num_succeeded_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__logins_store_migration_num_succeeded: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Logins Store Migration Num Succeeded"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_migration_num_succeeded"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
   measure: logins_store_read_query_count {
     type: sum
     sql: ${metrics__counter__logins_store_read_query_count} ;;
@@ -5926,21 +6073,21 @@ Deprecated: `native_code_crash` replaced by `fatal_native_code_crash` and `nonfa
 
   parameter: channel {
     type: unquoted
-    default_value: "mozdata.fenix.metrics"
+    default_value: "moz-fx-data-shared-prod.fenix.metrics"
 
     allowed_value: {
       label: "Release"
-      value: "mozdata.fenix.metrics"
+      value: "moz-fx-data-shared-prod.fenix.metrics"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "mozdata.org_mozilla_firefox_beta.metrics"
+      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.metrics"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "mozdata.org_mozilla_fenix.metrics"
+      value: "moz-fx-data-shared-prod.org_mozilla_fenix.metrics"
     }
   }
 
@@ -8832,7 +8979,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_alpha {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_alpha) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -8851,7 +8998,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_bit_depth {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_bit_depth) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -8870,7 +9017,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_cicp_cp {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_cicp_cp) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -8889,7 +9036,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_cicp_mc {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_cicp_mc) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -8908,7 +9055,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_cicp_tc {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_cicp_tc) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -8927,7 +9074,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_colr {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_colr) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -8946,7 +9093,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_decode_result {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_decode_result) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -8965,7 +9112,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_decoder {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_decoder) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -8984,7 +9131,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_ispe {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_ispe) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9003,7 +9150,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_pixi {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_pixi) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9022,7 +9169,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_yuv_color_space {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_yuv_color_space) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9041,7 +9188,7 @@ view: suggest__metrics__metrics__labeled_counter__browser_search_ad_clicks {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.browser_search_ad_clicks) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9060,7 +9207,7 @@ view: suggest__metrics__metrics__labeled_counter__browser_search_in_content {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.browser_search_in_content) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9079,7 +9226,7 @@ view: suggest__metrics__metrics__labeled_counter__browser_search_with_ads {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.browser_search_with_ads) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9098,7 +9245,7 @@ view: suggest__metrics__metrics__labeled_counter__crash_metrics_crash_count {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.crash_metrics_crash_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9117,7 +9264,7 @@ view: suggest__metrics__metrics__labeled_counter__engine_tab_kills {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.engine_tab_kills) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9136,7 +9283,7 @@ view: suggest__metrics__metrics__labeled_counter__gfx_content_frame_time_reason 
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.gfx_content_frame_time_reason) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9155,7 +9302,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9174,7 +9321,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9193,7 +9340,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9212,7 +9359,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9231,7 +9378,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failu
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.glean_upload_ping_upload_failure) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9250,7 +9397,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitt
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.glean_validation_pings_submitted) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9269,7 +9416,7 @@ view: suggest__metrics__metrics__labeled_counter__logins_store_read_query_error_
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.logins_store_read_query_error_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9288,7 +9435,7 @@ view: suggest__metrics__metrics__labeled_counter__logins_store_unlock_error_coun
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.logins_store_unlock_error_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9307,7 +9454,7 @@ view: suggest__metrics__metrics__labeled_counter__logins_store_write_query_error
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.logins_store_write_query_error_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9326,7 +9473,7 @@ view: suggest__metrics__metrics__labeled_counter__media_audio_backend {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.media_audio_backend) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9345,7 +9492,7 @@ view: suggest__metrics__metrics__labeled_counter__media_audio_init_failure {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.media_audio_init_failure) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9364,7 +9511,7 @@ view: suggest__metrics__metrics__labeled_counter__metrics_search_count {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.metrics_search_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9383,7 +9530,7 @@ view: suggest__metrics__metrics__labeled_counter__perf_startup_startup_type {
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.perf_startup_startup_type) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9402,7 +9549,7 @@ view: suggest__metrics__metrics__labeled_counter__places_manager_read_query_erro
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.places_manager_read_query_error_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9421,7 +9568,7 @@ view: suggest__metrics__metrics__labeled_counter__places_manager_write_query_err
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.metrics as t,
+from moz-fx-data-shared-prod.fenix.metrics as t,
 unnest(metrics.labeled_counter.places_manager_write_query_error_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0

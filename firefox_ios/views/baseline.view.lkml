@@ -606,21 +606,21 @@ This metric appears in both the metrics and baseline pings.
 
   parameter: channel {
     type: unquoted
-    default_value: "mozdata.firefox_ios.baseline"
+    default_value: "moz-fx-data-shared-prod.firefox_ios.baseline"
 
     allowed_value: {
       label: "Release"
-      value: "mozdata.firefox_ios.baseline"
+      value: "moz-fx-data-shared-prod.firefox_ios.baseline"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "mozdata.org_mozilla_ios_firefoxbeta.baseline"
+      value: "moz-fx-data-shared-prod.org_mozilla_ios_firefoxbeta.baseline"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "mozdata.org_mozilla_ios_fennec.baseline"
+      value: "moz-fx-data-shared-prod.org_mozilla_ios_fennec.baseline"
     }
   }
 
@@ -971,7 +971,7 @@ view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_label {
     sql: select
     m.key,
     count(*) as n
-from mozdata.firefox_ios.baseline as t,
+from moz-fx-data-shared-prod.firefox_ios.baseline as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -990,7 +990,7 @@ view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_overflow 
     sql: select
     m.key,
     count(*) as n
-from mozdata.firefox_ios.baseline as t,
+from moz-fx-data-shared-prod.firefox_ios.baseline as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1009,7 +1009,7 @@ view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_state {
     sql: select
     m.key,
     count(*) as n
-from mozdata.firefox_ios.baseline as t,
+from moz-fx-data-shared-prod.firefox_ios.baseline as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1028,7 +1028,7 @@ view: suggest__baseline__metrics__labeled_counter__glean_error_invalid_value {
     sql: select
     m.key,
     count(*) as n
-from mozdata.firefox_ios.baseline as t,
+from moz-fx-data-shared-prod.firefox_ios.baseline as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1047,7 +1047,7 @@ view: suggest__baseline__metrics__labeled_counter__glean_validation_pings_submit
     sql: select
     m.key,
     count(*) as n
-from mozdata.firefox_ios.baseline as t,
+from moz-fx-data-shared-prod.firefox_ios.baseline as t,
 unnest(metrics.labeled_counter.glean_validation_pings_submitted) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0

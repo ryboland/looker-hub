@@ -19,37 +19,37 @@ explore: background_update {
 
   join: background_update__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update__events.events__extra}) AS background_update__events__extra ;;
+    sql: LEFT JOIN UNNEST(${background_update.events__extra}) AS background_update__events__extra ;;
   }
 
   join: background_update__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update__metrics.metrics__jwe}) AS background_update__metrics__jwe ;;
+    sql: LEFT JOIN UNNEST(${background_update.metrics__jwe}) AS background_update__metrics__jwe ;;
   }
 
   join: background_update__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update__metrics.metrics__labeled_rate}) AS background_update__metrics__labeled_rate ;;
+    sql: LEFT JOIN UNNEST(${background_update.metrics__labeled_rate}) AS background_update__metrics__labeled_rate ;;
   }
 
   join: background_update__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update__metrics__labeled_rate.metrics__labeled_rate__value}) AS background_update__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${background_update.metrics__labeled_rate__value}) AS background_update__metrics__labeled_rate__value ;;
   }
 
   join: background_update__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update__metrics.metrics__text}) AS background_update__metrics__text ;;
+    sql: LEFT JOIN UNNEST(${background_update.metrics__text}) AS background_update__metrics__text ;;
   }
 
   join: background_update__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update__metrics.metrics__url}) AS background_update__metrics__url ;;
+    sql: LEFT JOIN UNNEST(${background_update.metrics__url}) AS background_update__metrics__url ;;
   }
 
   join: background_update__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update__ping_info.ping_info__experiments}) AS background_update__ping_info__experiments ;;
+    sql: LEFT JOIN UNNEST(${background_update.ping_info__experiments}) AS background_update__ping_info__experiments ;;
   }
 
   join: background_update__metrics__labeled_counter__glean_error_invalid_label {

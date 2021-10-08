@@ -685,5 +685,5 @@ view: feature_usage_table {
     datatype: date
   }
 
-  sql_table_name: `mozdata.telemetry.feature_usage` ;;
+  sql_table_name: `moz-fx-data-shared-prod.telemetry.feature_usage` ;;
 }

@@ -562,21 +562,21 @@ to indicate \"undetermined\".
 
   parameter: channel {
     type: unquoted
-    default_value: "mozdata.fenix.baseline"
+    default_value: "moz-fx-data-shared-prod.fenix.baseline"
 
     allowed_value: {
       label: "Release"
-      value: "mozdata.fenix.baseline"
+      value: "moz-fx-data-shared-prod.fenix.baseline"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "mozdata.org_mozilla_firefox_beta.baseline"
+      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.baseline"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "mozdata.org_mozilla_fenix.baseline"
+      value: "moz-fx-data-shared-prod.org_mozilla_fenix.baseline"
     }
   }
 

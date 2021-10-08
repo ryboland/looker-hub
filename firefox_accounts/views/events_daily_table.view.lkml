@@ -120,7 +120,7 @@ view: events_daily_table {
     datatype: date
   }
 
-  sql_table_name: `mozdata.firefox_accounts.events_daily` ;;
+  sql_table_name: `moz-fx-data-shared-prod.firefox_accounts.events_daily` ;;
 }
 
 view: events_daily_table__experiments {

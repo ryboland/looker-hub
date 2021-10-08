@@ -649,21 +649,21 @@ The labels are the `category.name` identifier of the metric.
 
   parameter: channel {
     type: unquoted
-    default_value: "mozdata.fenix.bookmarks_sync"
+    default_value: "moz-fx-data-shared-prod.fenix.bookmarks_sync"
 
     allowed_value: {
       label: "Release"
-      value: "mozdata.fenix.bookmarks_sync"
+      value: "moz-fx-data-shared-prod.fenix.bookmarks_sync"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "mozdata.org_mozilla_firefox_beta.bookmarks_sync"
+      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.bookmarks_sync"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "mozdata.org_mozilla_fenix.bookmarks_sync"
+      value: "moz-fx-data-shared-prod.org_mozilla_fenix.bookmarks_sync"
     }
   }
 
@@ -1112,7 +1112,7 @@ view: suggest__bookmarks_sync__metrics__labeled_counter__bookmarks_sync_incoming
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.bookmarks_sync as t,
+from moz-fx-data-shared-prod.fenix.bookmarks_sync as t,
 unnest(metrics.labeled_counter.bookmarks_sync_incoming) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1131,7 +1131,7 @@ view: suggest__bookmarks_sync__metrics__labeled_counter__bookmarks_sync_outgoing
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.bookmarks_sync as t,
+from moz-fx-data-shared-prod.fenix.bookmarks_sync as t,
 unnest(metrics.labeled_counter.bookmarks_sync_outgoing) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1150,7 +1150,7 @@ view: suggest__bookmarks_sync__metrics__labeled_counter__bookmarks_sync_remote_t
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.bookmarks_sync as t,
+from moz-fx-data-shared-prod.fenix.bookmarks_sync as t,
 unnest(metrics.labeled_counter.bookmarks_sync_remote_tree_problems) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1169,7 +1169,7 @@ view: suggest__bookmarks_sync__metrics__labeled_counter__glean_error_invalid_lab
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.bookmarks_sync as t,
+from moz-fx-data-shared-prod.fenix.bookmarks_sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1188,7 +1188,7 @@ view: suggest__bookmarks_sync__metrics__labeled_counter__glean_error_invalid_ove
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.bookmarks_sync as t,
+from moz-fx-data-shared-prod.fenix.bookmarks_sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1207,7 +1207,7 @@ view: suggest__bookmarks_sync__metrics__labeled_counter__glean_error_invalid_sta
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.bookmarks_sync as t,
+from moz-fx-data-shared-prod.fenix.bookmarks_sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1226,7 +1226,7 @@ view: suggest__bookmarks_sync__metrics__labeled_counter__glean_error_invalid_val
     sql: select
     m.key,
     count(*) as n
-from mozdata.fenix.bookmarks_sync as t,
+from moz-fx-data-shared-prod.fenix.bookmarks_sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0

@@ -1481,7 +1481,7 @@ view: clients_daily_table {
     ]
   }
 
-  sql_table_name: `mozdata.telemetry.clients_daily` ;;
+  sql_table_name: `moz-fx-data-shared-prod.telemetry.clients_daily` ;;
 }
 
 view: clients_daily_table__active_addons {

@@ -8,7 +8,7 @@ explore: tabs_sync {
 
   always_filter: {
     filters: [
-      channel: "mozdata.fenix.tabs^_sync",
+      channel: "moz-fx-data-shared-prod.fenix.tabs^_sync",
       submission_date: "28 days",
     ]
   }
@@ -20,42 +20,42 @@ explore: tabs_sync {
 
   join: tabs_sync__events__extra {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${tabs_sync__events.events__extra}) AS tabs_sync__events__extra ;;
+    sql: LEFT JOIN UNNEST(${tabs_sync.events__extra}) AS tabs_sync__events__extra ;;
   }
 
   join: tabs_sync__metrics__jwe {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${tabs_sync__metrics.metrics__jwe}) AS tabs_sync__metrics__jwe ;;
+    sql: LEFT JOIN UNNEST(${tabs_sync.metrics__jwe}) AS tabs_sync__metrics__jwe ;;
   }
 
   join: tabs_sync__metrics__labeled_rate {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${tabs_sync__metrics.metrics__labeled_rate}) AS tabs_sync__metrics__labeled_rate ;;
+    sql: LEFT JOIN UNNEST(${tabs_sync.metrics__labeled_rate}) AS tabs_sync__metrics__labeled_rate ;;
   }
 
   join: tabs_sync__metrics__labeled_rate__value {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${tabs_sync__metrics__labeled_rate.metrics__labeled_rate__value}) AS tabs_sync__metrics__labeled_rate__value ;;
+    sql: LEFT JOIN UNNEST(${tabs_sync.metrics__labeled_rate__value}) AS tabs_sync__metrics__labeled_rate__value ;;
   }
 
   join: tabs_sync__metrics__labeled_string__tabs_sync_failure_reason {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${tabs_sync__metrics__labeled_string.metrics__labeled_string__tabs_sync_failure_reason}) AS tabs_sync__metrics__labeled_string__tabs_sync_failure_reason ;;
+    sql: LEFT JOIN UNNEST(${tabs_sync.metrics__labeled_string__tabs_sync_failure_reason}) AS tabs_sync__metrics__labeled_string__tabs_sync_failure_reason ;;
   }
 
   join: tabs_sync__metrics__text {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${tabs_sync__metrics.metrics__text}) AS tabs_sync__metrics__text ;;
+    sql: LEFT JOIN UNNEST(${tabs_sync.metrics__text}) AS tabs_sync__metrics__text ;;
   }
 
   join: tabs_sync__metrics__url {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${tabs_sync__metrics.metrics__url}) AS tabs_sync__metrics__url ;;
+    sql: LEFT JOIN UNNEST(${tabs_sync.metrics__url}) AS tabs_sync__metrics__url ;;
   }
 
   join: tabs_sync__ping_info__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${tabs_sync__ping_info.ping_info__experiments}) AS tabs_sync__ping_info__experiments ;;
+    sql: LEFT JOIN UNNEST(${tabs_sync.ping_info__experiments}) AS tabs_sync__ping_info__experiments ;;
   }
 
   join: tabs_sync__metrics__labeled_counter__glean_error_invalid_label {

@@ -147,21 +147,21 @@ view: baseline_clients_daily_table {
 
   parameter: channel {
     type: unquoted
-    default_value: "mozdata.firefox_ios.baseline_clients_daily"
+    default_value: "moz-fx-data-shared-prod.firefox_ios.baseline_clients_daily"
 
     allowed_value: {
       label: "Release"
-      value: "mozdata.firefox_ios.baseline_clients_daily"
+      value: "moz-fx-data-shared-prod.firefox_ios.baseline_clients_daily"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "mozdata.org_mozilla_ios_firefoxbeta.baseline_clients_daily"
+      value: "moz-fx-data-shared-prod.org_mozilla_ios_firefoxbeta.baseline_clients_daily"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "mozdata.org_mozilla_ios_fennec.baseline_clients_daily"
+      value: "moz-fx-data-shared-prod.org_mozilla_ios_fennec.baseline_clients_daily"
     }
   }
 

@@ -500,7 +500,7 @@ to indicate \"undetermined\".
     description: "Time when the ingestion edge server accepted this message"
   }
 
-  sql_table_name: `mozdata.org_mozilla_ios_focus.baseline` ;;
+  sql_table_name: `moz-fx-data-shared-prod.org_mozilla_ios_focus.baseline` ;;
 }
 
 view: baseline_table__events {

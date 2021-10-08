@@ -115,7 +115,7 @@ view: events_daily_table {
     datatype: date
   }
 
-  sql_table_name: `mozdata.telemetry.events_daily` ;;
+  sql_table_name: `moz-fx-data-shared-prod.telemetry.events_daily` ;;
 }
 
 view: events_daily_table__experiments {

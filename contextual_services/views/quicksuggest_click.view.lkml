@@ -260,7 +260,7 @@ view: quicksuggest_click {
     type: count
   }
 
-  sql_table_name: `mozdata.contextual_services.quicksuggest_click` ;;
+  sql_table_name: `moz-fx-data-shared-prod.contextual_services.quicksuggest_click` ;;
 }
 
 view: quicksuggest_click__experiments {

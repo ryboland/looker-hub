@@ -147,21 +147,21 @@ view: baseline_clients_first_seen_table {
 
   parameter: channel {
     type: unquoted
-    default_value: "mozdata.fenix.baseline_clients_first_seen"
+    default_value: "moz-fx-data-shared-prod.fenix.baseline_clients_first_seen"
 
     allowed_value: {
       label: "Release"
-      value: "mozdata.fenix.baseline_clients_first_seen"
+      value: "moz-fx-data-shared-prod.fenix.baseline_clients_first_seen"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "mozdata.org_mozilla_firefox_beta.baseline_clients_first_seen"
+      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.baseline_clients_first_seen"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "mozdata.org_mozilla_fenix.baseline_clients_first_seen"
+      value: "moz-fx-data-shared-prod.org_mozilla_fenix.baseline_clients_first_seen"
     }
   }
 

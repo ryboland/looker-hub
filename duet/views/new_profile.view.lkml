@@ -1540,7 +1540,7 @@ view: new_profile {
     type: count
   }
 
-  sql_table_name: `mozdata.telemetry.new_profile` ;;
+  sql_table_name: `moz-fx-data-shared-prod.telemetry.new_profile` ;;
 }
 
 view: new_profile__environment__addons__active_addons {

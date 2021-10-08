@@ -260,7 +260,7 @@ view: topsites_click {
     type: count
   }
 
-  sql_table_name: `mozdata.contextual_services.topsites_click` ;;
+  sql_table_name: `moz-fx-data-shared-prod.contextual_services.topsites_click` ;;
 }
 
 view: topsites_click__experiments {

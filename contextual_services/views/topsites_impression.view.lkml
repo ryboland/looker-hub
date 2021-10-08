@@ -260,7 +260,7 @@ view: topsites_impression {
     type: count
   }
 
-  sql_table_name: `mozdata.contextual_services.topsites_impression` ;;
+  sql_table_name: `moz-fx-data-shared-prod.contextual_services.topsites_impression` ;;
 }
 
 view: topsites_impression__experiments {

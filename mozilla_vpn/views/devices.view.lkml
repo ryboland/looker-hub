@@ -47,5 +47,5 @@ view: devices {
     ]
   }
 
-  sql_table_name: `mozdata.mozilla_vpn.devices` ;;
+  sql_table_name: `moz-fx-data-shared-prod.mozilla_vpn.devices` ;;
 }

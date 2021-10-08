@@ -825,7 +825,7 @@ and build config was used to produce this build
     description: "Time when the ingestion edge server accepted this message"
   }
 
-  sql_table_name: `mozdata.org_mozilla_bergamot.custom` ;;
+  sql_table_name: `moz-fx-data-shared-prod.org_mozilla_bergamot.custom` ;;
 }
 
 view: custom_table__events {
