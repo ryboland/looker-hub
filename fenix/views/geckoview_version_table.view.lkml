@@ -23,5 +23,5 @@ view: geckoview_version_table {
     ]
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.org_mozilla_fenix.geckoview_version` ;;
+  sql_table_name: `mozdata.org_mozilla_fenix.geckoview_version` ;;
 }

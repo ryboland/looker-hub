@@ -1708,21 +1708,21 @@ tracking-protection that is enabled. One of:
 
   parameter: channel {
     type: unquoted
-    default_value: "moz-fx-data-shared-prod.firefox_ios.metrics"
+    default_value: "mozdata.firefox_ios.metrics"
 
     allowed_value: {
       label: "Release"
-      value: "moz-fx-data-shared-prod.firefox_ios.metrics"
+      value: "mozdata.firefox_ios.metrics"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "moz-fx-data-shared-prod.org_mozilla_ios_firefoxbeta.metrics"
+      value: "mozdata.org_mozilla_ios_firefoxbeta.metrics"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "moz-fx-data-shared-prod.org_mozilla_ios_fennec.metrics"
+      value: "mozdata.org_mozilla_ios_fennec.metrics"
     }
   }
 

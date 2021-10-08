@@ -475,7 +475,7 @@ The labels are the `category.name` identifier of the metric.
     description: "Time when the ingestion edge server accepted this message"
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.firefox_desktop.fog_validation` ;;
+  sql_table_name: `mozdata.firefox_desktop.fog_validation` ;;
 }
 
 view: fog_validation_table__events {

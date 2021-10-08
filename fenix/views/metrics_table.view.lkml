@@ -7042,21 +7042,21 @@ will be \"custom\"
 
   parameter: channel {
     type: unquoted
-    default_value: "moz-fx-data-shared-prod.fenix.metrics"
+    default_value: "mozdata.fenix.metrics"
 
     allowed_value: {
       label: "Release"
-      value: "moz-fx-data-shared-prod.fenix.metrics"
+      value: "mozdata.fenix.metrics"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.metrics"
+      value: "mozdata.org_mozilla_firefox_beta.metrics"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "moz-fx-data-shared-prod.org_mozilla_fenix.metrics"
+      value: "mozdata.org_mozilla_fenix.metrics"
     }
   }
 

@@ -28,5 +28,5 @@ view: experiment_enrollment_daily_active_population {
     ]
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.telemetry.experiment_enrollment_daily_active_population` ;;
+  sql_table_name: `mozdata.telemetry.experiment_enrollment_daily_active_population` ;;
 }

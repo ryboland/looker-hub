@@ -379,7 +379,7 @@ view: events_unnested_table {
     ]
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.fenix.events_unnested` ;;
+  sql_table_name: `mozdata.fenix.events_unnested` ;;
 }
 
 view: events_unnested_table__event_extra {

@@ -1391,131 +1391,7 @@ The labels are the `category.name` identifier of the metric.
     }
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.org_mozilla_bergamot.custom` ;;
-}
-
-view: custom__events {
-  dimension: category {
-    sql: ${TABLE}.category ;;
-    type: string
-  }
-
-  dimension: extra {
-    sql: ${TABLE}.extra ;;
-    hidden: yes
-  }
-
-  dimension: name {
-    sql: ${TABLE}.name ;;
-    type: string
-  }
-
-  dimension: timestamp {
-    sql: ${TABLE}.timestamp ;;
-    type: number
-  }
-}
-
-view: custom__events__extra {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: custom__metrics__jwe {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: custom__metrics__labeled_rate {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-}
-
-view: custom__metrics__labeled_rate__value {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__denominator {
-    sql: ${TABLE}.value.denominator ;;
-    type: number
-    group_label: "Value"
-    group_item_label: "Denominator"
-  }
-
-  dimension: value__numerator {
-    sql: ${TABLE}.value.numerator ;;
-    type: number
-    group_label: "Value"
-    group_item_label: "Numerator"
-  }
-}
-
-view: custom__metrics__text {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: custom__metrics__url {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: custom__ping_info__experiments {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__branch {
-    sql: ${TABLE}.value.branch ;;
-    type: string
-    group_label: "Value"
-    group_item_label: "Branch"
-  }
-
-  dimension: value__extra__type {
-    sql: ${TABLE}.value.extra.type ;;
-    type: string
-    group_label: "Value Extra"
-    group_item_label: "Type"
-  }
+  sql_table_name: `mozdata.org_mozilla_bergamot.custom` ;;
 }
 
 view: custom__metrics__labeled_counter__glean_error_invalid_label {
@@ -1695,7 +1571,7 @@ view: suggest__custom__metrics__labeled_counter__glean_error_invalid_label {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_bergamot.custom as t,
+from mozdata.org_mozilla_bergamot.custom as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1714,7 +1590,7 @@ view: suggest__custom__metrics__labeled_counter__glean_error_invalid_overflow {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_bergamot.custom as t,
+from mozdata.org_mozilla_bergamot.custom as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1733,7 +1609,7 @@ view: suggest__custom__metrics__labeled_counter__glean_error_invalid_state {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_bergamot.custom as t,
+from mozdata.org_mozilla_bergamot.custom as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1752,7 +1628,7 @@ view: suggest__custom__metrics__labeled_counter__glean_error_invalid_value {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_bergamot.custom as t,
+from mozdata.org_mozilla_bergamot.custom as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0

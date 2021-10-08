@@ -195,5 +195,5 @@ view: clients_last_seen_joined_table {
     datatype: date
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.firefox_ios.clients_last_seen_joined` ;;
+  sql_table_name: `mozdata.firefox_ios.clients_last_seen_joined` ;;
 }

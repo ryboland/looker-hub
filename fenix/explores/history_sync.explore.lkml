@@ -8,54 +8,9 @@ explore: history_sync {
 
   always_filter: {
     filters: [
-      channel: "moz-fx-data-shared-prod.fenix.history^_sync",
+      channel: "mozdata.fenix.history^_sync",
       submission_date: "28 days",
     ]
-  }
-
-  join: history_sync__events {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${history_sync.events}) AS history_sync__events ;;
-  }
-
-  join: history_sync__events__extra {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${history_sync__events.extra}) AS history_sync__events__extra ;;
-  }
-
-  join: history_sync__metrics__jwe {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${history_sync.metrics__jwe}) AS history_sync__metrics__jwe ;;
-  }
-
-  join: history_sync__metrics__labeled_rate {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${history_sync.metrics__labeled_rate}) AS history_sync__metrics__labeled_rate ;;
-  }
-
-  join: history_sync__metrics__labeled_rate__value {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${history_sync__metrics__labeled_rate.value}) AS history_sync__metrics__labeled_rate__value ;;
-  }
-
-  join: history_sync__metrics__labeled_string__history_sync_failure_reason {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${history_sync.metrics__labeled_string__history_sync_failure_reason}) AS history_sync__metrics__labeled_string__history_sync_failure_reason ;;
-  }
-
-  join: history_sync__metrics__text {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${history_sync.metrics__text}) AS history_sync__metrics__text ;;
-  }
-
-  join: history_sync__metrics__url {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${history_sync.metrics__url}) AS history_sync__metrics__url ;;
-  }
-
-  join: history_sync__ping_info__experiments {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${history_sync.ping_info__experiments}) AS history_sync__ping_info__experiments ;;
   }
 
   join: history_sync__metrics__labeled_counter__glean_error_invalid_label {

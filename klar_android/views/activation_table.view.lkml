@@ -461,7 +461,7 @@ and only sent with the activation ping.
     description: "Time when the ingestion edge server accepted this message"
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.org_mozilla_klar.activation` ;;
+  sql_table_name: `mozdata.org_mozilla_klar.activation` ;;
 }
 
 view: activation_table__events {

@@ -325,7 +325,7 @@ view: events {
     type: count
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.activity_stream.events` ;;
+  sql_table_name: `mozdata.activity_stream.events` ;;
 }
 
 view: events__experiments {

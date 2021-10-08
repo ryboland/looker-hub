@@ -145,5 +145,5 @@ view: baseline_clients_first_seen_table {
     datatype: date
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.firefox_desktop_background_update.baseline_clients_first_seen` ;;
+  sql_table_name: `mozdata.firefox_desktop_background_update.baseline_clients_first_seen` ;;
 }

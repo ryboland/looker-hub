@@ -8,54 +8,9 @@ explore: addresses_sync {
 
   always_filter: {
     filters: [
-      channel: "moz-fx-data-shared-prod.fenix.addresses^_sync",
+      channel: "mozdata.fenix.addresses^_sync",
       submission_date: "28 days",
     ]
-  }
-
-  join: addresses_sync__events {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.events}) AS addresses_sync__events ;;
-  }
-
-  join: addresses_sync__events__extra {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync__events.extra}) AS addresses_sync__events__extra ;;
-  }
-
-  join: addresses_sync__metrics__jwe {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.metrics__jwe}) AS addresses_sync__metrics__jwe ;;
-  }
-
-  join: addresses_sync__metrics__labeled_rate {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.metrics__labeled_rate}) AS addresses_sync__metrics__labeled_rate ;;
-  }
-
-  join: addresses_sync__metrics__labeled_rate__value {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync__metrics__labeled_rate.value}) AS addresses_sync__metrics__labeled_rate__value ;;
-  }
-
-  join: addresses_sync__metrics__labeled_string__addresses_sync_failure_reason {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.metrics__labeled_string__addresses_sync_failure_reason}) AS addresses_sync__metrics__labeled_string__addresses_sync_failure_reason ;;
-  }
-
-  join: addresses_sync__metrics__text {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.metrics__text}) AS addresses_sync__metrics__text ;;
-  }
-
-  join: addresses_sync__metrics__url {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.metrics__url}) AS addresses_sync__metrics__url ;;
-  }
-
-  join: addresses_sync__ping_info__experiments {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.ping_info__experiments}) AS addresses_sync__ping_info__experiments ;;
   }
 
   join: addresses_sync__metrics__labeled_counter__addresses_sync_incoming {

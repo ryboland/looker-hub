@@ -49,5 +49,5 @@ view: metrics_clients_daily_table {
     datatype: date
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.fenix.metrics_clients_daily` ;;
+  sql_table_name: `mozdata.fenix.metrics_clients_daily` ;;
 }

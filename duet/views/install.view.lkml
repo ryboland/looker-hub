@@ -527,5 +527,5 @@ view: install {
     type: count
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.firefox_installer.install` ;;
+  sql_table_name: `mozdata.firefox_installer.install` ;;
 }

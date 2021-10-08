@@ -786,7 +786,7 @@ documented in the ping's pings.yaml file.
     description: "Time when the ingestion edge server accepted this message"
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.firefox_desktop.metrics` ;;
+  sql_table_name: `mozdata.firefox_desktop.metrics` ;;
 }
 
 view: metrics_table__events {

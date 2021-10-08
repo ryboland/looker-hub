@@ -44,6 +44,11 @@ view: urlbar_clients_daily {
     type: string
   }
 
+  dimension: quicksuggest_onboarding_dialog_choice {
+    sql: ${TABLE}.quicksuggest_onboarding_dialog_choice ;;
+    type: string
+  }
+
   dimension: search_region {
     sql: ${TABLE}.search_region ;;
     type: string
@@ -99,7 +104,7 @@ view: urlbar_clients_daily {
     sql: ${client_id} ;;
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.telemetry.urlbar_clients_daily` ;;
+  sql_table_name: `mozdata.telemetry.urlbar_clients_daily` ;;
 }
 
 view: urlbar_clients_daily__count_picked_by_position {

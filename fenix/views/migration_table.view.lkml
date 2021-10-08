@@ -929,21 +929,21 @@ view: migration_table {
 
   parameter: channel {
     type: unquoted
-    default_value: "moz-fx-data-shared-prod.fenix.migration"
+    default_value: "mozdata.fenix.migration"
 
     allowed_value: {
       label: "Release"
-      value: "moz-fx-data-shared-prod.fenix.migration"
+      value: "mozdata.fenix.migration"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.migration"
+      value: "mozdata.org_mozilla_firefox_beta.migration"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "moz-fx-data-shared-prod.org_mozilla_fenix.migration"
+      value: "mozdata.org_mozilla_fenix.migration"
     }
   }
 

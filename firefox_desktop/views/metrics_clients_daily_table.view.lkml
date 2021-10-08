@@ -39,5 +39,5 @@ view: metrics_clients_daily_table {
     datatype: date
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.firefox_desktop.metrics_clients_daily` ;;
+  sql_table_name: `mozdata.firefox_desktop.metrics_clients_daily` ;;
 }

@@ -510,21 +510,21 @@ to indicate \"undetermined\".
 
   parameter: channel {
     type: unquoted
-    default_value: "moz-fx-data-shared-prod.firefox_ios.baseline"
+    default_value: "mozdata.firefox_ios.baseline"
 
     allowed_value: {
       label: "Release"
-      value: "moz-fx-data-shared-prod.firefox_ios.baseline"
+      value: "mozdata.firefox_ios.baseline"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "moz-fx-data-shared-prod.org_mozilla_ios_firefoxbeta.baseline"
+      value: "mozdata.org_mozilla_ios_firefoxbeta.baseline"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "moz-fx-data-shared-prod.org_mozilla_ios_fennec.baseline"
+      value: "mozdata.org_mozilla_ios_fennec.baseline"
     }
   }
 

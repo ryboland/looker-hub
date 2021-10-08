@@ -89,5 +89,5 @@ view: funnel_ga_to_subscriptions {
     datatype: date
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.mozilla_vpn.funnel_ga_to_subscriptions` ;;
+  sql_table_name: `mozdata.mozilla_vpn.funnel_ga_to_subscriptions` ;;
 }

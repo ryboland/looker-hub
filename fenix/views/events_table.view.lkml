@@ -453,21 +453,21 @@ The labels are the `category.name` identifier of the metric.
 
   parameter: channel {
     type: unquoted
-    default_value: "moz-fx-data-shared-prod.fenix.events"
+    default_value: "mozdata.fenix.events"
 
     allowed_value: {
       label: "Release"
-      value: "moz-fx-data-shared-prod.fenix.events"
+      value: "mozdata.fenix.events"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.events"
+      value: "mozdata.org_mozilla_firefox_beta.events"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "moz-fx-data-shared-prod.org_mozilla_fenix.events"
+      value: "mozdata.org_mozilla_fenix.events"
     }
   }
 

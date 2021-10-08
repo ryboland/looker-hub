@@ -145,5 +145,5 @@ view: baseline_clients_first_seen_table {
     datatype: date
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.org_mozilla_ios_klar.baseline_clients_first_seen` ;;
+  sql_table_name: `mozdata.org_mozilla_ios_klar.baseline_clients_first_seen` ;;
 }

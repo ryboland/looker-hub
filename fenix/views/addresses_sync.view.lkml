@@ -614,161 +614,25 @@ The labels are the `category.name` identifier of the metric.
 
   parameter: channel {
     type: unquoted
-    default_value: "moz-fx-data-shared-prod.fenix.addresses_sync"
+    default_value: "mozdata.fenix.addresses_sync"
 
     allowed_value: {
       label: "Release"
-      value: "moz-fx-data-shared-prod.fenix.addresses_sync"
+      value: "mozdata.fenix.addresses_sync"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.addresses_sync"
+      value: "mozdata.org_mozilla_firefox_beta.addresses_sync"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "moz-fx-data-shared-prod.org_mozilla_fenix.addresses_sync"
+      value: "mozdata.org_mozilla_fenix.addresses_sync"
     }
   }
 
   sql_table_name: `{% parameter channel %}` ;;
-}
-
-view: addresses_sync__events {
-  dimension: category {
-    sql: ${TABLE}.category ;;
-    type: string
-  }
-
-  dimension: extra {
-    sql: ${TABLE}.extra ;;
-    hidden: yes
-  }
-
-  dimension: name {
-    sql: ${TABLE}.name ;;
-    type: string
-  }
-
-  dimension: timestamp {
-    sql: ${TABLE}.timestamp ;;
-    type: number
-  }
-}
-
-view: addresses_sync__events__extra {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: addresses_sync__metrics__jwe {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: addresses_sync__metrics__labeled_rate {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-}
-
-view: addresses_sync__metrics__labeled_rate__value {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__denominator {
-    sql: ${TABLE}.value.denominator ;;
-    type: number
-    group_label: "Value"
-    group_item_label: "Denominator"
-  }
-
-  dimension: value__numerator {
-    sql: ${TABLE}.value.numerator ;;
-    type: number
-    group_label: "Value"
-    group_item_label: "Numerator"
-  }
-}
-
-view: addresses_sync__metrics__labeled_string__addresses_sync_failure_reason {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: addresses_sync__metrics__text {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: addresses_sync__metrics__url {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: addresses_sync__ping_info__experiments {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__branch {
-    sql: ${TABLE}.value.branch ;;
-    type: string
-    group_label: "Value"
-    group_item_label: "Branch"
-  }
-
-  dimension: value__extra__type {
-    sql: ${TABLE}.value.extra.type ;;
-    type: string
-    group_label: "Value Extra"
-    group_item_label: "Type"
-  }
 }
 
 view: addresses_sync__metrics__labeled_counter__addresses_sync_incoming {
@@ -1034,7 +898,7 @@ view: suggest__addresses_sync__metrics__labeled_counter__addresses_sync_incoming
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.addresses_sync as t,
+from mozdata.fenix.addresses_sync as t,
 unnest(metrics.labeled_counter.addresses_sync_incoming) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1053,7 +917,7 @@ view: suggest__addresses_sync__metrics__labeled_counter__addresses_sync_outgoing
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.addresses_sync as t,
+from mozdata.fenix.addresses_sync as t,
 unnest(metrics.labeled_counter.addresses_sync_outgoing) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1072,7 +936,7 @@ view: suggest__addresses_sync__metrics__labeled_counter__glean_error_invalid_lab
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.addresses_sync as t,
+from mozdata.fenix.addresses_sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1091,7 +955,7 @@ view: suggest__addresses_sync__metrics__labeled_counter__glean_error_invalid_ove
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.addresses_sync as t,
+from mozdata.fenix.addresses_sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1110,7 +974,7 @@ view: suggest__addresses_sync__metrics__labeled_counter__glean_error_invalid_sta
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.addresses_sync as t,
+from mozdata.fenix.addresses_sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -1129,7 +993,7 @@ view: suggest__addresses_sync__metrics__labeled_counter__glean_error_invalid_val
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.addresses_sync as t,
+from mozdata.fenix.addresses_sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0

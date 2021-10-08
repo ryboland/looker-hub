@@ -12,46 +12,6 @@ explore: activation {
     ]
   }
 
-  join: activation__events {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${activation.events}) AS activation__events ;;
-  }
-
-  join: activation__events__extra {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${activation__events.extra}) AS activation__events__extra ;;
-  }
-
-  join: activation__metrics__jwe {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${activation.metrics__jwe}) AS activation__metrics__jwe ;;
-  }
-
-  join: activation__metrics__labeled_rate {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${activation.metrics__labeled_rate}) AS activation__metrics__labeled_rate ;;
-  }
-
-  join: activation__metrics__labeled_rate__value {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${activation__metrics__labeled_rate.value}) AS activation__metrics__labeled_rate__value ;;
-  }
-
-  join: activation__metrics__text {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${activation.metrics__text}) AS activation__metrics__text ;;
-  }
-
-  join: activation__metrics__url {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${activation.metrics__url}) AS activation__metrics__url ;;
-  }
-
-  join: activation__ping_info__experiments {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${activation.ping_info__experiments}) AS activation__ping_info__experiments ;;
-  }
-
   join: activation__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${activation.metrics__labeled_counter__glean_error_invalid_label}) AS activation__metrics__labeled_counter__glean_error_invalid_label ON ${activation.document_id} = ${activation__metrics__labeled_counter__glean_error_invalid_label.document_id} ;;

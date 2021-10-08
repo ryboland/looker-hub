@@ -12,46 +12,6 @@ explore: fog_validation {
     ]
   }
 
-  join: fog_validation__events {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.events}) AS fog_validation__events ;;
-  }
-
-  join: fog_validation__events__extra {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation__events.extra}) AS fog_validation__events__extra ;;
-  }
-
-  join: fog_validation__metrics__jwe {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.metrics__jwe}) AS fog_validation__metrics__jwe ;;
-  }
-
-  join: fog_validation__metrics__labeled_rate {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.metrics__labeled_rate}) AS fog_validation__metrics__labeled_rate ;;
-  }
-
-  join: fog_validation__metrics__labeled_rate__value {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation__metrics__labeled_rate.value}) AS fog_validation__metrics__labeled_rate__value ;;
-  }
-
-  join: fog_validation__metrics__text {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.metrics__text}) AS fog_validation__metrics__text ;;
-  }
-
-  join: fog_validation__metrics__url {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.metrics__url}) AS fog_validation__metrics__url ;;
-  }
-
-  join: fog_validation__ping_info__experiments {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${fog_validation.ping_info__experiments}) AS fog_validation__ping_info__experiments ;;
-  }
-
   join: fog_validation__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${fog_validation.metrics__labeled_counter__glean_error_invalid_label}) AS fog_validation__metrics__labeled_counter__glean_error_invalid_label ON ${fog_validation.document_id} = ${fog_validation__metrics__labeled_counter__glean_error_invalid_label.document_id} ;;

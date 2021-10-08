@@ -510,21 +510,21 @@ The labels are the `category.name` identifier of the metric.
 
   parameter: channel {
     type: unquoted
-    default_value: "moz-fx-data-shared-prod.fenix.tabs_sync"
+    default_value: "mozdata.fenix.tabs_sync"
 
     allowed_value: {
       label: "Release"
-      value: "moz-fx-data-shared-prod.fenix.tabs_sync"
+      value: "mozdata.fenix.tabs_sync"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.tabs_sync"
+      value: "mozdata.org_mozilla_firefox_beta.tabs_sync"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "moz-fx-data-shared-prod.org_mozilla_fenix.tabs_sync"
+      value: "mozdata.org_mozilla_fenix.tabs_sync"
     }
   }
 

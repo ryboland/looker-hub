@@ -539,21 +539,21 @@ the `framework_primary/secondary` metrics.
 
   parameter: channel {
     type: unquoted
-    default_value: "moz-fx-data-shared-prod.fenix.startup_timeline"
+    default_value: "mozdata.fenix.startup_timeline"
 
     allowed_value: {
       label: "Release"
-      value: "moz-fx-data-shared-prod.fenix.startup_timeline"
+      value: "mozdata.fenix.startup_timeline"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.startup_timeline"
+      value: "mozdata.org_mozilla_firefox_beta.startup_timeline"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "moz-fx-data-shared-prod.org_mozilla_fenix.startup_timeline"
+      value: "mozdata.org_mozilla_fenix.startup_timeline"
     }
   }
 

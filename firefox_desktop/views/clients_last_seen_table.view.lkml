@@ -1492,6 +1492,11 @@ view: clients_last_seen_table {
     type: string
   }
 
+  dimension: user_pref_browser_urlbar_quicksuggest_onboarding_dialog_choice {
+    sql: ${TABLE}.user_pref_browser_urlbar_quicksuggest_onboarding_dialog_choice ;;
+    type: string
+  }
+
   dimension: user_pref_browser_urlbar_show_search_suggestions_first {
     sql: ${TABLE}.user_pref_browser_urlbar_show_search_suggestions_first ;;
     type: string
@@ -1611,7 +1616,7 @@ view: clients_last_seen_table {
     ]
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.telemetry.clients_last_seen` ;;
+  sql_table_name: `mozdata.telemetry.clients_last_seen` ;;
 }
 
 view: clients_last_seen_table__active_addons {

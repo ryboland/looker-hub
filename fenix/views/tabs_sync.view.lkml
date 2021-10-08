@@ -614,161 +614,25 @@ The labels are the `category.name` identifier of the metric.
 
   parameter: channel {
     type: unquoted
-    default_value: "moz-fx-data-shared-prod.fenix.tabs_sync"
+    default_value: "mozdata.fenix.tabs_sync"
 
     allowed_value: {
       label: "Release"
-      value: "moz-fx-data-shared-prod.fenix.tabs_sync"
+      value: "mozdata.fenix.tabs_sync"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.tabs_sync"
+      value: "mozdata.org_mozilla_firefox_beta.tabs_sync"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "moz-fx-data-shared-prod.org_mozilla_fenix.tabs_sync"
+      value: "mozdata.org_mozilla_fenix.tabs_sync"
     }
   }
 
   sql_table_name: `{% parameter channel %}` ;;
-}
-
-view: tabs_sync__events {
-  dimension: category {
-    sql: ${TABLE}.category ;;
-    type: string
-  }
-
-  dimension: extra {
-    sql: ${TABLE}.extra ;;
-    hidden: yes
-  }
-
-  dimension: name {
-    sql: ${TABLE}.name ;;
-    type: string
-  }
-
-  dimension: timestamp {
-    sql: ${TABLE}.timestamp ;;
-    type: number
-  }
-}
-
-view: tabs_sync__events__extra {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: tabs_sync__metrics__jwe {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: tabs_sync__metrics__labeled_rate {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-}
-
-view: tabs_sync__metrics__labeled_rate__value {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__denominator {
-    sql: ${TABLE}.value.denominator ;;
-    type: number
-    group_label: "Value"
-    group_item_label: "Denominator"
-  }
-
-  dimension: value__numerator {
-    sql: ${TABLE}.value.numerator ;;
-    type: number
-    group_label: "Value"
-    group_item_label: "Numerator"
-  }
-}
-
-view: tabs_sync__metrics__labeled_string__tabs_sync_failure_reason {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: tabs_sync__metrics__text {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: tabs_sync__metrics__url {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: tabs_sync__ping_info__experiments {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__branch {
-    sql: ${TABLE}.value.branch ;;
-    type: string
-    group_label: "Value"
-    group_item_label: "Branch"
-  }
-
-  dimension: value__extra__type {
-    sql: ${TABLE}.value.extra.type ;;
-    type: string
-    group_label: "Value Extra"
-    group_item_label: "Type"
-  }
 }
 
 view: suggest__tabs_sync__metrics__labeled_counter__glean_error_invalid_label {
@@ -776,7 +640,7 @@ view: suggest__tabs_sync__metrics__labeled_counter__glean_error_invalid_label {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.tabs_sync as t,
+from mozdata.fenix.tabs_sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -795,7 +659,7 @@ view: suggest__tabs_sync__metrics__labeled_counter__glean_error_invalid_overflow
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.tabs_sync as t,
+from mozdata.fenix.tabs_sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -814,7 +678,7 @@ view: suggest__tabs_sync__metrics__labeled_counter__glean_error_invalid_state {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.tabs_sync as t,
+from mozdata.fenix.tabs_sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -833,7 +697,7 @@ view: suggest__tabs_sync__metrics__labeled_counter__glean_error_invalid_value {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.tabs_sync as t,
+from mozdata.fenix.tabs_sync as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -852,7 +716,7 @@ view: suggest__tabs_sync__metrics__labeled_counter__tabs_sync_incoming {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.tabs_sync as t,
+from mozdata.fenix.tabs_sync as t,
 unnest(metrics.labeled_counter.tabs_sync_incoming) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -871,7 +735,7 @@ view: suggest__tabs_sync__metrics__labeled_counter__tabs_sync_outgoing {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.tabs_sync as t,
+from mozdata.fenix.tabs_sync as t,
 unnest(metrics.labeled_counter.tabs_sync_outgoing) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0

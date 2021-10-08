@@ -360,5 +360,5 @@ view: retention_by_subscription {
     ]
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.mozilla_vpn.retention_by_subscription` ;;
+  sql_table_name: `mozdata.mozilla_vpn.retention_by_subscription` ;;
 }

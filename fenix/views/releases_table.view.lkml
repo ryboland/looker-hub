@@ -44,5 +44,5 @@ view: releases_table {
     datatype: date
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.org_mozilla_fenix.releases` ;;
+  sql_table_name: `mozdata.org_mozilla_fenix.releases` ;;
 }

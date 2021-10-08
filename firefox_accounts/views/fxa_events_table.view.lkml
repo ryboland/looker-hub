@@ -178,5 +178,5 @@ view: fxa_events_table {
     ]
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.firefox_accounts.fxa_content_auth_oauth_events` ;;
+  sql_table_name: `mozdata.firefox_accounts.fxa_content_auth_oauth_events` ;;
 }

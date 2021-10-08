@@ -6073,1529 +6073,25 @@ Deprecated: `native_code_crash` replaced by `fatal_native_code_crash` and `nonfa
 
   parameter: channel {
     type: unquoted
-    default_value: "moz-fx-data-shared-prod.fenix.metrics"
+    default_value: "mozdata.fenix.metrics"
 
     allowed_value: {
       label: "Release"
-      value: "moz-fx-data-shared-prod.fenix.metrics"
+      value: "mozdata.fenix.metrics"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.metrics"
+      value: "mozdata.org_mozilla_firefox_beta.metrics"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "moz-fx-data-shared-prod.org_mozilla_fenix.metrics"
+      value: "mozdata.org_mozilla_fenix.metrics"
     }
   }
 
   sql_table_name: `{% parameter channel %}` ;;
-}
-
-view: metrics__events {
-  dimension: category {
-    sql: ${TABLE}.category ;;
-    type: string
-  }
-
-  dimension: extra {
-    sql: ${TABLE}.extra ;;
-    hidden: yes
-  }
-
-  dimension: name {
-    sql: ${TABLE}.name ;;
-    type: string
-  }
-
-  dimension: timestamp {
-    sql: ${TABLE}.timestamp ;;
-    type: number
-  }
-}
-
-view: metrics__events__extra {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: metrics__metrics__custom_distribution__geckoview_document_site_origins__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__custom_distribution__geckoview_per_document_site_origins__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__custom_distribution__gfx_checkerboard_peak_pixel_count__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__custom_distribution__gfx_checkerboard_severity__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__custom_distribution__gfx_content_frame_time_from_paint__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__custom_distribution__gfx_content_frame_time_from_vsync__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__custom_distribution__gfx_content_frame_time_with_svg__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__custom_distribution__gfx_content_frame_time_without_resource_upload__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__custom_distribution__gfx_content_frame_time_without_upload__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__custom_distribution__js_baseline_compile_percentage__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__custom_distribution__js_delazification_percentage__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__custom_distribution__js_execution_percentage__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__custom_distribution__js_xdr_encode_percentage__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__custom_distribution__performance_clone_deserialize_items__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__jwe {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: metrics__metrics__labeled_rate {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-}
-
-view: metrics__metrics__labeled_rate__value {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__denominator {
-    sql: ${TABLE}.value.denominator ;;
-    type: number
-    group_label: "Value"
-    group_item_label: "Denominator"
-  }
-
-  dimension: value__numerator {
-    sql: ${TABLE}.value.numerator ;;
-    type: number
-    group_label: "Value"
-    group_item_label: "Numerator"
-  }
-}
-
-view: metrics__metrics__memory_distribution__glean_database_size__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__memory_distribution__performance_clone_deserialize_size__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__memory_distribution__storage_stats_app_bytes__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__memory_distribution__storage_stats_cache_bytes__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__memory_distribution__storage_stats_data_dir_bytes__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__text {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: metrics__metrics__timing_distribution__engine_tab_kill_background_age__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__engine_tab_kill_foreground_age__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__geckoview_content_process_lifetime__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__geckoview_page_load_progress_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__geckoview_page_load_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__geckoview_page_reload_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__geckoview_startup_runtime__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__gfx_checkerboard_duration__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__gfx_checkerboard_potential_duration__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__gfx_composite_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__gfx_content_full_paint_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__gfx_content_paint_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__gfx_scroll_present_latency__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__gfx_status_framebuild_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__gfx_status_sceneswap_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__gfx_webrender_framebuild_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__gfx_webrender_render_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__gfx_webrender_scenebuild_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__gfx_webrender_sceneswap_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_gc_compact_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_gc_mark_roots_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_gc_mark_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_gc_minor_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_gc_prepare_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_gc_slice_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_gc_sweep_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_gc_total_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_pageload_baseline_compile_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_pageload_delazification_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_pageload_execution_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_pageload_gc_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_pageload_parse_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_pageload_protect_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__javascript_pageload_xdr_encode_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__js_bytecode_caching_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__logins_store_read_query_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__logins_store_unlock_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__logins_store_write_query_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__network_cache_hit_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__network_dns_end__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__network_dns_start__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__network_first_from_cache__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__network_font_download_end__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__network_tcp_connection__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__network_tls_handshake__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_awesomebar_bookmark_suggestions__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_awesomebar_clipboard_suggestions__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_awesomebar_history_suggestions__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_awesomebar_search_engine_suggestions__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_awesomebar_session_suggestions__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_awesomebar_shortcuts_suggestions__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_awesomebar_synced_tabs_suggestions__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_startup_app_on_create_to_glean_init__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_startup_app_on_create_to_megazord_init__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_startup_app_on_create_to_setup_in_main__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_startup_application_on_create__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_startup_base_bfragment_on_create_view__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_startup_base_bfragment_on_view_created__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_startup_cold_main_app_to_first_frame__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_startup_cold_unknwn_app_to_first_frame__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_startup_cold_view_app_to_first_frame__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_startup_home_activity_on_create__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_startup_home_activity_on_start__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_startup_home_fragment_on_create_view__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__perf_startup_home_fragment_on_view_created__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_clone_deserialize_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_interaction_keypress_present_latency__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_interaction_mouseup_click_present_latency__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_interaction_tab_switch_composite__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_page_non_blank_paint__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_page_total_content_page_load__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_pageload_dcl__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_pageload_dcl_responsestart__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_pageload_fcp__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_pageload_fcp_responsestart__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_pageload_load_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_pageload_load_time_responsestart__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_pageload_req_anim_frame_callback__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_responsiveness_req_anim_frame_callback__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_time_dom_complete__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_time_dom_content_loaded_end__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_time_dom_content_loaded_start__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_time_dom_interactive__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_time_load_event_end__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_time_load_event_end_no_preload__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_time_load_event_end_preload__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_time_load_event_start__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_time_load_event_start_no_preload__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_time_load_event_start_preload__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__performance_time_response_start__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__places_manager_read_query_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__places_manager_scan_query_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__places_manager_write_query_time__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__timing_distribution__storage_stats_query_stats_duration__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__url {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: metrics__ping_info__experiments {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__branch {
-    sql: ${TABLE}.value.branch ;;
-    type: string
-    group_label: "Value"
-    group_item_label: "Branch"
-  }
-
-  dimension: value__extra__type {
-    sql: ${TABLE}.value.extra.type ;;
-    type: string
-    group_label: "Value Extra"
-    group_item_label: "Type"
-  }
 }
 
 view: metrics__metrics__labeled_counter__avif_alpha {
@@ -8979,7 +7475,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_alpha {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_alpha) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -8998,7 +7494,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_bit_depth {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_bit_depth) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9017,7 +7513,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_cicp_cp {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_cicp_cp) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9036,7 +7532,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_cicp_mc {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_cicp_mc) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9055,7 +7551,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_cicp_tc {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_cicp_tc) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9074,7 +7570,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_colr {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_colr) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9093,7 +7589,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_decode_result {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_decode_result) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9112,7 +7608,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_decoder {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_decoder) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9131,7 +7627,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_ispe {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_ispe) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9150,7 +7646,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_pixi {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_pixi) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9169,7 +7665,7 @@ view: suggest__metrics__metrics__labeled_counter__avif_yuv_color_space {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.avif_yuv_color_space) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9188,7 +7684,7 @@ view: suggest__metrics__metrics__labeled_counter__browser_search_ad_clicks {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.browser_search_ad_clicks) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9207,7 +7703,7 @@ view: suggest__metrics__metrics__labeled_counter__browser_search_in_content {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.browser_search_in_content) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9226,7 +7722,7 @@ view: suggest__metrics__metrics__labeled_counter__browser_search_with_ads {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.browser_search_with_ads) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9245,7 +7741,7 @@ view: suggest__metrics__metrics__labeled_counter__crash_metrics_crash_count {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.crash_metrics_crash_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9264,7 +7760,7 @@ view: suggest__metrics__metrics__labeled_counter__engine_tab_kills {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.engine_tab_kills) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9283,7 +7779,7 @@ view: suggest__metrics__metrics__labeled_counter__gfx_content_frame_time_reason 
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.gfx_content_frame_time_reason) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9302,7 +7798,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9321,7 +7817,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9340,7 +7836,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9359,7 +7855,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9378,7 +7874,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failu
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.glean_upload_ping_upload_failure) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9397,7 +7893,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitt
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.glean_validation_pings_submitted) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9416,7 +7912,7 @@ view: suggest__metrics__metrics__labeled_counter__logins_store_read_query_error_
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.logins_store_read_query_error_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9435,7 +7931,7 @@ view: suggest__metrics__metrics__labeled_counter__logins_store_unlock_error_coun
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.logins_store_unlock_error_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9454,7 +7950,7 @@ view: suggest__metrics__metrics__labeled_counter__logins_store_write_query_error
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.logins_store_write_query_error_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9473,7 +7969,7 @@ view: suggest__metrics__metrics__labeled_counter__media_audio_backend {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.media_audio_backend) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9492,7 +7988,7 @@ view: suggest__metrics__metrics__labeled_counter__media_audio_init_failure {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.media_audio_init_failure) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9511,7 +8007,7 @@ view: suggest__metrics__metrics__labeled_counter__metrics_search_count {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.metrics_search_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9530,7 +8026,7 @@ view: suggest__metrics__metrics__labeled_counter__perf_startup_startup_type {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.perf_startup_startup_type) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9549,7 +8045,7 @@ view: suggest__metrics__metrics__labeled_counter__places_manager_read_query_erro
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.places_manager_read_query_error_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -9568,7 +8064,7 @@ view: suggest__metrics__metrics__labeled_counter__places_manager_write_query_err
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.metrics as t,
+from mozdata.fenix.metrics as t,
 unnest(metrics.labeled_counter.places_manager_write_query_error_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0

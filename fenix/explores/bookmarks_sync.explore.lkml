@@ -8,54 +8,9 @@ explore: bookmarks_sync {
 
   always_filter: {
     filters: [
-      channel: "moz-fx-data-shared-prod.fenix.bookmarks^_sync",
+      channel: "mozdata.fenix.bookmarks^_sync",
       submission_date: "28 days",
     ]
-  }
-
-  join: bookmarks_sync__events {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${bookmarks_sync.events}) AS bookmarks_sync__events ;;
-  }
-
-  join: bookmarks_sync__events__extra {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${bookmarks_sync__events.extra}) AS bookmarks_sync__events__extra ;;
-  }
-
-  join: bookmarks_sync__metrics__jwe {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${bookmarks_sync.metrics__jwe}) AS bookmarks_sync__metrics__jwe ;;
-  }
-
-  join: bookmarks_sync__metrics__labeled_rate {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${bookmarks_sync.metrics__labeled_rate}) AS bookmarks_sync__metrics__labeled_rate ;;
-  }
-
-  join: bookmarks_sync__metrics__labeled_rate__value {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${bookmarks_sync__metrics__labeled_rate.value}) AS bookmarks_sync__metrics__labeled_rate__value ;;
-  }
-
-  join: bookmarks_sync__metrics__labeled_string__bookmarks_sync_failure_reason {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${bookmarks_sync.metrics__labeled_string__bookmarks_sync_failure_reason}) AS bookmarks_sync__metrics__labeled_string__bookmarks_sync_failure_reason ;;
-  }
-
-  join: bookmarks_sync__metrics__text {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${bookmarks_sync.metrics__text}) AS bookmarks_sync__metrics__text ;;
-  }
-
-  join: bookmarks_sync__metrics__url {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${bookmarks_sync.metrics__url}) AS bookmarks_sync__metrics__url ;;
-  }
-
-  join: bookmarks_sync__ping_info__experiments {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${bookmarks_sync.ping_info__experiments}) AS bookmarks_sync__ping_info__experiments ;;
   }
 
   join: bookmarks_sync__metrics__labeled_counter__bookmarks_sync_incoming {

@@ -153,7 +153,7 @@ view: desktop_events_table {
     ]
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.telemetry.events` ;;
+  sql_table_name: `mozdata.telemetry.events` ;;
 }
 
 view: desktop_events_table__event_map_values {

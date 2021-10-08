@@ -165,7 +165,7 @@ view: mobile_search_clients_engines_sources_daily {
     sql: ${client_id} ;;
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.search.mobile_search_clients_engines_sources_daily` ;;
+  sql_table_name: `mozdata.search.mobile_search_clients_engines_sources_daily` ;;
 }
 
 view: mobile_search_clients_engines_sources_daily__experiments {

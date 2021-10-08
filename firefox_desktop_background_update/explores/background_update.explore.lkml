@@ -12,46 +12,6 @@ explore: background_update {
     ]
   }
 
-  join: background_update__events {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.events}) AS background_update__events ;;
-  }
-
-  join: background_update__events__extra {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update__events.extra}) AS background_update__events__extra ;;
-  }
-
-  join: background_update__metrics__jwe {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.metrics__jwe}) AS background_update__metrics__jwe ;;
-  }
-
-  join: background_update__metrics__labeled_rate {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.metrics__labeled_rate}) AS background_update__metrics__labeled_rate ;;
-  }
-
-  join: background_update__metrics__labeled_rate__value {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update__metrics__labeled_rate.value}) AS background_update__metrics__labeled_rate__value ;;
-  }
-
-  join: background_update__metrics__text {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.metrics__text}) AS background_update__metrics__text ;;
-  }
-
-  join: background_update__metrics__url {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.metrics__url}) AS background_update__metrics__url ;;
-  }
-
-  join: background_update__ping_info__experiments {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${background_update.ping_info__experiments}) AS background_update__ping_info__experiments ;;
-  }
-
   join: background_update__metrics__labeled_counter__glean_error_invalid_label {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${background_update.metrics__labeled_counter__glean_error_invalid_label}) AS background_update__metrics__labeled_counter__glean_error_invalid_label ON ${background_update.document_id} = ${background_update__metrics__labeled_counter__glean_error_invalid_label.document_id} ;;

@@ -8,49 +8,9 @@ explore: startup_timeline {
 
   always_filter: {
     filters: [
-      channel: "moz-fx-data-shared-prod.fenix.startup^_timeline",
+      channel: "mozdata.fenix.startup^_timeline",
       submission_date: "28 days",
     ]
-  }
-
-  join: startup_timeline__events {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.events}) AS startup_timeline__events ;;
-  }
-
-  join: startup_timeline__events__extra {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline__events.extra}) AS startup_timeline__events__extra ;;
-  }
-
-  join: startup_timeline__metrics__jwe {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.metrics__jwe}) AS startup_timeline__metrics__jwe ;;
-  }
-
-  join: startup_timeline__metrics__labeled_rate {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.metrics__labeled_rate}) AS startup_timeline__metrics__labeled_rate ;;
-  }
-
-  join: startup_timeline__metrics__labeled_rate__value {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline__metrics__labeled_rate.value}) AS startup_timeline__metrics__labeled_rate__value ;;
-  }
-
-  join: startup_timeline__metrics__text {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.metrics__text}) AS startup_timeline__metrics__text ;;
-  }
-
-  join: startup_timeline__metrics__url {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.metrics__url}) AS startup_timeline__metrics__url ;;
-  }
-
-  join: startup_timeline__ping_info__experiments {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${startup_timeline.ping_info__experiments}) AS startup_timeline__ping_info__experiments ;;
   }
 
   join: startup_timeline__metrics__labeled_counter__glean_error_invalid_label {

@@ -508,7 +508,7 @@ to indicate \"undetermined\".
     description: "Time when the ingestion edge server accepted this message"
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.firefox_desktop.baseline` ;;
+  sql_table_name: `mozdata.firefox_desktop.baseline` ;;
 }
 
 view: baseline_table__events {

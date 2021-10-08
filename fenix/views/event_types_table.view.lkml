@@ -38,7 +38,7 @@ view: event_types_table {
     ]
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.fenix.event_types` ;;
+  sql_table_name: `mozdata.fenix.event_types` ;;
 }
 
 view: event_types_table__event_properties {

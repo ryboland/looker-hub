@@ -1566,167 +1566,7 @@ Deprecated: `native_code_crash` replaced by `fatal_native_code_crash` and `nonfa
     }
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.org_mozilla_focus.metrics` ;;
-}
-
-view: metrics__events {
-  dimension: category {
-    sql: ${TABLE}.category ;;
-    type: string
-  }
-
-  dimension: extra {
-    sql: ${TABLE}.extra ;;
-    hidden: yes
-  }
-
-  dimension: name {
-    sql: ${TABLE}.name ;;
-    type: string
-  }
-
-  dimension: timestamp {
-    sql: ${TABLE}.timestamp ;;
-    type: number
-  }
-}
-
-view: metrics__events__extra {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: metrics__metrics__jwe {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: metrics__metrics__labeled_rate {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-}
-
-view: metrics__metrics__labeled_rate__value {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__denominator {
-    sql: ${TABLE}.value.denominator ;;
-    type: number
-    group_label: "Value"
-    group_item_label: "Denominator"
-  }
-
-  dimension: value__numerator {
-    sql: ${TABLE}.value.numerator ;;
-    type: number
-    group_label: "Value"
-    group_item_label: "Numerator"
-  }
-}
-
-view: metrics__metrics__memory_distribution__glean_database_size__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__text {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: metrics__metrics__url {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: metrics__ping_info__experiments {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__branch {
-    sql: ${TABLE}.value.branch ;;
-    type: string
-    group_label: "Value"
-    group_item_label: "Branch"
-  }
-
-  dimension: value__extra__type {
-    sql: ${TABLE}.value.extra.type ;;
-    type: string
-    group_label: "Value Extra"
-    group_item_label: "Type"
-  }
+  sql_table_name: `mozdata.org_mozilla_focus.metrics` ;;
 }
 
 view: metrics__metrics__labeled_counter__browser_search_ad_clicks {
@@ -2207,7 +2047,7 @@ view: suggest__metrics__metrics__labeled_counter__browser_search_ad_clicks {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_focus.metrics as t,
+from mozdata.org_mozilla_focus.metrics as t,
 unnest(metrics.labeled_counter.browser_search_ad_clicks) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2226,7 +2066,7 @@ view: suggest__metrics__metrics__labeled_counter__browser_search_in_content {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_focus.metrics as t,
+from mozdata.org_mozilla_focus.metrics as t,
 unnest(metrics.labeled_counter.browser_search_in_content) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2245,7 +2085,7 @@ view: suggest__metrics__metrics__labeled_counter__browser_search_with_ads {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_focus.metrics as t,
+from mozdata.org_mozilla_focus.metrics as t,
 unnest(metrics.labeled_counter.browser_search_with_ads) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2264,7 +2104,7 @@ view: suggest__metrics__metrics__labeled_counter__crash_metrics_crash_count {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_focus.metrics as t,
+from mozdata.org_mozilla_focus.metrics as t,
 unnest(metrics.labeled_counter.crash_metrics_crash_count) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2283,7 +2123,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_focus.metrics as t,
+from mozdata.org_mozilla_focus.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2302,7 +2142,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_focus.metrics as t,
+from mozdata.org_mozilla_focus.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2321,7 +2161,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_focus.metrics as t,
+from mozdata.org_mozilla_focus.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2340,7 +2180,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_focus.metrics as t,
+from mozdata.org_mozilla_focus.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2359,7 +2199,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failu
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_focus.metrics as t,
+from mozdata.org_mozilla_focus.metrics as t,
 unnest(metrics.labeled_counter.glean_upload_ping_upload_failure) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2378,7 +2218,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitt
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_focus.metrics as t,
+from mozdata.org_mozilla_focus.metrics as t,
 unnest(metrics.labeled_counter.glean_validation_pings_submitted) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2397,7 +2237,7 @@ view: suggest__metrics__metrics__labeled_counter__shortcuts_shortcut_removed_cou
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.org_mozilla_focus.metrics as t,
+from mozdata.org_mozilla_focus.metrics as t,
 unnest(metrics.labeled_counter.shortcuts_shortcut_removed_counter) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0

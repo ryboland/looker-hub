@@ -4835,185 +4835,25 @@ documented in the ping's pings.yaml file.
 
   parameter: channel {
     type: unquoted
-    default_value: "moz-fx-data-shared-prod.firefox_ios.metrics"
+    default_value: "mozdata.firefox_ios.metrics"
 
     allowed_value: {
       label: "Release"
-      value: "moz-fx-data-shared-prod.firefox_ios.metrics"
+      value: "mozdata.firefox_ios.metrics"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "moz-fx-data-shared-prod.org_mozilla_ios_firefoxbeta.metrics"
+      value: "mozdata.org_mozilla_ios_firefoxbeta.metrics"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "moz-fx-data-shared-prod.org_mozilla_ios_fennec.metrics"
+      value: "mozdata.org_mozilla_ios_fennec.metrics"
     }
   }
 
   sql_table_name: `{% parameter channel %}` ;;
-}
-
-view: metrics__events {
-  dimension: category {
-    sql: ${TABLE}.category ;;
-    type: string
-  }
-
-  dimension: extra {
-    sql: ${TABLE}.extra ;;
-    hidden: yes
-  }
-
-  dimension: name {
-    sql: ${TABLE}.name ;;
-    type: string
-  }
-
-  dimension: timestamp {
-    sql: ${TABLE}.timestamp ;;
-    type: number
-  }
-}
-
-view: metrics__events__extra {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: metrics__metrics__jwe {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: metrics__metrics__labeled_rate {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-}
-
-view: metrics__metrics__labeled_rate__value {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__denominator {
-    sql: ${TABLE}.value.denominator ;;
-    type: number
-    group_label: "Value"
-    group_item_label: "Denominator"
-  }
-
-  dimension: value__numerator {
-    sql: ${TABLE}.value.numerator ;;
-    type: number
-    group_label: "Value"
-    group_item_label: "Numerator"
-  }
-}
-
-view: metrics__metrics__memory_distribution__glean_database_size__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__memory_distribution__glean_upload_pending_pings_directory_size__values {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: number
-  }
-}
-
-view: metrics__metrics__text {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: metrics__metrics__url {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: metrics__ping_info__experiments {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__branch {
-    sql: ${TABLE}.value.branch ;;
-    type: string
-    group_label: "Value"
-    group_item_label: "Branch"
-  }
-
-  dimension: value__extra__type {
-    sql: ${TABLE}.value.extra.type ;;
-    type: string
-    group_label: "Value Extra"
-    group_item_label: "Type"
-  }
 }
 
 view: metrics__metrics__labeled_counter__bookmarks_add {
@@ -6096,7 +5936,7 @@ view: suggest__metrics__metrics__labeled_counter__bookmarks_add {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.bookmarks_add) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6115,7 +5955,7 @@ view: suggest__metrics__metrics__labeled_counter__bookmarks_delete {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.bookmarks_delete) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6134,7 +5974,7 @@ view: suggest__metrics__metrics__labeled_counter__bookmarks_edit {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.bookmarks_edit) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6153,7 +5993,7 @@ view: suggest__metrics__metrics__labeled_counter__bookmarks_open {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.bookmarks_open) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6172,7 +6012,7 @@ view: suggest__metrics__metrics__labeled_counter__bookmarks_view_list {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.bookmarks_view_list) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6191,7 +6031,7 @@ view: suggest__metrics__metrics__labeled_counter__browser_search_ad_clicks {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.browser_search_ad_clicks) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6210,7 +6050,7 @@ view: suggest__metrics__metrics__labeled_counter__browser_search_with_ads {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.browser_search_with_ads) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6229,7 +6069,7 @@ view: suggest__metrics__metrics__labeled_counter__firefox_home_page_your_library
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.firefox_home_page_your_library) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6248,7 +6088,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6267,7 +6107,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6286,7 +6126,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6305,7 +6145,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6324,7 +6164,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failu
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.glean_upload_ping_upload_failure) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6343,7 +6183,7 @@ view: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitt
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.glean_validation_pings_submitted) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6362,7 +6202,7 @@ view: suggest__metrics__metrics__labeled_counter__inactive_tabs_tray_toggle_inac
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.inactive_tabs_tray_toggle_inactive_tab_tray) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6381,7 +6221,7 @@ view: suggest__metrics__metrics__labeled_counter__library_panel_pressed {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.library_panel_pressed) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6400,7 +6240,7 @@ view: suggest__metrics__metrics__labeled_counter__pocket_open_story_position {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.pocket_open_story_position) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6419,7 +6259,7 @@ view: suggest__metrics__metrics__labeled_counter__reading_list_add {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.reading_list_add) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6438,7 +6278,7 @@ view: suggest__metrics__metrics__labeled_counter__reading_list_delete {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.reading_list_delete) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6457,7 +6297,7 @@ view: suggest__metrics__metrics__labeled_counter__search_counts {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.search_counts) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6476,7 +6316,7 @@ view: suggest__metrics__metrics__labeled_counter__search_google_topsite_pressed 
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.search_google_topsite_pressed) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6495,7 +6335,7 @@ view: suggest__metrics__metrics__labeled_counter__search_in_content {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.search_in_content) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6514,7 +6354,7 @@ view: suggest__metrics__metrics__labeled_counter__tabs_close {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.tabs_close) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6533,7 +6373,7 @@ view: suggest__metrics__metrics__labeled_counter__tabs_close_all {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.tabs_close_all) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -6552,7 +6392,7 @@ view: suggest__metrics__metrics__labeled_counter__tabs_open {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.firefox_ios.metrics as t,
+from mozdata.firefox_ios.metrics as t,
 unnest(metrics.labeled_counter.tabs_open) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0

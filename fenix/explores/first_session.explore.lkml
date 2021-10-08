@@ -8,49 +8,9 @@ explore: first_session {
 
   always_filter: {
     filters: [
-      channel: "moz-fx-data-shared-prod.fenix.first^_session",
+      channel: "mozdata.fenix.first^_session",
       submission_date: "28 days",
     ]
-  }
-
-  join: first_session__events {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.events}) AS first_session__events ;;
-  }
-
-  join: first_session__events__extra {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session__events.extra}) AS first_session__events__extra ;;
-  }
-
-  join: first_session__metrics__jwe {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.metrics__jwe}) AS first_session__metrics__jwe ;;
-  }
-
-  join: first_session__metrics__labeled_rate {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.metrics__labeled_rate}) AS first_session__metrics__labeled_rate ;;
-  }
-
-  join: first_session__metrics__labeled_rate__value {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session__metrics__labeled_rate.value}) AS first_session__metrics__labeled_rate__value ;;
-  }
-
-  join: first_session__metrics__text {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.metrics__text}) AS first_session__metrics__text ;;
-  }
-
-  join: first_session__metrics__url {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.metrics__url}) AS first_session__metrics__url ;;
-  }
-
-  join: first_session__ping_info__experiments {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.ping_info__experiments}) AS first_session__ping_info__experiments ;;
   }
 
   join: first_session__metrics__labeled_counter__glean_error_invalid_label {

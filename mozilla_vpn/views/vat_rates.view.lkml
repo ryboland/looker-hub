@@ -30,5 +30,5 @@ view: vat_rates {
     datatype: date
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.mozilla_vpn.vat_rates` ;;
+  sql_table_name: `mozdata.mozilla_vpn.vat_rates` ;;
 }

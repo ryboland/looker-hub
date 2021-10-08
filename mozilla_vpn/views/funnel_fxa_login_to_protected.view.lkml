@@ -49,5 +49,5 @@ view: funnel_fxa_login_to_protected {
     datatype: date
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.mozilla_vpn.funnel_fxa_login_to_protected` ;;
+  sql_table_name: `mozdata.mozilla_vpn.funnel_fxa_login_to_protected` ;;
 }

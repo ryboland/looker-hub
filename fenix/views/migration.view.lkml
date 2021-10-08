@@ -2437,161 +2437,25 @@ The labels are the `category.name` identifier of the metric.
 
   parameter: channel {
     type: unquoted
-    default_value: "moz-fx-data-shared-prod.fenix.migration"
+    default_value: "mozdata.fenix.migration"
 
     allowed_value: {
       label: "Release"
-      value: "moz-fx-data-shared-prod.fenix.migration"
+      value: "mozdata.fenix.migration"
     }
 
     allowed_value: {
       label: "Beta"
-      value: "moz-fx-data-shared-prod.org_mozilla_firefox_beta.migration"
+      value: "mozdata.org_mozilla_firefox_beta.migration"
     }
 
     allowed_value: {
       label: "Nightly"
-      value: "moz-fx-data-shared-prod.org_mozilla_fenix.migration"
+      value: "mozdata.org_mozilla_fenix.migration"
     }
   }
 
   sql_table_name: `{% parameter channel %}` ;;
-}
-
-view: migration__events {
-  dimension: category {
-    sql: ${TABLE}.category ;;
-    type: string
-  }
-
-  dimension: extra {
-    sql: ${TABLE}.extra ;;
-    hidden: yes
-  }
-
-  dimension: name {
-    sql: ${TABLE}.name ;;
-    type: string
-  }
-
-  dimension: timestamp {
-    sql: ${TABLE}.timestamp ;;
-    type: number
-  }
-}
-
-view: migration__events__extra {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: migration__metrics__jwe {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: migration__metrics__labeled_rate {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-}
-
-view: migration__metrics__labeled_rate__value {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__denominator {
-    sql: ${TABLE}.value.denominator ;;
-    type: number
-    group_label: "Value"
-    group_item_label: "Denominator"
-  }
-
-  dimension: value__numerator {
-    sql: ${TABLE}.value.numerator ;;
-    type: number
-    group_label: "Value"
-    group_item_label: "Numerator"
-  }
-}
-
-view: migration__metrics__labeled_string__migration_migration_versions {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: migration__metrics__text {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: migration__metrics__url {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value {
-    sql: ${TABLE}.value ;;
-    type: string
-  }
-}
-
-view: migration__ping_info__experiments {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__branch {
-    sql: ${TABLE}.value.branch ;;
-    type: string
-    group_label: "Value"
-    group_item_label: "Branch"
-  }
-
-  dimension: value__extra__type {
-    sql: ${TABLE}.value.extra.type ;;
-    type: string
-    group_label: "Value Extra"
-    group_item_label: "Type"
-  }
 }
 
 view: migration__metrics__labeled_counter__glean_error_invalid_label {
@@ -2900,7 +2764,7 @@ view: suggest__migration__metrics__labeled_counter__glean_error_invalid_label {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.migration as t,
+from mozdata.fenix.migration as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2919,7 +2783,7 @@ view: suggest__migration__metrics__labeled_counter__glean_error_invalid_overflow
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.migration as t,
+from mozdata.fenix.migration as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2938,7 +2802,7 @@ view: suggest__migration__metrics__labeled_counter__glean_error_invalid_state {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.migration as t,
+from mozdata.fenix.migration as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2957,7 +2821,7 @@ view: suggest__migration__metrics__labeled_counter__glean_error_invalid_value {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.migration as t,
+from mozdata.fenix.migration as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2976,7 +2840,7 @@ view: suggest__migration__metrics__labeled_counter__migration_bookmarks_migrated
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.migration as t,
+from mozdata.fenix.migration as t,
 unnest(metrics.labeled_counter.migration_bookmarks_migrated) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -2995,7 +2859,7 @@ view: suggest__migration__metrics__labeled_counter__migration_history_migrated {
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.migration as t,
+from mozdata.fenix.migration as t,
 unnest(metrics.labeled_counter.migration_history_migrated) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -3014,7 +2878,7 @@ view: suggest__migration__metrics__labeled_counter__migration_logins_failure_cou
     sql: select
     m.key,
     count(*) as n
-from moz-fx-data-shared-prod.fenix.migration as t,
+from mozdata.fenix.migration as t,
 unnest(metrics.labeled_counter.migration_logins_failure_counts) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0

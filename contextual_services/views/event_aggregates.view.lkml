@@ -60,5 +60,5 @@ view: event_aggregates {
     datatype: date
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.contextual_services.event_aggregates` ;;
+  sql_table_name: `mozdata.contextual_services.event_aggregates` ;;
 }

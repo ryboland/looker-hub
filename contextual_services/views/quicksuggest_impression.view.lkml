@@ -265,7 +265,7 @@ view: quicksuggest_impression {
     type: count
   }
 
-  sql_table_name: `moz-fx-data-shared-prod.contextual_services.quicksuggest_impression` ;;
+  sql_table_name: `mozdata.contextual_services.quicksuggest_impression` ;;
 }
 
 view: quicksuggest_impression__experiments {
