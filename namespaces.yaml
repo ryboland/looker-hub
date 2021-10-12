@@ -1399,11 +1399,33 @@ newtab:
   pretty_name: New Tab
   spoke: looker-spoke-private
 operational_monitoring:
+  explores:
+    fission_histogram:
+      branches: &id001
+      - enabled
+      - disabled
+      type: operational_monitoring_explore
+      views:
+        base_view: fission_histogram
+    fission_scalar:
+      branches: *id001
+      type: operational_monitoring_explore
+      views:
+        base_view: fission_scalar
   glean_app: false
   owners:
   - msamuel@mozilla.com
   pretty_name: Operational Monitoring
   spoke: looker-spoke-default
+  views:
+    fission_histogram:
+      tables:
+      - table: moz-fx-data-shared-prod.operational_monitoring.bug_1660366_pref_ongoing_fission_nightly_experiment_nightly_83_100_histogram
+      type: operational_monitoring_histogram_view
+    fission_scalar:
+      tables:
+      - table: moz-fx-data-shared-prod.operational_monitoring.bug_1660366_pref_ongoing_fission_nightly_experiment_nightly_83_100_scalar
+      type: operational_monitoring_scalar_view
 pocket:
   glean_app: false
   owners:
