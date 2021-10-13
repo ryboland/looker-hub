@@ -695,6 +695,11 @@ firefox_accounts:
       - channel: release
         table: mozdata.firefox_accounts.fxa_users_first_seen
       type: table_view
+    fxa_log_device_command_events:
+      tables:
+      - channel: release
+        table: mozdata.firefox_accounts.fxa_log_device_command_events
+      type: table_view
     growth_accounting:
       tables:
       - table: mozdata.firefox_accounts.fxa_users_last_seen
@@ -1443,6 +1448,10 @@ revenue:
   spoke: looker-spoke-private
 search:
   explores:
+    desktop_search_alert_records:
+      type: ping_explore
+      views:
+        base_view: desktop_search_alert_records
     desktop_search_counts:
       type: ping_explore
       views:
@@ -1458,6 +1467,10 @@ search:
   pretty_name: Search
   spoke: looker-spoke-default
   views:
+    desktop_search_alert_records:
+      tables:
+      - table: mozdata.analysis.desktop_search_alert_records
+      type: ping_view
     mobile_search_clients_engines_sources_daily:
       tables:
       - table: mozdata.search.mobile_search_clients_engines_sources_daily
