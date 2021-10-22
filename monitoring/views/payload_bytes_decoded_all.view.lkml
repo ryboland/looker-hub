@@ -1,21 +1,6 @@
-view: quicksuggest_impression {
-  dimension: additional_properties {
-    sql: ${TABLE}.additional_properties ;;
-    hidden: yes
-  }
-
-  dimension: advertiser {
-    sql: ${TABLE}.advertiser ;;
-    type: string
-  }
-
-  dimension: block_id {
-    sql: ${TABLE}.block_id ;;
-    type: number
-  }
-
-  dimension: context_id {
-    sql: ${TABLE}.context_id ;;
+view: payload_bytes_decoded_all {
+  dimension: client_id {
+    sql: ${TABLE}.client_id ;;
     hidden: yes
   }
 
@@ -25,19 +10,25 @@ view: quicksuggest_impression {
     primary_key: yes
   }
 
-  dimension: experiments {
-    sql: ${TABLE}.experiments ;;
-    hidden: yes
-  }
-
-  dimension: is_clicked {
-    sql: ${TABLE}.is_clicked ;;
-    type: yesno
-  }
-
-  dimension: locale {
-    sql: ${TABLE}.locale ;;
+  dimension: metadata__document_namespace {
+    sql: ${TABLE}.metadata.document_namespace ;;
     type: string
+    group_label: "Metadata"
+    group_item_label: "Document Namespace"
+  }
+
+  dimension: metadata__document_type {
+    sql: ${TABLE}.metadata.document_type ;;
+    type: string
+    group_label: "Metadata"
+    group_item_label: "Document Type"
+  }
+
+  dimension: metadata__document_version {
+    sql: ${TABLE}.metadata.document_version ;;
+    type: string
+    group_label: "Metadata"
+    group_item_label: "Document Version"
   }
 
   dimension: metadata__geo__city {
@@ -88,11 +79,6 @@ view: quicksuggest_impression {
     type: string
     group_label: "Metadata Header"
     group_item_label: "Dnt"
-  }
-
-  dimension: metadata__header__parsed_x_source_tags {
-    sql: ${TABLE}.metadata.header.parsed_x_source_tags ;;
-    hidden: yes
   }
 
   dimension: metadata__header__x_debug_id {
@@ -151,25 +137,32 @@ view: quicksuggest_impression {
     group_item_label: "Organization"
   }
 
-  dimension: metadata__user_agent__browser {
-    sql: ${TABLE}.metadata.user_agent.browser ;;
+  dimension: metadata__uri__app_build_id {
+    sql: ${TABLE}.metadata.uri.app_build_id ;;
     type: string
-    group_label: "Metadata User Agent"
-    group_item_label: "Browser"
+    group_label: "Metadata Uri"
+    group_item_label: "App Build Id"
   }
 
-  dimension: metadata__user_agent__os {
-    sql: ${TABLE}.metadata.user_agent.os ;;
+  dimension: metadata__uri__app_name {
+    sql: ${TABLE}.metadata.uri.app_name ;;
     type: string
-    group_label: "Metadata User Agent"
-    group_item_label: "Os"
+    group_label: "Metadata Uri"
+    group_item_label: "App Name"
   }
 
-  dimension: metadata__user_agent__version {
-    sql: ${TABLE}.metadata.user_agent.version ;;
+  dimension: metadata__uri__app_update_channel {
+    sql: ${TABLE}.metadata.uri.app_update_channel ;;
     type: string
-    group_label: "Metadata User Agent"
-    group_item_label: "Version"
+    group_label: "Metadata Uri"
+    group_item_label: "App Update Channel"
+  }
+
+  dimension: metadata__uri__app_version {
+    sql: ${TABLE}.metadata.uri.app_version ;;
+    type: string
+    group_label: "Metadata Uri"
+    group_item_label: "App Version"
   }
 
   dimension: normalized_app_name {
@@ -197,54 +190,14 @@ view: quicksuggest_impression {
     type: string
   }
 
-  dimension: position {
-    sql: ${TABLE}.position ;;
-    type: number
-  }
-
-  dimension: release_channel {
-    sql: ${TABLE}.release_channel ;;
-    type: string
-  }
-
-  dimension: reporting_url {
-    sql: ${TABLE}.reporting_url ;;
-    type: string
-  }
-
-  dimension: request_id {
-    sql: ${TABLE}.request_id ;;
+  dimension: pipeline_family {
+    sql: ${TABLE}.pipeline_family ;;
     type: string
   }
 
   dimension: sample_id {
     sql: ${TABLE}.sample_id ;;
     type: number
-  }
-
-  dimension: scenario {
-    sql: ${TABLE}.scenario ;;
-    type: string
-  }
-
-  dimension: version {
-    sql: ${TABLE}.version ;;
-    type: string
-  }
-
-  dimension_group: metadata__header__parsed {
-    sql: ${TABLE}.metadata.header.parsed_date ;;
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year,
-    ]
-    label: "Metadata Header: Parsed Date"
   }
 
   dimension_group: submission {
@@ -263,26 +216,12 @@ view: quicksuggest_impression {
 
   measure: clients {
     type: count_distinct
-    sql: ${context_id} ;;
+    sql: ${client_id} ;;
   }
 
   measure: ping_count {
     type: count
   }
 
-  sql_table_name: `mozdata.contextual_services.quicksuggest_impression` ;;
-}
-
-view: quicksuggest_impression__experiments {
-  dimension: key {
-    sql: ${TABLE}.key ;;
-    type: string
-  }
-
-  dimension: value__branch {
-    sql: ${TABLE}.value.branch ;;
-    type: string
-    group_label: "Value"
-    group_item_label: "Branch"
-  }
+  sql_table_name: `mozdata.monitoring.payload_bytes_decoded_all` ;;
 }
