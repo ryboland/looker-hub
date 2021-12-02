@@ -11,22 +11,26 @@ explore: urlbar_clients_daily {
   }
 
   join: urlbar_clients_daily__count_picked_by_position {
+    label: "count_picked_by_position"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${urlbar_clients_daily.count_picked_by_position}) AS urlbar_clients_daily__count_picked_by_position ;;
   }
 
   join: urlbar_clients_daily__count_picked_by_type {
+    label: "count_picked_by_type"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${urlbar_clients_daily.count_picked_by_type}) AS urlbar_clients_daily__count_picked_by_type ;;
   }
 
   join: urlbar_clients_daily__urlbar_picked_by_type_by_position {
+    label: "urlbar_picked_by_type_by_position"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${urlbar_clients_daily.urlbar_picked_by_type_by_position}) AS urlbar_clients_daily__urlbar_picked_by_type_by_position ;;
   }
 
   join: urlbar_clients_daily__urlbar_picked_by_type_by_position__position {
+    label: "position"
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${urlbar_clients_daily__urlbar_picked_by_type_by_position.position}) AS urlbar_clients_daily__urlbar_picked_by_type_by_position__position ;;
+    sql: LEFT JOIN UNNEST(${urlbar_clients_daily.position}) AS urlbar_clients_daily__urlbar_picked_by_type_by_position__position ;;
   }
 }
