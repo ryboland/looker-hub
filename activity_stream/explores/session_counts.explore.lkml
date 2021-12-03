@@ -11,7 +11,7 @@ explore: session_counts {
   }
 
   join: sessions__experiments {
-    view_label: "Sessions  experiments"
+    view_label: "Sessions  Experiments"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${sessions.experiments}) AS sessions__experiments ;;
   }
