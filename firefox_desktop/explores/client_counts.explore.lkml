@@ -37,401 +37,481 @@ explore: client_counts {
   }
 
   join: clients_daily_table__a11y_theme {
+    view_label: "client_counts__a11y_theme"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.a11y_theme}) AS client_counts__a11y_theme ;;
   }
 
   join: clients_daily_table__active_addons {
+    view_label: "client_counts__active_addons"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.active_addons}) AS client_counts__active_addons ;;
   }
 
   join: clients_daily_table__ad_clicks {
+    view_label: "client_counts__ad_clicks"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.ad_clicks}) AS client_counts__ad_clicks ;;
   }
 
   join: clients_daily_table__contextual_services_quicksuggest_click_sum {
+    view_label: "client_counts__contextual_services_quicksuggest_click_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.contextual_services_quicksuggest_click_sum}) AS client_counts__contextual_services_quicksuggest_click_sum ;;
   }
 
   join: clients_daily_table__contextual_services_quicksuggest_help_sum {
+    view_label: "client_counts__contextual_services_quicksuggest_help_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.contextual_services_quicksuggest_help_sum}) AS client_counts__contextual_services_quicksuggest_help_sum ;;
   }
 
   join: clients_daily_table__contextual_services_quicksuggest_impression_sum {
+    view_label: "client_counts__contextual_services_quicksuggest_impression_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.contextual_services_quicksuggest_impression_sum}) AS client_counts__contextual_services_quicksuggest_impression_sum ;;
   }
 
   join: clients_daily_table__contextual_services_topsites_click_sum {
+    view_label: "client_counts__contextual_services_topsites_click_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.contextual_services_topsites_click_sum}) AS client_counts__contextual_services_topsites_click_sum ;;
   }
 
   join: clients_daily_table__contextual_services_topsites_impression_sum {
+    view_label: "client_counts__contextual_services_topsites_impression_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.contextual_services_topsites_impression_sum}) AS client_counts__contextual_services_topsites_impression_sum ;;
   }
 
   join: clients_daily_table__experiments {
+    view_label: "client_counts__experiments"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.experiments}) AS client_counts__experiments ;;
   }
 
   join: clients_daily_table__scalar_content_telemetry_event_counts_sum {
+    view_label: "client_counts__scalar_content_telemetry_event_counts_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_content_telemetry_event_counts_sum}) AS client_counts__scalar_content_telemetry_event_counts_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_browser_ui_interaction_preferences_pane_home_sum {
+    view_label: "client_counts__scalar_parent_browser_ui_interaction_preferences_pane_home_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_browser_ui_interaction_preferences_pane_home_sum}) AS client_counts__scalar_parent_browser_ui_interaction_preferences_pane_home_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_devtools_accessibility_select_accessible_for_node_sum {
+    view_label: "client_counts__scalar_parent_devtools_accessibility_select_accessible_for_node_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_devtools_accessibility_select_accessible_for_node_sum}) AS client_counts__scalar_parent_devtools_accessibility_select_accessible_for_node_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_telemetry_event_counts_sum {
+    view_label: "client_counts__scalar_parent_telemetry_event_counts_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_telemetry_event_counts_sum}) AS client_counts__scalar_parent_telemetry_event_counts_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_autofill_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_autofill_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_autofill_sum}) AS client_counts__scalar_parent_urlbar_picked_autofill_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_bookmark_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_bookmark_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_bookmark_sum}) AS client_counts__scalar_parent_urlbar_picked_bookmark_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_dynamic_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_dynamic_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_dynamic_sum}) AS client_counts__scalar_parent_urlbar_picked_dynamic_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_extension_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_extension_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_extension_sum}) AS client_counts__scalar_parent_urlbar_picked_extension_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_formhistory_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_formhistory_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_formhistory_sum}) AS client_counts__scalar_parent_urlbar_picked_formhistory_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_history_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_history_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_history_sum}) AS client_counts__scalar_parent_urlbar_picked_history_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_keyword_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_keyword_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_keyword_sum}) AS client_counts__scalar_parent_urlbar_picked_keyword_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_remotetab_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_remotetab_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_remotetab_sum}) AS client_counts__scalar_parent_urlbar_picked_remotetab_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_searchengine_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_searchengine_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_searchengine_sum}) AS client_counts__scalar_parent_urlbar_picked_searchengine_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_searchsuggestion_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_searchsuggestion_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_searchsuggestion_sum}) AS client_counts__scalar_parent_urlbar_picked_searchsuggestion_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_switchtab_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_switchtab_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_switchtab_sum}) AS client_counts__scalar_parent_urlbar_picked_switchtab_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_tabtosearch_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_tabtosearch_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_tabtosearch_sum}) AS client_counts__scalar_parent_urlbar_picked_tabtosearch_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_tip_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_tip_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_tip_sum}) AS client_counts__scalar_parent_urlbar_picked_tip_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_topsite_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_topsite_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_topsite_sum}) AS client_counts__scalar_parent_urlbar_picked_topsite_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_unknown_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_unknown_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_unknown_sum}) AS client_counts__scalar_parent_urlbar_picked_unknown_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_picked_visiturl_sum {
+    view_label: "client_counts__scalar_parent_urlbar_picked_visiturl_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_picked_visiturl_sum}) AS client_counts__scalar_parent_urlbar_picked_visiturl_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_searchmode_bookmarkmenu_sum {
+    view_label: "client_counts__scalar_parent_urlbar_searchmode_bookmarkmenu_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_searchmode_bookmarkmenu_sum}) AS client_counts__scalar_parent_urlbar_searchmode_bookmarkmenu_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_searchmode_handoff_sum {
+    view_label: "client_counts__scalar_parent_urlbar_searchmode_handoff_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_searchmode_handoff_sum}) AS client_counts__scalar_parent_urlbar_searchmode_handoff_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_searchmode_keywordoffer_sum {
+    view_label: "client_counts__scalar_parent_urlbar_searchmode_keywordoffer_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_searchmode_keywordoffer_sum}) AS client_counts__scalar_parent_urlbar_searchmode_keywordoffer_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_searchmode_oneoff_sum {
+    view_label: "client_counts__scalar_parent_urlbar_searchmode_oneoff_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_searchmode_oneoff_sum}) AS client_counts__scalar_parent_urlbar_searchmode_oneoff_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_searchmode_other_sum {
+    view_label: "client_counts__scalar_parent_urlbar_searchmode_other_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_searchmode_other_sum}) AS client_counts__scalar_parent_urlbar_searchmode_other_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_searchmode_shortcut_sum {
+    view_label: "client_counts__scalar_parent_urlbar_searchmode_shortcut_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_searchmode_shortcut_sum}) AS client_counts__scalar_parent_urlbar_searchmode_shortcut_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_searchmode_tabmenu_sum {
+    view_label: "client_counts__scalar_parent_urlbar_searchmode_tabmenu_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_searchmode_tabmenu_sum}) AS client_counts__scalar_parent_urlbar_searchmode_tabmenu_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_searchmode_tabtosearch_onboard_sum {
+    view_label: "client_counts__scalar_parent_urlbar_searchmode_tabtosearch_onboard_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_searchmode_tabtosearch_onboard_sum}) AS client_counts__scalar_parent_urlbar_searchmode_tabtosearch_onboard_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_searchmode_tabtosearch_sum {
+    view_label: "client_counts__scalar_parent_urlbar_searchmode_tabtosearch_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_searchmode_tabtosearch_sum}) AS client_counts__scalar_parent_urlbar_searchmode_tabtosearch_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_searchmode_topsites_newtab_sum {
+    view_label: "client_counts__scalar_parent_urlbar_searchmode_topsites_newtab_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_searchmode_topsites_newtab_sum}) AS client_counts__scalar_parent_urlbar_searchmode_topsites_newtab_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_searchmode_topsites_urlbar_sum {
+    view_label: "client_counts__scalar_parent_urlbar_searchmode_topsites_urlbar_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_searchmode_topsites_urlbar_sum}) AS client_counts__scalar_parent_urlbar_searchmode_topsites_urlbar_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_searchmode_touchbar_sum {
+    view_label: "client_counts__scalar_parent_urlbar_searchmode_touchbar_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_searchmode_touchbar_sum}) AS client_counts__scalar_parent_urlbar_searchmode_touchbar_sum ;;
   }
 
   join: clients_daily_table__scalar_parent_urlbar_searchmode_typed_sum {
+    view_label: "client_counts__scalar_parent_urlbar_searchmode_typed_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.scalar_parent_urlbar_searchmode_typed_sum}) AS client_counts__scalar_parent_urlbar_searchmode_typed_sum ;;
   }
 
   join: clients_daily_table__search_adclicks_about_home_sum {
+    view_label: "client_counts__search_adclicks_about_home_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_adclicks_about_home_sum}) AS client_counts__search_adclicks_about_home_sum ;;
   }
 
   join: clients_daily_table__search_adclicks_about_newtab_sum {
+    view_label: "client_counts__search_adclicks_about_newtab_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_adclicks_about_newtab_sum}) AS client_counts__search_adclicks_about_newtab_sum ;;
   }
 
   join: clients_daily_table__search_adclicks_contextmenu_sum {
+    view_label: "client_counts__search_adclicks_contextmenu_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_adclicks_contextmenu_sum}) AS client_counts__search_adclicks_contextmenu_sum ;;
   }
 
   join: clients_daily_table__search_adclicks_reload_sum {
+    view_label: "client_counts__search_adclicks_reload_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_adclicks_reload_sum}) AS client_counts__search_adclicks_reload_sum ;;
   }
 
   join: clients_daily_table__search_adclicks_searchbar_sum {
+    view_label: "client_counts__search_adclicks_searchbar_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_adclicks_searchbar_sum}) AS client_counts__search_adclicks_searchbar_sum ;;
   }
 
   join: clients_daily_table__search_adclicks_system_sum {
+    view_label: "client_counts__search_adclicks_system_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_adclicks_system_sum}) AS client_counts__search_adclicks_system_sum ;;
   }
 
   join: clients_daily_table__search_adclicks_tabhistory_sum {
+    view_label: "client_counts__search_adclicks_tabhistory_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_adclicks_tabhistory_sum}) AS client_counts__search_adclicks_tabhistory_sum ;;
   }
 
   join: clients_daily_table__search_adclicks_unknown_sum {
+    view_label: "client_counts__search_adclicks_unknown_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_adclicks_unknown_sum}) AS client_counts__search_adclicks_unknown_sum ;;
   }
 
   join: clients_daily_table__search_adclicks_urlbar_handoff_sum {
+    view_label: "client_counts__search_adclicks_urlbar_handoff_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_adclicks_urlbar_handoff_sum}) AS client_counts__search_adclicks_urlbar_handoff_sum ;;
   }
 
   join: clients_daily_table__search_adclicks_urlbar_searchmode_sum {
+    view_label: "client_counts__search_adclicks_urlbar_searchmode_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_adclicks_urlbar_searchmode_sum}) AS client_counts__search_adclicks_urlbar_searchmode_sum ;;
   }
 
   join: clients_daily_table__search_adclicks_urlbar_sum {
+    view_label: "client_counts__search_adclicks_urlbar_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_adclicks_urlbar_sum}) AS client_counts__search_adclicks_urlbar_sum ;;
   }
 
   join: clients_daily_table__search_adclicks_webextension_sum {
+    view_label: "client_counts__search_adclicks_webextension_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_adclicks_webextension_sum}) AS client_counts__search_adclicks_webextension_sum ;;
   }
 
   join: clients_daily_table__search_content_about_home_sum {
+    view_label: "client_counts__search_content_about_home_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_content_about_home_sum}) AS client_counts__search_content_about_home_sum ;;
   }
 
   join: clients_daily_table__search_content_about_newtab_sum {
+    view_label: "client_counts__search_content_about_newtab_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_content_about_newtab_sum}) AS client_counts__search_content_about_newtab_sum ;;
   }
 
   join: clients_daily_table__search_content_contextmenu_sum {
+    view_label: "client_counts__search_content_contextmenu_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_content_contextmenu_sum}) AS client_counts__search_content_contextmenu_sum ;;
   }
 
   join: clients_daily_table__search_content_reload_sum {
+    view_label: "client_counts__search_content_reload_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_content_reload_sum}) AS client_counts__search_content_reload_sum ;;
   }
 
   join: clients_daily_table__search_content_searchbar_sum {
+    view_label: "client_counts__search_content_searchbar_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_content_searchbar_sum}) AS client_counts__search_content_searchbar_sum ;;
   }
 
   join: clients_daily_table__search_content_system_sum {
+    view_label: "client_counts__search_content_system_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_content_system_sum}) AS client_counts__search_content_system_sum ;;
   }
 
   join: clients_daily_table__search_content_tabhistory_sum {
+    view_label: "client_counts__search_content_tabhistory_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_content_tabhistory_sum}) AS client_counts__search_content_tabhistory_sum ;;
   }
 
   join: clients_daily_table__search_content_unknown_sum {
+    view_label: "client_counts__search_content_unknown_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_content_unknown_sum}) AS client_counts__search_content_unknown_sum ;;
   }
 
   join: clients_daily_table__search_content_urlbar_handoff_sum {
+    view_label: "client_counts__search_content_urlbar_handoff_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_content_urlbar_handoff_sum}) AS client_counts__search_content_urlbar_handoff_sum ;;
   }
 
   join: clients_daily_table__search_content_urlbar_searchmode_sum {
+    view_label: "client_counts__search_content_urlbar_searchmode_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_content_urlbar_searchmode_sum}) AS client_counts__search_content_urlbar_searchmode_sum ;;
   }
 
   join: clients_daily_table__search_content_urlbar_sum {
+    view_label: "client_counts__search_content_urlbar_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_content_urlbar_sum}) AS client_counts__search_content_urlbar_sum ;;
   }
 
   join: clients_daily_table__search_content_webextension_sum {
+    view_label: "client_counts__search_content_webextension_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_content_webextension_sum}) AS client_counts__search_content_webextension_sum ;;
   }
 
   join: clients_daily_table__search_counts {
+    view_label: "client_counts__search_counts"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_counts}) AS client_counts__search_counts ;;
   }
 
   join: clients_daily_table__search_with_ads {
+    view_label: "client_counts__search_with_ads"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_with_ads}) AS client_counts__search_with_ads ;;
   }
 
   join: clients_daily_table__search_withads_about_home_sum {
+    view_label: "client_counts__search_withads_about_home_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_withads_about_home_sum}) AS client_counts__search_withads_about_home_sum ;;
   }
 
   join: clients_daily_table__search_withads_about_newtab_sum {
+    view_label: "client_counts__search_withads_about_newtab_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_withads_about_newtab_sum}) AS client_counts__search_withads_about_newtab_sum ;;
   }
 
   join: clients_daily_table__search_withads_contextmenu_sum {
+    view_label: "client_counts__search_withads_contextmenu_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_withads_contextmenu_sum}) AS client_counts__search_withads_contextmenu_sum ;;
   }
 
   join: clients_daily_table__search_withads_reload_sum {
+    view_label: "client_counts__search_withads_reload_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_withads_reload_sum}) AS client_counts__search_withads_reload_sum ;;
   }
 
   join: clients_daily_table__search_withads_searchbar_sum {
+    view_label: "client_counts__search_withads_searchbar_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_withads_searchbar_sum}) AS client_counts__search_withads_searchbar_sum ;;
   }
 
   join: clients_daily_table__search_withads_system_sum {
+    view_label: "client_counts__search_withads_system_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_withads_system_sum}) AS client_counts__search_withads_system_sum ;;
   }
 
   join: clients_daily_table__search_withads_tabhistory_sum {
+    view_label: "client_counts__search_withads_tabhistory_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_withads_tabhistory_sum}) AS client_counts__search_withads_tabhistory_sum ;;
   }
 
   join: clients_daily_table__search_withads_unknown_sum {
+    view_label: "client_counts__search_withads_unknown_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_withads_unknown_sum}) AS client_counts__search_withads_unknown_sum ;;
   }
 
   join: clients_daily_table__search_withads_urlbar_handoff_sum {
+    view_label: "client_counts__search_withads_urlbar_handoff_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_withads_urlbar_handoff_sum}) AS client_counts__search_withads_urlbar_handoff_sum ;;
   }
 
   join: clients_daily_table__search_withads_urlbar_searchmode_sum {
+    view_label: "client_counts__search_withads_urlbar_searchmode_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_withads_urlbar_searchmode_sum}) AS client_counts__search_withads_urlbar_searchmode_sum ;;
   }
 
   join: clients_daily_table__search_withads_urlbar_sum {
+    view_label: "client_counts__search_withads_urlbar_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_withads_urlbar_sum}) AS client_counts__search_withads_urlbar_sum ;;
   }
 
   join: clients_daily_table__search_withads_webextension_sum {
+    view_label: "client_counts__search_withads_webextension_sum"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_counts.search_withads_webextension_sum}) AS client_counts__search_withads_webextension_sum ;;
   }

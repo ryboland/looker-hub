@@ -11,6 +11,7 @@ explore: quicksuggest_clicks {
   }
 
   join: quicksuggest_click__experiments {
+    view_label: "quicksuggest_click__experiments"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${quicksuggest_click.experiments}) AS quicksuggest_click__experiments ;;
   }

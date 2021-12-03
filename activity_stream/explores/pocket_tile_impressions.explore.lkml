@@ -11,6 +11,7 @@ explore: pocket_tile_impressions {
   }
 
   join: impression_stats_flat__experiments {
+    view_label: "impression_stats_flat__experiments"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${impression_stats_flat.experiments}) AS impression_stats_flat__experiments ;;
   }
