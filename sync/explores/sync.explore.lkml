@@ -11,67 +11,67 @@ explore: sync {
   }
 
   join: sync__payload__devices {
-    view_label: "sync__payload__devices"
+    view_label: "Sync  payload  devices"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${sync.payload__devices}) AS sync__payload__devices ;;
   }
 
   join: sync__payload__events {
-    view_label: "sync__payload__events"
+    view_label: "Sync  payload  events"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${sync.payload__events}) AS sync__payload__events ;;
   }
 
   join: sync__payload__events__f5_ {
-    view_label: "sync__payload__events__f5_"
+    view_label: "Sync  payload  events  f5 "
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${sync__payload__events.f5_}) AS sync__payload__events__f5_ ;;
   }
 
   join: sync__payload__migrations {
-    view_label: "sync__payload__migrations"
+    view_label: "Sync  payload  migrations"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${sync.payload__migrations}) AS sync__payload__migrations ;;
   }
 
   join: sync__payload__syncs {
-    view_label: "sync__payload__syncs"
+    view_label: "Sync  payload  syncs"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${sync.payload__syncs}) AS sync__payload__syncs ;;
   }
 
   join: sync__payload__syncs__devices {
-    view_label: "sync__payload__syncs__devices"
+    view_label: "Sync  payload  syncs  devices"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${sync__payload__syncs.devices}) AS sync__payload__syncs__devices ;;
   }
 
   join: sync__payload__syncs__engines {
-    view_label: "sync__payload__syncs__engines"
+    view_label: "Sync  payload  syncs  engines"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${sync__payload__syncs.engines}) AS sync__payload__syncs__engines ;;
   }
 
   join: sync__payload__syncs__engines__outgoing {
-    view_label: "sync__payload__syncs__engines__outgoing"
+    view_label: "Sync  payload  syncs  engines  outgoing"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${sync__payload__syncs__engines.outgoing}) AS sync__payload__syncs__engines__outgoing ;;
   }
 
   join: sync__payload__syncs__engines__steps {
-    view_label: "sync__payload__syncs__engines__steps"
+    view_label: "Sync  payload  syncs  engines  steps"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${sync__payload__syncs__engines.steps}) AS sync__payload__syncs__engines__steps ;;
   }
 
   join: sync__payload__syncs__engines__steps__counts {
-    view_label: "sync__payload__syncs__engines__steps__counts"
+    view_label: "Sync  payload  syncs  engines  steps  counts"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${sync__payload__syncs__engines__steps.counts}) AS sync__payload__syncs__engines__steps__counts ;;
   }
 
   join: sync__payload__syncs__engines__validation__problems {
-    view_label: "sync__payload__syncs__engines__validation__problems"
+    view_label: "Sync  payload  syncs  engines  validation  problems"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${sync__payload__syncs__engines.validation__problems}) AS sync__payload__syncs__engines__validation__problems ;;
   }

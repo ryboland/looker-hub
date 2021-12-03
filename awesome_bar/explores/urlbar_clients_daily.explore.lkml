@@ -11,25 +11,25 @@ explore: urlbar_clients_daily {
   }
 
   join: urlbar_clients_daily__count_picked_by_position {
-    view_label: "urlbar_clients_daily__count_picked_by_position"
+    view_label: "Urlbar clients daily  count picked by position"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${urlbar_clients_daily.count_picked_by_position}) AS urlbar_clients_daily__count_picked_by_position ;;
   }
 
   join: urlbar_clients_daily__count_picked_by_type {
-    view_label: "urlbar_clients_daily__count_picked_by_type"
+    view_label: "Urlbar clients daily  count picked by type"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${urlbar_clients_daily.count_picked_by_type}) AS urlbar_clients_daily__count_picked_by_type ;;
   }
 
   join: urlbar_clients_daily__urlbar_picked_by_type_by_position {
-    view_label: "urlbar_clients_daily__urlbar_picked_by_type_by_position"
+    view_label: "Urlbar clients daily  urlbar picked by type by position"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${urlbar_clients_daily.urlbar_picked_by_type_by_position}) AS urlbar_clients_daily__urlbar_picked_by_type_by_position ;;
   }
 
   join: urlbar_clients_daily__urlbar_picked_by_type_by_position__position {
-    view_label: "urlbar_clients_daily__urlbar_picked_by_type_by_position__position"
+    view_label: "Urlbar clients daily  urlbar picked by type by position  position"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${urlbar_clients_daily__urlbar_picked_by_type_by_position.position}) AS urlbar_clients_daily__urlbar_picked_by_type_by_position__position ;;
   }

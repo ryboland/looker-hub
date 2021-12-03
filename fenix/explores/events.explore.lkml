@@ -15,13 +15,13 @@ explore: event_counts {
   }
 
   join: events_unnested_table__event_extra {
-    view_label: "events__event_extra"
+    view_label: "Events unnested table  event extra"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${events.event_extra}) AS events__event_extra ;;
   }
 
   join: events_unnested_table__ping_info__experiments {
-    view_label: "events__ping_info__experiments"
+    view_label: "Events unnested table  ping info  experiments"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${events.ping_info__experiments}) AS events__ping_info__experiments ;;
   }

@@ -15,13 +15,13 @@ explore: event_counts {
   }
 
   join: desktop_events_table__event_map_values {
-    view_label: "events__event_map_values"
+    view_label: "Desktop events table  event map values"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${events.event_map_values}) AS events__event_map_values ;;
   }
 
   join: desktop_events_table__experiments {
-    view_label: "events__experiments"
+    view_label: "Desktop events table  experiments"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${events.experiments}) AS events__experiments ;;
   }
