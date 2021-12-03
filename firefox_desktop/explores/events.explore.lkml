@@ -14,14 +14,14 @@ explore: event_counts {
     ]
   }
 
-  join: events_unnested_table__event_extra {
+  join: desktop_events_table__event_map_values {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${events.event_extra}) AS events__event_extra ;;
+    sql: LEFT JOIN UNNEST(${events.event_map_values}) AS events__event_map_values ;;
   }
 
-  join: events_unnested_table__ping_info__experiments {
+  join: desktop_events_table__experiments {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${events.ping_info__experiments}) AS events__ping_info__experiments ;;
+    sql: LEFT JOIN UNNEST(${events.experiments}) AS events__experiments ;;
   }
 
   always_filter: {
