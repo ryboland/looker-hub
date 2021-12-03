@@ -22,7 +22,7 @@ explore: sync {
 
   join: sync__payload__events__f5_ {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync.f5_}) AS sync__payload__events__f5_ ;;
+    sql: LEFT JOIN UNNEST(${sync__payload__events.f5_}) AS sync__payload__events__f5_ ;;
   }
 
   join: sync__payload__migrations {
@@ -37,31 +37,31 @@ explore: sync {
 
   join: sync__payload__syncs__devices {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync.devices}) AS sync__payload__syncs__devices ;;
+    sql: LEFT JOIN UNNEST(${sync__payload__syncs.devices}) AS sync__payload__syncs__devices ;;
   }
 
   join: sync__payload__syncs__engines {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync.engines}) AS sync__payload__syncs__engines ;;
+    sql: LEFT JOIN UNNEST(${sync__payload__syncs.engines}) AS sync__payload__syncs__engines ;;
   }
 
   join: sync__payload__syncs__engines__outgoing {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync.outgoing}) AS sync__payload__syncs__engines__outgoing ;;
+    sql: LEFT JOIN UNNEST(${sync__payload__syncs__engines.outgoing}) AS sync__payload__syncs__engines__outgoing ;;
   }
 
   join: sync__payload__syncs__engines__steps {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync.steps}) AS sync__payload__syncs__engines__steps ;;
+    sql: LEFT JOIN UNNEST(${sync__payload__syncs__engines.steps}) AS sync__payload__syncs__engines__steps ;;
   }
 
   join: sync__payload__syncs__engines__steps__counts {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync.counts}) AS sync__payload__syncs__engines__steps__counts ;;
+    sql: LEFT JOIN UNNEST(${sync__payload__syncs__engines__steps.counts}) AS sync__payload__syncs__engines__steps__counts ;;
   }
 
   join: sync__payload__syncs__engines__validation__problems {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync.validation__problems}) AS sync__payload__syncs__engines__validation__problems ;;
+    sql: LEFT JOIN UNNEST(${sync__payload__syncs__engines.validation__problems}) AS sync__payload__syncs__engines__validation__problems ;;
   }
 }

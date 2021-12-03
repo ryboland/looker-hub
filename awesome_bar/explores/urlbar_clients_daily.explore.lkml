@@ -27,6 +27,6 @@ explore: urlbar_clients_daily {
 
   join: urlbar_clients_daily__urlbar_picked_by_type_by_position__position {
     relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${urlbar_clients_daily.position}) AS urlbar_clients_daily__urlbar_picked_by_type_by_position__position ;;
+    sql: LEFT JOIN UNNEST(${urlbar_clients_daily__urlbar_picked_by_type_by_position.position}) AS urlbar_clients_daily__urlbar_picked_by_type_by_position__position ;;
   }
 }
