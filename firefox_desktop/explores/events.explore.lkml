@@ -14,6 +14,16 @@ explore: event_counts {
     ]
   }
 
+  join: events_unnested_table__event_extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${events.event_extra}) AS events_unnested_table__event_extra ;;
+  }
+
+  join: events_unnested_table__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${events.ping_info__experiments}) AS events_unnested_table__ping_info__experiments ;;
+  }
+
   always_filter: {
     filters: [
       submission_date: "28 days",

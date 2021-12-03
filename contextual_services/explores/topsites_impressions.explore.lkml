@@ -11,7 +11,6 @@ explore: topsites_impressions {
   }
 
   join: topsites_impression__experiments {
-    label: "experiments"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${topsites_impression.experiments}) AS topsites_impression__experiments ;;
   }

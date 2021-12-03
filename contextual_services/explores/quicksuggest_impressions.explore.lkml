@@ -11,7 +11,6 @@ explore: quicksuggest_impressions {
   }
 
   join: quicksuggest_impression__experiments {
-    label: "experiments"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${quicksuggest_impression.experiments}) AS quicksuggest_impression__experiments ;;
   }

@@ -11,7 +11,6 @@ explore: session_counts {
   }
 
   join: sessions__experiments {
-    label: "experiments"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${sessions.experiments}) AS sessions__experiments ;;
   }

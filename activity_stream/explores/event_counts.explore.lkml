@@ -11,7 +11,6 @@ explore: event_counts {
   }
 
   join: events__experiments {
-    label: "experiments"
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${events.experiments}) AS events__experiments ;;
   }
