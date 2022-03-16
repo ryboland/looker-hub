@@ -1,0 +1,2353 @@
+accessibility:
+  explores:
+    accessibility_clients:
+      type: ping_explore
+      views:
+        base_view: accessibility_clients
+  glean_app: false
+  owners:
+  - mreschenberg@mozilla.com
+  pretty_name: Accessibility
+  spoke: looker-spoke-default
+  views:
+    accessibility_clients:
+      tables:
+      - table: mozdata.telemetry.accessibility_clients
+      type: ping_view
+activity_stream:
+  explores:
+    event_counts:
+      type: ping_explore
+      views:
+        base_view: events
+    pocket_tile_impressions:
+      type: ping_explore
+      views:
+        base_view: impression_stats_flat
+    session_counts:
+      type: ping_explore
+      views:
+        base_view: sessions
+  glean_app: false
+  owners:
+  - najiang@mozilla.com
+  pretty_name: Activity Stream
+  spoke: looker-spoke-default
+  views:
+    events:
+      tables:
+      - table: mozdata.activity_stream.events
+      type: ping_view
+    impression_stats_flat:
+      tables:
+      - table: mozdata.activity_stream.impression_stats_flat
+      type: ping_view
+    sessions:
+      tables:
+      - table: mozdata.activity_stream.sessions
+      type: ping_view
+awesome_bar:
+  explores:
+    urlbar_clients_daily:
+      type: ping_explore
+      views:
+        base_view: urlbar_clients_daily
+  glean_app: false
+  owners:
+  - tbrooks@mozilla.com
+  pretty_name: Awesome Bar
+  spoke: looker-spoke-default
+  views:
+    urlbar_clients_daily:
+      tables:
+      - table: mozdata.telemetry.urlbar_clients_daily
+      type: ping_view
+casa:
+  connection: bigquery-casa
+  glean_app: false
+  owners:
+  - anicholson@mozilla.com
+  pretty_name: CASA
+  spoke: looker-spoke-private
+  views:
+    projects:
+      tables:
+      - table: mozdata.casa.projects
+      type: table_view
+    users:
+      tables:
+      - table: mozdata.casa.users
+      type: table_view
+contextual_services:
+  connection: bigquery-oauth
+  explores:
+    event_aggregates:
+      type: ping_explore
+      views:
+        base_view: event_aggregates
+    quicksuggest_clicks:
+      type: ping_explore
+      views:
+        base_view: quicksuggest_click
+    quicksuggest_impressions:
+      type: ping_explore
+      views:
+        base_view: quicksuggest_impression
+    topsites_clicks:
+      type: ping_explore
+      views:
+        base_view: topsites_click
+    topsites_impression_fenix:
+      type: ping_explore
+      views:
+        base_view: topsites_impression_fenix
+    topsites_impressions:
+      type: ping_explore
+      views:
+        base_view: topsites_impression
+  glean_app: false
+  owners:
+  - mmccorquodale@mozilla.com
+  - rburwei@mozilla.com
+  pretty_name: Contextual Services
+  spoke: looker-spoke-private
+  views:
+    event_aggregates:
+      tables:
+      - table: mozdata.contextual_services.event_aggregates
+      type: ping_view
+    quicksuggest_click:
+      tables:
+      - table: mozdata.contextual_services.quicksuggest_click
+      type: ping_view
+    quicksuggest_impression:
+      tables:
+      - table: mozdata.contextual_services.quicksuggest_impression
+      type: ping_view
+    topsites_click:
+      tables:
+      - table: mozdata.contextual_services.topsites_click
+      type: ping_view
+    topsites_impression:
+      tables:
+      - table: mozdata.contextual_services.topsites_impression
+      type: ping_view
+    topsites_impression_fenix:
+      tables:
+      - channel: release
+        table: mozdata.fenix.topsites_impression
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.topsites_impression
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.topsites_impression
+      type: ping_view
+duet:
+  glean_app: false
+  owners:
+  - ascholtz@mozilla.com
+  pretty_name: DUET
+  spoke: looker-spoke-default
+  views:
+    install:
+      tables:
+      - channel: release
+        table: mozdata.firefox_installer.install
+      type: ping_view
+    new_profile:
+      tables:
+      - channel: release
+        table: mozdata.telemetry.new_profile
+      type: ping_view
+experimentation:
+  glean_app: false
+  owners:
+  - ascholtz@mozilla.com
+  pretty_name: Experimentation
+  spoke: looker-spoke-default
+  views:
+    experiment_cumulative_ad_clicks:
+      tables:
+      - channel: release
+        table: mozdata.telemetry.experiment_cumulative_ad_clicks
+      type: table_view
+    experiment_cumulative_search_count:
+      tables:
+      - channel: release
+        table: mozdata.telemetry.experiment_cumulative_search_count
+      type: table_view
+    experiment_cumulative_search_with_ads_count:
+      tables:
+      - channel: release
+        table: mozdata.telemetry.experiment_cumulative_search_with_ads_count
+      type: table_view
+    experiment_enrollment_cumulative_population_estimate:
+      tables:
+      - channel: release
+        table: mozdata.telemetry.experiment_enrollment_cumulative_population_estimate
+      type: table_view
+    experiment_enrollment_daily_active_population:
+      tables:
+      - channel: release
+        table: mozdata.telemetry.experiment_enrollment_daily_active_population
+      type: table_view
+    experiment_enrollment_other_events_overall:
+      tables:
+      - channel: release
+        table: mozdata.telemetry.experiment_enrollment_other_events_overall
+      type: table_view
+    experiment_enrollment_overall:
+      tables:
+      - channel: release
+        table: mozdata.telemetry.experiment_enrollment_overall
+      type: table_view
+    experiment_search_aggregates_live:
+      tables:
+      - channel: release
+        table: moz-fx-data-shared-prod.telemetry_derived.experiment_search_aggregates_live_v1
+      type: table_view
+    experiment_unenrollment_overall:
+      tables:
+      - channel: release
+        table: mozdata.telemetry.experiment_unenrollment_overall
+      type: table_view
+    experimenter_experiments:
+      tables:
+      - channel: release
+        table: moz-fx-data-experiments.monitoring.experimenter_experiments_v1
+      type: table_view
+    logs:
+      tables:
+      - channel: release
+        table: moz-fx-data-experiments.monitoring.logs
+      type: table_view
+    query_cost:
+      tables:
+      - channel: release
+        table: moz-fx-data-experiments.monitoring.query_cost_v1
+      type: table_view
+    task_monitoring_logs:
+      tables:
+      - channel: release
+        table: moz-fx-data-experiments.monitoring.task_monitoring_logs
+      type: table_view
+    task_profiling_logs:
+      tables:
+      - channel: release
+        table: moz-fx-data-experiments.monitoring.task_profiling_logs
+      type: table_view
+fenix:
+  explores:
+    activation:
+      type: glean_ping_explore
+      views:
+        base_view: activation
+    addresses_sync:
+      type: glean_ping_explore
+      views:
+        base_view: addresses_sync
+    baseline:
+      type: glean_ping_explore
+      views:
+        base_view: baseline
+    bookmarks_sync:
+      type: glean_ping_explore
+      views:
+        base_view: bookmarks_sync
+    client_counts:
+      type: client_counts_explore
+      views:
+        base_view: client_counts
+        extended_view: baseline_clients_daily_table
+    creditcards_sync:
+      type: glean_ping_explore
+      views:
+        base_view: creditcards_sync
+    deletion_request:
+      type: glean_ping_explore
+      views:
+        base_view: deletion_request
+    events:
+      type: events_explore
+      views:
+        base_view: events
+        extended_view: events_unnested_table
+    first_session:
+      type: glean_ping_explore
+      views:
+        base_view: first_session
+    fog_validation:
+      type: glean_ping_explore
+      views:
+        base_view: fog_validation
+    funnel_analysis:
+      type: funnel_analysis_explore
+      views:
+        base_view: funnel_analysis
+    growth_accounting:
+      type: growth_accounting_explore
+      views:
+        base_view: growth_accounting
+    history_sync:
+      type: glean_ping_explore
+      views:
+        base_view: history_sync
+    installation:
+      type: glean_ping_explore
+      views:
+        base_view: installation
+    logins_sync:
+      type: glean_ping_explore
+      views:
+        base_view: logins_sync
+    metrics:
+      type: glean_ping_explore
+      views:
+        base_view: metrics
+    migration:
+      type: glean_ping_explore
+      views:
+        base_view: migration
+    startup_timeline:
+      type: glean_ping_explore
+      views:
+        base_view: startup_timeline
+    sync:
+      type: glean_ping_explore
+      views:
+        base_view: sync
+    tabs_sync:
+      type: glean_ping_explore
+      views:
+        base_view: tabs_sync
+    topsites_impression:
+      type: glean_ping_explore
+      views:
+        base_view: topsites_impression
+  glean_app: true
+  owners:
+  - dthorn@mozilla.com
+  - mdroettboom@mozilla.com
+  - vzare@mozilla.com
+  - ksiegler@mozilla.com
+  pretty_name: Firefox for Android
+  spoke: looker-spoke-default
+  views:
+    activation:
+      tables:
+      - channel: release
+        table: mozdata.fenix.activation
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.activation
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.activation
+      type: glean_ping_view
+    activation_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.activation
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.activation
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.activation
+      type: table_view
+    addresses_sync:
+      tables:
+      - channel: release
+        table: mozdata.fenix.addresses_sync
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.addresses_sync
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.addresses_sync
+      type: glean_ping_view
+    addresses_sync_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.addresses_sync
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.addresses_sync
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.addresses_sync
+      type: table_view
+    baseline:
+      tables:
+      - channel: release
+        table: mozdata.fenix.baseline
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.baseline
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.baseline
+      type: glean_ping_view
+    baseline_clients_daily_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.baseline_clients_daily
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.baseline_clients_daily
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.baseline_clients_daily
+      type: table_view
+    baseline_clients_first_seen_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.baseline_clients_first_seen
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.baseline_clients_first_seen
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.baseline_clients_first_seen
+      type: table_view
+    baseline_clients_last_seen_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.baseline_clients_last_seen
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.baseline_clients_last_seen
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.baseline_clients_last_seen
+      type: table_view
+    baseline_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.baseline
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.baseline
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.baseline
+      type: table_view
+    bookmarks_sync:
+      tables:
+      - channel: release
+        table: mozdata.fenix.bookmarks_sync
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.bookmarks_sync
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.bookmarks_sync
+      type: glean_ping_view
+    bookmarks_sync_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.bookmarks_sync
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.bookmarks_sync
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.bookmarks_sync
+      type: table_view
+    client_counts:
+      tables:
+      - table: mozdata.fenix.baseline_clients_daily
+      type: client_counts_view
+    clients_last_seen_joined_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.clients_last_seen_joined
+      type: table_view
+    creditcards_sync:
+      tables:
+      - channel: release
+        table: mozdata.fenix.creditcards_sync
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.creditcards_sync
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.creditcards_sync
+      type: glean_ping_view
+    creditcards_sync_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.creditcards_sync
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.creditcards_sync
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.creditcards_sync
+      type: table_view
+    deletion_request:
+      tables:
+      - channel: release
+        table: mozdata.fenix.deletion_request
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.deletion_request
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.deletion_request
+      type: glean_ping_view
+    deletion_request_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.deletion_request
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.deletion_request
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.deletion_request
+      type: table_view
+    event_types_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.event_types
+      type: table_view
+    events:
+      tables:
+      - base_table: mozdata.fenix.events_unnested
+        events_table_view: events_unnested_table
+      type: events_view
+    events_daily_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.events_daily
+      type: table_view
+    events_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.events
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.events
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.events
+      type: table_view
+    events_unnested_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.events_unnested
+      type: table_view
+    first_session:
+      tables:
+      - channel: release
+        table: mozdata.fenix.first_session
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.first_session
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.first_session
+      type: glean_ping_view
+    first_session_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.first_session
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.first_session
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.first_session
+      type: table_view
+    fog_validation:
+      tables:
+      - channel: release
+        table: mozdata.fenix.fog_validation
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.fog_validation
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.fog_validation
+      type: glean_ping_view
+    fog_validation_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.fog_validation
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.fog_validation
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.fog_validation
+      type: table_view
+    funnel_analysis:
+      tables:
+      - event_types: '`mozdata.fenix.event_types`'
+        funnel_analysis: events_daily_table
+        step_1: event_types
+        step_2: event_types
+        step_3: event_types
+        step_4: event_types
+      type: funnel_analysis_view
+    geckoview_version_table:
+      tables:
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.geckoview_version
+      type: table_view
+    growth_accounting:
+      tables:
+      - table: mozdata.fenix.baseline_clients_last_seen
+      type: growth_accounting_view
+    history_sync:
+      tables:
+      - channel: release
+        table: mozdata.fenix.history_sync
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.history_sync
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.history_sync
+      type: glean_ping_view
+    history_sync_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.history_sync
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.history_sync
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.history_sync
+      type: table_view
+    installation:
+      tables:
+      - channel: release
+        table: mozdata.fenix.installation
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.installation
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.installation
+      type: glean_ping_view
+    installation_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.installation
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.installation
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.installation
+      type: table_view
+    logins_sync:
+      tables:
+      - channel: release
+        table: mozdata.fenix.logins_sync
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.logins_sync
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.logins_sync
+      type: glean_ping_view
+    logins_sync_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.logins_sync
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.logins_sync
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.logins_sync
+      type: table_view
+    metrics:
+      tables:
+      - channel: release
+        table: mozdata.fenix.metrics
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.metrics
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.metrics
+      type: glean_ping_view
+    metrics_clients_daily_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.metrics_clients_daily
+      type: table_view
+    metrics_clients_last_seen_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.metrics_clients_last_seen
+      type: table_view
+    metrics_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.metrics
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.metrics
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.metrics
+      type: table_view
+    migrated_clients_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.migrated_clients
+      type: table_view
+    migration:
+      tables:
+      - channel: release
+        table: mozdata.fenix.migration
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.migration
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.migration
+      type: glean_ping_view
+    migration_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.migration
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.migration
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.migration
+      type: table_view
+    releases_table:
+      tables:
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.releases
+      type: table_view
+    startup_timeline:
+      tables:
+      - channel: release
+        table: mozdata.fenix.startup_timeline
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.startup_timeline
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.startup_timeline
+      type: glean_ping_view
+    startup_timeline_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.startup_timeline
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.startup_timeline
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.startup_timeline
+      type: table_view
+    sync:
+      tables:
+      - channel: release
+        table: mozdata.fenix.sync
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.sync
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.sync
+      type: glean_ping_view
+    sync_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.sync
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.sync
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.sync
+      type: table_view
+    tabs_sync:
+      tables:
+      - channel: release
+        table: mozdata.fenix.tabs_sync
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.tabs_sync
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.tabs_sync
+      type: glean_ping_view
+    tabs_sync_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.tabs_sync
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.tabs_sync
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.tabs_sync
+      type: table_view
+    topsites_impression:
+      tables:
+      - channel: release
+        table: mozdata.fenix.topsites_impression
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.topsites_impression
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.topsites_impression
+      type: glean_ping_view
+    topsites_impression_table:
+      tables:
+      - channel: release
+        table: mozdata.fenix.topsites_impression
+      - channel: beta
+        table: mozdata.org_mozilla_firefox_beta.topsites_impression
+      - channel: nightly
+        table: mozdata.org_mozilla_fenix.topsites_impression
+      type: table_view
+firefox_accounts:
+  explores:
+    auth_event_counts:
+      type: events_explore
+      views:
+        base_view: auth_events
+        extended_view: fxa_auth_events_table
+    event_counts:
+      type: events_explore
+      views:
+        base_view: events
+        extended_view: fxa_events_table
+    funnel_analysis:
+      type: funnel_analysis_explore
+      views:
+        base_view: funnel_analysis
+    growth_accounting:
+      type: growth_accounting_explore
+      views:
+        base_view: growth_accounting
+  glean_app: false
+  owners:
+  - loines@mozilla.com
+  pretty_name: Firefox Accounts
+  spoke: looker-spoke-default
+  views:
+    auth_events:
+      tables:
+      - base_table: mozdata.firefox_accounts.fxa_content_auth_events
+        events_table_view: fxa_auth_events_table
+      type: events_view
+    events:
+      tables:
+      - base_table: mozdata.firefox_accounts.fxa_content_auth_oauth_events
+        events_table_view: fxa_events_table
+      type: events_view
+    events_daily_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_accounts.events_daily
+      type: table_view
+    funnel_analysis:
+      tables:
+      - event_types: mozdata.firefox_accounts.event_types
+        funnel_analysis: events_daily_table
+        step_1: event_types
+        step_2: event_types
+        step_3: event_types
+        step_4: event_types
+      type: funnel_analysis_view
+    fxa_auth_events_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_accounts.fxa_content_auth_events
+      type: table_view
+    fxa_events_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_accounts.fxa_content_auth_oauth_events
+      type: table_view
+    fxa_first_seen_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_accounts.fxa_users_first_seen
+      type: table_view
+    fxa_log_device_command_events:
+      tables:
+      - channel: release
+        table: mozdata.firefox_accounts.fxa_log_device_command_events
+      type: table_view
+    growth_accounting:
+      tables:
+      - table: mozdata.firefox_accounts.fxa_users_last_seen
+      type: growth_accounting_view
+firefox_desktop:
+  explores:
+    baseline:
+      type: glean_ping_explore
+      views:
+        base_view: baseline
+    client_counts:
+      type: client_counts_explore
+      views:
+        base_view: client_counts
+        extended_view: clients_daily_table
+    deletion_request:
+      type: glean_ping_explore
+      views:
+        base_view: deletion_request
+    events:
+      type: events_explore
+      views:
+        base_view: events
+        extended_view: desktop_events_table
+    fog_validation:
+      type: glean_ping_explore
+      views:
+        base_view: fog_validation
+    funnel_analysis:
+      type: funnel_analysis_explore
+      views:
+        base_view: funnel_analysis
+    growth_accounting:
+      type: growth_accounting_explore
+      views:
+        base_view: growth_accounting
+    metrics:
+      type: glean_ping_explore
+      views:
+        base_view: metrics
+  glean_app: true
+  owners:
+  - chutten@mozilla.com
+  pretty_name: Firefox for Desktop
+  spoke: looker-spoke-default
+  views:
+    baseline:
+      tables:
+      - table: mozdata.firefox_desktop.baseline
+      type: glean_ping_view
+    baseline_clients_daily_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop.baseline_clients_daily
+      type: table_view
+    baseline_clients_first_seen_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop.baseline_clients_first_seen
+      type: table_view
+    baseline_clients_last_seen_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop.baseline_clients_last_seen
+      type: table_view
+    baseline_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop.baseline
+      type: table_view
+    client_counts:
+      tables:
+      - table: mozdata.telemetry.clients_daily
+      type: client_counts_view
+    clients_daily_table:
+      tables:
+      - table: mozdata.telemetry.clients_daily
+      type: table_view
+    clients_last_seen_joined_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop.clients_last_seen_joined
+      type: table_view
+    clients_last_seen_table:
+      tables:
+      - table: mozdata.telemetry.clients_last_seen
+      type: table_view
+    deletion_request:
+      tables:
+      - table: mozdata.firefox_desktop.deletion_request
+      type: glean_ping_view
+    deletion_request_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop.deletion_request
+      type: table_view
+    desktop_events_table:
+      tables:
+      - channel: release
+        table: mozdata.telemetry.events
+      type: table_view
+    events:
+      tables:
+      - base_table: mozdata.telemetry.events
+        events_table_view: desktop_events_table
+      type: events_view
+    events_daily_table:
+      tables:
+      - channel: release
+        table: mozdata.telemetry.events_daily
+      type: table_view
+    events_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop.events
+      type: table_view
+    events_unnested_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop.events_unnested
+      type: table_view
+    feature_usage_table:
+      tables:
+      - table: mozdata.telemetry.feature_usage
+      type: table_view
+    fog_validation:
+      tables:
+      - table: mozdata.firefox_desktop.fog_validation
+      type: glean_ping_view
+    fog_validation_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop.fog_validation
+      type: table_view
+    funnel_analysis:
+      tables:
+      - event_types: mozdata.telemetry.event_types
+        funnel_analysis: events_daily_table
+        step_1: event_types
+        step_2: event_types
+        step_3: event_types
+        step_4: event_types
+      type: funnel_analysis_view
+    growth_accounting:
+      tables:
+      - table: mozdata.telemetry.clients_last_seen
+      type: growth_accounting_view
+    metrics:
+      tables:
+      - table: mozdata.firefox_desktop.metrics
+      type: glean_ping_view
+    metrics_clients_daily_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop.metrics_clients_daily
+      type: table_view
+    metrics_clients_last_seen_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop.metrics_clients_last_seen
+      type: table_view
+    metrics_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop.metrics
+      type: table_view
+firefox_desktop_background_update:
+  explores:
+    background_update:
+      type: glean_ping_explore
+      views:
+        base_view: background_update
+    baseline:
+      type: glean_ping_explore
+      views:
+        base_view: baseline
+    client_counts:
+      type: client_counts_explore
+      views:
+        base_view: client_counts
+        extended_view: baseline_clients_daily_table
+    deletion_request:
+      type: glean_ping_explore
+      views:
+        base_view: deletion_request
+    events:
+      type: events_explore
+      views:
+        base_view: events
+        extended_view: events_unnested_table
+    growth_accounting:
+      type: growth_accounting_explore
+      views:
+        base_view: growth_accounting
+    metrics:
+      type: glean_ping_explore
+      views:
+        base_view: metrics
+  glean_app: true
+  owners:
+  - chutten@mozilla.com
+  pretty_name: Firefox for Desktop Background Update Task
+  spoke: looker-spoke-default
+  views:
+    background_update:
+      tables:
+      - table: mozdata.firefox_desktop_background_update.background_update
+      type: glean_ping_view
+    background_update_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop_background_update.background_update
+      type: table_view
+    baseline:
+      tables:
+      - table: mozdata.firefox_desktop_background_update.baseline
+      type: glean_ping_view
+    baseline_clients_daily_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop_background_update.baseline_clients_daily
+      type: table_view
+    baseline_clients_first_seen_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop_background_update.baseline_clients_first_seen
+      type: table_view
+    baseline_clients_last_seen_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop_background_update.baseline_clients_last_seen
+      type: table_view
+    baseline_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop_background_update.baseline
+      type: table_view
+    client_counts:
+      tables:
+      - table: mozdata.firefox_desktop_background_update.baseline_clients_daily
+      type: client_counts_view
+    clients_last_seen_joined_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop_background_update.clients_last_seen_joined
+      type: table_view
+    deletion_request:
+      tables:
+      - table: mozdata.firefox_desktop_background_update.deletion_request
+      type: glean_ping_view
+    deletion_request_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop_background_update.deletion_request
+      type: table_view
+    events:
+      tables:
+      - base_table: mozdata.firefox_desktop_background_update.events_unnested
+        events_table_view: events_unnested_table
+      type: events_view
+    events_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop_background_update.events
+      type: table_view
+    events_unnested_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop_background_update.events_unnested
+      type: table_view
+    growth_accounting:
+      tables:
+      - table: mozdata.firefox_desktop_background_update.baseline_clients_last_seen
+      type: growth_accounting_view
+    metrics:
+      tables:
+      - table: mozdata.firefox_desktop_background_update.metrics
+      type: glean_ping_view
+    metrics_clients_daily_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop_background_update.metrics_clients_daily
+      type: table_view
+    metrics_clients_last_seen_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop_background_update.metrics_clients_last_seen
+      type: table_view
+    metrics_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_desktop_background_update.metrics
+      type: table_view
+firefox_ios:
+  explores:
+    baseline:
+      type: glean_ping_explore
+      views:
+        base_view: baseline
+    client_counts:
+      type: client_counts_explore
+      views:
+        base_view: client_counts
+        extended_view: baseline_clients_daily_table
+    deletion_request:
+      type: glean_ping_explore
+      views:
+        base_view: deletion_request
+    events:
+      type: events_explore
+      views:
+        base_view: events
+        extended_view: events_unnested_table
+    growth_accounting:
+      type: growth_accounting_explore
+      views:
+        base_view: growth_accounting
+    metrics:
+      type: glean_ping_explore
+      views:
+        base_view: metrics
+  glean_app: true
+  owners:
+  - tlong@mozilla.com
+  - dthorn@mozilla.com
+  - athomas@mozilla.com
+  pretty_name: Firefox for iOS
+  spoke: looker-spoke-default
+  views:
+    baseline:
+      tables:
+      - channel: release
+        table: mozdata.firefox_ios.baseline
+      - channel: beta
+        table: mozdata.org_mozilla_ios_firefoxbeta.baseline
+      - channel: nightly
+        table: mozdata.org_mozilla_ios_fennec.baseline
+      type: glean_ping_view
+    baseline_clients_daily_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_ios.baseline_clients_daily
+      - channel: beta
+        table: mozdata.org_mozilla_ios_firefoxbeta.baseline_clients_daily
+      - channel: nightly
+        table: mozdata.org_mozilla_ios_fennec.baseline_clients_daily
+      type: table_view
+    baseline_clients_first_seen_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_ios.baseline_clients_first_seen
+      - channel: beta
+        table: mozdata.org_mozilla_ios_firefoxbeta.baseline_clients_first_seen
+      - channel: nightly
+        table: mozdata.org_mozilla_ios_fennec.baseline_clients_first_seen
+      type: table_view
+    baseline_clients_last_seen_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_ios.baseline_clients_last_seen
+      - channel: beta
+        table: mozdata.org_mozilla_ios_firefoxbeta.baseline_clients_last_seen
+      - channel: nightly
+        table: mozdata.org_mozilla_ios_fennec.baseline_clients_last_seen
+      type: table_view
+    baseline_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_ios.baseline
+      - channel: beta
+        table: mozdata.org_mozilla_ios_firefoxbeta.baseline
+      - channel: nightly
+        table: mozdata.org_mozilla_ios_fennec.baseline
+      type: table_view
+    client_counts:
+      tables:
+      - table: mozdata.firefox_ios.baseline_clients_daily
+      type: client_counts_view
+    clients_last_seen_joined_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_ios.clients_last_seen_joined
+      type: table_view
+    deletion_request:
+      tables:
+      - channel: release
+        table: mozdata.firefox_ios.deletion_request
+      - channel: beta
+        table: mozdata.org_mozilla_ios_firefoxbeta.deletion_request
+      - channel: nightly
+        table: mozdata.org_mozilla_ios_fennec.deletion_request
+      type: glean_ping_view
+    deletion_request_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_ios.deletion_request
+      - channel: beta
+        table: mozdata.org_mozilla_ios_firefoxbeta.deletion_request
+      - channel: nightly
+        table: mozdata.org_mozilla_ios_fennec.deletion_request
+      type: table_view
+    events:
+      tables:
+      - base_table: mozdata.firefox_ios.events_unnested
+        events_table_view: events_unnested_table
+      type: events_view
+    events_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_ios.events
+      - channel: beta
+        table: mozdata.org_mozilla_ios_firefoxbeta.events
+      - channel: nightly
+        table: mozdata.org_mozilla_ios_fennec.events
+      type: table_view
+    events_unnested_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_ios.events_unnested
+      type: table_view
+    growth_accounting:
+      tables:
+      - table: mozdata.firefox_ios.baseline_clients_last_seen
+      type: growth_accounting_view
+    metrics:
+      tables:
+      - channel: release
+        table: mozdata.firefox_ios.metrics
+      - channel: beta
+        table: mozdata.org_mozilla_ios_firefoxbeta.metrics
+      - channel: nightly
+        table: mozdata.org_mozilla_ios_fennec.metrics
+      type: glean_ping_view
+    metrics_clients_daily_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_ios.metrics_clients_daily
+      type: table_view
+    metrics_clients_last_seen_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_ios.metrics_clients_last_seen
+      type: table_view
+    metrics_table:
+      tables:
+      - channel: release
+        table: mozdata.firefox_ios.metrics
+      - channel: beta
+        table: mozdata.org_mozilla_ios_firefoxbeta.metrics
+      - channel: nightly
+        table: mozdata.org_mozilla_ios_fennec.metrics
+      type: table_view
+firefox_translations:
+  explores:
+    custom:
+      type: glean_ping_explore
+      views:
+        base_view: custom
+    deletion_request:
+      type: glean_ping_explore
+      views:
+        base_view: deletion_request
+  glean_app: true
+  owners:
+  - epavlov@mozilla.com
+  pretty_name: Firefox Translations
+  spoke: looker-spoke-default
+  views:
+    custom:
+      tables:
+      - table: mozdata.firefox_translations.custom
+      type: glean_ping_view
+    custom_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_translations.custom
+      type: table_view
+    deletion_request:
+      tables:
+      - table: mozdata.firefox_translations.deletion_request
+      type: glean_ping_view
+    deletion_request_table:
+      tables:
+      - channel: null
+        table: mozdata.firefox_translations.deletion_request
+      type: table_view
+focus_android:
+  explores:
+    activation:
+      type: glean_ping_explore
+      views:
+        base_view: activation
+    baseline:
+      type: glean_ping_explore
+      views:
+        base_view: baseline
+    deletion_request:
+      type: glean_ping_explore
+      views:
+        base_view: deletion_request
+    events:
+      type: events_explore
+      views:
+        base_view: events
+        extended_view: events_unnested_table
+    metrics:
+      type: glean_ping_explore
+      views:
+        base_view: metrics
+  glean_app: true
+  owners:
+  - jalmeida@mozilla.com
+  - tlong@mozilla.com
+  - loines@mozilla.com
+  pretty_name: Firefox Focus for Android
+  spoke: looker-spoke-default
+  views:
+    activation:
+      tables:
+      - channel: release
+        table: mozdata.focus_android.activation
+      - channel: beta
+        table: mozdata.org_mozilla_focus_beta.activation
+      - channel: nightly
+        table: mozdata.org_mozilla_focus_nightly.activation
+      type: glean_ping_view
+    activation_table:
+      tables:
+      - channel: release
+        table: mozdata.focus_android.activation
+      - channel: beta
+        table: mozdata.org_mozilla_focus_beta.activation
+      - channel: nightly
+        table: mozdata.org_mozilla_focus_nightly.activation
+      type: table_view
+    baseline:
+      tables:
+      - channel: release
+        table: mozdata.focus_android.baseline
+      - channel: beta
+        table: mozdata.org_mozilla_focus_beta.baseline
+      - channel: nightly
+        table: mozdata.org_mozilla_focus_nightly.baseline
+      type: glean_ping_view
+    baseline_table:
+      tables:
+      - channel: release
+        table: mozdata.focus_android.baseline
+      - channel: beta
+        table: mozdata.org_mozilla_focus_beta.baseline
+      - channel: nightly
+        table: mozdata.org_mozilla_focus_nightly.baseline
+      type: table_view
+    deletion_request:
+      tables:
+      - channel: release
+        table: mozdata.focus_android.deletion_request
+      - channel: beta
+        table: mozdata.org_mozilla_focus_beta.deletion_request
+      - channel: nightly
+        table: mozdata.org_mozilla_focus_nightly.deletion_request
+      type: glean_ping_view
+    deletion_request_table:
+      tables:
+      - channel: release
+        table: mozdata.focus_android.deletion_request
+      - channel: beta
+        table: mozdata.org_mozilla_focus_beta.deletion_request
+      - channel: nightly
+        table: mozdata.org_mozilla_focus_nightly.deletion_request
+      type: table_view
+    events:
+      tables:
+      - base_table: mozdata.focus_android.events_unnested
+        events_table_view: events_unnested_table
+      type: events_view
+    events_table:
+      tables:
+      - channel: release
+        table: mozdata.focus_android.events
+      - channel: beta
+        table: mozdata.org_mozilla_focus_beta.events
+      - channel: nightly
+        table: mozdata.org_mozilla_focus_nightly.events
+      type: table_view
+    events_unnested_table:
+      tables:
+      - channel: release
+        table: mozdata.focus_android.events_unnested
+      type: table_view
+    metrics:
+      tables:
+      - channel: release
+        table: mozdata.focus_android.metrics
+      - channel: beta
+        table: mozdata.org_mozilla_focus_beta.metrics
+      - channel: nightly
+        table: mozdata.org_mozilla_focus_nightly.metrics
+      type: glean_ping_view
+    metrics_clients_daily_table:
+      tables:
+      - channel: release
+        table: mozdata.focus_android.metrics_clients_daily
+      type: table_view
+    metrics_clients_last_seen_table:
+      tables:
+      - channel: release
+        table: mozdata.focus_android.metrics_clients_last_seen
+      type: table_view
+    metrics_table:
+      tables:
+      - channel: release
+        table: mozdata.focus_android.metrics
+      - channel: beta
+        table: mozdata.org_mozilla_focus_beta.metrics
+      - channel: nightly
+        table: mozdata.org_mozilla_focus_nightly.metrics
+      type: table_view
+focus_ios:
+  explores:
+    baseline:
+      type: glean_ping_explore
+      views:
+        base_view: baseline
+    client_counts:
+      type: client_counts_explore
+      views:
+        base_view: client_counts
+        extended_view: baseline_clients_daily_table
+    deletion_request:
+      type: glean_ping_explore
+      views:
+        base_view: deletion_request
+    growth_accounting:
+      type: growth_accounting_explore
+      views:
+        base_view: growth_accounting
+    metrics:
+      type: glean_ping_explore
+      views:
+        base_view: metrics
+  glean_app: true
+  owners:
+  - sarentz@mozilla.com
+  - tlong@mozilla.com
+  - loines@mozilla.com
+  pretty_name: Firefox Focus for iOS
+  spoke: looker-spoke-default
+  views:
+    baseline:
+      tables:
+      - table: mozdata.org_mozilla_ios_focus.baseline
+      type: glean_ping_view
+    baseline_clients_daily_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_ios_focus.baseline_clients_daily
+      type: table_view
+    baseline_clients_first_seen_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_ios_focus.baseline_clients_first_seen
+      type: table_view
+    baseline_clients_last_seen_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_ios_focus.baseline_clients_last_seen
+      type: table_view
+    baseline_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_ios_focus.baseline
+      type: table_view
+    client_counts:
+      tables:
+      - table: mozdata.org_mozilla_ios_focus.baseline_clients_daily
+      type: client_counts_view
+    deletion_request:
+      tables:
+      - table: mozdata.org_mozilla_ios_focus.deletion_request
+      type: glean_ping_view
+    deletion_request_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_ios_focus.deletion_request
+      type: table_view
+    events_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_ios_focus.events
+      type: table_view
+    growth_accounting:
+      tables:
+      - table: mozdata.org_mozilla_ios_focus.baseline_clients_last_seen
+      type: growth_accounting_view
+    metrics:
+      tables:
+      - table: mozdata.org_mozilla_ios_focus.metrics
+      type: glean_ping_view
+    metrics_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_ios_focus.metrics
+      type: table_view
+fpa:
+  connection: bigquery-oauth
+  glean_app: false
+  owners:
+  - ngrammater@mozilla.com
+  - rmiller@mozilla.com
+  - lakshmimurugan@google.com
+  pretty_name: FP&A
+  spoke: looker-spoke-private
+glean_dictionary:
+  explores:
+    deletion_request:
+      type: glean_ping_explore
+      views:
+        base_view: deletion_request
+    page_view:
+      type: glean_ping_explore
+      views:
+        base_view: page_view
+  glean_app: true
+  owners:
+  - brizental@mozilla.com
+  - glean-team@mozilla.com
+  pretty_name: Glean Dictionary
+  spoke: looker-spoke-default
+  views:
+    deletion_request:
+      tables:
+      - table: mozdata.glean_dictionary.deletion_request
+      type: glean_ping_view
+    deletion_request_table:
+      tables:
+      - channel: null
+        table: mozdata.glean_dictionary.deletion_request
+      type: table_view
+    page_view:
+      tables:
+      - table: mozdata.glean_dictionary.page_view
+      type: glean_ping_view
+    page_view_table:
+      tables:
+      - channel: null
+        table: mozdata.glean_dictionary.page_view
+      type: table_view
+klar_android:
+  explores:
+    activation:
+      type: glean_ping_explore
+      views:
+        base_view: activation
+    baseline:
+      type: glean_ping_explore
+      views:
+        base_view: baseline
+    deletion_request:
+      type: glean_ping_explore
+      views:
+        base_view: deletion_request
+    metrics:
+      type: glean_ping_explore
+      views:
+        base_view: metrics
+  glean_app: true
+  owners:
+  - jalmeida@mozilla.com
+  - tlong@mozilla.com
+  pretty_name: Firefox Klar for Android
+  spoke: looker-spoke-default
+  views:
+    activation:
+      tables:
+      - table: mozdata.org_mozilla_klar.activation
+      type: glean_ping_view
+    activation_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_klar.activation
+      type: table_view
+    baseline:
+      tables:
+      - table: mozdata.org_mozilla_klar.baseline
+      type: glean_ping_view
+    baseline_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_klar.baseline
+      type: table_view
+    deletion_request:
+      tables:
+      - table: mozdata.org_mozilla_klar.deletion_request
+      type: glean_ping_view
+    deletion_request_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_klar.deletion_request
+      type: table_view
+    events_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_klar.events
+      type: table_view
+    metrics:
+      tables:
+      - table: mozdata.org_mozilla_klar.metrics
+      type: glean_ping_view
+    metrics_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_klar.metrics
+      type: table_view
+klar_ios:
+  explores:
+    baseline:
+      type: glean_ping_explore
+      views:
+        base_view: baseline
+    client_counts:
+      type: client_counts_explore
+      views:
+        base_view: client_counts
+        extended_view: baseline_clients_daily_table
+    deletion_request:
+      type: glean_ping_explore
+      views:
+        base_view: deletion_request
+    growth_accounting:
+      type: growth_accounting_explore
+      views:
+        base_view: growth_accounting
+    metrics:
+      type: glean_ping_explore
+      views:
+        base_view: metrics
+  glean_app: true
+  owners:
+  - sarentz@mozilla.com
+  - tlong@mozilla.com
+  pretty_name: Firefox Klar for iOS
+  spoke: looker-spoke-default
+  views:
+    baseline:
+      tables:
+      - table: mozdata.org_mozilla_ios_klar.baseline
+      type: glean_ping_view
+    baseline_clients_daily_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_ios_klar.baseline_clients_daily
+      type: table_view
+    baseline_clients_first_seen_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_ios_klar.baseline_clients_first_seen
+      type: table_view
+    baseline_clients_last_seen_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_ios_klar.baseline_clients_last_seen
+      type: table_view
+    baseline_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_ios_klar.baseline
+      type: table_view
+    client_counts:
+      tables:
+      - table: mozdata.org_mozilla_ios_klar.baseline_clients_daily
+      type: client_counts_view
+    deletion_request:
+      tables:
+      - table: mozdata.org_mozilla_ios_klar.deletion_request
+      type: glean_ping_view
+    deletion_request_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_ios_klar.deletion_request
+      type: table_view
+    events_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_ios_klar.events
+      type: table_view
+    growth_accounting:
+      tables:
+      - table: mozdata.org_mozilla_ios_klar.baseline_clients_last_seen
+      type: growth_accounting_view
+    metrics:
+      tables:
+      - table: mozdata.org_mozilla_ios_klar.metrics
+      type: glean_ping_view
+    metrics_table:
+      tables:
+      - channel: null
+        table: mozdata.org_mozilla_ios_klar.metrics
+      type: table_view
+kpi:
+  explores:
+    unified_metrics:
+      type: ping_explore
+      views:
+        base_view: unified_metrics
+  glean_app: false
+  owners:
+  - loines@mozilla.com
+  pretty_name: KPI
+  spoke: looker-spoke-default
+  views:
+    unified_metrics:
+      tables:
+      - table: mozdata.telemetry.unified_metrics
+      type: ping_view
+monitoring:
+  explores:
+    average_ping_sizes:
+      type: ping_explore
+      views:
+        base_view: average_ping_sizes
+    column_size:
+      type: ping_explore
+      views:
+        base_view: column_size
+    payload_bytes_decoded_all:
+      type: ping_explore
+      views:
+        base_view: payload_bytes_decoded_all
+    payload_bytes_error_all:
+      type: ping_explore
+      views:
+        base_view: payload_bytes_error_all
+    schema_error_counts:
+      type: ping_explore
+      views:
+        base_view: schema_error_counts
+    stable_table_column_counts:
+      type: ping_explore
+      views:
+        base_view: stable_table_column_counts
+    stable_table_sizes:
+      type: ping_explore
+      views:
+        base_view: stable_table_sizes
+    structured_distinct_docids:
+      type: ping_explore
+      views:
+        base_view: structured_distinct_docids
+    structured_missing_columns:
+      type: ping_explore
+      views:
+        base_view: structured_missing_columns
+    telemetry_distinct_docids:
+      type: ping_explore
+      views:
+        base_view: telemetry_distinct_docids
+    telemetry_missing_columns:
+      type: ping_explore
+      views:
+        base_view: telemetry_missing_columns
+  glean_app: false
+  owners:
+  - jklukas@mozilla.com
+  - ascholtz@mozilla.com
+  - wlach@mozilla.com
+  - akomar@mozilla.com
+  - anicholson@mozilla.com
+  - mhirose@mozilla.com
+  - kignasiak@mozilla.com
+  pretty_name: Monitoring (Data Pipeline)
+  spoke: looker-spoke-default
+  views:
+    average_ping_sizes:
+      tables:
+      - table: mozdata.monitoring.average_ping_sizes
+      type: ping_view
+    column_size:
+      tables:
+      - table: mozdata.monitoring.column_size
+      type: ping_view
+    payload_bytes_decoded_all:
+      tables:
+      - table: mozdata.monitoring.payload_bytes_decoded_all
+      type: ping_view
+    payload_bytes_error_all:
+      tables:
+      - table: mozdata.monitoring.payload_bytes_error_all
+      type: ping_view
+    schema_error_counts:
+      tables:
+      - table: mozdata.monitoring.schema_error_counts
+      type: ping_view
+    stable_table_column_counts:
+      tables:
+      - table: mozdata.monitoring.stable_table_column_counts
+      type: ping_view
+    stable_table_sizes:
+      tables:
+      - table: mozdata.monitoring.stable_table_sizes
+      type: ping_view
+    structured_distinct_docids:
+      tables:
+      - table: mozdata.monitoring.structured_distinct_docids
+      type: ping_view
+    structured_missing_columns:
+      tables:
+      - table: mozdata.monitoring.structured_missing_columns
+      type: ping_view
+    telemetry_distinct_docids:
+      tables:
+      - table: mozdata.monitoring.telemetry_distinct_docids
+      type: ping_view
+    telemetry_missing_columns:
+      tables:
+      - table: mozdata.monitoring.telemetry_missing_columns
+      type: ping_view
+mozilla_vpn:
+  explores:
+    deletion_request:
+      type: glean_ping_explore
+      views:
+        base_view: deletion_request
+    events:
+      type: events_explore
+      views:
+        base_view: events
+        extended_view: events_unnested_table
+    funnel_analysis:
+      type: funnel_analysis_explore
+      views:
+        base_view: funnel_analysis
+    main:
+      type: glean_ping_explore
+      views:
+        base_view: main
+  glean_app: true
+  owners:
+  - vpn@mozilla.com
+  - amarchesini@mozilla.com
+  - dthorn@mozilla.com
+  - sbird@mozilla.com
+  pretty_name: Mozilla VPN
+  spoke: looker-spoke-default
+  views:
+    active_subscriptions_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.active_subscriptions
+      type: table_view
+    add_device_events_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.add_device_events
+      type: table_view
+    all_subscriptions_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.all_subscriptions
+      type: table_view
+    channel_group_proportions_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.channel_group_proportions
+      type: table_view
+    deletion_request:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.deletion_request
+      type: glean_ping_view
+    deletion_request_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.deletion_request
+      type: table_view
+    devices:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.devices
+      type: table_view
+    devices_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.devices
+      type: table_view
+    event_types_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.event_types
+      type: table_view
+    events:
+      tables:
+      - base_table: mozdata.mozilla_vpn.events_unnested
+        events_table_view: events_unnested_table
+      type: events_view
+    events_daily_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.events_daily
+      type: table_view
+    events_unnested_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.events_unnested
+      type: table_view
+    exchange_rates_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.exchange_rates
+      type: table_view
+    funnel_analysis:
+      tables:
+      - event_types: '`mozdata.mozilla_vpn.event_types`'
+        funnel_analysis: events_daily_table
+        step_1: event_types
+        step_2: event_types
+        step_3: event_types
+        step_4: event_types
+      type: funnel_analysis_view
+    funnel_fxa_login_to_protected:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.funnel_fxa_login_to_protected
+      type: table_view
+    funnel_fxa_login_to_protected_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.funnel_fxa_login_to_protected
+      type: table_view
+    funnel_ga_to_subscriptions:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.funnel_ga_to_subscriptions
+      type: table_view
+    funnel_ga_to_subscriptions_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.funnel_ga_to_subscriptions
+      type: table_view
+    funnel_product_page_to_subscribed_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.funnel_product_page_to_subscribed
+      type: table_view
+    login_flows_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.login_flows
+      type: table_view
+    main:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.main
+      type: glean_ping_view
+    main_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.main
+      type: table_view
+    protected_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.protected
+      type: table_view
+    retention_by_subscription:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.retention_by_subscription
+      type: table_view
+    site_metrics_summary:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.site_metrics_summary
+      type: table_view
+    site_metrics_summary_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.site_metrics_summary
+      type: table_view
+    subscription_events_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.subscription_events
+      type: table_view
+    subscriptions:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.all_subscriptions
+      type: table_view
+    subscriptions_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.subscriptions
+      type: table_view
+    survey_cancellation_of_service_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.survey_cancellation_of_service
+      type: table_view
+    survey_intercept_q3_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.survey_intercept_q3
+      type: table_view
+    survey_market_fit_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.survey_market_fit
+      type: table_view
+    survey_product_quality_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.survey_product_quality
+      type: table_view
+    survey_recommend_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.survey_recommend
+      type: table_view
+    users_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.users
+      type: table_view
+    vat_rates:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.vat_rates
+      type: table_view
+    vat_rates_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.vat_rates
+      type: table_view
+    waitlist_table:
+      tables:
+      - channel: release
+        table: mozdata.mozilla_vpn.waitlist
+      type: table_view
+mozilla_vpn_private:
+  connection: bigquery-oauth
+  glean_app: false
+  owners:
+  - dthorn@mozilla.com
+  - sbird@mozilla.com
+  pretty_name: Mozilla VPN
+  spoke: looker-spoke-private
+newtab:
+  connection: bigquery-oauth
+  glean_app: false
+  owners:
+  - mmccorquodale@mozilla.com
+  pretty_name: New Tab
+  spoke: looker-spoke-private
+operational_monitoring:
+  dashboards:
+    fission:
+      tables:
+      - branches: &id001
+        - enabled
+        - disabled
+        explore: fission_histogram
+        table: moz-fx-data-shared-prod.operational_monitoring.bug_1660366_pref_ongoing_fission_nightly_experiment_nightly_83_100_histogram
+      - branches: *id001
+        explore: fission_scalar
+        table: moz-fx-data-shared-prod.operational_monitoring.bug_1660366_pref_ongoing_fission_nightly_experiment_nightly_83_100_scalar
+      type: operational_monitoring_dashboard
+    fission_release_rollout:
+      tables:
+      - branches: &id002
+        - enabled
+        - disabled
+        explore: fission_release_rollout_histogram
+        table: moz-fx-data-shared-prod.operational_monitoring.bug_1732206_rollout_fission_release_rollout_release_94_95_histogram
+      - branches: *id002
+        explore: fission_release_rollout_scalar
+        table: moz-fx-data-shared-prod.operational_monitoring.bug_1732206_rollout_fission_release_rollout_release_94_95_scalar
+      type: operational_monitoring_dashboard
+    tab_unloading_v2_linux:
+      tables:
+      - branches: &id003
+        - tab-unloading-enabled
+        - tab-unloading-disabled
+        explore: tab_unloading_v2_linux_histogram
+        table: moz-fx-data-shared-prod.operational_monitoring.bug_1751307_pref_tab_unloading_on_low_memory_for_linux_release_97_98_histogram
+      - branches: *id003
+        explore: tab_unloading_v2_linux_scalar
+        table: moz-fx-data-shared-prod.operational_monitoring.bug_1751307_pref_tab_unloading_on_low_memory_for_linux_release_97_98_scalar
+      type: operational_monitoring_dashboard
+    tab_unloading_v2_mac:
+      tables:
+      - branches: &id004
+        - memory-pressure-warning
+        - tab-unloading-and-memory-pressure-warning
+        - memory-pressure-critical
+        - tab-unloading-and-memory-pressure-critical
+        - tab-unloading-and-memory-pressure-disabled
+        explore: tab_unloading_v2_mac_histogram
+        table: moz-fx-data-shared-prod.operational_monitoring.bug_1751308_pref_tab_unloading_on_low_memory_for_macos_release_97_98_histogram
+      - branches: *id004
+        explore: tab_unloading_v2_mac_scalar
+        table: moz-fx-data-shared-prod.operational_monitoring.bug_1751308_pref_tab_unloading_on_low_memory_for_macos_release_97_98_scalar
+      type: operational_monitoring_dashboard
+    tab_unloading_v2_windows:
+      tables:
+      - branches: &id005
+        - tab-unloading-enabled
+        - tab-unloading-disabled
+        explore: tab_unloading_v2_windows_histogram
+        table: moz-fx-data-shared-prod.operational_monitoring.bug_1751309_pref_tab_unloading_on_low_memory_for_windows_release_97_98_histogram
+      - branches: *id005
+        explore: tab_unloading_v2_windows_scalar
+        table: moz-fx-data-shared-prod.operational_monitoring.bug_1751309_pref_tab_unloading_on_low_memory_for_windows_release_97_98_scalar
+      type: operational_monitoring_dashboard
+    win32k_lockdown_experiment:
+      tables:
+      - branches: &id006
+        - enabled
+        - disabled
+        explore: win32k_lockdown_experiment_histogram
+        table: moz-fx-data-shared-prod.operational_monitoring.bug_1751039_pref_win32k_experiment_nightly_99_99_histogram
+      - branches: *id006
+        explore: win32k_lockdown_experiment_scalar
+        table: moz-fx-data-shared-prod.operational_monitoring.bug_1751039_pref_win32k_experiment_nightly_99_99_scalar
+      type: operational_monitoring_dashboard
+  data_functions:
+  - compute_opmon_dimensions
+  explores:
+    fission_histogram:
+      branches: *id001
+      type: operational_monitoring_explore
+      views:
+        base_view: fission_histogram
+    fission_release_rollout_histogram:
+      branches: *id002
+      type: operational_monitoring_explore
+      views:
+        base_view: fission_release_rollout_histogram
+    fission_release_rollout_scalar:
+      branches: *id002
+      type: operational_monitoring_explore
+      views:
+        base_view: fission_release_rollout_scalar
+    fission_scalar:
+      branches: *id001
+      type: operational_monitoring_explore
+      views:
+        base_view: fission_scalar
+    tab_unloading_v2_linux_histogram:
+      branches: *id003
+      type: operational_monitoring_explore
+      views:
+        base_view: tab_unloading_v2_linux_histogram
+    tab_unloading_v2_linux_scalar:
+      branches: *id003
+      type: operational_monitoring_explore
+      views:
+        base_view: tab_unloading_v2_linux_scalar
+    tab_unloading_v2_mac_histogram:
+      branches: *id004
+      type: operational_monitoring_explore
+      views:
+        base_view: tab_unloading_v2_mac_histogram
+    tab_unloading_v2_mac_scalar:
+      branches: *id004
+      type: operational_monitoring_explore
+      views:
+        base_view: tab_unloading_v2_mac_scalar
+    tab_unloading_v2_windows_histogram:
+      branches: *id005
+      type: operational_monitoring_explore
+      views:
+        base_view: tab_unloading_v2_windows_histogram
+    tab_unloading_v2_windows_scalar:
+      branches: *id005
+      type: operational_monitoring_explore
+      views:
+        base_view: tab_unloading_v2_windows_scalar
+    win32k_lockdown_experiment_histogram:
+      branches: *id006
+      type: operational_monitoring_explore
+      views:
+        base_view: win32k_lockdown_experiment_histogram
+    win32k_lockdown_experiment_scalar:
+      branches: *id006
+      type: operational_monitoring_explore
+      views:
+        base_view: win32k_lockdown_experiment_scalar
+  glean_app: false
+  owners:
+  - msamuel@mozilla.com
+  pretty_name: Operational Monitoring
+  spoke: looker-spoke-default
+  views:
+    fission_histogram:
+      tables:
+      - table: moz-fx-data-shared-prod.operational_monitoring.bug_1660366_pref_ongoing_fission_nightly_experiment_nightly_83_100_histogram
+        xaxis: build_id
+      type: operational_monitoring_histogram_view
+    fission_release_rollout_histogram:
+      tables:
+      - table: moz-fx-data-shared-prod.operational_monitoring.bug_1732206_rollout_fission_release_rollout_release_94_95_histogram
+        xaxis: submission_date
+      type: operational_monitoring_histogram_view
+    fission_release_rollout_scalar:
+      tables:
+      - table: moz-fx-data-shared-prod.operational_monitoring.bug_1732206_rollout_fission_release_rollout_release_94_95_scalar
+        xaxis: submission_date
+      type: operational_monitoring_scalar_view
+    fission_scalar:
+      tables:
+      - table: moz-fx-data-shared-prod.operational_monitoring.bug_1660366_pref_ongoing_fission_nightly_experiment_nightly_83_100_scalar
+        xaxis: build_id
+      type: operational_monitoring_scalar_view
+    tab_unloading_v2_linux_histogram:
+      tables:
+      - table: moz-fx-data-shared-prod.operational_monitoring.bug_1751307_pref_tab_unloading_on_low_memory_for_linux_release_97_98_histogram
+        xaxis: submission_date
+      type: operational_monitoring_histogram_view
+    tab_unloading_v2_linux_scalar:
+      tables:
+      - table: moz-fx-data-shared-prod.operational_monitoring.bug_1751307_pref_tab_unloading_on_low_memory_for_linux_release_97_98_scalar
+        xaxis: submission_date
+      type: operational_monitoring_scalar_view
+    tab_unloading_v2_mac_histogram:
+      tables:
+      - table: moz-fx-data-shared-prod.operational_monitoring.bug_1751308_pref_tab_unloading_on_low_memory_for_macos_release_97_98_histogram
+        xaxis: submission_date
+      type: operational_monitoring_histogram_view
+    tab_unloading_v2_mac_scalar:
+      tables:
+      - table: moz-fx-data-shared-prod.operational_monitoring.bug_1751308_pref_tab_unloading_on_low_memory_for_macos_release_97_98_scalar
+        xaxis: submission_date
+      type: operational_monitoring_scalar_view
+    tab_unloading_v2_windows_histogram:
+      tables:
+      - table: moz-fx-data-shared-prod.operational_monitoring.bug_1751309_pref_tab_unloading_on_low_memory_for_windows_release_97_98_histogram
+        xaxis: submission_date
+      type: operational_monitoring_histogram_view
+    tab_unloading_v2_windows_scalar:
+      tables:
+      - table: moz-fx-data-shared-prod.operational_monitoring.bug_1751309_pref_tab_unloading_on_low_memory_for_windows_release_97_98_scalar
+        xaxis: submission_date
+      type: operational_monitoring_scalar_view
+    win32k_lockdown_experiment_histogram:
+      tables:
+      - table: moz-fx-data-shared-prod.operational_monitoring.bug_1751039_pref_win32k_experiment_nightly_99_99_histogram
+        xaxis: submission_date
+      type: operational_monitoring_histogram_view
+    win32k_lockdown_experiment_scalar:
+      tables:
+      - table: moz-fx-data-shared-prod.operational_monitoring.bug_1751039_pref_win32k_experiment_nightly_99_99_scalar
+        xaxis: submission_date
+      type: operational_monitoring_scalar_view
+pocket:
+  glean_app: false
+  owners:
+  - kenny@getpocket.com
+  - kirill@getpocket.com
+  pretty_name: Pocket
+  spoke: looker-spoke-default
+regrets_reporter:
+  glean_app: false
+  owners:
+  - jessed@mozillafoundation.org
+  pretty_name: RegretsReporter
+  spoke: looker-spoke-default
+  views:
+    regrets_reporter_summary:
+      tables:
+      - table: moz-fx-data-shared-prod.regrets_reporter_derived.regrets_reporter_summary_v1
+      type: table_view
+revenue:
+  connection: bigquery-oauth
+  glean_app: false
+  owners:
+  - akomarzewski@mozilla.com
+  - skahmann@mozilla.com
+  pretty_name: Revenue
+  spoke: looker-spoke-private
+  views:
+    stripe_itemized_payout_reconciliation:
+      tables:
+      - table: mozdata.stripe.itemized_payout_reconciliation
+      type: table_view
+search:
+  explores:
+    desktop_search_alert_records:
+      type: ping_explore
+      views:
+        base_view: desktop_search_alert_records
+    desktop_search_counts:
+      type: ping_explore
+      views:
+        base_view: search_clients_engines_sources_daily
+    mobile_search_counts:
+      type: ping_explore
+      views:
+        base_view: mobile_search_clients_engines_sources_daily
+  glean_app: false
+  owners:
+  - mmccorquodale@mozilla.com
+  - xluo@mozilla.com
+  - skahmann@mozilla.com
+  - wbrahic@mozilla.com
+  pretty_name: Search
+  spoke: looker-spoke-default
+  views:
+    desktop_search_alert_latest_daily:
+      tables:
+      - table: mozdata.analysis.desktop_search_alert_latest_daily
+      type: table_view
+    desktop_search_alert_records:
+      tables:
+      - table: mozdata.analysis.desktop_search_alert_records
+      type: ping_view
+    mobile_search_clients_engines_sources_daily:
+      tables:
+      - table: mozdata.search.mobile_search_clients_engines_sources_daily
+      type: ping_view
+    search_clients_engines_sources_daily:
+      tables:
+      - table: mozdata.search.search_clients_engines_sources_daily
+      type: ping_view
+sync:
+  explores:
+    sync:
+      type: ping_explore
+      views:
+        base_view: sync
+  glean_app: false
+  owners:
+  - ascholtz@mozilla.com
+  pretty_name: Sync
+  spoke: looker-spoke-default
+  views:
+    sync:
+      tables:
+      - table: mozdata.telemetry.sync
+      type: ping_view
