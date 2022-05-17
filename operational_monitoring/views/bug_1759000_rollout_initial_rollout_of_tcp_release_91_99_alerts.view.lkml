@@ -10,11 +10,6 @@ view: bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts {
 FROM `moz-fx-data-shared-prod.operational_monitoring.bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts` ;;
   }
 
-  dimension: build_id {
-    type: date
-    sql: PARSE_DATE('%Y%m%d', CAST(${TABLE}.build_id AS STRING)) ;;
-  }
-
   dimension: branch {
     sql: ${TABLE}.branch ;;
     type: string
@@ -48,11 +43,5 @@ FROM `moz-fx-data-shared-prod.operational_monitoring.bug_1759000_rollout_initial
     ]
     convert_tz: no
     datatype: date
-  }
-
-  parameter: percentile_conf {
-    type: number
-    label: "Percentile"
-    default_value: "50.0"
   }
 }
