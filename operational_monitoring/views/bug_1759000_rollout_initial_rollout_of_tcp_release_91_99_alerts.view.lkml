@@ -5,10 +5,7 @@
 # You can extend this view in the looker-spoke-default project (https://github.com/mozilla/looker-spoke-default)
 
 view: bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts {
-  derived_table: {
-    sql: SELECT *
-FROM `moz-fx-data-shared-prod.operational_monitoring.bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts` ;;
-  }
+  sql_table_name: `{reference_table}` ;;
 
   dimension: branch {
     sql: ${TABLE}.branch ;;
@@ -43,5 +40,10 @@ FROM `moz-fx-data-shared-prod.operational_monitoring.bug_1759000_rollout_initial
     ]
     convert_tz: no
     datatype: date
+  }
+
+  measure: errors {
+    type: number
+    sql: COUNT(*) ;;
   }
 }

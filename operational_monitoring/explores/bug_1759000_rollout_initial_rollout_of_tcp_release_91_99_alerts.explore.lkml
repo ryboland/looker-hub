@@ -16,6 +16,7 @@ explore: bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts {
         probe,
         message,
       ]
+      measures: [total_errors]
     }
 
     materialization: {
