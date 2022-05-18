@@ -378,7 +378,7 @@
     type: looker_grid
     fields: [bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts.submission_date,
       bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts.probe, bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts.percentile,
-      bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts.message, bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts.branch]
+      bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts.message, bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts.branch, bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts.errors]
     sorts: [bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts.submission_date
         desc]
     limit: 500

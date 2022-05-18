@@ -27,19 +27,9 @@ view: bug_1759000_rollout_initial_rollout_of_tcp_release_91_99_alerts {
     type: string
   }
 
-  dimension: submission {
+  dimension: submission_date {
+    type: date
     sql: ${TABLE}.submission_date ;;
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year,
-    ]
-    convert_tz: no
-    datatype: date
   }
 
   measure: errors {
