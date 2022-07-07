@@ -12,4 +12,6 @@ explore: bug_1751308_pref_tab_unloading_on_low_memory_for_macos_release_97_98 {
       branch: "memory-pressure-warning, tab-unloading-and-memory-pressure-warning, memory-pressure-critical, tab-unloading-and-memory-pressure-critical, tab-unloading-and-memory-pressure-disabled",
     ]
   }
+
+  hidden: yes
 }

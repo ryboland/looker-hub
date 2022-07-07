@@ -12,4 +12,6 @@ explore: rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

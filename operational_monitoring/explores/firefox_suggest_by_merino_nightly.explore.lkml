@@ -12,4 +12,6 @@ explore: firefox_suggest_by_merino_nightly {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

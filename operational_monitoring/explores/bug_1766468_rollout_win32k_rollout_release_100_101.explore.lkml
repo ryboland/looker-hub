@@ -12,4 +12,6 @@ explore: bug_1766468_rollout_win32k_rollout_release_100_101 {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

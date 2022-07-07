@@ -12,4 +12,6 @@ explore: rollout_doh_nightly_rollout_to_all_us_desktop_users_nightly_74_80_bug_1
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

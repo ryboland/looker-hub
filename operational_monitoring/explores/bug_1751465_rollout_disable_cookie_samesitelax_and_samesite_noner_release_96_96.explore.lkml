@@ -12,4 +12,6 @@ explore: bug_1751465_rollout_disable_cookie_samesitelax_and_samesite_noner_relea
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

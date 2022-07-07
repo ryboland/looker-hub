@@ -12,4 +12,6 @@ explore: tcp_rollout {
       branch: "opt-in, opt-out, pref-does-not-exist",
     ]
   }
+
+  hidden: yes
 }

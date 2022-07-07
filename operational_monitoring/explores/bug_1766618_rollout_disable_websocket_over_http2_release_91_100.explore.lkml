@@ -12,4 +12,6 @@ explore: bug_1766618_rollout_disable_websocket_over_http2_release_91_100 {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

@@ -12,4 +12,6 @@ explore: tcp_rollout_phase_iii_tcp_on_by_default_for_95_existing_esr_profiles {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

@@ -40,6 +40,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Gmplugin Crashes - By build
@@ -72,6 +73,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Main Crashes
@@ -104,6 +106,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Main Crashes - By build
@@ -136,6 +139,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Gc Ms
@@ -168,6 +172,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Gc Ms - By build
@@ -200,6 +205,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Oom Crashes
@@ -232,6 +238,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Oom Crashes - By build
@@ -264,6 +271,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Startup Crashes
@@ -296,6 +304,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Startup Crashes - By build
@@ -328,6 +337,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Plugin Crashes
@@ -360,6 +370,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Plugin Crashes - By build
@@ -392,6 +403,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Fx Tab Switch Composite E10S Ms
@@ -424,6 +436,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Fx Tab Switch Composite E10S Ms - By build
@@ -456,6 +469,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Content Process Count
@@ -488,6 +502,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Content Process Count - By build
@@ -520,6 +535,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Gpu Crashes
@@ -552,6 +568,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Gpu Crashes - By build
@@ -584,6 +601,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Shutdown Hangs
@@ -616,6 +634,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Shutdown Hangs - By build
@@ -648,6 +667,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Content Shutdown Crashes
@@ -680,6 +700,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Content Shutdown Crashes - By build
@@ -712,6 +733,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Content Crashes
@@ -744,6 +766,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Content Crashes - By build
@@ -776,6 +799,7 @@
       Percentile: mission_control_desktop_nightly.percentile_conf
       Build: mission_control_desktop_nightly.build
       Os: mission_control_desktop_nightly.os
+      
     active: "#3FE1B0"
     defaults_version: 0
   

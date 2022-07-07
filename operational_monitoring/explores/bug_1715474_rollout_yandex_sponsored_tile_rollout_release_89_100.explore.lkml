@@ -12,4 +12,6 @@ explore: bug_1715474_rollout_yandex_sponsored_tile_rollout_release_89_100 {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

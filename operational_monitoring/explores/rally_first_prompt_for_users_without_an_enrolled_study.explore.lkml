@@ -12,4 +12,6 @@ explore: rally_first_prompt_for_users_without_an_enrolled_study {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

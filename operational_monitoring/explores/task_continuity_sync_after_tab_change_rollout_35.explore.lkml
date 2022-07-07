@@ -12,4 +12,6 @@ explore: task_continuity_sync_after_tab_change_rollout_35 {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

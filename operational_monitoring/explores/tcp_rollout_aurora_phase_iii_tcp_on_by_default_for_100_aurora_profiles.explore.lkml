@@ -12,4 +12,6 @@ explore: tcp_rollout_aurora_phase_iii_tcp_on_by_default_for_100_aurora_profiles 
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

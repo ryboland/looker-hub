@@ -38,6 +38,7 @@
     show_grid: true
     listen:
       Percentile: bug_1716693_rollout_doh_canada_rollout_release_91_94.percentile_conf
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Startup Crashes
@@ -68,6 +69,7 @@
     show_grid: true
     listen:
       Percentile: bug_1716693_rollout_doh_canada_rollout_release_91_94.percentile_conf
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Gc Ms
@@ -98,6 +100,7 @@
     show_grid: true
     listen:
       Percentile: bug_1716693_rollout_doh_canada_rollout_release_91_94.percentile_conf
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Memory Total
@@ -128,6 +131,7 @@
     show_grid: true
     listen:
       Percentile: bug_1716693_rollout_doh_canada_rollout_release_91_94.percentile_conf
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Shutdown Hangs
@@ -158,6 +162,7 @@
     show_grid: true
     listen:
       Percentile: bug_1716693_rollout_doh_canada_rollout_release_91_94.percentile_conf
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Main Crashes
@@ -188,6 +193,7 @@
     show_grid: true
     listen:
       Percentile: bug_1716693_rollout_doh_canada_rollout_release_91_94.percentile_conf
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Oom Crashes
@@ -218,6 +224,7 @@
     show_grid: true
     listen:
       Percentile: bug_1716693_rollout_doh_canada_rollout_release_91_94.percentile_conf
+      
     active: "#3FE1B0"
     defaults_version: 0
   

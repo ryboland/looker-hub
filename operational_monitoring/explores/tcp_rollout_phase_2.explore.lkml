@@ -12,4 +12,6 @@ explore: tcp_rollout_phase_2 {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

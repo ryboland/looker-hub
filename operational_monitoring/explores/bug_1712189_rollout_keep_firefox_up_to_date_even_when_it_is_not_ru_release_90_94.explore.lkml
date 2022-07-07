@@ -12,4 +12,6 @@ explore: bug_1712189_rollout_keep_firefox_up_to_date_even_when_it_is_not_ru_rele
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

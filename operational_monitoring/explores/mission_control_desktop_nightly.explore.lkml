@@ -12,4 +12,6 @@ explore: mission_control_desktop_nightly {
       branch: "active",
     ]
   }
+
+  hidden: yes
 }

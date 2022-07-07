@@ -12,4 +12,6 @@ explore: bug_1725376_rollout_https_rr_rollout_release_91_91 {
       branch: "active",
     ]
   }
+
+  hidden: yes
 }

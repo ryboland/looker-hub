@@ -12,4 +12,6 @@ explore: bug_1758988_rollout_doh_enablment_to_new_countries_staggered_st_release
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

@@ -12,4 +12,6 @@ explore: bug_1660366_pref_ongoing_fission_nightly_experiment_nightly_83_100 {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

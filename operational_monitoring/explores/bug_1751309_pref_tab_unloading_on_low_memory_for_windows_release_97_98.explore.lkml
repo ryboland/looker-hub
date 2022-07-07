@@ -12,4 +12,6 @@ explore: bug_1751309_pref_tab_unloading_on_low_memory_for_windows_release_97_98 
       branch: "tab-unloading-enabled, tab-unloading-disabled",
     ]
   }
+
+  hidden: yes
 }

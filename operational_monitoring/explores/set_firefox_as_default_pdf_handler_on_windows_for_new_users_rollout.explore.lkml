@@ -12,4 +12,6 @@ explore: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

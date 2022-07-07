@@ -12,4 +12,6 @@ explore: total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

@@ -12,4 +12,6 @@ explore: bug_1750257_rollout_pref_off_networkcookiesamesiteschemeful_in_release_
       branch: "active",
     ]
   }
+
+  hidden: yes
 }

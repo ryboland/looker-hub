@@ -40,6 +40,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -74,6 +75,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -108,6 +110,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -142,6 +145,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -176,6 +180,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -210,6 +215,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -244,6 +250,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -278,6 +285,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -312,6 +320,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -346,6 +355,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -380,6 +390,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -414,6 +425,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -448,6 +460,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -482,6 +495,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -516,6 +530,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -550,6 +565,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -584,6 +600,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"
@@ -618,6 +635,7 @@
       Percentile: tcp_rollout.percentile_conf
       Country: tcp_rollout.country
       Os: tcp_rollout.os
+      
     opt-in: "#3FE1B0"
     opt-out: "#0060E0"
     pref-does-not-exist: "#9059FF"

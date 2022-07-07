@@ -38,6 +38,7 @@
     show_grid: true
     listen:
       Percentile: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.percentile_conf
+      
     enabled: "#3FE1B0"
     disabled: "#0060E0"
     defaults_version: 0
@@ -69,6 +70,7 @@
     show_grid: true
     listen:
       Percentile: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.percentile_conf
+      
     enabled: "#3FE1B0"
     disabled: "#0060E0"
     defaults_version: 0
@@ -100,6 +102,7 @@
     show_grid: true
     listen:
       Percentile: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.percentile_conf
+      
     enabled: "#3FE1B0"
     disabled: "#0060E0"
     defaults_version: 0
@@ -131,6 +134,7 @@
     show_grid: true
     listen:
       Percentile: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.percentile_conf
+      
     enabled: "#3FE1B0"
     disabled: "#0060E0"
     defaults_version: 0
@@ -162,6 +166,7 @@
     show_grid: true
     listen:
       Percentile: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.percentile_conf
+      
     enabled: "#3FE1B0"
     disabled: "#0060E0"
     defaults_version: 0
@@ -193,6 +198,7 @@
     show_grid: true
     listen:
       Percentile: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.percentile_conf
+      
     enabled: "#3FE1B0"
     disabled: "#0060E0"
     defaults_version: 0
@@ -224,6 +230,7 @@
     show_grid: true
     listen:
       Percentile: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.percentile_conf
+      
     enabled: "#3FE1B0"
     disabled: "#0060E0"
     defaults_version: 0
@@ -255,6 +262,7 @@
     show_grid: true
     listen:
       Percentile: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.percentile_conf
+      
     enabled: "#3FE1B0"
     disabled: "#0060E0"
     defaults_version: 0
@@ -286,6 +294,7 @@
     show_grid: true
     listen:
       Percentile: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.percentile_conf
+      
     enabled: "#3FE1B0"
     disabled: "#0060E0"
     defaults_version: 0
@@ -317,6 +326,7 @@
     show_grid: true
     listen:
       Percentile: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.percentile_conf
+      
     enabled: "#3FE1B0"
     disabled: "#0060E0"
     defaults_version: 0
@@ -348,6 +358,7 @@
     show_grid: true
     listen:
       Percentile: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.percentile_conf
+      
     enabled: "#3FE1B0"
     disabled: "#0060E0"
     defaults_version: 0
@@ -379,6 +390,7 @@
     show_grid: true
     listen:
       Percentile: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.percentile_conf
+      
     enabled: "#3FE1B0"
     disabled: "#0060E0"
     defaults_version: 0

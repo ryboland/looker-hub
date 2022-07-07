@@ -12,4 +12,6 @@ explore: bug_1716693_rollout_doh_canada_rollout_release_91_94 {
       branch: "active",
     ]
   }
+
+  hidden: yes
 }

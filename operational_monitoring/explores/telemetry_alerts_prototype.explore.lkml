@@ -12,4 +12,6 @@ explore: telemetry_alerts_prototype {
       branch: "active",
     ]
   }
+
+  hidden: yes
 }

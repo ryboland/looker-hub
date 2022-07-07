@@ -12,4 +12,6 @@ explore: total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

@@ -12,4 +12,6 @@ explore: bug_1767475_rollout_enable_pip_subtitles_pref_in_release_release_100_10
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

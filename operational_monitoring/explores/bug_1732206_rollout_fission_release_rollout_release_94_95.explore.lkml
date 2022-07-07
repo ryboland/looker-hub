@@ -12,4 +12,6 @@ explore: bug_1732206_rollout_fission_release_rollout_release_94_95 {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

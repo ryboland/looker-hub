@@ -12,4 +12,6 @@ explore: bug_1762636_rollout_disable_webassembly_code_caching_release_98_99 {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

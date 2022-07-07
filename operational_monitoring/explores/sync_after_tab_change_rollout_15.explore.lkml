@@ -12,4 +12,6 @@ explore: sync_after_tab_change_rollout_15 {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

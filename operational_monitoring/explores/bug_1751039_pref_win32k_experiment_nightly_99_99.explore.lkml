@@ -12,4 +12,6 @@ explore: bug_1751039_pref_win32k_experiment_nightly_99_99 {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

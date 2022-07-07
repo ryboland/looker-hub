@@ -12,4 +12,6 @@ explore: bug_1759171_pref_win32k_experiment_v2_beta_99_100 {
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

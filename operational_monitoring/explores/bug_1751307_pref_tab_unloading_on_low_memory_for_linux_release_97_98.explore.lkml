@@ -12,4 +12,6 @@ explore: bug_1751307_pref_tab_unloading_on_low_memory_for_linux_release_97_98 {
       branch: "tab-unloading-enabled, tab-unloading-disabled",
     ]
   }
+
+  hidden: yes
 }

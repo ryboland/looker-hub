@@ -12,4 +12,6 @@ explore: bug_1726680_rollout_revert_default_high_contrast_mode_setting_on_m_rele
       branch: "enabled, disabled",
     ]
   }
+
+  hidden: yes
 }

@@ -38,6 +38,7 @@
     show_grid: true
     listen:
       Percentile: bug_1750257_rollout_pref_off_networkcookiesamesiteschemeful_in_release_96_96.percentile_conf
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Startup Crashes
@@ -68,6 +69,7 @@
     show_grid: true
     listen:
       Percentile: bug_1750257_rollout_pref_off_networkcookiesamesiteschemeful_in_release_96_96.percentile_conf
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Gc Ms
@@ -98,6 +100,7 @@
     show_grid: true
     listen:
       Percentile: bug_1750257_rollout_pref_off_networkcookiesamesiteschemeful_in_release_96_96.percentile_conf
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Memory Total
@@ -128,6 +131,7 @@
     show_grid: true
     listen:
       Percentile: bug_1750257_rollout_pref_off_networkcookiesamesiteschemeful_in_release_96_96.percentile_conf
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Shutdown Hangs
@@ -158,6 +162,7 @@
     show_grid: true
     listen:
       Percentile: bug_1750257_rollout_pref_off_networkcookiesamesiteschemeful_in_release_96_96.percentile_conf
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Main Crashes
@@ -188,6 +193,7 @@
     show_grid: true
     listen:
       Percentile: bug_1750257_rollout_pref_off_networkcookiesamesiteschemeful_in_release_96_96.percentile_conf
+      
     active: "#3FE1B0"
     defaults_version: 0
   - title: Oom Crashes
@@ -218,6 +224,7 @@
     show_grid: true
     listen:
       Percentile: bug_1750257_rollout_pref_off_networkcookiesamesiteschemeful_in_release_96_96.percentile_conf
+      
     active: "#3FE1B0"
     defaults_version: 0
   
