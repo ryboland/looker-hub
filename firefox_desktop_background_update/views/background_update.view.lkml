@@ -6,7 +6,7 @@
 
 view: background_update {
   dimension: metrics__uuid__background_update_client_id {
-    label: "Background Update Client Id"
+    label: "Background Update Client Id :)"
     hidden: no
     sql: ${TABLE}.metrics.uuid.background_update_client_id ;;
     type: string
@@ -14,7 +14,7 @@ view: background_update {
     group_item_label: "Client Id"
 
     link: {
-      label: "Glean Dictionary reference for Background Update Client Id"
+      label: "Glean Dictionary reference for Background Update Client Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/background_update_client_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -24,7 +24,7 @@ view: background_update {
   }
 
   dimension: metrics__boolean__background_update_exit_code_exception {
-    label: "Background Update Exit Code Exception"
+    label: "Background Update Exit Code Exception :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.background_update_exit_code_exception ;;
     type: yesno
@@ -32,7 +32,7 @@ view: background_update {
     group_item_label: "Exit Code Exception"
 
     link: {
-      label: "Glean Dictionary reference for Background Update Exit Code Exception"
+      label: "Glean Dictionary reference for Background Update Exit Code Exception :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/background_update_exit_code_exception"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -42,7 +42,7 @@ view: background_update {
   }
 
   dimension: metrics__boolean__background_update_exit_code_success {
-    label: "Background Update Exit Code Success"
+    label: "Background Update Exit Code Success :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.background_update_exit_code_success ;;
     type: yesno
@@ -50,7 +50,7 @@ view: background_update {
     group_item_label: "Exit Code Success"
 
     link: {
-      label: "Glean Dictionary reference for Background Update Exit Code Success"
+      label: "Glean Dictionary reference for Background Update Exit Code Success :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/background_update_exit_code_success"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -60,7 +60,7 @@ view: background_update {
   }
 
   dimension: metrics__string__background_update_final_state {
-    label: "Background Update Final State"
+    label: "Background Update Final State :)"
     hidden: no
     sql: ${TABLE}.metrics.string.background_update_final_state ;;
     type: string
@@ -68,7 +68,7 @@ view: background_update {
     group_item_label: "Final State"
 
     link: {
-      label: "Glean Dictionary reference for Background Update Final State"
+      label: "Glean Dictionary reference for Background Update Final State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/background_update_final_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -78,7 +78,7 @@ view: background_update {
   }
 
   dimension: metrics__boolean__update_auto_download {
-    label: "Update Auto Download"
+    label: "Update Auto Download :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.update_auto_download ;;
     type: yesno
@@ -86,7 +86,7 @@ view: background_update {
     group_item_label: "Auto Download"
 
     link: {
-      label: "Glean Dictionary reference for Update Auto Download"
+      label: "Glean Dictionary reference for Update Auto Download :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/update_auto_download"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -96,7 +96,7 @@ view: background_update {
   }
 
   dimension: metrics__boolean__update_background_update {
-    label: "Update Background Update"
+    label: "Update Background Update :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.update_background_update ;;
     type: yesno
@@ -104,7 +104,7 @@ view: background_update {
     group_item_label: "Background Update"
 
     link: {
-      label: "Glean Dictionary reference for Update Background Update"
+      label: "Glean Dictionary reference for Update Background Update :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/update_background_update"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -114,7 +114,7 @@ view: background_update {
   }
 
   dimension: metrics__boolean__update_can_usually_apply_updates {
-    label: "Update Can Usually Apply Updates"
+    label: "Update Can Usually Apply Updates :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.update_can_usually_apply_updates ;;
     type: yesno
@@ -122,7 +122,7 @@ view: background_update {
     group_item_label: "Can Usually Apply Updates"
 
     link: {
-      label: "Glean Dictionary reference for Update Can Usually Apply Updates"
+      label: "Glean Dictionary reference for Update Can Usually Apply Updates :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/update_can_usually_apply_updates"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -132,7 +132,7 @@ view: background_update {
   }
 
   dimension: metrics__boolean__update_can_usually_check_for_updates {
-    label: "Update Can Usually Check For Updates"
+    label: "Update Can Usually Check For Updates :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.update_can_usually_check_for_updates ;;
     type: yesno
@@ -140,7 +140,7 @@ view: background_update {
     group_item_label: "Can Usually Check For Updates"
 
     link: {
-      label: "Glean Dictionary reference for Update Can Usually Check For Updates"
+      label: "Glean Dictionary reference for Update Can Usually Check For Updates :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/update_can_usually_check_for_updates"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -150,7 +150,7 @@ view: background_update {
   }
 
   dimension: metrics__boolean__update_can_usually_stage_updates {
-    label: "Update Can Usually Stage Updates"
+    label: "Update Can Usually Stage Updates :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.update_can_usually_stage_updates ;;
     type: yesno
@@ -158,7 +158,7 @@ view: background_update {
     group_item_label: "Can Usually Stage Updates"
 
     link: {
-      label: "Glean Dictionary reference for Update Can Usually Stage Updates"
+      label: "Glean Dictionary reference for Update Can Usually Stage Updates :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/update_can_usually_stage_updates"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -168,7 +168,7 @@ view: background_update {
   }
 
   dimension: metrics__boolean__update_can_usually_use_bits {
-    label: "Update Can Usually Use Bits"
+    label: "Update Can Usually Use Bits :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.update_can_usually_use_bits ;;
     type: yesno
@@ -176,7 +176,7 @@ view: background_update {
     group_item_label: "Can Usually Use Bits"
 
     link: {
-      label: "Glean Dictionary reference for Update Can Usually Use Bits"
+      label: "Glean Dictionary reference for Update Can Usually Use Bits :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/update_can_usually_use_bits"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -186,7 +186,7 @@ view: background_update {
   }
 
   dimension: metrics__string__update_channel {
-    label: "Update Channel"
+    label: "Update Channel :)"
     hidden: no
     sql: ${TABLE}.metrics.string.update_channel ;;
     type: string
@@ -194,7 +194,7 @@ view: background_update {
     group_item_label: "Channel"
 
     link: {
-      label: "Glean Dictionary reference for Update Channel"
+      label: "Glean Dictionary reference for Update Channel :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/update_channel"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -204,7 +204,7 @@ view: background_update {
   }
 
   dimension: metrics__boolean__update_enabled {
-    label: "Update Enabled"
+    label: "Update Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.update_enabled ;;
     type: yesno
@@ -212,7 +212,7 @@ view: background_update {
     group_item_label: "Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Update Enabled"
+      label: "Glean Dictionary reference for Update Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/update_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -222,7 +222,7 @@ view: background_update {
   }
 
   dimension: metrics__boolean__update_service_enabled {
-    label: "Update Service Enabled"
+    label: "Update Service Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.update_service_enabled ;;
     type: yesno
@@ -230,7 +230,7 @@ view: background_update {
     group_item_label: "Service Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Update Service Enabled"
+      label: "Glean Dictionary reference for Update Service Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/update_service_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -240,14 +240,14 @@ view: background_update {
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -258,14 +258,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -276,14 +276,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -294,14 +294,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_update/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

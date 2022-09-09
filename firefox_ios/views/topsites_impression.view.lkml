@@ -6,7 +6,7 @@
 
 view: topsites_impression {
   dimension: metrics__uuid__top_site_context_id {
-    label: "Top Site Context Id"
+    label: "Top Site Context Id :)"
     hidden: no
     sql: ${TABLE}.metrics.uuid.top_site_context_id ;;
     type: string
@@ -14,7 +14,7 @@ view: topsites_impression {
     group_item_label: "Context Id"
 
     link: {
-      label: "Glean Dictionary reference for Top Site Context Id"
+      label: "Glean Dictionary reference for Top Site Context Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/top_site_context_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -26,7 +26,7 @@ contextual services features.
   }
 
   dimension: metrics__string__top_site_contile_advertiser {
-    label: "Top Site Contile Advertiser"
+    label: "Top Site Contile Advertiser :)"
     hidden: no
     sql: ${TABLE}.metrics.string.top_site_contile_advertiser ;;
     type: string
@@ -34,7 +34,7 @@ contextual services features.
     group_item_label: "Contile Advertiser"
 
     link: {
-      label: "Glean Dictionary reference for Top Site Contile Advertiser"
+      label: "Glean Dictionary reference for Top Site Contile Advertiser :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/top_site_contile_advertiser"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -44,7 +44,7 @@ contextual services features.
   }
 
   dimension: metrics__quantity__top_site_contile_tile_id {
-    label: "Top Site Contile Tile Id"
+    label: "Top Site Contile Tile Id :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.top_site_contile_tile_id ;;
     type: number
@@ -52,7 +52,7 @@ contextual services features.
     group_item_label: "Contile Tile Id"
 
     link: {
-      label: "Glean Dictionary reference for Top Site Contile Tile Id"
+      label: "Glean Dictionary reference for Top Site Contile Tile Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/top_site_contile_tile_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -62,7 +62,7 @@ contextual services features.
   }
 
   dimension: metrics__uuid__top_sites_context_id {
-    label: "Top Sites Context Id"
+    label: "Top Sites Context Id :)"
     hidden: no
     sql: ${TABLE}.metrics.uuid.top_sites_context_id ;;
     type: string
@@ -70,7 +70,7 @@ contextual services features.
     group_item_label: "Context Id"
 
     link: {
-      label: "Glean Dictionary reference for Top Sites Context Id"
+      label: "Glean Dictionary reference for Top Sites Context Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/top_sites_context_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -82,7 +82,7 @@ contextual services features.
   }
 
   dimension: metrics__string__top_sites_contile_advertiser {
-    label: "Top Sites Contile Advertiser"
+    label: "Top Sites Contile Advertiser :)"
     hidden: no
     sql: ${TABLE}.metrics.string.top_sites_contile_advertiser ;;
     type: string
@@ -90,7 +90,7 @@ contextual services features.
     group_item_label: "Contile Advertiser"
 
     link: {
-      label: "Glean Dictionary reference for Top Sites Contile Advertiser"
+      label: "Glean Dictionary reference for Top Sites Contile Advertiser :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/top_sites_contile_advertiser"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -100,7 +100,7 @@ contextual services features.
   }
 
   dimension: metrics__quantity__top_sites_contile_tile_id {
-    label: "Top Sites Contile Tile Id"
+    label: "Top Sites Contile Tile Id :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.top_sites_contile_tile_id ;;
     type: number
@@ -108,7 +108,7 @@ contextual services features.
     group_item_label: "Contile Tile Id"
 
     link: {
-      label: "Glean Dictionary reference for Top Sites Contile Tile Id"
+      label: "Glean Dictionary reference for Top Sites Contile Tile Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/top_sites_contile_tile_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -118,14 +118,14 @@ contextual services features.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -136,14 +136,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -154,14 +154,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -172,14 +172,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

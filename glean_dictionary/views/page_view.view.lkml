@@ -6,7 +6,7 @@
 
 view: page_view {
   dimension: metrics__datetime__page_loaded {
-    label: "Page Loaded"
+    label: "Page Loaded :)"
     hidden: no
     sql: ${TABLE}.metrics.datetime.page_loaded ;;
     type: string
@@ -14,7 +14,7 @@ view: page_view {
     group_item_label: "Loaded"
 
     link: {
-      label: "Glean Dictionary reference for Page Loaded"
+      label: "Glean Dictionary reference for Page Loaded :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/glean_dictionary/metrics/page_loaded"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -24,7 +24,7 @@ view: page_view {
   }
 
   dimension: metrics__string__page_path {
-    label: "Page Path"
+    label: "Page Path :)"
     hidden: no
     sql: ${TABLE}.metrics.string.page_path ;;
     type: string
@@ -32,7 +32,7 @@ view: page_view {
     group_item_label: "Path"
 
     link: {
-      label: "Glean Dictionary reference for Page Path"
+      label: "Glean Dictionary reference for Page Path :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/glean_dictionary/metrics/page_path"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -44,14 +44,14 @@ Query arguments will be stripped before recording.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/glean_dictionary/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -62,14 +62,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/glean_dictionary/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -80,14 +80,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/glean_dictionary/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -98,14 +98,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/glean_dictionary/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

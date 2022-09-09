@@ -6,7 +6,7 @@
 
 view: first_session {
   dimension: metrics__string__first_session_adgroup {
-    label: "First Session Adgroup"
+    label: "First Session Adgroup :)"
     hidden: no
     sql: ${TABLE}.metrics.string.first_session_adgroup ;;
     type: string
@@ -14,7 +14,7 @@ view: first_session {
     group_item_label: "Adgroup"
 
     link: {
-      label: "Glean Dictionary reference for First Session Adgroup"
+      label: "Glean Dictionary reference for First Session Adgroup :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/first_session_adgroup"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -24,7 +24,7 @@ view: first_session {
   }
 
   dimension: metrics__string__first_session_campaign {
-    label: "First Session Campaign"
+    label: "First Session Campaign :)"
     hidden: no
     sql: ${TABLE}.metrics.string.first_session_campaign ;;
     type: string
@@ -32,7 +32,7 @@ view: first_session {
     group_item_label: "Campaign"
 
     link: {
-      label: "Glean Dictionary reference for First Session Campaign"
+      label: "Glean Dictionary reference for First Session Campaign :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/first_session_campaign"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -42,7 +42,7 @@ view: first_session {
   }
 
   dimension: metrics__string__first_session_creative {
-    label: "First Session Creative"
+    label: "First Session Creative :)"
     hidden: no
     sql: ${TABLE}.metrics.string.first_session_creative ;;
     type: string
@@ -50,7 +50,7 @@ view: first_session {
     group_item_label: "Creative"
 
     link: {
-      label: "Glean Dictionary reference for First Session Creative"
+      label: "Glean Dictionary reference for First Session Creative :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/first_session_creative"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -60,7 +60,7 @@ view: first_session {
   }
 
   dimension: metrics__string__first_session_distribution_id {
-    label: "First Session Distribution Id"
+    label: "First Session Distribution Id :)"
     hidden: no
     sql: ${TABLE}.metrics.string.first_session_distribution_id ;;
     type: string
@@ -68,7 +68,7 @@ view: first_session {
     group_item_label: "Distribution Id"
 
     link: {
-      label: "Glean Dictionary reference for First Session Distribution Id"
+      label: "Glean Dictionary reference for First Session Distribution Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/first_session_distribution_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -79,7 +79,7 @@ to identify installs from Mozilla Online.
   }
 
   dimension: metrics__string__first_session_network {
-    label: "First Session Network"
+    label: "First Session Network :)"
     hidden: no
     sql: ${TABLE}.metrics.string.first_session_network ;;
     type: string
@@ -87,7 +87,7 @@ to identify installs from Mozilla Online.
     group_item_label: "Network"
 
     link: {
-      label: "Glean Dictionary reference for First Session Network"
+      label: "Glean Dictionary reference for First Session Network :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/first_session_network"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -97,7 +97,7 @@ to identify installs from Mozilla Online.
   }
 
   dimension: metrics__datetime__first_session_timestamp {
-    label: "First Session Timestamp"
+    label: "First Session Timestamp :)"
     hidden: no
     sql: ${TABLE}.metrics.datetime.first_session_timestamp ;;
     type: string
@@ -105,7 +105,7 @@ to identify installs from Mozilla Online.
     group_item_label: "Timestamp"
 
     link: {
-      label: "Glean Dictionary reference for First Session Timestamp"
+      label: "Glean Dictionary reference for First Session Timestamp :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/first_session_timestamp"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -117,14 +117,14 @@ ping is from Adjust and will remain static across installs.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -135,14 +135,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -153,14 +153,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -171,14 +171,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

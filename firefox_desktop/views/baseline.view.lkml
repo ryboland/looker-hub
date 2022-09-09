@@ -6,7 +6,7 @@
 
 view: baseline {
   dimension: metrics__counter__browser_engagement_active_ticks {
-    label: "Browser Engagement Active Ticks"
+    label: "Browser Engagement Active Ticks :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.browser_engagement_active_ticks ;;
     type: number
@@ -14,7 +14,7 @@ view: baseline {
     group_item_label: "Active Ticks"
 
     link: {
-      label: "Glean Dictionary reference for Browser Engagement Active Ticks"
+      label: "Glean Dictionary reference for Browser Engagement Active Ticks :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/browser_engagement_active_ticks"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -31,7 +31,7 @@ Migrated from Telemetry's `browser.engagement.active_ticks`.
   }
 
   dimension: metrics__counter__browser_engagement_uri_count {
-    label: "Browser Engagement Uri Count"
+    label: "Browser Engagement Uri Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.browser_engagement_uri_count ;;
     type: number
@@ -39,7 +39,7 @@ Migrated from Telemetry's `browser.engagement.active_ticks`.
     group_item_label: "Uri Count"
 
     link: {
-      label: "Glean Dictionary reference for Browser Engagement Uri Count"
+      label: "Glean Dictionary reference for Browser Engagement Uri Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/browser_engagement_uri_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -54,7 +54,7 @@ Migrated from Telemetry's
   }
 
   dimension: metrics__uuid__legacy_telemetry_client_id {
-    label: "Legacy Telemetry Client Id"
+    label: "Legacy Telemetry Client Id :)"
     hidden: no
     sql: ${TABLE}.metrics.uuid.legacy_telemetry_client_id ;;
     type: string
@@ -62,7 +62,7 @@ Migrated from Telemetry's
     group_item_label: "Client Id"
 
     link: {
-      label: "Glean Dictionary reference for Legacy Telemetry Client Id"
+      label: "Glean Dictionary reference for Legacy Telemetry Client Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/legacy_telemetry_client_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -79,7 +79,7 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
   }
 
   dimension: metrics__timespan__glean_baseline_duration__value {
-    label: "Glean Baseline Duration Value"
+    label: "Glean Baseline Duration Value :)"
     hidden: no
     sql: ${TABLE}.metrics.timespan.glean_baseline_duration.value ;;
     type: number
@@ -87,7 +87,7 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
     group_item_label: "Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Baseline Duration Value"
+      label: "Glean Dictionary reference for Glean Baseline Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_baseline_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -97,7 +97,7 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
   }
 
   dimension: metrics__string__glean_baseline_locale {
-    label: "Glean Baseline Locale"
+    label: "Glean Baseline Locale :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.glean_baseline_locale ;;
     type: string
@@ -105,7 +105,7 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
     group_item_label: "Locale"
 
     link: {
-      label: "Glean Dictionary reference for Glean Baseline Locale"
+      label: "Glean Dictionary reference for Glean Baseline Locale :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_baseline_locale"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -118,14 +118,14 @@ to indicate \"undetermined\".
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -136,14 +136,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -154,14 +154,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -172,14 +172,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -190,7 +190,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__datetime__glean_validation_first_run_hour {
-    label: "Glean Validation First Run Hour"
+    label: "Glean Validation First Run Hour :)"
     hidden: no
     sql: ${TABLE}.metrics.datetime.glean_validation_first_run_hour ;;
     type: string
@@ -198,7 +198,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "First Run Hour"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation First Run Hour"
+      label: "Glean Dictionary reference for Glean Validation First Run Hour :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_validation_first_run_hour"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -208,14 +208,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_validation_pings_submitted {
-    label: "Glean Validation Pings Submitted"
+    label: "Glean Validation Pings Submitted :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_validation_pings_submitted ;;
     group_label: "Glean Validation"
     group_item_label: "Pings Submitted"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation Pings Submitted"
+      label: "Glean Dictionary reference for Glean Validation Pings Submitted :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_validation_pings_submitted"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -232,7 +232,7 @@ This metric appears in both the metrics and baseline pings.
   }
 
   dimension: metrics__counter__glean_validation_metrics_ping_count {
-    label: "Glean Validation Metrics Ping Count"
+    label: "Glean Validation Metrics Ping Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.glean_validation_metrics_ping_count ;;
     type: number
@@ -240,7 +240,7 @@ This metric appears in both the metrics and baseline pings.
     group_item_label: "Metrics Ping Count"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation Metrics Ping Count"
+      label: "Glean Dictionary reference for Glean Validation Metrics Ping Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_validation_metrics_ping_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

@@ -6,7 +6,7 @@
 
 view: metrics {
   dimension: metrics__boolean__addons_has_enabled_addons {
-    label: "Addons Has Enabled Addons"
+    label: "Addons Has Enabled Addons :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.addons_has_enabled_addons ;;
     type: yesno
@@ -14,7 +14,7 @@ view: metrics {
     group_item_label: "Has Enabled Addons"
 
     link: {
-      label: "Glean Dictionary reference for Addons Has Enabled Addons"
+      label: "Glean Dictionary reference for Addons Has Enabled Addons :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/addons_has_enabled_addons"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -24,7 +24,7 @@ view: metrics {
   }
 
   dimension: metrics__boolean__addons_has_installed_addons {
-    label: "Addons Has Installed Addons"
+    label: "Addons Has Installed Addons :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.addons_has_installed_addons ;;
     type: yesno
@@ -32,7 +32,7 @@ view: metrics {
     group_item_label: "Has Installed Addons"
 
     link: {
-      label: "Glean Dictionary reference for Addons Has Installed Addons"
+      label: "Glean Dictionary reference for Addons Has Installed Addons :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/addons_has_installed_addons"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -42,7 +42,7 @@ view: metrics {
   }
 
   dimension: metrics__counter__addresses_deleted {
-    label: "Addresses Deleted"
+    label: "Addresses Deleted :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.addresses_deleted ;;
     type: number
@@ -50,7 +50,7 @@ view: metrics {
     group_item_label: "Deleted"
 
     link: {
-      label: "Glean Dictionary reference for Addresses Deleted"
+      label: "Glean Dictionary reference for Addresses Deleted :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/addresses_deleted"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -61,7 +61,7 @@ the user.
   }
 
   dimension: metrics__counter__addresses_saved {
-    label: "Addresses Saved"
+    label: "Addresses Saved :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.addresses_saved ;;
     type: number
@@ -69,7 +69,7 @@ the user.
     group_item_label: "Saved"
 
     link: {
-      label: "Glean Dictionary reference for Addresses Saved"
+      label: "Glean Dictionary reference for Addresses Saved :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/addresses_saved"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -80,7 +80,7 @@ manually by the user.
   }
 
   dimension: metrics__counter__addresses_updated {
-    label: "Addresses Updated"
+    label: "Addresses Updated :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.addresses_updated ;;
     type: number
@@ -88,7 +88,7 @@ manually by the user.
     group_item_label: "Updated"
 
     link: {
-      label: "Glean Dictionary reference for Addresses Updated"
+      label: "Glean Dictionary reference for Addresses Updated :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/addresses_updated"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -99,7 +99,7 @@ manually by the user.
   }
 
   dimension: metrics__boolean__android_autofill_enabled {
-    label: "Android Autofill Enabled"
+    label: "Android Autofill Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.android_autofill_enabled ;;
     type: yesno
@@ -107,7 +107,7 @@ manually by the user.
     group_item_label: "Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Android Autofill Enabled"
+      label: "Glean Dictionary reference for Android Autofill Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/android_autofill_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -118,7 +118,7 @@ provider.
   }
 
   dimension: metrics__boolean__android_autofill_supported {
-    label: "Android Autofill Supported"
+    label: "Android Autofill Supported :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.android_autofill_supported ;;
     type: yesno
@@ -126,7 +126,7 @@ provider.
     group_item_label: "Supported"
 
     link: {
-      label: "Glean Dictionary reference for Android Autofill Supported"
+      label: "Glean Dictionary reference for Android Autofill Supported :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/android_autofill_supported"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -137,14 +137,14 @@ supported for this user.
   }
 
   dimension: metrics__labeled_counter__browser_search_ad_clicks {
-    label: "Browser Search Ad Clicks"
+    label: "Browser Search Ad Clicks :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.browser_search_ad_clicks ;;
     group_label: "Browser Search"
     group_item_label: "Ad Clicks"
 
     link: {
-      label: "Glean Dictionary reference for Browser Search Ad Clicks"
+      label: "Glean Dictionary reference for Browser Search Ad Clicks :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/browser_search_ad_clicks"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -155,14 +155,14 @@ The key format is `<provider-name>`.
   }
 
   dimension: metrics__labeled_counter__browser_search_in_content {
-    label: "Browser Search In Content"
+    label: "Browser Search In Content :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.browser_search_in_content ;;
     group_label: "Browser Search"
     group_item_label: "In Content"
 
     link: {
-      label: "Glean Dictionary reference for Browser Search In Content"
+      label: "Glean Dictionary reference for Browser Search In Content :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/browser_search_in_content"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -172,14 +172,14 @@ The key format is `<provider-name>`.
   }
 
   dimension: metrics__labeled_counter__browser_search_with_ads {
-    label: "Browser Search With Ads"
+    label: "Browser Search With Ads :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.browser_search_with_ads ;;
     group_label: "Browser Search"
     group_item_label: "With Ads"
 
     link: {
-      label: "Glean Dictionary reference for Browser Search With Ads"
+      label: "Glean Dictionary reference for Browser Search With Ads :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/browser_search_with_ads"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -190,7 +190,7 @@ The key format is `<provider-name>`.
   }
 
   dimension: metrics__boolean__contextual_menu_long_press_tapped {
-    label: "Contextual Menu Long Press Tapped"
+    label: "Contextual Menu Long Press Tapped :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.contextual_menu_long_press_tapped ;;
     type: yesno
@@ -198,7 +198,7 @@ The key format is `<provider-name>`.
     group_item_label: "Long Press Tapped"
 
     link: {
-      label: "Glean Dictionary reference for Contextual Menu Long Press Tapped"
+      label: "Glean Dictionary reference for Contextual Menu Long Press Tapped :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/contextual_menu_long_press_tapped"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -208,7 +208,7 @@ The key format is `<provider-name>`.
   }
 
   dimension: metrics__counter__credit_cards_autofill_card {
-    label: "Credit Cards Autofill Card"
+    label: "Credit Cards Autofill Card :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.credit_cards_autofill_card ;;
     type: number
@@ -216,7 +216,7 @@ The key format is `<provider-name>`.
     group_item_label: "Autofill Card"
 
     link: {
-      label: "Glean Dictionary reference for Credit Cards Autofill Card"
+      label: "Glean Dictionary reference for Credit Cards Autofill Card :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/credit_cards_autofill_card"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -227,7 +227,7 @@ a credit card.
   }
 
   dimension: metrics__counter__credit_cards_delete_card {
-    label: "Credit Cards Delete Card"
+    label: "Credit Cards Delete Card :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.credit_cards_delete_card ;;
     type: number
@@ -235,7 +235,7 @@ a credit card.
     group_item_label: "Delete Card"
 
     link: {
-      label: "Glean Dictionary reference for Credit Cards Delete Card"
+      label: "Glean Dictionary reference for Credit Cards Delete Card :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/credit_cards_delete_card"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -246,7 +246,7 @@ the user.
   }
 
   dimension: metrics__counter__credit_cards_deleted {
-    label: "Credit Cards Deleted"
+    label: "Credit Cards Deleted :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.credit_cards_deleted ;;
     type: number
@@ -254,7 +254,7 @@ the user.
     group_item_label: "Deleted"
 
     link: {
-      label: "Glean Dictionary reference for Credit Cards Deleted"
+      label: "Glean Dictionary reference for Credit Cards Deleted :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/credit_cards_deleted"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -265,7 +265,7 @@ the user.
   }
 
   dimension: metrics__counter__credit_cards_manual_save {
-    label: "Credit Cards Manual Save"
+    label: "Credit Cards Manual Save :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.credit_cards_manual_save ;;
     type: number
@@ -273,7 +273,7 @@ the user.
     group_item_label: "Manual Save"
 
     link: {
-      label: "Glean Dictionary reference for Credit Cards Manual Save"
+      label: "Glean Dictionary reference for Credit Cards Manual Save :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/credit_cards_manual_save"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -284,7 +284,7 @@ manually by the user.
   }
 
   dimension: metrics__counter__credit_cards_saved {
-    label: "Credit Cards Saved"
+    label: "Credit Cards Saved :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.credit_cards_saved ;;
     type: number
@@ -292,7 +292,7 @@ manually by the user.
     group_item_label: "Saved"
 
     link: {
-      label: "Glean Dictionary reference for Credit Cards Saved"
+      label: "Glean Dictionary reference for Credit Cards Saved :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/credit_cards_saved"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -303,7 +303,7 @@ manually by the user.
   }
 
   dimension: metrics__boolean__customize_home_contile {
-    label: "Customize Home Contile"
+    label: "Customize Home Contile :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.customize_home_contile ;;
     type: yesno
@@ -311,7 +311,7 @@ manually by the user.
     group_item_label: "Contile"
 
     link: {
-      label: "Glean Dictionary reference for Customize Home Contile"
+      label: "Glean Dictionary reference for Customize Home Contile :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/customize_home_contile"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -321,7 +321,7 @@ manually by the user.
   }
 
   dimension: metrics__boolean__customize_home_jump_back_in {
-    label: "Customize Home Jump Back In"
+    label: "Customize Home Jump Back In :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.customize_home_jump_back_in ;;
     type: yesno
@@ -329,7 +329,7 @@ manually by the user.
     group_item_label: "Jump Back In"
 
     link: {
-      label: "Glean Dictionary reference for Customize Home Jump Back In"
+      label: "Glean Dictionary reference for Customize Home Jump Back In :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/customize_home_jump_back_in"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -340,7 +340,7 @@ in section is enabled to be displayed
   }
 
   dimension: metrics__boolean__customize_home_most_visited_sites {
-    label: "Customize Home Most Visited Sites"
+    label: "Customize Home Most Visited Sites :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.customize_home_most_visited_sites ;;
     type: yesno
@@ -348,7 +348,7 @@ in section is enabled to be displayed
     group_item_label: "Most Visited Sites"
 
     link: {
-      label: "Glean Dictionary reference for Customize Home Most Visited Sites"
+      label: "Glean Dictionary reference for Customize Home Most Visited Sites :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/customize_home_most_visited_sites"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -359,7 +359,7 @@ are enabled to be displayed
   }
 
   dimension: metrics__string__customize_home_opening_screen {
-    label: "Customize Home Opening Screen"
+    label: "Customize Home Opening Screen :)"
     hidden: no
     sql: ${TABLE}.metrics.string.customize_home_opening_screen ;;
     type: string
@@ -367,7 +367,7 @@ are enabled to be displayed
     group_item_label: "Opening Screen"
 
     link: {
-      label: "Glean Dictionary reference for Customize Home Opening Screen"
+      label: "Glean Dictionary reference for Customize Home Opening Screen :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/customize_home_opening_screen"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -380,7 +380,7 @@ default: \"homepage after 4 hours\"
   }
 
   dimension: metrics__boolean__customize_home_pocket {
-    label: "Customize Home Pocket"
+    label: "Customize Home Pocket :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.customize_home_pocket ;;
     type: yesno
@@ -388,7 +388,7 @@ default: \"homepage after 4 hours\"
     group_item_label: "Pocket"
 
     link: {
-      label: "Glean Dictionary reference for Customize Home Pocket"
+      label: "Glean Dictionary reference for Customize Home Pocket :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/customize_home_pocket"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -398,7 +398,7 @@ default: \"homepage after 4 hours\"
   }
 
   dimension: metrics__boolean__customize_home_recently_saved {
-    label: "Customize Home Recently Saved"
+    label: "Customize Home Recently Saved :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.customize_home_recently_saved ;;
     type: yesno
@@ -406,7 +406,7 @@ default: \"homepage after 4 hours\"
     group_item_label: "Recently Saved"
 
     link: {
-      label: "Glean Dictionary reference for Customize Home Recently Saved"
+      label: "Glean Dictionary reference for Customize Home Recently Saved :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/customize_home_recently_saved"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -417,7 +417,7 @@ saved section is enabled to be displayed
   }
 
   dimension: metrics__boolean__customize_home_recently_visited {
-    label: "Customize Home Recently Visited"
+    label: "Customize Home Recently Visited :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.customize_home_recently_visited ;;
     type: yesno
@@ -425,7 +425,7 @@ saved section is enabled to be displayed
     group_item_label: "Recently Visited"
 
     link: {
-      label: "Glean Dictionary reference for Customize Home Recently Visited"
+      label: "Glean Dictionary reference for Customize Home Recently Visited :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/customize_home_recently_visited"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -436,7 +436,7 @@ visited section is enabled to be displayed
   }
 
   dimension: metrics__boolean__customize_home_sponsored_pocket {
-    label: "Customize Home Sponsored Pocket"
+    label: "Customize Home Sponsored Pocket :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.customize_home_sponsored_pocket ;;
     type: yesno
@@ -444,7 +444,7 @@ visited section is enabled to be displayed
     group_item_label: "Sponsored Pocket"
 
     link: {
-      label: "Glean Dictionary reference for Customize Home Sponsored Pocket"
+      label: "Glean Dictionary reference for Customize Home Sponsored Pocket :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/customize_home_sponsored_pocket"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -455,7 +455,7 @@ to be displayed
   }
 
   dimension: metrics__counter__downloads_downloaded_pdf_open_count {
-    label: "Downloads Downloaded Pdf Open Count"
+    label: "Downloads Downloaded Pdf Open Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.downloads_downloaded_pdf_open_count ;;
     type: number
@@ -463,7 +463,7 @@ to be displayed
     group_item_label: "Downloaded Pdf Open Count"
 
     link: {
-      label: "Glean Dictionary reference for Downloads Downloaded Pdf Open Count"
+      label: "Glean Dictionary reference for Downloads Downloaded Pdf Open Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/downloads_downloaded_pdf_open_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -474,7 +474,7 @@ for a downloaded pdf.
   }
 
   dimension: metrics__counter__downloads_pdf_download_count {
-    label: "Downloads Pdf Download Count"
+    label: "Downloads Pdf Download Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.downloads_pdf_download_count ;;
     type: number
@@ -482,7 +482,7 @@ for a downloaded pdf.
     group_item_label: "Pdf Download Count"
 
     link: {
-      label: "Glean Dictionary reference for Downloads Pdf Download Count"
+      label: "Glean Dictionary reference for Downloads Pdf Download Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/downloads_pdf_download_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -492,7 +492,7 @@ for a downloaded pdf.
   }
 
   dimension: metrics__timespan__engine_kill_background_age__value {
-    label: "Engine Kill Background Age Value"
+    label: "Engine Kill Background Age Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.engine_kill_background_age.value ;;
     type: number
@@ -500,7 +500,7 @@ for a downloaded pdf.
     group_item_label: "Kill Background Age Value"
 
     link: {
-      label: "Glean Dictionary reference for Engine Kill Background Age Value"
+      label: "Glean Dictionary reference for Engine Kill Background Age Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/engine_kill_background_age"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -511,7 +511,7 @@ time its content process got killed.
   }
 
   dimension: metrics__timespan__engine_kill_foreground_age__value {
-    label: "Engine Kill Foreground Age Value"
+    label: "Engine Kill Foreground Age Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.engine_kill_foreground_age.value ;;
     type: number
@@ -519,7 +519,7 @@ time its content process got killed.
     group_item_label: "Kill Foreground Age Value"
 
     link: {
-      label: "Glean Dictionary reference for Engine Kill Foreground Age Value"
+      label: "Glean Dictionary reference for Engine Kill Foreground Age Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/engine_kill_foreground_age"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -530,14 +530,14 @@ at the time its content process got killed.
   }
 
   dimension: metrics__labeled_counter__engine_tab_kills {
-    label: "Engine Tab Kills"
+    label: "Engine Tab Kills :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.engine_tab_kills ;;
     group_label: "Engine Tab"
     group_item_label: "Kills"
 
     link: {
-      label: "Glean Dictionary reference for Engine Tab Kills"
+      label: "Glean Dictionary reference for Engine Tab Kills :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/engine_tab_kills"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -548,7 +548,7 @@ background tab killed.
   }
 
   dimension: metrics__timing_distribution__engine_tab_kill_background_age__sum {
-    label: "Engine Tab Kill Background Age Sum"
+    label: "Engine Tab Kill Background Age Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.engine_tab_kill_background_age.sum ;;
     type: number
@@ -556,7 +556,7 @@ background tab killed.
     group_item_label: "Kill Background Age Sum"
 
     link: {
-      label: "Glean Dictionary reference for Engine Tab Kill Background Age Sum"
+      label: "Glean Dictionary reference for Engine Tab Kill Background Age Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/engine_tab_kill_background_age"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -567,7 +567,7 @@ time its content process got killed.
   }
 
   dimension: metrics__timing_distribution__engine_tab_kill_foreground_age__sum {
-    label: "Engine Tab Kill Foreground Age Sum"
+    label: "Engine Tab Kill Foreground Age Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.engine_tab_kill_foreground_age.sum ;;
     type: number
@@ -575,7 +575,7 @@ time its content process got killed.
     group_item_label: "Kill Foreground Age Sum"
 
     link: {
-      label: "Glean Dictionary reference for Engine Tab Kill Foreground Age Sum"
+      label: "Glean Dictionary reference for Engine Tab Kill Foreground Age Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/engine_tab_kill_foreground_age"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -586,7 +586,7 @@ at the time its content process got killed.
   }
 
   dimension: metrics__counter__events_normal_and_private_uri_count {
-    label: "Events Normal And Private Uri Count"
+    label: "Events Normal And Private Uri Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.events_normal_and_private_uri_count ;;
     type: number
@@ -594,7 +594,7 @@ at the time its content process got killed.
     group_item_label: "Normal And Private Uri Count"
 
     link: {
-      label: "Glean Dictionary reference for Events Normal And Private Uri Count"
+      label: "Glean Dictionary reference for Events Normal And Private Uri Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/events_normal_and_private_uri_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -608,7 +608,7 @@ programmatically redirect to a new location.
   }
 
   dimension: metrics__counter__events_total_uri_count {
-    label: "Events Total Uri Count"
+    label: "Events Total Uri Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.events_total_uri_count ;;
     type: number
@@ -616,7 +616,7 @@ programmatically redirect to a new location.
     group_item_label: "Total Uri Count"
 
     link: {
-      label: "Glean Dictionary reference for Events Total Uri Count"
+      label: "Glean Dictionary reference for Events Total Uri Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/events_total_uri_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -630,7 +630,7 @@ location.
   }
 
   dimension: metrics__string__experiments_metrics_active_experiment {
-    label: "Experiments Metrics Active Experiment"
+    label: "Experiments Metrics Active Experiment :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.experiments_metrics_active_experiment ;;
     type: string
@@ -638,7 +638,7 @@ location.
     group_item_label: "Active Experiment"
 
     link: {
-      label: "Glean Dictionary reference for Experiments Metrics Active Experiment"
+      label: "Glean Dictionary reference for Experiments Metrics Active Experiment :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/experiments_metrics_active_experiment"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -648,7 +648,7 @@ location.
   }
 
   dimension: metrics__counter__home_screen_home_screen_view_count {
-    label: "Home Screen Home Screen View Count"
+    label: "Home Screen Home Screen View Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.home_screen_home_screen_view_count ;;
     type: number
@@ -656,7 +656,7 @@ location.
     group_item_label: "Home Screen View Count"
 
     link: {
-      label: "Glean Dictionary reference for Home Screen Home Screen View Count"
+      label: "Glean Dictionary reference for Home Screen Home Screen View Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/home_screen_home_screen_view_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -666,7 +666,7 @@ location.
   }
 
   dimension: metrics__boolean__metrics_activity_state_provider_error {
-    label: "Metrics Activity State Provider Error"
+    label: "Metrics Activity State Provider Error :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.metrics_activity_state_provider_error ;;
     type: yesno
@@ -674,7 +674,7 @@ location.
     group_item_label: "Activity State Provider Error"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Activity State Provider Error"
+      label: "Glean Dictionary reference for Metrics Activity State Provider Error :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_activity_state_provider_error"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -687,7 +687,7 @@ these assumptions.
   }
 
   dimension: metrics__string__metrics_adjust_ad_group {
-    label: "Metrics Adjust Ad Group"
+    label: "Metrics Adjust Ad Group :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metrics_adjust_ad_group ;;
     type: string
@@ -695,7 +695,7 @@ these assumptions.
     group_item_label: "Adjust Ad Group"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Adjust Ad Group"
+      label: "Glean Dictionary reference for Metrics Adjust Ad Group :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_adjust_ad_group"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -707,7 +707,7 @@ install is organic, this will be empty.
   }
 
   dimension: metrics__string__metrics_adjust_campaign {
-    label: "Metrics Adjust Campaign"
+    label: "Metrics Adjust Campaign :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metrics_adjust_campaign ;;
     type: string
@@ -715,7 +715,7 @@ install is organic, this will be empty.
     group_item_label: "Adjust Campaign"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Adjust Campaign"
+      label: "Glean Dictionary reference for Metrics Adjust Campaign :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_adjust_campaign"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -727,7 +727,7 @@ install is organic, this will be empty.
   }
 
   dimension: metrics__string__metrics_adjust_creative {
-    label: "Metrics Adjust Creative"
+    label: "Metrics Adjust Creative :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metrics_adjust_creative ;;
     type: string
@@ -735,7 +735,7 @@ install is organic, this will be empty.
     group_item_label: "Adjust Creative"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Adjust Creative"
+      label: "Glean Dictionary reference for Metrics Adjust Creative :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_adjust_creative"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -747,7 +747,7 @@ install is organic, this will be empty.
   }
 
   dimension: metrics__string__metrics_adjust_network {
-    label: "Metrics Adjust Network"
+    label: "Metrics Adjust Network :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metrics_adjust_network ;;
     type: string
@@ -755,7 +755,7 @@ install is organic, this will be empty.
     group_item_label: "Adjust Network"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Adjust Network"
+      label: "Glean Dictionary reference for Metrics Adjust Network :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_adjust_network"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -767,7 +767,7 @@ install is organic, this will be empty.
   }
 
   dimension: metrics__string__metrics_close_tab_setting {
-    label: "Metrics Close Tab Setting"
+    label: "Metrics Close Tab Setting :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metrics_close_tab_setting ;;
     type: string
@@ -775,7 +775,7 @@ install is organic, this will be empty.
     group_item_label: "Close Tab Setting"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Close Tab Setting"
+      label: "Glean Dictionary reference for Metrics Close Tab Setting :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_close_tab_setting"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -786,7 +786,7 @@ MANUAL, ONE_DAY, ONE_WEEK, ONE_MONTH
   }
 
   dimension: metrics__counter__metrics_credit_cards_autofill_count {
-    label: "Metrics Credit Cards Autofill Count"
+    label: "Metrics Credit Cards Autofill Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.metrics_credit_cards_autofill_count ;;
     type: number
@@ -794,7 +794,7 @@ MANUAL, ONE_DAY, ONE_WEEK, ONE_MONTH
     group_item_label: "Credit Cards Autofill Count"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Credit Cards Autofill Count"
+      label: "Glean Dictionary reference for Metrics Credit Cards Autofill Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_credit_cards_autofill_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -805,7 +805,7 @@ a credit card.
   }
 
   dimension: metrics__counter__metrics_credit_cards_deleted_count {
-    label: "Metrics Credit Cards Deleted Count"
+    label: "Metrics Credit Cards Deleted Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.metrics_credit_cards_deleted_count ;;
     type: number
@@ -813,7 +813,7 @@ a credit card.
     group_item_label: "Credit Cards Deleted Count"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Credit Cards Deleted Count"
+      label: "Glean Dictionary reference for Metrics Credit Cards Deleted Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_credit_cards_deleted_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -824,7 +824,7 @@ deleted by the user.
   }
 
   dimension: metrics__counter__metrics_credit_cards_saved_count {
-    label: "Metrics Credit Cards Saved Count"
+    label: "Metrics Credit Cards Saved Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.metrics_credit_cards_saved_count ;;
     type: number
@@ -832,7 +832,7 @@ deleted by the user.
     group_item_label: "Credit Cards Saved Count"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Credit Cards Saved Count"
+      label: "Glean Dictionary reference for Metrics Credit Cards Saved Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_credit_cards_saved_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -843,7 +843,7 @@ saved manually by the user.
   }
 
   dimension: metrics__boolean__metrics_default_browser {
-    label: "Metrics Default Browser"
+    label: "Metrics Default Browser :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.metrics_default_browser ;;
     type: yesno
@@ -851,7 +851,7 @@ saved manually by the user.
     group_item_label: "Default Browser"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Default Browser"
+      label: "Glean Dictionary reference for Metrics Default Browser :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_default_browser"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -861,7 +861,7 @@ saved manually by the user.
   }
 
   dimension: metrics__string__metrics_default_moz_browser {
-    label: "Metrics Default Moz Browser"
+    label: "Metrics Default Moz Browser :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metrics_default_moz_browser ;;
     type: string
@@ -869,7 +869,7 @@ saved manually by the user.
     group_item_label: "Default Moz Browser"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Default Moz Browser"
+      label: "Glean Dictionary reference for Metrics Default Moz Browser :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_default_moz_browser"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -880,7 +880,7 @@ owned product
   }
 
   dimension: metrics__boolean__metrics_default_wallpaper {
-    label: "Metrics Default Wallpaper"
+    label: "Metrics Default Wallpaper :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.metrics_default_wallpaper ;;
     type: yesno
@@ -888,7 +888,7 @@ owned product
     group_item_label: "Default Wallpaper"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Default Wallpaper"
+      label: "Glean Dictionary reference for Metrics Default Wallpaper :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_default_wallpaper"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -898,7 +898,7 @@ owned product
   }
 
   dimension: metrics__counter__metrics_desktop_bookmarks_count {
-    label: "Metrics Desktop Bookmarks Count"
+    label: "Metrics Desktop Bookmarks Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.metrics_desktop_bookmarks_count ;;
     type: number
@@ -906,7 +906,7 @@ owned product
     group_item_label: "Desktop Bookmarks Count"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Desktop Bookmarks Count"
+      label: "Glean Dictionary reference for Metrics Desktop Bookmarks Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_desktop_bookmarks_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -920,7 +920,7 @@ ping and 0 bookmarks, please see `has_desktop_bookmarks`.
   }
 
   dimension: metrics__string__metrics_distribution_id {
-    label: "Metrics Distribution Id"
+    label: "Metrics Distribution Id :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metrics_distribution_id ;;
     type: string
@@ -928,7 +928,7 @@ ping and 0 bookmarks, please see `has_desktop_bookmarks`.
     group_item_label: "Distribution Id"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Distribution Id"
+      label: "Glean Dictionary reference for Metrics Distribution Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_distribution_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -939,7 +939,7 @@ to identify installs from Mozilla Online.
   }
 
   dimension: metrics__boolean__metrics_has_desktop_bookmarks {
-    label: "Metrics Has Desktop Bookmarks"
+    label: "Metrics Has Desktop Bookmarks :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.metrics_has_desktop_bookmarks ;;
     type: yesno
@@ -947,7 +947,7 @@ to identify installs from Mozilla Online.
     group_item_label: "Has Desktop Bookmarks"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Has Desktop Bookmarks"
+      label: "Glean Dictionary reference for Metrics Has Desktop Bookmarks :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_has_desktop_bookmarks"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -957,7 +957,7 @@ to identify installs from Mozilla Online.
   }
 
   dimension: metrics__boolean__metrics_has_mobile_bookmarks {
-    label: "Metrics Has Mobile Bookmarks"
+    label: "Metrics Has Mobile Bookmarks :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.metrics_has_mobile_bookmarks ;;
     type: yesno
@@ -965,7 +965,7 @@ to identify installs from Mozilla Online.
     group_item_label: "Has Mobile Bookmarks"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Has Mobile Bookmarks"
+      label: "Glean Dictionary reference for Metrics Has Mobile Bookmarks :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_has_mobile_bookmarks"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -975,7 +975,7 @@ to identify installs from Mozilla Online.
   }
 
   dimension: metrics__boolean__metrics_has_open_tabs {
-    label: "Metrics Has Open Tabs"
+    label: "Metrics Has Open Tabs :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.metrics_has_open_tabs ;;
     type: yesno
@@ -983,7 +983,7 @@ to identify installs from Mozilla Online.
     group_item_label: "Has Open Tabs"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Has Open Tabs"
+      label: "Glean Dictionary reference for Metrics Has Open Tabs :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_has_open_tabs"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -993,7 +993,7 @@ to identify installs from Mozilla Online.
   }
 
   dimension: metrics__boolean__metrics_has_recent_pwas {
-    label: "Metrics Has Recent Pwas"
+    label: "Metrics Has Recent Pwas :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.metrics_has_recent_pwas ;;
     type: yesno
@@ -1001,7 +1001,7 @@ to identify installs from Mozilla Online.
     group_item_label: "Has Recent Pwas"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Has Recent Pwas"
+      label: "Glean Dictionary reference for Metrics Has Recent Pwas :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_has_recent_pwas"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1012,7 +1012,7 @@ See recently_used_pwa_count for the actual count.
   }
 
   dimension: metrics__boolean__metrics_has_top_sites {
-    label: "Metrics Has Top Sites"
+    label: "Metrics Has Top Sites :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.metrics_has_top_sites ;;
     type: yesno
@@ -1020,7 +1020,7 @@ See recently_used_pwa_count for the actual count.
     group_item_label: "Has Top Sites"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Has Top Sites"
+      label: "Glean Dictionary reference for Metrics Has Top Sites :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_has_top_sites"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1030,7 +1030,7 @@ See recently_used_pwa_count for the actual count.
   }
 
   dimension: metrics__quantity__metrics_inactive_tabs_count {
-    label: "Metrics Inactive Tabs Count"
+    label: "Metrics Inactive Tabs Count :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.metrics_inactive_tabs_count ;;
     type: number
@@ -1038,7 +1038,7 @@ See recently_used_pwa_count for the actual count.
     group_item_label: "Inactive Tabs Count"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Inactive Tabs Count"
+      label: "Glean Dictionary reference for Metrics Inactive Tabs Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_inactive_tabs_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1050,7 +1050,7 @@ Value will be 0 if the feature is disabled.
   }
 
   dimension: metrics__string__metrics_install_source {
-    label: "Metrics Install Source"
+    label: "Metrics Install Source :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metrics_install_source ;;
     type: string
@@ -1058,7 +1058,7 @@ Value will be 0 if the feature is disabled.
     group_item_label: "Install Source"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Install Source"
+      label: "Glean Dictionary reference for Metrics Install Source :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_install_source"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1068,7 +1068,7 @@ Value will be 0 if the feature is disabled.
   }
 
   dimension: metrics__counter__metrics_mobile_bookmarks_count {
-    label: "Metrics Mobile Bookmarks Count"
+    label: "Metrics Mobile Bookmarks Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.metrics_mobile_bookmarks_count ;;
     type: number
@@ -1076,7 +1076,7 @@ Value will be 0 if the feature is disabled.
     group_item_label: "Mobile Bookmarks Count"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Mobile Bookmarks Count"
+      label: "Glean Dictionary reference for Metrics Mobile Bookmarks Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_mobile_bookmarks_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1090,7 +1090,7 @@ ping and 0 bookmarks, please see `has_mobile_bookmarks`.
   }
 
   dimension: metrics__counter__metrics_recently_used_pwa_count {
-    label: "Metrics Recently Used Pwa Count"
+    label: "Metrics Recently Used Pwa Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.metrics_recently_used_pwa_count ;;
     type: number
@@ -1098,7 +1098,7 @@ ping and 0 bookmarks, please see `has_mobile_bookmarks`.
     group_item_label: "Recently Used Pwa Count"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Recently Used Pwa Count"
+      label: "Glean Dictionary reference for Metrics Recently Used Pwa Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_recently_used_pwa_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1116,14 +1116,14 @@ metric and 0 recent PWAs, please see `has_recent_pwas`.
   }
 
   dimension: metrics__labeled_counter__metrics_search_count {
-    label: "Metrics Search Count"
+    label: "Metrics Search Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.metrics_search_count ;;
     group_label: "Metrics"
     group_item_label: "Search Count"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Search Count"
+      label: "Glean Dictionary reference for Metrics Search Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_search_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1142,7 +1142,7 @@ https://github.com/mozilla-mobile/fenix/issues/1607) the value will be
   }
 
   dimension: metrics__boolean__metrics_search_widget_installed {
-    label: "Metrics Search Widget Installed"
+    label: "Metrics Search Widget Installed :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.metrics_search_widget_installed ;;
     type: yesno
@@ -1150,7 +1150,7 @@ https://github.com/mozilla-mobile/fenix/issues/1607) the value will be
     group_item_label: "Search Widget Installed"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Search Widget Installed"
+      label: "Glean Dictionary reference for Metrics Search Widget Installed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_search_widget_installed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1160,7 +1160,7 @@ https://github.com/mozilla-mobile/fenix/issues/1607) the value will be
   }
 
   dimension: metrics__boolean__metrics_start_reason_activity_error {
-    label: "Metrics Start Reason Activity Error"
+    label: "Metrics Start Reason Activity Error :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.metrics_start_reason_activity_error ;;
     type: yesno
@@ -1168,7 +1168,7 @@ https://github.com/mozilla-mobile/fenix/issues/1607) the value will be
     group_item_label: "Start Reason Activity Error"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Start Reason Activity Error"
+      label: "Glean Dictionary reference for Metrics Start Reason Activity Error :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_start_reason_activity_error"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1181,7 +1181,7 @@ once we validate these assumptions.
   }
 
   dimension: metrics__boolean__metrics_start_reason_process_error {
-    label: "Metrics Start Reason Process Error"
+    label: "Metrics Start Reason Process Error :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.metrics_start_reason_process_error ;;
     type: yesno
@@ -1189,7 +1189,7 @@ once we validate these assumptions.
     group_item_label: "Start Reason Process Error"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Start Reason Process Error"
+      label: "Glean Dictionary reference for Metrics Start Reason Process Error :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_start_reason_process_error"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1202,7 +1202,7 @@ once we validate these assumptions.
   }
 
   dimension: metrics__string__metrics_tab_view_setting {
-    label: "Metrics Tab View Setting"
+    label: "Metrics Tab View Setting :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metrics_tab_view_setting ;;
     type: string
@@ -1210,7 +1210,7 @@ once we validate these assumptions.
     group_item_label: "Tab View Setting"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Tab View Setting"
+      label: "Glean Dictionary reference for Metrics Tab View Setting :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_tab_view_setting"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1221,7 +1221,7 @@ GRID, LIST
   }
 
   dimension: metrics__counter__metrics_tabs_open_count {
-    label: "Metrics Tabs Open Count"
+    label: "Metrics Tabs Open Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.metrics_tabs_open_count ;;
     type: number
@@ -1229,7 +1229,7 @@ GRID, LIST
     group_item_label: "Tabs Open Count"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Tabs Open Count"
+      label: "Glean Dictionary reference for Metrics Tabs Open Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_tabs_open_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1243,7 +1243,7 @@ please see `has_open_tabs`.
   }
 
   dimension: metrics__string__metrics_toolbar_position {
-    label: "Metrics Toolbar Position"
+    label: "Metrics Toolbar Position :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metrics_toolbar_position ;;
     type: string
@@ -1251,7 +1251,7 @@ please see `has_open_tabs`.
     group_item_label: "Toolbar Position"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Toolbar Position"
+      label: "Glean Dictionary reference for Metrics Toolbar Position :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_toolbar_position"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1261,7 +1261,7 @@ please see `has_open_tabs`.
   }
 
   dimension: metrics__counter__metrics_top_sites_count {
-    label: "Metrics Top Sites Count"
+    label: "Metrics Top Sites Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.metrics_top_sites_count ;;
     type: number
@@ -1269,7 +1269,7 @@ please see `has_open_tabs`.
     group_item_label: "Top Sites Count"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Top Sites Count"
+      label: "Glean Dictionary reference for Metrics Top Sites Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_top_sites_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1283,7 +1283,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
   }
 
   dimension: metrics__string__metrics_total_uri_count {
-    label: "Metrics Total Uri Count"
+    label: "Metrics Total Uri Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.metrics_total_uri_count ;;
     type: string
@@ -1291,7 +1291,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
     group_item_label: "Total Uri Count"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Total Uri Count"
+      label: "Glean Dictionary reference for Metrics Total Uri Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/metrics_total_uri_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1301,7 +1301,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
   }
 
   dimension: metrics__timing_distribution__perf_awesomebar_bookmark_suggestions__sum {
-    label: "Perf Awesomebar Bookmark Suggestions Sum"
+    label: "Perf Awesomebar Bookmark Suggestions Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.perf_awesomebar_bookmark_suggestions.sum ;;
     type: number
@@ -1309,7 +1309,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
     group_item_label: "Bookmark Suggestions Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Awesomebar Bookmark Suggestions Sum"
+      label: "Glean Dictionary reference for Perf Awesomebar Bookmark Suggestions Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_awesomebar_bookmark_suggestions"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1319,7 +1319,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
   }
 
   dimension: metrics__timing_distribution__perf_awesomebar_clipboard_suggestions__sum {
-    label: "Perf Awesomebar Clipboard Suggestions Sum"
+    label: "Perf Awesomebar Clipboard Suggestions Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.perf_awesomebar_clipboard_suggestions.sum ;;
     type: number
@@ -1327,7 +1327,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
     group_item_label: "Clipboard Suggestions Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Awesomebar Clipboard Suggestions Sum"
+      label: "Glean Dictionary reference for Perf Awesomebar Clipboard Suggestions Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_awesomebar_clipboard_suggestions"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1337,7 +1337,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
   }
 
   dimension: metrics__timing_distribution__perf_awesomebar_history_suggestions__sum {
-    label: "Perf Awesomebar History Suggestions Sum"
+    label: "Perf Awesomebar History Suggestions Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.perf_awesomebar_history_suggestions.sum ;;
     type: number
@@ -1345,7 +1345,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
     group_item_label: "History Suggestions Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Awesomebar History Suggestions Sum"
+      label: "Glean Dictionary reference for Perf Awesomebar History Suggestions Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_awesomebar_history_suggestions"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1355,7 +1355,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
   }
 
   dimension: metrics__timing_distribution__perf_awesomebar_search_engine_suggestions__sum {
-    label: "Perf Awesomebar Search Engine Suggestions Sum"
+    label: "Perf Awesomebar Search Engine Suggestions Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.perf_awesomebar_search_engine_suggestions.sum ;;
     type: number
@@ -1363,7 +1363,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
     group_item_label: "Search Engine Suggestions Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Awesomebar Search Engine Suggestions Sum"
+      label: "Glean Dictionary reference for Perf Awesomebar Search Engine Suggestions Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_awesomebar_search_engine_suggestions"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1373,7 +1373,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
   }
 
   dimension: metrics__timing_distribution__perf_awesomebar_session_suggestions__sum {
-    label: "Perf Awesomebar Session Suggestions Sum"
+    label: "Perf Awesomebar Session Suggestions Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.perf_awesomebar_session_suggestions.sum ;;
     type: number
@@ -1381,7 +1381,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
     group_item_label: "Session Suggestions Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Awesomebar Session Suggestions Sum"
+      label: "Glean Dictionary reference for Perf Awesomebar Session Suggestions Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_awesomebar_session_suggestions"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1391,7 +1391,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
   }
 
   dimension: metrics__timing_distribution__perf_awesomebar_shortcuts_suggestions__sum {
-    label: "Perf Awesomebar Shortcuts Suggestions Sum"
+    label: "Perf Awesomebar Shortcuts Suggestions Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.perf_awesomebar_shortcuts_suggestions.sum ;;
     type: number
@@ -1399,7 +1399,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
     group_item_label: "Shortcuts Suggestions Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Awesomebar Shortcuts Suggestions Sum"
+      label: "Glean Dictionary reference for Perf Awesomebar Shortcuts Suggestions Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_awesomebar_shortcuts_suggestions"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1409,7 +1409,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
   }
 
   dimension: metrics__timing_distribution__perf_awesomebar_synced_tabs_suggestions__sum {
-    label: "Perf Awesomebar Synced Tabs Suggestions Sum"
+    label: "Perf Awesomebar Synced Tabs Suggestions Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.perf_awesomebar_synced_tabs_suggestions.sum ;;
     type: number
@@ -1417,7 +1417,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
     group_item_label: "Synced Tabs Suggestions Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Awesomebar Synced Tabs Suggestions Sum"
+      label: "Glean Dictionary reference for Perf Awesomebar Synced Tabs Suggestions Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_awesomebar_synced_tabs_suggestions"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1427,7 +1427,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
   }
 
   dimension: metrics__timing_distribution__perf_startup_app_on_create_to_glean_init__sum {
-    label: "Perf Startup App On Create To Glean Init Sum"
+    label: "Perf Startup App On Create To Glean Init Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.perf_startup_app_on_create_to_glean_init.sum ;;
     type: number
@@ -1435,7 +1435,7 @@ between a failed `top_sites_count` ping and 0 top sites, please see
     group_item_label: "App On Create To Glean Init Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup App On Create To Glean Init Sum"
+      label: "Glean Dictionary reference for Perf Startup App On Create To Glean Init Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_startup_app_on_create_to_glean_init"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1449,7 +1449,7 @@ and Release builds which instead initialize it during
   }
 
   dimension: metrics__timing_distribution__perf_startup_app_on_create_to_megazord_init__sum {
-    label: "Perf Startup App On Create To Megazord Init Sum"
+    label: "Perf Startup App On Create To Megazord Init Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.perf_startup_app_on_create_to_megazord_init.sum ;;
     type: number
@@ -1457,7 +1457,7 @@ and Release builds which instead initialize it during
     group_item_label: "App On Create To Megazord Init Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup App On Create To Megazord Init Sum"
+      label: "Glean Dictionary reference for Perf Startup App On Create To Megazord Init Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_startup_app_on_create_to_megazord_init"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1469,7 +1469,7 @@ probe until we block for the megazord to complete set up.
   }
 
   dimension: metrics__timing_distribution__perf_startup_app_on_create_to_setup_in_main__sum {
-    label: "Perf Startup App On Create To Setup In Main Sum"
+    label: "Perf Startup App On Create To Setup In Main Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.perf_startup_app_on_create_to_setup_in_main.sum ;;
     type: number
@@ -1477,7 +1477,7 @@ probe until we block for the megazord to complete set up.
     group_item_label: "App On Create To Setup In Main Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup App On Create To Setup In Main Sum"
+      label: "Glean Dictionary reference for Perf Startup App On Create To Setup In Main Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_startup_app_on_create_to_setup_in_main"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1491,7 +1491,7 @@ probe until we block for the megazord to complete set up.
   }
 
   dimension: metrics__timing_distribution__perf_startup_application_on_create__sum {
-    label: "Perf Startup Application On Create Sum"
+    label: "Perf Startup Application On Create Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.perf_startup_application_on_create.sum ;;
     type: number
@@ -1499,7 +1499,7 @@ probe until we block for the megazord to complete set up.
     group_item_label: "Application On Create Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup Application On Create Sum"
+      label: "Glean Dictionary reference for Perf Startup Application On Create Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_startup_application_on_create"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1511,7 +1511,7 @@ not measure the duration of migration code (via
   }
 
   dimension: metrics__timing_distribution__perf_startup_base_bfragment_on_create_view__sum {
-    label: "Perf Startup Base Bfragment On Create View Sum"
+    label: "Perf Startup Base Bfragment On Create View Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.perf_startup_base_bfragment_on_create_view.sum ;;
     type: number
@@ -1519,7 +1519,7 @@ not measure the duration of migration code (via
     group_item_label: "Base Bfragment On Create View Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup Base Bfragment On Create View Sum"
+      label: "Glean Dictionary reference for Perf Startup Base Bfragment On Create View Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_startup_base_bfragment_on_create_view"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1529,7 +1529,7 @@ not measure the duration of migration code (via
   }
 
   dimension: metrics__timing_distribution__perf_startup_base_bfragment_on_view_created__sum {
-    label: "Perf Startup Base Bfragment On View Created Sum"
+    label: "Perf Startup Base Bfragment On View Created Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.perf_startup_base_bfragment_on_view_created.sum ;;
     type: number
@@ -1537,7 +1537,7 @@ not measure the duration of migration code (via
     group_item_label: "Base Bfragment On View Created Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup Base Bfragment On View Created Sum"
+      label: "Glean Dictionary reference for Perf Startup Base Bfragment On View Created Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_startup_base_bfragment_on_view_created"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1547,7 +1547,7 @@ not measure the duration of migration code (via
   }
 
   dimension: metrics__timing_distribution__perf_startup_cold_main_app_to_first_frame__sum {
-    label: "Perf Startup Cold Main App To First Frame Sum"
+    label: "Perf Startup Cold Main App To First Frame Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.perf_startup_cold_main_app_to_first_frame.sum ;;
     type: number
@@ -1555,7 +1555,7 @@ not measure the duration of migration code (via
     group_item_label: "Cold Main App To First Frame Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup Cold Main App To First Frame Sum"
+      label: "Glean Dictionary reference for Perf Startup Cold Main App To First Frame Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_startup_cold_main_app_to_first_frame"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1587,7 +1587,7 @@ should be the same but it's noted just in case there are bugs.
   }
 
   dimension: metrics__timing_distribution__perf_startup_cold_unknwn_app_to_first_frame__sum {
-    label: "Perf Startup Cold Unknwn App To First Frame Sum"
+    label: "Perf Startup Cold Unknwn App To First Frame Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.perf_startup_cold_unknwn_app_to_first_frame.sum ;;
     type: number
@@ -1595,7 +1595,7 @@ should be the same but it's noted just in case there are bugs.
     group_item_label: "Cold Unknwn App To First Frame Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup Cold Unknwn App To First Frame Sum"
+      label: "Glean Dictionary reference for Perf Startup Cold Unknwn App To First Frame Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_startup_cold_unknwn_app_to_first_frame"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1615,7 +1615,7 @@ should be the same but it's noted just in case there are bugs.
   }
 
   dimension: metrics__timing_distribution__perf_startup_cold_view_app_to_first_frame__sum {
-    label: "Perf Startup Cold View App To First Frame Sum"
+    label: "Perf Startup Cold View App To First Frame Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.perf_startup_cold_view_app_to_first_frame.sum ;;
     type: number
@@ -1623,7 +1623,7 @@ should be the same but it's noted just in case there are bugs.
     group_item_label: "Cold View App To First Frame Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup Cold View App To First Frame Sum"
+      label: "Glean Dictionary reference for Perf Startup Cold View App To First Frame Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_startup_cold_view_app_to_first_frame"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1645,7 +1645,7 @@ should be the same but it's noted just in case there are bugs.
   }
 
   dimension: metrics__timing_distribution__perf_startup_home_activity_on_create__sum {
-    label: "Perf Startup Home Activity On Create Sum"
+    label: "Perf Startup Home Activity On Create Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.perf_startup_home_activity_on_create.sum ;;
     type: number
@@ -1653,7 +1653,7 @@ should be the same but it's noted just in case there are bugs.
     group_item_label: "Home Activity On Create Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup Home Activity On Create Sum"
+      label: "Glean Dictionary reference for Perf Startup Home Activity On Create Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_startup_home_activity_on_create"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1663,7 +1663,7 @@ should be the same but it's noted just in case there are bugs.
   }
 
   dimension: metrics__timing_distribution__perf_startup_home_activity_on_start__sum {
-    label: "Perf Startup Home Activity On Start Sum"
+    label: "Perf Startup Home Activity On Start Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.perf_startup_home_activity_on_start.sum ;;
     type: number
@@ -1671,7 +1671,7 @@ should be the same but it's noted just in case there are bugs.
     group_item_label: "Home Activity On Start Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup Home Activity On Start Sum"
+      label: "Glean Dictionary reference for Perf Startup Home Activity On Start Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_startup_home_activity_on_start"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1686,7 +1686,7 @@ data.
   }
 
   dimension: metrics__timing_distribution__perf_startup_home_fragment_on_create_view__sum {
-    label: "Perf Startup Home Fragment On Create View Sum"
+    label: "Perf Startup Home Fragment On Create View Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.perf_startup_home_fragment_on_create_view.sum ;;
     type: number
@@ -1694,7 +1694,7 @@ data.
     group_item_label: "Home Fragment On Create View Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup Home Fragment On Create View Sum"
+      label: "Glean Dictionary reference for Perf Startup Home Fragment On Create View Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_startup_home_fragment_on_create_view"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1704,7 +1704,7 @@ data.
   }
 
   dimension: metrics__timing_distribution__perf_startup_home_fragment_on_view_created__sum {
-    label: "Perf Startup Home Fragment On View Created Sum"
+    label: "Perf Startup Home Fragment On View Created Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.perf_startup_home_fragment_on_view_created.sum ;;
     type: number
@@ -1712,7 +1712,7 @@ data.
     group_item_label: "Home Fragment On View Created Sum"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup Home Fragment On View Created Sum"
+      label: "Glean Dictionary reference for Perf Startup Home Fragment On View Created Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_startup_home_fragment_on_view_created"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1722,14 +1722,14 @@ data.
   }
 
   dimension: metrics__labeled_counter__perf_startup_startup_type {
-    label: "Perf Startup Startup Type"
+    label: "Perf Startup Startup Type :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.perf_startup_startup_type ;;
     group_label: "Perf Startup"
     group_item_label: "Startup Type"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup Startup Type"
+      label: "Glean Dictionary reference for Perf Startup Startup Type :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/perf_startup_startup_type"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1787,7 +1787,7 @@ homescreen because the link was invalid).
   }
 
   dimension: metrics__boolean__preferences_bookmarks_suggestion {
-    label: "Preferences Bookmarks Suggestion"
+    label: "Preferences Bookmarks Suggestion :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_bookmarks_suggestion ;;
     type: yesno
@@ -1795,7 +1795,7 @@ homescreen because the link was invalid).
     group_item_label: "Bookmarks Suggestion"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Bookmarks Suggestion"
+      label: "Glean Dictionary reference for Preferences Bookmarks Suggestion :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_bookmarks_suggestion"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1806,7 +1806,7 @@ default: true
   }
 
   dimension: metrics__boolean__preferences_browsing_history_suggestion {
-    label: "Preferences Browsing History Suggestion"
+    label: "Preferences Browsing History Suggestion :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_browsing_history_suggestion ;;
     type: yesno
@@ -1814,7 +1814,7 @@ default: true
     group_item_label: "Browsing History Suggestion"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Browsing History Suggestion"
+      label: "Glean Dictionary reference for Preferences Browsing History Suggestion :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_browsing_history_suggestion"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1825,7 +1825,7 @@ default: true
   }
 
   dimension: metrics__boolean__preferences_clipboard_suggestions_enabled {
-    label: "Preferences Clipboard Suggestions Enabled"
+    label: "Preferences Clipboard Suggestions Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_clipboard_suggestions_enabled ;;
     type: yesno
@@ -1833,7 +1833,7 @@ default: true
     group_item_label: "Clipboard Suggestions Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Clipboard Suggestions Enabled"
+      label: "Glean Dictionary reference for Preferences Clipboard Suggestions Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_clipboard_suggestions_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1844,7 +1844,7 @@ default: true
   }
 
   dimension: metrics__string__preferences_enhanced_tracking_protection {
-    label: "Preferences Enhanced Tracking Protection"
+    label: "Preferences Enhanced Tracking Protection :)"
     hidden: no
     sql: ${TABLE}.metrics.string.preferences_enhanced_tracking_protection ;;
     type: string
@@ -1852,7 +1852,7 @@ default: true
     group_item_label: "Enhanced Tracking Protection"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Enhanced Tracking Protection"
+      label: "Glean Dictionary reference for Preferences Enhanced Tracking Protection :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_enhanced_tracking_protection"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1864,7 +1864,7 @@ default: \"standard\"
   }
 
   dimension: metrics__string__preferences_etp_custom_cookies_selection {
-    label: "Preferences Etp Custom Cookies Selection"
+    label: "Preferences Etp Custom Cookies Selection :)"
     hidden: no
     sql: ${TABLE}.metrics.string.preferences_etp_custom_cookies_selection ;;
     type: string
@@ -1872,7 +1872,7 @@ default: \"standard\"
     group_item_label: "Etp Custom Cookies Selection"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Etp Custom Cookies Selection"
+      label: "Glean Dictionary reference for Preferences Etp Custom Cookies Selection :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_etp_custom_cookies_selection"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1889,7 +1889,7 @@ Possible values:
   }
 
   dimension: metrics__boolean__preferences_inactive_tabs_enabled {
-    label: "Preferences Inactive Tabs Enabled"
+    label: "Preferences Inactive Tabs Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_inactive_tabs_enabled ;;
     type: yesno
@@ -1897,7 +1897,7 @@ Possible values:
     group_item_label: "Inactive Tabs Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Inactive Tabs Enabled"
+      label: "Glean Dictionary reference for Preferences Inactive Tabs Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_inactive_tabs_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1908,7 +1908,7 @@ default: true
   }
 
   dimension: metrics__boolean__preferences_open_links_in_app_enabled {
-    label: "Preferences Open Links In App Enabled"
+    label: "Preferences Open Links In App Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_open_links_in_app_enabled ;;
     type: yesno
@@ -1916,7 +1916,7 @@ default: true
     group_item_label: "Open Links In App Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Open Links In App Enabled"
+      label: "Glean Dictionary reference for Preferences Open Links In App Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_open_links_in_app_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1927,7 +1927,7 @@ default: false
   }
 
   dimension: metrics__boolean__preferences_open_links_in_private {
-    label: "Preferences Open Links In Private"
+    label: "Preferences Open Links In Private :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.preferences_open_links_in_private ;;
     type: yesno
@@ -1935,7 +1935,7 @@ default: false
     group_item_label: "Open Links In Private"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Open Links In Private"
+      label: "Glean Dictionary reference for Preferences Open Links In Private :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_open_links_in_private"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1945,7 +1945,7 @@ default: false
   }
 
   dimension: metrics__boolean__preferences_private_search_suggestions {
-    label: "Preferences Private Search Suggestions"
+    label: "Preferences Private Search Suggestions :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.preferences_private_search_suggestions ;;
     type: yesno
@@ -1953,7 +1953,7 @@ default: false
     group_item_label: "Private Search Suggestions"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Private Search Suggestions"
+      label: "Glean Dictionary reference for Preferences Private Search Suggestions :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_private_search_suggestions"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1963,7 +1963,7 @@ default: false
   }
 
   dimension: metrics__boolean__preferences_remote_debugging_enabled {
-    label: "Preferences Remote Debugging Enabled"
+    label: "Preferences Remote Debugging Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_remote_debugging_enabled ;;
     type: yesno
@@ -1971,7 +1971,7 @@ default: false
     group_item_label: "Remote Debugging Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Remote Debugging Enabled"
+      label: "Glean Dictionary reference for Preferences Remote Debugging Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_remote_debugging_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1982,7 +1982,7 @@ default: false
   }
 
   dimension: metrics__boolean__preferences_search_shortcuts_enabled {
-    label: "Preferences Search Shortcuts Enabled"
+    label: "Preferences Search Shortcuts Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_search_shortcuts_enabled ;;
     type: yesno
@@ -1990,7 +1990,7 @@ default: false
     group_item_label: "Search Shortcuts Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Search Shortcuts Enabled"
+      label: "Glean Dictionary reference for Preferences Search Shortcuts Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_search_shortcuts_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2001,7 +2001,7 @@ default: true
   }
 
   dimension: metrics__boolean__preferences_search_suggestions_enabled {
-    label: "Preferences Search Suggestions Enabled"
+    label: "Preferences Search Suggestions Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_search_suggestions_enabled ;;
     type: yesno
@@ -2009,7 +2009,7 @@ default: true
     group_item_label: "Search Suggestions Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Search Suggestions Enabled"
+      label: "Glean Dictionary reference for Preferences Search Suggestions Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_search_suggestions_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2020,7 +2020,7 @@ default: true
   }
 
   dimension: metrics__boolean__preferences_search_term_groups_enabled {
-    label: "Preferences Search Term Groups Enabled"
+    label: "Preferences Search Term Groups Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_search_term_groups_enabled ;;
     type: yesno
@@ -2028,7 +2028,7 @@ default: true
     group_item_label: "Search Term Groups Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Search Term Groups Enabled"
+      label: "Glean Dictionary reference for Preferences Search Term Groups Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_search_term_groups_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2038,7 +2038,7 @@ default: true
   }
 
   dimension: metrics__boolean__preferences_signed_in_sync {
-    label: "Preferences Signed In Sync"
+    label: "Preferences Signed In Sync :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_signed_in_sync ;;
     type: yesno
@@ -2046,7 +2046,7 @@ default: true
     group_item_label: "Signed In Sync"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Signed In Sync"
+      label: "Glean Dictionary reference for Preferences Signed In Sync :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_signed_in_sync"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2057,7 +2057,7 @@ default: false
   }
 
   dimension: metrics__boolean__preferences_studies_enabled {
-    label: "Preferences Studies Enabled"
+    label: "Preferences Studies Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_studies_enabled ;;
     type: yesno
@@ -2065,7 +2065,7 @@ default: false
     group_item_label: "Studies Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Studies Enabled"
+      label: "Glean Dictionary reference for Preferences Studies Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_studies_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2075,7 +2075,7 @@ default: false
   }
 
   dimension: metrics__boolean__preferences_telemetry_enabled {
-    label: "Preferences Telemetry Enabled"
+    label: "Preferences Telemetry Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_telemetry_enabled ;;
     type: yesno
@@ -2083,7 +2083,7 @@ default: false
     group_item_label: "Telemetry Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Telemetry Enabled"
+      label: "Glean Dictionary reference for Preferences Telemetry Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_telemetry_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2096,7 +2096,7 @@ default: true
   }
 
   dimension: metrics__string__preferences_toolbar_position_setting {
-    label: "Preferences Toolbar Position Setting"
+    label: "Preferences Toolbar Position Setting :)"
     hidden: no
     sql: ${TABLE}.metrics.string.preferences_toolbar_position_setting ;;
     type: string
@@ -2104,7 +2104,7 @@ default: true
     group_item_label: "Toolbar Position Setting"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Toolbar Position Setting"
+      label: "Glean Dictionary reference for Preferences Toolbar Position Setting :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_toolbar_position_setting"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2115,7 +2115,7 @@ default: bottom (defaults to top if the user has accessibility services)
   }
 
   dimension: metrics__string__preferences_user_theme {
-    label: "Preferences User Theme"
+    label: "Preferences User Theme :)"
     hidden: no
     sql: ${TABLE}.metrics.string.preferences_user_theme ;;
     type: string
@@ -2123,7 +2123,7 @@ default: bottom (defaults to top if the user has accessibility services)
     group_item_label: "User Theme"
 
     link: {
-      label: "Glean Dictionary reference for Preferences User Theme"
+      label: "Glean Dictionary reference for Preferences User Theme :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_user_theme"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2134,7 +2134,7 @@ default: \"system\" for API 28+, else \"light\"
   }
 
   dimension: metrics__boolean__preferences_voice_search_enabled {
-    label: "Preferences Voice Search Enabled"
+    label: "Preferences Voice Search Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_voice_search_enabled ;;
     type: yesno
@@ -2142,7 +2142,7 @@ default: \"system\" for API 28+, else \"light\"
     group_item_label: "Voice Search Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Voice Search Enabled"
+      label: "Glean Dictionary reference for Preferences Voice Search Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/preferences_voice_search_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2153,7 +2153,7 @@ default: true
   }
 
   dimension: metrics__counter__recent_bookmarks_bookmark_clicked {
-    label: "Recent Bookmarks Bookmark Clicked"
+    label: "Recent Bookmarks Bookmark Clicked :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.recent_bookmarks_bookmark_clicked ;;
     type: number
@@ -2161,7 +2161,7 @@ default: true
     group_item_label: "Bookmark Clicked"
 
     link: {
-      label: "Glean Dictionary reference for Recent Bookmarks Bookmark Clicked"
+      label: "Glean Dictionary reference for Recent Bookmarks Bookmark Clicked :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/recent_bookmarks_bookmark_clicked"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2173,7 +2173,7 @@ screen.
   }
 
   dimension: metrics__quantity__recent_bookmarks_recent_bookmarks_count {
-    label: "Recent Bookmarks Recent Bookmarks Count"
+    label: "Recent Bookmarks Recent Bookmarks Count :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.recent_bookmarks_recent_bookmarks_count ;;
     type: number
@@ -2181,7 +2181,7 @@ screen.
     group_item_label: "Recent Bookmarks Count"
 
     link: {
-      label: "Glean Dictionary reference for Recent Bookmarks Recent Bookmarks Count"
+      label: "Glean Dictionary reference for Recent Bookmarks Recent Bookmarks Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/recent_bookmarks_recent_bookmarks_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2192,7 +2192,7 @@ Recently Saved section on the home page.
   }
 
   dimension: metrics__counter__recent_bookmarks_show_all_bookmarks {
-    label: "Recent Bookmarks Show All Bookmarks"
+    label: "Recent Bookmarks Show All Bookmarks :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.recent_bookmarks_show_all_bookmarks ;;
     type: number
@@ -2200,7 +2200,7 @@ Recently Saved section on the home page.
     group_item_label: "Show All Bookmarks"
 
     link: {
-      label: "Glean Dictionary reference for Recent Bookmarks Show All Bookmarks"
+      label: "Glean Dictionary reference for Recent Bookmarks Show All Bookmarks :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/recent_bookmarks_show_all_bookmarks"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2212,7 +2212,7 @@ on the home screen.
   }
 
   dimension: metrics__counter__recent_synced_tabs_latest_synced_tab_is_stale {
-    label: "Recent Synced Tabs Latest Synced Tab Is Stale"
+    label: "Recent Synced Tabs Latest Synced Tab Is Stale :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.recent_synced_tabs_latest_synced_tab_is_stale ;;
     type: number
@@ -2220,7 +2220,7 @@ on the home screen.
     group_item_label: "Latest Synced Tab Is Stale"
 
     link: {
-      label: "Glean Dictionary reference for Recent Synced Tabs Latest Synced Tab Is Stale"
+      label: "Glean Dictionary reference for Recent Synced Tabs Latest Synced Tab Is Stale :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/recent_synced_tabs_latest_synced_tab_is_stale"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2231,14 +2231,14 @@ is the same as it was before the load.
   }
 
   dimension: metrics__labeled_counter__recent_synced_tabs_recent_synced_tab_opened {
-    label: "Recent Synced Tabs Recent Synced Tab Opened"
+    label: "Recent Synced Tabs Recent Synced Tab Opened :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.recent_synced_tabs_recent_synced_tab_opened ;;
     group_label: "Recent Synced Tabs"
     group_item_label: "Recent Synced Tab Opened"
 
     link: {
-      label: "Glean Dictionary reference for Recent Synced Tabs Recent Synced Tab Opened"
+      label: "Glean Dictionary reference for Recent Synced Tabs Recent Synced Tab Opened :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/recent_synced_tabs_recent_synced_tab_opened"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2249,14 +2249,14 @@ device type the tab originates from.
   }
 
   dimension: metrics__labeled_counter__recent_synced_tabs_recent_synced_tab_shown {
-    label: "Recent Synced Tabs Recent Synced Tab Shown"
+    label: "Recent Synced Tabs Recent Synced Tab Shown :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.recent_synced_tabs_recent_synced_tab_shown ;;
     group_label: "Recent Synced Tabs"
     group_item_label: "Recent Synced Tab Shown"
 
     link: {
-      label: "Glean Dictionary reference for Recent Synced Tabs Recent Synced Tab Shown"
+      label: "Glean Dictionary reference for Recent Synced Tabs Recent Synced Tab Shown :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/recent_synced_tabs_recent_synced_tab_shown"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2267,7 +2267,7 @@ device type the tab originates from.
   }
 
   dimension: metrics__timing_distribution__recent_synced_tabs_recent_synced_tab_time_to_load__sum {
-    label: "Recent Synced Tabs Recent Synced Tab Time To Load Sum"
+    label: "Recent Synced Tabs Recent Synced Tab Time To Load Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.recent_synced_tabs_recent_synced_tab_time_to_load.sum ;;
     type: number
@@ -2275,7 +2275,7 @@ device type the tab originates from.
     group_item_label: "Recent Synced Tab Time To Load Sum"
 
     link: {
-      label: "Glean Dictionary reference for Recent Synced Tabs Recent Synced Tab Time To Load Sum"
+      label: "Glean Dictionary reference for Recent Synced Tabs Recent Synced Tab Time To Load Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/recent_synced_tabs_recent_synced_tab_time_to_load"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2285,7 +2285,7 @@ device type the tab originates from.
   }
 
   dimension: metrics__counter__recent_synced_tabs_show_all_synced_tabs_clicked {
-    label: "Recent Synced Tabs Show All Synced Tabs Clicked"
+    label: "Recent Synced Tabs Show All Synced Tabs Clicked :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.recent_synced_tabs_show_all_synced_tabs_clicked ;;
     type: number
@@ -2293,7 +2293,7 @@ device type the tab originates from.
     group_item_label: "Show All Synced Tabs Clicked"
 
     link: {
-      label: "Glean Dictionary reference for Recent Synced Tabs Show All Synced Tabs Clicked"
+      label: "Glean Dictionary reference for Recent Synced Tabs Show All Synced Tabs Clicked :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/recent_synced_tabs_show_all_synced_tabs_clicked"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2303,7 +2303,7 @@ device type the tab originates from.
   }
 
   dimension: metrics__boolean__recent_tabs_section_visible {
-    label: "Recent Tabs Section Visible"
+    label: "Recent Tabs Section Visible :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.recent_tabs_section_visible ;;
     type: yesno
@@ -2311,7 +2311,7 @@ device type the tab originates from.
     group_item_label: "Section Visible"
 
     link: {
-      label: "Glean Dictionary reference for Recent Tabs Section Visible"
+      label: "Glean Dictionary reference for Recent Tabs Section Visible :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/recent_tabs_section_visible"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2322,7 +2322,7 @@ Jump Back In section is visible on the homepage.
   }
 
   dimension: metrics__string__search_default_engine_code {
-    label: "Search Default Engine Code"
+    label: "Search Default Engine Code :)"
     hidden: no
     sql: ${TABLE}.metrics.string.search_default_engine_code ;;
     type: string
@@ -2330,7 +2330,7 @@ Jump Back In section is visible on the homepage.
     group_item_label: "Code"
 
     link: {
-      label: "Glean Dictionary reference for Search Default Engine Code"
+      label: "Glean Dictionary reference for Search Default Engine Code :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/search_default_engine_code"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2343,7 +2343,7 @@ value will be \"custom\"
   }
 
   dimension: metrics__string__search_default_engine_name {
-    label: "Search Default Engine Name"
+    label: "Search Default Engine Name :)"
     hidden: no
     sql: ${TABLE}.metrics.string.search_default_engine_name ;;
     type: string
@@ -2351,7 +2351,7 @@ value will be \"custom\"
     group_item_label: "Name"
 
     link: {
-      label: "Glean Dictionary reference for Search Default Engine Name"
+      label: "Glean Dictionary reference for Search Default Engine Name :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/search_default_engine_name"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2364,7 +2364,7 @@ value will be \"custom\"
   }
 
   dimension: metrics__string__search_default_engine_submission_url {
-    label: "Search Default Engine Submission Url"
+    label: "Search Default Engine Submission Url :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.search_default_engine_submission_url ;;
     type: string
@@ -2372,7 +2372,7 @@ value will be \"custom\"
     group_item_label: "Submission Url"
 
     link: {
-      label: "Glean Dictionary reference for Search Default Engine Submission Url"
+      label: "Glean Dictionary reference for Search Default Engine Submission Url :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/search_default_engine_submission_url"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2386,7 +2386,7 @@ will be \"custom\"
   }
 
   dimension: metrics__custom_distribution__search_terms_group_size_distribution__sum {
-    label: "Search Terms Group Size Distribution Sum"
+    label: "Search Terms Group Size Distribution Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.search_terms_group_size_distribution.sum ;;
     type: number
@@ -2394,7 +2394,7 @@ will be \"custom\"
     group_item_label: "Group Size Distribution Sum"
 
     link: {
-      label: "Glean Dictionary reference for Search Terms Group Size Distribution Sum"
+      label: "Glean Dictionary reference for Search Terms Group Size Distribution Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/search_terms_group_size_distribution"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2414,7 +2414,7 @@ app will report 2, 3, and 4 when this metric is tracked.
   }
 
   dimension: metrics__memory_distribution__storage_stats_app_bytes__sum {
-    label: "Storage Stats App Bytes Sum"
+    label: "Storage Stats App Bytes Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.storage_stats_app_bytes.sum ;;
     type: number
@@ -2422,7 +2422,7 @@ app will report 2, 3, and 4 when this metric is tracked.
     group_item_label: "App Bytes Sum"
 
     link: {
-      label: "Glean Dictionary reference for Storage Stats App Bytes Sum"
+      label: "Glean Dictionary reference for Storage Stats App Bytes Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/storage_stats_app_bytes"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2437,7 +2437,7 @@ this value to see if that value is reliable enough.
   }
 
   dimension: metrics__memory_distribution__storage_stats_cache_bytes__sum {
-    label: "Storage Stats Cache Bytes Sum"
+    label: "Storage Stats Cache Bytes Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.storage_stats_cache_bytes.sum ;;
     type: number
@@ -2445,7 +2445,7 @@ this value to see if that value is reliable enough.
     group_item_label: "Cache Bytes Sum"
 
     link: {
-      label: "Glean Dictionary reference for Storage Stats Cache Bytes Sum"
+      label: "Glean Dictionary reference for Storage Stats Cache Bytes Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/storage_stats_cache_bytes"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2457,7 +2457,7 @@ so see that for details. This value is only available on Android 8+.
   }
 
   dimension: metrics__memory_distribution__storage_stats_data_dir_bytes__sum {
-    label: "Storage Stats Data Dir Bytes Sum"
+    label: "Storage Stats Data Dir Bytes Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.storage_stats_data_dir_bytes.sum ;;
     type: number
@@ -2465,7 +2465,7 @@ so see that for details. This value is only available on Android 8+.
     group_item_label: "Data Dir Bytes Sum"
 
     link: {
-      label: "Glean Dictionary reference for Storage Stats Data Dir Bytes Sum"
+      label: "Glean Dictionary reference for Storage Stats Data Dir Bytes Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/storage_stats_data_dir_bytes"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2479,7 +2479,7 @@ Android 8+.
   }
 
   dimension: metrics__timing_distribution__storage_stats_query_stats_duration__sum {
-    label: "Storage Stats Query Stats Duration Sum"
+    label: "Storage Stats Query Stats Duration Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.storage_stats_query_stats_duration.sum ;;
     type: number
@@ -2487,7 +2487,7 @@ Android 8+.
     group_item_label: "Query Stats Duration Sum"
 
     link: {
-      label: "Glean Dictionary reference for Storage Stats Query Stats Duration Sum"
+      label: "Glean Dictionary reference for Storage Stats Query Stats Duration Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/storage_stats_query_stats_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2500,14 +2500,14 @@ ensure it's not too expensive.  This value is only available on Android
   }
 
   dimension: metrics__labeled_counter__tabs_tray_access_point {
-    label: "Tabs Tray Access Point"
+    label: "Tabs Tray Access Point :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.tabs_tray_access_point ;;
     group_label: "Tabs Tray"
     group_item_label: "Access Point"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Tray Access Point"
+      label: "Glean Dictionary reference for Tabs Tray Access Point :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/tabs_tray_access_point"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2517,7 +2517,7 @@ ensure it's not too expensive.  This value is only available on Android
   }
 
   dimension: metrics__counter__tabs_tray_close_inactive_tab {
-    label: "Tabs Tray Close Inactive Tab"
+    label: "Tabs Tray Close Inactive Tab :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.tabs_tray_close_inactive_tab ;;
     type: number
@@ -2525,7 +2525,7 @@ ensure it's not too expensive.  This value is only available on Android
     group_item_label: "Close Inactive Tab"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Tray Close Inactive Tab"
+      label: "Glean Dictionary reference for Tabs Tray Close Inactive Tab :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/tabs_tray_close_inactive_tab"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2535,7 +2535,7 @@ ensure it's not too expensive.  This value is only available on Android
   }
 
   dimension: metrics__counter__tabs_tray_open_inactive_tab {
-    label: "Tabs Tray Open Inactive Tab"
+    label: "Tabs Tray Open Inactive Tab :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.tabs_tray_open_inactive_tab ;;
     type: number
@@ -2543,7 +2543,7 @@ ensure it's not too expensive.  This value is only available on Android
     group_item_label: "Open Inactive Tab"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Tray Open Inactive Tab"
+      label: "Glean Dictionary reference for Tabs Tray Open Inactive Tab :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/tabs_tray_open_inactive_tab"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2553,7 +2553,7 @@ ensure it's not too expensive.  This value is only available on Android
   }
 
   dimension: metrics__boolean__wallpapers_discovered_wallpaper_feature {
-    label: "Wallpapers Discovered Wallpaper Feature"
+    label: "Wallpapers Discovered Wallpaper Feature :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.wallpapers_discovered_wallpaper_feature ;;
     type: yesno
@@ -2561,7 +2561,7 @@ ensure it's not too expensive.  This value is only available on Android
     group_item_label: "Discovered Wallpaper Feature"
 
     link: {
-      label: "Glean Dictionary reference for Wallpapers Discovered Wallpaper Feature"
+      label: "Glean Dictionary reference for Wallpapers Discovered Wallpaper Feature :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/wallpapers_discovered_wallpaper_feature"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2571,14 +2571,14 @@ ensure it's not too expensive.  This value is only available on Android
   }
 
   dimension: metrics__labeled_counter__wallpapers_new_wallpaper_applied {
-    label: "Wallpapers New Wallpaper Applied"
+    label: "Wallpapers New Wallpaper Applied :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.wallpapers_new_wallpaper_applied ;;
     group_label: "Wallpapers"
     group_item_label: "New Wallpaper Applied"
 
     link: {
-      label: "Glean Dictionary reference for Wallpapers New Wallpaper Applied"
+      label: "Glean Dictionary reference for Wallpapers New Wallpaper Applied :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/wallpapers_new_wallpaper_applied"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2588,7 +2588,7 @@ ensure it's not too expensive.  This value is only available on Android
   }
 
   dimension: metrics__boolean__browser_ui_proton_enabled {
-    label: "Browser Ui Proton Enabled"
+    label: "Browser Ui Proton Enabled :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.browser_ui_proton_enabled ;;
     type: yesno
@@ -2596,7 +2596,7 @@ ensure it's not too expensive.  This value is only available on Android
     group_item_label: "Proton Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Browser Ui Proton Enabled"
+      label: "Glean Dictionary reference for Browser Ui Proton Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/browser_ui_proton_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2606,7 +2606,7 @@ ensure it's not too expensive.  This value is only available on Android
   }
 
   dimension: metrics__boolean__fog_failed_idle_registration {
-    label: "Fog Failed Idle Registration"
+    label: "Fog Failed Idle Registration :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.fog_failed_idle_registration ;;
     type: yesno
@@ -2614,7 +2614,7 @@ ensure it's not too expensive.  This value is only available on Android
     group_item_label: "Failed Idle Registration"
 
     link: {
-      label: "Glean Dictionary reference for Fog Failed Idle Registration"
+      label: "Glean Dictionary reference for Fog Failed Idle Registration :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/fog_failed_idle_registration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2626,7 +2626,7 @@ Child-process data will likely be absent, or incomplete.
   }
 
   dimension: metrics__timespan__fog_initialization__value {
-    label: "Fog Initialization Value"
+    label: "Fog Initialization Value :)"
     hidden: no
     sql: ${TABLE}.metrics.timespan.fog_initialization.value ;;
     type: number
@@ -2634,7 +2634,7 @@ Child-process data will likely be absent, or incomplete.
     group_item_label: "Initialization Value"
 
     link: {
-      label: "Glean Dictionary reference for Fog Initialization Value"
+      label: "Glean Dictionary reference for Fog Initialization Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/fog_initialization"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2644,7 +2644,7 @@ Child-process data will likely be absent, or incomplete.
   }
 
   dimension: metrics__memory_distribution__fog_ipc_buffer_sizes__sum {
-    label: "Fog Ipc Buffer Sizes Sum"
+    label: "Fog Ipc Buffer Sizes Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.fog_ipc_buffer_sizes.sum ;;
     type: number
@@ -2652,7 +2652,7 @@ Child-process data will likely be absent, or incomplete.
     group_item_label: "Buffer Sizes Sum"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Buffer Sizes Sum"
+      label: "Glean Dictionary reference for Fog Ipc Buffer Sizes Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/fog_ipc_buffer_sizes"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2662,7 +2662,7 @@ Child-process data will likely be absent, or incomplete.
   }
 
   dimension: metrics__timing_distribution__fog_ipc_flush_durations__sum {
-    label: "Fog Ipc Flush Durations Sum"
+    label: "Fog Ipc Flush Durations Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.fog_ipc_flush_durations.sum ;;
     type: number
@@ -2670,7 +2670,7 @@ Child-process data will likely be absent, or incomplete.
     group_item_label: "Flush Durations Sum"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Flush Durations Sum"
+      label: "Glean Dictionary reference for Fog Ipc Flush Durations Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/fog_ipc_flush_durations"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2681,7 +2681,7 @@ IPC buffers and all of them being received by the parent.
   }
 
   dimension: metrics__counter__fog_ipc_flush_failures {
-    label: "Fog Ipc Flush Failures"
+    label: "Fog Ipc Flush Failures :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.fog_ipc_flush_failures ;;
     type: number
@@ -2689,7 +2689,7 @@ IPC buffers and all of them being received by the parent.
     group_item_label: "Flush Failures"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Flush Failures"
+      label: "Glean Dictionary reference for Fog Ipc Flush Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/fog_ipc_flush_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2702,7 +2702,7 @@ handling code instead of using `MozPromise::All`.
   }
 
   dimension: metrics__counter__fog_ipc_replay_failures {
-    label: "Fog Ipc Replay Failures"
+    label: "Fog Ipc Replay Failures :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.fog_ipc_replay_failures ;;
     type: number
@@ -2710,7 +2710,7 @@ handling code instead of using `MozPromise::All`.
     group_item_label: "Replay Failures"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Replay Failures"
+      label: "Glean Dictionary reference for Fog Ipc Replay Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/fog_ipc_replay_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2721,7 +2721,7 @@ parent process.
   }
 
   dimension: metrics__counter__fog_ipc_shutdown_registration_failures {
-    label: "Fog Ipc Shutdown Registration Failures"
+    label: "Fog Ipc Shutdown Registration Failures :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.fog_ipc_shutdown_registration_failures ;;
     type: number
@@ -2729,7 +2729,7 @@ parent process.
     group_item_label: "Shutdown Registration Failures"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Shutdown Registration Failures"
+      label: "Glean Dictionary reference for Fog Ipc Shutdown Registration Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/fog_ipc_shutdown_registration_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2746,7 +2746,7 @@ Will likely be obsoleted by bug 1641989.
   }
 
   dimension: metrics__string__geckoview_validation_build_id {
-    label: "Geckoview Validation Build Id"
+    label: "Geckoview Validation Build Id :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.geckoview_validation_build_id ;;
     type: string
@@ -2754,7 +2754,7 @@ Will likely be obsoleted by bug 1641989.
     group_item_label: "Build Id"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Validation Build Id"
+      label: "Glean Dictionary reference for Geckoview Validation Build Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/geckoview_validation_build_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2764,7 +2764,7 @@ Will likely be obsoleted by bug 1641989.
   }
 
   dimension: metrics__string__geckoview_validation_version {
-    label: "Geckoview Validation Version"
+    label: "Geckoview Validation Version :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.geckoview_validation_version ;;
     type: string
@@ -2772,7 +2772,7 @@ Will likely be obsoleted by bug 1641989.
     group_item_label: "Version"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Validation Version"
+      label: "Glean Dictionary reference for Geckoview Validation Version :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/geckoview_validation_version"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2782,7 +2782,7 @@ Will likely be obsoleted by bug 1641989.
   }
 
   dimension: metrics__boolean__gifft_validation_main_ping_assembling {
-    label: "Gifft Validation Main Ping Assembling"
+    label: "Gifft Validation Main Ping Assembling :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.gifft_validation_main_ping_assembling ;;
     type: yesno
@@ -2790,7 +2790,7 @@ Will likely be obsoleted by bug 1641989.
     group_item_label: "Main Ping Assembling"
 
     link: {
-      label: "Glean Dictionary reference for Gifft Validation Main Ping Assembling"
+      label: "Glean Dictionary reference for Gifft Validation Main Ping Assembling :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gifft_validation_main_ping_assembling"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2802,14 +2802,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__gmp_update_xml_fetch_result {
-    label: "Gmp Update Xml Fetch Result"
+    label: "Gmp Update Xml Fetch Result :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.gmp_update_xml_fetch_result ;;
     group_label: "Gmp"
     group_item_label: "Update Xml Fetch Result"
 
     link: {
-      label: "Glean Dictionary reference for Gmp Update Xml Fetch Result"
+      label: "Glean Dictionary reference for Gmp Update Xml Fetch Result :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gmp_update_xml_fetch_result"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2819,14 +2819,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__netwerk_early_hints {
-    label: "Netwerk Early Hints"
+    label: "Netwerk Early Hints :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.netwerk_early_hints ;;
     group_label: "Netwerk"
     group_item_label: "Early Hints"
 
     link: {
-      label: "Glean Dictionary reference for Netwerk Early Hints"
+      label: "Glean Dictionary reference for Netwerk Early Hints :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/netwerk_early_hints"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2836,7 +2836,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__paint_build_displaylist_time__sum {
-    label: "Paint Build Displaylist Time Sum"
+    label: "Paint Build Displaylist Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.paint_build_displaylist_time.sum ;;
     type: number
@@ -2844,7 +2844,7 @@ To be used to validate GIFFT.
     group_item_label: "Build Displaylist Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Paint Build Displaylist Time Sum"
+      label: "Glean Dictionary reference for Paint Build Displaylist Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/paint_build_displaylist_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2854,7 +2854,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__custom_distribution__power_battery_percentage_when_user_active__sum {
-    label: "Power Battery Percentage When User Active Sum"
+    label: "Power Battery Percentage When User Active Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.power_battery_percentage_when_user_active.sum ;;
     type: number
@@ -2862,7 +2862,7 @@ To be used to validate GIFFT.
     group_item_label: "Percentage When User Active Sum"
 
     link: {
-      label: "Glean Dictionary reference for Power Battery Percentage When User Active Sum"
+      label: "Glean Dictionary reference for Power Battery Percentage When User Active Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_battery_percentage_when_user_active"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2872,14 +2872,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_content_background {
-    label: "Power Cpu Ms Per Thread Content Background"
+    label: "Power Cpu Ms Per Thread Content Background :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_content_background ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Content Background"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Content Background"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Content Background :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_cpu_ms_per_thread_content_background"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2889,14 +2889,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_content_foreground {
-    label: "Power Cpu Ms Per Thread Content Foreground"
+    label: "Power Cpu Ms Per Thread Content Foreground :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_content_foreground ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Content Foreground"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Content Foreground"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Content Foreground :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_cpu_ms_per_thread_content_foreground"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2906,14 +2906,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_gpu_process {
-    label: "Power Cpu Ms Per Thread Gpu Process"
+    label: "Power Cpu Ms Per Thread Gpu Process :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_gpu_process ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Gpu Process"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Gpu Process"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Gpu Process :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_cpu_ms_per_thread_gpu_process"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2923,14 +2923,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_parent_active {
-    label: "Power Cpu Ms Per Thread Parent Active"
+    label: "Power Cpu Ms Per Thread Parent Active :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_parent_active ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Parent Active"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Parent Active"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Parent Active :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_cpu_ms_per_thread_parent_active"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2940,14 +2940,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_parent_inactive {
-    label: "Power Cpu Ms Per Thread Parent Inactive"
+    label: "Power Cpu Ms Per Thread Parent Inactive :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_parent_inactive ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Parent Inactive"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Parent Inactive"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Parent Inactive :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_cpu_ms_per_thread_parent_inactive"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2957,7 +2957,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_cpu_time_bogus_values {
-    label: "Power Cpu Time Bogus Values"
+    label: "Power Cpu Time Bogus Values :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_cpu_time_bogus_values ;;
     type: number
@@ -2965,7 +2965,7 @@ To be used to validate GIFFT.
     group_item_label: "Cpu Time Bogus Values"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Time Bogus Values"
+      label: "Glean Dictionary reference for Power Cpu Time Bogus Values :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_cpu_time_bogus_values"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2975,14 +2975,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_time_per_process_type_ms {
-    label: "Power Cpu Time Per Process Type Ms"
+    label: "Power Cpu Time Per Process Type Ms :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_time_per_process_type_ms ;;
     group_label: "Power"
     group_item_label: "Cpu Time Per Process Type Ms"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Time Per Process Type Ms"
+      label: "Glean Dictionary reference for Power Cpu Time Per Process Type Ms :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_cpu_time_per_process_type_ms"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2992,7 +2992,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_gpu_time_bogus_values {
-    label: "Power Gpu Time Bogus Values"
+    label: "Power Gpu Time Bogus Values :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_gpu_time_bogus_values ;;
     type: number
@@ -3000,7 +3000,7 @@ To be used to validate GIFFT.
     group_item_label: "Gpu Time Bogus Values"
 
     link: {
-      label: "Glean Dictionary reference for Power Gpu Time Bogus Values"
+      label: "Glean Dictionary reference for Power Gpu Time Bogus Values :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_gpu_time_bogus_values"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3010,14 +3010,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_gpu_time_per_process_type_ms {
-    label: "Power Gpu Time Per Process Type Ms"
+    label: "Power Gpu Time Per Process Type Ms :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_gpu_time_per_process_type_ms ;;
     group_label: "Power"
     group_item_label: "Gpu Time Per Process Type Ms"
 
     link: {
-      label: "Glean Dictionary reference for Power Gpu Time Per Process Type Ms"
+      label: "Glean Dictionary reference for Power Gpu Time Per Process Type Ms :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_gpu_time_per_process_type_ms"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3027,7 +3027,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_total_cpu_time_ms {
-    label: "Power Total Cpu Time Ms"
+    label: "Power Total Cpu Time Ms :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_total_cpu_time_ms ;;
     type: number
@@ -3035,7 +3035,7 @@ To be used to validate GIFFT.
     group_item_label: "Total Cpu Time Ms"
 
     link: {
-      label: "Glean Dictionary reference for Power Total Cpu Time Ms"
+      label: "Glean Dictionary reference for Power Total Cpu Time Ms :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_total_cpu_time_ms"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3045,7 +3045,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_total_gpu_time_ms {
-    label: "Power Total Gpu Time Ms"
+    label: "Power Total Gpu Time Ms :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_total_gpu_time_ms ;;
     type: number
@@ -3053,7 +3053,7 @@ To be used to validate GIFFT.
     group_item_label: "Total Gpu Time Ms"
 
     link: {
-      label: "Glean Dictionary reference for Power Total Gpu Time Ms"
+      label: "Glean Dictionary reference for Power Total Gpu Time Ms :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_total_gpu_time_ms"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3063,7 +3063,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_total_thread_wakeups {
-    label: "Power Total Thread Wakeups"
+    label: "Power Total Thread Wakeups :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_total_thread_wakeups ;;
     type: number
@@ -3071,7 +3071,7 @@ To be used to validate GIFFT.
     group_item_label: "Total Thread Wakeups"
 
     link: {
-      label: "Glean Dictionary reference for Power Total Thread Wakeups"
+      label: "Glean Dictionary reference for Power Total Thread Wakeups :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_total_thread_wakeups"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3081,14 +3081,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_process_type {
-    label: "Power Wakeups Per Process Type"
+    label: "Power Wakeups Per Process Type :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_process_type ;;
     group_label: "Power"
     group_item_label: "Wakeups Per Process Type"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Process Type"
+      label: "Glean Dictionary reference for Power Wakeups Per Process Type :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_wakeups_per_process_type"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3098,14 +3098,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_content_background {
-    label: "Power Wakeups Per Thread Content Background"
+    label: "Power Wakeups Per Thread Content Background :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_content_background ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Content Background"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Content Background"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Content Background :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_wakeups_per_thread_content_background"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3115,14 +3115,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_content_foreground {
-    label: "Power Wakeups Per Thread Content Foreground"
+    label: "Power Wakeups Per Thread Content Foreground :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_content_foreground ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Content Foreground"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Content Foreground"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Content Foreground :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_wakeups_per_thread_content_foreground"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3132,14 +3132,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_gpu_process {
-    label: "Power Wakeups Per Thread Gpu Process"
+    label: "Power Wakeups Per Thread Gpu Process :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_gpu_process ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Gpu Process"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Gpu Process"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Gpu Process :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_wakeups_per_thread_gpu_process"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3149,14 +3149,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_parent_active {
-    label: "Power Wakeups Per Thread Parent Active"
+    label: "Power Wakeups Per Thread Parent Active :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_parent_active ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Parent Active"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Parent Active"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Parent Active :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_wakeups_per_thread_parent_active"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3166,14 +3166,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_parent_inactive {
-    label: "Power Wakeups Per Thread Parent Inactive"
+    label: "Power Wakeups Per Thread Parent Inactive :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_parent_inactive ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Parent Inactive"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Parent Inactive"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Parent Inactive :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/power_wakeups_per_thread_parent_inactive"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3183,7 +3183,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_framebuild_time__sum {
-    label: "Wr Framebuild Time Sum"
+    label: "Wr Framebuild Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_framebuild_time.sum ;;
     type: number
@@ -3191,7 +3191,7 @@ To be used to validate GIFFT.
     group_item_label: "Framebuild Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Framebuild Time Sum"
+      label: "Glean Dictionary reference for Wr Framebuild Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/wr_framebuild_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3201,7 +3201,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_gpu_wait_time__sum {
-    label: "Wr Gpu Wait Time Sum"
+    label: "Wr Gpu Wait Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_gpu_wait_time.sum ;;
     type: number
@@ -3209,7 +3209,7 @@ To be used to validate GIFFT.
     group_item_label: "Gpu Wait Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Gpu Wait Time Sum"
+      label: "Glean Dictionary reference for Wr Gpu Wait Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/wr_gpu_wait_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3219,7 +3219,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_rasterize_blobs_time__sum {
-    label: "Wr Rasterize Blobs Time Sum"
+    label: "Wr Rasterize Blobs Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_rasterize_blobs_time.sum ;;
     type: number
@@ -3227,7 +3227,7 @@ To be used to validate GIFFT.
     group_item_label: "Rasterize Blobs Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Rasterize Blobs Time Sum"
+      label: "Glean Dictionary reference for Wr Rasterize Blobs Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/wr_rasterize_blobs_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3237,7 +3237,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_rasterize_glyphs_time__sum {
-    label: "Wr Rasterize Glyphs Time Sum"
+    label: "Wr Rasterize Glyphs Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_rasterize_glyphs_time.sum ;;
     type: number
@@ -3245,7 +3245,7 @@ To be used to validate GIFFT.
     group_item_label: "Rasterize Glyphs Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Rasterize Glyphs Time Sum"
+      label: "Glean Dictionary reference for Wr Rasterize Glyphs Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/wr_rasterize_glyphs_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3255,7 +3255,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_renderer_time__sum {
-    label: "Wr Renderer Time Sum"
+    label: "Wr Renderer Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_renderer_time.sum ;;
     type: number
@@ -3263,7 +3263,7 @@ To be used to validate GIFFT.
     group_item_label: "Renderer Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Renderer Time Sum"
+      label: "Glean Dictionary reference for Wr Renderer Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/wr_renderer_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3273,7 +3273,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_renderer_time_no_sc__sum {
-    label: "Wr Renderer Time No Sc Sum"
+    label: "Wr Renderer Time No Sc Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_renderer_time_no_sc.sum ;;
     type: number
@@ -3281,7 +3281,7 @@ To be used to validate GIFFT.
     group_item_label: "Renderer Time No Sc Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Renderer Time No Sc Sum"
+      label: "Glean Dictionary reference for Wr Renderer Time No Sc Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/wr_renderer_time_no_sc"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3291,7 +3291,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_scenebuild_time__sum {
-    label: "Wr Scenebuild Time Sum"
+    label: "Wr Scenebuild Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_scenebuild_time.sum ;;
     type: number
@@ -3299,7 +3299,7 @@ To be used to validate GIFFT.
     group_item_label: "Scenebuild Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Scenebuild Time Sum"
+      label: "Glean Dictionary reference for Wr Scenebuild Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/wr_scenebuild_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3309,7 +3309,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_sceneswap_time__sum {
-    label: "Wr Sceneswap Time Sum"
+    label: "Wr Sceneswap Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_sceneswap_time.sum ;;
     type: number
@@ -3317,7 +3317,7 @@ To be used to validate GIFFT.
     group_item_label: "Sceneswap Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Sceneswap Time Sum"
+      label: "Glean Dictionary reference for Wr Sceneswap Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/wr_sceneswap_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3327,7 +3327,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_texture_cache_update_time__sum {
-    label: "Wr Texture Cache Update Time Sum"
+    label: "Wr Texture Cache Update Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_texture_cache_update_time.sum ;;
     type: number
@@ -3335,7 +3335,7 @@ To be used to validate GIFFT.
     group_item_label: "Texture Cache Update Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Texture Cache Update Time Sum"
+      label: "Glean Dictionary reference for Wr Texture Cache Update Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/wr_texture_cache_update_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3345,7 +3345,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_time_to_frame_build__sum {
-    label: "Wr Time To Frame Build Sum"
+    label: "Wr Time To Frame Build Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_time_to_frame_build.sum ;;
     type: number
@@ -3353,7 +3353,7 @@ To be used to validate GIFFT.
     group_item_label: "Time To Frame Build Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Time To Frame Build Sum"
+      label: "Glean Dictionary reference for Wr Time To Frame Build Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/wr_time_to_frame_build"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3363,7 +3363,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_time_to_render_start__sum {
-    label: "Wr Time To Render Start Sum"
+    label: "Wr Time To Render Start Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_time_to_render_start.sum ;;
     type: number
@@ -3371,7 +3371,7 @@ To be used to validate GIFFT.
     group_item_label: "Time To Render Start Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Time To Render Start Sum"
+      label: "Glean Dictionary reference for Wr Time To Render Start Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/wr_time_to_render_start"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3381,7 +3381,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__memory_distribution__glean_database_size__sum {
-    label: "Glean Database Size Sum"
+    label: "Glean Database Size Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.glean_database_size.sum ;;
     type: number
@@ -3389,7 +3389,7 @@ To be used to validate GIFFT.
     group_item_label: "Size Sum"
 
     link: {
-      label: "Glean Dictionary reference for Glean Database Size Sum"
+      label: "Glean Dictionary reference for Glean Database Size Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_database_size"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3399,14 +3399,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3417,14 +3417,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3435,14 +3435,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3453,14 +3453,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3471,7 +3471,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__glean_error_io {
-    label: "Glean Error Io"
+    label: "Glean Error Io :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_error_io ;;
     type: number
@@ -3479,7 +3479,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Io"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Io"
+      label: "Glean Dictionary reference for Glean Error Io :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_io"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3490,7 +3490,7 @@ when writing a pending ping to disk.
   }
 
   dimension: metrics__counter__glean_error_preinit_tasks_overflow {
-    label: "Glean Error Preinit Tasks Overflow"
+    label: "Glean Error Preinit Tasks Overflow :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_error_preinit_tasks_overflow ;;
     type: number
@@ -3498,7 +3498,7 @@ when writing a pending ping to disk.
     group_item_label: "Preinit Tasks Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Preinit Tasks Overflow"
+      label: "Glean Dictionary reference for Glean Error Preinit Tasks Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_preinit_tasks_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3511,7 +3511,7 @@ In Version 0 this reported the total number of tasks enqueued.
   }
 
   dimension: metrics__boolean__glean_error_preinit_tasks_timeout {
-    label: "Glean Error Preinit Tasks Timeout"
+    label: "Glean Error Preinit Tasks Timeout :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.glean_error_preinit_tasks_timeout ;;
     type: yesno
@@ -3519,7 +3519,7 @@ In Version 0 this reported the total number of tasks enqueued.
     group_item_label: "Preinit Tasks Timeout"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Preinit Tasks Timeout"
+      label: "Glean Dictionary reference for Glean Error Preinit Tasks Timeout :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_preinit_tasks_timeout"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3528,7 +3528,7 @@ In Version 0 this reported the total number of tasks enqueued.
   }
 
   dimension: metrics__counter__glean_time_invalid_timezone_offset {
-    label: "Glean Time Invalid Timezone Offset"
+    label: "Glean Time Invalid Timezone Offset :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.glean_time_invalid_timezone_offset ;;
     type: number
@@ -3536,7 +3536,7 @@ In Version 0 this reported the total number of tasks enqueued.
     group_item_label: "Invalid Timezone Offset"
 
     link: {
-      label: "Glean Dictionary reference for Glean Time Invalid Timezone Offset"
+      label: "Glean Dictionary reference for Glean Time Invalid Timezone Offset :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_time_invalid_timezone_offset"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3549,7 +3549,7 @@ If invalid a UTC offset is used (+0h).
   }
 
   dimension: metrics__counter__glean_upload_deleted_pings_after_quota_hit {
-    label: "Glean Upload Deleted Pings After Quota Hit"
+    label: "Glean Upload Deleted Pings After Quota Hit :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_upload_deleted_pings_after_quota_hit ;;
     type: number
@@ -3557,7 +3557,7 @@ If invalid a UTC offset is used (+0h).
     group_item_label: "Deleted Pings After Quota Hit"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Deleted Pings After Quota Hit"
+      label: "Glean Dictionary reference for Glean Upload Deleted Pings After Quota Hit :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_upload_deleted_pings_after_quota_hit"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3571,7 +3571,7 @@ deletion request pings are never deleted.
   }
 
   dimension: metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__sum {
-    label: "Glean Upload Discarded Exceeding Pings Size Sum"
+    label: "Glean Upload Discarded Exceeding Pings Size Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.glean_upload_discarded_exceeding_pings_size.sum ;;
     type: number
@@ -3579,7 +3579,7 @@ deletion request pings are never deleted.
     group_item_label: "Discarded Exceeding Pings Size Sum"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Discarded Exceeding Pings Size Sum"
+      label: "Glean Dictionary reference for Glean Upload Discarded Exceeding Pings Size Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_upload_discarded_exceeding_pings_size"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3589,7 +3589,7 @@ deletion request pings are never deleted.
   }
 
   dimension: metrics__counter__glean_upload_pending_pings {
-    label: "Glean Upload Pending Pings"
+    label: "Glean Upload Pending Pings :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_upload_pending_pings ;;
     type: number
@@ -3597,7 +3597,7 @@ deletion request pings are never deleted.
     group_item_label: "Pending Pings"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Pending Pings"
+      label: "Glean Dictionary reference for Glean Upload Pending Pings :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_upload_pending_pings"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3608,7 +3608,7 @@ This does not include deletion-request pings.
   }
 
   dimension: metrics__memory_distribution__glean_upload_pending_pings_directory_size__sum {
-    label: "Glean Upload Pending Pings Directory Size Sum"
+    label: "Glean Upload Pending Pings Directory Size Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.glean_upload_pending_pings_directory_size.sum ;;
     type: number
@@ -3616,7 +3616,7 @@ This does not include deletion-request pings.
     group_item_label: "Pending Pings Directory Size Sum"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Pending Pings Directory Size Sum"
+      label: "Glean Dictionary reference for Glean Upload Pending Pings Directory Size Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_upload_pending_pings_directory_size"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3627,14 +3627,14 @@ This does not include the size of the deletion request pings directory.
   }
 
   dimension: metrics__labeled_counter__glean_upload_ping_upload_failure {
-    label: "Glean Upload Ping Upload Failure"
+    label: "Glean Upload Ping Upload Failure :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_upload_ping_upload_failure ;;
     group_label: "Glean Upload"
     group_item_label: "Ping Upload Failure"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Ping Upload Failure"
+      label: "Glean Dictionary reference for Glean Upload Ping Upload Failure :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_upload_ping_upload_failure"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3646,7 +3646,7 @@ though the counts appear in the next successfully sent `metrics` ping.
   }
 
   dimension: metrics__datetime__glean_validation_first_run_hour {
-    label: "Glean Validation First Run Hour"
+    label: "Glean Validation First Run Hour :)"
     hidden: no
     sql: ${TABLE}.metrics.datetime.glean_validation_first_run_hour ;;
     type: string
@@ -3654,7 +3654,7 @@ though the counts appear in the next successfully sent `metrics` ping.
     group_item_label: "First Run Hour"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation First Run Hour"
+      label: "Glean Dictionary reference for Glean Validation First Run Hour :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_validation_first_run_hour"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3664,7 +3664,7 @@ though the counts appear in the next successfully sent `metrics` ping.
   }
 
   dimension: metrics__counter__glean_validation_foreground_count {
-    label: "Glean Validation Foreground Count"
+    label: "Glean Validation Foreground Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_validation_foreground_count ;;
     type: number
@@ -3672,7 +3672,7 @@ though the counts appear in the next successfully sent `metrics` ping.
     group_item_label: "Foreground Count"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation Foreground Count"
+      label: "Glean Dictionary reference for Glean Validation Foreground Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_validation_foreground_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3682,14 +3682,14 @@ though the counts appear in the next successfully sent `metrics` ping.
   }
 
   dimension: metrics__labeled_counter__glean_validation_pings_submitted {
-    label: "Glean Validation Pings Submitted"
+    label: "Glean Validation Pings Submitted :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_validation_pings_submitted ;;
     group_label: "Glean Validation"
     group_item_label: "Pings Submitted"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation Pings Submitted"
+      label: "Glean Dictionary reference for Glean Validation Pings Submitted :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_validation_pings_submitted"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3706,7 +3706,7 @@ This metric appears in both the metrics and baseline pings.
   }
 
   dimension: metrics__string__ping_reason {
-    label: "Glean Ping Reason"
+    label: "Glean Ping Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.ping_reason ;;
     type: string
@@ -3714,7 +3714,7 @@ This metric appears in both the metrics and baseline pings.
     group_item_label: "Ping Reason"
 
     link: {
-      label: "Glean Dictionary reference for Glean Ping Reason"
+      label: "Glean Dictionary reference for Glean Ping Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/ping_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3726,7 +3726,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__logins_store_migration_num_failed {
-    label: "Logins Store Migration Num Failed"
+    label: "Logins Store Migration Num Failed :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.logins_store_migration_num_failed ;;
     type: number
@@ -3734,7 +3734,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Migration Num Failed"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Migration Num Failed"
+      label: "Glean Dictionary reference for Logins Store Migration Num Failed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_migration_num_failed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3744,7 +3744,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__logins_store_migration_num_processed {
-    label: "Logins Store Migration Num Processed"
+    label: "Logins Store Migration Num Processed :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.logins_store_migration_num_processed ;;
     type: number
@@ -3752,7 +3752,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Migration Num Processed"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Migration Num Processed"
+      label: "Glean Dictionary reference for Logins Store Migration Num Processed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_migration_num_processed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3762,7 +3762,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__logins_store_migration_num_succeeded {
-    label: "Logins Store Migration Num Succeeded"
+    label: "Logins Store Migration Num Succeeded :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.logins_store_migration_num_succeeded ;;
     type: number
@@ -3770,7 +3770,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Migration Num Succeeded"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Migration Num Succeeded"
+      label: "Glean Dictionary reference for Logins Store Migration Num Succeeded :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_migration_num_succeeded"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3780,7 +3780,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timespan__logins_store_migration_total_duration__value {
-    label: "Logins Store Migration Total Duration Value"
+    label: "Logins Store Migration Total Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.logins_store_migration_total_duration.value ;;
     type: number
@@ -3788,7 +3788,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Migration Total Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Migration Total Duration Value"
+      label: "Glean Dictionary reference for Logins Store Migration Total Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_migration_total_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3798,7 +3798,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__logins_store_read_query_count {
-    label: "Logins Store Read Query Count"
+    label: "Logins Store Read Query Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.logins_store_read_query_count ;;
     type: number
@@ -3806,7 +3806,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Read Query Count"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Read Query Count"
+      label: "Glean Dictionary reference for Logins Store Read Query Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_read_query_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3816,14 +3816,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__logins_store_read_query_error_count {
-    label: "Logins Store Read Query Error Count"
+    label: "Logins Store Read Query Error Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.logins_store_read_query_error_count ;;
     group_label: "Logins Store"
     group_item_label: "Read Query Error Count"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Read Query Error Count"
+      label: "Glean Dictionary reference for Logins Store Read Query Error Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_read_query_error_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3833,7 +3833,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__logins_store_read_query_time__sum {
-    label: "Logins Store Read Query Time Sum"
+    label: "Logins Store Read Query Time Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.logins_store_read_query_time.sum ;;
     type: number
@@ -3841,7 +3841,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Read Query Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Read Query Time Sum"
+      label: "Glean Dictionary reference for Logins Store Read Query Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_read_query_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3851,7 +3851,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__logins_store_unlock_count {
-    label: "Logins Store Unlock Count"
+    label: "Logins Store Unlock Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.logins_store_unlock_count ;;
     type: number
@@ -3859,7 +3859,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Unlock Count"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Unlock Count"
+      label: "Glean Dictionary reference for Logins Store Unlock Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_unlock_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3869,14 +3869,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__logins_store_unlock_error_count {
-    label: "Logins Store Unlock Error Count"
+    label: "Logins Store Unlock Error Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.logins_store_unlock_error_count ;;
     group_label: "Logins Store"
     group_item_label: "Unlock Error Count"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Unlock Error Count"
+      label: "Glean Dictionary reference for Logins Store Unlock Error Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_unlock_error_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3886,7 +3886,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__logins_store_unlock_time__sum {
-    label: "Logins Store Unlock Time Sum"
+    label: "Logins Store Unlock Time Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.logins_store_unlock_time.sum ;;
     type: number
@@ -3894,7 +3894,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Unlock Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Unlock Time Sum"
+      label: "Glean Dictionary reference for Logins Store Unlock Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_unlock_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3904,7 +3904,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__logins_store_write_query_count {
-    label: "Logins Store Write Query Count"
+    label: "Logins Store Write Query Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.logins_store_write_query_count ;;
     type: number
@@ -3912,7 +3912,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Write Query Count"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Write Query Count"
+      label: "Glean Dictionary reference for Logins Store Write Query Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_write_query_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3922,14 +3922,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__logins_store_write_query_error_count {
-    label: "Logins Store Write Query Error Count"
+    label: "Logins Store Write Query Error Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.logins_store_write_query_error_count ;;
     group_label: "Logins Store"
     group_item_label: "Write Query Error Count"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Write Query Error Count"
+      label: "Glean Dictionary reference for Logins Store Write Query Error Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_write_query_error_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3939,7 +3939,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__logins_store_write_query_time__sum {
-    label: "Logins Store Write Query Time Sum"
+    label: "Logins Store Write Query Time Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.logins_store_write_query_time.sum ;;
     type: number
@@ -3947,7 +3947,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Write Query Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Write Query Time Sum"
+      label: "Glean Dictionary reference for Logins Store Write Query Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/logins_store_write_query_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3957,14 +3957,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_a1lx {
-    label: "Avif A1Lx"
+    label: "Avif A1Lx :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_a1lx ;;
     group_label: "Avif"
     group_item_label: "A1Lx"
 
     link: {
-      label: "Glean Dictionary reference for Avif A1Lx"
+      label: "Glean Dictionary reference for Avif A1Lx :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_a1lx"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3974,14 +3974,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_a1op {
-    label: "Avif A1Op"
+    label: "Avif A1Op :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_a1op ;;
     group_label: "Avif"
     group_item_label: "A1Op"
 
     link: {
-      label: "Glean Dictionary reference for Avif A1Op"
+      label: "Glean Dictionary reference for Avif A1Op :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_a1op"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3991,14 +3991,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_alpha {
-    label: "Avif Alpha"
+    label: "Avif Alpha :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_alpha ;;
     group_label: "Avif"
     group_item_label: "Alpha"
 
     link: {
-      label: "Glean Dictionary reference for Avif Alpha"
+      label: "Glean Dictionary reference for Avif Alpha :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_alpha"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4008,7 +4008,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__quantity__avif_aom_decode_error {
-    label: "Avif Aom Decode Error"
+    label: "Avif Aom Decode Error :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.avif_aom_decode_error ;;
     type: number
@@ -4016,7 +4016,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Aom Decode Error"
 
     link: {
-      label: "Glean Dictionary reference for Avif Aom Decode Error"
+      label: "Glean Dictionary reference for Avif Aom Decode Error :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_aom_decode_error"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4026,14 +4026,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_bit_depth {
-    label: "Avif Bit Depth"
+    label: "Avif Bit Depth :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_bit_depth ;;
     group_label: "Avif"
     group_item_label: "Bit Depth"
 
     link: {
-      label: "Glean Dictionary reference for Avif Bit Depth"
+      label: "Glean Dictionary reference for Avif Bit Depth :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_bit_depth"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4043,14 +4043,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_cicp_cp {
-    label: "Avif Cicp Cp"
+    label: "Avif Cicp Cp :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_cicp_cp ;;
     group_label: "Avif"
     group_item_label: "Cicp Cp"
 
     link: {
-      label: "Glean Dictionary reference for Avif Cicp Cp"
+      label: "Glean Dictionary reference for Avif Cicp Cp :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_cicp_cp"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4060,14 +4060,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_cicp_mc {
-    label: "Avif Cicp Mc"
+    label: "Avif Cicp Mc :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_cicp_mc ;;
     group_label: "Avif"
     group_item_label: "Cicp Mc"
 
     link: {
-      label: "Glean Dictionary reference for Avif Cicp Mc"
+      label: "Glean Dictionary reference for Avif Cicp Mc :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_cicp_mc"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4077,14 +4077,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_cicp_tc {
-    label: "Avif Cicp Tc"
+    label: "Avif Cicp Tc :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_cicp_tc ;;
     group_label: "Avif"
     group_item_label: "Cicp Tc"
 
     link: {
-      label: "Glean Dictionary reference for Avif Cicp Tc"
+      label: "Glean Dictionary reference for Avif Cicp Tc :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_cicp_tc"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4094,14 +4094,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_clap {
-    label: "Avif Clap"
+    label: "Avif Clap :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_clap ;;
     group_label: "Avif"
     group_item_label: "Clap"
 
     link: {
-      label: "Glean Dictionary reference for Avif Clap"
+      label: "Glean Dictionary reference for Avif Clap :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_clap"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4111,14 +4111,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_colr {
-    label: "Avif Colr"
+    label: "Avif Colr :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_colr ;;
     group_label: "Avif"
     group_item_label: "Colr"
 
     link: {
-      label: "Glean Dictionary reference for Avif Colr"
+      label: "Glean Dictionary reference for Avif Colr :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_colr"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4128,7 +4128,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__quantity__avif_dav1d_decode_error {
-    label: "Avif Dav1D Decode Error"
+    label: "Avif Dav1D Decode Error :)"
     hidden: yes
     sql: ${TABLE}.metrics.quantity.avif_dav1d_decode_error ;;
     type: number
@@ -4136,7 +4136,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Dav1D Decode Error"
 
     link: {
-      label: "Glean Dictionary reference for Avif Dav1D Decode Error"
+      label: "Glean Dictionary reference for Avif Dav1D Decode Error :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_dav1d_decode_error"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4146,14 +4146,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_decode_result {
-    label: "Avif Decode Result"
+    label: "Avif Decode Result :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_decode_result ;;
     group_label: "Avif"
     group_item_label: "Decode Result"
 
     link: {
-      label: "Glean Dictionary reference for Avif Decode Result"
+      label: "Glean Dictionary reference for Avif Decode Result :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_decode_result"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4163,14 +4163,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_decoder {
-    label: "Avif Decoder"
+    label: "Avif Decoder :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_decoder ;;
     group_label: "Avif"
     group_item_label: "Decoder"
 
     link: {
-      label: "Glean Dictionary reference for Avif Decoder"
+      label: "Glean Dictionary reference for Avif Decoder :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_decoder"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4180,14 +4180,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_grid {
-    label: "Avif Grid"
+    label: "Avif Grid :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_grid ;;
     group_label: "Avif"
     group_item_label: "Grid"
 
     link: {
-      label: "Glean Dictionary reference for Avif Grid"
+      label: "Glean Dictionary reference for Avif Grid :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_grid"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4197,14 +4197,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_ipro {
-    label: "Avif Ipro"
+    label: "Avif Ipro :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_ipro ;;
     group_label: "Avif"
     group_item_label: "Ipro"
 
     link: {
-      label: "Glean Dictionary reference for Avif Ipro"
+      label: "Glean Dictionary reference for Avif Ipro :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_ipro"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4214,14 +4214,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_ispe {
-    label: "Avif Ispe"
+    label: "Avif Ispe :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_ispe ;;
     group_label: "Avif"
     group_item_label: "Ispe"
 
     link: {
-      label: "Glean Dictionary reference for Avif Ispe"
+      label: "Glean Dictionary reference for Avif Ispe :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_ispe"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4231,14 +4231,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_lsel {
-    label: "Avif Lsel"
+    label: "Avif Lsel :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_lsel ;;
     group_label: "Avif"
     group_item_label: "Lsel"
 
     link: {
-      label: "Glean Dictionary reference for Avif Lsel"
+      label: "Glean Dictionary reference for Avif Lsel :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_lsel"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4248,14 +4248,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_major_brand {
-    label: "Avif Major Brand"
+    label: "Avif Major Brand :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_major_brand ;;
     group_label: "Avif"
     group_item_label: "Major Brand"
 
     link: {
-      label: "Glean Dictionary reference for Avif Major Brand"
+      label: "Glean Dictionary reference for Avif Major Brand :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_major_brand"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4265,14 +4265,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_pasp {
-    label: "Avif Pasp"
+    label: "Avif Pasp :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_pasp ;;
     group_label: "Avif"
     group_item_label: "Pasp"
 
     link: {
-      label: "Glean Dictionary reference for Avif Pasp"
+      label: "Glean Dictionary reference for Avif Pasp :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_pasp"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4282,14 +4282,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_pixi {
-    label: "Avif Pixi"
+    label: "Avif Pixi :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_pixi ;;
     group_label: "Avif"
     group_item_label: "Pixi"
 
     link: {
-      label: "Glean Dictionary reference for Avif Pixi"
+      label: "Glean Dictionary reference for Avif Pixi :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_pixi"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4299,14 +4299,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_sequence {
-    label: "Avif Sequence"
+    label: "Avif Sequence :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_sequence ;;
     group_label: "Avif"
     group_item_label: "Sequence"
 
     link: {
-      label: "Glean Dictionary reference for Avif Sequence"
+      label: "Glean Dictionary reference for Avif Sequence :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_sequence"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4316,14 +4316,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__avif_yuv_color_space {
-    label: "Avif Yuv Color Space"
+    label: "Avif Yuv Color Space :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.avif_yuv_color_space ;;
     group_label: "Avif"
     group_item_label: "Yuv Color Space"
 
     link: {
-      label: "Glean Dictionary reference for Avif Yuv Color Space"
+      label: "Glean Dictionary reference for Avif Yuv Color Space :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/avif_yuv_color_space"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4333,7 +4333,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__geckoview_build_id {
-    label: "Geckoview Build Id"
+    label: "Geckoview Build Id :)"
     hidden: no
     sql: ${TABLE}.metrics.string.geckoview_build_id ;;
     type: string
@@ -4341,7 +4341,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Build Id"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Build Id"
+      label: "Glean Dictionary reference for Geckoview Build Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/geckoview_build_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4351,7 +4351,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__geckoview_content_process_lifetime__sum {
-    label: "Geckoview Content Process Lifetime Sum"
+    label: "Geckoview Content Process Lifetime Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.geckoview_content_process_lifetime.sum ;;
     type: number
@@ -4359,7 +4359,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Content Process Lifetime Sum"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Content Process Lifetime Sum"
+      label: "Glean Dictionary reference for Geckoview Content Process Lifetime Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/geckoview_content_process_lifetime"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4369,7 +4369,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__custom_distribution__geckoview_document_site_origins__sum {
-    label: "Geckoview Document Site Origins Sum"
+    label: "Geckoview Document Site Origins Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.geckoview_document_site_origins.sum ;;
     type: number
@@ -4377,7 +4377,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Document Site Origins Sum"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Document Site Origins Sum"
+      label: "Glean Dictionary reference for Geckoview Document Site Origins Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/geckoview_document_site_origins"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4387,7 +4387,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__geckoview_page_load_progress_time__sum {
-    label: "Geckoview Page Load Progress Time Sum"
+    label: "Geckoview Page Load Progress Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.geckoview_page_load_progress_time.sum ;;
     type: number
@@ -4395,7 +4395,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Page Load Progress Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Page Load Progress Time Sum"
+      label: "Glean Dictionary reference for Geckoview Page Load Progress Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/geckoview_page_load_progress_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4405,7 +4405,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__geckoview_page_load_time__sum {
-    label: "Geckoview Page Load Time Sum"
+    label: "Geckoview Page Load Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.geckoview_page_load_time.sum ;;
     type: number
@@ -4413,7 +4413,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Page Load Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Page Load Time Sum"
+      label: "Glean Dictionary reference for Geckoview Page Load Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/geckoview_page_load_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4423,7 +4423,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__geckoview_page_reload_time__sum {
-    label: "Geckoview Page Reload Time Sum"
+    label: "Geckoview Page Reload Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.geckoview_page_reload_time.sum ;;
     type: number
@@ -4431,7 +4431,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Page Reload Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Page Reload Time Sum"
+      label: "Glean Dictionary reference for Geckoview Page Reload Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/geckoview_page_reload_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4441,7 +4441,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__custom_distribution__geckoview_per_document_site_origins__sum {
-    label: "Geckoview Per Document Site Origins Sum"
+    label: "Geckoview Per Document Site Origins Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.geckoview_per_document_site_origins.sum ;;
     type: number
@@ -4449,7 +4449,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Per Document Site Origins Sum"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Per Document Site Origins Sum"
+      label: "Glean Dictionary reference for Geckoview Per Document Site Origins Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/geckoview_per_document_site_origins"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4459,7 +4459,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__geckoview_startup_runtime__sum {
-    label: "Geckoview Startup Runtime Sum"
+    label: "Geckoview Startup Runtime Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.geckoview_startup_runtime.sum ;;
     type: number
@@ -4467,7 +4467,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Startup Runtime Sum"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Startup Runtime Sum"
+      label: "Glean Dictionary reference for Geckoview Startup Runtime Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/geckoview_startup_runtime"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4477,7 +4477,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__geckoview_version {
-    label: "Geckoview Version"
+    label: "Geckoview Version :)"
     hidden: no
     sql: ${TABLE}.metrics.string.geckoview_version ;;
     type: string
@@ -4485,7 +4485,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Version"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Version"
+      label: "Glean Dictionary reference for Geckoview Version :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/geckoview_version"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4495,7 +4495,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__gfx_adapter_primary_description {
-    label: "Gfx Adapter Primary Description"
+    label: "Gfx Adapter Primary Description :)"
     hidden: no
     sql: ${TABLE}.metrics.string.gfx_adapter_primary_description ;;
     type: string
@@ -4503,7 +4503,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Description"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Adapter Primary Description"
+      label: "Glean Dictionary reference for Gfx Adapter Primary Description :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_adapter_primary_description"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4513,7 +4513,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__gfx_adapter_primary_device_id {
-    label: "Gfx Adapter Primary Device Id"
+    label: "Gfx Adapter Primary Device Id :)"
     hidden: no
     sql: ${TABLE}.metrics.string.gfx_adapter_primary_device_id ;;
     type: string
@@ -4521,7 +4521,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Device Id"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Adapter Primary Device Id"
+      label: "Glean Dictionary reference for Gfx Adapter Primary Device Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_adapter_primary_device_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4531,7 +4531,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__gfx_adapter_primary_device_id_last_seen {
-    label: "Gfx Adapter Primary Device Id Last Seen"
+    label: "Gfx Adapter Primary Device Id Last Seen :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.gfx_adapter_primary_device_id_last_seen ;;
     type: string
@@ -4539,7 +4539,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Device Id Last Seen"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Adapter Primary Device Id Last Seen"
+      label: "Glean Dictionary reference for Gfx Adapter Primary Device Id Last Seen :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_adapter_primary_device_id_last_seen"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4549,7 +4549,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__gfx_adapter_primary_driver_date {
-    label: "Gfx Adapter Primary Driver Date"
+    label: "Gfx Adapter Primary Driver Date :)"
     hidden: no
     sql: ${TABLE}.metrics.string.gfx_adapter_primary_driver_date ;;
     type: string
@@ -4557,7 +4557,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Driver Date"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Adapter Primary Driver Date"
+      label: "Glean Dictionary reference for Gfx Adapter Primary Driver Date :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_adapter_primary_driver_date"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4567,7 +4567,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__gfx_adapter_primary_driver_files {
-    label: "Gfx Adapter Primary Driver Files"
+    label: "Gfx Adapter Primary Driver Files :)"
     hidden: no
     sql: ${TABLE}.metrics.string.gfx_adapter_primary_driver_files ;;
     type: string
@@ -4575,7 +4575,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Driver Files"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Adapter Primary Driver Files"
+      label: "Glean Dictionary reference for Gfx Adapter Primary Driver Files :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_adapter_primary_driver_files"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4585,7 +4585,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__gfx_adapter_primary_driver_vendor {
-    label: "Gfx Adapter Primary Driver Vendor"
+    label: "Gfx Adapter Primary Driver Vendor :)"
     hidden: no
     sql: ${TABLE}.metrics.string.gfx_adapter_primary_driver_vendor ;;
     type: string
@@ -4593,7 +4593,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Driver Vendor"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Adapter Primary Driver Vendor"
+      label: "Glean Dictionary reference for Gfx Adapter Primary Driver Vendor :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_adapter_primary_driver_vendor"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4603,7 +4603,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__gfx_adapter_primary_driver_version {
-    label: "Gfx Adapter Primary Driver Version"
+    label: "Gfx Adapter Primary Driver Version :)"
     hidden: no
     sql: ${TABLE}.metrics.string.gfx_adapter_primary_driver_version ;;
     type: string
@@ -4611,7 +4611,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Driver Version"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Adapter Primary Driver Version"
+      label: "Glean Dictionary reference for Gfx Adapter Primary Driver Version :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_adapter_primary_driver_version"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4621,7 +4621,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__quantity__gfx_adapter_primary_ram {
-    label: "Gfx Adapter Primary Ram"
+    label: "Gfx Adapter Primary Ram :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.gfx_adapter_primary_ram ;;
     type: number
@@ -4629,7 +4629,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Ram"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Adapter Primary Ram"
+      label: "Glean Dictionary reference for Gfx Adapter Primary Ram :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_adapter_primary_ram"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4639,7 +4639,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__gfx_adapter_primary_subsystem_id {
-    label: "Gfx Adapter Primary Subsystem Id"
+    label: "Gfx Adapter Primary Subsystem Id :)"
     hidden: no
     sql: ${TABLE}.metrics.string.gfx_adapter_primary_subsystem_id ;;
     type: string
@@ -4647,7 +4647,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Subsystem Id"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Adapter Primary Subsystem Id"
+      label: "Glean Dictionary reference for Gfx Adapter Primary Subsystem Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_adapter_primary_subsystem_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4657,7 +4657,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__gfx_adapter_primary_vendor_id {
-    label: "Gfx Adapter Primary Vendor Id"
+    label: "Gfx Adapter Primary Vendor Id :)"
     hidden: no
     sql: ${TABLE}.metrics.string.gfx_adapter_primary_vendor_id ;;
     type: string
@@ -4665,7 +4665,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Vendor Id"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Adapter Primary Vendor Id"
+      label: "Glean Dictionary reference for Gfx Adapter Primary Vendor Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_adapter_primary_vendor_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4675,7 +4675,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__gfx_checkerboard_duration__sum {
-    label: "Gfx Checkerboard Duration Sum"
+    label: "Gfx Checkerboard Duration Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.gfx_checkerboard_duration.sum ;;
     type: number
@@ -4683,7 +4683,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Duration Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Checkerboard Duration Sum"
+      label: "Glean Dictionary reference for Gfx Checkerboard Duration Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_checkerboard_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4693,7 +4693,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__custom_distribution__gfx_checkerboard_peak_pixel_count__sum {
-    label: "Gfx Checkerboard Peak Pixel Count Sum"
+    label: "Gfx Checkerboard Peak Pixel Count Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.gfx_checkerboard_peak_pixel_count.sum ;;
     type: number
@@ -4701,7 +4701,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Peak Pixel Count Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Checkerboard Peak Pixel Count Sum"
+      label: "Glean Dictionary reference for Gfx Checkerboard Peak Pixel Count Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_checkerboard_peak_pixel_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4711,7 +4711,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__gfx_checkerboard_potential_duration__sum {
-    label: "Gfx Checkerboard Potential Duration Sum"
+    label: "Gfx Checkerboard Potential Duration Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.gfx_checkerboard_potential_duration.sum ;;
     type: number
@@ -4719,7 +4719,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Potential Duration Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Checkerboard Potential Duration Sum"
+      label: "Glean Dictionary reference for Gfx Checkerboard Potential Duration Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_checkerboard_potential_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4729,7 +4729,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__custom_distribution__gfx_checkerboard_severity__sum {
-    label: "Gfx Checkerboard Severity Sum"
+    label: "Gfx Checkerboard Severity Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.gfx_checkerboard_severity.sum ;;
     type: number
@@ -4737,7 +4737,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Severity Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Checkerboard Severity Sum"
+      label: "Glean Dictionary reference for Gfx Checkerboard Severity Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_checkerboard_severity"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4747,7 +4747,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__gfx_composite_time__sum {
-    label: "Gfx Composite Time Sum"
+    label: "Gfx Composite Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.gfx_composite_time.sum ;;
     type: number
@@ -4755,7 +4755,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Composite Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Composite Time Sum"
+      label: "Glean Dictionary reference for Gfx Composite Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_composite_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4765,7 +4765,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__custom_distribution__gfx_content_frame_time_from_paint__sum {
-    label: "Gfx Content Frame Time From Paint Sum"
+    label: "Gfx Content Frame Time From Paint Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.gfx_content_frame_time_from_paint.sum ;;
     type: number
@@ -4773,7 +4773,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "From Paint Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Content Frame Time From Paint Sum"
+      label: "Glean Dictionary reference for Gfx Content Frame Time From Paint Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_content_frame_time_from_paint"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4783,7 +4783,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__custom_distribution__gfx_content_frame_time_from_vsync__sum {
-    label: "Gfx Content Frame Time From Vsync Sum"
+    label: "Gfx Content Frame Time From Vsync Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.gfx_content_frame_time_from_vsync.sum ;;
     type: number
@@ -4791,7 +4791,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "From Vsync Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Content Frame Time From Vsync Sum"
+      label: "Glean Dictionary reference for Gfx Content Frame Time From Vsync Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_content_frame_time_from_vsync"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4801,14 +4801,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__gfx_content_frame_time_reason {
-    label: "Gfx Content Frame Time Reason"
+    label: "Gfx Content Frame Time Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.gfx_content_frame_time_reason ;;
     group_label: "Gfx Content Frame Time"
     group_item_label: "Reason"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Content Frame Time Reason"
+      label: "Glean Dictionary reference for Gfx Content Frame Time Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_content_frame_time_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4818,7 +4818,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__custom_distribution__gfx_content_frame_time_with_svg__sum {
-    label: "Gfx Content Frame Time With Svg Sum"
+    label: "Gfx Content Frame Time With Svg Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.gfx_content_frame_time_with_svg.sum ;;
     type: number
@@ -4826,7 +4826,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "With Svg Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Content Frame Time With Svg Sum"
+      label: "Glean Dictionary reference for Gfx Content Frame Time With Svg Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_content_frame_time_with_svg"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4836,7 +4836,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__custom_distribution__gfx_content_frame_time_without_resource_upload__sum {
-    label: "Gfx Content Frame Time Without Resource Upload Sum"
+    label: "Gfx Content Frame Time Without Resource Upload Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.gfx_content_frame_time_without_resource_upload.sum ;;
     type: number
@@ -4844,7 +4844,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Without Resource Upload Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Content Frame Time Without Resource Upload Sum"
+      label: "Glean Dictionary reference for Gfx Content Frame Time Without Resource Upload Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_content_frame_time_without_resource_upload"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4854,7 +4854,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__custom_distribution__gfx_content_frame_time_without_upload__sum {
-    label: "Gfx Content Frame Time Without Upload Sum"
+    label: "Gfx Content Frame Time Without Upload Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.gfx_content_frame_time_without_upload.sum ;;
     type: number
@@ -4862,7 +4862,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Without Upload Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Content Frame Time Without Upload Sum"
+      label: "Glean Dictionary reference for Gfx Content Frame Time Without Upload Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_content_frame_time_without_upload"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4872,7 +4872,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__gfx_content_full_paint_time__sum {
-    label: "Gfx Content Full Paint Time Sum"
+    label: "Gfx Content Full Paint Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.gfx_content_full_paint_time.sum ;;
     type: number
@@ -4880,7 +4880,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Full Paint Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Content Full Paint Time Sum"
+      label: "Glean Dictionary reference for Gfx Content Full Paint Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_content_full_paint_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4890,7 +4890,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__gfx_content_paint_time__sum {
-    label: "Gfx Content Paint Time Sum"
+    label: "Gfx Content Paint Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.gfx_content_paint_time.sum ;;
     type: number
@@ -4898,7 +4898,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Paint Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Content Paint Time Sum"
+      label: "Glean Dictionary reference for Gfx Content Paint Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_content_paint_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4908,7 +4908,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__quantity__gfx_display_count {
-    label: "Gfx Display Count"
+    label: "Gfx Display Count :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.gfx_display_count ;;
     type: number
@@ -4916,7 +4916,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Count"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Display Count"
+      label: "Glean Dictionary reference for Gfx Display Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_display_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4926,7 +4926,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__quantity__gfx_display_primary_height {
-    label: "Gfx Display Primary Height"
+    label: "Gfx Display Primary Height :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.gfx_display_primary_height ;;
     type: number
@@ -4934,7 +4934,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Primary Height"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Display Primary Height"
+      label: "Glean Dictionary reference for Gfx Display Primary Height :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_display_primary_height"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4944,7 +4944,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__quantity__gfx_display_primary_width {
-    label: "Gfx Display Primary Width"
+    label: "Gfx Display Primary Width :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.gfx_display_primary_width ;;
     type: number
@@ -4952,7 +4952,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Primary Width"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Display Primary Width"
+      label: "Glean Dictionary reference for Gfx Display Primary Width :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_display_primary_width"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4962,7 +4962,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__gfx_feature_webrender {
-    label: "Gfx Feature Webrender"
+    label: "Gfx Feature Webrender :)"
     hidden: no
     sql: ${TABLE}.metrics.string.gfx_feature_webrender ;;
     type: string
@@ -4970,7 +4970,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Webrender"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Feature Webrender"
+      label: "Glean Dictionary reference for Gfx Feature Webrender :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_feature_webrender"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4979,7 +4979,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__gfx_scroll_present_latency__sum {
-    label: "Gfx Scroll Present Latency Sum"
+    label: "Gfx Scroll Present Latency Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.gfx_scroll_present_latency.sum ;;
     type: number
@@ -4987,7 +4987,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Scroll Present Latency Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Scroll Present Latency Sum"
+      label: "Glean Dictionary reference for Gfx Scroll Present Latency Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_scroll_present_latency"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -4997,7 +4997,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__gfx_status_compositor {
-    label: "Gfx Status Compositor"
+    label: "Gfx Status Compositor :)"
     hidden: no
     sql: ${TABLE}.metrics.string.gfx_status_compositor ;;
     type: string
@@ -5005,7 +5005,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Compositor"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Status Compositor"
+      label: "Glean Dictionary reference for Gfx Status Compositor :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_status_compositor"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5015,7 +5015,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__gfx_status_compositor_last_seen {
-    label: "Gfx Status Compositor Last Seen"
+    label: "Gfx Status Compositor Last Seen :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.gfx_status_compositor_last_seen ;;
     type: string
@@ -5023,7 +5023,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Compositor Last Seen"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Status Compositor Last Seen"
+      label: "Glean Dictionary reference for Gfx Status Compositor Last Seen :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_status_compositor_last_seen"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5033,7 +5033,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__gfx_status_framebuild_time__sum {
-    label: "Gfx Status Framebuild Time Sum"
+    label: "Gfx Status Framebuild Time Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.gfx_status_framebuild_time.sum ;;
     type: number
@@ -5041,7 +5041,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Framebuild Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Status Framebuild Time Sum"
+      label: "Glean Dictionary reference for Gfx Status Framebuild Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_status_framebuild_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5051,7 +5051,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__boolean__gfx_status_headless {
-    label: "Gfx Status Headless"
+    label: "Gfx Status Headless :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.gfx_status_headless ;;
     type: yesno
@@ -5059,7 +5059,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Headless"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Status Headless"
+      label: "Glean Dictionary reference for Gfx Status Headless :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_status_headless"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5069,7 +5069,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__string__gfx_status_last_compositor_gecko_version {
-    label: "Gfx Status Last Compositor Gecko Version"
+    label: "Gfx Status Last Compositor Gecko Version :)"
     hidden: no
     sql: ${TABLE}.metrics.string.gfx_status_last_compositor_gecko_version ;;
     type: string
@@ -5077,7 +5077,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Last Compositor Gecko Version"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Status Last Compositor Gecko Version"
+      label: "Glean Dictionary reference for Gfx Status Last Compositor Gecko Version :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_status_last_compositor_gecko_version"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5087,7 +5087,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__gfx_status_sceneswap_time__sum {
-    label: "Gfx Status Sceneswap Time Sum"
+    label: "Gfx Status Sceneswap Time Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.gfx_status_sceneswap_time.sum ;;
     type: number
@@ -5095,7 +5095,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Sceneswap Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Status Sceneswap Time Sum"
+      label: "Glean Dictionary reference for Gfx Status Sceneswap Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_status_sceneswap_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5105,7 +5105,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__gfx_webrender_framebuild_time__sum {
-    label: "Gfx Webrender Framebuild Time Sum"
+    label: "Gfx Webrender Framebuild Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.gfx_webrender_framebuild_time.sum ;;
     type: number
@@ -5113,7 +5113,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Framebuild Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Webrender Framebuild Time Sum"
+      label: "Glean Dictionary reference for Gfx Webrender Framebuild Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_webrender_framebuild_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5123,7 +5123,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__gfx_webrender_render_time__sum {
-    label: "Gfx Webrender Render Time Sum"
+    label: "Gfx Webrender Render Time Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.gfx_webrender_render_time.sum ;;
     type: number
@@ -5131,7 +5131,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Render Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Webrender Render Time Sum"
+      label: "Glean Dictionary reference for Gfx Webrender Render Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_webrender_render_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5141,7 +5141,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__gfx_webrender_scenebuild_time__sum {
-    label: "Gfx Webrender Scenebuild Time Sum"
+    label: "Gfx Webrender Scenebuild Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.gfx_webrender_scenebuild_time.sum ;;
     type: number
@@ -5149,7 +5149,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Scenebuild Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Webrender Scenebuild Time Sum"
+      label: "Glean Dictionary reference for Gfx Webrender Scenebuild Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_webrender_scenebuild_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5159,7 +5159,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__gfx_webrender_sceneswap_time__sum {
-    label: "Gfx Webrender Sceneswap Time Sum"
+    label: "Gfx Webrender Sceneswap Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.gfx_webrender_sceneswap_time.sum ;;
     type: number
@@ -5167,7 +5167,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Sceneswap Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Gfx Webrender Sceneswap Time Sum"
+      label: "Glean Dictionary reference for Gfx Webrender Sceneswap Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/gfx_webrender_sceneswap_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5177,7 +5177,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_gc_compact_time__sum {
-    label: "Javascript Gc Compact Time Sum"
+    label: "Javascript Gc Compact Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_gc_compact_time.sum ;;
     type: number
@@ -5185,7 +5185,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Compact Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Gc Compact Time Sum"
+      label: "Glean Dictionary reference for Javascript Gc Compact Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_gc_compact_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5195,7 +5195,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_gc_mark_roots_time__sum {
-    label: "Javascript Gc Mark Roots Time Sum"
+    label: "Javascript Gc Mark Roots Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_gc_mark_roots_time.sum ;;
     type: number
@@ -5203,7 +5203,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Mark Roots Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Gc Mark Roots Time Sum"
+      label: "Glean Dictionary reference for Javascript Gc Mark Roots Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_gc_mark_roots_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5213,7 +5213,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_gc_mark_time__sum {
-    label: "Javascript Gc Mark Time Sum"
+    label: "Javascript Gc Mark Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_gc_mark_time.sum ;;
     type: number
@@ -5221,7 +5221,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Mark Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Gc Mark Time Sum"
+      label: "Glean Dictionary reference for Javascript Gc Mark Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_gc_mark_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5231,7 +5231,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_gc_minor_time__sum {
-    label: "Javascript Gc Minor Time Sum"
+    label: "Javascript Gc Minor Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_gc_minor_time.sum ;;
     type: number
@@ -5239,7 +5239,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Minor Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Gc Minor Time Sum"
+      label: "Glean Dictionary reference for Javascript Gc Minor Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_gc_minor_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5249,7 +5249,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_gc_prepare_time__sum {
-    label: "Javascript Gc Prepare Time Sum"
+    label: "Javascript Gc Prepare Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_gc_prepare_time.sum ;;
     type: number
@@ -5257,7 +5257,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Prepare Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Gc Prepare Time Sum"
+      label: "Glean Dictionary reference for Javascript Gc Prepare Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_gc_prepare_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5267,7 +5267,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_gc_slice_time__sum {
-    label: "Javascript Gc Slice Time Sum"
+    label: "Javascript Gc Slice Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_gc_slice_time.sum ;;
     type: number
@@ -5275,7 +5275,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Slice Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Gc Slice Time Sum"
+      label: "Glean Dictionary reference for Javascript Gc Slice Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_gc_slice_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5285,7 +5285,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_gc_sweep_time__sum {
-    label: "Javascript Gc Sweep Time Sum"
+    label: "Javascript Gc Sweep Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_gc_sweep_time.sum ;;
     type: number
@@ -5293,7 +5293,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Sweep Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Gc Sweep Time Sum"
+      label: "Glean Dictionary reference for Javascript Gc Sweep Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_gc_sweep_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5303,7 +5303,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_gc_total_time__sum {
-    label: "Javascript Gc Total Time Sum"
+    label: "Javascript Gc Total Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_gc_total_time.sum ;;
     type: number
@@ -5311,7 +5311,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Total Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Gc Total Time Sum"
+      label: "Glean Dictionary reference for Javascript Gc Total Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_gc_total_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5321,7 +5321,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_pageload_baseline_compile_time__sum {
-    label: "Javascript Pageload Baseline Compile Time Sum"
+    label: "Javascript Pageload Baseline Compile Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_baseline_compile_time.sum ;;
     type: number
@@ -5329,7 +5329,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Baseline Compile Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Pageload Baseline Compile Time Sum"
+      label: "Glean Dictionary reference for Javascript Pageload Baseline Compile Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_pageload_baseline_compile_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5339,7 +5339,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_pageload_delazification_time__sum {
-    label: "Javascript Pageload Delazification Time Sum"
+    label: "Javascript Pageload Delazification Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_delazification_time.sum ;;
     type: number
@@ -5347,7 +5347,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Delazification Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Pageload Delazification Time Sum"
+      label: "Glean Dictionary reference for Javascript Pageload Delazification Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_pageload_delazification_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5357,7 +5357,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_pageload_execution_time__sum {
-    label: "Javascript Pageload Execution Time Sum"
+    label: "Javascript Pageload Execution Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_execution_time.sum ;;
     type: number
@@ -5365,7 +5365,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Execution Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Pageload Execution Time Sum"
+      label: "Glean Dictionary reference for Javascript Pageload Execution Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_pageload_execution_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5375,7 +5375,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_pageload_gc_time__sum {
-    label: "Javascript Pageload Gc Time Sum"
+    label: "Javascript Pageload Gc Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_gc_time.sum ;;
     type: number
@@ -5383,7 +5383,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Gc Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Pageload Gc Time Sum"
+      label: "Glean Dictionary reference for Javascript Pageload Gc Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_pageload_gc_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5393,7 +5393,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_pageload_parse_time__sum {
-    label: "Javascript Pageload Parse Time Sum"
+    label: "Javascript Pageload Parse Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_parse_time.sum ;;
     type: number
@@ -5401,7 +5401,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Parse Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Pageload Parse Time Sum"
+      label: "Glean Dictionary reference for Javascript Pageload Parse Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_pageload_parse_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5411,7 +5411,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_pageload_protect_time__sum {
-    label: "Javascript Pageload Protect Time Sum"
+    label: "Javascript Pageload Protect Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_protect_time.sum ;;
     type: number
@@ -5419,7 +5419,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Protect Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Pageload Protect Time Sum"
+      label: "Glean Dictionary reference for Javascript Pageload Protect Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_pageload_protect_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5429,7 +5429,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__javascript_pageload_xdr_encode_time__sum {
-    label: "Javascript Pageload Xdr Encode Time Sum"
+    label: "Javascript Pageload Xdr Encode Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.javascript_pageload_xdr_encode_time.sum ;;
     type: number
@@ -5437,7 +5437,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Xdr Encode Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Javascript Pageload Xdr Encode Time Sum"
+      label: "Glean Dictionary reference for Javascript Pageload Xdr Encode Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/javascript_pageload_xdr_encode_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5447,7 +5447,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__custom_distribution__js_baseline_compile_percentage__sum {
-    label: "Js Baseline Compile Percentage Sum"
+    label: "Js Baseline Compile Percentage Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.custom_distribution.js_baseline_compile_percentage.sum ;;
     type: number
@@ -5455,7 +5455,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Baseline Compile Percentage Sum"
 
     link: {
-      label: "Glean Dictionary reference for Js Baseline Compile Percentage Sum"
+      label: "Glean Dictionary reference for Js Baseline Compile Percentage Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/js_baseline_compile_percentage"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5465,7 +5465,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__js_bytecode_caching_time__sum {
-    label: "Js Bytecode Caching Time Sum"
+    label: "Js Bytecode Caching Time Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.js_bytecode_caching_time.sum ;;
     type: number
@@ -5473,7 +5473,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Bytecode Caching Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Js Bytecode Caching Time Sum"
+      label: "Glean Dictionary reference for Js Bytecode Caching Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/js_bytecode_caching_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5483,7 +5483,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__custom_distribution__js_delazification_percentage__sum {
-    label: "Js Delazification Percentage Sum"
+    label: "Js Delazification Percentage Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.custom_distribution.js_delazification_percentage.sum ;;
     type: number
@@ -5491,7 +5491,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Delazification Percentage Sum"
 
     link: {
-      label: "Glean Dictionary reference for Js Delazification Percentage Sum"
+      label: "Glean Dictionary reference for Js Delazification Percentage Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/js_delazification_percentage"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5501,7 +5501,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__custom_distribution__js_execution_percentage__sum {
-    label: "Js Execution Percentage Sum"
+    label: "Js Execution Percentage Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.custom_distribution.js_execution_percentage.sum ;;
     type: number
@@ -5509,7 +5509,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Execution Percentage Sum"
 
     link: {
-      label: "Glean Dictionary reference for Js Execution Percentage Sum"
+      label: "Glean Dictionary reference for Js Execution Percentage Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/js_execution_percentage"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5519,7 +5519,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__custom_distribution__js_xdr_encode_percentage__sum {
-    label: "Js Xdr Encode Percentage Sum"
+    label: "Js Xdr Encode Percentage Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.custom_distribution.js_xdr_encode_percentage.sum ;;
     type: number
@@ -5527,7 +5527,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Xdr Encode Percentage Sum"
 
     link: {
-      label: "Glean Dictionary reference for Js Xdr Encode Percentage Sum"
+      label: "Glean Dictionary reference for Js Xdr Encode Percentage Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/js_xdr_encode_percentage"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5537,14 +5537,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__media_audio_backend {
-    label: "Media Audio Backend"
+    label: "Media Audio Backend :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.media_audio_backend ;;
     group_label: "Media Audio"
     group_item_label: "Backend"
 
     link: {
-      label: "Glean Dictionary reference for Media Audio Backend"
+      label: "Glean Dictionary reference for Media Audio Backend :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/media_audio_backend"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5554,14 +5554,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__media_audio_init_failure {
-    label: "Media Audio Init Failure"
+    label: "Media Audio Init Failure :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.media_audio_init_failure ;;
     group_label: "Media"
     group_item_label: "Audio Init Failure"
 
     link: {
-      label: "Glean Dictionary reference for Media Audio Init Failure"
+      label: "Glean Dictionary reference for Media Audio Init Failure :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/media_audio_init_failure"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5571,7 +5571,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__network_cache_hit_time__sum {
-    label: "Network Cache Hit Time Sum"
+    label: "Network Cache Hit Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.network_cache_hit_time.sum ;;
     type: number
@@ -5579,7 +5579,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Cache Hit Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Network Cache Hit Time Sum"
+      label: "Glean Dictionary reference for Network Cache Hit Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/network_cache_hit_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5589,7 +5589,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__network_dns_end__sum {
-    label: "Network Dns End Sum"
+    label: "Network Dns End Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.network_dns_end.sum ;;
     type: number
@@ -5597,7 +5597,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Dns End Sum"
 
     link: {
-      label: "Glean Dictionary reference for Network Dns End Sum"
+      label: "Glean Dictionary reference for Network Dns End Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/network_dns_end"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5607,7 +5607,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__network_dns_start__sum {
-    label: "Network Dns Start Sum"
+    label: "Network Dns Start Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.network_dns_start.sum ;;
     type: number
@@ -5615,7 +5615,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Dns Start Sum"
 
     link: {
-      label: "Glean Dictionary reference for Network Dns Start Sum"
+      label: "Glean Dictionary reference for Network Dns Start Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/network_dns_start"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5625,7 +5625,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__network_first_from_cache__sum {
-    label: "Network First From Cache Sum"
+    label: "Network First From Cache Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.network_first_from_cache.sum ;;
     type: number
@@ -5633,7 +5633,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "First From Cache Sum"
 
     link: {
-      label: "Glean Dictionary reference for Network First From Cache Sum"
+      label: "Glean Dictionary reference for Network First From Cache Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/network_first_from_cache"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5643,7 +5643,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__network_font_download_end__sum {
-    label: "Network Font Download End Sum"
+    label: "Network Font Download End Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.network_font_download_end.sum ;;
     type: number
@@ -5651,7 +5651,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Font Download End Sum"
 
     link: {
-      label: "Glean Dictionary reference for Network Font Download End Sum"
+      label: "Glean Dictionary reference for Network Font Download End Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/network_font_download_end"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5661,7 +5661,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__network_tcp_connection__sum {
-    label: "Network Tcp Connection Sum"
+    label: "Network Tcp Connection Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.network_tcp_connection.sum ;;
     type: number
@@ -5669,7 +5669,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Tcp Connection Sum"
 
     link: {
-      label: "Glean Dictionary reference for Network Tcp Connection Sum"
+      label: "Glean Dictionary reference for Network Tcp Connection Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/network_tcp_connection"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5679,7 +5679,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__network_tls_handshake__sum {
-    label: "Network Tls Handshake Sum"
+    label: "Network Tls Handshake Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.network_tls_handshake.sum ;;
     type: number
@@ -5687,7 +5687,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Tls Handshake Sum"
 
     link: {
-      label: "Glean Dictionary reference for Network Tls Handshake Sum"
+      label: "Glean Dictionary reference for Network Tls Handshake Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/network_tls_handshake"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5697,7 +5697,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__custom_distribution__performance_clone_deserialize_items__sum {
-    label: "Performance Clone Deserialize Items Sum"
+    label: "Performance Clone Deserialize Items Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.performance_clone_deserialize_items.sum ;;
     type: number
@@ -5705,7 +5705,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Items Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Clone Deserialize Items Sum"
+      label: "Glean Dictionary reference for Performance Clone Deserialize Items Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_clone_deserialize_items"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5715,7 +5715,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__memory_distribution__performance_clone_deserialize_size__sum {
-    label: "Performance Clone Deserialize Size Sum"
+    label: "Performance Clone Deserialize Size Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.performance_clone_deserialize_size.sum ;;
     type: number
@@ -5723,7 +5723,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Size Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Clone Deserialize Size Sum"
+      label: "Glean Dictionary reference for Performance Clone Deserialize Size Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_clone_deserialize_size"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5733,7 +5733,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_clone_deserialize_time__sum {
-    label: "Performance Clone Deserialize Time Sum"
+    label: "Performance Clone Deserialize Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_clone_deserialize_time.sum ;;
     type: number
@@ -5741,7 +5741,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Clone Deserialize Time Sum"
+      label: "Glean Dictionary reference for Performance Clone Deserialize Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_clone_deserialize_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5751,7 +5751,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_interaction_keypress_present_latency__sum {
-    label: "Performance Interaction Keypress Present Latency Sum"
+    label: "Performance Interaction Keypress Present Latency Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_interaction_keypress_present_latency.sum ;;
     type: number
@@ -5759,7 +5759,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Keypress Present Latency Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Interaction Keypress Present Latency Sum"
+      label: "Glean Dictionary reference for Performance Interaction Keypress Present Latency Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_interaction_keypress_present_latency"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5769,7 +5769,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_interaction_mouseup_click_present_latency__sum {
-    label: "Performance Interaction Mouseup Click Present Latency Sum"
+    label: "Performance Interaction Mouseup Click Present Latency Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_interaction_mouseup_click_present_latency.sum ;;
     type: number
@@ -5777,7 +5777,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Mouseup Click Present Latency Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Interaction Mouseup Click Present Latency Sum"
+      label: "Glean Dictionary reference for Performance Interaction Mouseup Click Present Latency Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_interaction_mouseup_click_present_latency"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5787,7 +5787,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_interaction_tab_switch_composite__sum {
-    label: "Performance Interaction Tab Switch Composite Sum"
+    label: "Performance Interaction Tab Switch Composite Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_interaction_tab_switch_composite.sum ;;
     type: number
@@ -5795,7 +5795,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Tab Switch Composite Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Interaction Tab Switch Composite Sum"
+      label: "Glean Dictionary reference for Performance Interaction Tab Switch Composite Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_interaction_tab_switch_composite"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5805,7 +5805,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_page_non_blank_paint__sum {
-    label: "Performance Page Non Blank Paint Sum"
+    label: "Performance Page Non Blank Paint Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_page_non_blank_paint.sum ;;
     type: number
@@ -5813,7 +5813,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Non Blank Paint Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Page Non Blank Paint Sum"
+      label: "Glean Dictionary reference for Performance Page Non Blank Paint Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_page_non_blank_paint"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5823,7 +5823,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_page_total_content_page_load__sum {
-    label: "Performance Page Total Content Page Load Sum"
+    label: "Performance Page Total Content Page Load Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_page_total_content_page_load.sum ;;
     type: number
@@ -5831,7 +5831,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Total Content Page Load Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Page Total Content Page Load Sum"
+      label: "Glean Dictionary reference for Performance Page Total Content Page Load Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_page_total_content_page_load"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5841,7 +5841,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_pageload_dcl__sum {
-    label: "Performance Pageload Dcl Sum"
+    label: "Performance Pageload Dcl Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_pageload_dcl.sum ;;
     type: number
@@ -5849,7 +5849,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Dcl Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Pageload Dcl Sum"
+      label: "Glean Dictionary reference for Performance Pageload Dcl Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_pageload_dcl"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5859,7 +5859,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_pageload_dcl_responsestart__sum {
-    label: "Performance Pageload Dcl Responsestart Sum"
+    label: "Performance Pageload Dcl Responsestart Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_pageload_dcl_responsestart.sum ;;
     type: number
@@ -5867,7 +5867,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Dcl Responsestart Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Pageload Dcl Responsestart Sum"
+      label: "Glean Dictionary reference for Performance Pageload Dcl Responsestart Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_pageload_dcl_responsestart"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5877,7 +5877,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_pageload_fcp__sum {
-    label: "Performance Pageload Fcp Sum"
+    label: "Performance Pageload Fcp Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_pageload_fcp.sum ;;
     type: number
@@ -5885,7 +5885,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Fcp Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Pageload Fcp Sum"
+      label: "Glean Dictionary reference for Performance Pageload Fcp Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_pageload_fcp"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5895,7 +5895,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_pageload_fcp_responsestart__sum {
-    label: "Performance Pageload Fcp Responsestart Sum"
+    label: "Performance Pageload Fcp Responsestart Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_pageload_fcp_responsestart.sum ;;
     type: number
@@ -5903,7 +5903,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Fcp Responsestart Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Pageload Fcp Responsestart Sum"
+      label: "Glean Dictionary reference for Performance Pageload Fcp Responsestart Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_pageload_fcp_responsestart"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5913,7 +5913,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_pageload_load_time__sum {
-    label: "Performance Pageload Load Time Sum"
+    label: "Performance Pageload Load Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_pageload_load_time.sum ;;
     type: number
@@ -5921,7 +5921,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Load Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Pageload Load Time Sum"
+      label: "Glean Dictionary reference for Performance Pageload Load Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_pageload_load_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5931,7 +5931,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_pageload_load_time_responsestart__sum {
-    label: "Performance Pageload Load Time Responsestart Sum"
+    label: "Performance Pageload Load Time Responsestart Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_pageload_load_time_responsestart.sum ;;
     type: number
@@ -5939,7 +5939,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Load Time Responsestart Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Pageload Load Time Responsestart Sum"
+      label: "Glean Dictionary reference for Performance Pageload Load Time Responsestart Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_pageload_load_time_responsestart"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5949,7 +5949,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_pageload_req_anim_frame_callback__sum {
-    label: "Performance Pageload Req Anim Frame Callback Sum"
+    label: "Performance Pageload Req Anim Frame Callback Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_pageload_req_anim_frame_callback.sum ;;
     type: number
@@ -5957,7 +5957,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Req Anim Frame Callback Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Pageload Req Anim Frame Callback Sum"
+      label: "Glean Dictionary reference for Performance Pageload Req Anim Frame Callback Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_pageload_req_anim_frame_callback"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5967,7 +5967,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_responsiveness_req_anim_frame_callback__sum {
-    label: "Performance Responsiveness Req Anim Frame Callback Sum"
+    label: "Performance Responsiveness Req Anim Frame Callback Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_responsiveness_req_anim_frame_callback.sum ;;
     type: number
@@ -5975,7 +5975,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Req Anim Frame Callback Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Responsiveness Req Anim Frame Callback Sum"
+      label: "Glean Dictionary reference for Performance Responsiveness Req Anim Frame Callback Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_responsiveness_req_anim_frame_callback"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -5985,7 +5985,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_time_dom_complete__sum {
-    label: "Performance Time Dom Complete Sum"
+    label: "Performance Time Dom Complete Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_time_dom_complete.sum ;;
     type: number
@@ -5993,7 +5993,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Dom Complete Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Time Dom Complete Sum"
+      label: "Glean Dictionary reference for Performance Time Dom Complete Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_time_dom_complete"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6003,7 +6003,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_time_dom_content_loaded_end__sum {
-    label: "Performance Time Dom Content Loaded End Sum"
+    label: "Performance Time Dom Content Loaded End Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_time_dom_content_loaded_end.sum ;;
     type: number
@@ -6011,7 +6011,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Dom Content Loaded End Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Time Dom Content Loaded End Sum"
+      label: "Glean Dictionary reference for Performance Time Dom Content Loaded End Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_time_dom_content_loaded_end"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6021,7 +6021,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_time_dom_content_loaded_start__sum {
-    label: "Performance Time Dom Content Loaded Start Sum"
+    label: "Performance Time Dom Content Loaded Start Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_time_dom_content_loaded_start.sum ;;
     type: number
@@ -6029,7 +6029,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Dom Content Loaded Start Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Time Dom Content Loaded Start Sum"
+      label: "Glean Dictionary reference for Performance Time Dom Content Loaded Start Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_time_dom_content_loaded_start"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6039,7 +6039,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_time_dom_interactive__sum {
-    label: "Performance Time Dom Interactive Sum"
+    label: "Performance Time Dom Interactive Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_time_dom_interactive.sum ;;
     type: number
@@ -6047,7 +6047,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Dom Interactive Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Time Dom Interactive Sum"
+      label: "Glean Dictionary reference for Performance Time Dom Interactive Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_time_dom_interactive"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6057,7 +6057,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_time_load_event_end__sum {
-    label: "Performance Time Load Event End Sum"
+    label: "Performance Time Load Event End Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_time_load_event_end.sum ;;
     type: number
@@ -6065,7 +6065,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Load Event End Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Time Load Event End Sum"
+      label: "Glean Dictionary reference for Performance Time Load Event End Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_time_load_event_end"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6075,7 +6075,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_time_load_event_end_no_preload__sum {
-    label: "Performance Time Load Event End No Preload Sum"
+    label: "Performance Time Load Event End No Preload Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.performance_time_load_event_end_no_preload.sum ;;
     type: number
@@ -6083,7 +6083,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Load Event End No Preload Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Time Load Event End No Preload Sum"
+      label: "Glean Dictionary reference for Performance Time Load Event End No Preload Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_time_load_event_end_no_preload"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6093,7 +6093,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_time_load_event_end_preload__sum {
-    label: "Performance Time Load Event End Preload Sum"
+    label: "Performance Time Load Event End Preload Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.performance_time_load_event_end_preload.sum ;;
     type: number
@@ -6101,7 +6101,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Load Event End Preload Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Time Load Event End Preload Sum"
+      label: "Glean Dictionary reference for Performance Time Load Event End Preload Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_time_load_event_end_preload"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6111,7 +6111,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_time_load_event_start__sum {
-    label: "Performance Time Load Event Start Sum"
+    label: "Performance Time Load Event Start Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_time_load_event_start.sum ;;
     type: number
@@ -6119,7 +6119,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Load Event Start Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Time Load Event Start Sum"
+      label: "Glean Dictionary reference for Performance Time Load Event Start Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_time_load_event_start"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6129,7 +6129,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_time_load_event_start_no_preload__sum {
-    label: "Performance Time Load Event Start No Preload Sum"
+    label: "Performance Time Load Event Start No Preload Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.performance_time_load_event_start_no_preload.sum ;;
     type: number
@@ -6137,7 +6137,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Load Event Start No Preload Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Time Load Event Start No Preload Sum"
+      label: "Glean Dictionary reference for Performance Time Load Event Start No Preload Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_time_load_event_start_no_preload"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6147,7 +6147,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_time_load_event_start_preload__sum {
-    label: "Performance Time Load Event Start Preload Sum"
+    label: "Performance Time Load Event Start Preload Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.performance_time_load_event_start_preload.sum ;;
     type: number
@@ -6155,7 +6155,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Load Event Start Preload Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Time Load Event Start Preload Sum"
+      label: "Glean Dictionary reference for Performance Time Load Event Start Preload Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_time_load_event_start_preload"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6165,7 +6165,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__performance_time_response_start__sum {
-    label: "Performance Time Response Start Sum"
+    label: "Performance Time Response Start Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.performance_time_response_start.sum ;;
     type: number
@@ -6173,7 +6173,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Response Start Sum"
 
     link: {
-      label: "Glean Dictionary reference for Performance Time Response Start Sum"
+      label: "Glean Dictionary reference for Performance Time Response Start Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/performance_time_response_start"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6183,14 +6183,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__crash_metrics_crash_count {
-    label: "Crash Metrics Crash Count"
+    label: "Crash Metrics Crash Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.crash_metrics_crash_count ;;
     group_label: "Crash Metrics"
     group_item_label: "Crash Count"
 
     link: {
-      label: "Glean Dictionary reference for Crash Metrics Crash Count"
+      label: "Glean Dictionary reference for Crash Metrics Crash Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/crash_metrics_crash_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6201,7 +6201,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
   }
 
   dimension: metrics__counter__places_manager_read_query_count {
-    label: "Places Manager Read Query Count"
+    label: "Places Manager Read Query Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.places_manager_read_query_count ;;
     type: number
@@ -6209,7 +6209,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
     group_item_label: "Read Query Count"
 
     link: {
-      label: "Glean Dictionary reference for Places Manager Read Query Count"
+      label: "Glean Dictionary reference for Places Manager Read Query Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/places_manager_read_query_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6219,14 +6219,14 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
   }
 
   dimension: metrics__labeled_counter__places_manager_read_query_error_count {
-    label: "Places Manager Read Query Error Count"
+    label: "Places Manager Read Query Error Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.places_manager_read_query_error_count ;;
     group_label: "Places Manager"
     group_item_label: "Read Query Error Count"
 
     link: {
-      label: "Glean Dictionary reference for Places Manager Read Query Error Count"
+      label: "Glean Dictionary reference for Places Manager Read Query Error Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/places_manager_read_query_error_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6236,7 +6236,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
   }
 
   dimension: metrics__timing_distribution__places_manager_read_query_time__sum {
-    label: "Places Manager Read Query Time Sum"
+    label: "Places Manager Read Query Time Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.places_manager_read_query_time.sum ;;
     type: number
@@ -6244,7 +6244,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
     group_item_label: "Read Query Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Places Manager Read Query Time Sum"
+      label: "Glean Dictionary reference for Places Manager Read Query Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/places_manager_read_query_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6254,7 +6254,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
   }
 
   dimension: metrics__timing_distribution__places_manager_scan_query_time__sum {
-    label: "Places Manager Scan Query Time Sum"
+    label: "Places Manager Scan Query Time Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.places_manager_scan_query_time.sum ;;
     type: number
@@ -6262,7 +6262,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
     group_item_label: "Scan Query Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Places Manager Scan Query Time Sum"
+      label: "Glean Dictionary reference for Places Manager Scan Query Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/places_manager_scan_query_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6272,7 +6272,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
   }
 
   dimension: metrics__counter__places_manager_write_query_count {
-    label: "Places Manager Write Query Count"
+    label: "Places Manager Write Query Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.places_manager_write_query_count ;;
     type: number
@@ -6280,7 +6280,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
     group_item_label: "Write Query Count"
 
     link: {
-      label: "Glean Dictionary reference for Places Manager Write Query Count"
+      label: "Glean Dictionary reference for Places Manager Write Query Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/places_manager_write_query_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6290,14 +6290,14 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
   }
 
   dimension: metrics__labeled_counter__places_manager_write_query_error_count {
-    label: "Places Manager Write Query Error Count"
+    label: "Places Manager Write Query Error Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.places_manager_write_query_error_count ;;
     group_label: "Places Manager"
     group_item_label: "Write Query Error Count"
 
     link: {
-      label: "Glean Dictionary reference for Places Manager Write Query Error Count"
+      label: "Glean Dictionary reference for Places Manager Write Query Error Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/places_manager_write_query_error_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6307,7 +6307,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
   }
 
   dimension: metrics__timing_distribution__places_manager_write_query_time__sum {
-    label: "Places Manager Write Query Time Sum"
+    label: "Places Manager Write Query Time Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.places_manager_write_query_time.sum ;;
     type: number
@@ -6315,7 +6315,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
     group_item_label: "Write Query Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Places Manager Write Query Time Sum"
+      label: "Glean Dictionary reference for Places Manager Write Query Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/places_manager_write_query_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6325,7 +6325,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
   }
 
   dimension: metrics__boolean__glean_core_migration_successful {
-    label: "Glean Core Migration Successful"
+    label: "Glean Core Migration Successful :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.glean_core_migration_successful ;;
     type: yesno
@@ -6333,7 +6333,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
     group_item_label: "Successful"
 
     link: {
-      label: "Glean Dictionary reference for Glean Core Migration Successful"
+      label: "Glean Dictionary reference for Glean Core Migration Successful :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_core_migration_successful"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6342,7 +6342,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
   }
 
   dimension: metrics__counter__glean_validation_app_forceclosed_count {
-    label: "Glean Validation App Forceclosed Count"
+    label: "Glean Validation App Forceclosed Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.glean_validation_app_forceclosed_count ;;
     type: number
@@ -6350,7 +6350,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
     group_item_label: "App Forceclosed Count"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation App Forceclosed Count"
+      label: "Glean Dictionary reference for Glean Validation App Forceclosed Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_validation_app_forceclosed_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -6359,7 +6359,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
   }
 
   dimension: metrics__counter__glean_validation_baseline_ping_count {
-    label: "Glean Validation Baseline Ping Count"
+    label: "Glean Validation Baseline Ping Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.glean_validation_baseline_ping_count ;;
     type: number
@@ -6367,7 +6367,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
     group_item_label: "Baseline Ping Count"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation Baseline Ping Count"
+      label: "Glean Dictionary reference for Glean Validation Baseline Ping Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_validation_baseline_ping_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

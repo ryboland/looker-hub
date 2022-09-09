@@ -6,7 +6,7 @@
 
 view: newtab {
   dimension: metrics__uuid__legacy_telemetry_client_id {
-    label: "Legacy Telemetry Client Id"
+    label: "Legacy Telemetry Client Id :)"
     hidden: no
     sql: ${TABLE}.metrics.uuid.legacy_telemetry_client_id ;;
     type: string
@@ -14,7 +14,7 @@ view: newtab {
     group_item_label: "Client Id"
 
     link: {
-      label: "Glean Dictionary reference for Legacy Telemetry Client Id"
+      label: "Glean Dictionary reference for Legacy Telemetry Client Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/legacy_telemetry_client_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -30,8 +30,26 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
 "
   }
 
+  dimension: metrics__string__newtab_homepage_category {
+    label: "Newtab Homepage Category :)"
+    hidden: no
+    sql: ${TABLE}.metrics.string.newtab_homepage_category ;;
+    type: string
+    group_label: "Newtab"
+    group_item_label: "Homepage Category"
+
+    link: {
+      label: "Glean Dictionary reference for Newtab Homepage Category :)"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/newtab_homepage_category"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The current setting of the home page. One of [\"enabled\", \"disabled\", \"extension\"] or any value from SiteClassifier like \"known-hijacker\" or \"social-media\". Similar to Activity Stream's PAGE_TAKEOVER_DATA event's `home_url_category`. Sampled once after newtab init.
+"
+  }
+
   dimension: metrics__string__newtab_locale {
-    label: "Newtab Locale"
+    label: "Newtab Locale :)"
     hidden: no
     sql: ${TABLE}.metrics.string.newtab_locale ;;
     type: string
@@ -39,7 +57,7 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
     group_item_label: "Locale"
 
     link: {
-      label: "Glean Dictionary reference for Newtab Locale"
+      label: "Glean Dictionary reference for Newtab Locale :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/newtab_locale"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -48,8 +66,98 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
 "
   }
 
+  dimension: metrics__string__newtab_newtab_category {
+    label: "Newtab Newtab Category :)"
+    hidden: no
+    sql: ${TABLE}.metrics.string.newtab_newtab_category ;;
+    type: string
+    group_label: "Newtab"
+    group_item_label: "Newtab Category"
+
+    link: {
+      label: "Glean Dictionary reference for Newtab Newtab Category :)"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/newtab_newtab_category"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The current setting of the newtab page. One of [\"enabled\", \"disabled\", \"extension\"] or any value from SiteClassifier like \"known-hijacker\" or \"social-media\". Similar to Activity Stream's PAGE_TAKEOVER_DATA event's `newtab_url_category`. Sampled once after newtab init.
+"
+  }
+
+  dimension: metrics__boolean__newtab_search_enabled {
+    label: "Newtab Search Enabled :)"
+    hidden: no
+    sql: ${TABLE}.metrics.boolean.newtab_search_enabled ;;
+    type: yesno
+    group_label: "Newtab Search"
+    group_item_label: "Enabled"
+
+    link: {
+      label: "Glean Dictionary reference for Newtab Search Enabled :)"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/newtab_search_enabled"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Whether the search input is enabled on the newtab. Corresponds to the value of the `browser.newtabpage.activity-stream.showSearch` pref.
+"
+  }
+
+  dimension: metrics__boolean__pocket_enabled {
+    label: "Pocket Enabled :)"
+    hidden: no
+    sql: ${TABLE}.metrics.boolean.pocket_enabled ;;
+    type: yesno
+    group_label: "Pocket"
+    group_item_label: "Enabled"
+
+    link: {
+      label: "Glean Dictionary reference for Pocket Enabled :)"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/pocket_enabled"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Whether Pocket is enabled on the newtab. AKA the \"Recommended by Pocket\" section. Corresponds to the value of the `browser.newtabpage.activity-stream.feeds.section.topstories` pref.
+"
+  }
+
+  dimension: metrics__boolean__pocket_is_signed_in {
+    label: "Pocket Is Signed In :)"
+    hidden: no
+    sql: ${TABLE}.metrics.boolean.pocket_is_signed_in ;;
+    type: yesno
+    group_label: "Pocket"
+    group_item_label: "Is Signed In"
+
+    link: {
+      label: "Glean Dictionary reference for Pocket Is Signed In :)"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/pocket_is_signed_in"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Whether the Firefox user is signed in to Pocket. Does not correspond to a pref, so its value is resampled at newtab's component init and whenever there is a Discovery Stream user event.
+"
+  }
+
+  dimension: metrics__boolean__pocket_sponsored_stories_enabled {
+    label: "Pocket Sponsored Stories Enabled :)"
+    hidden: no
+    sql: ${TABLE}.metrics.boolean.pocket_sponsored_stories_enabled ;;
+    type: yesno
+    group_label: "Pocket"
+    group_item_label: "Sponsored Stories Enabled"
+
+    link: {
+      label: "Glean Dictionary reference for Pocket Sponsored Stories Enabled :)"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/pocket_sponsored_stories_enabled"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Whether Pocket sponsored stories are enabled on the newtab. Corresponds to the value of the `browser.newtabpage.activity-stream.showSponsored` pref. Can be `true` even if pocket.enabled is `false`.
+"
+  }
+
   dimension: metrics__string__search_engine_default_engine_id {
-    label: "Search Engine Default Engine Id"
+    label: "Search Engine Default Engine Id :)"
     hidden: no
     sql: ${TABLE}.metrics.string.search_engine_default_engine_id ;;
     type: string
@@ -57,7 +165,7 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
     group_item_label: "Engine Id"
 
     link: {
-      label: "Glean Dictionary reference for Search Engine Default Engine Id"
+      label: "Glean Dictionary reference for Search Engine Default Engine Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/search_engine_default_engine_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -70,7 +178,7 @@ For other engines, this is `other-<extensionName>`.
   }
 
   dimension: metrics__string__search_engine_private_engine_id {
-    label: "Search Engine Private Engine Id"
+    label: "Search Engine Private Engine Id :)"
     hidden: no
     sql: ${TABLE}.metrics.string.search_engine_private_engine_id ;;
     type: string
@@ -78,7 +186,7 @@ For other engines, this is `other-<extensionName>`.
     group_item_label: "Engine Id"
 
     link: {
-      label: "Glean Dictionary reference for Search Engine Private Engine Id"
+      label: "Glean Dictionary reference for Search Engine Private Engine Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/search_engine_private_engine_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -95,15 +203,51 @@ default engine, and hence both versions of these fields will be filled in.
 "
   }
 
+  dimension: metrics__boolean__topsites_enabled {
+    label: "Topsites Enabled :)"
+    hidden: no
+    sql: ${TABLE}.metrics.boolean.topsites_enabled ;;
+    type: yesno
+    group_label: "Topsites"
+    group_item_label: "Enabled"
+
+    link: {
+      label: "Glean Dictionary reference for Topsites Enabled :)"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/topsites_enabled"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Whether \"topsites\" is enabled on the newtab. AKA the \"Shortcuts\" section. Corresponds to the value of the `browser.newtabpage.activity-stream.feeds.topsites` pref.
+"
+  }
+
+  dimension: metrics__boolean__topsites_sponsored_enabled {
+    label: "Topsites Sponsored Enabled :)"
+    hidden: no
+    sql: ${TABLE}.metrics.boolean.topsites_sponsored_enabled ;;
+    type: yesno
+    group_label: "Topsites"
+    group_item_label: "Sponsored Enabled"
+
+    link: {
+      label: "Glean Dictionary reference for Topsites Sponsored Enabled :)"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/topsites_sponsored_enabled"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Whether sponsored topsites are enabled on the newtab. AKA the \"Sponsored Shortcuts\" section. Corresponds to the value of the `browser.newtabpage.activity-stream.showSponsoredTopSites` pref. Can be `true` even if topsites.enabled is `false`.
+"
+  }
+
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -114,14 +258,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -132,14 +276,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -150,14 +294,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -170,7 +314,6 @@ The labels are the `category.name` identifier of the metric.
   dimension: additional_properties {
     sql: ${TABLE}.additional_properties ;;
     hidden: yes
-    description: "A JSON string containing any payload properties not present in the schema"
   }
 
   dimension: client_info__android_sdk_version {
@@ -178,7 +321,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Client Info"
     group_item_label: "Android Sdk Version"
-    description: "The optional Android specific SDK version of the software running on this hardware device."
   }
 
   dimension: client_info__app_build {
@@ -186,7 +328,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Client Info"
     group_item_label: "App Build"
-    description: "The build identifier generated by the CI system (e.g. \"1234/A\"). For language bindings that provide automatic detection for this value, (e.g. Android/Kotlin), in the unlikely event that the build identifier can not be retrieved from the OS, it is set to \"inaccessible\". For other language bindings, if the value was not provided through configuration, this metric gets set to `Unknown`."
   }
 
   dimension: client_info__app_channel {
@@ -194,7 +335,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Client Info"
     group_item_label: "App Channel"
-    description: "The channel the application is being distributed on."
   }
 
   dimension: client_info__app_display_version {
@@ -202,7 +342,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Client Info"
     group_item_label: "App Display Version"
-    description: "The user visible version string (e.g. \"1.0.3\").  In the unlikely event that the display version can not be retrieved, it is set to \"inaccessible\"."
   }
 
   dimension: client_info__architecture {
@@ -210,7 +349,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Client Info"
     group_item_label: "Architecture"
-    description: "The architecture of the device, (e.g. \"arm\", \"x86\")."
   }
 
   dimension: client_info__build_date {
@@ -218,13 +356,11 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Client Info"
     group_item_label: "Build Date"
-    description: "The date & time the application was built"
   }
 
   dimension: client_info__client_id {
     sql: ${TABLE}.client_info.client_id ;;
     hidden: yes
-    description: "A UUID uniquely identifying the client."
   }
 
   dimension: client_info__device_manufacturer {
@@ -232,7 +368,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Client Info"
     group_item_label: "Device Manufacturer"
-    description: "The manufacturer of the device the application is running on. Not set if the device manufacturer can't be determined (e.g. on Desktop)."
   }
 
   dimension: client_info__device_model {
@@ -240,7 +375,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Client Info"
     group_item_label: "Device Model"
-    description: "The model of the device the application is running on. On Android, this is Build.MODEL, the user-visible marketing name, like \"Pixel 2 XL\". Not set if the device model can't be determined (e.g. on Desktop)."
   }
 
   dimension: client_info__first_run_date {
@@ -248,7 +382,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Client Info"
     group_item_label: "First Run Date"
-    description: "The date of the first run of the application."
   }
 
   dimension: client_info__locale {
@@ -256,7 +389,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Client Info"
     group_item_label: "Locale"
-    description: "The locale of the application during initialization (e.g. \"es-ES\"). If the locale can't be determined on the system, the value is [\"und\"](https://unicode.org/reports/tr35/#Unknown_or_Invalid_Identifiers), to indicate \"undetermined\"."
   }
 
   dimension: client_info__os {
@@ -264,7 +396,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Client Info"
     group_item_label: "Os"
-    description: "The name of the operating system. Possible values: Android, iOS, Linux, Darwin, Windows, FreeBSD, NetBSD, OpenBSD, Solaris, unknown"
   }
 
   dimension: client_info__os_version {
@@ -272,7 +403,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Client Info"
     group_item_label: "Os Version"
-    description: "The user-visible version of the operating system (e.g. \"1.2.3\"). If the version detection fails, this metric gets set to `Unknown`."
   }
 
   dimension: client_info__telemetry_sdk_build {
@@ -280,13 +410,11 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Client Info"
     group_item_label: "Telemetry Sdk Build"
-    description: "The version of the Glean SDK"
   }
 
   dimension: document_id {
     sql: ${TABLE}.document_id ;;
     hidden: yes
-    description: "The document ID specified in the URI when the client sent this message"
     primary_key: yes
   }
 
@@ -308,7 +436,6 @@ The labels are the `category.name` identifier of the metric.
     group_label: "Metadata Geo"
     group_item_label: "Country"
     map_layer_name: countries
-    description: "An ISO 3166-1 alpha-2 country code"
   }
 
   dimension: metadata__geo__db_version {
@@ -316,7 +443,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Metadata Geo"
     group_item_label: "Db Version"
-    description: "The specific geo database version used for this lookup"
   }
 
   dimension: metadata__geo__subdivision1 {
@@ -324,7 +450,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Metadata Geo"
     group_item_label: "Subdivision1"
-    description: "First major country subdivision, typically a state, province, or county"
   }
 
   dimension: metadata__geo__subdivision2 {
@@ -332,7 +457,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Metadata Geo"
     group_item_label: "Subdivision2"
-    description: "Second major country subdivision; not applicable for most countries"
   }
 
   dimension: metadata__header__date {
@@ -340,7 +464,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Metadata Header"
     group_item_label: "Date"
-    description: "Date HTTP header"
   }
 
   dimension: metadata__header__dnt {
@@ -348,7 +471,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Metadata Header"
     group_item_label: "Dnt"
-    description: "DNT (Do Not Track) HTTP header"
   }
 
   dimension: metadata__header__parsed_x_lb_tags__tls_cipher_hex {
@@ -375,7 +497,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Metadata Header"
     group_item_label: "X Debug Id"
-    description: "X-Debug-Id HTTP header"
   }
 
   dimension: metadata__header__x_foxsec_ip_reputation {
@@ -383,7 +504,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Metadata Header"
     group_item_label: "X Foxsec Ip Reputation"
-    description: "X-Foxsec-IP-Reputation header"
   }
 
   dimension: metadata__header__x_lb_tags {
@@ -391,7 +511,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Metadata Header"
     group_item_label: "X Lb Tags"
-    description: "X-LB-Tags HTTP header"
   }
 
   dimension: metadata__header__x_pingsender_version {
@@ -399,7 +518,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Metadata Header"
     group_item_label: "X Pingsender Version"
-    description: "X-PingSender-Version HTTP header"
   }
 
   dimension: metadata__header__x_source_tags {
@@ -407,7 +525,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Metadata Header"
     group_item_label: "X Source Tags"
-    description: "X-Source-Tags HTTP header"
   }
 
   dimension: metadata__header__x_telemetry_agent {
@@ -415,7 +532,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Metadata Header"
     group_item_label: "X Telemetry Agent"
-    description: "X-Telemetry-Agent HTTP header"
   }
 
   dimension: metadata__isp__db_version {
@@ -423,7 +539,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Metadata Isp"
     group_item_label: "Db Version"
-    description: "The specific geo ISP database version used for this lookup"
   }
 
   dimension: metadata__isp__name {
@@ -431,7 +546,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Metadata Isp"
     group_item_label: "Name"
-    description: "The name of the ISP associated with the client's IP address"
   }
 
   dimension: metadata__isp__organization {
@@ -439,7 +553,6 @@ The labels are the `category.name` identifier of the metric.
     type: string
     group_label: "Metadata Isp"
     group_item_label: "Organization"
-    description: "The name of a specific business entity associated with the client's IP address when available; otherwise the ISP name"
   }
 
   dimension: metadata__user_agent__browser {
@@ -466,25 +579,21 @@ The labels are the `category.name` identifier of the metric.
   dimension: normalized_app_name {
     sql: ${TABLE}.normalized_app_name ;;
     type: string
-    description: "Set to \"Other\" if this message contained an unrecognized app name"
   }
 
   dimension: normalized_channel {
     sql: ${TABLE}.normalized_channel ;;
     type: string
-    description: "Set to \"Other\" if this message contained an unrecognized channel name"
   }
 
   dimension: normalized_country_code {
     sql: ${TABLE}.normalized_country_code ;;
     type: string
-    description: "An ISO 3166-1 alpha-2 country code"
   }
 
   dimension: normalized_os {
     sql: ${TABLE}.normalized_os ;;
     type: string
-    description: "Set to \"Other\" if this message contained an unrecognized OS name"
   }
 
   dimension: normalized_os_version {
@@ -535,7 +644,6 @@ The labels are the `category.name` identifier of the metric.
   dimension: sample_id {
     sql: ${TABLE}.sample_id ;;
     type: number
-    description: "Hashed version of client_id (if present) useful for partitioning; ranges from 0 to 99"
   }
 
   dimension_group: metadata__header__parsed {
@@ -595,7 +703,6 @@ The labels are the `category.name` identifier of the metric.
       quarter,
       year,
     ]
-    description: "Time when the ingestion edge server accepted this message"
   }
 
   measure: clients {

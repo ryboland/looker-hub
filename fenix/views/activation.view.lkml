@@ -6,7 +6,7 @@
 
 view: activation {
   dimension: metrics__uuid__activation_activation_id {
-    label: "Activation Activation Id"
+    label: "Activation Activation Id :)"
     hidden: no
     sql: ${TABLE}.metrics.uuid.activation_activation_id ;;
     type: string
@@ -14,7 +14,7 @@ view: activation {
     group_item_label: "Activation Id"
 
     link: {
-      label: "Glean Dictionary reference for Activation Activation Id"
+      label: "Glean Dictionary reference for Activation Activation Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/activation_activation_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -25,7 +25,7 @@ and only sent with the activation ping.
   }
 
   dimension: metrics__string__activation_identifier {
-    label: "Activation Identifier"
+    label: "Activation Identifier :)"
     hidden: no
     sql: ${TABLE}.metrics.string.activation_identifier ;;
     type: string
@@ -33,7 +33,7 @@ and only sent with the activation ping.
     group_item_label: "Identifier"
 
     link: {
-      label: "Glean Dictionary reference for Activation Identifier"
+      label: "Glean Dictionary reference for Activation Identifier :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/activation_identifier"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -44,14 +44,14 @@ This will never be sent in a ping that also contains the client_id.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -62,14 +62,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -80,14 +80,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -98,14 +98,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

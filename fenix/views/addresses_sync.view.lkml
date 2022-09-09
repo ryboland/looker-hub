@@ -6,14 +6,14 @@
 
 view: addresses_sync {
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -24,14 +24,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -42,14 +42,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -60,14 +60,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -78,7 +78,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__datetime__addresses_sync_finished_at {
-    label: "Addresses Sync Finished At"
+    label: "Addresses Sync Finished At :)"
     hidden: no
     sql: ${TABLE}.metrics.datetime.addresses_sync_finished_at ;;
     type: string
@@ -86,7 +86,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Finished At"
 
     link: {
-      label: "Glean Dictionary reference for Addresses Sync Finished At"
+      label: "Glean Dictionary reference for Addresses Sync Finished At :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/addresses_sync_finished_at"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -96,14 +96,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__addresses_sync_incoming {
-    label: "Addresses Sync Incoming"
+    label: "Addresses Sync Incoming :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.addresses_sync_incoming ;;
     group_label: "Addresses Sync"
     group_item_label: "Incoming"
 
     link: {
-      label: "Glean Dictionary reference for Addresses Sync Incoming"
+      label: "Glean Dictionary reference for Addresses Sync Incoming :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/addresses_sync_incoming"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -113,14 +113,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__addresses_sync_outgoing {
-    label: "Addresses Sync Outgoing"
+    label: "Addresses Sync Outgoing :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.addresses_sync_outgoing ;;
     group_label: "Addresses Sync"
     group_item_label: "Outgoing"
 
     link: {
-      label: "Glean Dictionary reference for Addresses Sync Outgoing"
+      label: "Glean Dictionary reference for Addresses Sync Outgoing :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/addresses_sync_outgoing"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -130,7 +130,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__addresses_sync_outgoing_batches {
-    label: "Addresses Sync Outgoing Batches"
+    label: "Addresses Sync Outgoing Batches :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.addresses_sync_outgoing_batches ;;
     type: number
@@ -138,7 +138,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Outgoing Batches"
 
     link: {
-      label: "Glean Dictionary reference for Addresses Sync Outgoing Batches"
+      label: "Glean Dictionary reference for Addresses Sync Outgoing Batches :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/addresses_sync_outgoing_batches"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -148,7 +148,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__datetime__addresses_sync_started_at {
-    label: "Addresses Sync Started At"
+    label: "Addresses Sync Started At :)"
     hidden: no
     sql: ${TABLE}.metrics.datetime.addresses_sync_started_at ;;
     type: string
@@ -156,7 +156,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Started At"
 
     link: {
-      label: "Glean Dictionary reference for Addresses Sync Started At"
+      label: "Glean Dictionary reference for Addresses Sync Started At :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/addresses_sync_started_at"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -166,7 +166,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__string__addresses_sync_uid {
-    label: "Addresses Sync Uid"
+    label: "Addresses Sync Uid :)"
     hidden: no
     sql: ${TABLE}.metrics.string.addresses_sync_uid ;;
     type: string
@@ -174,7 +174,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Uid"
 
     link: {
-      label: "Glean Dictionary reference for Addresses Sync Uid"
+      label: "Glean Dictionary reference for Addresses Sync Uid :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/addresses_sync_uid"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

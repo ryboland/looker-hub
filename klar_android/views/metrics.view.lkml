@@ -6,7 +6,7 @@
 
 view: metrics {
   dimension: metrics__counter__autocomplete_domain_added {
-    label: "Autocomplete Domain Added"
+    label: "Autocomplete Domain Added :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.autocomplete_domain_added ;;
     type: number
@@ -14,7 +14,7 @@ view: metrics {
     group_item_label: "Domain Added"
 
     link: {
-      label: "Glean Dictionary reference for Autocomplete Domain Added"
+      label: "Glean Dictionary reference for Autocomplete Domain Added :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/autocomplete_domain_added"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -25,7 +25,7 @@ a website to the autocomplete list.
   }
 
   dimension: metrics__counter__autocomplete_domain_removed {
-    label: "Autocomplete Domain Removed"
+    label: "Autocomplete Domain Removed :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.autocomplete_domain_removed ;;
     type: number
@@ -33,7 +33,7 @@ a website to the autocomplete list.
     group_item_label: "Domain Removed"
 
     link: {
-      label: "Glean Dictionary reference for Autocomplete Domain Removed"
+      label: "Glean Dictionary reference for Autocomplete Domain Removed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/autocomplete_domain_removed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -44,7 +44,7 @@ a website from the autocomplete list.
   }
 
   dimension: metrics__counter__autocomplete_list_order_changed {
-    label: "Autocomplete List Order Changed"
+    label: "Autocomplete List Order Changed :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.autocomplete_list_order_changed ;;
     type: number
@@ -52,7 +52,7 @@ a website from the autocomplete list.
     group_item_label: "List Order Changed"
 
     link: {
-      label: "Glean Dictionary reference for Autocomplete List Order Changed"
+      label: "Glean Dictionary reference for Autocomplete List Order Changed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/autocomplete_list_order_changed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -63,7 +63,7 @@ the autocomplete list.
   }
 
   dimension: metrics__string__browser_default_search_engine {
-    label: "Browser Default Search Engine"
+    label: "Browser Default Search Engine :)"
     hidden: no
     sql: ${TABLE}.metrics.string.browser_default_search_engine ;;
     type: string
@@ -71,7 +71,7 @@ the autocomplete list.
     group_item_label: "Default Search Engine"
 
     link: {
-      label: "Glean Dictionary reference for Browser Default Search Engine"
+      label: "Glean Dictionary reference for Browser Default Search Engine :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/browser_default_search_engine"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -81,7 +81,7 @@ the autocomplete list.
   }
 
   dimension: metrics__string__browser_install_source {
-    label: "Browser Install Source"
+    label: "Browser Install Source :)"
     hidden: no
     sql: ${TABLE}.metrics.string.browser_install_source ;;
     type: string
@@ -89,7 +89,7 @@ the autocomplete list.
     group_item_label: "Install Source"
 
     link: {
-      label: "Glean Dictionary reference for Browser Install Source"
+      label: "Glean Dictionary reference for Browser Install Source :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/browser_install_source"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -98,7 +98,7 @@ the autocomplete list.
   }
 
   dimension: metrics__boolean__browser_is_default {
-    label: "Browser Is Default"
+    label: "Browser Is Default :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.browser_is_default ;;
     type: yesno
@@ -106,7 +106,7 @@ the autocomplete list.
     group_item_label: "Is Default"
 
     link: {
-      label: "Glean Dictionary reference for Browser Is Default"
+      label: "Glean Dictionary reference for Browser Is Default :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/browser_is_default"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -117,7 +117,7 @@ changes the default browser through the app settings.
   }
 
   dimension: metrics__string__browser_locale_override {
-    label: "Browser Locale Override"
+    label: "Browser Locale Override :)"
     hidden: no
     sql: ${TABLE}.metrics.string.browser_locale_override ;;
     type: string
@@ -125,7 +125,7 @@ changes the default browser through the app settings.
     group_item_label: "Locale Override"
 
     link: {
-      label: "Glean Dictionary reference for Browser Locale Override"
+      label: "Glean Dictionary reference for Browser Locale Override :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/browser_locale_override"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -136,7 +136,7 @@ specifically overrides it for the app.
   }
 
   dimension: metrics__counter__browser_report_site_issue_counter {
-    label: "Browser Report Site Issue Counter"
+    label: "Browser Report Site Issue Counter :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.browser_report_site_issue_counter ;;
     type: number
@@ -144,7 +144,7 @@ specifically overrides it for the app.
     group_item_label: "Report Site Issue Counter"
 
     link: {
-      label: "Glean Dictionary reference for Browser Report Site Issue Counter"
+      label: "Glean Dictionary reference for Browser Report Site Issue Counter :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/browser_report_site_issue_counter"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -155,14 +155,14 @@ the report site issue from browser menu
   }
 
   dimension: metrics__labeled_counter__browser_search_ad_clicks {
-    label: "Browser Search Ad Clicks"
+    label: "Browser Search Ad Clicks :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.browser_search_ad_clicks ;;
     group_label: "Browser Search"
     group_item_label: "Ad Clicks"
 
     link: {
-      label: "Glean Dictionary reference for Browser Search Ad Clicks"
+      label: "Glean Dictionary reference for Browser Search Ad Clicks :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/browser_search_ad_clicks"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -173,14 +173,14 @@ The key format is `<provider-name>`.
   }
 
   dimension: metrics__labeled_counter__browser_search_in_content {
-    label: "Browser Search In Content"
+    label: "Browser Search In Content :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.browser_search_in_content ;;
     group_label: "Browser Search"
     group_item_label: "In Content"
 
     link: {
-      label: "Glean Dictionary reference for Browser Search In Content"
+      label: "Glean Dictionary reference for Browser Search In Content :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/browser_search_in_content"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -190,14 +190,14 @@ The key format is `<provider-name>`.
   }
 
   dimension: metrics__labeled_counter__browser_search_search_count {
-    label: "Browser Search Search Count"
+    label: "Browser Search Search Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.browser_search_search_count ;;
     group_label: "Browser Search"
     group_item_label: "Search Count"
 
     link: {
-      label: "Glean Dictionary reference for Browser Search Search Count"
+      label: "Glean Dictionary reference for Browser Search Search Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/browser_search_search_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -214,14 +214,14 @@ https://github.com/mozilla-mobile/fenix/issues/1607) the value will be
   }
 
   dimension: metrics__labeled_counter__browser_search_with_ads {
-    label: "Browser Search With Ads"
+    label: "Browser Search With Ads :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.browser_search_with_ads ;;
     group_label: "Browser Search"
     group_item_label: "With Ads"
 
     link: {
-      label: "Glean Dictionary reference for Browser Search With Ads"
+      label: "Glean Dictionary reference for Browser Search With Ads :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/browser_search_with_ads"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -232,7 +232,7 @@ The key format is `<provider-name>`.
   }
 
   dimension: metrics__counter__browser_total_uri_count {
-    label: "Browser Total Uri Count"
+    label: "Browser Total Uri Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.browser_total_uri_count ;;
     type: number
@@ -240,7 +240,7 @@ The key format is `<provider-name>`.
     group_item_label: "Total Uri Count"
 
     link: {
-      label: "Glean Dictionary reference for Browser Total Uri Count"
+      label: "Glean Dictionary reference for Browser Total Uri Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/browser_total_uri_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -254,7 +254,7 @@ that programmatically redirect to a new location.
   }
 
   dimension: metrics__boolean__metrics_search_widget_installed {
-    label: "Metrics Search Widget Installed"
+    label: "Metrics Search Widget Installed :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.metrics_search_widget_installed ;;
     type: yesno
@@ -262,7 +262,7 @@ that programmatically redirect to a new location.
     group_item_label: "Search Widget Installed"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Search Widget Installed"
+      label: "Glean Dictionary reference for Metrics Search Widget Installed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/metrics_search_widget_installed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -272,7 +272,7 @@ that programmatically redirect to a new location.
   }
 
   dimension: metrics__boolean__metrics_start_reason_activity_error {
-    label: "Metrics Start Reason Activity Error"
+    label: "Metrics Start Reason Activity Error :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.metrics_start_reason_activity_error ;;
     type: yesno
@@ -280,7 +280,7 @@ that programmatically redirect to a new location.
     group_item_label: "Start Reason Activity Error"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Start Reason Activity Error"
+      label: "Glean Dictionary reference for Metrics Start Reason Activity Error :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/metrics_start_reason_activity_error"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -293,7 +293,7 @@ once we validate these assumptions.
   }
 
   dimension: metrics__boolean__metrics_start_reason_process_error {
-    label: "Metrics Start Reason Process Error"
+    label: "Metrics Start Reason Process Error :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.metrics_start_reason_process_error ;;
     type: yesno
@@ -301,7 +301,7 @@ once we validate these assumptions.
     group_item_label: "Start Reason Process Error"
 
     link: {
-      label: "Glean Dictionary reference for Metrics Start Reason Process Error"
+      label: "Glean Dictionary reference for Metrics Start Reason Process Error :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/metrics_start_reason_process_error"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -314,7 +314,7 @@ once we validate these assumptions.
   }
 
   dimension: metrics__boolean__mozilla_products_has_fenix_installed {
-    label: "Mozilla Products Has Fenix Installed"
+    label: "Mozilla Products Has Fenix Installed :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.mozilla_products_has_fenix_installed ;;
     type: yesno
@@ -322,7 +322,7 @@ once we validate these assumptions.
     group_item_label: "Has Fenix Installed"
 
     link: {
-      label: "Glean Dictionary reference for Mozilla Products Has Fenix Installed"
+      label: "Glean Dictionary reference for Mozilla Products Has Fenix Installed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/mozilla_products_has_fenix_installed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -332,7 +332,7 @@ once we validate these assumptions.
   }
 
   dimension: metrics__boolean__mozilla_products_is_fenix_default_browser {
-    label: "Mozilla Products Is Fenix Default Browser"
+    label: "Mozilla Products Is Fenix Default Browser :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.mozilla_products_is_fenix_default_browser ;;
     type: yesno
@@ -340,7 +340,7 @@ once we validate these assumptions.
     group_item_label: "Is Fenix Default Browser"
 
     link: {
-      label: "Glean Dictionary reference for Mozilla Products Is Fenix Default Browser"
+      label: "Glean Dictionary reference for Mozilla Products Is Fenix Default Browser :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/mozilla_products_is_fenix_default_browser"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -350,7 +350,7 @@ once we validate these assumptions.
   }
 
   dimension: metrics__timespan__nimbus_experiments_nimbus_initial_fetch__value {
-    label: "Nimbus Experiments Nimbus Initial Fetch Value"
+    label: "Nimbus Experiments Nimbus Initial Fetch Value :)"
     hidden: no
     sql: ${TABLE}.metrics.timespan.nimbus_experiments_nimbus_initial_fetch.value ;;
     type: number
@@ -358,7 +358,7 @@ once we validate these assumptions.
     group_item_label: "Nimbus Initial Fetch Value"
 
     link: {
-      label: "Glean Dictionary reference for Nimbus Experiments Nimbus Initial Fetch Value"
+      label: "Glean Dictionary reference for Nimbus Experiments Nimbus Initial Fetch Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/nimbus_experiments_nimbus_initial_fetch"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -368,14 +368,14 @@ once we validate these assumptions.
   }
 
   dimension: metrics__labeled_counter__perf_startup_startup_type {
-    label: "Perf Startup Startup Type"
+    label: "Perf Startup Startup Type :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.perf_startup_startup_type ;;
     group_label: "Perf Startup"
     group_item_label: "Startup Type"
 
     link: {
-      label: "Glean Dictionary reference for Perf Startup Startup Type"
+      label: "Glean Dictionary reference for Perf Startup Startup Type :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/perf_startup_startup_type"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -432,7 +432,7 @@ homescreen because the link was invalid).
   }
 
   dimension: metrics__string__preferences_user_theme {
-    label: "Preferences User Theme"
+    label: "Preferences User Theme :)"
     hidden: no
     sql: ${TABLE}.metrics.string.preferences_user_theme ;;
     type: string
@@ -440,7 +440,7 @@ homescreen because the link was invalid).
     group_item_label: "User Theme"
 
     link: {
-      label: "Glean Dictionary reference for Preferences User Theme"
+      label: "Glean Dictionary reference for Preferences User Theme :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/preferences_user_theme"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -450,7 +450,7 @@ homescreen because the link was invalid).
   }
 
   dimension: metrics__counter__settings_screen_autocomplete_domain_added {
-    label: "Settings Screen Autocomplete Domain Added"
+    label: "Settings Screen Autocomplete Domain Added :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.settings_screen_autocomplete_domain_added ;;
     type: number
@@ -458,7 +458,7 @@ homescreen because the link was invalid).
     group_item_label: "Autocomplete Domain Added"
 
     link: {
-      label: "Glean Dictionary reference for Settings Screen Autocomplete Domain Added"
+      label: "Glean Dictionary reference for Settings Screen Autocomplete Domain Added :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/settings_screen_autocomplete_domain_added"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -469,7 +469,7 @@ a website to the autocomplete list.
   }
 
   dimension: metrics__counter__settings_screen_whats_new_tapped {
-    label: "Settings Screen Whats New Tapped"
+    label: "Settings Screen Whats New Tapped :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.settings_screen_whats_new_tapped ;;
     type: number
@@ -477,7 +477,7 @@ a website to the autocomplete list.
     group_item_label: "Whats New Tapped"
 
     link: {
-      label: "Glean Dictionary reference for Settings Screen Whats New Tapped"
+      label: "Glean Dictionary reference for Settings Screen Whats New Tapped :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/settings_screen_whats_new_tapped"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -488,7 +488,7 @@ the whats new button from settings screen.
   }
 
   dimension: metrics__counter__shortcuts_shortcut_added_counter {
-    label: "Shortcuts Shortcut Added Counter"
+    label: "Shortcuts Shortcut Added Counter :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.shortcuts_shortcut_added_counter ;;
     type: number
@@ -496,7 +496,7 @@ the whats new button from settings screen.
     group_item_label: "Shortcut Added Counter"
 
     link: {
-      label: "Glean Dictionary reference for Shortcuts Shortcut Added Counter"
+      label: "Glean Dictionary reference for Shortcuts Shortcut Added Counter :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/shortcuts_shortcut_added_counter"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -507,7 +507,7 @@ a website to shortcuts.
   }
 
   dimension: metrics__counter__shortcuts_shortcut_opened_counter {
-    label: "Shortcuts Shortcut Opened Counter"
+    label: "Shortcuts Shortcut Opened Counter :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.shortcuts_shortcut_opened_counter ;;
     type: number
@@ -515,7 +515,7 @@ a website to shortcuts.
     group_item_label: "Shortcut Opened Counter"
 
     link: {
-      label: "Glean Dictionary reference for Shortcuts Shortcut Opened Counter"
+      label: "Glean Dictionary reference for Shortcuts Shortcut Opened Counter :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/shortcuts_shortcut_opened_counter"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -526,14 +526,14 @@ a website from a shortcut in the home screen.
   }
 
   dimension: metrics__labeled_counter__shortcuts_shortcut_removed_counter {
-    label: "Shortcuts Shortcut Removed Counter"
+    label: "Shortcuts Shortcut Removed Counter :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.shortcuts_shortcut_removed_counter ;;
     group_label: "Shortcuts"
     group_item_label: "Shortcut Removed Counter"
 
     link: {
-      label: "Glean Dictionary reference for Shortcuts Shortcut Removed Counter"
+      label: "Glean Dictionary reference for Shortcuts Shortcut Removed Counter :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/shortcuts_shortcut_removed_counter"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -545,7 +545,7 @@ It also indicates the screen it was removed from, home or browser.
   }
 
   dimension: metrics__quantity__shortcuts_shortcuts_on_home_number {
-    label: "Shortcuts Shortcuts On Home Number"
+    label: "Shortcuts Shortcuts On Home Number :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.shortcuts_shortcuts_on_home_number ;;
     type: number
@@ -553,7 +553,7 @@ It also indicates the screen it was removed from, home or browser.
     group_item_label: "Shortcuts On Home Number"
 
     link: {
-      label: "Glean Dictionary reference for Shortcuts Shortcuts On Home Number"
+      label: "Glean Dictionary reference for Shortcuts Shortcuts On Home Number :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/shortcuts_shortcuts_on_home_number"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -564,7 +564,7 @@ It also indicates the screen it was removed from, home or browser.
   }
 
   dimension: metrics__custom_distribution__tab_count_app_backgrounded__sum {
-    label: "Tab Count App Backgrounded Sum"
+    label: "Tab Count App Backgrounded Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.tab_count_app_backgrounded.sum ;;
     type: number
@@ -572,7 +572,7 @@ It also indicates the screen it was removed from, home or browser.
     group_item_label: "App Backgrounded Sum"
 
     link: {
-      label: "Glean Dictionary reference for Tab Count App Backgrounded Sum"
+      label: "Glean Dictionary reference for Tab Count App Backgrounded Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/tab_count_app_backgrounded"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -581,7 +581,7 @@ It also indicates the screen it was removed from, home or browser.
   }
 
   dimension: metrics__boolean__tracking_protection_has_advertising_blocked {
-    label: "Tracking Protection Has Advertising Blocked"
+    label: "Tracking Protection Has Advertising Blocked :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.tracking_protection_has_advertising_blocked ;;
     type: yesno
@@ -589,7 +589,7 @@ It also indicates the screen it was removed from, home or browser.
     group_item_label: "Has Advertising Blocked"
 
     link: {
-      label: "Glean Dictionary reference for Tracking Protection Has Advertising Blocked"
+      label: "Glean Dictionary reference for Tracking Protection Has Advertising Blocked :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/tracking_protection_has_advertising_blocked"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -600,7 +600,7 @@ at least once.
   }
 
   dimension: metrics__boolean__tracking_protection_has_analytics_blocked {
-    label: "Tracking Protection Has Analytics Blocked"
+    label: "Tracking Protection Has Analytics Blocked :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.tracking_protection_has_analytics_blocked ;;
     type: yesno
@@ -608,7 +608,7 @@ at least once.
     group_item_label: "Has Analytics Blocked"
 
     link: {
-      label: "Glean Dictionary reference for Tracking Protection Has Analytics Blocked"
+      label: "Glean Dictionary reference for Tracking Protection Has Analytics Blocked :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/tracking_protection_has_analytics_blocked"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -619,7 +619,7 @@ at least once.
   }
 
   dimension: metrics__boolean__tracking_protection_has_content_blocked {
-    label: "Tracking Protection Has Content Blocked"
+    label: "Tracking Protection Has Content Blocked :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.tracking_protection_has_content_blocked ;;
     type: yesno
@@ -627,7 +627,7 @@ at least once.
     group_item_label: "Has Content Blocked"
 
     link: {
-      label: "Glean Dictionary reference for Tracking Protection Has Content Blocked"
+      label: "Glean Dictionary reference for Tracking Protection Has Content Blocked :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/tracking_protection_has_content_blocked"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -638,7 +638,7 @@ at least once.
   }
 
   dimension: metrics__boolean__tracking_protection_has_ever_changed_etp {
-    label: "Tracking Protection Has Ever Changed Etp"
+    label: "Tracking Protection Has Ever Changed Etp :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.tracking_protection_has_ever_changed_etp ;;
     type: yesno
@@ -646,7 +646,7 @@ at least once.
     group_item_label: "Has Ever Changed Etp"
 
     link: {
-      label: "Glean Dictionary reference for Tracking Protection Has Ever Changed Etp"
+      label: "Glean Dictionary reference for Tracking Protection Has Ever Changed Etp :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/tracking_protection_has_ever_changed_etp"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -657,7 +657,7 @@ at least once.
   }
 
   dimension: metrics__boolean__tracking_protection_has_social_blocked {
-    label: "Tracking Protection Has Social Blocked"
+    label: "Tracking Protection Has Social Blocked :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.tracking_protection_has_social_blocked ;;
     type: yesno
@@ -665,7 +665,7 @@ at least once.
     group_item_label: "Has Social Blocked"
 
     link: {
-      label: "Glean Dictionary reference for Tracking Protection Has Social Blocked"
+      label: "Glean Dictionary reference for Tracking Protection Has Social Blocked :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/tracking_protection_has_social_blocked"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -676,7 +676,7 @@ at least once.
   }
 
   dimension: metrics__counter__tracking_protection_toolbar_shield_clicked {
-    label: "Tracking Protection Toolbar Shield Clicked"
+    label: "Tracking Protection Toolbar Shield Clicked :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.tracking_protection_toolbar_shield_clicked ;;
     type: number
@@ -684,7 +684,7 @@ at least once.
     group_item_label: "Toolbar Shield Clicked"
 
     link: {
-      label: "Glean Dictionary reference for Tracking Protection Toolbar Shield Clicked"
+      label: "Glean Dictionary reference for Tracking Protection Toolbar Shield Clicked :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/tracking_protection_toolbar_shield_clicked"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -695,7 +695,7 @@ the tracking protection settings panel from the toolbar.
   }
 
   dimension: metrics__boolean__browser_ui_proton_enabled {
-    label: "Browser Ui Proton Enabled"
+    label: "Browser Ui Proton Enabled :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.browser_ui_proton_enabled ;;
     type: yesno
@@ -703,7 +703,7 @@ the tracking protection settings panel from the toolbar.
     group_item_label: "Proton Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Browser Ui Proton Enabled"
+      label: "Glean Dictionary reference for Browser Ui Proton Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/browser_ui_proton_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -713,7 +713,7 @@ the tracking protection settings panel from the toolbar.
   }
 
   dimension: metrics__boolean__fog_failed_idle_registration {
-    label: "Fog Failed Idle Registration"
+    label: "Fog Failed Idle Registration :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.fog_failed_idle_registration ;;
     type: yesno
@@ -721,7 +721,7 @@ the tracking protection settings panel from the toolbar.
     group_item_label: "Failed Idle Registration"
 
     link: {
-      label: "Glean Dictionary reference for Fog Failed Idle Registration"
+      label: "Glean Dictionary reference for Fog Failed Idle Registration :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/fog_failed_idle_registration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -733,7 +733,7 @@ Child-process data will likely be absent, or incomplete.
   }
 
   dimension: metrics__timespan__fog_initialization__value {
-    label: "Fog Initialization Value"
+    label: "Fog Initialization Value :)"
     hidden: no
     sql: ${TABLE}.metrics.timespan.fog_initialization.value ;;
     type: number
@@ -741,7 +741,7 @@ Child-process data will likely be absent, or incomplete.
     group_item_label: "Initialization Value"
 
     link: {
-      label: "Glean Dictionary reference for Fog Initialization Value"
+      label: "Glean Dictionary reference for Fog Initialization Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/fog_initialization"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -751,7 +751,7 @@ Child-process data will likely be absent, or incomplete.
   }
 
   dimension: metrics__memory_distribution__fog_ipc_buffer_sizes__sum {
-    label: "Fog Ipc Buffer Sizes Sum"
+    label: "Fog Ipc Buffer Sizes Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.fog_ipc_buffer_sizes.sum ;;
     type: number
@@ -759,7 +759,7 @@ Child-process data will likely be absent, or incomplete.
     group_item_label: "Buffer Sizes Sum"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Buffer Sizes Sum"
+      label: "Glean Dictionary reference for Fog Ipc Buffer Sizes Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/fog_ipc_buffer_sizes"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -769,7 +769,7 @@ Child-process data will likely be absent, or incomplete.
   }
 
   dimension: metrics__timing_distribution__fog_ipc_flush_durations__sum {
-    label: "Fog Ipc Flush Durations Sum"
+    label: "Fog Ipc Flush Durations Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.fog_ipc_flush_durations.sum ;;
     type: number
@@ -777,7 +777,7 @@ Child-process data will likely be absent, or incomplete.
     group_item_label: "Flush Durations Sum"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Flush Durations Sum"
+      label: "Glean Dictionary reference for Fog Ipc Flush Durations Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/fog_ipc_flush_durations"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -788,7 +788,7 @@ IPC buffers and all of them being received by the parent.
   }
 
   dimension: metrics__counter__fog_ipc_flush_failures {
-    label: "Fog Ipc Flush Failures"
+    label: "Fog Ipc Flush Failures :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.fog_ipc_flush_failures ;;
     type: number
@@ -796,7 +796,7 @@ IPC buffers and all of them being received by the parent.
     group_item_label: "Flush Failures"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Flush Failures"
+      label: "Glean Dictionary reference for Fog Ipc Flush Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/fog_ipc_flush_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -809,7 +809,7 @@ handling code instead of using `MozPromise::All`.
   }
 
   dimension: metrics__counter__fog_ipc_replay_failures {
-    label: "Fog Ipc Replay Failures"
+    label: "Fog Ipc Replay Failures :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.fog_ipc_replay_failures ;;
     type: number
@@ -817,7 +817,7 @@ handling code instead of using `MozPromise::All`.
     group_item_label: "Replay Failures"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Replay Failures"
+      label: "Glean Dictionary reference for Fog Ipc Replay Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/fog_ipc_replay_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -828,7 +828,7 @@ parent process.
   }
 
   dimension: metrics__counter__fog_ipc_shutdown_registration_failures {
-    label: "Fog Ipc Shutdown Registration Failures"
+    label: "Fog Ipc Shutdown Registration Failures :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.fog_ipc_shutdown_registration_failures ;;
     type: number
@@ -836,7 +836,7 @@ parent process.
     group_item_label: "Shutdown Registration Failures"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Shutdown Registration Failures"
+      label: "Glean Dictionary reference for Fog Ipc Shutdown Registration Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/fog_ipc_shutdown_registration_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -853,7 +853,7 @@ Will likely be obsoleted by bug 1641989.
   }
 
   dimension: metrics__string__geckoview_validation_build_id {
-    label: "Geckoview Validation Build Id"
+    label: "Geckoview Validation Build Id :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.geckoview_validation_build_id ;;
     type: string
@@ -861,7 +861,7 @@ Will likely be obsoleted by bug 1641989.
     group_item_label: "Build Id"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Validation Build Id"
+      label: "Glean Dictionary reference for Geckoview Validation Build Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/geckoview_validation_build_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -871,7 +871,7 @@ Will likely be obsoleted by bug 1641989.
   }
 
   dimension: metrics__string__geckoview_validation_version {
-    label: "Geckoview Validation Version"
+    label: "Geckoview Validation Version :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.geckoview_validation_version ;;
     type: string
@@ -879,7 +879,7 @@ Will likely be obsoleted by bug 1641989.
     group_item_label: "Version"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Validation Version"
+      label: "Glean Dictionary reference for Geckoview Validation Version :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/geckoview_validation_version"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -889,7 +889,7 @@ Will likely be obsoleted by bug 1641989.
   }
 
   dimension: metrics__boolean__gifft_validation_main_ping_assembling {
-    label: "Gifft Validation Main Ping Assembling"
+    label: "Gifft Validation Main Ping Assembling :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.gifft_validation_main_ping_assembling ;;
     type: yesno
@@ -897,7 +897,7 @@ Will likely be obsoleted by bug 1641989.
     group_item_label: "Main Ping Assembling"
 
     link: {
-      label: "Glean Dictionary reference for Gifft Validation Main Ping Assembling"
+      label: "Glean Dictionary reference for Gifft Validation Main Ping Assembling :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/gifft_validation_main_ping_assembling"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -909,14 +909,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__gmp_update_xml_fetch_result {
-    label: "Gmp Update Xml Fetch Result"
+    label: "Gmp Update Xml Fetch Result :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.gmp_update_xml_fetch_result ;;
     group_label: "Gmp"
     group_item_label: "Update Xml Fetch Result"
 
     link: {
-      label: "Glean Dictionary reference for Gmp Update Xml Fetch Result"
+      label: "Glean Dictionary reference for Gmp Update Xml Fetch Result :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/gmp_update_xml_fetch_result"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -926,14 +926,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__netwerk_early_hints {
-    label: "Netwerk Early Hints"
+    label: "Netwerk Early Hints :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.netwerk_early_hints ;;
     group_label: "Netwerk"
     group_item_label: "Early Hints"
 
     link: {
-      label: "Glean Dictionary reference for Netwerk Early Hints"
+      label: "Glean Dictionary reference for Netwerk Early Hints :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/netwerk_early_hints"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -943,7 +943,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__paint_build_displaylist_time__sum {
-    label: "Paint Build Displaylist Time Sum"
+    label: "Paint Build Displaylist Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.paint_build_displaylist_time.sum ;;
     type: number
@@ -951,7 +951,7 @@ To be used to validate GIFFT.
     group_item_label: "Build Displaylist Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Paint Build Displaylist Time Sum"
+      label: "Glean Dictionary reference for Paint Build Displaylist Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/paint_build_displaylist_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -961,7 +961,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__custom_distribution__power_battery_percentage_when_user_active__sum {
-    label: "Power Battery Percentage When User Active Sum"
+    label: "Power Battery Percentage When User Active Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.power_battery_percentage_when_user_active.sum ;;
     type: number
@@ -969,7 +969,7 @@ To be used to validate GIFFT.
     group_item_label: "Percentage When User Active Sum"
 
     link: {
-      label: "Glean Dictionary reference for Power Battery Percentage When User Active Sum"
+      label: "Glean Dictionary reference for Power Battery Percentage When User Active Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_battery_percentage_when_user_active"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -979,14 +979,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_content_background {
-    label: "Power Cpu Ms Per Thread Content Background"
+    label: "Power Cpu Ms Per Thread Content Background :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_content_background ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Content Background"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Content Background"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Content Background :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_cpu_ms_per_thread_content_background"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -996,14 +996,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_content_foreground {
-    label: "Power Cpu Ms Per Thread Content Foreground"
+    label: "Power Cpu Ms Per Thread Content Foreground :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_content_foreground ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Content Foreground"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Content Foreground"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Content Foreground :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_cpu_ms_per_thread_content_foreground"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1013,14 +1013,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_gpu_process {
-    label: "Power Cpu Ms Per Thread Gpu Process"
+    label: "Power Cpu Ms Per Thread Gpu Process :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_gpu_process ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Gpu Process"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Gpu Process"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Gpu Process :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_cpu_ms_per_thread_gpu_process"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1030,14 +1030,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_parent_active {
-    label: "Power Cpu Ms Per Thread Parent Active"
+    label: "Power Cpu Ms Per Thread Parent Active :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_parent_active ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Parent Active"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Parent Active"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Parent Active :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_cpu_ms_per_thread_parent_active"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1047,14 +1047,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_parent_inactive {
-    label: "Power Cpu Ms Per Thread Parent Inactive"
+    label: "Power Cpu Ms Per Thread Parent Inactive :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_parent_inactive ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Parent Inactive"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Parent Inactive"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Parent Inactive :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_cpu_ms_per_thread_parent_inactive"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1064,7 +1064,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_cpu_time_bogus_values {
-    label: "Power Cpu Time Bogus Values"
+    label: "Power Cpu Time Bogus Values :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_cpu_time_bogus_values ;;
     type: number
@@ -1072,7 +1072,7 @@ To be used to validate GIFFT.
     group_item_label: "Cpu Time Bogus Values"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Time Bogus Values"
+      label: "Glean Dictionary reference for Power Cpu Time Bogus Values :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_cpu_time_bogus_values"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1082,14 +1082,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_time_per_process_type_ms {
-    label: "Power Cpu Time Per Process Type Ms"
+    label: "Power Cpu Time Per Process Type Ms :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_time_per_process_type_ms ;;
     group_label: "Power"
     group_item_label: "Cpu Time Per Process Type Ms"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Time Per Process Type Ms"
+      label: "Glean Dictionary reference for Power Cpu Time Per Process Type Ms :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_cpu_time_per_process_type_ms"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1099,7 +1099,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_gpu_time_bogus_values {
-    label: "Power Gpu Time Bogus Values"
+    label: "Power Gpu Time Bogus Values :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_gpu_time_bogus_values ;;
     type: number
@@ -1107,7 +1107,7 @@ To be used to validate GIFFT.
     group_item_label: "Gpu Time Bogus Values"
 
     link: {
-      label: "Glean Dictionary reference for Power Gpu Time Bogus Values"
+      label: "Glean Dictionary reference for Power Gpu Time Bogus Values :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_gpu_time_bogus_values"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1117,14 +1117,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_gpu_time_per_process_type_ms {
-    label: "Power Gpu Time Per Process Type Ms"
+    label: "Power Gpu Time Per Process Type Ms :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_gpu_time_per_process_type_ms ;;
     group_label: "Power"
     group_item_label: "Gpu Time Per Process Type Ms"
 
     link: {
-      label: "Glean Dictionary reference for Power Gpu Time Per Process Type Ms"
+      label: "Glean Dictionary reference for Power Gpu Time Per Process Type Ms :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_gpu_time_per_process_type_ms"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1134,7 +1134,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_total_cpu_time_ms {
-    label: "Power Total Cpu Time Ms"
+    label: "Power Total Cpu Time Ms :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_total_cpu_time_ms ;;
     type: number
@@ -1142,7 +1142,7 @@ To be used to validate GIFFT.
     group_item_label: "Total Cpu Time Ms"
 
     link: {
-      label: "Glean Dictionary reference for Power Total Cpu Time Ms"
+      label: "Glean Dictionary reference for Power Total Cpu Time Ms :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_total_cpu_time_ms"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1152,7 +1152,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_total_gpu_time_ms {
-    label: "Power Total Gpu Time Ms"
+    label: "Power Total Gpu Time Ms :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_total_gpu_time_ms ;;
     type: number
@@ -1160,7 +1160,7 @@ To be used to validate GIFFT.
     group_item_label: "Total Gpu Time Ms"
 
     link: {
-      label: "Glean Dictionary reference for Power Total Gpu Time Ms"
+      label: "Glean Dictionary reference for Power Total Gpu Time Ms :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_total_gpu_time_ms"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1170,7 +1170,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_total_thread_wakeups {
-    label: "Power Total Thread Wakeups"
+    label: "Power Total Thread Wakeups :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_total_thread_wakeups ;;
     type: number
@@ -1178,7 +1178,7 @@ To be used to validate GIFFT.
     group_item_label: "Total Thread Wakeups"
 
     link: {
-      label: "Glean Dictionary reference for Power Total Thread Wakeups"
+      label: "Glean Dictionary reference for Power Total Thread Wakeups :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_total_thread_wakeups"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1188,14 +1188,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_process_type {
-    label: "Power Wakeups Per Process Type"
+    label: "Power Wakeups Per Process Type :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_process_type ;;
     group_label: "Power"
     group_item_label: "Wakeups Per Process Type"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Process Type"
+      label: "Glean Dictionary reference for Power Wakeups Per Process Type :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_wakeups_per_process_type"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1205,14 +1205,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_content_background {
-    label: "Power Wakeups Per Thread Content Background"
+    label: "Power Wakeups Per Thread Content Background :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_content_background ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Content Background"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Content Background"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Content Background :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_wakeups_per_thread_content_background"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1222,14 +1222,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_content_foreground {
-    label: "Power Wakeups Per Thread Content Foreground"
+    label: "Power Wakeups Per Thread Content Foreground :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_content_foreground ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Content Foreground"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Content Foreground"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Content Foreground :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_wakeups_per_thread_content_foreground"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1239,14 +1239,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_gpu_process {
-    label: "Power Wakeups Per Thread Gpu Process"
+    label: "Power Wakeups Per Thread Gpu Process :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_gpu_process ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Gpu Process"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Gpu Process"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Gpu Process :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_wakeups_per_thread_gpu_process"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1256,14 +1256,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_parent_active {
-    label: "Power Wakeups Per Thread Parent Active"
+    label: "Power Wakeups Per Thread Parent Active :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_parent_active ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Parent Active"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Parent Active"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Parent Active :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_wakeups_per_thread_parent_active"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1273,14 +1273,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_parent_inactive {
-    label: "Power Wakeups Per Thread Parent Inactive"
+    label: "Power Wakeups Per Thread Parent Inactive :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_parent_inactive ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Parent Inactive"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Parent Inactive"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Parent Inactive :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/power_wakeups_per_thread_parent_inactive"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1290,7 +1290,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_framebuild_time__sum {
-    label: "Wr Framebuild Time Sum"
+    label: "Wr Framebuild Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_framebuild_time.sum ;;
     type: number
@@ -1298,7 +1298,7 @@ To be used to validate GIFFT.
     group_item_label: "Framebuild Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Framebuild Time Sum"
+      label: "Glean Dictionary reference for Wr Framebuild Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/wr_framebuild_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1308,7 +1308,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_gpu_wait_time__sum {
-    label: "Wr Gpu Wait Time Sum"
+    label: "Wr Gpu Wait Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_gpu_wait_time.sum ;;
     type: number
@@ -1316,7 +1316,7 @@ To be used to validate GIFFT.
     group_item_label: "Gpu Wait Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Gpu Wait Time Sum"
+      label: "Glean Dictionary reference for Wr Gpu Wait Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/wr_gpu_wait_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1326,7 +1326,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_rasterize_blobs_time__sum {
-    label: "Wr Rasterize Blobs Time Sum"
+    label: "Wr Rasterize Blobs Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_rasterize_blobs_time.sum ;;
     type: number
@@ -1334,7 +1334,7 @@ To be used to validate GIFFT.
     group_item_label: "Rasterize Blobs Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Rasterize Blobs Time Sum"
+      label: "Glean Dictionary reference for Wr Rasterize Blobs Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/wr_rasterize_blobs_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1344,7 +1344,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_rasterize_glyphs_time__sum {
-    label: "Wr Rasterize Glyphs Time Sum"
+    label: "Wr Rasterize Glyphs Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_rasterize_glyphs_time.sum ;;
     type: number
@@ -1352,7 +1352,7 @@ To be used to validate GIFFT.
     group_item_label: "Rasterize Glyphs Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Rasterize Glyphs Time Sum"
+      label: "Glean Dictionary reference for Wr Rasterize Glyphs Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/wr_rasterize_glyphs_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1362,7 +1362,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_renderer_time__sum {
-    label: "Wr Renderer Time Sum"
+    label: "Wr Renderer Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_renderer_time.sum ;;
     type: number
@@ -1370,7 +1370,7 @@ To be used to validate GIFFT.
     group_item_label: "Renderer Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Renderer Time Sum"
+      label: "Glean Dictionary reference for Wr Renderer Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/wr_renderer_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1380,7 +1380,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_renderer_time_no_sc__sum {
-    label: "Wr Renderer Time No Sc Sum"
+    label: "Wr Renderer Time No Sc Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_renderer_time_no_sc.sum ;;
     type: number
@@ -1388,7 +1388,7 @@ To be used to validate GIFFT.
     group_item_label: "Renderer Time No Sc Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Renderer Time No Sc Sum"
+      label: "Glean Dictionary reference for Wr Renderer Time No Sc Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/wr_renderer_time_no_sc"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1398,7 +1398,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_scenebuild_time__sum {
-    label: "Wr Scenebuild Time Sum"
+    label: "Wr Scenebuild Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_scenebuild_time.sum ;;
     type: number
@@ -1406,7 +1406,7 @@ To be used to validate GIFFT.
     group_item_label: "Scenebuild Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Scenebuild Time Sum"
+      label: "Glean Dictionary reference for Wr Scenebuild Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/wr_scenebuild_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1416,7 +1416,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_sceneswap_time__sum {
-    label: "Wr Sceneswap Time Sum"
+    label: "Wr Sceneswap Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_sceneswap_time.sum ;;
     type: number
@@ -1424,7 +1424,7 @@ To be used to validate GIFFT.
     group_item_label: "Sceneswap Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Sceneswap Time Sum"
+      label: "Glean Dictionary reference for Wr Sceneswap Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/wr_sceneswap_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1434,7 +1434,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_texture_cache_update_time__sum {
-    label: "Wr Texture Cache Update Time Sum"
+    label: "Wr Texture Cache Update Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_texture_cache_update_time.sum ;;
     type: number
@@ -1442,7 +1442,7 @@ To be used to validate GIFFT.
     group_item_label: "Texture Cache Update Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Texture Cache Update Time Sum"
+      label: "Glean Dictionary reference for Wr Texture Cache Update Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/wr_texture_cache_update_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1452,7 +1452,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_time_to_frame_build__sum {
-    label: "Wr Time To Frame Build Sum"
+    label: "Wr Time To Frame Build Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_time_to_frame_build.sum ;;
     type: number
@@ -1460,7 +1460,7 @@ To be used to validate GIFFT.
     group_item_label: "Time To Frame Build Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Time To Frame Build Sum"
+      label: "Glean Dictionary reference for Wr Time To Frame Build Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/wr_time_to_frame_build"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1470,7 +1470,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_time_to_render_start__sum {
-    label: "Wr Time To Render Start Sum"
+    label: "Wr Time To Render Start Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_time_to_render_start.sum ;;
     type: number
@@ -1478,7 +1478,7 @@ To be used to validate GIFFT.
     group_item_label: "Time To Render Start Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Time To Render Start Sum"
+      label: "Glean Dictionary reference for Wr Time To Render Start Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/wr_time_to_render_start"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1488,7 +1488,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__memory_distribution__glean_database_size__sum {
-    label: "Glean Database Size Sum"
+    label: "Glean Database Size Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.glean_database_size.sum ;;
     type: number
@@ -1496,7 +1496,7 @@ To be used to validate GIFFT.
     group_item_label: "Size Sum"
 
     link: {
-      label: "Glean Dictionary reference for Glean Database Size Sum"
+      label: "Glean Dictionary reference for Glean Database Size Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_database_size"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1506,14 +1506,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1524,14 +1524,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1542,14 +1542,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1560,14 +1560,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1578,7 +1578,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__glean_error_io {
-    label: "Glean Error Io"
+    label: "Glean Error Io :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_error_io ;;
     type: number
@@ -1586,7 +1586,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Io"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Io"
+      label: "Glean Dictionary reference for Glean Error Io :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_error_io"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1597,7 +1597,7 @@ when writing a pending ping to disk.
   }
 
   dimension: metrics__counter__glean_error_preinit_tasks_overflow {
-    label: "Glean Error Preinit Tasks Overflow"
+    label: "Glean Error Preinit Tasks Overflow :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_error_preinit_tasks_overflow ;;
     type: number
@@ -1605,7 +1605,7 @@ when writing a pending ping to disk.
     group_item_label: "Preinit Tasks Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Preinit Tasks Overflow"
+      label: "Glean Dictionary reference for Glean Error Preinit Tasks Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_error_preinit_tasks_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1618,7 +1618,7 @@ In Version 0 this reported the total number of tasks enqueued.
   }
 
   dimension: metrics__boolean__glean_error_preinit_tasks_timeout {
-    label: "Glean Error Preinit Tasks Timeout"
+    label: "Glean Error Preinit Tasks Timeout :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.glean_error_preinit_tasks_timeout ;;
     type: yesno
@@ -1626,7 +1626,7 @@ In Version 0 this reported the total number of tasks enqueued.
     group_item_label: "Preinit Tasks Timeout"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Preinit Tasks Timeout"
+      label: "Glean Dictionary reference for Glean Error Preinit Tasks Timeout :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_error_preinit_tasks_timeout"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1635,7 +1635,7 @@ In Version 0 this reported the total number of tasks enqueued.
   }
 
   dimension: metrics__counter__glean_time_invalid_timezone_offset {
-    label: "Glean Time Invalid Timezone Offset"
+    label: "Glean Time Invalid Timezone Offset :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.glean_time_invalid_timezone_offset ;;
     type: number
@@ -1643,7 +1643,7 @@ In Version 0 this reported the total number of tasks enqueued.
     group_item_label: "Invalid Timezone Offset"
 
     link: {
-      label: "Glean Dictionary reference for Glean Time Invalid Timezone Offset"
+      label: "Glean Dictionary reference for Glean Time Invalid Timezone Offset :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_time_invalid_timezone_offset"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1656,7 +1656,7 @@ If invalid a UTC offset is used (+0h).
   }
 
   dimension: metrics__counter__glean_upload_deleted_pings_after_quota_hit {
-    label: "Glean Upload Deleted Pings After Quota Hit"
+    label: "Glean Upload Deleted Pings After Quota Hit :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_upload_deleted_pings_after_quota_hit ;;
     type: number
@@ -1664,7 +1664,7 @@ If invalid a UTC offset is used (+0h).
     group_item_label: "Deleted Pings After Quota Hit"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Deleted Pings After Quota Hit"
+      label: "Glean Dictionary reference for Glean Upload Deleted Pings After Quota Hit :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_upload_deleted_pings_after_quota_hit"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1678,7 +1678,7 @@ deletion request pings are never deleted.
   }
 
   dimension: metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__sum {
-    label: "Glean Upload Discarded Exceeding Pings Size Sum"
+    label: "Glean Upload Discarded Exceeding Pings Size Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.glean_upload_discarded_exceeding_pings_size.sum ;;
     type: number
@@ -1686,7 +1686,7 @@ deletion request pings are never deleted.
     group_item_label: "Discarded Exceeding Pings Size Sum"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Discarded Exceeding Pings Size Sum"
+      label: "Glean Dictionary reference for Glean Upload Discarded Exceeding Pings Size Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_upload_discarded_exceeding_pings_size"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1696,7 +1696,7 @@ deletion request pings are never deleted.
   }
 
   dimension: metrics__counter__glean_upload_pending_pings {
-    label: "Glean Upload Pending Pings"
+    label: "Glean Upload Pending Pings :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_upload_pending_pings ;;
     type: number
@@ -1704,7 +1704,7 @@ deletion request pings are never deleted.
     group_item_label: "Pending Pings"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Pending Pings"
+      label: "Glean Dictionary reference for Glean Upload Pending Pings :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_upload_pending_pings"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1715,7 +1715,7 @@ This does not include deletion-request pings.
   }
 
   dimension: metrics__memory_distribution__glean_upload_pending_pings_directory_size__sum {
-    label: "Glean Upload Pending Pings Directory Size Sum"
+    label: "Glean Upload Pending Pings Directory Size Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.glean_upload_pending_pings_directory_size.sum ;;
     type: number
@@ -1723,7 +1723,7 @@ This does not include deletion-request pings.
     group_item_label: "Pending Pings Directory Size Sum"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Pending Pings Directory Size Sum"
+      label: "Glean Dictionary reference for Glean Upload Pending Pings Directory Size Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_upload_pending_pings_directory_size"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1734,14 +1734,14 @@ This does not include the size of the deletion request pings directory.
   }
 
   dimension: metrics__labeled_counter__glean_upload_ping_upload_failure {
-    label: "Glean Upload Ping Upload Failure"
+    label: "Glean Upload Ping Upload Failure :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_upload_ping_upload_failure ;;
     group_label: "Glean Upload"
     group_item_label: "Ping Upload Failure"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Ping Upload Failure"
+      label: "Glean Dictionary reference for Glean Upload Ping Upload Failure :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_upload_ping_upload_failure"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1753,7 +1753,7 @@ though the counts appear in the next successfully sent `metrics` ping.
   }
 
   dimension: metrics__datetime__glean_validation_first_run_hour {
-    label: "Glean Validation First Run Hour"
+    label: "Glean Validation First Run Hour :)"
     hidden: no
     sql: ${TABLE}.metrics.datetime.glean_validation_first_run_hour ;;
     type: string
@@ -1761,7 +1761,7 @@ though the counts appear in the next successfully sent `metrics` ping.
     group_item_label: "First Run Hour"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation First Run Hour"
+      label: "Glean Dictionary reference for Glean Validation First Run Hour :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_validation_first_run_hour"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1771,7 +1771,7 @@ though the counts appear in the next successfully sent `metrics` ping.
   }
 
   dimension: metrics__counter__glean_validation_foreground_count {
-    label: "Glean Validation Foreground Count"
+    label: "Glean Validation Foreground Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_validation_foreground_count ;;
     type: number
@@ -1779,7 +1779,7 @@ though the counts appear in the next successfully sent `metrics` ping.
     group_item_label: "Foreground Count"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation Foreground Count"
+      label: "Glean Dictionary reference for Glean Validation Foreground Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_validation_foreground_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1789,14 +1789,14 @@ though the counts appear in the next successfully sent `metrics` ping.
   }
 
   dimension: metrics__labeled_counter__glean_validation_pings_submitted {
-    label: "Glean Validation Pings Submitted"
+    label: "Glean Validation Pings Submitted :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_validation_pings_submitted ;;
     group_label: "Glean Validation"
     group_item_label: "Pings Submitted"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation Pings Submitted"
+      label: "Glean Dictionary reference for Glean Validation Pings Submitted :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_validation_pings_submitted"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1813,7 +1813,7 @@ This metric appears in both the metrics and baseline pings.
   }
 
   dimension: metrics__string__ping_reason {
-    label: "Glean Ping Reason"
+    label: "Glean Ping Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.ping_reason ;;
     type: string
@@ -1821,7 +1821,7 @@ This metric appears in both the metrics and baseline pings.
     group_item_label: "Ping Reason"
 
     link: {
-      label: "Glean Dictionary reference for Glean Ping Reason"
+      label: "Glean Dictionary reference for Glean Ping Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/ping_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1833,14 +1833,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__crash_metrics_crash_count {
-    label: "Crash Metrics Crash Count"
+    label: "Crash Metrics Crash Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.crash_metrics_crash_count ;;
     group_label: "Crash Metrics"
     group_item_label: "Crash Count"
 
     link: {
-      label: "Glean Dictionary reference for Crash Metrics Crash Count"
+      label: "Glean Dictionary reference for Crash Metrics Crash Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/crash_metrics_crash_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1851,7 +1851,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
   }
 
   dimension: metrics__boolean__glean_core_migration_successful {
-    label: "Glean Core Migration Successful"
+    label: "Glean Core Migration Successful :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.glean_core_migration_successful ;;
     type: yesno
@@ -1859,7 +1859,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
     group_item_label: "Successful"
 
     link: {
-      label: "Glean Dictionary reference for Glean Core Migration Successful"
+      label: "Glean Dictionary reference for Glean Core Migration Successful :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_core_migration_successful"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1868,7 +1868,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
   }
 
   dimension: metrics__counter__glean_validation_app_forceclosed_count {
-    label: "Glean Validation App Forceclosed Count"
+    label: "Glean Validation App Forceclosed Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.glean_validation_app_forceclosed_count ;;
     type: number
@@ -1876,7 +1876,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
     group_item_label: "App Forceclosed Count"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation App Forceclosed Count"
+      label: "Glean Dictionary reference for Glean Validation App Forceclosed Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_validation_app_forceclosed_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1885,7 +1885,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
   }
 
   dimension: metrics__counter__glean_validation_baseline_ping_count {
-    label: "Glean Validation Baseline Ping Count"
+    label: "Glean Validation Baseline Ping Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.glean_validation_baseline_ping_count ;;
     type: number
@@ -1893,7 +1893,7 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
     group_item_label: "Baseline Ping Count"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation Baseline Ping Count"
+      label: "Glean Dictionary reference for Glean Validation Baseline Ping Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_validation_baseline_ping_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

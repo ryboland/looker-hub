@@ -6,7 +6,7 @@
 
 view: deletion_request {
   dimension: metrics__uuid__deletion_fxa_device_id {
-    label: "Deletion Fxa Device Id"
+    label: "Deletion Fxa Device Id :)"
     hidden: yes
     sql: ${TABLE}.metrics.uuid.deletion_fxa_device_id ;;
     type: string
@@ -14,7 +14,7 @@ view: deletion_request {
     group_item_label: "Fxa Device Id"
 
     link: {
-      label: "Glean Dictionary reference for Deletion Fxa Device Id"
+      label: "Glean Dictionary reference for Deletion Fxa Device Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/deletion_fxa_device_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -24,7 +24,7 @@ view: deletion_request {
   }
 
   dimension: metrics__string__deletion_sync_device_id {
-    label: "Deletion Sync Device Id"
+    label: "Deletion Sync Device Id :)"
     hidden: no
     sql: ${TABLE}.metrics.string.deletion_sync_device_id ;;
     type: string
@@ -32,7 +32,7 @@ view: deletion_request {
     group_item_label: "Sync Device Id"
 
     link: {
-      label: "Glean Dictionary reference for Deletion Sync Device Id"
+      label: "Glean Dictionary reference for Deletion Sync Device Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/deletion_sync_device_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -42,7 +42,7 @@ view: deletion_request {
   }
 
   dimension: metrics__uuid__legacy_ids_client_id {
-    label: "Legacy Ids Client Id"
+    label: "Legacy Ids Client Id :)"
     hidden: no
     sql: ${TABLE}.metrics.uuid.legacy_ids_client_id ;;
     type: string
@@ -50,7 +50,7 @@ view: deletion_request {
     group_item_label: "Client Id"
 
     link: {
-      label: "Glean Dictionary reference for Legacy Ids Client Id"
+      label: "Glean Dictionary reference for Legacy Ids Client Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/legacy_ids_client_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -60,14 +60,14 @@ view: deletion_request {
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -78,14 +78,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -96,14 +96,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -114,14 +114,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

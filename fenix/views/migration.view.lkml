@@ -6,14 +6,14 @@
 
 view: migration {
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -24,14 +24,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -42,14 +42,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -60,14 +60,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -78,7 +78,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__boolean__migration_addons_any_failures {
-    label: "Migration Addons Any Failures"
+    label: "Migration Addons Any Failures :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.migration_addons_any_failures ;;
     type: yesno
@@ -86,7 +86,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Any Failures"
 
     link: {
-      label: "Glean Dictionary reference for Migration Addons Any Failures"
+      label: "Glean Dictionary reference for Migration Addons Any Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_any_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -96,7 +96,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_addons_failed_addons {
-    label: "Migration Addons Failed Addons"
+    label: "Migration Addons Failed Addons :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_addons_failed_addons ;;
     type: number
@@ -104,7 +104,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Failed Addons"
 
     link: {
-      label: "Glean Dictionary reference for Migration Addons Failed Addons"
+      label: "Glean Dictionary reference for Migration Addons Failed Addons :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_failed_addons"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -114,7 +114,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_addons_failure_reason {
-    label: "Migration Addons Failure Reason"
+    label: "Migration Addons Failure Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_addons_failure_reason ;;
     type: number
@@ -122,7 +122,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Failure Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Addons Failure Reason"
+      label: "Glean Dictionary reference for Migration Addons Failure Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_failure_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -132,7 +132,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_addons_migrated_addons {
-    label: "Migration Addons Migrated Addons"
+    label: "Migration Addons Migrated Addons :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_addons_migrated_addons ;;
     type: number
@@ -140,7 +140,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Migrated Addons"
 
     link: {
-      label: "Glean Dictionary reference for Migration Addons Migrated Addons"
+      label: "Glean Dictionary reference for Migration Addons Migrated Addons :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_migrated_addons"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -150,7 +150,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_addons_success_reason {
-    label: "Migration Addons Success Reason"
+    label: "Migration Addons Success Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_addons_success_reason ;;
     type: number
@@ -158,7 +158,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Success Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Addons Success Reason"
+      label: "Glean Dictionary reference for Migration Addons Success Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_success_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -168,7 +168,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__timespan__migration_addons_total_duration__value {
-    label: "Migration Addons Total Duration Value"
+    label: "Migration Addons Total Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.migration_addons_total_duration.value ;;
     type: number
@@ -176,7 +176,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Total Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Migration Addons Total Duration Value"
+      label: "Glean Dictionary reference for Migration Addons Total Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_addons_total_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -186,7 +186,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__boolean__migration_bookmarks_any_failures {
-    label: "Migration Bookmarks Any Failures"
+    label: "Migration Bookmarks Any Failures :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.migration_bookmarks_any_failures ;;
     type: yesno
@@ -194,7 +194,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Any Failures"
 
     link: {
-      label: "Glean Dictionary reference for Migration Bookmarks Any Failures"
+      label: "Glean Dictionary reference for Migration Bookmarks Any Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_any_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -204,7 +204,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_bookmarks_detected {
-    label: "Migration Bookmarks Detected"
+    label: "Migration Bookmarks Detected :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_bookmarks_detected ;;
     type: number
@@ -212,7 +212,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Detected"
 
     link: {
-      label: "Glean Dictionary reference for Migration Bookmarks Detected"
+      label: "Glean Dictionary reference for Migration Bookmarks Detected :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_detected"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -222,7 +222,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__timespan__migration_bookmarks_duration__value {
-    label: "Migration Bookmarks Duration Value"
+    label: "Migration Bookmarks Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.migration_bookmarks_duration.value ;;
     type: number
@@ -230,7 +230,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Migration Bookmarks Duration Value"
+      label: "Glean Dictionary reference for Migration Bookmarks Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -240,7 +240,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_bookmarks_failure_reason {
-    label: "Migration Bookmarks Failure Reason"
+    label: "Migration Bookmarks Failure Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_bookmarks_failure_reason ;;
     type: number
@@ -248,7 +248,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Failure Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Bookmarks Failure Reason"
+      label: "Glean Dictionary reference for Migration Bookmarks Failure Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_failure_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -258,14 +258,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__migration_bookmarks_migrated {
-    label: "Migration Bookmarks Migrated"
+    label: "Migration Bookmarks Migrated :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.migration_bookmarks_migrated ;;
     group_label: "Migration Bookmarks"
     group_item_label: "Migrated"
 
     link: {
-      label: "Glean Dictionary reference for Migration Bookmarks Migrated"
+      label: "Glean Dictionary reference for Migration Bookmarks Migrated :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_migrated"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -275,7 +275,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_bookmarks_success_reason {
-    label: "Migration Bookmarks Success Reason"
+    label: "Migration Bookmarks Success Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_bookmarks_success_reason ;;
     type: number
@@ -283,7 +283,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Success Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Bookmarks Success Reason"
+      label: "Glean Dictionary reference for Migration Bookmarks Success Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_success_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -293,7 +293,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__timespan__migration_bookmarks_total_duration__value {
-    label: "Migration Bookmarks Total Duration Value"
+    label: "Migration Bookmarks Total Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.migration_bookmarks_total_duration.value ;;
     type: number
@@ -301,7 +301,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Total Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Migration Bookmarks Total Duration Value"
+      label: "Glean Dictionary reference for Migration Bookmarks Total Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_bookmarks_total_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -311,7 +311,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__boolean__migration_fxa_any_failures {
-    label: "Migration Fxa Any Failures"
+    label: "Migration Fxa Any Failures :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.migration_fxa_any_failures ;;
     type: yesno
@@ -319,7 +319,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Any Failures"
 
     link: {
-      label: "Glean Dictionary reference for Migration Fxa Any Failures"
+      label: "Glean Dictionary reference for Migration Fxa Any Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_any_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -329,7 +329,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__string__migration_fxa_bad_auth_state {
-    label: "Migration Fxa Bad Auth State"
+    label: "Migration Fxa Bad Auth State :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.migration_fxa_bad_auth_state ;;
     type: string
@@ -337,7 +337,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Bad Auth State"
 
     link: {
-      label: "Glean Dictionary reference for Migration Fxa Bad Auth State"
+      label: "Glean Dictionary reference for Migration Fxa Bad Auth State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_bad_auth_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -347,7 +347,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_fxa_failure_reason {
-    label: "Migration Fxa Failure Reason"
+    label: "Migration Fxa Failure Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_fxa_failure_reason ;;
     type: number
@@ -355,7 +355,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Failure Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Fxa Failure Reason"
+      label: "Glean Dictionary reference for Migration Fxa Failure Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_failure_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -365,7 +365,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__string__migration_fxa_failure_reason_rust {
-    label: "Migration Fxa Failure Reason Rust"
+    label: "Migration Fxa Failure Reason Rust :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.migration_fxa_failure_reason_rust ;;
     type: string
@@ -373,7 +373,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Failure Reason Rust"
 
     link: {
-      label: "Glean Dictionary reference for Migration Fxa Failure Reason Rust"
+      label: "Glean Dictionary reference for Migration Fxa Failure Reason Rust :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_failure_reason_rust"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -383,7 +383,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__boolean__migration_fxa_has_custom_idp_server {
-    label: "Migration Fxa Has Custom Idp Server"
+    label: "Migration Fxa Has Custom Idp Server :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.migration_fxa_has_custom_idp_server ;;
     type: yesno
@@ -391,7 +391,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Has Custom Idp Server"
 
     link: {
-      label: "Glean Dictionary reference for Migration Fxa Has Custom Idp Server"
+      label: "Glean Dictionary reference for Migration Fxa Has Custom Idp Server :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_has_custom_idp_server"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -401,7 +401,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__boolean__migration_fxa_has_custom_token_server {
-    label: "Migration Fxa Has Custom Token Server"
+    label: "Migration Fxa Has Custom Token Server :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.migration_fxa_has_custom_token_server ;;
     type: yesno
@@ -409,7 +409,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Has Custom Token Server"
 
     link: {
-      label: "Glean Dictionary reference for Migration Fxa Has Custom Token Server"
+      label: "Glean Dictionary reference for Migration Fxa Has Custom Token Server :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_has_custom_token_server"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -419,7 +419,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_fxa_success_reason {
-    label: "Migration Fxa Success Reason"
+    label: "Migration Fxa Success Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_fxa_success_reason ;;
     type: number
@@ -427,7 +427,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Success Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Fxa Success Reason"
+      label: "Glean Dictionary reference for Migration Fxa Success Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_success_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -437,7 +437,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__timespan__migration_fxa_total_duration__value {
-    label: "Migration Fxa Total Duration Value"
+    label: "Migration Fxa Total Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.migration_fxa_total_duration.value ;;
     type: number
@@ -445,7 +445,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Total Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Migration Fxa Total Duration Value"
+      label: "Glean Dictionary reference for Migration Fxa Total Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_total_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -455,7 +455,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__string__migration_fxa_unsupported_account_version {
-    label: "Migration Fxa Unsupported Account Version"
+    label: "Migration Fxa Unsupported Account Version :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.migration_fxa_unsupported_account_version ;;
     type: string
@@ -463,7 +463,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Unsupported Account Version"
 
     link: {
-      label: "Glean Dictionary reference for Migration Fxa Unsupported Account Version"
+      label: "Glean Dictionary reference for Migration Fxa Unsupported Account Version :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_unsupported_account_version"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -473,7 +473,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__string__migration_fxa_unsupported_pickle_version {
-    label: "Migration Fxa Unsupported Pickle Version"
+    label: "Migration Fxa Unsupported Pickle Version :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.migration_fxa_unsupported_pickle_version ;;
     type: string
@@ -481,7 +481,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Unsupported Pickle Version"
 
     link: {
-      label: "Glean Dictionary reference for Migration Fxa Unsupported Pickle Version"
+      label: "Glean Dictionary reference for Migration Fxa Unsupported Pickle Version :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_unsupported_pickle_version"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -491,7 +491,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__string__migration_fxa_unsupported_state_version {
-    label: "Migration Fxa Unsupported State Version"
+    label: "Migration Fxa Unsupported State Version :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.migration_fxa_unsupported_state_version ;;
     type: string
@@ -499,7 +499,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Unsupported State Version"
 
     link: {
-      label: "Glean Dictionary reference for Migration Fxa Unsupported State Version"
+      label: "Glean Dictionary reference for Migration Fxa Unsupported State Version :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_fxa_unsupported_state_version"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -509,7 +509,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__boolean__migration_gecko_any_failures {
-    label: "Migration Gecko Any Failures"
+    label: "Migration Gecko Any Failures :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.migration_gecko_any_failures ;;
     type: yesno
@@ -517,7 +517,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Any Failures"
 
     link: {
-      label: "Glean Dictionary reference for Migration Gecko Any Failures"
+      label: "Glean Dictionary reference for Migration Gecko Any Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_gecko_any_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -527,7 +527,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_gecko_failure_reason {
-    label: "Migration Gecko Failure Reason"
+    label: "Migration Gecko Failure Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_gecko_failure_reason ;;
     type: number
@@ -535,7 +535,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Failure Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Gecko Failure Reason"
+      label: "Glean Dictionary reference for Migration Gecko Failure Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_gecko_failure_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -545,7 +545,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_gecko_success_reason {
-    label: "Migration Gecko Success Reason"
+    label: "Migration Gecko Success Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_gecko_success_reason ;;
     type: number
@@ -553,7 +553,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Success Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Gecko Success Reason"
+      label: "Glean Dictionary reference for Migration Gecko Success Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_gecko_success_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -563,7 +563,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__timespan__migration_gecko_total_duration__value {
-    label: "Migration Gecko Total Duration Value"
+    label: "Migration Gecko Total Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.migration_gecko_total_duration.value ;;
     type: number
@@ -571,7 +571,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Total Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Migration Gecko Total Duration Value"
+      label: "Glean Dictionary reference for Migration Gecko Total Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_gecko_total_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -581,7 +581,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__boolean__migration_history_any_failures {
-    label: "Migration History Any Failures"
+    label: "Migration History Any Failures :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.migration_history_any_failures ;;
     type: yesno
@@ -589,7 +589,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Any Failures"
 
     link: {
-      label: "Glean Dictionary reference for Migration History Any Failures"
+      label: "Glean Dictionary reference for Migration History Any Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_any_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -599,7 +599,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_history_detected {
-    label: "Migration History Detected"
+    label: "Migration History Detected :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_history_detected ;;
     type: number
@@ -607,7 +607,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Detected"
 
     link: {
-      label: "Glean Dictionary reference for Migration History Detected"
+      label: "Glean Dictionary reference for Migration History Detected :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_detected"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -617,7 +617,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__timespan__migration_history_duration__value {
-    label: "Migration History Duration Value"
+    label: "Migration History Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.migration_history_duration.value ;;
     type: number
@@ -625,7 +625,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Migration History Duration Value"
+      label: "Glean Dictionary reference for Migration History Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -635,7 +635,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_history_failure_reason {
-    label: "Migration History Failure Reason"
+    label: "Migration History Failure Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_history_failure_reason ;;
     type: number
@@ -643,7 +643,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Failure Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration History Failure Reason"
+      label: "Glean Dictionary reference for Migration History Failure Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_failure_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -653,14 +653,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__migration_history_migrated {
-    label: "Migration History Migrated"
+    label: "Migration History Migrated :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.migration_history_migrated ;;
     group_label: "Migration History"
     group_item_label: "Migrated"
 
     link: {
-      label: "Glean Dictionary reference for Migration History Migrated"
+      label: "Glean Dictionary reference for Migration History Migrated :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_migrated"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -670,7 +670,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_history_success_reason {
-    label: "Migration History Success Reason"
+    label: "Migration History Success Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_history_success_reason ;;
     type: number
@@ -678,7 +678,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Success Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration History Success Reason"
+      label: "Glean Dictionary reference for Migration History Success Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_success_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -688,7 +688,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__timespan__migration_history_total_duration__value {
-    label: "Migration History Total Duration Value"
+    label: "Migration History Total Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.migration_history_total_duration.value ;;
     type: number
@@ -696,7 +696,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Total Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Migration History Total Duration Value"
+      label: "Glean Dictionary reference for Migration History Total Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_history_total_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -706,7 +706,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__boolean__migration_logins_any_failures {
-    label: "Migration Logins Any Failures"
+    label: "Migration Logins Any Failures :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.migration_logins_any_failures ;;
     type: yesno
@@ -714,7 +714,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Any Failures"
 
     link: {
-      label: "Glean Dictionary reference for Migration Logins Any Failures"
+      label: "Glean Dictionary reference for Migration Logins Any Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_any_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -724,7 +724,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_logins_detected {
-    label: "Migration Logins Detected"
+    label: "Migration Logins Detected :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_logins_detected ;;
     type: number
@@ -732,7 +732,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Detected"
 
     link: {
-      label: "Glean Dictionary reference for Migration Logins Detected"
+      label: "Glean Dictionary reference for Migration Logins Detected :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_detected"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -742,14 +742,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__migration_logins_failure_counts {
-    label: "Migration Logins Failure Counts"
+    label: "Migration Logins Failure Counts :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.migration_logins_failure_counts ;;
     group_label: "Migration Logins"
     group_item_label: "Failure Counts"
 
     link: {
-      label: "Glean Dictionary reference for Migration Logins Failure Counts"
+      label: "Glean Dictionary reference for Migration Logins Failure Counts :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_failure_counts"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -759,7 +759,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_logins_failure_reason {
-    label: "Migration Logins Failure Reason"
+    label: "Migration Logins Failure Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_logins_failure_reason ;;
     type: number
@@ -767,7 +767,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Failure Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Logins Failure Reason"
+      label: "Glean Dictionary reference for Migration Logins Failure Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_failure_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -777,7 +777,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_logins_success_reason {
-    label: "Migration Logins Success Reason"
+    label: "Migration Logins Success Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_logins_success_reason ;;
     type: number
@@ -785,7 +785,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Success Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Logins Success Reason"
+      label: "Glean Dictionary reference for Migration Logins Success Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_success_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -795,7 +795,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__timespan__migration_logins_total_duration__value {
-    label: "Migration Logins Total Duration Value"
+    label: "Migration Logins Total Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.migration_logins_total_duration.value ;;
     type: number
@@ -803,7 +803,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Total Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Migration Logins Total Duration Value"
+      label: "Glean Dictionary reference for Migration Logins Total Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_total_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -813,7 +813,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_logins_unsupported_db_version {
-    label: "Migration Logins Unsupported Db Version"
+    label: "Migration Logins Unsupported Db Version :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_logins_unsupported_db_version ;;
     type: number
@@ -821,7 +821,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Unsupported Db Version"
 
     link: {
-      label: "Glean Dictionary reference for Migration Logins Unsupported Db Version"
+      label: "Glean Dictionary reference for Migration Logins Unsupported Db Version :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_logins_unsupported_db_version"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -831,7 +831,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__boolean__migration_open_tabs_any_failures {
-    label: "Migration Open Tabs Any Failures"
+    label: "Migration Open Tabs Any Failures :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.migration_open_tabs_any_failures ;;
     type: yesno
@@ -839,7 +839,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Any Failures"
 
     link: {
-      label: "Glean Dictionary reference for Migration Open Tabs Any Failures"
+      label: "Glean Dictionary reference for Migration Open Tabs Any Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_any_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -849,7 +849,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_open_tabs_detected {
-    label: "Migration Open Tabs Detected"
+    label: "Migration Open Tabs Detected :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_open_tabs_detected ;;
     type: number
@@ -857,7 +857,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Detected"
 
     link: {
-      label: "Glean Dictionary reference for Migration Open Tabs Detected"
+      label: "Glean Dictionary reference for Migration Open Tabs Detected :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_detected"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -867,7 +867,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_open_tabs_failure_reason {
-    label: "Migration Open Tabs Failure Reason"
+    label: "Migration Open Tabs Failure Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_open_tabs_failure_reason ;;
     type: number
@@ -875,7 +875,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Failure Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Open Tabs Failure Reason"
+      label: "Glean Dictionary reference for Migration Open Tabs Failure Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_failure_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -885,7 +885,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_open_tabs_migrated {
-    label: "Migration Open Tabs Migrated"
+    label: "Migration Open Tabs Migrated :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_open_tabs_migrated ;;
     type: number
@@ -893,7 +893,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Migrated"
 
     link: {
-      label: "Glean Dictionary reference for Migration Open Tabs Migrated"
+      label: "Glean Dictionary reference for Migration Open Tabs Migrated :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_migrated"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -903,7 +903,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_open_tabs_success_reason {
-    label: "Migration Open Tabs Success Reason"
+    label: "Migration Open Tabs Success Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_open_tabs_success_reason ;;
     type: number
@@ -911,7 +911,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Success Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Open Tabs Success Reason"
+      label: "Glean Dictionary reference for Migration Open Tabs Success Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_success_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -921,7 +921,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__timespan__migration_open_tabs_total_duration__value {
-    label: "Migration Open Tabs Total Duration Value"
+    label: "Migration Open Tabs Total Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.migration_open_tabs_total_duration.value ;;
     type: number
@@ -929,7 +929,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Total Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Migration Open Tabs Total Duration Value"
+      label: "Glean Dictionary reference for Migration Open Tabs Total Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_open_tabs_total_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -939,7 +939,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__boolean__migration_pinned_sites_any_failures {
-    label: "Migration Pinned Sites Any Failures"
+    label: "Migration Pinned Sites Any Failures :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.migration_pinned_sites_any_failures ;;
     type: yesno
@@ -947,7 +947,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Any Failures"
 
     link: {
-      label: "Glean Dictionary reference for Migration Pinned Sites Any Failures"
+      label: "Glean Dictionary reference for Migration Pinned Sites Any Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_any_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -957,7 +957,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_pinned_sites_detected_pinned_sites {
-    label: "Migration Pinned Sites Detected Pinned Sites"
+    label: "Migration Pinned Sites Detected Pinned Sites :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_pinned_sites_detected_pinned_sites ;;
     type: number
@@ -965,7 +965,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Detected Pinned Sites"
 
     link: {
-      label: "Glean Dictionary reference for Migration Pinned Sites Detected Pinned Sites"
+      label: "Glean Dictionary reference for Migration Pinned Sites Detected Pinned Sites :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_detected_pinned_sites"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -975,7 +975,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_pinned_sites_failure_reason {
-    label: "Migration Pinned Sites Failure Reason"
+    label: "Migration Pinned Sites Failure Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_pinned_sites_failure_reason ;;
     type: number
@@ -983,7 +983,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Failure Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Pinned Sites Failure Reason"
+      label: "Glean Dictionary reference for Migration Pinned Sites Failure Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_failure_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -993,7 +993,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_pinned_sites_migrated_pinned_sites {
-    label: "Migration Pinned Sites Migrated Pinned Sites"
+    label: "Migration Pinned Sites Migrated Pinned Sites :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_pinned_sites_migrated_pinned_sites ;;
     type: number
@@ -1001,7 +1001,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Migrated Pinned Sites"
 
     link: {
-      label: "Glean Dictionary reference for Migration Pinned Sites Migrated Pinned Sites"
+      label: "Glean Dictionary reference for Migration Pinned Sites Migrated Pinned Sites :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_migrated_pinned_sites"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1011,7 +1011,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_pinned_sites_success_reason {
-    label: "Migration Pinned Sites Success Reason"
+    label: "Migration Pinned Sites Success Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_pinned_sites_success_reason ;;
     type: number
@@ -1019,7 +1019,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Success Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Pinned Sites Success Reason"
+      label: "Glean Dictionary reference for Migration Pinned Sites Success Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_success_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1029,7 +1029,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__timespan__migration_pinned_sites_total_duration__value {
-    label: "Migration Pinned Sites Total Duration Value"
+    label: "Migration Pinned Sites Total Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.migration_pinned_sites_total_duration.value ;;
     type: number
@@ -1037,7 +1037,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Total Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Migration Pinned Sites Total Duration Value"
+      label: "Glean Dictionary reference for Migration Pinned Sites Total Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_pinned_sites_total_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1047,7 +1047,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__boolean__migration_search_any_failures {
-    label: "Migration Search Any Failures"
+    label: "Migration Search Any Failures :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.migration_search_any_failures ;;
     type: yesno
@@ -1055,7 +1055,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Any Failures"
 
     link: {
-      label: "Glean Dictionary reference for Migration Search Any Failures"
+      label: "Glean Dictionary reference for Migration Search Any Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_search_any_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1065,7 +1065,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_search_failure_reason {
-    label: "Migration Search Failure Reason"
+    label: "Migration Search Failure Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_search_failure_reason ;;
     type: number
@@ -1073,7 +1073,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Failure Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Search Failure Reason"
+      label: "Glean Dictionary reference for Migration Search Failure Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_search_failure_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1083,7 +1083,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_search_success_reason {
-    label: "Migration Search Success Reason"
+    label: "Migration Search Success Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_search_success_reason ;;
     type: number
@@ -1091,7 +1091,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Success Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Search Success Reason"
+      label: "Glean Dictionary reference for Migration Search Success Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_search_success_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1101,7 +1101,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__timespan__migration_search_total_duration__value {
-    label: "Migration Search Total Duration Value"
+    label: "Migration Search Total Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.migration_search_total_duration.value ;;
     type: number
@@ -1109,7 +1109,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Total Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Migration Search Total Duration Value"
+      label: "Glean Dictionary reference for Migration Search Total Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_search_total_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1119,7 +1119,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__boolean__migration_settings_any_failures {
-    label: "Migration Settings Any Failures"
+    label: "Migration Settings Any Failures :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.migration_settings_any_failures ;;
     type: yesno
@@ -1127,7 +1127,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Any Failures"
 
     link: {
-      label: "Glean Dictionary reference for Migration Settings Any Failures"
+      label: "Glean Dictionary reference for Migration Settings Any Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_settings_any_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1137,7 +1137,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_settings_failure_reason {
-    label: "Migration Settings Failure Reason"
+    label: "Migration Settings Failure Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_settings_failure_reason ;;
     type: number
@@ -1145,7 +1145,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Failure Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Settings Failure Reason"
+      label: "Glean Dictionary reference for Migration Settings Failure Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_settings_failure_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1155,7 +1155,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_settings_success_reason {
-    label: "Migration Settings Success Reason"
+    label: "Migration Settings Success Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_settings_success_reason ;;
     type: number
@@ -1163,7 +1163,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Success Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Settings Success Reason"
+      label: "Glean Dictionary reference for Migration Settings Success Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_settings_success_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1173,7 +1173,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__boolean__migration_settings_telemetry_enabled {
-    label: "Migration Settings Telemetry Enabled"
+    label: "Migration Settings Telemetry Enabled :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.migration_settings_telemetry_enabled ;;
     type: yesno
@@ -1181,7 +1181,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Telemetry Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Migration Settings Telemetry Enabled"
+      label: "Glean Dictionary reference for Migration Settings Telemetry Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_settings_telemetry_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1191,7 +1191,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__timespan__migration_settings_total_duration__value {
-    label: "Migration Settings Total Duration Value"
+    label: "Migration Settings Total Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.migration_settings_total_duration.value ;;
     type: number
@@ -1199,7 +1199,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Total Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Migration Settings Total Duration Value"
+      label: "Glean Dictionary reference for Migration Settings Total Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_settings_total_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1209,7 +1209,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__boolean__migration_telemetry_identifiers_any_failures {
-    label: "Migration Telemetry Identifiers Any Failures"
+    label: "Migration Telemetry Identifiers Any Failures :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.migration_telemetry_identifiers_any_failures ;;
     type: yesno
@@ -1217,7 +1217,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Any Failures"
 
     link: {
-      label: "Glean Dictionary reference for Migration Telemetry Identifiers Any Failures"
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Any Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_any_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1227,7 +1227,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_telemetry_identifiers_failure_reason {
-    label: "Migration Telemetry Identifiers Failure Reason"
+    label: "Migration Telemetry Identifiers Failure Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_telemetry_identifiers_failure_reason ;;
     type: number
@@ -1235,7 +1235,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Failure Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Telemetry Identifiers Failure Reason"
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Failure Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_failure_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1245,7 +1245,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__uuid__migration_telemetry_identifiers_fennec_client_id {
-    label: "Migration Telemetry Identifiers Fennec Client Id"
+    label: "Migration Telemetry Identifiers Fennec Client Id :)"
     hidden: yes
     sql: ${TABLE}.metrics.uuid.migration_telemetry_identifiers_fennec_client_id ;;
     type: string
@@ -1253,7 +1253,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Fennec Client Id"
 
     link: {
-      label: "Glean Dictionary reference for Migration Telemetry Identifiers Fennec Client Id"
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Fennec Client Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_fennec_client_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1263,7 +1263,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__datetime__migration_telemetry_identifiers_fennec_profile_creation_date {
-    label: "Migration Telemetry Identifiers Fennec Profile Creation Date"
+    label: "Migration Telemetry Identifiers Fennec Profile Creation Date :)"
     hidden: yes
     sql: ${TABLE}.metrics.datetime.migration_telemetry_identifiers_fennec_profile_creation_date ;;
     type: string
@@ -1271,7 +1271,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Fennec Profile Creation Date"
 
     link: {
-      label: "Glean Dictionary reference for Migration Telemetry Identifiers Fennec Profile Creation Date"
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Fennec Profile Creation Date :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_fennec_profile_creation_date"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1281,7 +1281,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__migration_telemetry_identifiers_success_reason {
-    label: "Migration Telemetry Identifiers Success Reason"
+    label: "Migration Telemetry Identifiers Success Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.migration_telemetry_identifiers_success_reason ;;
     type: number
@@ -1289,7 +1289,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Success Reason"
 
     link: {
-      label: "Glean Dictionary reference for Migration Telemetry Identifiers Success Reason"
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Success Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_success_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1299,7 +1299,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__timespan__migration_telemetry_identifiers_total_duration__value {
-    label: "Migration Telemetry Identifiers Total Duration Value"
+    label: "Migration Telemetry Identifiers Total Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.migration_telemetry_identifiers_total_duration.value ;;
     type: number
@@ -1307,7 +1307,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Total Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Migration Telemetry Identifiers Total Duration Value"
+      label: "Glean Dictionary reference for Migration Telemetry Identifiers Total Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/migration_telemetry_identifiers_total_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

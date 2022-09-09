@@ -6,7 +6,7 @@
 
 view: custom {
   dimension: metrics__counter__errors_engine_download {
-    label: "Errors Engine Download"
+    label: "Errors Engine Download :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.errors_engine_download ;;
     type: number
@@ -14,7 +14,7 @@ view: custom {
     group_item_label: "Engine Download"
 
     link: {
-      label: "Glean Dictionary reference for Errors Engine Download"
+      label: "Glean Dictionary reference for Errors Engine Download :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/errors_engine_download"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -24,7 +24,7 @@ view: custom {
   }
 
   dimension: metrics__counter__errors_engine_load {
-    label: "Errors Engine Load"
+    label: "Errors Engine Load :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.errors_engine_load ;;
     type: number
@@ -32,7 +32,7 @@ view: custom {
     group_item_label: "Engine Load"
 
     link: {
-      label: "Glean Dictionary reference for Errors Engine Load"
+      label: "Glean Dictionary reference for Errors Engine Load :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/errors_engine_load"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -42,7 +42,7 @@ view: custom {
   }
 
   dimension: metrics__counter__errors_marian {
-    label: "Errors Marian"
+    label: "Errors Marian :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.errors_marian ;;
     type: number
@@ -50,7 +50,7 @@ view: custom {
     group_item_label: "Marian"
 
     link: {
-      label: "Glean Dictionary reference for Errors Marian"
+      label: "Glean Dictionary reference for Errors Marian :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/errors_marian"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -60,7 +60,7 @@ view: custom {
   }
 
   dimension: metrics__counter__errors_memory {
-    label: "Errors Memory"
+    label: "Errors Memory :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.errors_memory ;;
     type: number
@@ -68,7 +68,7 @@ view: custom {
     group_item_label: "Memory"
 
     link: {
-      label: "Glean Dictionary reference for Errors Memory"
+      label: "Glean Dictionary reference for Errors Memory :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/errors_memory"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -78,7 +78,7 @@ view: custom {
   }
 
   dimension: metrics__counter__errors_model_download {
-    label: "Errors Model Download"
+    label: "Errors Model Download :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.errors_model_download ;;
     type: number
@@ -86,7 +86,7 @@ view: custom {
     group_item_label: "Model Download"
 
     link: {
-      label: "Glean Dictionary reference for Errors Model Download"
+      label: "Glean Dictionary reference for Errors Model Download :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/errors_model_download"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -96,7 +96,7 @@ view: custom {
   }
 
   dimension: metrics__counter__errors_model_load {
-    label: "Errors Model Load"
+    label: "Errors Model Load :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.errors_model_load ;;
     type: number
@@ -104,7 +104,7 @@ view: custom {
     group_item_label: "Model Load"
 
     link: {
-      label: "Glean Dictionary reference for Errors Model Load"
+      label: "Glean Dictionary reference for Errors Model Load :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/errors_model_load"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -114,7 +114,7 @@ view: custom {
   }
 
   dimension: metrics__counter__errors_translation {
-    label: "Errors Translation"
+    label: "Errors Translation :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.errors_translation ;;
     type: number
@@ -122,7 +122,7 @@ view: custom {
     group_item_label: "Translation"
 
     link: {
-      label: "Glean Dictionary reference for Errors Translation"
+      label: "Glean Dictionary reference for Errors Translation :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/errors_translation"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -132,7 +132,7 @@ view: custom {
   }
 
   dimension: metrics__quantity__forms_character_count {
-    label: "Forms Character Count"
+    label: "Forms Character Count :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.forms_character_count ;;
     type: number
@@ -140,7 +140,7 @@ view: custom {
     group_item_label: "Character Count"
 
     link: {
-      label: "Glean Dictionary reference for Forms Character Count"
+      label: "Glean Dictionary reference for Forms Character Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/forms_character_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -150,7 +150,7 @@ view: custom {
   }
 
   dimension: metrics__quantity__forms_field_count {
-    label: "Forms Field Count"
+    label: "Forms Field Count :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.forms_field_count ;;
     type: number
@@ -158,7 +158,7 @@ view: custom {
     group_item_label: "Field Count"
 
     link: {
-      label: "Glean Dictionary reference for Forms Field Count"
+      label: "Glean Dictionary reference for Forms Field Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/forms_field_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -168,7 +168,7 @@ view: custom {
   }
 
   dimension: metrics__quantity__forms_word_count {
-    label: "Forms Word Count"
+    label: "Forms Word Count :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.forms_word_count ;;
     type: number
@@ -176,7 +176,7 @@ view: custom {
     group_item_label: "Word Count"
 
     link: {
-      label: "Glean Dictionary reference for Forms Word Count"
+      label: "Glean Dictionary reference for Forms Word Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/forms_word_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -186,7 +186,7 @@ view: custom {
   }
 
   dimension: metrics__boolean__infobar_auto_translate_enabled {
-    label: "Infobar Auto Translate Enabled"
+    label: "Infobar Auto Translate Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.infobar_auto_translate_enabled ;;
     type: yesno
@@ -194,7 +194,7 @@ view: custom {
     group_item_label: "Auto Translate Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Infobar Auto Translate Enabled"
+      label: "Glean Dictionary reference for Infobar Auto Translate Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/infobar_auto_translate_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -204,7 +204,7 @@ view: custom {
   }
 
   dimension: metrics__boolean__infobar_outbound_enabled {
-    label: "Infobar Outbound Enabled"
+    label: "Infobar Outbound Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.infobar_outbound_enabled ;;
     type: yesno
@@ -212,7 +212,7 @@ view: custom {
     group_item_label: "Outbound Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Infobar Outbound Enabled"
+      label: "Glean Dictionary reference for Infobar Outbound Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/infobar_outbound_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -222,7 +222,7 @@ view: custom {
   }
 
   dimension: metrics__boolean__infobar_qe_enabled {
-    label: "Infobar Qe Enabled"
+    label: "Infobar Qe Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.infobar_qe_enabled ;;
     type: yesno
@@ -230,7 +230,7 @@ view: custom {
     group_item_label: "Qe Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Infobar Qe Enabled"
+      label: "Glean Dictionary reference for Infobar Qe Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/infobar_qe_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -240,7 +240,7 @@ view: custom {
   }
 
   dimension: metrics__string__metadata_bergamot_translator_version {
-    label: "Metadata Bergamot Translator Version"
+    label: "Metadata Bergamot Translator Version :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metadata_bergamot_translator_version ;;
     type: string
@@ -248,7 +248,7 @@ view: custom {
     group_item_label: "Bergamot Translator Version"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Bergamot Translator Version"
+      label: "Glean Dictionary reference for Metadata Bergamot Translator Version :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_bergamot_translator_version"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -258,7 +258,7 @@ view: custom {
   }
 
   dimension: metrics__string__metadata_channel {
-    label: "Metadata Channel"
+    label: "Metadata Channel :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metadata_channel ;;
     type: string
@@ -266,7 +266,7 @@ view: custom {
     group_item_label: "Channel"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Channel"
+      label: "Glean Dictionary reference for Metadata Channel :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_channel"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -276,7 +276,7 @@ view: custom {
   }
 
   dimension: metrics__quantity__metadata_cpu_cores_count {
-    label: "Metadata Cpu Cores Count"
+    label: "Metadata Cpu Cores Count :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.metadata_cpu_cores_count ;;
     type: number
@@ -284,7 +284,7 @@ view: custom {
     group_item_label: "Cpu Cores Count"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Cpu Cores Count"
+      label: "Glean Dictionary reference for Metadata Cpu Cores Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_cpu_cores_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -294,7 +294,7 @@ view: custom {
   }
 
   dimension: metrics__quantity__metadata_cpu_count {
-    label: "Metadata Cpu Count"
+    label: "Metadata Cpu Count :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.metadata_cpu_count ;;
     type: number
@@ -302,7 +302,7 @@ view: custom {
     group_item_label: "Cpu Count"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Cpu Count"
+      label: "Glean Dictionary reference for Metadata Cpu Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_cpu_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -312,7 +312,7 @@ view: custom {
   }
 
   dimension: metrics__string__metadata_cpu_extensions {
-    label: "Metadata Cpu Extensions"
+    label: "Metadata Cpu Extensions :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metadata_cpu_extensions ;;
     type: string
@@ -320,7 +320,7 @@ view: custom {
     group_item_label: "Cpu Extensions"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Cpu Extensions"
+      label: "Glean Dictionary reference for Metadata Cpu Extensions :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_cpu_extensions"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -330,7 +330,7 @@ view: custom {
   }
 
   dimension: metrics__quantity__metadata_cpu_family {
-    label: "Metadata Cpu Family"
+    label: "Metadata Cpu Family :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.metadata_cpu_family ;;
     type: number
@@ -338,7 +338,7 @@ view: custom {
     group_item_label: "Cpu Family"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Cpu Family"
+      label: "Glean Dictionary reference for Metadata Cpu Family :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_cpu_family"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -348,7 +348,7 @@ view: custom {
   }
 
   dimension: metrics__quantity__metadata_cpu_l2_cache {
-    label: "Metadata Cpu L2 Cache"
+    label: "Metadata Cpu L2 Cache :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.metadata_cpu_l2_cache ;;
     type: number
@@ -356,7 +356,7 @@ view: custom {
     group_item_label: "Cpu L2 Cache"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Cpu L2 Cache"
+      label: "Glean Dictionary reference for Metadata Cpu L2 Cache :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_cpu_l2_cache"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -366,7 +366,7 @@ view: custom {
   }
 
   dimension: metrics__quantity__metadata_cpu_l3_cache {
-    label: "Metadata Cpu L3 Cache"
+    label: "Metadata Cpu L3 Cache :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.metadata_cpu_l3_cache ;;
     type: number
@@ -374,7 +374,7 @@ view: custom {
     group_item_label: "Cpu L3 Cache"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Cpu L3 Cache"
+      label: "Glean Dictionary reference for Metadata Cpu L3 Cache :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_cpu_l3_cache"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -384,7 +384,7 @@ view: custom {
   }
 
   dimension: metrics__quantity__metadata_cpu_model {
-    label: "Metadata Cpu Model"
+    label: "Metadata Cpu Model :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.metadata_cpu_model ;;
     type: number
@@ -392,7 +392,7 @@ view: custom {
     group_item_label: "Cpu Model"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Cpu Model"
+      label: "Glean Dictionary reference for Metadata Cpu Model :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_cpu_model"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -402,7 +402,7 @@ view: custom {
   }
 
   dimension: metrics__quantity__metadata_cpu_speed {
-    label: "Metadata Cpu Speed"
+    label: "Metadata Cpu Speed :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.metadata_cpu_speed ;;
     type: number
@@ -410,7 +410,7 @@ view: custom {
     group_item_label: "Cpu Speed"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Cpu Speed"
+      label: "Glean Dictionary reference for Metadata Cpu Speed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_cpu_speed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -420,7 +420,7 @@ view: custom {
   }
 
   dimension: metrics__quantity__metadata_cpu_stepping {
-    label: "Metadata Cpu Stepping"
+    label: "Metadata Cpu Stepping :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.metadata_cpu_stepping ;;
     type: number
@@ -428,7 +428,7 @@ view: custom {
     group_item_label: "Cpu Stepping"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Cpu Stepping"
+      label: "Glean Dictionary reference for Metadata Cpu Stepping :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_cpu_stepping"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -438,7 +438,7 @@ view: custom {
   }
 
   dimension: metrics__string__metadata_cpu_vendor {
-    label: "Metadata Cpu Vendor"
+    label: "Metadata Cpu Vendor :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metadata_cpu_vendor ;;
     type: string
@@ -446,7 +446,7 @@ view: custom {
     group_item_label: "Cpu Vendor"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Cpu Vendor"
+      label: "Glean Dictionary reference for Metadata Cpu Vendor :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_cpu_vendor"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -456,7 +456,7 @@ view: custom {
   }
 
   dimension: metrics__string__metadata_detected_lang {
-    label: "Metadata Detected Lang"
+    label: "Metadata Detected Lang :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metadata_detected_lang ;;
     type: string
@@ -464,7 +464,7 @@ view: custom {
     group_item_label: "Detected Lang"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Detected Lang"
+      label: "Glean Dictionary reference for Metadata Detected Lang :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_detected_lang"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -474,7 +474,7 @@ view: custom {
   }
 
   dimension: metrics__string__metadata_extension_build_id {
-    label: "Metadata Extension Build Id"
+    label: "Metadata Extension Build Id :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metadata_extension_build_id ;;
     type: string
@@ -482,7 +482,7 @@ view: custom {
     group_item_label: "Extension Build Id"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Extension Build Id"
+      label: "Glean Dictionary reference for Metadata Extension Build Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_extension_build_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -493,7 +493,7 @@ and build config was used to produce this build
   }
 
   dimension: metrics__string__metadata_extension_version {
-    label: "Metadata Extension Version"
+    label: "Metadata Extension Version :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metadata_extension_version ;;
     type: string
@@ -501,7 +501,7 @@ and build config was used to produce this build
     group_item_label: "Extension Version"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Extension Version"
+      label: "Glean Dictionary reference for Metadata Extension Version :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_extension_version"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -511,7 +511,7 @@ and build config was used to produce this build
   }
 
   dimension: metrics__string__metadata_firefox_client_id {
-    label: "Metadata Firefox Client Id"
+    label: "Metadata Firefox Client Id :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metadata_firefox_client_id ;;
     type: string
@@ -519,7 +519,7 @@ and build config was used to produce this build
     group_item_label: "Firefox Client Id"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Firefox Client Id"
+      label: "Glean Dictionary reference for Metadata Firefox Client Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_firefox_client_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -529,7 +529,7 @@ and build config was used to produce this build
   }
 
   dimension: metrics__string__metadata_from_lang {
-    label: "Metadata From Lang"
+    label: "Metadata From Lang :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metadata_from_lang ;;
     type: string
@@ -537,7 +537,7 @@ and build config was used to produce this build
     group_item_label: "From Lang"
 
     link: {
-      label: "Glean Dictionary reference for Metadata From Lang"
+      label: "Glean Dictionary reference for Metadata From Lang :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_from_lang"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -548,7 +548,7 @@ and build config was used to produce this build
   }
 
   dimension: metrics__string__metadata_model_version {
-    label: "Metadata Model Version"
+    label: "Metadata Model Version :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metadata_model_version ;;
     type: string
@@ -556,7 +556,7 @@ and build config was used to produce this build
     group_item_label: "Model Version"
 
     link: {
-      label: "Glean Dictionary reference for Metadata Model Version"
+      label: "Glean Dictionary reference for Metadata Model Version :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_model_version"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -566,7 +566,7 @@ and build config was used to produce this build
   }
 
   dimension: metrics__quantity__metadata_system_memory {
-    label: "Metadata System Memory"
+    label: "Metadata System Memory :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.metadata_system_memory ;;
     type: number
@@ -574,7 +574,7 @@ and build config was used to produce this build
     group_item_label: "System Memory"
 
     link: {
-      label: "Glean Dictionary reference for Metadata System Memory"
+      label: "Glean Dictionary reference for Metadata System Memory :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_system_memory"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -584,7 +584,7 @@ and build config was used to produce this build
   }
 
   dimension: metrics__string__metadata_to_lang {
-    label: "Metadata To Lang"
+    label: "Metadata To Lang :)"
     hidden: no
     sql: ${TABLE}.metrics.string.metadata_to_lang ;;
     type: string
@@ -592,7 +592,7 @@ and build config was used to produce this build
     group_item_label: "To Lang"
 
     link: {
-      label: "Glean Dictionary reference for Metadata To Lang"
+      label: "Glean Dictionary reference for Metadata To Lang :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/metadata_to_lang"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -602,7 +602,7 @@ and build config was used to produce this build
   }
 
   dimension: metrics__timespan__performance_full_page_translated_time__value {
-    label: "Performance Full Page Translated Time Value"
+    label: "Performance Full Page Translated Time Value :)"
     hidden: no
     sql: ${TABLE}.metrics.timespan.performance_full_page_translated_time.value ;;
     type: number
@@ -610,7 +610,7 @@ and build config was used to produce this build
     group_item_label: "Full Page Translated Time Value"
 
     link: {
-      label: "Glean Dictionary reference for Performance Full Page Translated Time Value"
+      label: "Glean Dictionary reference for Performance Full Page Translated Time Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/performance_full_page_translated_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -621,7 +621,7 @@ to \"full page is translated\".
   }
 
   dimension: metrics__quantity__performance_full_page_translated_wps {
-    label: "Performance Full Page Translated Wps"
+    label: "Performance Full Page Translated Wps :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.performance_full_page_translated_wps ;;
     type: number
@@ -629,7 +629,7 @@ to \"full page is translated\".
     group_item_label: "Full Page Translated Wps"
 
     link: {
-      label: "Glean Dictionary reference for Performance Full Page Translated Wps"
+      label: "Glean Dictionary reference for Performance Full Page Translated Wps :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/performance_full_page_translated_wps"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -640,7 +640,7 @@ pressed\" to \"full page is translated\".
   }
 
   dimension: metrics__timespan__performance_model_download_time_num__value {
-    label: "Performance Model Download Time Num Value"
+    label: "Performance Model Download Time Num Value :)"
     hidden: no
     sql: ${TABLE}.metrics.timespan.performance_model_download_time_num.value ;;
     type: number
@@ -648,7 +648,7 @@ pressed\" to \"full page is translated\".
     group_item_label: "Model Download Time Num Value"
 
     link: {
-      label: "Glean Dictionary reference for Performance Model Download Time Num Value"
+      label: "Glean Dictionary reference for Performance Model Download Time Num Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/performance_model_download_time_num"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -660,7 +660,7 @@ changing type from string to quantity)
   }
 
   dimension: metrics__timespan__performance_model_load_time_num__value {
-    label: "Performance Model Load Time Num Value"
+    label: "Performance Model Load Time Num Value :)"
     hidden: no
     sql: ${TABLE}.metrics.timespan.performance_model_load_time_num.value ;;
     type: number
@@ -668,7 +668,7 @@ changing type from string to quantity)
     group_item_label: "Model Load Time Num Value"
 
     link: {
-      label: "Glean Dictionary reference for Performance Model Load Time Num Value"
+      label: "Glean Dictionary reference for Performance Model Load Time Num Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/performance_model_load_time_num"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -680,7 +680,7 @@ changing type from string to quantity)
   }
 
   dimension: metrics__timespan__performance_total_usage_time__value {
-    label: "Performance Total Usage Time Value"
+    label: "Performance Total Usage Time Value :)"
     hidden: no
     sql: ${TABLE}.metrics.timespan.performance_total_usage_time.value ;;
     type: number
@@ -688,7 +688,7 @@ changing type from string to quantity)
     group_item_label: "Total Usage Time Value"
 
     link: {
-      label: "Glean Dictionary reference for Performance Total Usage Time Value"
+      label: "Glean Dictionary reference for Performance Total Usage Time Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/performance_total_usage_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -698,7 +698,7 @@ changing type from string to quantity)
   }
 
   dimension: metrics__timespan__performance_translation_engine_time__value {
-    label: "Performance Translation Engine Time Value"
+    label: "Performance Translation Engine Time Value :)"
     hidden: no
     sql: ${TABLE}.metrics.timespan.performance_translation_engine_time.value ;;
     type: number
@@ -706,7 +706,7 @@ changing type from string to quantity)
     group_item_label: "Translation Engine Time Value"
 
     link: {
-      label: "Glean Dictionary reference for Performance Translation Engine Time Value"
+      label: "Glean Dictionary reference for Performance Translation Engine Time Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/performance_translation_engine_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -716,7 +716,7 @@ changing type from string to quantity)
   }
 
   dimension: metrics__quantity__performance_translation_engine_wps {
-    label: "Performance Translation Engine Wps"
+    label: "Performance Translation Engine Wps :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.performance_translation_engine_wps ;;
     type: number
@@ -724,7 +724,7 @@ changing type from string to quantity)
     group_item_label: "Translation Engine Wps"
 
     link: {
-      label: "Glean Dictionary reference for Performance Translation Engine Wps"
+      label: "Glean Dictionary reference for Performance Translation Engine Wps :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/performance_translation_engine_wps"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -734,7 +734,7 @@ changing type from string to quantity)
   }
 
   dimension: metrics__string__performance_translation_quality {
-    label: "Performance Translation Quality"
+    label: "Performance Translation Quality :)"
     hidden: no
     sql: ${TABLE}.metrics.string.performance_translation_quality ;;
     type: string
@@ -742,7 +742,7 @@ changing type from string to quantity)
     group_item_label: "Translation Quality"
 
     link: {
-      label: "Glean Dictionary reference for Performance Translation Quality"
+      label: "Glean Dictionary reference for Performance Translation Quality :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/performance_translation_quality"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -752,7 +752,7 @@ changing type from string to quantity)
   }
 
   dimension: metrics__quantity__performance_word_count {
-    label: "Performance Word Count"
+    label: "Performance Word Count :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.performance_word_count ;;
     type: number
@@ -760,7 +760,7 @@ changing type from string to quantity)
     group_item_label: "Word Count"
 
     link: {
-      label: "Glean Dictionary reference for Performance Word Count"
+      label: "Glean Dictionary reference for Performance Word Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/performance_word_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -770,7 +770,7 @@ changing type from string to quantity)
   }
 
   dimension: metrics__quantity__performance_word_count_visible_in_viewport {
-    label: "Performance Word Count Visible In Viewport"
+    label: "Performance Word Count Visible In Viewport :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.performance_word_count_visible_in_viewport ;;
     type: number
@@ -778,7 +778,7 @@ changing type from string to quantity)
     group_item_label: "Word Count Visible In Viewport"
 
     link: {
-      label: "Glean Dictionary reference for Performance Word Count Visible In Viewport"
+      label: "Glean Dictionary reference for Performance Word Count Visible In Viewport :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/performance_word_count_visible_in_viewport"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -789,7 +789,7 @@ were visible in the viewport at the time of \"translation button pressed\".
   }
 
   dimension: metrics__boolean__quality_is_supervised {
-    label: "Quality Is Supervised"
+    label: "Quality Is Supervised :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.quality_is_supervised ;;
     type: yesno
@@ -797,7 +797,7 @@ were visible in the viewport at the time of \"translation button pressed\".
     group_item_label: "Is Supervised"
 
     link: {
-      label: "Glean Dictionary reference for Quality Is Supervised"
+      label: "Glean Dictionary reference for Quality Is Supervised :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/quality_is_supervised"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -807,7 +807,7 @@ were visible in the viewport at the time of \"translation button pressed\".
   }
 
   dimension: metrics__quantity__quality_sent_90th {
-    label: "Quality Sent 90Th"
+    label: "Quality Sent 90Th :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.quality_sent_90th ;;
     type: number
@@ -815,7 +815,7 @@ were visible in the viewport at the time of \"translation button pressed\".
     group_item_label: "Sent 90Th"
 
     link: {
-      label: "Glean Dictionary reference for Quality Sent 90Th"
+      label: "Glean Dictionary reference for Quality Sent 90Th :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/quality_sent_90th"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -826,7 +826,7 @@ multiplied by 1000.
   }
 
   dimension: metrics__quantity__quality_sent_avg {
-    label: "Quality Sent Avg"
+    label: "Quality Sent Avg :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.quality_sent_avg ;;
     type: number
@@ -834,7 +834,7 @@ multiplied by 1000.
     group_item_label: "Sent Avg"
 
     link: {
-      label: "Glean Dictionary reference for Quality Sent Avg"
+      label: "Glean Dictionary reference for Quality Sent Avg :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/quality_sent_avg"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -845,7 +845,7 @@ multiplied by 1000.
   }
 
   dimension: metrics__quantity__quality_sent_median {
-    label: "Quality Sent Median"
+    label: "Quality Sent Median :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.quality_sent_median ;;
     type: number
@@ -853,7 +853,7 @@ multiplied by 1000.
     group_item_label: "Sent Median"
 
     link: {
-      label: "Glean Dictionary reference for Quality Sent Median"
+      label: "Glean Dictionary reference for Quality Sent Median :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/quality_sent_median"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -864,7 +864,7 @@ multiplied by 1000.
   }
 
   dimension: metrics__string__quality_summary {
-    label: "Quality Summary"
+    label: "Quality Summary :)"
     hidden: no
     sql: ${TABLE}.metrics.string.quality_summary ;;
     type: string
@@ -872,7 +872,7 @@ multiplied by 1000.
     group_item_label: "Summary"
 
     link: {
-      label: "Glean Dictionary reference for Quality Summary"
+      label: "Glean Dictionary reference for Quality Summary :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/quality_summary"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -885,7 +885,7 @@ Example: \"0.5,0.55,0.35,0.6,0.55,0.7\"
   }
 
   dimension: metrics__quantity__quality_word_90th {
-    label: "Quality Word 90Th"
+    label: "Quality Word 90Th :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.quality_word_90th ;;
     type: number
@@ -893,7 +893,7 @@ Example: \"0.5,0.55,0.35,0.6,0.55,0.7\"
     group_item_label: "Word 90Th"
 
     link: {
-      label: "Glean Dictionary reference for Quality Word 90Th"
+      label: "Glean Dictionary reference for Quality Word 90Th :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/quality_word_90th"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -904,7 +904,7 @@ multiplied by 1000.
   }
 
   dimension: metrics__quantity__quality_word_avg {
-    label: "Quality Word Avg"
+    label: "Quality Word Avg :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.quality_word_avg ;;
     type: number
@@ -912,7 +912,7 @@ multiplied by 1000.
     group_item_label: "Word Avg"
 
     link: {
-      label: "Glean Dictionary reference for Quality Word Avg"
+      label: "Glean Dictionary reference for Quality Word Avg :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/quality_word_avg"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -923,7 +923,7 @@ multiplied by 1000.
   }
 
   dimension: metrics__quantity__quality_word_median {
-    label: "Quality Word Median"
+    label: "Quality Word Median :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.quality_word_median ;;
     type: number
@@ -931,7 +931,7 @@ multiplied by 1000.
     group_item_label: "Word Median"
 
     link: {
-      label: "Glean Dictionary reference for Quality Word Median"
+      label: "Glean Dictionary reference for Quality Word Median :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/quality_word_median"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -942,7 +942,7 @@ multiplied by 1000.
   }
 
   dimension: metrics__counter__service_lang_mismatch {
-    label: "Service Lang Mismatch"
+    label: "Service Lang Mismatch :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.service_lang_mismatch ;;
     type: number
@@ -950,7 +950,7 @@ multiplied by 1000.
     group_item_label: "Lang Mismatch"
 
     link: {
-      label: "Glean Dictionary reference for Service Lang Mismatch"
+      label: "Glean Dictionary reference for Service Lang Mismatch :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/service_lang_mismatch"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -960,7 +960,7 @@ multiplied by 1000.
   }
 
   dimension: metrics__counter__service_not_supported {
-    label: "Service Not Supported"
+    label: "Service Not Supported :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.service_not_supported ;;
     type: number
@@ -968,7 +968,7 @@ multiplied by 1000.
     group_item_label: "Not Supported"
 
     link: {
-      label: "Glean Dictionary reference for Service Not Supported"
+      label: "Glean Dictionary reference for Service Not Supported :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/service_not_supported"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -978,14 +978,14 @@ multiplied by 1000.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -996,14 +996,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1014,14 +1014,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1032,14 +1032,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_translations/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

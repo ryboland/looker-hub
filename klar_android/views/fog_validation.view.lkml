@@ -6,7 +6,7 @@
 
 view: fog_validation {
   dimension: metrics__uuid__fog_validation_legacy_telemetry_client_id {
-    label: "Fog Validation Legacy Telemetry Client Id"
+    label: "Fog Validation Legacy Telemetry Client Id :)"
     hidden: yes
     sql: ${TABLE}.metrics.uuid.fog_validation_legacy_telemetry_client_id ;;
     type: string
@@ -14,7 +14,7 @@ view: fog_validation {
     group_item_label: "Legacy Telemetry Client Id"
 
     link: {
-      label: "Glean Dictionary reference for Fog Validation Legacy Telemetry Client Id"
+      label: "Glean Dictionary reference for Fog Validation Legacy Telemetry Client Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/fog_validation_legacy_telemetry_client_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -23,7 +23,7 @@ view: fog_validation {
   }
 
   dimension: metrics__string__fog_validation_os_version {
-    label: "Fog Validation Os Version"
+    label: "Fog Validation Os Version :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.fog_validation_os_version ;;
     type: string
@@ -31,7 +31,7 @@ view: fog_validation {
     group_item_label: "Os Version"
 
     link: {
-      label: "Glean Dictionary reference for Fog Validation Os Version"
+      label: "Glean Dictionary reference for Fog Validation Os Version :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/fog_validation_os_version"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -40,7 +40,7 @@ view: fog_validation {
   }
 
   dimension: metrics__boolean__fog_validation_profile_disk_is_ssd {
-    label: "Fog Validation Profile Disk Is Ssd"
+    label: "Fog Validation Profile Disk Is Ssd :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.fog_validation_profile_disk_is_ssd ;;
     type: yesno
@@ -48,7 +48,7 @@ view: fog_validation {
     group_item_label: "Profile Disk Is Ssd"
 
     link: {
-      label: "Glean Dictionary reference for Fog Validation Profile Disk Is Ssd"
+      label: "Glean Dictionary reference for Fog Validation Profile Disk Is Ssd :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/fog_validation_profile_disk_is_ssd"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -57,14 +57,14 @@ view: fog_validation {
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -75,14 +75,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -93,14 +93,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -111,14 +111,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/klar_android/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

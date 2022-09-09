@@ -6,7 +6,7 @@
 
 view: pseudo_main {
   dimension: metrics__uuid__legacy_telemetry_client_id {
-    label: "Legacy Telemetry Client Id"
+    label: "Legacy Telemetry Client Id :)"
     hidden: no
     sql: ${TABLE}.metrics.uuid.legacy_telemetry_client_id ;;
     type: string
@@ -14,7 +14,7 @@ view: pseudo_main {
     group_item_label: "Client Id"
 
     link: {
-      label: "Glean Dictionary reference for Legacy Telemetry Client Id"
+      label: "Glean Dictionary reference for Legacy Telemetry Client Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/legacy_telemetry_client_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -31,7 +31,7 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
   }
 
   dimension: metrics__quantity__legacy_telemetry_profile_subsession_counter {
-    label: "Legacy Telemetry Profile Subsession Counter"
+    label: "Legacy Telemetry Profile Subsession Counter :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.legacy_telemetry_profile_subsession_counter ;;
     type: number
@@ -39,7 +39,7 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
     group_item_label: "Profile Subsession Counter"
 
     link: {
-      label: "Glean Dictionary reference for Legacy Telemetry Profile Subsession Counter"
+      label: "Glean Dictionary reference for Legacy Telemetry Profile Subsession Counter :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/legacy_telemetry_profile_subsession_counter"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -52,7 +52,7 @@ It is a sequence number by a longer name.
   }
 
   dimension: metrics__timing_distribution__wr_renderer_time__sum {
-    label: "Wr Renderer Time Sum"
+    label: "Wr Renderer Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_renderer_time.sum ;;
     type: number
@@ -60,7 +60,7 @@ It is a sequence number by a longer name.
     group_item_label: "Renderer Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Renderer Time Sum"
+      label: "Glean Dictionary reference for Wr Renderer Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/wr_renderer_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -70,14 +70,14 @@ It is a sequence number by a longer name.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -88,14 +88,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -106,14 +106,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -124,14 +124,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

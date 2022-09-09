@@ -6,7 +6,7 @@
 
 view: startup_timeline {
   dimension: metrics__counter__startup_timeline_clock_ticks_per_second {
-    label: "Startup Timeline Clock Ticks Per Second"
+    label: "Startup Timeline Clock Ticks Per Second :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.startup_timeline_clock_ticks_per_second ;;
     type: number
@@ -14,7 +14,7 @@ view: startup_timeline {
     group_item_label: "Clock Ticks Per Second"
 
     link: {
-      label: "Glean Dictionary reference for Startup Timeline Clock Ticks Per Second"
+      label: "Glean Dictionary reference for Startup Timeline Clock Ticks Per Second :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_clock_ticks_per_second"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -26,7 +26,7 @@ the `framework_start` metric.
   }
 
   dimension: metrics__quantity__startup_timeline_clock_ticks_per_second_v2 {
-    label: "Startup Timeline Clock Ticks Per Second V2"
+    label: "Startup Timeline Clock Ticks Per Second V2 :)"
     hidden: yes
     sql: ${TABLE}.metrics.quantity.startup_timeline_clock_ticks_per_second_v2 ;;
     type: number
@@ -34,7 +34,7 @@ the `framework_start` metric.
     group_item_label: "Clock Ticks Per Second V2"
 
     link: {
-      label: "Glean Dictionary reference for Startup Timeline Clock Ticks Per Second V2"
+      label: "Glean Dictionary reference for Startup Timeline Clock Ticks Per Second V2 :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_clock_ticks_per_second_v2"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -46,7 +46,7 @@ the `framework_primary/secondary` metrics.
   }
 
   dimension: metrics__timespan__startup_timeline_framework_primary__value {
-    label: "Startup Timeline Framework Primary Value"
+    label: "Startup Timeline Framework Primary Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.startup_timeline_framework_primary.value ;;
     type: number
@@ -54,7 +54,7 @@ the `framework_primary/secondary` metrics.
     group_item_label: "Framework Primary Value"
 
     link: {
-      label: "Glean Dictionary reference for Startup Timeline Framework Primary Value"
+      label: "Glean Dictionary reference for Startup Timeline Framework Primary Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_framework_primary"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -80,7 +80,7 @@ between devices, is also reported as a metric
   }
 
   dimension: metrics__timespan__startup_timeline_framework_secondary__value {
-    label: "Startup Timeline Framework Secondary Value"
+    label: "Startup Timeline Framework Secondary Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.startup_timeline_framework_secondary.value ;;
     type: number
@@ -88,7 +88,7 @@ between devices, is also reported as a metric
     group_item_label: "Framework Secondary Value"
 
     link: {
-      label: "Glean Dictionary reference for Startup Timeline Framework Secondary Value"
+      label: "Glean Dictionary reference for Startup Timeline Framework Secondary Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_framework_secondary"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -101,7 +101,7 @@ metric, see `framework_primary`
   }
 
   dimension: metrics__timespan__startup_timeline_framework_start__value {
-    label: "Startup Timeline Framework Start Value"
+    label: "Startup Timeline Framework Start Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.startup_timeline_framework_start.value ;;
     type: number
@@ -109,7 +109,7 @@ metric, see `framework_primary`
     group_item_label: "Framework Start Value"
 
     link: {
-      label: "Glean Dictionary reference for Startup Timeline Framework Start Value"
+      label: "Glean Dictionary reference for Startup Timeline Framework Start Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_framework_start"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -127,7 +127,7 @@ devices, is also reported as a metric
   }
 
   dimension: metrics__boolean__startup_timeline_framework_start_error {
-    label: "Startup Timeline Framework Start Error"
+    label: "Startup Timeline Framework Start Error :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.startup_timeline_framework_start_error ;;
     type: yesno
@@ -135,7 +135,7 @@ devices, is also reported as a metric
     group_item_label: "Framework Start Error"
 
     link: {
-      label: "Glean Dictionary reference for Startup Timeline Framework Start Error"
+      label: "Glean Dictionary reference for Startup Timeline Framework Start Error :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_framework_start_error"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -147,7 +147,7 @@ indicative of a bug in the implementation.
   }
 
   dimension: metrics__boolean__startup_timeline_framework_start_read_error {
-    label: "Startup Timeline Framework Start Read Error"
+    label: "Startup Timeline Framework Start Read Error :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.startup_timeline_framework_start_read_error ;;
     type: yesno
@@ -155,7 +155,7 @@ indicative of a bug in the implementation.
     group_item_label: "Framework Start Read Error"
 
     link: {
-      label: "Glean Dictionary reference for Startup Timeline Framework Start Read Error"
+      label: "Glean Dictionary reference for Startup Timeline Framework Start Read Error :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/startup_timeline_framework_start_read_error"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -167,14 +167,14 @@ the application will catch a file reading exception.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -185,14 +185,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -203,14 +203,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -221,14 +221,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

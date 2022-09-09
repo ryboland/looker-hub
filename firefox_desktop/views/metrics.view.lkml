@@ -6,7 +6,7 @@
 
 view: metrics {
   dimension: metrics__counter__browser_engagement_active_ticks {
-    label: "Browser Engagement Active Ticks"
+    label: "Browser Engagement Active Ticks :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.browser_engagement_active_ticks ;;
     type: number
@@ -14,7 +14,7 @@ view: metrics {
     group_item_label: "Active Ticks"
 
     link: {
-      label: "Glean Dictionary reference for Browser Engagement Active Ticks"
+      label: "Glean Dictionary reference for Browser Engagement Active Ticks :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/browser_engagement_active_ticks"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -31,7 +31,7 @@ Migrated from Telemetry's `browser.engagement.active_ticks`.
   }
 
   dimension: metrics__counter__browser_engagement_uri_count {
-    label: "Browser Engagement Uri Count"
+    label: "Browser Engagement Uri Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.browser_engagement_uri_count ;;
     type: number
@@ -39,7 +39,7 @@ Migrated from Telemetry's `browser.engagement.active_ticks`.
     group_item_label: "Uri Count"
 
     link: {
-      label: "Glean Dictionary reference for Browser Engagement Uri Count"
+      label: "Glean Dictionary reference for Browser Engagement Uri Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/browser_engagement_uri_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -54,7 +54,7 @@ Migrated from Telemetry's
   }
 
   dimension: metrics__quantity__browser_link_open_newwindow_restriction {
-    label: "Browser Link Open Newwindow Restriction"
+    label: "Browser Link Open Newwindow Restriction :)"
     hidden: yes
     sql: ${TABLE}.metrics.quantity.browser_link_open_newwindow_restriction ;;
     type: number
@@ -62,7 +62,7 @@ Migrated from Telemetry's
     group_item_label: "Open Newwindow Restriction"
 
     link: {
-      label: "Glean Dictionary reference for Browser Link Open Newwindow Restriction"
+      label: "Glean Dictionary reference for Browser Link Open Newwindow Restriction :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/browser_link_open_newwindow_restriction"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -72,7 +72,7 @@ Migrated from Telemetry's
   }
 
   dimension: metrics__timespan__extensions_startup_cache_load_time__value {
-    label: "Extensions Startup Cache Load Time Value"
+    label: "Extensions Startup Cache Load Time Value :)"
     hidden: no
     sql: ${TABLE}.metrics.timespan.extensions_startup_cache_load_time.value ;;
     type: number
@@ -80,7 +80,7 @@ Migrated from Telemetry's
     group_item_label: "Startup Cache Load Time Value"
 
     link: {
-      label: "Glean Dictionary reference for Extensions Startup Cache Load Time Value"
+      label: "Glean Dictionary reference for Extensions Startup Cache Load Time Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/extensions_startup_cache_load_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -90,7 +90,7 @@ Migrated from Telemetry's
   }
 
   dimension: metrics__uuid__legacy_telemetry_client_id {
-    label: "Legacy Telemetry Client Id"
+    label: "Legacy Telemetry Client Id :)"
     hidden: no
     sql: ${TABLE}.metrics.uuid.legacy_telemetry_client_id ;;
     type: string
@@ -98,7 +98,7 @@ Migrated from Telemetry's
     group_item_label: "Client Id"
 
     link: {
-      label: "Glean Dictionary reference for Legacy Telemetry Client Id"
+      label: "Glean Dictionary reference for Legacy Telemetry Client Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/legacy_telemetry_client_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -115,14 +115,14 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
   }
 
   dimension: metrics__labeled_counter__pdfjs_editing {
-    label: "Pdfjs Editing"
+    label: "Pdfjs Editing :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.pdfjs_editing ;;
     group_label: "Pdfjs"
     group_item_label: "Editing"
 
     link: {
-      label: "Glean Dictionary reference for Pdfjs Editing"
+      label: "Glean Dictionary reference for Pdfjs Editing :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/pdfjs_editing"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -132,7 +132,7 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
   }
 
   dimension: metrics__string__search_engine_default_display_name {
-    label: "Search Engine Default Display Name"
+    label: "Search Engine Default Display Name :)"
     hidden: no
     sql: ${TABLE}.metrics.string.search_engine_default_display_name ;;
     type: string
@@ -140,7 +140,7 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
     group_item_label: "Display Name"
 
     link: {
-      label: "Glean Dictionary reference for Search Engine Default Display Name"
+      label: "Glean Dictionary reference for Search Engine Default Display Name :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/search_engine_default_display_name"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -150,7 +150,7 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
   }
 
   dimension: metrics__string__search_engine_default_engine_id {
-    label: "Search Engine Default Engine Id"
+    label: "Search Engine Default Engine Id :)"
     hidden: no
     sql: ${TABLE}.metrics.string.search_engine_default_engine_id ;;
     type: string
@@ -158,7 +158,7 @@ Does not need to be sent in the Glean \"deletion-request\" ping.
     group_item_label: "Engine Id"
 
     link: {
-      label: "Glean Dictionary reference for Search Engine Default Engine Id"
+      label: "Glean Dictionary reference for Search Engine Default Engine Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/search_engine_default_engine_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -171,7 +171,7 @@ For other engines, this is `other-<extensionName>`.
   }
 
   dimension: metrics__string__search_engine_default_load_path {
-    label: "Search Engine Default Load Path"
+    label: "Search Engine Default Load Path :)"
     hidden: no
     sql: ${TABLE}.metrics.string.search_engine_default_load_path ;;
     type: string
@@ -179,7 +179,7 @@ For other engines, this is `other-<extensionName>`.
     group_item_label: "Load Path"
 
     link: {
-      label: "Glean Dictionary reference for Search Engine Default Load Path"
+      label: "Glean Dictionary reference for Search Engine Default Load Path :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/search_engine_default_load_path"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -195,7 +195,7 @@ Note: this metric is truncated at 100 characters.
   }
 
   dimension: metrics__string__search_engine_default_verified {
-    label: "Search Engine Default Verified"
+    label: "Search Engine Default Verified :)"
     hidden: no
     sql: ${TABLE}.metrics.string.search_engine_default_verified ;;
     type: string
@@ -203,7 +203,7 @@ Note: this metric is truncated at 100 characters.
     group_item_label: "Verified"
 
     link: {
-      label: "Glean Dictionary reference for Search Engine Default Verified"
+      label: "Glean Dictionary reference for Search Engine Default Verified :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/search_engine_default_verified"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -216,7 +216,7 @@ on if the loadPathHash is valid.
   }
 
   dimension: metrics__string__search_engine_private_display_name {
-    label: "Search Engine Private Display Name"
+    label: "Search Engine Private Display Name :)"
     hidden: no
     sql: ${TABLE}.metrics.string.search_engine_private_display_name ;;
     type: string
@@ -224,7 +224,7 @@ on if the loadPathHash is valid.
     group_item_label: "Display Name"
 
     link: {
-      label: "Glean Dictionary reference for Search Engine Private Display Name"
+      label: "Glean Dictionary reference for Search Engine Private Display Name :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/search_engine_private_display_name"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -239,7 +239,7 @@ default engine, and hence both versions of these fields will be filled in.
   }
 
   dimension: metrics__string__search_engine_private_engine_id {
-    label: "Search Engine Private Engine Id"
+    label: "Search Engine Private Engine Id :)"
     hidden: no
     sql: ${TABLE}.metrics.string.search_engine_private_engine_id ;;
     type: string
@@ -247,7 +247,7 @@ default engine, and hence both versions of these fields will be filled in.
     group_item_label: "Engine Id"
 
     link: {
-      label: "Glean Dictionary reference for Search Engine Private Engine Id"
+      label: "Glean Dictionary reference for Search Engine Private Engine Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/search_engine_private_engine_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -265,7 +265,7 @@ default engine, and hence both versions of these fields will be filled in.
   }
 
   dimension: metrics__string__search_engine_private_load_path {
-    label: "Search Engine Private Load Path"
+    label: "Search Engine Private Load Path :)"
     hidden: no
     sql: ${TABLE}.metrics.string.search_engine_private_load_path ;;
     type: string
@@ -273,7 +273,7 @@ default engine, and hence both versions of these fields will be filled in.
     group_item_label: "Load Path"
 
     link: {
-      label: "Glean Dictionary reference for Search Engine Private Load Path"
+      label: "Glean Dictionary reference for Search Engine Private Load Path :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/search_engine_private_load_path"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -294,7 +294,7 @@ default engine, and hence both versions of these fields will be filled in.
   }
 
   dimension: metrics__string__search_engine_private_verified {
-    label: "Search Engine Private Verified"
+    label: "Search Engine Private Verified :)"
     hidden: no
     sql: ${TABLE}.metrics.string.search_engine_private_verified ;;
     type: string
@@ -302,7 +302,7 @@ default engine, and hence both versions of these fields will be filled in.
     group_item_label: "Verified"
 
     link: {
-      label: "Glean Dictionary reference for Search Engine Private Verified"
+      label: "Glean Dictionary reference for Search Engine Private Verified :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/search_engine_private_verified"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -320,7 +320,7 @@ default engine, and hence both versions of these fields will be filled in.
   }
 
   dimension: metrics__boolean__browser_ui_proton_enabled {
-    label: "Browser Ui Proton Enabled"
+    label: "Browser Ui Proton Enabled :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.browser_ui_proton_enabled ;;
     type: yesno
@@ -328,7 +328,7 @@ default engine, and hence both versions of these fields will be filled in.
     group_item_label: "Proton Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Browser Ui Proton Enabled"
+      label: "Glean Dictionary reference for Browser Ui Proton Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/browser_ui_proton_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -338,7 +338,7 @@ default engine, and hence both versions of these fields will be filled in.
   }
 
   dimension: metrics__boolean__fog_failed_idle_registration {
-    label: "Fog Failed Idle Registration"
+    label: "Fog Failed Idle Registration :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.fog_failed_idle_registration ;;
     type: yesno
@@ -346,7 +346,7 @@ default engine, and hence both versions of these fields will be filled in.
     group_item_label: "Failed Idle Registration"
 
     link: {
-      label: "Glean Dictionary reference for Fog Failed Idle Registration"
+      label: "Glean Dictionary reference for Fog Failed Idle Registration :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/fog_failed_idle_registration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -358,7 +358,7 @@ Child-process data will likely be absent, or incomplete.
   }
 
   dimension: metrics__timespan__fog_initialization__value {
-    label: "Fog Initialization Value"
+    label: "Fog Initialization Value :)"
     hidden: no
     sql: ${TABLE}.metrics.timespan.fog_initialization.value ;;
     type: number
@@ -366,7 +366,7 @@ Child-process data will likely be absent, or incomplete.
     group_item_label: "Initialization Value"
 
     link: {
-      label: "Glean Dictionary reference for Fog Initialization Value"
+      label: "Glean Dictionary reference for Fog Initialization Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/fog_initialization"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -376,7 +376,7 @@ Child-process data will likely be absent, or incomplete.
   }
 
   dimension: metrics__memory_distribution__fog_ipc_buffer_sizes__sum {
-    label: "Fog Ipc Buffer Sizes Sum"
+    label: "Fog Ipc Buffer Sizes Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.fog_ipc_buffer_sizes.sum ;;
     type: number
@@ -384,7 +384,7 @@ Child-process data will likely be absent, or incomplete.
     group_item_label: "Buffer Sizes Sum"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Buffer Sizes Sum"
+      label: "Glean Dictionary reference for Fog Ipc Buffer Sizes Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/fog_ipc_buffer_sizes"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -394,7 +394,7 @@ Child-process data will likely be absent, or incomplete.
   }
 
   dimension: metrics__timing_distribution__fog_ipc_flush_durations__sum {
-    label: "Fog Ipc Flush Durations Sum"
+    label: "Fog Ipc Flush Durations Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.fog_ipc_flush_durations.sum ;;
     type: number
@@ -402,7 +402,7 @@ Child-process data will likely be absent, or incomplete.
     group_item_label: "Flush Durations Sum"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Flush Durations Sum"
+      label: "Glean Dictionary reference for Fog Ipc Flush Durations Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/fog_ipc_flush_durations"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -413,7 +413,7 @@ IPC buffers and all of them being received by the parent.
   }
 
   dimension: metrics__counter__fog_ipc_flush_failures {
-    label: "Fog Ipc Flush Failures"
+    label: "Fog Ipc Flush Failures :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.fog_ipc_flush_failures ;;
     type: number
@@ -421,7 +421,7 @@ IPC buffers and all of them being received by the parent.
     group_item_label: "Flush Failures"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Flush Failures"
+      label: "Glean Dictionary reference for Fog Ipc Flush Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/fog_ipc_flush_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -434,7 +434,7 @@ handling code instead of using `MozPromise::All`.
   }
 
   dimension: metrics__counter__fog_ipc_replay_failures {
-    label: "Fog Ipc Replay Failures"
+    label: "Fog Ipc Replay Failures :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.fog_ipc_replay_failures ;;
     type: number
@@ -442,7 +442,7 @@ handling code instead of using `MozPromise::All`.
     group_item_label: "Replay Failures"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Replay Failures"
+      label: "Glean Dictionary reference for Fog Ipc Replay Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/fog_ipc_replay_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -453,7 +453,7 @@ parent process.
   }
 
   dimension: metrics__counter__fog_ipc_shutdown_registration_failures {
-    label: "Fog Ipc Shutdown Registration Failures"
+    label: "Fog Ipc Shutdown Registration Failures :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.fog_ipc_shutdown_registration_failures ;;
     type: number
@@ -461,7 +461,7 @@ parent process.
     group_item_label: "Shutdown Registration Failures"
 
     link: {
-      label: "Glean Dictionary reference for Fog Ipc Shutdown Registration Failures"
+      label: "Glean Dictionary reference for Fog Ipc Shutdown Registration Failures :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/fog_ipc_shutdown_registration_failures"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -478,7 +478,7 @@ Will likely be obsoleted by bug 1641989.
   }
 
   dimension: metrics__string__geckoview_validation_build_id {
-    label: "Geckoview Validation Build Id"
+    label: "Geckoview Validation Build Id :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.geckoview_validation_build_id ;;
     type: string
@@ -486,7 +486,7 @@ Will likely be obsoleted by bug 1641989.
     group_item_label: "Build Id"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Validation Build Id"
+      label: "Glean Dictionary reference for Geckoview Validation Build Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/geckoview_validation_build_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -496,7 +496,7 @@ Will likely be obsoleted by bug 1641989.
   }
 
   dimension: metrics__string__geckoview_validation_version {
-    label: "Geckoview Validation Version"
+    label: "Geckoview Validation Version :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.geckoview_validation_version ;;
     type: string
@@ -504,7 +504,7 @@ Will likely be obsoleted by bug 1641989.
     group_item_label: "Version"
 
     link: {
-      label: "Glean Dictionary reference for Geckoview Validation Version"
+      label: "Glean Dictionary reference for Geckoview Validation Version :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/geckoview_validation_version"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -514,7 +514,7 @@ Will likely be obsoleted by bug 1641989.
   }
 
   dimension: metrics__boolean__gifft_validation_main_ping_assembling {
-    label: "Gifft Validation Main Ping Assembling"
+    label: "Gifft Validation Main Ping Assembling :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.gifft_validation_main_ping_assembling ;;
     type: yesno
@@ -522,7 +522,7 @@ Will likely be obsoleted by bug 1641989.
     group_item_label: "Main Ping Assembling"
 
     link: {
-      label: "Glean Dictionary reference for Gifft Validation Main Ping Assembling"
+      label: "Glean Dictionary reference for Gifft Validation Main Ping Assembling :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/gifft_validation_main_ping_assembling"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -534,14 +534,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__gmp_update_xml_fetch_result {
-    label: "Gmp Update Xml Fetch Result"
+    label: "Gmp Update Xml Fetch Result :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.gmp_update_xml_fetch_result ;;
     group_label: "Gmp"
     group_item_label: "Update Xml Fetch Result"
 
     link: {
-      label: "Glean Dictionary reference for Gmp Update Xml Fetch Result"
+      label: "Glean Dictionary reference for Gmp Update Xml Fetch Result :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/gmp_update_xml_fetch_result"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -551,14 +551,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__netwerk_early_hints {
-    label: "Netwerk Early Hints"
+    label: "Netwerk Early Hints :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.netwerk_early_hints ;;
     group_label: "Netwerk"
     group_item_label: "Early Hints"
 
     link: {
-      label: "Glean Dictionary reference for Netwerk Early Hints"
+      label: "Glean Dictionary reference for Netwerk Early Hints :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/netwerk_early_hints"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -568,7 +568,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__paint_build_displaylist_time__sum {
-    label: "Paint Build Displaylist Time Sum"
+    label: "Paint Build Displaylist Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.paint_build_displaylist_time.sum ;;
     type: number
@@ -576,7 +576,7 @@ To be used to validate GIFFT.
     group_item_label: "Build Displaylist Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Paint Build Displaylist Time Sum"
+      label: "Glean Dictionary reference for Paint Build Displaylist Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/paint_build_displaylist_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -586,7 +586,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__custom_distribution__power_battery_percentage_when_user_active__sum {
-    label: "Power Battery Percentage When User Active Sum"
+    label: "Power Battery Percentage When User Active Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.custom_distribution.power_battery_percentage_when_user_active.sum ;;
     type: number
@@ -594,7 +594,7 @@ To be used to validate GIFFT.
     group_item_label: "Percentage When User Active Sum"
 
     link: {
-      label: "Glean Dictionary reference for Power Battery Percentage When User Active Sum"
+      label: "Glean Dictionary reference for Power Battery Percentage When User Active Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_battery_percentage_when_user_active"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -604,14 +604,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_content_background {
-    label: "Power Cpu Ms Per Thread Content Background"
+    label: "Power Cpu Ms Per Thread Content Background :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_content_background ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Content Background"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Content Background"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Content Background :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_cpu_ms_per_thread_content_background"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -621,14 +621,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_content_foreground {
-    label: "Power Cpu Ms Per Thread Content Foreground"
+    label: "Power Cpu Ms Per Thread Content Foreground :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_content_foreground ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Content Foreground"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Content Foreground"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Content Foreground :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_cpu_ms_per_thread_content_foreground"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -638,14 +638,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_gpu_process {
-    label: "Power Cpu Ms Per Thread Gpu Process"
+    label: "Power Cpu Ms Per Thread Gpu Process :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_gpu_process ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Gpu Process"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Gpu Process"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Gpu Process :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_cpu_ms_per_thread_gpu_process"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -655,14 +655,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_parent_active {
-    label: "Power Cpu Ms Per Thread Parent Active"
+    label: "Power Cpu Ms Per Thread Parent Active :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_parent_active ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Parent Active"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Parent Active"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Parent Active :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_cpu_ms_per_thread_parent_active"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -672,14 +672,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_ms_per_thread_parent_inactive {
-    label: "Power Cpu Ms Per Thread Parent Inactive"
+    label: "Power Cpu Ms Per Thread Parent Inactive :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_ms_per_thread_parent_inactive ;;
     group_label: "Power Cpu Ms Per Thread"
     group_item_label: "Parent Inactive"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Parent Inactive"
+      label: "Glean Dictionary reference for Power Cpu Ms Per Thread Parent Inactive :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_cpu_ms_per_thread_parent_inactive"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -689,7 +689,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_cpu_time_bogus_values {
-    label: "Power Cpu Time Bogus Values"
+    label: "Power Cpu Time Bogus Values :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_cpu_time_bogus_values ;;
     type: number
@@ -697,7 +697,7 @@ To be used to validate GIFFT.
     group_item_label: "Cpu Time Bogus Values"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Time Bogus Values"
+      label: "Glean Dictionary reference for Power Cpu Time Bogus Values :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_cpu_time_bogus_values"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -707,14 +707,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_cpu_time_per_process_type_ms {
-    label: "Power Cpu Time Per Process Type Ms"
+    label: "Power Cpu Time Per Process Type Ms :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_cpu_time_per_process_type_ms ;;
     group_label: "Power"
     group_item_label: "Cpu Time Per Process Type Ms"
 
     link: {
-      label: "Glean Dictionary reference for Power Cpu Time Per Process Type Ms"
+      label: "Glean Dictionary reference for Power Cpu Time Per Process Type Ms :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_cpu_time_per_process_type_ms"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -724,7 +724,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_gpu_time_bogus_values {
-    label: "Power Gpu Time Bogus Values"
+    label: "Power Gpu Time Bogus Values :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_gpu_time_bogus_values ;;
     type: number
@@ -732,7 +732,7 @@ To be used to validate GIFFT.
     group_item_label: "Gpu Time Bogus Values"
 
     link: {
-      label: "Glean Dictionary reference for Power Gpu Time Bogus Values"
+      label: "Glean Dictionary reference for Power Gpu Time Bogus Values :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_gpu_time_bogus_values"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -742,14 +742,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_gpu_time_per_process_type_ms {
-    label: "Power Gpu Time Per Process Type Ms"
+    label: "Power Gpu Time Per Process Type Ms :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_gpu_time_per_process_type_ms ;;
     group_label: "Power"
     group_item_label: "Gpu Time Per Process Type Ms"
 
     link: {
-      label: "Glean Dictionary reference for Power Gpu Time Per Process Type Ms"
+      label: "Glean Dictionary reference for Power Gpu Time Per Process Type Ms :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_gpu_time_per_process_type_ms"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -759,7 +759,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_total_cpu_time_ms {
-    label: "Power Total Cpu Time Ms"
+    label: "Power Total Cpu Time Ms :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_total_cpu_time_ms ;;
     type: number
@@ -767,7 +767,7 @@ To be used to validate GIFFT.
     group_item_label: "Total Cpu Time Ms"
 
     link: {
-      label: "Glean Dictionary reference for Power Total Cpu Time Ms"
+      label: "Glean Dictionary reference for Power Total Cpu Time Ms :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_total_cpu_time_ms"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -777,7 +777,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_total_gpu_time_ms {
-    label: "Power Total Gpu Time Ms"
+    label: "Power Total Gpu Time Ms :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_total_gpu_time_ms ;;
     type: number
@@ -785,7 +785,7 @@ To be used to validate GIFFT.
     group_item_label: "Total Gpu Time Ms"
 
     link: {
-      label: "Glean Dictionary reference for Power Total Gpu Time Ms"
+      label: "Glean Dictionary reference for Power Total Gpu Time Ms :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_total_gpu_time_ms"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -795,7 +795,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__counter__power_total_thread_wakeups {
-    label: "Power Total Thread Wakeups"
+    label: "Power Total Thread Wakeups :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.power_total_thread_wakeups ;;
     type: number
@@ -803,7 +803,7 @@ To be used to validate GIFFT.
     group_item_label: "Total Thread Wakeups"
 
     link: {
-      label: "Glean Dictionary reference for Power Total Thread Wakeups"
+      label: "Glean Dictionary reference for Power Total Thread Wakeups :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_total_thread_wakeups"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -813,14 +813,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_process_type {
-    label: "Power Wakeups Per Process Type"
+    label: "Power Wakeups Per Process Type :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_process_type ;;
     group_label: "Power"
     group_item_label: "Wakeups Per Process Type"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Process Type"
+      label: "Glean Dictionary reference for Power Wakeups Per Process Type :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_wakeups_per_process_type"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -830,14 +830,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_content_background {
-    label: "Power Wakeups Per Thread Content Background"
+    label: "Power Wakeups Per Thread Content Background :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_content_background ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Content Background"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Content Background"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Content Background :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_wakeups_per_thread_content_background"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -847,14 +847,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_content_foreground {
-    label: "Power Wakeups Per Thread Content Foreground"
+    label: "Power Wakeups Per Thread Content Foreground :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_content_foreground ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Content Foreground"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Content Foreground"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Content Foreground :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_wakeups_per_thread_content_foreground"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -864,14 +864,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_gpu_process {
-    label: "Power Wakeups Per Thread Gpu Process"
+    label: "Power Wakeups Per Thread Gpu Process :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_gpu_process ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Gpu Process"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Gpu Process"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Gpu Process :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_wakeups_per_thread_gpu_process"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -881,14 +881,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_parent_active {
-    label: "Power Wakeups Per Thread Parent Active"
+    label: "Power Wakeups Per Thread Parent Active :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_parent_active ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Parent Active"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Parent Active"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Parent Active :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_wakeups_per_thread_parent_active"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -898,14 +898,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__power_wakeups_per_thread_parent_inactive {
-    label: "Power Wakeups Per Thread Parent Inactive"
+    label: "Power Wakeups Per Thread Parent Inactive :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.power_wakeups_per_thread_parent_inactive ;;
     group_label: "Power Wakeups Per Thread"
     group_item_label: "Parent Inactive"
 
     link: {
-      label: "Glean Dictionary reference for Power Wakeups Per Thread Parent Inactive"
+      label: "Glean Dictionary reference for Power Wakeups Per Thread Parent Inactive :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/power_wakeups_per_thread_parent_inactive"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -915,7 +915,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_framebuild_time__sum {
-    label: "Wr Framebuild Time Sum"
+    label: "Wr Framebuild Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_framebuild_time.sum ;;
     type: number
@@ -923,7 +923,7 @@ To be used to validate GIFFT.
     group_item_label: "Framebuild Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Framebuild Time Sum"
+      label: "Glean Dictionary reference for Wr Framebuild Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/wr_framebuild_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -933,7 +933,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_gpu_wait_time__sum {
-    label: "Wr Gpu Wait Time Sum"
+    label: "Wr Gpu Wait Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_gpu_wait_time.sum ;;
     type: number
@@ -941,7 +941,7 @@ To be used to validate GIFFT.
     group_item_label: "Gpu Wait Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Gpu Wait Time Sum"
+      label: "Glean Dictionary reference for Wr Gpu Wait Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/wr_gpu_wait_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -951,7 +951,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_rasterize_blobs_time__sum {
-    label: "Wr Rasterize Blobs Time Sum"
+    label: "Wr Rasterize Blobs Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_rasterize_blobs_time.sum ;;
     type: number
@@ -959,7 +959,7 @@ To be used to validate GIFFT.
     group_item_label: "Rasterize Blobs Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Rasterize Blobs Time Sum"
+      label: "Glean Dictionary reference for Wr Rasterize Blobs Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/wr_rasterize_blobs_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -969,7 +969,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_rasterize_glyphs_time__sum {
-    label: "Wr Rasterize Glyphs Time Sum"
+    label: "Wr Rasterize Glyphs Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_rasterize_glyphs_time.sum ;;
     type: number
@@ -977,7 +977,7 @@ To be used to validate GIFFT.
     group_item_label: "Rasterize Glyphs Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Rasterize Glyphs Time Sum"
+      label: "Glean Dictionary reference for Wr Rasterize Glyphs Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/wr_rasterize_glyphs_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -987,7 +987,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_renderer_time__sum {
-    label: "Wr Renderer Time Sum"
+    label: "Wr Renderer Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_renderer_time.sum ;;
     type: number
@@ -995,7 +995,7 @@ To be used to validate GIFFT.
     group_item_label: "Renderer Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Renderer Time Sum"
+      label: "Glean Dictionary reference for Wr Renderer Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/wr_renderer_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1005,7 +1005,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_renderer_time_no_sc__sum {
-    label: "Wr Renderer Time No Sc Sum"
+    label: "Wr Renderer Time No Sc Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_renderer_time_no_sc.sum ;;
     type: number
@@ -1013,7 +1013,7 @@ To be used to validate GIFFT.
     group_item_label: "Renderer Time No Sc Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Renderer Time No Sc Sum"
+      label: "Glean Dictionary reference for Wr Renderer Time No Sc Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/wr_renderer_time_no_sc"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1023,7 +1023,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_scenebuild_time__sum {
-    label: "Wr Scenebuild Time Sum"
+    label: "Wr Scenebuild Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_scenebuild_time.sum ;;
     type: number
@@ -1031,7 +1031,7 @@ To be used to validate GIFFT.
     group_item_label: "Scenebuild Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Scenebuild Time Sum"
+      label: "Glean Dictionary reference for Wr Scenebuild Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/wr_scenebuild_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1041,7 +1041,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_sceneswap_time__sum {
-    label: "Wr Sceneswap Time Sum"
+    label: "Wr Sceneswap Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_sceneswap_time.sum ;;
     type: number
@@ -1049,7 +1049,7 @@ To be used to validate GIFFT.
     group_item_label: "Sceneswap Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Sceneswap Time Sum"
+      label: "Glean Dictionary reference for Wr Sceneswap Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/wr_sceneswap_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1059,7 +1059,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_texture_cache_update_time__sum {
-    label: "Wr Texture Cache Update Time Sum"
+    label: "Wr Texture Cache Update Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_texture_cache_update_time.sum ;;
     type: number
@@ -1067,7 +1067,7 @@ To be used to validate GIFFT.
     group_item_label: "Texture Cache Update Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Texture Cache Update Time Sum"
+      label: "Glean Dictionary reference for Wr Texture Cache Update Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/wr_texture_cache_update_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1077,7 +1077,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_time_to_frame_build__sum {
-    label: "Wr Time To Frame Build Sum"
+    label: "Wr Time To Frame Build Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_time_to_frame_build.sum ;;
     type: number
@@ -1085,7 +1085,7 @@ To be used to validate GIFFT.
     group_item_label: "Time To Frame Build Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Time To Frame Build Sum"
+      label: "Glean Dictionary reference for Wr Time To Frame Build Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/wr_time_to_frame_build"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1095,7 +1095,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__timing_distribution__wr_time_to_render_start__sum {
-    label: "Wr Time To Render Start Sum"
+    label: "Wr Time To Render Start Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.wr_time_to_render_start.sum ;;
     type: number
@@ -1103,7 +1103,7 @@ To be used to validate GIFFT.
     group_item_label: "Time To Render Start Sum"
 
     link: {
-      label: "Glean Dictionary reference for Wr Time To Render Start Sum"
+      label: "Glean Dictionary reference for Wr Time To Render Start Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/wr_time_to_render_start"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1113,7 +1113,7 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__memory_distribution__glean_database_size__sum {
-    label: "Glean Database Size Sum"
+    label: "Glean Database Size Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.glean_database_size.sum ;;
     type: number
@@ -1121,7 +1121,7 @@ To be used to validate GIFFT.
     group_item_label: "Size Sum"
 
     link: {
-      label: "Glean Dictionary reference for Glean Database Size Sum"
+      label: "Glean Dictionary reference for Glean Database Size Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_database_size"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1131,14 +1131,14 @@ To be used to validate GIFFT.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1149,14 +1149,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1167,14 +1167,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1185,14 +1185,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1203,7 +1203,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__glean_error_io {
-    label: "Glean Error Io"
+    label: "Glean Error Io :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_error_io ;;
     type: number
@@ -1211,7 +1211,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Io"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Io"
+      label: "Glean Dictionary reference for Glean Error Io :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_io"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1222,7 +1222,7 @@ when writing a pending ping to disk.
   }
 
   dimension: metrics__counter__glean_error_preinit_tasks_overflow {
-    label: "Glean Error Preinit Tasks Overflow"
+    label: "Glean Error Preinit Tasks Overflow :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_error_preinit_tasks_overflow ;;
     type: number
@@ -1230,7 +1230,7 @@ when writing a pending ping to disk.
     group_item_label: "Preinit Tasks Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Preinit Tasks Overflow"
+      label: "Glean Dictionary reference for Glean Error Preinit Tasks Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_preinit_tasks_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1243,7 +1243,7 @@ In Version 0 this reported the total number of tasks enqueued.
   }
 
   dimension: metrics__boolean__glean_error_preinit_tasks_timeout {
-    label: "Glean Error Preinit Tasks Timeout"
+    label: "Glean Error Preinit Tasks Timeout :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.glean_error_preinit_tasks_timeout ;;
     type: yesno
@@ -1251,7 +1251,7 @@ In Version 0 this reported the total number of tasks enqueued.
     group_item_label: "Preinit Tasks Timeout"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Preinit Tasks Timeout"
+      label: "Glean Dictionary reference for Glean Error Preinit Tasks Timeout :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_error_preinit_tasks_timeout"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1260,7 +1260,7 @@ In Version 0 this reported the total number of tasks enqueued.
   }
 
   dimension: metrics__counter__glean_time_invalid_timezone_offset {
-    label: "Glean Time Invalid Timezone Offset"
+    label: "Glean Time Invalid Timezone Offset :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.glean_time_invalid_timezone_offset ;;
     type: number
@@ -1268,7 +1268,7 @@ In Version 0 this reported the total number of tasks enqueued.
     group_item_label: "Invalid Timezone Offset"
 
     link: {
-      label: "Glean Dictionary reference for Glean Time Invalid Timezone Offset"
+      label: "Glean Dictionary reference for Glean Time Invalid Timezone Offset :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_time_invalid_timezone_offset"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1281,7 +1281,7 @@ If invalid a UTC offset is used (+0h).
   }
 
   dimension: metrics__counter__glean_upload_deleted_pings_after_quota_hit {
-    label: "Glean Upload Deleted Pings After Quota Hit"
+    label: "Glean Upload Deleted Pings After Quota Hit :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_upload_deleted_pings_after_quota_hit ;;
     type: number
@@ -1289,7 +1289,7 @@ If invalid a UTC offset is used (+0h).
     group_item_label: "Deleted Pings After Quota Hit"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Deleted Pings After Quota Hit"
+      label: "Glean Dictionary reference for Glean Upload Deleted Pings After Quota Hit :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_upload_deleted_pings_after_quota_hit"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1303,7 +1303,7 @@ deletion request pings are never deleted.
   }
 
   dimension: metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__sum {
-    label: "Glean Upload Discarded Exceeding Pings Size Sum"
+    label: "Glean Upload Discarded Exceeding Pings Size Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.glean_upload_discarded_exceeding_pings_size.sum ;;
     type: number
@@ -1311,7 +1311,7 @@ deletion request pings are never deleted.
     group_item_label: "Discarded Exceeding Pings Size Sum"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Discarded Exceeding Pings Size Sum"
+      label: "Glean Dictionary reference for Glean Upload Discarded Exceeding Pings Size Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_upload_discarded_exceeding_pings_size"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1321,7 +1321,7 @@ deletion request pings are never deleted.
   }
 
   dimension: metrics__counter__glean_upload_pending_pings {
-    label: "Glean Upload Pending Pings"
+    label: "Glean Upload Pending Pings :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_upload_pending_pings ;;
     type: number
@@ -1329,7 +1329,7 @@ deletion request pings are never deleted.
     group_item_label: "Pending Pings"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Pending Pings"
+      label: "Glean Dictionary reference for Glean Upload Pending Pings :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_upload_pending_pings"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1340,7 +1340,7 @@ This does not include deletion-request pings.
   }
 
   dimension: metrics__memory_distribution__glean_upload_pending_pings_directory_size__sum {
-    label: "Glean Upload Pending Pings Directory Size Sum"
+    label: "Glean Upload Pending Pings Directory Size Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.glean_upload_pending_pings_directory_size.sum ;;
     type: number
@@ -1348,7 +1348,7 @@ This does not include deletion-request pings.
     group_item_label: "Pending Pings Directory Size Sum"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Pending Pings Directory Size Sum"
+      label: "Glean Dictionary reference for Glean Upload Pending Pings Directory Size Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_upload_pending_pings_directory_size"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1359,14 +1359,14 @@ This does not include the size of the deletion request pings directory.
   }
 
   dimension: metrics__labeled_counter__glean_upload_ping_upload_failure {
-    label: "Glean Upload Ping Upload Failure"
+    label: "Glean Upload Ping Upload Failure :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_upload_ping_upload_failure ;;
     group_label: "Glean Upload"
     group_item_label: "Ping Upload Failure"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Ping Upload Failure"
+      label: "Glean Dictionary reference for Glean Upload Ping Upload Failure :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_upload_ping_upload_failure"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1378,7 +1378,7 @@ though the counts appear in the next successfully sent `metrics` ping.
   }
 
   dimension: metrics__datetime__glean_validation_first_run_hour {
-    label: "Glean Validation First Run Hour"
+    label: "Glean Validation First Run Hour :)"
     hidden: no
     sql: ${TABLE}.metrics.datetime.glean_validation_first_run_hour ;;
     type: string
@@ -1386,7 +1386,7 @@ though the counts appear in the next successfully sent `metrics` ping.
     group_item_label: "First Run Hour"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation First Run Hour"
+      label: "Glean Dictionary reference for Glean Validation First Run Hour :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_validation_first_run_hour"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1396,7 +1396,7 @@ though the counts appear in the next successfully sent `metrics` ping.
   }
 
   dimension: metrics__counter__glean_validation_foreground_count {
-    label: "Glean Validation Foreground Count"
+    label: "Glean Validation Foreground Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_validation_foreground_count ;;
     type: number
@@ -1404,7 +1404,7 @@ though the counts appear in the next successfully sent `metrics` ping.
     group_item_label: "Foreground Count"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation Foreground Count"
+      label: "Glean Dictionary reference for Glean Validation Foreground Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_validation_foreground_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1414,14 +1414,14 @@ though the counts appear in the next successfully sent `metrics` ping.
   }
 
   dimension: metrics__labeled_counter__glean_validation_pings_submitted {
-    label: "Glean Validation Pings Submitted"
+    label: "Glean Validation Pings Submitted :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_validation_pings_submitted ;;
     group_label: "Glean Validation"
     group_item_label: "Pings Submitted"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation Pings Submitted"
+      label: "Glean Dictionary reference for Glean Validation Pings Submitted :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_validation_pings_submitted"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1438,7 +1438,7 @@ This metric appears in both the metrics and baseline pings.
   }
 
   dimension: metrics__string__ping_reason {
-    label: "Glean Ping Reason"
+    label: "Glean Ping Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.ping_reason ;;
     type: string
@@ -1446,7 +1446,7 @@ This metric appears in both the metrics and baseline pings.
     group_item_label: "Ping Reason"
 
     link: {
-      label: "Glean Dictionary reference for Glean Ping Reason"
+      label: "Glean Dictionary reference for Glean Ping Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/ping_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1458,7 +1458,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__boolean__glean_core_migration_successful {
-    label: "Glean Core Migration Successful"
+    label: "Glean Core Migration Successful :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.glean_core_migration_successful ;;
     type: yesno
@@ -1466,7 +1466,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Successful"
 
     link: {
-      label: "Glean Dictionary reference for Glean Core Migration Successful"
+      label: "Glean Dictionary reference for Glean Core Migration Successful :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_core_migration_successful"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1475,7 +1475,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__glean_validation_app_forceclosed_count {
-    label: "Glean Validation App Forceclosed Count"
+    label: "Glean Validation App Forceclosed Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.glean_validation_app_forceclosed_count ;;
     type: number
@@ -1483,7 +1483,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "App Forceclosed Count"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation App Forceclosed Count"
+      label: "Glean Dictionary reference for Glean Validation App Forceclosed Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_validation_app_forceclosed_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1492,7 +1492,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__glean_validation_baseline_ping_count {
-    label: "Glean Validation Baseline Ping Count"
+    label: "Glean Validation Baseline Ping Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.glean_validation_baseline_ping_count ;;
     type: number
@@ -1500,7 +1500,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Baseline Ping Count"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation Baseline Ping Count"
+      label: "Glean Dictionary reference for Glean Validation Baseline Ping Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_validation_baseline_ping_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }

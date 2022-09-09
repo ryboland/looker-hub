@@ -6,7 +6,7 @@
 
 view: metrics {
   dimension: metrics__counter__app_opened_as_default_browser {
-    label: "App Opened As Default Browser"
+    label: "App Opened As Default Browser :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.app_opened_as_default_browser ;;
     type: number
@@ -14,7 +14,7 @@ view: metrics {
     group_item_label: "Opened As Default Browser"
 
     link: {
-      label: "Glean Dictionary reference for App Opened As Default Browser"
+      label: "Glean Dictionary reference for App Opened As Default Browser :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/app_opened_as_default_browser"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -28,7 +28,7 @@ often Firefox is set as the default browser.
   }
 
   dimension: metrics__counter__app_menu_block_images_disabled {
-    label: "App Menu Block Images Disabled"
+    label: "App Menu Block Images Disabled :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.app_menu_block_images_disabled ;;
     type: number
@@ -36,7 +36,7 @@ often Firefox is set as the default browser.
     group_item_label: "Block Images Disabled"
 
     link: {
-      label: "Glean Dictionary reference for App Menu Block Images Disabled"
+      label: "Glean Dictionary reference for App Menu Block Images Disabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/app_menu_block_images_disabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -47,7 +47,7 @@ in the app menu
   }
 
   dimension: metrics__counter__app_menu_block_images_enabled {
-    label: "App Menu Block Images Enabled"
+    label: "App Menu Block Images Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.app_menu_block_images_enabled ;;
     type: number
@@ -55,7 +55,7 @@ in the app menu
     group_item_label: "Block Images Enabled"
 
     link: {
-      label: "Glean Dictionary reference for App Menu Block Images Enabled"
+      label: "Glean Dictionary reference for App Menu Block Images Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/app_menu_block_images_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -66,7 +66,7 @@ in the app menu
   }
 
   dimension: metrics__counter__app_menu_home {
-    label: "App Menu Home"
+    label: "App Menu Home :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.app_menu_home ;;
     type: number
@@ -74,7 +74,7 @@ in the app menu
     group_item_label: "Home"
 
     link: {
-      label: "Glean Dictionary reference for App Menu Home"
+      label: "Glean Dictionary reference for App Menu Home :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/app_menu_home"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -84,7 +84,7 @@ in the app menu
   }
 
   dimension: metrics__counter__app_menu_library {
-    label: "App Menu Library"
+    label: "App Menu Library :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.app_menu_library ;;
     type: number
@@ -92,7 +92,7 @@ in the app menu
     group_item_label: "Library"
 
     link: {
-      label: "Glean Dictionary reference for App Menu Library"
+      label: "Glean Dictionary reference for App Menu Library :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/app_menu_library"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -102,7 +102,7 @@ in the app menu
   }
 
   dimension: metrics__counter__app_menu_logins {
-    label: "App Menu Logins"
+    label: "App Menu Logins :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.app_menu_logins ;;
     type: number
@@ -110,7 +110,7 @@ in the app menu
     group_item_label: "Logins"
 
     link: {
-      label: "Glean Dictionary reference for App Menu Logins"
+      label: "Glean Dictionary reference for App Menu Logins :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/app_menu_logins"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -121,7 +121,7 @@ in the app menu
   }
 
   dimension: metrics__counter__app_menu_night_mode_disabled {
-    label: "App Menu Night Mode Disabled"
+    label: "App Menu Night Mode Disabled :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.app_menu_night_mode_disabled ;;
     type: number
@@ -129,7 +129,7 @@ in the app menu
     group_item_label: "Night Mode Disabled"
 
     link: {
-      label: "Glean Dictionary reference for App Menu Night Mode Disabled"
+      label: "Glean Dictionary reference for App Menu Night Mode Disabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/app_menu_night_mode_disabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -140,7 +140,7 @@ in the app menu
   }
 
   dimension: metrics__counter__app_menu_night_mode_enabled {
-    label: "App Menu Night Mode Enabled"
+    label: "App Menu Night Mode Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.app_menu_night_mode_enabled ;;
     type: number
@@ -148,7 +148,7 @@ in the app menu
     group_item_label: "Night Mode Enabled"
 
     link: {
-      label: "Glean Dictionary reference for App Menu Night Mode Enabled"
+      label: "Glean Dictionary reference for App Menu Night Mode Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/app_menu_night_mode_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -159,7 +159,7 @@ in the app menu
   }
 
   dimension: metrics__counter__app_menu_settings {
-    label: "App Menu Settings"
+    label: "App Menu Settings :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.app_menu_settings ;;
     type: number
@@ -167,7 +167,7 @@ in the app menu
     group_item_label: "Settings"
 
     link: {
-      label: "Glean Dictionary reference for App Menu Settings"
+      label: "Glean Dictionary reference for App Menu Settings :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/app_menu_settings"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -177,7 +177,7 @@ in the app menu
   }
 
   dimension: metrics__counter__app_menu_sign_into_sync {
-    label: "App Menu Sign Into Sync"
+    label: "App Menu Sign Into Sync :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.app_menu_sign_into_sync ;;
     type: number
@@ -185,7 +185,7 @@ in the app menu
     group_item_label: "Sign Into Sync"
 
     link: {
-      label: "Glean Dictionary reference for App Menu Sign Into Sync"
+      label: "Glean Dictionary reference for App Menu Sign Into Sync :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/app_menu_sign_into_sync"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -196,7 +196,7 @@ in the app menu
   }
 
   dimension: metrics__counter__app_menu_whats_new {
-    label: "App Menu Whats New"
+    label: "App Menu Whats New :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.app_menu_whats_new ;;
     type: number
@@ -204,7 +204,7 @@ in the app menu
     group_item_label: "Whats New"
 
     link: {
-      label: "Glean Dictionary reference for App Menu Whats New"
+      label: "Glean Dictionary reference for App Menu Whats New :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/app_menu_whats_new"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -214,7 +214,7 @@ in the app menu
   }
 
   dimension: metrics__boolean__application_services_bookmark_highlights_visible {
-    label: "Application Services Bookmark Highlights Visible"
+    label: "Application Services Bookmark Highlights Visible :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.application_services_bookmark_highlights_visible ;;
     type: yesno
@@ -222,7 +222,7 @@ in the app menu
     group_item_label: "Bookmark Highlights Visible"
 
     link: {
-      label: "Glean Dictionary reference for Application Services Bookmark Highlights Visible"
+      label: "Glean Dictionary reference for Application Services Bookmark Highlights Visible :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/application_services_bookmark_highlights_visible"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -233,7 +233,7 @@ preference.
   }
 
   dimension: metrics__boolean__application_services_pocket_stories_visible {
-    label: "Application Services Pocket Stories Visible"
+    label: "Application Services Pocket Stories Visible :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.application_services_pocket_stories_visible ;;
     type: yesno
@@ -241,7 +241,7 @@ preference.
     group_item_label: "Pocket Stories Visible"
 
     link: {
-      label: "Glean Dictionary reference for Application Services Pocket Stories Visible"
+      label: "Glean Dictionary reference for Application Services Pocket Stories Visible :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/application_services_pocket_stories_visible"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -251,7 +251,7 @@ preference.
   }
 
   dimension: metrics__boolean__application_services_recent_highlights_visible {
-    label: "Application Services Recent Highlights Visible"
+    label: "Application Services Recent Highlights Visible :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.application_services_recent_highlights_visible ;;
     type: yesno
@@ -259,7 +259,7 @@ preference.
     group_item_label: "Recent Highlights Visible"
 
     link: {
-      label: "Glean Dictionary reference for Application Services Recent Highlights Visible"
+      label: "Glean Dictionary reference for Application Services Recent Highlights Visible :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/application_services_recent_highlights_visible"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -270,7 +270,7 @@ preference.
   }
 
   dimension: metrics__timing_distribution__awesomebar_query_time__sum {
-    label: "Awesomebar Query Time Sum"
+    label: "Awesomebar Query Time Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.timing_distribution.awesomebar_query_time.sum ;;
     type: number
@@ -278,7 +278,7 @@ preference.
     group_item_label: "Query Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Awesomebar Query Time Sum"
+      label: "Glean Dictionary reference for Awesomebar Query Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/awesomebar_query_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -288,14 +288,14 @@ preference.
   }
 
   dimension: metrics__labeled_counter__bookmarks_add {
-    label: "Bookmarks Add"
+    label: "Bookmarks Add :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.bookmarks_add ;;
     group_label: "Bookmarks"
     group_item_label: "Add"
 
     link: {
-      label: "Glean Dictionary reference for Bookmarks Add"
+      label: "Glean Dictionary reference for Bookmarks Add :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/bookmarks_add"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -308,14 +308,14 @@ following:
   }
 
   dimension: metrics__labeled_counter__bookmarks_delete {
-    label: "Bookmarks Delete"
+    label: "Bookmarks Delete :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.bookmarks_delete ;;
     group_label: "Bookmarks"
     group_item_label: "Delete"
 
     link: {
-      label: "Glean Dictionary reference for Bookmarks Delete"
+      label: "Glean Dictionary reference for Bookmarks Delete :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/bookmarks_delete"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -329,14 +329,14 @@ the following:
   }
 
   dimension: metrics__labeled_counter__bookmarks_edit {
-    label: "Bookmarks Edit"
+    label: "Bookmarks Edit :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.bookmarks_edit ;;
     group_label: "Bookmarks"
     group_item_label: "Edit"
 
     link: {
-      label: "Glean Dictionary reference for Bookmarks Edit"
+      label: "Glean Dictionary reference for Bookmarks Edit :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/bookmarks_edit"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -349,14 +349,14 @@ be edited from:
   }
 
   dimension: metrics__labeled_counter__bookmarks_open {
-    label: "Bookmarks Open"
+    label: "Bookmarks Open :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.bookmarks_open ;;
     group_label: "Bookmarks"
     group_item_label: "Open"
 
     link: {
-      label: "Glean Dictionary reference for Bookmarks Open"
+      label: "Glean Dictionary reference for Bookmarks Open :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/bookmarks_open"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -369,14 +369,14 @@ the following:
   }
 
   dimension: metrics__labeled_counter__bookmarks_view_list {
-    label: "Bookmarks View List"
+    label: "Bookmarks View List :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.bookmarks_view_list ;;
     group_label: "Bookmarks"
     group_item_label: "View List"
 
     link: {
-      label: "Glean Dictionary reference for Bookmarks View List"
+      label: "Glean Dictionary reference for Bookmarks View List :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/bookmarks_view_list"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -387,14 +387,14 @@ from either the Home Panel tab button or the App Menu.
   }
 
   dimension: metrics__labeled_counter__browser_search_ad_clicks {
-    label: "Browser Search Ad Clicks"
+    label: "Browser Search Ad Clicks :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.browser_search_ad_clicks ;;
     group_label: "Browser Search"
     group_item_label: "Ad Clicks"
 
     link: {
-      label: "Glean Dictionary reference for Browser Search Ad Clicks"
+      label: "Glean Dictionary reference for Browser Search Ad Clicks :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/browser_search_ad_clicks"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -405,14 +405,14 @@ The key format is ‘<provider-name>’.
   }
 
   dimension: metrics__labeled_counter__browser_search_with_ads {
-    label: "Browser Search With Ads"
+    label: "Browser Search With Ads :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.browser_search_with_ads ;;
     group_label: "Browser Search"
     group_item_label: "With Ads"
 
     link: {
-      label: "Glean Dictionary reference for Browser Search With Ads"
+      label: "Glean Dictionary reference for Browser Search With Ads :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/browser_search_with_ads"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -423,7 +423,7 @@ The key format is ‘<provider-name>’.
   }
 
   dimension: metrics__counter__default_browser_card_dismiss_pressed {
-    label: "Default Browser Card Dismiss Pressed"
+    label: "Default Browser Card Dismiss Pressed :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.default_browser_card_dismiss_pressed ;;
     type: number
@@ -431,7 +431,7 @@ The key format is ‘<provider-name>’.
     group_item_label: "Dismiss Pressed"
 
     link: {
-      label: "Glean Dictionary reference for Default Browser Card Dismiss Pressed"
+      label: "Glean Dictionary reference for Default Browser Card Dismiss Pressed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/default_browser_card_dismiss_pressed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -441,7 +441,7 @@ The key format is ‘<provider-name>’.
   }
 
   dimension: metrics__counter__default_browser_card_go_to_settings_pressed {
-    label: "Default Browser Card Go To Settings Pressed"
+    label: "Default Browser Card Go To Settings Pressed :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.default_browser_card_go_to_settings_pressed ;;
     type: number
@@ -449,7 +449,7 @@ The key format is ‘<provider-name>’.
     group_item_label: "Go To Settings Pressed"
 
     link: {
-      label: "Glean Dictionary reference for Default Browser Card Go To Settings Pressed"
+      label: "Glean Dictionary reference for Default Browser Card Go To Settings Pressed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/default_browser_card_go_to_settings_pressed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -460,7 +460,7 @@ default browser card is clicked.
   }
 
   dimension: metrics__counter__default_browser_onboarding_dismiss_pressed {
-    label: "Default Browser Onboarding Dismiss Pressed"
+    label: "Default Browser Onboarding Dismiss Pressed :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.default_browser_onboarding_dismiss_pressed ;;
     type: number
@@ -468,7 +468,7 @@ default browser card is clicked.
     group_item_label: "Dismiss Pressed"
 
     link: {
-      label: "Glean Dictionary reference for Default Browser Onboarding Dismiss Pressed"
+      label: "Glean Dictionary reference for Default Browser Onboarding Dismiss Pressed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/default_browser_onboarding_dismiss_pressed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -478,7 +478,7 @@ default browser card is clicked.
   }
 
   dimension: metrics__counter__default_browser_onboarding_go_to_settings_pressed {
-    label: "Default Browser Onboarding Go To Settings Pressed"
+    label: "Default Browser Onboarding Go To Settings Pressed :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.default_browser_onboarding_go_to_settings_pressed ;;
     type: number
@@ -486,7 +486,7 @@ default browser card is clicked.
     group_item_label: "Go To Settings Pressed"
 
     link: {
-      label: "Glean Dictionary reference for Default Browser Onboarding Go To Settings Pressed"
+      label: "Glean Dictionary reference for Default Browser Onboarding Go To Settings Pressed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/default_browser_onboarding_go_to_settings_pressed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -497,7 +497,7 @@ default browser onboarding is clicked.
   }
 
   dimension: metrics__boolean__device_authentication {
-    label: "Device Authentication"
+    label: "Device Authentication :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.device_authentication ;;
     type: yesno
@@ -505,7 +505,7 @@ default browser onboarding is clicked.
     group_item_label: "Authentication"
 
     link: {
-      label: "Glean Dictionary reference for Device Authentication"
+      label: "Glean Dictionary reference for Device Authentication :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/device_authentication"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -516,7 +516,7 @@ with either biometrics or a passcode.
   }
 
   dimension: metrics__counter__firefox_home_page_customize_homepage_button {
-    label: "Firefox Home Page Customize Homepage Button"
+    label: "Firefox Home Page Customize Homepage Button :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_customize_homepage_button ;;
     type: number
@@ -524,7 +524,7 @@ with either biometrics or a passcode.
     group_item_label: "Customize Homepage Button"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Customize Homepage Button"
+      label: "Glean Dictionary reference for Firefox Home Page Customize Homepage Button :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_customize_homepage_button"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -535,7 +535,7 @@ settings menu to customize the Firefox Homepage
   }
 
   dimension: metrics__counter__firefox_home_page_cycle_wallpaper_button {
-    label: "Firefox Home Page Cycle Wallpaper Button"
+    label: "Firefox Home Page Cycle Wallpaper Button :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.firefox_home_page_cycle_wallpaper_button ;;
     type: number
@@ -543,7 +543,7 @@ settings menu to customize the Firefox Homepage
     group_item_label: "Cycle Wallpaper Button"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Cycle Wallpaper Button"
+      label: "Glean Dictionary reference for Firefox Home Page Cycle Wallpaper Button :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_cycle_wallpaper_button"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -555,14 +555,14 @@ on the Firefox Homepage
   }
 
   dimension: metrics__labeled_counter__firefox_home_page_firefox_homepage_origin {
-    label: "Firefox Home Page Firefox Homepage Origin"
+    label: "Firefox Home Page Firefox Homepage Origin :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.firefox_home_page_firefox_homepage_origin ;;
     group_label: "Firefox Home Page"
     group_item_label: "Firefox Homepage Origin"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Firefox Homepage Origin"
+      label: "Glean Dictionary reference for Firefox Home Page Firefox Homepage Origin :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_firefox_homepage_origin"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -573,7 +573,7 @@ with a home page origin.
   }
 
   dimension: metrics__counter__firefox_home_page_firefox_homepage_view {
-    label: "Firefox Home Page Firefox Homepage View"
+    label: "Firefox Home Page Firefox Homepage View :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_firefox_homepage_view ;;
     type: number
@@ -581,7 +581,7 @@ with a home page origin.
     group_item_label: "Firefox Homepage View"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Firefox Homepage View"
+      label: "Glean Dictionary reference for Firefox Home Page Firefox Homepage View :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_firefox_homepage_view"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -591,7 +591,7 @@ with a home page origin.
   }
 
   dimension: metrics__counter__firefox_home_page_history_highlights_item_opened {
-    label: "Firefox Home Page History Highlights Item Opened"
+    label: "Firefox Home Page History Highlights Item Opened :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_history_highlights_item_opened ;;
     type: number
@@ -599,7 +599,7 @@ with a home page origin.
     group_item_label: "History Highlights Item Opened"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page History Highlights Item Opened"
+      label: "Glean Dictionary reference for Firefox Home Page History Highlights Item Opened :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_history_highlights_item_opened"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -610,7 +610,7 @@ existing tab from the History Highlights section
   }
 
   dimension: metrics__counter__firefox_home_page_history_highlights_show_all {
-    label: "Firefox Home Page History Highlights Show All"
+    label: "Firefox Home Page History Highlights Show All :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_history_highlights_show_all ;;
     type: number
@@ -618,7 +618,7 @@ existing tab from the History Highlights section
     group_item_label: "History Highlights Show All"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page History Highlights Show All"
+      label: "Glean Dictionary reference for Firefox Home Page History Highlights Show All :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_history_highlights_show_all"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -629,7 +629,7 @@ Show All button in the History section
   }
 
   dimension: metrics__counter__firefox_home_page_history_highlights_view {
-    label: "Firefox Home Page History Highlights View"
+    label: "Firefox Home Page History Highlights View :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_history_highlights_view ;;
     type: number
@@ -637,7 +637,7 @@ Show All button in the History section
     group_item_label: "History Highlights View"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page History Highlights View"
+      label: "Glean Dictionary reference for Firefox Home Page History Highlights View :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_history_highlights_view"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -648,14 +648,14 @@ History Highlights section on the homepage
   }
 
   dimension: metrics__labeled_counter__firefox_home_page_jump_back_in_group_open_origin {
-    label: "Firefox Home Page Jump Back In Group Open Origin"
+    label: "Firefox Home Page Jump Back In Group Open Origin :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.firefox_home_page_jump_back_in_group_open_origin ;;
     group_label: "Firefox Home Page"
     group_item_label: "Jump Back In Group Open Origin"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Group Open Origin"
+      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Group Open Origin :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_jump_back_in_group_open_origin"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -667,7 +667,7 @@ with a home page origin.
   }
 
   dimension: metrics__counter__firefox_home_page_jump_back_in_group_opened {
-    label: "Firefox Home Page Jump Back In Group Opened"
+    label: "Firefox Home Page Jump Back In Group Opened :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_jump_back_in_group_opened ;;
     type: number
@@ -675,7 +675,7 @@ with a home page origin.
     group_item_label: "Jump Back In Group Opened"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Group Opened"
+      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Group Opened :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_jump_back_in_group_opened"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -686,7 +686,7 @@ existing group from the Jump Back In section
   }
 
   dimension: metrics__counter__firefox_home_page_jump_back_in_section_view {
-    label: "Firefox Home Page Jump Back In Section View"
+    label: "Firefox Home Page Jump Back In Section View :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_jump_back_in_section_view ;;
     type: number
@@ -694,7 +694,7 @@ existing group from the Jump Back In section
     group_item_label: "Jump Back In Section View"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Section View"
+      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Section View :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_jump_back_in_section_view"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -705,7 +705,7 @@ Jump Back In section on the homepage
   }
 
   dimension: metrics__counter__firefox_home_page_jump_back_in_show_all {
-    label: "Firefox Home Page Jump Back In Show All"
+    label: "Firefox Home Page Jump Back In Show All :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_jump_back_in_show_all ;;
     type: number
@@ -713,7 +713,7 @@ Jump Back In section on the homepage
     group_item_label: "Jump Back In Show All"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Show All"
+      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Show All :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_jump_back_in_show_all"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -724,14 +724,14 @@ Show All button in the Jump Back In section.
   }
 
   dimension: metrics__labeled_counter__firefox_home_page_jump_back_in_show_all_origin {
-    label: "Firefox Home Page Jump Back In Show All Origin"
+    label: "Firefox Home Page Jump Back In Show All Origin :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.firefox_home_page_jump_back_in_show_all_origin ;;
     group_label: "Firefox Home Page"
     group_item_label: "Jump Back In Show All Origin"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Show All Origin"
+      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Show All Origin :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_jump_back_in_show_all_origin"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -743,7 +743,7 @@ with a home page origin.
   }
 
   dimension: metrics__counter__firefox_home_page_jump_back_in_tab_opened {
-    label: "Firefox Home Page Jump Back In Tab Opened"
+    label: "Firefox Home Page Jump Back In Tab Opened :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_jump_back_in_tab_opened ;;
     type: number
@@ -751,7 +751,7 @@ with a home page origin.
     group_item_label: "Jump Back In Tab Opened"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Tab Opened"
+      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Tab Opened :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_jump_back_in_tab_opened"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -762,14 +762,14 @@ existing tab from the Jump Back In section
   }
 
   dimension: metrics__labeled_counter__firefox_home_page_jump_back_in_tab_opened_origin {
-    label: "Firefox Home Page Jump Back In Tab Opened Origin"
+    label: "Firefox Home Page Jump Back In Tab Opened Origin :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.firefox_home_page_jump_back_in_tab_opened_origin ;;
     group_label: "Firefox Home Page"
     group_item_label: "Jump Back In Tab Opened Origin"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Tab Opened Origin"
+      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Tab Opened Origin :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_jump_back_in_tab_opened_origin"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -781,7 +781,7 @@ with a home page origin.
   }
 
   dimension: metrics__counter__firefox_home_page_jump_back_in_tile_view {
-    label: "Firefox Home Page Jump Back In Tile View"
+    label: "Firefox Home Page Jump Back In Tile View :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_jump_back_in_tile_view ;;
     type: number
@@ -789,7 +789,7 @@ with a home page origin.
     group_item_label: "Jump Back In Tile View"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Tile View"
+      label: "Glean Dictionary reference for Firefox Home Page Jump Back In Tile View :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_jump_back_in_tile_view"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -800,7 +800,7 @@ in the Jump Back In section on the homepage
   }
 
   dimension: metrics__counter__firefox_home_page_open_from_awesomebar {
-    label: "Firefox Home Page Open From Awesomebar"
+    label: "Firefox Home Page Open From Awesomebar :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_open_from_awesomebar ;;
     type: number
@@ -808,7 +808,7 @@ in the Jump Back In section on the homepage
     group_item_label: "Open From Awesomebar"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Open From Awesomebar"
+      label: "Glean Dictionary reference for Firefox Home Page Open From Awesomebar :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_open_from_awesomebar"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -819,7 +819,7 @@ from awesomebar.
   }
 
   dimension: metrics__counter__firefox_home_page_open_from_menu_home_button {
-    label: "Firefox Home Page Open From Menu Home Button"
+    label: "Firefox Home Page Open From Menu Home Button :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_open_from_menu_home_button ;;
     type: number
@@ -827,7 +827,7 @@ from awesomebar.
     group_item_label: "Open From Menu Home Button"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Open From Menu Home Button"
+      label: "Glean Dictionary reference for Firefox Home Page Open From Menu Home Button :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_open_from_menu_home_button"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -839,7 +839,7 @@ and New Tab button.
   }
 
   dimension: metrics__boolean__firefox_home_page_pocket_stories_visible {
-    label: "Firefox Home Page Pocket Stories Visible"
+    label: "Firefox Home Page Pocket Stories Visible :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.firefox_home_page_pocket_stories_visible ;;
     type: yesno
@@ -847,7 +847,7 @@ and New Tab button.
     group_item_label: "Pocket Stories Visible"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Pocket Stories Visible"
+      label: "Glean Dictionary reference for Firefox Home Page Pocket Stories Visible :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_pocket_stories_visible"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -857,7 +857,7 @@ and New Tab button.
   }
 
   dimension: metrics__counter__firefox_home_page_recently_saved_bookmark_item {
-    label: "Firefox Home Page Recently Saved Bookmark Item"
+    label: "Firefox Home Page Recently Saved Bookmark Item :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_recently_saved_bookmark_item ;;
     type: number
@@ -865,7 +865,7 @@ and New Tab button.
     group_item_label: "Recently Saved Bookmark Item"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Recently Saved Bookmark Item"
+      label: "Glean Dictionary reference for Firefox Home Page Recently Saved Bookmark Item :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_recently_saved_bookmark_item"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -876,14 +876,14 @@ the Recently Saved section is tapped
   }
 
   dimension: metrics__labeled_counter__firefox_home_page_recently_saved_bookmark_origin {
-    label: "Firefox Home Page Recently Saved Bookmark Origin"
+    label: "Firefox Home Page Recently Saved Bookmark Origin :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.firefox_home_page_recently_saved_bookmark_origin ;;
     group_label: "Firefox Home Page"
     group_item_label: "Recently Saved Bookmark Origin"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Recently Saved Bookmark Origin"
+      label: "Glean Dictionary reference for Firefox Home Page Recently Saved Bookmark Origin :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_recently_saved_bookmark_origin"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -895,14 +895,14 @@ with a home page origin.
   }
 
   dimension: metrics__labeled_counter__firefox_home_page_recently_saved_read_origin {
-    label: "Firefox Home Page Recently Saved Read Origin"
+    label: "Firefox Home Page Recently Saved Read Origin :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.firefox_home_page_recently_saved_read_origin ;;
     group_label: "Firefox Home Page"
     group_item_label: "Recently Saved Read Origin"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Recently Saved Read Origin"
+      label: "Glean Dictionary reference for Firefox Home Page Recently Saved Read Origin :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_recently_saved_read_origin"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -914,7 +914,7 @@ with a home page origin.
   }
 
   dimension: metrics__counter__firefox_home_page_recently_saved_reading_item {
-    label: "Firefox Home Page Recently Saved Reading Item"
+    label: "Firefox Home Page Recently Saved Reading Item :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_recently_saved_reading_item ;;
     type: number
@@ -922,7 +922,7 @@ with a home page origin.
     group_item_label: "Recently Saved Reading Item"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Recently Saved Reading Item"
+      label: "Glean Dictionary reference for Firefox Home Page Recently Saved Reading Item :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_recently_saved_reading_item"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -933,7 +933,7 @@ item in the Recently Saved section is tapped.
   }
 
   dimension: metrics__counter__firefox_home_page_recently_saved_show_all {
-    label: "Firefox Home Page Recently Saved Show All"
+    label: "Firefox Home Page Recently Saved Show All :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_recently_saved_show_all ;;
     type: number
@@ -941,7 +941,7 @@ item in the Recently Saved section is tapped.
     group_item_label: "Recently Saved Show All"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Recently Saved Show All"
+      label: "Glean Dictionary reference for Firefox Home Page Recently Saved Show All :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_recently_saved_show_all"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -952,14 +952,14 @@ button of the Recently Saved Section
   }
 
   dimension: metrics__labeled_counter__firefox_home_page_recently_saved_show_all_origin {
-    label: "Firefox Home Page Recently Saved Show All Origin"
+    label: "Firefox Home Page Recently Saved Show All Origin :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.firefox_home_page_recently_saved_show_all_origin ;;
     group_label: "Firefox Home Page"
     group_item_label: "Recently Saved Show All Origin"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Recently Saved Show All Origin"
+      label: "Glean Dictionary reference for Firefox Home Page Recently Saved Show All Origin :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_recently_saved_show_all_origin"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -971,7 +971,7 @@ with a home page origin.
   }
 
   dimension: metrics__counter__firefox_home_page_synced_tab_opened {
-    label: "Firefox Home Page Synced Tab Opened"
+    label: "Firefox Home Page Synced Tab Opened :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_synced_tab_opened ;;
     type: number
@@ -979,7 +979,7 @@ with a home page origin.
     group_item_label: "Synced Tab Opened"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Synced Tab Opened"
+      label: "Glean Dictionary reference for Firefox Home Page Synced Tab Opened :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_synced_tab_opened"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -990,14 +990,14 @@ synced tab from the Jump Back In section
   }
 
   dimension: metrics__labeled_counter__firefox_home_page_synced_tab_opened_origin {
-    label: "Firefox Home Page Synced Tab Opened Origin"
+    label: "Firefox Home Page Synced Tab Opened Origin :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.firefox_home_page_synced_tab_opened_origin ;;
     group_label: "Firefox Home Page"
     group_item_label: "Synced Tab Opened Origin"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Synced Tab Opened Origin"
+      label: "Glean Dictionary reference for Firefox Home Page Synced Tab Opened Origin :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_synced_tab_opened_origin"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1009,7 +1009,7 @@ with a home page origin.
   }
 
   dimension: metrics__counter__firefox_home_page_synced_tab_show_all {
-    label: "Firefox Home Page Synced Tab Show All"
+    label: "Firefox Home Page Synced Tab Show All :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_synced_tab_show_all ;;
     type: number
@@ -1017,7 +1017,7 @@ with a home page origin.
     group_item_label: "Synced Tab Show All"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Synced Tab Show All"
+      label: "Glean Dictionary reference for Firefox Home Page Synced Tab Show All :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_synced_tab_show_all"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1028,14 +1028,14 @@ Show All button of Synced Tab in the Jump Back In section.
   }
 
   dimension: metrics__labeled_counter__firefox_home_page_synced_tab_show_all_origin {
-    label: "Firefox Home Page Synced Tab Show All Origin"
+    label: "Firefox Home Page Synced Tab Show All Origin :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.firefox_home_page_synced_tab_show_all_origin ;;
     group_label: "Firefox Home Page"
     group_item_label: "Synced Tab Show All Origin"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Synced Tab Show All Origin"
+      label: "Glean Dictionary reference for Firefox Home Page Synced Tab Show All Origin :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_synced_tab_show_all_origin"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1047,7 +1047,7 @@ with a home page origin.
   }
 
   dimension: metrics__counter__firefox_home_page_synced_tab_tile_view {
-    label: "Firefox Home Page Synced Tab Tile View"
+    label: "Firefox Home Page Synced Tab Tile View :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.firefox_home_page_synced_tab_tile_view ;;
     type: number
@@ -1055,7 +1055,7 @@ with a home page origin.
     group_item_label: "Synced Tab Tile View"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Synced Tab Tile View"
+      label: "Glean Dictionary reference for Firefox Home Page Synced Tab Tile View :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_synced_tab_tile_view"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1066,14 +1066,14 @@ Synced Tab tile on the homepage
   }
 
   dimension: metrics__labeled_counter__firefox_home_page_your_library {
-    label: "Firefox Home Page Your Library"
+    label: "Firefox Home Page Your Library :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.firefox_home_page_your_library ;;
     group_label: "Firefox Home Page"
     group_item_label: "Your Library"
 
     link: {
-      label: "Glean Dictionary reference for Firefox Home Page Your Library"
+      label: "Glean Dictionary reference for Firefox Home Page Your Library :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/firefox_home_page_your_library"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1084,7 +1084,7 @@ History, Reading List, or Downloads buttons
   }
 
   dimension: metrics__counter__history_group_list {
-    label: "History Group List"
+    label: "History Group List :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.history_group_list ;;
     type: number
@@ -1092,7 +1092,7 @@ History, Reading List, or Downloads buttons
     group_item_label: "Group List"
 
     link: {
-      label: "Glean Dictionary reference for History Group List"
+      label: "Glean Dictionary reference for History Group List :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/history_group_list"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1105,14 +1105,14 @@ of all Site items that appear in that group.
   }
 
   dimension: metrics__labeled_counter__history_selected_item {
-    label: "History Selected Item"
+    label: "History Selected Item :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.history_selected_item ;;
     group_label: "History"
     group_item_label: "Selected Item"
 
     link: {
-      label: "Glean Dictionary reference for History Selected Item"
+      label: "Glean Dictionary reference for History Selected Item :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/history_selected_item"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1124,7 +1124,7 @@ items that appear inside a group, and those that do not.
   }
 
   dimension: metrics__counter__inactive_tabs_tray_inactive_tab_shown {
-    label: "Inactive Tabs Tray Inactive Tab Shown"
+    label: "Inactive Tabs Tray Inactive Tab Shown :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.inactive_tabs_tray_inactive_tab_shown ;;
     type: number
@@ -1132,7 +1132,7 @@ items that appear inside a group, and those that do not.
     group_item_label: "Inactive Tab Shown"
 
     link: {
-      label: "Glean Dictionary reference for Inactive Tabs Tray Inactive Tab Shown"
+      label: "Glean Dictionary reference for Inactive Tabs Tray Inactive Tab Shown :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/inactive_tabs_tray_inactive_tab_shown"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1142,7 +1142,7 @@ items that appear inside a group, and those that do not.
   }
 
   dimension: metrics__counter__inactive_tabs_tray_inactive_tab_swipe_close {
-    label: "Inactive Tabs Tray Inactive Tab Swipe Close"
+    label: "Inactive Tabs Tray Inactive Tab Swipe Close :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.inactive_tabs_tray_inactive_tab_swipe_close ;;
     type: number
@@ -1150,7 +1150,7 @@ items that appear inside a group, and those that do not.
     group_item_label: "Inactive Tab Swipe Close"
 
     link: {
-      label: "Glean Dictionary reference for Inactive Tabs Tray Inactive Tab Swipe Close"
+      label: "Glean Dictionary reference for Inactive Tabs Tray Inactive Tab Swipe Close :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/inactive_tabs_tray_inactive_tab_swipe_close"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1160,7 +1160,7 @@ items that appear inside a group, and those that do not.
   }
 
   dimension: metrics__counter__inactive_tabs_tray_inactive_tabs_close_all_btn {
-    label: "Inactive Tabs Tray Inactive Tabs Close All Btn"
+    label: "Inactive Tabs Tray Inactive Tabs Close All Btn :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.inactive_tabs_tray_inactive_tabs_close_all_btn ;;
     type: number
@@ -1168,7 +1168,7 @@ items that appear inside a group, and those that do not.
     group_item_label: "Inactive Tabs Close All Btn"
 
     link: {
-      label: "Glean Dictionary reference for Inactive Tabs Tray Inactive Tabs Close All Btn"
+      label: "Glean Dictionary reference for Inactive Tabs Tray Inactive Tabs Close All Btn :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/inactive_tabs_tray_inactive_tabs_close_all_btn"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1178,7 +1178,7 @@ items that appear inside a group, and those that do not.
   }
 
   dimension: metrics__counter__inactive_tabs_tray_open_inactive_tab {
-    label: "Inactive Tabs Tray Open Inactive Tab"
+    label: "Inactive Tabs Tray Open Inactive Tab :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.inactive_tabs_tray_open_inactive_tab ;;
     type: number
@@ -1186,7 +1186,7 @@ items that appear inside a group, and those that do not.
     group_item_label: "Open Inactive Tab"
 
     link: {
-      label: "Glean Dictionary reference for Inactive Tabs Tray Open Inactive Tab"
+      label: "Glean Dictionary reference for Inactive Tabs Tray Open Inactive Tab :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/inactive_tabs_tray_open_inactive_tab"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1196,7 +1196,7 @@ items that appear inside a group, and those that do not.
   }
 
   dimension: metrics__counter__inactive_tabs_tray_open_recently_closed_list {
-    label: "Inactive Tabs Tray Open Recently Closed List"
+    label: "Inactive Tabs Tray Open Recently Closed List :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.inactive_tabs_tray_open_recently_closed_list ;;
     type: number
@@ -1204,7 +1204,7 @@ items that appear inside a group, and those that do not.
     group_item_label: "Open Recently Closed List"
 
     link: {
-      label: "Glean Dictionary reference for Inactive Tabs Tray Open Recently Closed List"
+      label: "Glean Dictionary reference for Inactive Tabs Tray Open Recently Closed List :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/inactive_tabs_tray_open_recently_closed_list"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1215,7 +1215,7 @@ section from inactive tabs tray.
   }
 
   dimension: metrics__counter__inactive_tabs_tray_open_recently_closed_tab {
-    label: "Inactive Tabs Tray Open Recently Closed Tab"
+    label: "Inactive Tabs Tray Open Recently Closed Tab :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.inactive_tabs_tray_open_recently_closed_tab ;;
     type: number
@@ -1223,7 +1223,7 @@ section from inactive tabs tray.
     group_item_label: "Open Recently Closed Tab"
 
     link: {
-      label: "Glean Dictionary reference for Inactive Tabs Tray Open Recently Closed Tab"
+      label: "Glean Dictionary reference for Inactive Tabs Tray Open Recently Closed Tab :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/inactive_tabs_tray_open_recently_closed_tab"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1234,14 +1234,14 @@ default browser card is clicked.
   }
 
   dimension: metrics__labeled_counter__inactive_tabs_tray_toggle_inactive_tab_tray {
-    label: "Inactive Tabs Tray Toggle Inactive Tab Tray"
+    label: "Inactive Tabs Tray Toggle Inactive Tab Tray :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.inactive_tabs_tray_toggle_inactive_tab_tray ;;
     group_label: "Inactive Tabs Tray"
     group_item_label: "Toggle Inactive Tab Tray"
 
     link: {
-      label: "Glean Dictionary reference for Inactive Tabs Tray Toggle Inactive Tab Tray"
+      label: "Glean Dictionary reference for Inactive Tabs Tray Toggle Inactive Tab Tray :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/inactive_tabs_tray_toggle_inactive_tab_tray"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1252,7 +1252,7 @@ inactive tab section.
   }
 
   dimension: metrics__boolean__installed_mozilla_products_focus {
-    label: "Installed Mozilla Products Focus"
+    label: "Installed Mozilla Products Focus :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.installed_mozilla_products_focus ;;
     type: yesno
@@ -1260,7 +1260,7 @@ inactive tab section.
     group_item_label: "Focus"
 
     link: {
-      label: "Glean Dictionary reference for Installed Mozilla Products Focus"
+      label: "Glean Dictionary reference for Installed Mozilla Products Focus :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/installed_mozilla_products_focus"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1270,7 +1270,7 @@ inactive tab section.
   }
 
   dimension: metrics__boolean__installed_mozilla_products_klar {
-    label: "Installed Mozilla Products Klar"
+    label: "Installed Mozilla Products Klar :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.installed_mozilla_products_klar ;;
     type: yesno
@@ -1278,7 +1278,7 @@ inactive tab section.
     group_item_label: "Klar"
 
     link: {
-      label: "Glean Dictionary reference for Installed Mozilla Products Klar"
+      label: "Glean Dictionary reference for Installed Mozilla Products Klar :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/installed_mozilla_products_klar"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1288,7 +1288,7 @@ inactive tab section.
   }
 
   dimension: metrics__uuid__legacy_ids_client_id {
-    label: "Legacy Ids Client Id"
+    label: "Legacy Ids Client Id :)"
     hidden: no
     sql: ${TABLE}.metrics.uuid.legacy_ids_client_id ;;
     type: string
@@ -1296,7 +1296,7 @@ inactive tab section.
     group_item_label: "Client Id"
 
     link: {
-      label: "Glean Dictionary reference for Legacy Ids Client Id"
+      label: "Glean Dictionary reference for Legacy Ids Client Id :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/legacy_ids_client_id"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1306,14 +1306,14 @@ inactive tab section.
   }
 
   dimension: metrics__labeled_counter__library_panel_pressed {
-    label: "Library Panel Pressed"
+    label: "Library Panel Pressed :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.library_panel_pressed ;;
     group_label: "Library"
     group_item_label: "Panel Pressed"
 
     link: {
-      label: "Glean Dictionary reference for Library Panel Pressed"
+      label: "Glean Dictionary reference for Library Panel Pressed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/library_panel_pressed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1325,7 +1325,7 @@ Downloads and Synced tabs
   }
 
   dimension: metrics__counter__migration_image_sd_cache_cleanup {
-    label: "Migration Image Sd Cache Cleanup"
+    label: "Migration Image Sd Cache Cleanup :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.migration_image_sd_cache_cleanup ;;
     type: number
@@ -1333,7 +1333,7 @@ Downloads and Synced tabs
     group_item_label: "Image Sd Cache Cleanup"
 
     link: {
-      label: "Glean Dictionary reference for Migration Image Sd Cache Cleanup"
+      label: "Glean Dictionary reference for Migration Image Sd Cache Cleanup :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/migration_image_sd_cache_cleanup"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1344,7 +1344,7 @@ sd web image library cache cleanup
   }
 
   dimension: metrics__counter__onboarding_sync_screen {
-    label: "Onboarding Sync Screen"
+    label: "Onboarding Sync Screen :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.onboarding_sync_screen ;;
     type: number
@@ -1352,7 +1352,7 @@ sd web image library cache cleanup
     group_item_label: "Sync Screen"
 
     link: {
-      label: "Glean Dictionary reference for Onboarding Sync Screen"
+      label: "Glean Dictionary reference for Onboarding Sync Screen :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/onboarding_sync_screen"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1363,7 +1363,7 @@ Sync Screen, from the onboarding process.
   }
 
   dimension: metrics__counter__onboarding_sync_screen_browse {
-    label: "Onboarding Sync Screen Browse"
+    label: "Onboarding Sync Screen Browse :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.onboarding_sync_screen_browse ;;
     type: number
@@ -1371,7 +1371,7 @@ Sync Screen, from the onboarding process.
     group_item_label: "Sync Screen Browse"
 
     link: {
-      label: "Glean Dictionary reference for Onboarding Sync Screen Browse"
+      label: "Glean Dictionary reference for Onboarding Sync Screen Browse :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/onboarding_sync_screen_browse"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1382,7 +1382,7 @@ in onboarding's second screen, the Sync Screen.
   }
 
   dimension: metrics__counter__onboarding_sync_screen_sign_up {
-    label: "Onboarding Sync Screen Sign Up"
+    label: "Onboarding Sync Screen Sign Up :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.onboarding_sync_screen_sign_up ;;
     type: number
@@ -1390,7 +1390,7 @@ in onboarding's second screen, the Sync Screen.
     group_item_label: "Sync Screen Sign Up"
 
     link: {
-      label: "Glean Dictionary reference for Onboarding Sync Screen Sign Up"
+      label: "Glean Dictionary reference for Onboarding Sync Screen Sign Up :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/onboarding_sync_screen_sign_up"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1401,7 +1401,7 @@ onboarding's second screen, the Sync Screen.
   }
 
   dimension: metrics__counter__onboarding_welcome_screen {
-    label: "Onboarding Welcome Screen"
+    label: "Onboarding Welcome Screen :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.onboarding_welcome_screen ;;
     type: number
@@ -1409,7 +1409,7 @@ onboarding's second screen, the Sync Screen.
     group_item_label: "Welcome Screen"
 
     link: {
-      label: "Glean Dictionary reference for Onboarding Welcome Screen"
+      label: "Glean Dictionary reference for Onboarding Welcome Screen :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/onboarding_welcome_screen"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1420,7 +1420,7 @@ welcome screen, from the onboarding process.
   }
 
   dimension: metrics__counter__onboarding_welcome_screen_close {
-    label: "Onboarding Welcome Screen Close"
+    label: "Onboarding Welcome Screen Close :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.onboarding_welcome_screen_close ;;
     type: number
@@ -1428,7 +1428,7 @@ welcome screen, from the onboarding process.
     group_item_label: "Welcome Screen Close"
 
     link: {
-      label: "Glean Dictionary reference for Onboarding Welcome Screen Close"
+      label: "Glean Dictionary reference for Onboarding Welcome Screen Close :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/onboarding_welcome_screen_close"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1439,7 +1439,7 @@ onboarding's first screen, the welcome screen.
   }
 
   dimension: metrics__counter__onboarding_welcome_screen_next {
-    label: "Onboarding Welcome Screen Next"
+    label: "Onboarding Welcome Screen Next :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.onboarding_welcome_screen_next ;;
     type: number
@@ -1447,7 +1447,7 @@ onboarding's first screen, the welcome screen.
     group_item_label: "Welcome Screen Next"
 
     link: {
-      label: "Glean Dictionary reference for Onboarding Welcome Screen Next"
+      label: "Glean Dictionary reference for Onboarding Welcome Screen Next :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/onboarding_welcome_screen_next"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1458,7 +1458,7 @@ onboarding's first screen, the welcome screen.
   }
 
   dimension: metrics__counter__onboarding_welcome_screen_sign_in {
-    label: "Onboarding Welcome Screen Sign In"
+    label: "Onboarding Welcome Screen Sign In :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.onboarding_welcome_screen_sign_in ;;
     type: number
@@ -1466,7 +1466,7 @@ onboarding's first screen, the welcome screen.
     group_item_label: "Welcome Screen Sign In"
 
     link: {
-      label: "Glean Dictionary reference for Onboarding Welcome Screen Sign In"
+      label: "Glean Dictionary reference for Onboarding Welcome Screen Sign In :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/onboarding_welcome_screen_sign_in"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1477,7 +1477,7 @@ onboarding's first screen, the welcome screen.
   }
 
   dimension: metrics__counter__onboarding_welcome_screen_sign_up {
-    label: "Onboarding Welcome Screen Sign Up"
+    label: "Onboarding Welcome Screen Sign Up :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.onboarding_welcome_screen_sign_up ;;
     type: number
@@ -1485,7 +1485,7 @@ onboarding's first screen, the welcome screen.
     group_item_label: "Welcome Screen Sign Up"
 
     link: {
-      label: "Glean Dictionary reference for Onboarding Welcome Screen Sign Up"
+      label: "Glean Dictionary reference for Onboarding Welcome Screen Sign Up :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/onboarding_welcome_screen_sign_up"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1496,7 +1496,7 @@ onboarding's first screen, the welcome screen.
   }
 
   dimension: metrics__counter__page_action_menu_add_to_reading_list {
-    label: "Page Action Menu Add To Reading List"
+    label: "Page Action Menu Add To Reading List :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.page_action_menu_add_to_reading_list ;;
     type: number
@@ -1504,7 +1504,7 @@ onboarding's first screen, the welcome screen.
     group_item_label: "Add To Reading List"
 
     link: {
-      label: "Glean Dictionary reference for Page Action Menu Add To Reading List"
+      label: "Glean Dictionary reference for Page Action Menu Add To Reading List :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/page_action_menu_add_to_reading_list"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1515,7 +1515,7 @@ in the page action menu
   }
 
   dimension: metrics__counter__page_action_menu_copy_address {
-    label: "Page Action Menu Copy Address"
+    label: "Page Action Menu Copy Address :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.page_action_menu_copy_address ;;
     type: number
@@ -1523,7 +1523,7 @@ in the page action menu
     group_item_label: "Copy Address"
 
     link: {
-      label: "Glean Dictionary reference for Page Action Menu Copy Address"
+      label: "Glean Dictionary reference for Page Action Menu Copy Address :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/page_action_menu_copy_address"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1534,7 +1534,7 @@ in the page action menu
   }
 
   dimension: metrics__counter__page_action_menu_create_new_tab {
-    label: "Page Action Menu Create New Tab"
+    label: "Page Action Menu Create New Tab :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.page_action_menu_create_new_tab ;;
     type: number
@@ -1542,7 +1542,7 @@ in the page action menu
     group_item_label: "Create New Tab"
 
     link: {
-      label: "Glean Dictionary reference for Page Action Menu Create New Tab"
+      label: "Glean Dictionary reference for Page Action Menu Create New Tab :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/page_action_menu_create_new_tab"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1553,7 +1553,7 @@ page action menu.
   }
 
   dimension: metrics__counter__page_action_menu_find_in_page {
-    label: "Page Action Menu Find In Page"
+    label: "Page Action Menu Find In Page :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.page_action_menu_find_in_page ;;
     type: number
@@ -1561,7 +1561,7 @@ page action menu.
     group_item_label: "Find In Page"
 
     link: {
-      label: "Glean Dictionary reference for Page Action Menu Find In Page"
+      label: "Glean Dictionary reference for Page Action Menu Find In Page :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/page_action_menu_find_in_page"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1572,7 +1572,7 @@ in the page action menu
   }
 
   dimension: metrics__counter__page_action_menu_pin_to_top_sites {
-    label: "Page Action Menu Pin To Top Sites"
+    label: "Page Action Menu Pin To Top Sites :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.page_action_menu_pin_to_top_sites ;;
     type: number
@@ -1580,7 +1580,7 @@ in the page action menu
     group_item_label: "Pin To Top Sites"
 
     link: {
-      label: "Glean Dictionary reference for Page Action Menu Pin To Top Sites"
+      label: "Glean Dictionary reference for Page Action Menu Pin To Top Sites :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/page_action_menu_pin_to_top_sites"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1591,7 +1591,7 @@ in the page action menu
   }
 
   dimension: metrics__counter__page_action_menu_remove_pinned_site {
-    label: "Page Action Menu Remove Pinned Site"
+    label: "Page Action Menu Remove Pinned Site :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.page_action_menu_remove_pinned_site ;;
     type: number
@@ -1599,7 +1599,7 @@ in the page action menu
     group_item_label: "Remove Pinned Site"
 
     link: {
-      label: "Glean Dictionary reference for Page Action Menu Remove Pinned Site"
+      label: "Glean Dictionary reference for Page Action Menu Remove Pinned Site :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/page_action_menu_remove_pinned_site"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1610,7 +1610,7 @@ in the page action menu
   }
 
   dimension: metrics__counter__page_action_menu_report_site_issue {
-    label: "Page Action Menu Report Site Issue"
+    label: "Page Action Menu Report Site Issue :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.page_action_menu_report_site_issue ;;
     type: number
@@ -1618,7 +1618,7 @@ in the page action menu
     group_item_label: "Report Site Issue"
 
     link: {
-      label: "Glean Dictionary reference for Page Action Menu Report Site Issue"
+      label: "Glean Dictionary reference for Page Action Menu Report Site Issue :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/page_action_menu_report_site_issue"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1629,7 +1629,7 @@ in the page action menu
   }
 
   dimension: metrics__counter__page_action_menu_request_desktop_site {
-    label: "Page Action Menu Request Desktop Site"
+    label: "Page Action Menu Request Desktop Site :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.page_action_menu_request_desktop_site ;;
     type: number
@@ -1637,7 +1637,7 @@ in the page action menu
     group_item_label: "Request Desktop Site"
 
     link: {
-      label: "Glean Dictionary reference for Page Action Menu Request Desktop Site"
+      label: "Glean Dictionary reference for Page Action Menu Request Desktop Site :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/page_action_menu_request_desktop_site"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1648,7 +1648,7 @@ in the page action menu
   }
 
   dimension: metrics__counter__page_action_menu_request_mobile_site {
-    label: "Page Action Menu Request Mobile Site"
+    label: "Page Action Menu Request Mobile Site :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.page_action_menu_request_mobile_site ;;
     type: number
@@ -1656,7 +1656,7 @@ in the page action menu
     group_item_label: "Request Mobile Site"
 
     link: {
-      label: "Glean Dictionary reference for Page Action Menu Request Mobile Site"
+      label: "Glean Dictionary reference for Page Action Menu Request Mobile Site :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/page_action_menu_request_mobile_site"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1667,7 +1667,7 @@ in the page action menu
   }
 
   dimension: metrics__counter__page_action_menu_send_to_device {
-    label: "Page Action Menu Send To Device"
+    label: "Page Action Menu Send To Device :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.page_action_menu_send_to_device ;;
     type: number
@@ -1675,7 +1675,7 @@ in the page action menu
     group_item_label: "Send To Device"
 
     link: {
-      label: "Glean Dictionary reference for Page Action Menu Send To Device"
+      label: "Glean Dictionary reference for Page Action Menu Send To Device :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/page_action_menu_send_to_device"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1686,7 +1686,7 @@ in the page action menu
   }
 
   dimension: metrics__counter__page_action_menu_share_page_with {
-    label: "Page Action Menu Share Page With"
+    label: "Page Action Menu Share Page With :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.page_action_menu_share_page_with ;;
     type: number
@@ -1694,7 +1694,7 @@ in the page action menu
     group_item_label: "Share Page With"
 
     link: {
-      label: "Glean Dictionary reference for Page Action Menu Share Page With"
+      label: "Glean Dictionary reference for Page Action Menu Share Page With :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/page_action_menu_share_page_with"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1705,7 +1705,7 @@ page action menu
   }
 
   dimension: metrics__counter__page_action_menu_view_downloads_panel {
-    label: "Page Action Menu View Downloads Panel"
+    label: "Page Action Menu View Downloads Panel :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.page_action_menu_view_downloads_panel ;;
     type: number
@@ -1713,7 +1713,7 @@ page action menu
     group_item_label: "View Downloads Panel"
 
     link: {
-      label: "Glean Dictionary reference for Page Action Menu View Downloads Panel"
+      label: "Glean Dictionary reference for Page Action Menu View Downloads Panel :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/page_action_menu_view_downloads_panel"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1724,7 +1724,7 @@ from the page action menu.
   }
 
   dimension: metrics__counter__page_action_menu_view_history_panel {
-    label: "Page Action Menu View History Panel"
+    label: "Page Action Menu View History Panel :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.page_action_menu_view_history_panel ;;
     type: number
@@ -1732,7 +1732,7 @@ from the page action menu.
     group_item_label: "View History Panel"
 
     link: {
-      label: "Glean Dictionary reference for Page Action Menu View History Panel"
+      label: "Glean Dictionary reference for Page Action Menu View History Panel :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/page_action_menu_view_history_panel"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1743,7 +1743,7 @@ from the page action menu.
   }
 
   dimension: metrics__counter__pocket_open_story {
-    label: "Pocket Open Story"
+    label: "Pocket Open Story :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.pocket_open_story ;;
     type: number
@@ -1751,7 +1751,7 @@ from the page action menu.
     group_item_label: "Open Story"
 
     link: {
-      label: "Glean Dictionary reference for Pocket Open Story"
+      label: "Glean Dictionary reference for Pocket Open Story :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/pocket_open_story"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1762,14 +1762,14 @@ Pocket article from Firefox home Pocket feed
   }
 
   dimension: metrics__labeled_counter__pocket_open_story_origin {
-    label: "Pocket Open Story Origin"
+    label: "Pocket Open Story Origin :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.pocket_open_story_origin ;;
     group_label: "Pocket"
     group_item_label: "Open Story Origin"
 
     link: {
-      label: "Glean Dictionary reference for Pocket Open Story Origin"
+      label: "Glean Dictionary reference for Pocket Open Story Origin :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/pocket_open_story_origin"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1780,14 +1780,14 @@ Firefox Home Pocket feed, with a home page origin.
   }
 
   dimension: metrics__labeled_counter__pocket_open_story_position {
-    label: "Pocket Open Story Position"
+    label: "Pocket Open Story Position :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.pocket_open_story_position ;;
     group_label: "Pocket"
     group_item_label: "Open Story Position"
 
     link: {
-      label: "Glean Dictionary reference for Pocket Open Story Position"
+      label: "Glean Dictionary reference for Pocket Open Story Position :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/pocket_open_story_position"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1799,7 +1799,7 @@ The label is position of tile i.e. 0,1,2...
   }
 
   dimension: metrics__counter__pocket_section_impressions {
-    label: "Pocket Section Impressions"
+    label: "Pocket Section Impressions :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.pocket_section_impressions ;;
     type: number
@@ -1807,7 +1807,7 @@ The label is position of tile i.e. 0,1,2...
     group_item_label: "Section Impressions"
 
     link: {
-      label: "Glean Dictionary reference for Pocket Section Impressions"
+      label: "Glean Dictionary reference for Pocket Section Impressions :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/pocket_section_impressions"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1818,7 +1818,7 @@ on Firefox Home
   }
 
   dimension: metrics__boolean__preferences_block_popups {
-    label: "Preferences Block Popups"
+    label: "Preferences Block Popups :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.preferences_block_popups ;;
     type: yesno
@@ -1826,7 +1826,7 @@ on Firefox Home
     group_item_label: "Block Popups"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Block Popups"
+      label: "Glean Dictionary reference for Preferences Block Popups :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/preferences_block_popups"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1836,7 +1836,7 @@ on Firefox Home
   }
 
   dimension: metrics__boolean__preferences_close_private_tabs {
-    label: "Preferences Close Private Tabs"
+    label: "Preferences Close Private Tabs :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_close_private_tabs ;;
     type: yesno
@@ -1844,7 +1844,7 @@ on Firefox Home
     group_item_label: "Close Private Tabs"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Close Private Tabs"
+      label: "Glean Dictionary reference for Preferences Close Private Tabs :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/preferences_close_private_tabs"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1854,7 +1854,7 @@ on Firefox Home
   }
 
   dimension: metrics__string__preferences_home_page_setting {
-    label: "Preferences Home Page Setting"
+    label: "Preferences Home Page Setting :)"
     hidden: no
     sql: ${TABLE}.metrics.string.preferences_home_page_setting ;;
     type: string
@@ -1862,7 +1862,7 @@ on Firefox Home
     group_item_label: "Home Page Setting"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Home Page Setting"
+      label: "Glean Dictionary reference for Preferences Home Page Setting :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/preferences_home_page_setting"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1873,7 +1873,7 @@ it is initially set to Firefox Home.
   }
 
   dimension: metrics__string__preferences_mail_client {
-    label: "Preferences Mail Client"
+    label: "Preferences Mail Client :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.preferences_mail_client ;;
     type: string
@@ -1881,7 +1881,7 @@ it is initially set to Firefox Home.
     group_item_label: "Mail Client"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Mail Client"
+      label: "Glean Dictionary reference for Preferences Mail Client :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/preferences_mail_client"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1895,7 +1895,7 @@ of users is using their client.
   }
 
   dimension: metrics__string__preferences_new_tab_experience {
-    label: "Preferences New Tab Experience"
+    label: "Preferences New Tab Experience :)"
     hidden: no
     sql: ${TABLE}.metrics.string.preferences_new_tab_experience ;;
     type: string
@@ -1903,7 +1903,7 @@ of users is using their client.
     group_item_label: "New Tab Experience"
 
     link: {
-      label: "Glean Dictionary reference for Preferences New Tab Experience"
+      label: "Glean Dictionary reference for Preferences New Tab Experience :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/preferences_new_tab_experience"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1917,7 +1917,7 @@ introduce the new Activity Stream features.
   }
 
   dimension: metrics__boolean__preferences_save_logins {
-    label: "Preferences Save Logins"
+    label: "Preferences Save Logins :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_save_logins ;;
     type: yesno
@@ -1925,7 +1925,7 @@ introduce the new Activity Stream features.
     group_item_label: "Save Logins"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Save Logins"
+      label: "Glean Dictionary reference for Preferences Save Logins :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/preferences_save_logins"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1935,7 +1935,7 @@ introduce the new Activity Stream features.
   }
 
   dimension: metrics__boolean__preferences_show_clipboard_bar {
-    label: "Preferences Show Clipboard Bar"
+    label: "Preferences Show Clipboard Bar :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.preferences_show_clipboard_bar ;;
     type: yesno
@@ -1943,7 +1943,7 @@ introduce the new Activity Stream features.
     group_item_label: "Show Clipboard Bar"
 
     link: {
-      label: "Glean Dictionary reference for Preferences Show Clipboard Bar"
+      label: "Glean Dictionary reference for Preferences Show Clipboard Bar :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/preferences_show_clipboard_bar"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1953,7 +1953,7 @@ introduce the new Activity Stream features.
   }
 
   dimension: metrics__counter__qr_code_scanned {
-    label: "Qr Code Scanned"
+    label: "Qr Code Scanned :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.qr_code_scanned ;;
     type: number
@@ -1961,7 +1961,7 @@ introduce the new Activity Stream features.
     group_item_label: "Scanned"
 
     link: {
-      label: "Glean Dictionary reference for Qr Code Scanned"
+      label: "Glean Dictionary reference for Qr Code Scanned :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/qr_code_scanned"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1971,7 +1971,7 @@ introduce the new Activity Stream features.
   }
 
   dimension: metrics__counter__reader_mode_close {
-    label: "Reader Mode Close"
+    label: "Reader Mode Close :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.reader_mode_close ;;
     type: number
@@ -1979,7 +1979,7 @@ introduce the new Activity Stream features.
     group_item_label: "Close"
 
     link: {
-      label: "Glean Dictionary reference for Reader Mode Close"
+      label: "Glean Dictionary reference for Reader Mode Close :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/reader_mode_close"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -1989,7 +1989,7 @@ introduce the new Activity Stream features.
   }
 
   dimension: metrics__counter__reader_mode_open {
-    label: "Reader Mode Open"
+    label: "Reader Mode Open :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.reader_mode_open ;;
     type: number
@@ -1997,7 +1997,7 @@ introduce the new Activity Stream features.
     group_item_label: "Open"
 
     link: {
-      label: "Glean Dictionary reference for Reader Mode Open"
+      label: "Glean Dictionary reference for Reader Mode Open :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/reader_mode_open"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2007,14 +2007,14 @@ introduce the new Activity Stream features.
   }
 
   dimension: metrics__labeled_counter__reading_list_add {
-    label: "Reading List Add"
+    label: "Reading List Add :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.reading_list_add ;;
     group_label: "Reading List"
     group_item_label: "Add"
 
     link: {
-      label: "Glean Dictionary reference for Reading List Add"
+      label: "Glean Dictionary reference for Reading List Add :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/reading_list_add"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2028,14 +2028,14 @@ list from the following:
   }
 
   dimension: metrics__labeled_counter__reading_list_delete {
-    label: "Reading List Delete"
+    label: "Reading List Delete :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.reading_list_delete ;;
     group_label: "Reading List"
     group_item_label: "Delete"
 
     link: {
-      label: "Glean Dictionary reference for Reading List Delete"
+      label: "Glean Dictionary reference for Reading List Delete :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/reading_list_delete"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2048,7 +2048,7 @@ reading list from the following:
   }
 
   dimension: metrics__counter__reading_list_mark_read {
-    label: "Reading List Mark Read"
+    label: "Reading List Mark Read :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.reading_list_mark_read ;;
     type: number
@@ -2056,7 +2056,7 @@ reading list from the following:
     group_item_label: "Mark Read"
 
     link: {
-      label: "Glean Dictionary reference for Reading List Mark Read"
+      label: "Glean Dictionary reference for Reading List Mark Read :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/reading_list_mark_read"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2067,7 +2067,7 @@ marked as read.
   }
 
   dimension: metrics__counter__reading_list_mark_unread {
-    label: "Reading List Mark Unread"
+    label: "Reading List Mark Unread :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.reading_list_mark_unread ;;
     type: number
@@ -2075,7 +2075,7 @@ marked as read.
     group_item_label: "Mark Unread"
 
     link: {
-      label: "Glean Dictionary reference for Reading List Mark Unread"
+      label: "Glean Dictionary reference for Reading List Mark Unread :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/reading_list_mark_unread"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2086,7 +2086,7 @@ marked as unread.
   }
 
   dimension: metrics__counter__reading_list_open {
-    label: "Reading List Open"
+    label: "Reading List Open :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.reading_list_open ;;
     type: number
@@ -2094,7 +2094,7 @@ marked as unread.
     group_item_label: "Open"
 
     link: {
-      label: "Glean Dictionary reference for Reading List Open"
+      label: "Glean Dictionary reference for Reading List Open :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/reading_list_open"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2105,14 +2105,14 @@ Reading List
   }
 
   dimension: metrics__labeled_counter__search_counts {
-    label: "Search Counts"
+    label: "Search Counts :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.search_counts ;;
     group_label: "Search"
     group_item_label: "Counts"
 
     link: {
-      label: "Glean Dictionary reference for Search Counts"
+      label: "Glean Dictionary reference for Search Counts :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/search_counts"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2132,7 +2132,7 @@ search started.  One of:
   }
 
   dimension: metrics__string__search_default_engine {
-    label: "Search Default Engine"
+    label: "Search Default Engine :)"
     hidden: no
     sql: ${TABLE}.metrics.string.search_default_engine ;;
     type: string
@@ -2140,7 +2140,7 @@ search started.  One of:
     group_item_label: "Default Engine"
 
     link: {
-      label: "Glean Dictionary reference for Search Default Engine"
+      label: "Glean Dictionary reference for Search Default Engine :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/search_default_engine"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2152,14 +2152,14 @@ then the value will be 'custom'.
   }
 
   dimension: metrics__labeled_counter__search_google_topsite_pressed {
-    label: "Search Google Topsite Pressed"
+    label: "Search Google Topsite Pressed :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.search_google_topsite_pressed ;;
     group_label: "Search"
     group_item_label: "Google Topsite Pressed"
 
     link: {
-      label: "Glean Dictionary reference for Search Google Topsite Pressed"
+      label: "Glean Dictionary reference for Search Google Topsite Pressed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/search_google_topsite_pressed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2170,14 +2170,14 @@ is pressed
   }
 
   dimension: metrics__labeled_counter__search_in_content {
-    label: "Search In Content"
+    label: "Search In Content :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.search_in_content ;;
     group_label: "Search"
     group_item_label: "In Content"
 
     link: {
-      label: "Glean Dictionary reference for Search In Content"
+      label: "Glean Dictionary reference for Search In Content :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/search_in_content"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2187,7 +2187,7 @@ is pressed
   }
 
   dimension: metrics__counter__search_start_search_pressed {
-    label: "Search Start Search Pressed"
+    label: "Search Start Search Pressed :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.search_start_search_pressed ;;
     type: number
@@ -2195,7 +2195,7 @@ is pressed
     group_item_label: "Start Search Pressed"
 
     link: {
-      label: "Glean Dictionary reference for Search Start Search Pressed"
+      label: "Glean Dictionary reference for Search Start Search Pressed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/search_start_search_pressed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2206,7 +2206,7 @@ pressed
   }
 
   dimension: metrics__counter__settings_menu_set_as_default_browser_pressed {
-    label: "Settings Menu Set As Default Browser Pressed"
+    label: "Settings Menu Set As Default Browser Pressed :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.settings_menu_set_as_default_browser_pressed ;;
     type: number
@@ -2214,7 +2214,7 @@ pressed
     group_item_label: "Set As Default Browser Pressed"
 
     link: {
-      label: "Glean Dictionary reference for Settings Menu Set As Default Browser Pressed"
+      label: "Glean Dictionary reference for Settings Menu Set As Default Browser Pressed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/settings_menu_set_as_default_browser_pressed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2225,7 +2225,7 @@ browser menu option is tapped.
   }
 
   dimension: metrics__counter__sync_create_account_pressed {
-    label: "Sync Create Account Pressed"
+    label: "Sync Create Account Pressed :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.sync_create_account_pressed ;;
     type: number
@@ -2233,7 +2233,7 @@ browser menu option is tapped.
     group_item_label: "Create Account Pressed"
 
     link: {
-      label: "Glean Dictionary reference for Sync Create Account Pressed"
+      label: "Glean Dictionary reference for Sync Create Account Pressed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/sync_create_account_pressed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2244,7 +2244,7 @@ on create account button in sync library view
   }
 
   dimension: metrics__counter__sync_open_sync_home_shortcut {
-    label: "Sync Open Sync Home Shortcut"
+    label: "Sync Open Sync Home Shortcut :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.sync_open_sync_home_shortcut ;;
     type: number
@@ -2252,7 +2252,7 @@ on create account button in sync library view
     group_item_label: "Open Sync Home Shortcut"
 
     link: {
-      label: "Glean Dictionary reference for Sync Open Sync Home Shortcut"
+      label: "Glean Dictionary reference for Sync Open Sync Home Shortcut :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/sync_open_sync_home_shortcut"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2263,7 +2263,7 @@ synced tab list from home view
   }
 
   dimension: metrics__counter__sync_open_tab {
-    label: "Sync Open Tab"
+    label: "Sync Open Tab :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.sync_open_tab ;;
     type: number
@@ -2271,7 +2271,7 @@ synced tab list from home view
     group_item_label: "Open Tab"
 
     link: {
-      label: "Glean Dictionary reference for Sync Open Tab"
+      label: "Glean Dictionary reference for Sync Open Tab :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/sync_open_tab"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2282,7 +2282,7 @@ synced tab
   }
 
   dimension: metrics__counter__sync_sign_in_sync_pressed {
-    label: "Sync Sign In Sync Pressed"
+    label: "Sync Sign In Sync Pressed :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.sync_sign_in_sync_pressed ;;
     type: number
@@ -2290,7 +2290,7 @@ synced tab
     group_item_label: "Sign In Sync Pressed"
 
     link: {
-      label: "Glean Dictionary reference for Sync Sign In Sync Pressed"
+      label: "Glean Dictionary reference for Sync Sign In Sync Pressed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/sync_sign_in_sync_pressed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2302,14 +2302,14 @@ library view
   }
 
   dimension: metrics__labeled_counter__tabs_close {
-    label: "Tabs Close"
+    label: "Tabs Close :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.tabs_close ;;
     group_label: "Tabs"
     group_item_label: "Close"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Close"
+      label: "Glean Dictionary reference for Tabs Close :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tabs_close"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2321,14 +2321,14 @@ is closed.
   }
 
   dimension: metrics__labeled_counter__tabs_close_all {
-    label: "Tabs Close All"
+    label: "Tabs Close All :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.tabs_close_all ;;
     group_label: "Tabs"
     group_item_label: "Close All"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Close All"
+      label: "Glean Dictionary reference for Tabs Close All :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tabs_close_all"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2340,7 +2340,7 @@ is closed.
   }
 
   dimension: metrics__counter__tabs_cumulative_count {
-    label: "Tabs Cumulative Count"
+    label: "Tabs Cumulative Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.tabs_cumulative_count ;;
     type: number
@@ -2348,7 +2348,7 @@ is closed.
     group_item_label: "Cumulative Count"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Cumulative Count"
+      label: "Glean Dictionary reference for Tabs Cumulative Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tabs_cumulative_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2366,7 +2366,7 @@ average open tabs per foreground \"session\".
   }
 
   dimension: metrics__counter__tabs_grouped_tab_search {
-    label: "Tabs Grouped Tab Search"
+    label: "Tabs Grouped Tab Search :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.tabs_grouped_tab_search ;;
     type: number
@@ -2374,7 +2374,7 @@ average open tabs per foreground \"session\".
     group_item_label: "Grouped Tab Search"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Grouped Tab Search"
+      label: "Glean Dictionary reference for Tabs Grouped Tab Search :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tabs_grouped_tab_search"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2385,7 +2385,7 @@ icon for grouped tabs in the tab tray.
   }
 
   dimension: metrics__counter__tabs_navigate_tab_back_swipe {
-    label: "Tabs Navigate Tab Back Swipe"
+    label: "Tabs Navigate Tab Back Swipe :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.tabs_navigate_tab_back_swipe ;;
     type: number
@@ -2393,7 +2393,7 @@ icon for grouped tabs in the tab tray.
     group_item_label: "Navigate Tab Back Swipe"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Navigate Tab Back Swipe"
+      label: "Glean Dictionary reference for Tabs Navigate Tab Back Swipe :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tabs_navigate_tab_back_swipe"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2404,7 +2404,7 @@ history by swiping from the left edge of the device to the right.
   }
 
   dimension: metrics__counter__tabs_navigate_tab_history_back {
-    label: "Tabs Navigate Tab History Back"
+    label: "Tabs Navigate Tab History Back :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.tabs_navigate_tab_history_back ;;
     type: number
@@ -2412,7 +2412,7 @@ history by swiping from the left edge of the device to the right.
     group_item_label: "Navigate Tab History Back"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Navigate Tab History Back"
+      label: "Glean Dictionary reference for Tabs Navigate Tab History Back :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tabs_navigate_tab_history_back"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2423,7 +2423,7 @@ button on a tab's toolbar.
   }
 
   dimension: metrics__counter__tabs_navigate_tab_history_forward {
-    label: "Tabs Navigate Tab History Forward"
+    label: "Tabs Navigate Tab History Forward :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.tabs_navigate_tab_history_forward ;;
     type: number
@@ -2431,7 +2431,7 @@ button on a tab's toolbar.
     group_item_label: "Navigate Tab History Forward"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Navigate Tab History Forward"
+      label: "Glean Dictionary reference for Tabs Navigate Tab History Forward :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tabs_navigate_tab_history_forward"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2442,7 +2442,7 @@ button on a tab's toolbar.
   }
 
   dimension: metrics__counter__tabs_new_tab_pressed {
-    label: "Tabs New Tab Pressed"
+    label: "Tabs New Tab Pressed :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.tabs_new_tab_pressed ;;
     type: number
@@ -2450,7 +2450,7 @@ button on a tab's toolbar.
     group_item_label: "New Tab Pressed"
 
     link: {
-      label: "Glean Dictionary reference for Tabs New Tab Pressed"
+      label: "Glean Dictionary reference for Tabs New Tab Pressed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tabs_new_tab_pressed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2461,7 +2461,7 @@ pressed
   }
 
   dimension: metrics__counter__tabs_normal_and_private_uri_count {
-    label: "Tabs Normal And Private Uri Count"
+    label: "Tabs Normal And Private Uri Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.tabs_normal_and_private_uri_count ;;
     type: number
@@ -2469,7 +2469,7 @@ pressed
     group_item_label: "Normal And Private Uri Count"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Normal And Private Uri Count"
+      label: "Glean Dictionary reference for Tabs Normal And Private Uri Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tabs_normal_and_private_uri_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2479,7 +2479,7 @@ pressed
   }
 
   dimension: metrics__quantity__tabs_normal_tabs_quantity {
-    label: "Tabs Normal Tabs Quantity"
+    label: "Tabs Normal Tabs Quantity :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.tabs_normal_tabs_quantity ;;
     type: number
@@ -2487,7 +2487,7 @@ pressed
     group_item_label: "Normal Tabs Quantity"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Normal Tabs Quantity"
+      label: "Glean Dictionary reference for Tabs Normal Tabs Quantity :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tabs_normal_tabs_quantity"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2498,14 +2498,14 @@ closes the application.
   }
 
   dimension: metrics__labeled_counter__tabs_open {
-    label: "Tabs Open"
+    label: "Tabs Open :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.tabs_open ;;
     group_label: "Tabs"
     group_item_label: "Open"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Open"
+      label: "Glean Dictionary reference for Tabs Open :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tabs_open"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2517,7 +2517,7 @@ is opened.
   }
 
   dimension: metrics__quantity__tabs_private_tabs_quantity {
-    label: "Tabs Private Tabs Quantity"
+    label: "Tabs Private Tabs Quantity :)"
     hidden: no
     sql: ${TABLE}.metrics.quantity.tabs_private_tabs_quantity ;;
     type: number
@@ -2525,7 +2525,7 @@ is opened.
     group_item_label: "Private Tabs Quantity"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Private Tabs Quantity"
+      label: "Glean Dictionary reference for Tabs Private Tabs Quantity :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tabs_private_tabs_quantity"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2536,7 +2536,7 @@ closes the application.
   }
 
   dimension: metrics__counter__tabs_pull_to_refresh {
-    label: "Tabs Pull To Refresh"
+    label: "Tabs Pull To Refresh :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.tabs_pull_to_refresh ;;
     type: number
@@ -2544,7 +2544,7 @@ closes the application.
     group_item_label: "Pull To Refresh"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Pull To Refresh"
+      label: "Glean Dictionary reference for Tabs Pull To Refresh :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tabs_pull_to_refresh"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2555,7 +2555,7 @@ on a page to reload.
   }
 
   dimension: metrics__counter__tabs_reload_from_url_bar {
-    label: "Tabs Reload From Url Bar"
+    label: "Tabs Reload From Url Bar :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.tabs_reload_from_url_bar ;;
     type: number
@@ -2563,7 +2563,7 @@ on a page to reload.
     group_item_label: "Reload From Url Bar"
 
     link: {
-      label: "Glean Dictionary reference for Tabs Reload From Url Bar"
+      label: "Glean Dictionary reference for Tabs Reload From Url Bar :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tabs_reload_from_url_bar"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2574,7 +2574,7 @@ button in the URL bar.
   }
 
   dimension: metrics__boolean__theme_automatic_mode {
-    label: "Theme Automatic Mode"
+    label: "Theme Automatic Mode :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.theme_automatic_mode ;;
     type: yesno
@@ -2582,7 +2582,7 @@ button in the URL bar.
     group_item_label: "Automatic Mode"
 
     link: {
-      label: "Glean Dictionary reference for Theme Automatic Mode"
+      label: "Glean Dictionary reference for Theme Automatic Mode :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/theme_automatic_mode"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2593,7 +2593,7 @@ preference.
   }
 
   dimension: metrics__string__theme_automatic_slider_value {
-    label: "Theme Automatic Slider Value"
+    label: "Theme Automatic Slider Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.theme_automatic_slider_value ;;
     type: string
@@ -2601,7 +2601,7 @@ preference.
     group_item_label: "Automatic Slider Value"
 
     link: {
-      label: "Glean Dictionary reference for Theme Automatic Slider Value"
+      label: "Glean Dictionary reference for Theme Automatic Slider Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/theme_automatic_slider_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2612,7 +2612,7 @@ value of the automatic theme switching slider.
   }
 
   dimension: metrics__string__theme_name {
-    label: "Theme Name"
+    label: "Theme Name :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.theme_name ;;
     type: string
@@ -2620,7 +2620,7 @@ value of the automatic theme switching slider.
     group_item_label: "Name"
 
     link: {
-      label: "Glean Dictionary reference for Theme Name"
+      label: "Glean Dictionary reference for Theme Name :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/theme_name"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2632,7 +2632,7 @@ value of the automatic theme switching slider.
   }
 
   dimension: metrics__boolean__theme_use_system_theme {
-    label: "Theme Use System Theme"
+    label: "Theme Use System Theme :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.theme_use_system_theme ;;
     type: yesno
@@ -2640,7 +2640,7 @@ value of the automatic theme switching slider.
     group_item_label: "Use System Theme"
 
     link: {
-      label: "Glean Dictionary reference for Theme Use System Theme"
+      label: "Glean Dictionary reference for Theme Use System Theme :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/theme_use_system_theme"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2651,14 +2651,14 @@ theme preference.
   }
 
   dimension: metrics__labeled_counter__top_site_pressed_tile_origin {
-    label: "Top Site Pressed Tile Origin"
+    label: "Top Site Pressed Tile Origin :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.top_site_pressed_tile_origin ;;
     group_label: "Top Site"
     group_item_label: "Pressed Tile Origin"
 
     link: {
-      label: "Glean Dictionary reference for Top Site Pressed Tile Origin"
+      label: "Glean Dictionary reference for Top Site Pressed Tile Origin :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/top_site_pressed_tile_origin"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2669,14 +2669,14 @@ with a home page origin.
   }
 
   dimension: metrics__labeled_counter__top_sites_pressed_tile_origin {
-    label: "Top Sites Pressed Tile Origin"
+    label: "Top Sites Pressed Tile Origin :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.top_sites_pressed_tile_origin ;;
     group_label: "Top Sites"
     group_item_label: "Pressed Tile Origin"
 
     link: {
-      label: "Glean Dictionary reference for Top Sites Pressed Tile Origin"
+      label: "Glean Dictionary reference for Top Sites Pressed Tile Origin :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/top_sites_pressed_tile_origin"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2687,7 +2687,7 @@ with a home page origin.
   }
 
   dimension: metrics__boolean__tracking_protection_enabled {
-    label: "Tracking Protection Enabled"
+    label: "Tracking Protection Enabled :)"
     hidden: no
     sql: ${TABLE}.metrics.boolean.tracking_protection_enabled ;;
     type: yesno
@@ -2695,7 +2695,7 @@ with a home page origin.
     group_item_label: "Enabled"
 
     link: {
-      label: "Glean Dictionary reference for Tracking Protection Enabled"
+      label: "Glean Dictionary reference for Tracking Protection Enabled :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tracking_protection_enabled"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2706,7 +2706,7 @@ preference.
   }
 
   dimension: metrics__string__tracking_protection_strength {
-    label: "Tracking Protection Strength"
+    label: "Tracking Protection Strength :)"
     hidden: no
     sql: ${TABLE}.metrics.string.tracking_protection_strength ;;
     type: string
@@ -2714,7 +2714,7 @@ preference.
     group_item_label: "Strength"
 
     link: {
-      label: "Glean Dictionary reference for Tracking Protection Strength"
+      label: "Glean Dictionary reference for Tracking Protection Strength :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/tracking_protection_strength"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2727,14 +2727,14 @@ tracking-protection that is enabled. One of:
   }
 
   dimension: metrics__labeled_counter__wallpaper_analytics_themed_wallpaper {
-    label: "Wallpaper Analytics Themed Wallpaper"
+    label: "Wallpaper Analytics Themed Wallpaper :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.wallpaper_analytics_themed_wallpaper ;;
     group_label: "Wallpaper Analytics"
     group_item_label: "Themed Wallpaper"
 
     link: {
-      label: "Glean Dictionary reference for Wallpaper Analytics Themed Wallpaper"
+      label: "Glean Dictionary reference for Wallpaper Analytics Themed Wallpaper :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/wallpaper_analytics_themed_wallpaper"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2745,7 +2745,7 @@ the currently selected wallpaper if it's not the default.
   }
 
   dimension: metrics__counter__widget_l_tabs_open_url {
-    label: "Widget L Tabs Open Url"
+    label: "Widget L Tabs Open Url :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.widget_l_tabs_open_url ;;
     type: number
@@ -2753,7 +2753,7 @@ the currently selected wallpaper if it's not the default.
     group_item_label: "L Tabs Open Url"
 
     link: {
-      label: "Glean Dictionary reference for Widget L Tabs Open Url"
+      label: "Glean Dictionary reference for Widget L Tabs Open Url :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/widget_l_tabs_open_url"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2763,7 +2763,7 @@ the currently selected wallpaper if it's not the default.
   }
 
   dimension: metrics__counter__widget_m_quick_action_close_private {
-    label: "Widget M Quick Action Close Private"
+    label: "Widget M Quick Action Close Private :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.widget_m_quick_action_close_private ;;
     type: number
@@ -2771,7 +2771,7 @@ the currently selected wallpaper if it's not the default.
     group_item_label: "M Quick Action Close Private"
 
     link: {
-      label: "Glean Dictionary reference for Widget M Quick Action Close Private"
+      label: "Glean Dictionary reference for Widget M Quick Action Close Private :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/widget_m_quick_action_close_private"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2782,7 +2782,7 @@ widget closes private tabs
   }
 
   dimension: metrics__counter__widget_m_quick_action_copied_link {
-    label: "Widget M Quick Action Copied Link"
+    label: "Widget M Quick Action Copied Link :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.widget_m_quick_action_copied_link ;;
     type: number
@@ -2790,7 +2790,7 @@ widget closes private tabs
     group_item_label: "M Quick Action Copied Link"
 
     link: {
-      label: "Glean Dictionary reference for Widget M Quick Action Copied Link"
+      label: "Glean Dictionary reference for Widget M Quick Action Copied Link :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/widget_m_quick_action_copied_link"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2801,7 +2801,7 @@ widget opens copied links
   }
 
   dimension: metrics__counter__widget_m_quick_action_private_search {
-    label: "Widget M Quick Action Private Search"
+    label: "Widget M Quick Action Private Search :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.widget_m_quick_action_private_search ;;
     type: number
@@ -2809,7 +2809,7 @@ widget opens copied links
     group_item_label: "M Quick Action Private Search"
 
     link: {
-      label: "Glean Dictionary reference for Widget M Quick Action Private Search"
+      label: "Glean Dictionary reference for Widget M Quick Action Private Search :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/widget_m_quick_action_private_search"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2820,7 +2820,7 @@ widget opens firefox for private search
   }
 
   dimension: metrics__counter__widget_m_quick_action_search {
-    label: "Widget M Quick Action Search"
+    label: "Widget M Quick Action Search :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.widget_m_quick_action_search ;;
     type: number
@@ -2828,7 +2828,7 @@ widget opens firefox for private search
     group_item_label: "M Quick Action Search"
 
     link: {
-      label: "Glean Dictionary reference for Widget M Quick Action Search"
+      label: "Glean Dictionary reference for Widget M Quick Action Search :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/widget_m_quick_action_search"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2839,7 +2839,7 @@ widget opens firefox for regular search
   }
 
   dimension: metrics__counter__widget_m_tabs_open_url {
-    label: "Widget M Tabs Open Url"
+    label: "Widget M Tabs Open Url :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.widget_m_tabs_open_url ;;
     type: number
@@ -2847,7 +2847,7 @@ widget opens firefox for regular search
     group_item_label: "M Tabs Open Url"
 
     link: {
-      label: "Glean Dictionary reference for Widget M Tabs Open Url"
+      label: "Glean Dictionary reference for Widget M Tabs Open Url :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/widget_m_tabs_open_url"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2857,7 +2857,7 @@ widget opens firefox for regular search
   }
 
   dimension: metrics__counter__widget_m_top_sites_widget {
-    label: "Widget M Top Sites Widget"
+    label: "Widget M Top Sites Widget :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.widget_m_top_sites_widget ;;
     type: number
@@ -2865,7 +2865,7 @@ widget opens firefox for regular search
     group_item_label: "M Top Sites Widget"
 
     link: {
-      label: "Glean Dictionary reference for Widget M Top Sites Widget"
+      label: "Glean Dictionary reference for Widget M Top Sites Widget :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/widget_m_top_sites_widget"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2875,7 +2875,7 @@ widget opens firefox for regular search
   }
 
   dimension: metrics__counter__widget_s_quick_action_search {
-    label: "Widget S Quick Action Search"
+    label: "Widget S Quick Action Search :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.widget_s_quick_action_search ;;
     type: number
@@ -2883,7 +2883,7 @@ widget opens firefox for regular search
     group_item_label: "S Quick Action Search"
 
     link: {
-      label: "Glean Dictionary reference for Widget S Quick Action Search"
+      label: "Glean Dictionary reference for Widget S Quick Action Search :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/widget_s_quick_action_search"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2894,7 +2894,7 @@ widget opens firefox for regular search
   }
 
   dimension: metrics__memory_distribution__glean_database_size__sum {
-    label: "Glean Database Size Sum"
+    label: "Glean Database Size Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.glean_database_size.sum ;;
     type: number
@@ -2902,7 +2902,7 @@ widget opens firefox for regular search
     group_item_label: "Size Sum"
 
     link: {
-      label: "Glean Dictionary reference for Glean Database Size Sum"
+      label: "Glean Dictionary reference for Glean Database Size Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_database_size"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2912,14 +2912,14 @@ widget opens firefox for regular search
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_label {
-    label: "Glean Error Invalid Label"
+    label: "Glean Error Invalid Label :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_label ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Label"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Label"
+      label: "Glean Dictionary reference for Glean Error Invalid Label :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_invalid_label"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2930,14 +2930,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_overflow {
-    label: "Glean Error Invalid Overflow"
+    label: "Glean Error Invalid Overflow :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_overflow ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Overflow"
+      label: "Glean Dictionary reference for Glean Error Invalid Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_invalid_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2948,14 +2948,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_state {
-    label: "Glean Error Invalid State"
+    label: "Glean Error Invalid State :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_state ;;
     group_label: "Glean Error"
     group_item_label: "Invalid State"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid State"
+      label: "Glean Dictionary reference for Glean Error Invalid State :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_invalid_state"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2966,14 +2966,14 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__labeled_counter__glean_error_invalid_value {
-    label: "Glean Error Invalid Value"
+    label: "Glean Error Invalid Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_error_invalid_value ;;
     group_label: "Glean Error"
     group_item_label: "Invalid Value"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Invalid Value"
+      label: "Glean Dictionary reference for Glean Error Invalid Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_invalid_value"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -2984,7 +2984,7 @@ The labels are the `category.name` identifier of the metric.
   }
 
   dimension: metrics__counter__glean_error_io {
-    label: "Glean Error Io"
+    label: "Glean Error Io :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_error_io ;;
     type: number
@@ -2992,7 +2992,7 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Io"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Io"
+      label: "Glean Dictionary reference for Glean Error Io :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_io"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3003,7 +3003,7 @@ when writing a pending ping to disk.
   }
 
   dimension: metrics__counter__glean_error_preinit_tasks_overflow {
-    label: "Glean Error Preinit Tasks Overflow"
+    label: "Glean Error Preinit Tasks Overflow :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_error_preinit_tasks_overflow ;;
     type: number
@@ -3011,7 +3011,7 @@ when writing a pending ping to disk.
     group_item_label: "Preinit Tasks Overflow"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Preinit Tasks Overflow"
+      label: "Glean Dictionary reference for Glean Error Preinit Tasks Overflow :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_preinit_tasks_overflow"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3024,7 +3024,7 @@ In Version 0 this reported the total number of tasks enqueued.
   }
 
   dimension: metrics__boolean__glean_error_preinit_tasks_timeout {
-    label: "Glean Error Preinit Tasks Timeout"
+    label: "Glean Error Preinit Tasks Timeout :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.glean_error_preinit_tasks_timeout ;;
     type: yesno
@@ -3032,7 +3032,7 @@ In Version 0 this reported the total number of tasks enqueued.
     group_item_label: "Preinit Tasks Timeout"
 
     link: {
-      label: "Glean Dictionary reference for Glean Error Preinit Tasks Timeout"
+      label: "Glean Dictionary reference for Glean Error Preinit Tasks Timeout :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_error_preinit_tasks_timeout"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3041,7 +3041,7 @@ In Version 0 this reported the total number of tasks enqueued.
   }
 
   dimension: metrics__counter__glean_time_invalid_timezone_offset {
-    label: "Glean Time Invalid Timezone Offset"
+    label: "Glean Time Invalid Timezone Offset :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.glean_time_invalid_timezone_offset ;;
     type: number
@@ -3049,7 +3049,7 @@ In Version 0 this reported the total number of tasks enqueued.
     group_item_label: "Invalid Timezone Offset"
 
     link: {
-      label: "Glean Dictionary reference for Glean Time Invalid Timezone Offset"
+      label: "Glean Dictionary reference for Glean Time Invalid Timezone Offset :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_time_invalid_timezone_offset"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3062,7 +3062,7 @@ If invalid a UTC offset is used (+0h).
   }
 
   dimension: metrics__counter__glean_upload_deleted_pings_after_quota_hit {
-    label: "Glean Upload Deleted Pings After Quota Hit"
+    label: "Glean Upload Deleted Pings After Quota Hit :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_upload_deleted_pings_after_quota_hit ;;
     type: number
@@ -3070,7 +3070,7 @@ If invalid a UTC offset is used (+0h).
     group_item_label: "Deleted Pings After Quota Hit"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Deleted Pings After Quota Hit"
+      label: "Glean Dictionary reference for Glean Upload Deleted Pings After Quota Hit :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_upload_deleted_pings_after_quota_hit"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3084,7 +3084,7 @@ deletion request pings are never deleted.
   }
 
   dimension: metrics__memory_distribution__glean_upload_discarded_exceeding_pings_size__sum {
-    label: "Glean Upload Discarded Exceeding Pings Size Sum"
+    label: "Glean Upload Discarded Exceeding Pings Size Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.glean_upload_discarded_exceeding_pings_size.sum ;;
     type: number
@@ -3092,7 +3092,7 @@ deletion request pings are never deleted.
     group_item_label: "Discarded Exceeding Pings Size Sum"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Discarded Exceeding Pings Size Sum"
+      label: "Glean Dictionary reference for Glean Upload Discarded Exceeding Pings Size Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_upload_discarded_exceeding_pings_size"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3102,7 +3102,7 @@ deletion request pings are never deleted.
   }
 
   dimension: metrics__counter__glean_upload_pending_pings {
-    label: "Glean Upload Pending Pings"
+    label: "Glean Upload Pending Pings :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_upload_pending_pings ;;
     type: number
@@ -3110,7 +3110,7 @@ deletion request pings are never deleted.
     group_item_label: "Pending Pings"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Pending Pings"
+      label: "Glean Dictionary reference for Glean Upload Pending Pings :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_upload_pending_pings"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3121,7 +3121,7 @@ This does not include deletion-request pings.
   }
 
   dimension: metrics__memory_distribution__glean_upload_pending_pings_directory_size__sum {
-    label: "Glean Upload Pending Pings Directory Size Sum"
+    label: "Glean Upload Pending Pings Directory Size Sum :)"
     hidden: no
     sql: ${TABLE}.metrics.memory_distribution.glean_upload_pending_pings_directory_size.sum ;;
     type: number
@@ -3129,7 +3129,7 @@ This does not include deletion-request pings.
     group_item_label: "Pending Pings Directory Size Sum"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Pending Pings Directory Size Sum"
+      label: "Glean Dictionary reference for Glean Upload Pending Pings Directory Size Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_upload_pending_pings_directory_size"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3140,14 +3140,14 @@ This does not include the size of the deletion request pings directory.
   }
 
   dimension: metrics__labeled_counter__glean_upload_ping_upload_failure {
-    label: "Glean Upload Ping Upload Failure"
+    label: "Glean Upload Ping Upload Failure :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_upload_ping_upload_failure ;;
     group_label: "Glean Upload"
     group_item_label: "Ping Upload Failure"
 
     link: {
-      label: "Glean Dictionary reference for Glean Upload Ping Upload Failure"
+      label: "Glean Dictionary reference for Glean Upload Ping Upload Failure :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_upload_ping_upload_failure"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3159,7 +3159,7 @@ though the counts appear in the next successfully sent `metrics` ping.
   }
 
   dimension: metrics__datetime__glean_validation_first_run_hour {
-    label: "Glean Validation First Run Hour"
+    label: "Glean Validation First Run Hour :)"
     hidden: no
     sql: ${TABLE}.metrics.datetime.glean_validation_first_run_hour ;;
     type: string
@@ -3167,7 +3167,7 @@ though the counts appear in the next successfully sent `metrics` ping.
     group_item_label: "First Run Hour"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation First Run Hour"
+      label: "Glean Dictionary reference for Glean Validation First Run Hour :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_validation_first_run_hour"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3177,7 +3177,7 @@ though the counts appear in the next successfully sent `metrics` ping.
   }
 
   dimension: metrics__counter__glean_validation_foreground_count {
-    label: "Glean Validation Foreground Count"
+    label: "Glean Validation Foreground Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.glean_validation_foreground_count ;;
     type: number
@@ -3185,7 +3185,7 @@ though the counts appear in the next successfully sent `metrics` ping.
     group_item_label: "Foreground Count"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation Foreground Count"
+      label: "Glean Dictionary reference for Glean Validation Foreground Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_validation_foreground_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3195,14 +3195,14 @@ though the counts appear in the next successfully sent `metrics` ping.
   }
 
   dimension: metrics__labeled_counter__glean_validation_pings_submitted {
-    label: "Glean Validation Pings Submitted"
+    label: "Glean Validation Pings Submitted :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.glean_validation_pings_submitted ;;
     group_label: "Glean Validation"
     group_item_label: "Pings Submitted"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation Pings Submitted"
+      label: "Glean Dictionary reference for Glean Validation Pings Submitted :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_validation_pings_submitted"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3219,7 +3219,7 @@ This metric appears in both the metrics and baseline pings.
   }
 
   dimension: metrics__string__ping_reason {
-    label: "Glean Ping Reason"
+    label: "Glean Ping Reason :)"
     hidden: yes
     sql: ${TABLE}.metrics.string.ping_reason ;;
     type: string
@@ -3227,7 +3227,7 @@ This metric appears in both the metrics and baseline pings.
     group_item_label: "Ping Reason"
 
     link: {
-      label: "Glean Dictionary reference for Glean Ping Reason"
+      label: "Glean Dictionary reference for Glean Ping Reason :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/ping_reason"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3239,7 +3239,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__logins_store_migration_num_failed {
-    label: "Logins Store Migration Num Failed"
+    label: "Logins Store Migration Num Failed :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.logins_store_migration_num_failed ;;
     type: number
@@ -3247,7 +3247,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Migration Num Failed"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Migration Num Failed"
+      label: "Glean Dictionary reference for Logins Store Migration Num Failed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/logins_store_migration_num_failed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3257,7 +3257,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__logins_store_migration_num_processed {
-    label: "Logins Store Migration Num Processed"
+    label: "Logins Store Migration Num Processed :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.logins_store_migration_num_processed ;;
     type: number
@@ -3265,7 +3265,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Migration Num Processed"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Migration Num Processed"
+      label: "Glean Dictionary reference for Logins Store Migration Num Processed :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/logins_store_migration_num_processed"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3275,7 +3275,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__logins_store_migration_num_succeeded {
-    label: "Logins Store Migration Num Succeeded"
+    label: "Logins Store Migration Num Succeeded :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.logins_store_migration_num_succeeded ;;
     type: number
@@ -3283,7 +3283,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Migration Num Succeeded"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Migration Num Succeeded"
+      label: "Glean Dictionary reference for Logins Store Migration Num Succeeded :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/logins_store_migration_num_succeeded"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3293,7 +3293,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timespan__logins_store_migration_total_duration__value {
-    label: "Logins Store Migration Total Duration Value"
+    label: "Logins Store Migration Total Duration Value :)"
     hidden: yes
     sql: ${TABLE}.metrics.timespan.logins_store_migration_total_duration.value ;;
     type: number
@@ -3301,7 +3301,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Migration Total Duration Value"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Migration Total Duration Value"
+      label: "Glean Dictionary reference for Logins Store Migration Total Duration Value :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/logins_store_migration_total_duration"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3311,7 +3311,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__logins_store_read_query_count {
-    label: "Logins Store Read Query Count"
+    label: "Logins Store Read Query Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.logins_store_read_query_count ;;
     type: number
@@ -3319,7 +3319,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Read Query Count"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Read Query Count"
+      label: "Glean Dictionary reference for Logins Store Read Query Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/logins_store_read_query_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3329,14 +3329,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__logins_store_read_query_error_count {
-    label: "Logins Store Read Query Error Count"
+    label: "Logins Store Read Query Error Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.logins_store_read_query_error_count ;;
     group_label: "Logins Store"
     group_item_label: "Read Query Error Count"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Read Query Error Count"
+      label: "Glean Dictionary reference for Logins Store Read Query Error Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/logins_store_read_query_error_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3346,7 +3346,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__logins_store_read_query_time__sum {
-    label: "Logins Store Read Query Time Sum"
+    label: "Logins Store Read Query Time Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.logins_store_read_query_time.sum ;;
     type: number
@@ -3354,7 +3354,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Read Query Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Read Query Time Sum"
+      label: "Glean Dictionary reference for Logins Store Read Query Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/logins_store_read_query_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3364,7 +3364,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__logins_store_unlock_count {
-    label: "Logins Store Unlock Count"
+    label: "Logins Store Unlock Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.logins_store_unlock_count ;;
     type: number
@@ -3372,7 +3372,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Unlock Count"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Unlock Count"
+      label: "Glean Dictionary reference for Logins Store Unlock Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/logins_store_unlock_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3382,14 +3382,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__logins_store_unlock_error_count {
-    label: "Logins Store Unlock Error Count"
+    label: "Logins Store Unlock Error Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.logins_store_unlock_error_count ;;
     group_label: "Logins Store"
     group_item_label: "Unlock Error Count"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Unlock Error Count"
+      label: "Glean Dictionary reference for Logins Store Unlock Error Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/logins_store_unlock_error_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3399,7 +3399,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__logins_store_unlock_time__sum {
-    label: "Logins Store Unlock Time Sum"
+    label: "Logins Store Unlock Time Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.logins_store_unlock_time.sum ;;
     type: number
@@ -3407,7 +3407,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Unlock Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Unlock Time Sum"
+      label: "Glean Dictionary reference for Logins Store Unlock Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/logins_store_unlock_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3417,7 +3417,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__logins_store_write_query_count {
-    label: "Logins Store Write Query Count"
+    label: "Logins Store Write Query Count :)"
     hidden: no
     sql: ${TABLE}.metrics.counter.logins_store_write_query_count ;;
     type: number
@@ -3425,7 +3425,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Write Query Count"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Write Query Count"
+      label: "Glean Dictionary reference for Logins Store Write Query Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/logins_store_write_query_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3435,14 +3435,14 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__labeled_counter__logins_store_write_query_error_count {
-    label: "Logins Store Write Query Error Count"
+    label: "Logins Store Write Query Error Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.labeled_counter.logins_store_write_query_error_count ;;
     group_label: "Logins Store"
     group_item_label: "Write Query Error Count"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Write Query Error Count"
+      label: "Glean Dictionary reference for Logins Store Write Query Error Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/logins_store_write_query_error_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3452,7 +3452,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__timing_distribution__logins_store_write_query_time__sum {
-    label: "Logins Store Write Query Time Sum"
+    label: "Logins Store Write Query Time Sum :)"
     hidden: yes
     sql: ${TABLE}.metrics.timing_distribution.logins_store_write_query_time.sum ;;
     type: number
@@ -3460,7 +3460,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Write Query Time Sum"
 
     link: {
-      label: "Glean Dictionary reference for Logins Store Write Query Time Sum"
+      label: "Glean Dictionary reference for Logins Store Write Query Time Sum :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/logins_store_write_query_time"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3470,7 +3470,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__boolean__glean_core_migration_successful {
-    label: "Glean Core Migration Successful"
+    label: "Glean Core Migration Successful :)"
     hidden: yes
     sql: ${TABLE}.metrics.boolean.glean_core_migration_successful ;;
     type: yesno
@@ -3478,7 +3478,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Successful"
 
     link: {
-      label: "Glean Dictionary reference for Glean Core Migration Successful"
+      label: "Glean Dictionary reference for Glean Core Migration Successful :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_core_migration_successful"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3487,7 +3487,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__glean_validation_app_forceclosed_count {
-    label: "Glean Validation App Forceclosed Count"
+    label: "Glean Validation App Forceclosed Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.glean_validation_app_forceclosed_count ;;
     type: number
@@ -3495,7 +3495,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "App Forceclosed Count"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation App Forceclosed Count"
+      label: "Glean Dictionary reference for Glean Validation App Forceclosed Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_validation_app_forceclosed_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
@@ -3504,7 +3504,7 @@ documented in the ping's pings.yaml file.
   }
 
   dimension: metrics__counter__glean_validation_baseline_ping_count {
-    label: "Glean Validation Baseline Ping Count"
+    label: "Glean Validation Baseline Ping Count :)"
     hidden: yes
     sql: ${TABLE}.metrics.counter.glean_validation_baseline_ping_count ;;
     type: number
@@ -3512,7 +3512,7 @@ documented in the ping's pings.yaml file.
     group_item_label: "Baseline Ping Count"
 
     link: {
-      label: "Glean Dictionary reference for Glean Validation Baseline Ping Count"
+      label: "Glean Dictionary reference for Glean Validation Baseline Ping Count :)"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_ios/metrics/glean_validation_baseline_ping_count"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
