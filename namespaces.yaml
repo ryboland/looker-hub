@@ -3466,40 +3466,28 @@ operational_monitoring:
         compact_visualization: false
         dimensions: &id041
           channel:
-            default: nightly
+            default: Other
             options:
+            - Other
             - nightly
             - beta
+            - aurora
             - esr
             - release
-            - Other
-            - aurora
           os:
-            default: Windows_NT
+            default: Darwin
             options:
-            - Windows_NT
             - Darwin
             - Linux
+            - Windows_NT
         explore: print_background_task_times
         group_by_dimension: null
         summaries: &id042
-        - metric: printing_preview_opened
+        - metric: printing_dialog_opened_without_preview
           metric_groups:
           - print_initiation_counts
           statistic: sum
-        - metric: main_crashes
-          metric_groups: []
-          statistic: sum
-        - metric: oom_crashes
-          metric_groups: []
-          statistic: sum
-        - metric: startup_crashes
-          metric_groups: []
-          statistic: sum
-        - metric: shutdown_hangs
-          metric_groups: []
-          statistic: sum
-        - metric: printing_silent_print
+        - metric: printing_preview_opened
           metric_groups:
           - print_initiation_counts
           statistic: sum
@@ -3507,14 +3495,11 @@ operational_monitoring:
           metric_groups:
           - print_initiation_counts
           statistic: sum
-        - metric: content_crashes
-          metric_groups: []
-          statistic: sum
         - metric: printing_dialog_opened_via_preview_tm
           metric_groups:
           - print_initiation_counts
           statistic: sum
-        - metric: printing_dialog_opened_without_preview
+        - metric: printing_silent_print
           metric_groups:
           - print_initiation_counts
           statistic: sum
