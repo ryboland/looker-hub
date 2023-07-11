@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Print Error Breakdown
     name: Print Error Breakdown_sum
     note_state: expanded
@@ -26,10 +47,10 @@
       print_background_task_times_by_build.branch, print_background_task_times_by_build.metric 
     ]
     filters:
-      print_background_task_times_by_build.metric: '"gfx_printer_doc_is_busy", "startdoc", "start_page", "cannot_open_file", "enddoc", "oom", "unexpected", "notimplemented", "name_not_found", "abort", "no_printer", "print_failure", "not_available"'
+      print_background_task_times_by_build.metric: '"no_printer", "enddoc", "notimplemented", "cannot_open_file", "oom", "print_failure", "unexpected", "abort", "not_available", "gfx_printer_doc_is_busy", "startdoc", "start_page", "name_not_found"'
       print_background_task_times_by_build.statistic: sum
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: print_background_task_times_by_build.build_id
@@ -61,10 +82,10 @@
       print_background_task_times_by_build.branch, print_background_task_times_by_build.metric 
     ]
     filters:
-      print_background_task_times_by_build.metric: '"total_printing_errors_old_ui", "total_printing_errors_new_ui"'
+      print_background_task_times_by_build.metric: '"total_printing_errors_new_ui", "total_printing_errors_old_ui"'
       print_background_task_times_by_build.statistic: sum
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: print_background_task_times_by_build.build_id
@@ -99,7 +120,7 @@
       print_background_task_times_by_build.metric: 'total_printing_errors'
       print_background_task_times_by_build.statistic: sum
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: print_background_task_times_by_build.build_id

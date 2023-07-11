@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Memory Total
     name: Memory Total_percentile
     note_state: expanded
@@ -31,7 +52,7 @@
       firefox_suggest_by_merino_nightly.metric: 'memory_total'
       firefox_suggest_by_merino_nightly.statistic: percentile
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: firefox_suggest_by_merino_nightly.submission_date
@@ -65,8 +86,8 @@
     filters:
       firefox_suggest_by_merino_nightly.metric: 'oom_crashes'
       firefox_suggest_by_merino_nightly.statistic: sum
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: firefox_suggest_by_merino_nightly.submission_date
@@ -100,7 +121,7 @@
       firefox_suggest_by_merino_nightly.metric: 'main_crashes'
       firefox_suggest_by_merino_nightly.statistic: sum
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: firefox_suggest_by_merino_nightly.submission_date
@@ -133,8 +154,8 @@
     filters:
       firefox_suggest_by_merino_nightly.metric: 'shutdown_hangs'
       firefox_suggest_by_merino_nightly.statistic: sum
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: firefox_suggest_by_merino_nightly.submission_date
@@ -168,7 +189,7 @@
       firefox_suggest_by_merino_nightly.metric: 'startup_crashes'
       firefox_suggest_by_merino_nightly.statistic: sum
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: firefox_suggest_by_merino_nightly.submission_date
@@ -201,8 +222,8 @@
     filters:
       firefox_suggest_by_merino_nightly.metric: 'content_crashes'
       firefox_suggest_by_merino_nightly.statistic: sum
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: firefox_suggest_by_merino_nightly.submission_date

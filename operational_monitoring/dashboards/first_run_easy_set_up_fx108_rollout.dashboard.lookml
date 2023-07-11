@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Memory Total
     name: Memory Total_percentile
     note_state: expanded
@@ -31,7 +52,7 @@
       first_run_easy_set_up_fx108_rollout.metric: 'memory_total'
       first_run_easy_set_up_fx108_rollout.statistic: percentile
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: first_run_easy_set_up_fx108_rollout.submission_date
@@ -65,8 +86,8 @@
     filters:
       first_run_easy_set_up_fx108_rollout.metric: 'days_of_use'
       first_run_easy_set_up_fx108_rollout.statistic: mean
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: first_run_easy_set_up_fx108_rollout.submission_date
@@ -100,7 +121,7 @@
       first_run_easy_set_up_fx108_rollout.metric: 'qualified_cumulative_days_of_use'
       first_run_easy_set_up_fx108_rollout.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: first_run_easy_set_up_fx108_rollout.submission_date
@@ -133,8 +154,8 @@
     filters:
       first_run_easy_set_up_fx108_rollout.metric: 'ad_clicks'
       first_run_easy_set_up_fx108_rollout.statistic: mean
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: first_run_easy_set_up_fx108_rollout.submission_date
@@ -168,7 +189,7 @@
       first_run_easy_set_up_fx108_rollout.metric: 'active_hours'
       first_run_easy_set_up_fx108_rollout.statistic: mean
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: first_run_easy_set_up_fx108_rollout.submission_date
@@ -201,8 +222,8 @@
     filters:
       first_run_easy_set_up_fx108_rollout.metric: 'uri_count'
       first_run_easy_set_up_fx108_rollout.statistic: mean
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: first_run_easy_set_up_fx108_rollout.submission_date
@@ -236,7 +257,7 @@
       first_run_easy_set_up_fx108_rollout.metric: 'search_count'
       first_run_easy_set_up_fx108_rollout.statistic: mean
     row: 30
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: first_run_easy_set_up_fx108_rollout.submission_date
@@ -269,8 +290,8 @@
     filters:
       first_run_easy_set_up_fx108_rollout.metric: 'retained'
       first_run_easy_set_up_fx108_rollout.statistic: mean
-    row: 30
-    col: 12
+    row: 40
+    col: 0
     width: 12
     height: 8
     field_x: first_run_easy_set_up_fx108_rollout.submission_date

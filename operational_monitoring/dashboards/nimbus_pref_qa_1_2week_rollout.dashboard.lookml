@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Retained
     name: Retained_mean
     note_state: expanded
@@ -29,7 +50,7 @@
       nimbus_pref_qa_1_2week_rollout.metric: 'retained'
       nimbus_pref_qa_1_2week_rollout.statistic: mean
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: nimbus_pref_qa_1_2week_rollout.submission_date
@@ -64,8 +85,8 @@
     filters:
       nimbus_pref_qa_1_2week_rollout.metric: 'memory_total'
       nimbus_pref_qa_1_2week_rollout.statistic: percentile
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: nimbus_pref_qa_1_2week_rollout.submission_date
@@ -100,7 +121,7 @@
       nimbus_pref_qa_1_2week_rollout.metric: 'qualified_cumulative_days_of_use'
       nimbus_pref_qa_1_2week_rollout.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: nimbus_pref_qa_1_2week_rollout.submission_date
@@ -133,8 +154,8 @@
     filters:
       nimbus_pref_qa_1_2week_rollout.metric: 'search_count'
       nimbus_pref_qa_1_2week_rollout.statistic: mean
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: nimbus_pref_qa_1_2week_rollout.submission_date
@@ -168,7 +189,7 @@
       nimbus_pref_qa_1_2week_rollout.metric: 'days_of_use'
       nimbus_pref_qa_1_2week_rollout.statistic: mean
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: nimbus_pref_qa_1_2week_rollout.submission_date
@@ -201,8 +222,8 @@
     filters:
       nimbus_pref_qa_1_2week_rollout.metric: 'uri_count'
       nimbus_pref_qa_1_2week_rollout.statistic: mean
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: nimbus_pref_qa_1_2week_rollout.submission_date
@@ -236,7 +257,7 @@
       nimbus_pref_qa_1_2week_rollout.metric: 'ad_clicks'
       nimbus_pref_qa_1_2week_rollout.statistic: mean
     row: 30
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: nimbus_pref_qa_1_2week_rollout.submission_date
@@ -269,8 +290,8 @@
     filters:
       nimbus_pref_qa_1_2week_rollout.metric: 'active_hours'
       nimbus_pref_qa_1_2week_rollout.statistic: mean
-    row: 30
-    col: 12
+    row: 40
+    col: 0
     width: 12
     height: 8
     field_x: nimbus_pref_qa_1_2week_rollout.submission_date

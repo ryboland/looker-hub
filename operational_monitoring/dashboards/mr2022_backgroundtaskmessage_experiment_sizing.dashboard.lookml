@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Memory Total
     name: Memory Total_percentile
     note_state: expanded
@@ -31,7 +52,7 @@
       mr2022_backgroundtaskmessage_experiment_sizing.metric: 'memory_total'
       mr2022_backgroundtaskmessage_experiment_sizing.statistic: percentile
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: mr2022_backgroundtaskmessage_experiment_sizing.submission_date
@@ -65,8 +86,8 @@
     filters:
       mr2022_backgroundtaskmessage_experiment_sizing.metric: 'startup_crashes'
       mr2022_backgroundtaskmessage_experiment_sizing.statistic: sum
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: mr2022_backgroundtaskmessage_experiment_sizing.submission_date
@@ -100,7 +121,7 @@
       mr2022_backgroundtaskmessage_experiment_sizing.metric: 'oom_crashes'
       mr2022_backgroundtaskmessage_experiment_sizing.statistic: sum
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: mr2022_backgroundtaskmessage_experiment_sizing.submission_date
@@ -133,8 +154,8 @@
     filters:
       mr2022_backgroundtaskmessage_experiment_sizing.metric: 'content_crashes'
       mr2022_backgroundtaskmessage_experiment_sizing.statistic: sum
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: mr2022_backgroundtaskmessage_experiment_sizing.submission_date
@@ -168,7 +189,7 @@
       mr2022_backgroundtaskmessage_experiment_sizing.metric: 'shutdown_hangs'
       mr2022_backgroundtaskmessage_experiment_sizing.statistic: sum
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: mr2022_backgroundtaskmessage_experiment_sizing.submission_date
@@ -201,8 +222,8 @@
     filters:
       mr2022_backgroundtaskmessage_experiment_sizing.metric: 'main_crashes'
       mr2022_backgroundtaskmessage_experiment_sizing.statistic: sum
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: mr2022_backgroundtaskmessage_experiment_sizing.submission_date

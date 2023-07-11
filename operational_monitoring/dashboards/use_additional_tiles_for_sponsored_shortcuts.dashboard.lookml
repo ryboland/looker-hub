@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Ad Clicks
     name: Ad Clicks_mean
     note_state: expanded
@@ -29,7 +50,7 @@
       use_additional_tiles_for_sponsored_shortcuts.metric: 'ad_clicks'
       use_additional_tiles_for_sponsored_shortcuts.statistic: mean
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: use_additional_tiles_for_sponsored_shortcuts.submission_date
@@ -64,8 +85,8 @@
     filters:
       use_additional_tiles_for_sponsored_shortcuts.metric: 'memory_total'
       use_additional_tiles_for_sponsored_shortcuts.statistic: percentile
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: use_additional_tiles_for_sponsored_shortcuts.submission_date
@@ -100,7 +121,7 @@
       use_additional_tiles_for_sponsored_shortcuts.metric: 'qualified_cumulative_days_of_use'
       use_additional_tiles_for_sponsored_shortcuts.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: use_additional_tiles_for_sponsored_shortcuts.submission_date
@@ -133,8 +154,8 @@
     filters:
       use_additional_tiles_for_sponsored_shortcuts.metric: 'uri_count'
       use_additional_tiles_for_sponsored_shortcuts.statistic: mean
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: use_additional_tiles_for_sponsored_shortcuts.submission_date
@@ -168,7 +189,7 @@
       use_additional_tiles_for_sponsored_shortcuts.metric: 'active_hours'
       use_additional_tiles_for_sponsored_shortcuts.statistic: mean
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: use_additional_tiles_for_sponsored_shortcuts.submission_date
@@ -201,8 +222,8 @@
     filters:
       use_additional_tiles_for_sponsored_shortcuts.metric: 'search_count'
       use_additional_tiles_for_sponsored_shortcuts.statistic: mean
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: use_additional_tiles_for_sponsored_shortcuts.submission_date
@@ -236,7 +257,7 @@
       use_additional_tiles_for_sponsored_shortcuts.metric: 'days_of_use'
       use_additional_tiles_for_sponsored_shortcuts.statistic: mean
     row: 30
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: use_additional_tiles_for_sponsored_shortcuts.submission_date
@@ -269,8 +290,8 @@
     filters:
       use_additional_tiles_for_sponsored_shortcuts.metric: 'retained'
       use_additional_tiles_for_sponsored_shortcuts.statistic: mean
-    row: 30
-    col: 12
+    row: 40
+    col: 0
     width: 12
     height: 8
     field_x: use_additional_tiles_for_sponsored_shortcuts.submission_date

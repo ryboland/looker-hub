@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Ad Clicks
     name: Ad Clicks_mean
     note_state: expanded
@@ -29,7 +50,7 @@
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.metric: 'ad_clicks'
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.statistic: mean
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.submission_date
@@ -62,8 +83,8 @@
     filters:
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.metric: 'retained'
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.statistic: mean
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.submission_date
@@ -97,7 +118,7 @@
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.metric: 'active_hours'
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.submission_date
@@ -130,8 +151,8 @@
     filters:
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.metric: 'uri_count'
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.statistic: mean
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.submission_date
@@ -165,7 +186,7 @@
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.metric: 'qualified_cumulative_days_of_use'
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.statistic: mean
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.submission_date
@@ -200,8 +221,8 @@
     filters:
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.metric: 'memory_total'
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.statistic: percentile
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.submission_date
@@ -236,7 +257,7 @@
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.metric: 'search_count'
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.statistic: mean
     row: 30
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.submission_date
@@ -269,8 +290,8 @@
     filters:
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.metric: 'days_of_use'
       mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.statistic: mean
-    row: 30
-    col: 12
+    row: 40
+    col: 0
     width: 12
     height: 8
     field_x: mozilla_rally_convert_core_add_on_users_to_attention_stream_2nd_rollout.submission_date

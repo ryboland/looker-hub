@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Tagged Sap Searches
     name: Tagged Sap Searches_mean
     note_state: expanded
@@ -29,7 +50,7 @@
       firefox_android_tcp_rollout_100.metric: 'tagged_sap_searches'
       firefox_android_tcp_rollout_100.statistic: mean
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: firefox_android_tcp_rollout_100.submission_date
@@ -62,8 +83,8 @@
     filters:
       firefox_android_tcp_rollout_100.metric: 'uri_count'
       firefox_android_tcp_rollout_100.statistic: mean
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: firefox_android_tcp_rollout_100.submission_date
@@ -97,7 +118,7 @@
       firefox_android_tcp_rollout_100.metric: 'retained'
       firefox_android_tcp_rollout_100.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: firefox_android_tcp_rollout_100.submission_date
@@ -130,8 +151,8 @@
     filters:
       firefox_android_tcp_rollout_100.metric: 'days_of_use'
       firefox_android_tcp_rollout_100.statistic: mean
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: firefox_android_tcp_rollout_100.submission_date
@@ -167,7 +188,7 @@
       firefox_android_tcp_rollout_100.metric: 'memory_total'
       firefox_android_tcp_rollout_100.statistic: percentile
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: firefox_android_tcp_rollout_100.submission_date
@@ -201,8 +222,8 @@
     filters:
       firefox_android_tcp_rollout_100.metric: 'active_hours'
       firefox_android_tcp_rollout_100.statistic: mean
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: firefox_android_tcp_rollout_100.submission_date
@@ -236,7 +257,7 @@
       firefox_android_tcp_rollout_100.metric: 'ad_clicks'
       firefox_android_tcp_rollout_100.statistic: mean
     row: 30
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: firefox_android_tcp_rollout_100.submission_date
@@ -269,8 +290,8 @@
     filters:
       firefox_android_tcp_rollout_100.metric: 'search_count'
       firefox_android_tcp_rollout_100.statistic: mean
-    row: 30
-    col: 12
+    row: 40
+    col: 0
     width: 12
     height: 8
     field_x: firefox_android_tcp_rollout_100.submission_date

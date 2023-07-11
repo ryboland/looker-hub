@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Startup Crashes
     name: Startup Crashes_sum
     note_state: expanded
@@ -29,7 +50,7 @@
       tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.metric: 'startup_crashes'
       tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.statistic: sum
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.submission_date
@@ -62,8 +83,8 @@
     filters:
       tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.metric: 'content_crashes'
       tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.statistic: sum
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.submission_date
@@ -97,7 +118,7 @@
       tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.metric: 'shutdown_hangs'
       tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.statistic: sum
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.submission_date
@@ -130,8 +151,8 @@
     filters:
       tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.metric: 'main_crashes'
       tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.statistic: sum
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.submission_date
@@ -167,7 +188,7 @@
       tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.metric: 'memory_total'
       tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.statistic: percentile
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.submission_date
@@ -201,8 +222,8 @@
     filters:
       tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.metric: 'oom_crashes'
       tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.statistic: sum
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: tcp_rollout_beta_phase_iii_tcp_on_by_default_for_remaining_beta_profiles.submission_date

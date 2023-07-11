@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Memory Total
     name: Memory Total_percentile
     note_state: expanded
@@ -31,7 +52,7 @@
       viewpoint_survey_2022_nov_android.metric: 'memory_total'
       viewpoint_survey_2022_nov_android.statistic: percentile
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: viewpoint_survey_2022_nov_android.submission_date

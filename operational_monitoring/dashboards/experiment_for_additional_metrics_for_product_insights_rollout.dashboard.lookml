@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Ad Clicks
     name: Ad Clicks_mean
     note_state: expanded
@@ -29,7 +50,7 @@
       experiment_for_additional_metrics_for_product_insights_rollout.metric: 'ad_clicks'
       experiment_for_additional_metrics_for_product_insights_rollout.statistic: mean
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: experiment_for_additional_metrics_for_product_insights_rollout.submission_date
@@ -62,8 +83,8 @@
     filters:
       experiment_for_additional_metrics_for_product_insights_rollout.metric: 'days_of_use'
       experiment_for_additional_metrics_for_product_insights_rollout.statistic: mean
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: experiment_for_additional_metrics_for_product_insights_rollout.submission_date
@@ -97,7 +118,7 @@
       experiment_for_additional_metrics_for_product_insights_rollout.metric: 'uri_count'
       experiment_for_additional_metrics_for_product_insights_rollout.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: experiment_for_additional_metrics_for_product_insights_rollout.submission_date
@@ -130,8 +151,8 @@
     filters:
       experiment_for_additional_metrics_for_product_insights_rollout.metric: 'active_hours'
       experiment_for_additional_metrics_for_product_insights_rollout.statistic: mean
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: experiment_for_additional_metrics_for_product_insights_rollout.submission_date
@@ -165,7 +186,7 @@
       experiment_for_additional_metrics_for_product_insights_rollout.metric: 'retained'
       experiment_for_additional_metrics_for_product_insights_rollout.statistic: mean
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: experiment_for_additional_metrics_for_product_insights_rollout.submission_date
@@ -200,8 +221,8 @@
     filters:
       experiment_for_additional_metrics_for_product_insights_rollout.metric: 'memory_total'
       experiment_for_additional_metrics_for_product_insights_rollout.statistic: percentile
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: experiment_for_additional_metrics_for_product_insights_rollout.submission_date
@@ -236,7 +257,7 @@
       experiment_for_additional_metrics_for_product_insights_rollout.metric: 'qualified_cumulative_days_of_use'
       experiment_for_additional_metrics_for_product_insights_rollout.statistic: mean
     row: 30
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: experiment_for_additional_metrics_for_product_insights_rollout.submission_date
@@ -269,8 +290,8 @@
     filters:
       experiment_for_additional_metrics_for_product_insights_rollout.metric: 'search_count'
       experiment_for_additional_metrics_for_product_insights_rollout.statistic: mean
-    row: 30
-    col: 12
+    row: 40
+    col: 0
     width: 12
     height: 8
     field_x: experiment_for_additional_metrics_for_product_insights_rollout.submission_date

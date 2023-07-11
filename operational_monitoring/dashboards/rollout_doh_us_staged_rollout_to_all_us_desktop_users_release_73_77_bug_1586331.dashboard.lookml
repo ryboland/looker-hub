@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Startup Crashes
     name: Startup Crashes_sum
     note_state: expanded
@@ -29,7 +50,7 @@
       rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.metric: 'startup_crashes'
       rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.statistic: sum
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.submission_date
@@ -62,8 +83,8 @@
     filters:
       rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.metric: 'content_crashes'
       rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.statistic: sum
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.submission_date
@@ -97,7 +118,7 @@
       rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.metric: 'shutdown_hangs'
       rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.statistic: sum
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.submission_date
@@ -130,8 +151,8 @@
     filters:
       rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.metric: 'main_crashes'
       rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.statistic: sum
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.submission_date
@@ -167,7 +188,7 @@
       rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.metric: 'memory_total'
       rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.statistic: percentile
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.submission_date
@@ -201,8 +222,8 @@
     filters:
       rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.metric: 'oom_crashes'
       rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.statistic: sum
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: rollout_doh_us_staged_rollout_to_all_us_desktop_users_release_73_77_bug_1586331.submission_date

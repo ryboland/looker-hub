@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Installs By Os
     name: Installs By Os_sum
     note_state: expanded
@@ -26,10 +47,10 @@
       firefox_install_demo.branch, firefox_install_demo.metric 
     ]
     filters:
-      firefox_install_demo.metric: '"install_volume_win8_1", "install_volume_win7", "install_volume_win8", "install_volume_win10"'
+      firefox_install_demo.metric: '"install_volume_win7", "install_volume_win8_1", "install_volume_win8", "install_volume_win10"'
       firefox_install_demo.statistic: sum
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: firefox_install_demo.submission_date
@@ -59,10 +80,10 @@
       firefox_install_demo.branch, firefox_install_demo.metric 
     ]
     filters:
-      firefox_install_demo.metric: '"install_volume_win8_1", "install_volume_win7", "install_volume_win8", "install_volume_win10"'
+      firefox_install_demo.metric: '"install_volume_win7", "install_volume_win8_1", "install_volume_win8", "install_volume_win10"'
       firefox_install_demo.statistic: mean
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: firefox_install_demo.submission_date
@@ -95,7 +116,7 @@
       firefox_install_demo.metric: 'install_volume_total'
       firefox_install_demo.statistic: sum
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: firefox_install_demo.submission_date
@@ -127,8 +148,8 @@
     filters:
       firefox_install_demo.metric: 'install_volume_total'
       firefox_install_demo.statistic: mean
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: firefox_install_demo.submission_date

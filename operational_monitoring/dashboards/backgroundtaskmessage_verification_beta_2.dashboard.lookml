@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Shutdown Hangs
     name: Shutdown Hangs_sum
     note_state: expanded
@@ -29,7 +50,7 @@
       backgroundtaskmessage_verification_beta_2.metric: 'shutdown_hangs'
       backgroundtaskmessage_verification_beta_2.statistic: sum
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: backgroundtaskmessage_verification_beta_2.submission_date
@@ -62,8 +83,8 @@
     filters:
       backgroundtaskmessage_verification_beta_2.metric: 'content_crashes'
       backgroundtaskmessage_verification_beta_2.statistic: sum
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: backgroundtaskmessage_verification_beta_2.submission_date
@@ -97,7 +118,7 @@
       backgroundtaskmessage_verification_beta_2.metric: 'main_crashes'
       backgroundtaskmessage_verification_beta_2.statistic: sum
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: backgroundtaskmessage_verification_beta_2.submission_date
@@ -130,8 +151,8 @@
     filters:
       backgroundtaskmessage_verification_beta_2.metric: 'startup_crashes'
       backgroundtaskmessage_verification_beta_2.statistic: sum
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: backgroundtaskmessage_verification_beta_2.submission_date
@@ -165,7 +186,7 @@
       backgroundtaskmessage_verification_beta_2.metric: 'oom_crashes'
       backgroundtaskmessage_verification_beta_2.statistic: sum
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: backgroundtaskmessage_verification_beta_2.submission_date
@@ -200,8 +221,8 @@
     filters:
       backgroundtaskmessage_verification_beta_2.metric: 'memory_total'
       backgroundtaskmessage_verification_beta_2.statistic: percentile
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: backgroundtaskmessage_verification_beta_2.submission_date

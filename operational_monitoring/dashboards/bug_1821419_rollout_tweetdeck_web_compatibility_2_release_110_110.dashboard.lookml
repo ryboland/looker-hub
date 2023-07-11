@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Uri Count
     name: Uri Count_mean
     note_state: expanded
@@ -29,7 +50,7 @@
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.metric: 'uri_count'
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.statistic: mean
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.submission_date
@@ -62,8 +83,8 @@
     filters:
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.metric: 'retained'
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.statistic: mean
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.submission_date
@@ -97,7 +118,7 @@
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.metric: 'qualified_cumulative_days_of_use'
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.submission_date
@@ -130,8 +151,8 @@
     filters:
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.metric: 'active_hours'
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.statistic: mean
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.submission_date
@@ -165,7 +186,7 @@
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.metric: 'days_of_use'
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.statistic: mean
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.submission_date
@@ -200,8 +221,8 @@
     filters:
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.metric: 'memory_total'
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.statistic: percentile
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.submission_date
@@ -236,7 +257,7 @@
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.metric: 'ad_clicks'
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.statistic: mean
     row: 30
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.submission_date
@@ -269,8 +290,8 @@
     filters:
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.metric: 'search_count'
       bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.statistic: mean
-    row: 30
-    col: 12
+    row: 40
+    col: 0
     width: 12
     height: 8
     field_x: bug_1821419_rollout_tweetdeck_web_compatibility_2_release_110_110.submission_date

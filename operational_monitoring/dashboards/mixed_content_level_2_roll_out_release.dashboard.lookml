@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Qualified Cumulative Days Of Use
     name: Qualified Cumulative Days Of Use_mean
     note_state: expanded
@@ -29,7 +50,7 @@
       mixed_content_level_2_roll_out_release.metric: 'qualified_cumulative_days_of_use'
       mixed_content_level_2_roll_out_release.statistic: mean
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: mixed_content_level_2_roll_out_release.submission_date
@@ -62,8 +83,8 @@
     filters:
       mixed_content_level_2_roll_out_release.metric: 'days_of_use'
       mixed_content_level_2_roll_out_release.statistic: mean
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: mixed_content_level_2_roll_out_release.submission_date
@@ -97,7 +118,7 @@
       mixed_content_level_2_roll_out_release.metric: 'uri_count'
       mixed_content_level_2_roll_out_release.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: mixed_content_level_2_roll_out_release.submission_date
@@ -130,8 +151,8 @@
     filters:
       mixed_content_level_2_roll_out_release.metric: 'search_count'
       mixed_content_level_2_roll_out_release.statistic: mean
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: mixed_content_level_2_roll_out_release.submission_date
@@ -165,7 +186,7 @@
       mixed_content_level_2_roll_out_release.metric: 'retained'
       mixed_content_level_2_roll_out_release.statistic: mean
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: mixed_content_level_2_roll_out_release.submission_date
@@ -200,8 +221,8 @@
     filters:
       mixed_content_level_2_roll_out_release.metric: 'memory_total'
       mixed_content_level_2_roll_out_release.statistic: percentile
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: mixed_content_level_2_roll_out_release.submission_date
@@ -236,7 +257,7 @@
       mixed_content_level_2_roll_out_release.metric: 'active_hours'
       mixed_content_level_2_roll_out_release.statistic: mean
     row: 30
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: mixed_content_level_2_roll_out_release.submission_date
@@ -269,8 +290,8 @@
     filters:
       mixed_content_level_2_roll_out_release.metric: 'ad_clicks'
       mixed_content_level_2_roll_out_release.statistic: mean
-    row: 30
-    col: 12
+    row: 40
+    col: 0
     width: 12
     height: 8
     field_x: mixed_content_level_2_roll_out_release.submission_date

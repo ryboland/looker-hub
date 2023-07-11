@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Search Count
     name: Search Count_mean
     note_state: expanded
@@ -29,7 +50,7 @@
       viewpoint_survey_2023_april_ios.metric: 'search_count'
       viewpoint_survey_2023_april_ios.statistic: mean
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: viewpoint_survey_2023_april_ios.submission_date
@@ -62,8 +83,8 @@
     filters:
       viewpoint_survey_2023_april_ios.metric: 'active_hours'
       viewpoint_survey_2023_april_ios.statistic: mean
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: viewpoint_survey_2023_april_ios.submission_date
@@ -97,7 +118,7 @@
       viewpoint_survey_2023_april_ios.metric: 'ad_clicks'
       viewpoint_survey_2023_april_ios.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: viewpoint_survey_2023_april_ios.submission_date
@@ -132,8 +153,8 @@
     filters:
       viewpoint_survey_2023_april_ios.metric: 'memory_total'
       viewpoint_survey_2023_april_ios.statistic: percentile
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: viewpoint_survey_2023_april_ios.submission_date
@@ -168,7 +189,7 @@
       viewpoint_survey_2023_april_ios.metric: 'days_of_use'
       viewpoint_survey_2023_april_ios.statistic: mean
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: viewpoint_survey_2023_april_ios.submission_date
@@ -201,8 +222,8 @@
     filters:
       viewpoint_survey_2023_april_ios.metric: 'retained'
       viewpoint_survey_2023_april_ios.statistic: mean
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: viewpoint_survey_2023_april_ios.submission_date

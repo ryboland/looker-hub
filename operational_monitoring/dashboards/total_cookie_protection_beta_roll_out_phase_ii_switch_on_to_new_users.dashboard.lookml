@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Startup Crashes
     name: Startup Crashes_sum
     note_state: expanded
@@ -29,7 +50,7 @@
       total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.metric: 'startup_crashes'
       total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.statistic: sum
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.submission_date
@@ -62,8 +83,8 @@
     filters:
       total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.metric: 'content_crashes'
       total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.statistic: sum
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.submission_date
@@ -97,7 +118,7 @@
       total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.metric: 'shutdown_hangs'
       total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.statistic: sum
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.submission_date
@@ -130,8 +151,8 @@
     filters:
       total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.metric: 'main_crashes'
       total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.statistic: sum
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.submission_date
@@ -167,7 +188,7 @@
       total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.metric: 'memory_total'
       total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.statistic: percentile
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.submission_date
@@ -201,8 +222,8 @@
     filters:
       total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.metric: 'oom_crashes'
       total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.statistic: sum
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: total_cookie_protection_beta_roll_out_phase_ii_switch_on_to_new_users.submission_date

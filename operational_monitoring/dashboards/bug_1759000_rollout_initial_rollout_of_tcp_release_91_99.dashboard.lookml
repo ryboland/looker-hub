@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Startup Crashes
     name: Startup Crashes_sum
     note_state: expanded
@@ -29,7 +50,7 @@
       bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.metric: 'startup_crashes'
       bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.statistic: sum
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.submission_date
@@ -62,8 +83,8 @@
     filters:
       bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.metric: 'content_crashes'
       bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.statistic: sum
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.submission_date
@@ -97,7 +118,7 @@
       bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.metric: 'shutdown_hangs'
       bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.statistic: sum
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.submission_date
@@ -130,8 +151,8 @@
     filters:
       bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.metric: 'main_crashes'
       bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.statistic: sum
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.submission_date
@@ -167,7 +188,7 @@
       bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.metric: 'memory_total'
       bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.statistic: percentile
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.submission_date
@@ -201,8 +222,8 @@
     filters:
       bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.metric: 'oom_crashes'
       bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.statistic: sum
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: bug_1759000_rollout_initial_rollout_of_tcp_release_91_99.submission_date

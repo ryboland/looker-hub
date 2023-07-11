@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Startup Crashes
     name: Startup Crashes_sum
     note_state: expanded
@@ -29,7 +50,7 @@
       total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.metric: 'startup_crashes'
       total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.statistic: sum
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.submission_date
@@ -62,8 +83,8 @@
     filters:
       total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.metric: 'content_crashes'
       total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.statistic: sum
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.submission_date
@@ -97,7 +118,7 @@
       total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.metric: 'shutdown_hangs'
       total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.statistic: sum
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.submission_date
@@ -130,8 +151,8 @@
     filters:
       total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.metric: 'main_crashes'
       total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.statistic: sum
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.submission_date
@@ -167,7 +188,7 @@
       total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.metric: 'memory_total'
       total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.statistic: percentile
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.submission_date
@@ -201,8 +222,8 @@
     filters:
       total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.metric: 'oom_crashes'
       total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.statistic: sum
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: total_cookie_protection_roll_out_to_users_phase_ii_switch_on_by_default.submission_date

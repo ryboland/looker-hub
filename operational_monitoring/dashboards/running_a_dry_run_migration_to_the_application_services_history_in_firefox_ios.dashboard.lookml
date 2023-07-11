@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Retained
     name: Retained_mean
     note_state: expanded
@@ -29,7 +50,7 @@
       running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.metric: 'retained'
       running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.statistic: mean
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.submission_date
@@ -62,8 +83,8 @@
     filters:
       running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.metric: 'ad_clicks'
       running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.statistic: mean
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.submission_date
@@ -97,7 +118,7 @@
       running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.metric: 'search_count'
       running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.submission_date
@@ -130,8 +151,8 @@
     filters:
       running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.metric: 'active_hours'
       running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.statistic: mean
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.submission_date
@@ -167,7 +188,7 @@
       running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.metric: 'memory_total'
       running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.statistic: percentile
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.submission_date
@@ -201,8 +222,8 @@
     filters:
       running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.metric: 'days_of_use'
       running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.statistic: mean
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: running_a_dry_run_migration_to_the_application_services_history_in_firefox_ios.submission_date

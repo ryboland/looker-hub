@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Startup Crashes
     name: Startup Crashes_sum
     note_state: expanded
@@ -29,7 +50,7 @@
       set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.metric: 'startup_crashes'
       set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.statistic: sum
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.submission_date
@@ -62,8 +83,8 @@
     filters:
       set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.metric: 'content_crashes'
       set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.statistic: sum
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.submission_date
@@ -97,7 +118,7 @@
       set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.metric: 'shutdown_hangs'
       set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.statistic: sum
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.submission_date
@@ -130,8 +151,8 @@
     filters:
       set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.metric: 'main_crashes'
       set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.statistic: sum
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.submission_date
@@ -167,7 +188,7 @@
       set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.metric: 'memory_total'
       set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.statistic: percentile
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.submission_date
@@ -201,8 +222,8 @@
     filters:
       set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.metric: 'oom_crashes'
       set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.statistic: sum
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: set_firefox_as_default_pdf_handler_on_windows_for_new_users_rollout.submission_date

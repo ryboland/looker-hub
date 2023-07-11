@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Print Cancel Ratios
     name: Print Cancel Ratios_total_ratio
     note_state: expanded
@@ -26,10 +47,10 @@
       print_background_task_times.branch, print_background_task_times.metric 
     ]
     filters:
-      print_background_task_times.metric: '"printing_dialog_via_preview_cancelled", "printing_dialog_without_preview_cancelled", "printing_preview_cancelled_tm", "printing_preview_cancelled", "printing_dialog_via_preview_cancelled_tm"'
+      print_background_task_times.metric: '"printing_dialog_via_preview_cancelled", "printing_dialog_without_preview_cancelled", "printing_preview_cancelled", "printing_dialog_via_preview_cancelled_tm", "printing_preview_cancelled_tm"'
       print_background_task_times.statistic: total_ratio
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: print_background_task_times.submission_date
@@ -61,10 +82,10 @@
       print_background_task_times.branch, print_background_task_times.metric 
     ]
     filters:
-      print_background_task_times.metric: '"printing_preview_opened_tm", "printing_dialog_opened_via_preview", "printing_preview_opened", "printing_silent_print", "printing_dialog_opened_without_preview", "printing_dialog_opened_via_preview_tm"'
+      print_background_task_times.metric: '"printing_preview_opened", "printing_silent_print", "printing_dialog_opened_via_preview_tm", "printing_preview_opened_tm", "printing_dialog_opened_without_preview", "printing_dialog_opened_via_preview"'
       print_background_task_times.statistic: sum
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: print_background_task_times.submission_date
@@ -99,7 +120,7 @@
       print_background_task_times.metric: 'print_count'
       print_background_task_times.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: print_background_task_times.submission_date
@@ -135,8 +156,8 @@
     filters:
       print_background_task_times.metric: 'print_count'
       print_background_task_times.statistic: percentile
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: print_background_task_times.submission_date
@@ -185,31 +206,31 @@
   - title: Channel
     name: Channel
     type: string_filter
-    default_value: 'beta'
+    default_value: 'nightly'
     allow_multiple_values: false
     required: true
     ui_config:
       type: dropdown_menu
       display: inline
       options:
-      - 'beta'
       - 'nightly'
       - 'release'
+      - 'beta'
       
   
   
   - title: Os
     name: Os
     type: string_filter
-    default_value: 'Windows_NT'
+    default_value: 'Linux'
     allow_multiple_values: false
     required: true
     ui_config:
       type: dropdown_menu
       display: inline
       options:
-      - 'Windows_NT'
       - 'Linux'
+      - 'Windows_NT'
       - 'Darwin'
       
   

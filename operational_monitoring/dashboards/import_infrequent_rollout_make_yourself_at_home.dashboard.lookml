@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Uri Count
     name: Uri Count_mean
     note_state: expanded
@@ -29,7 +50,7 @@
       import_infrequent_rollout_make_yourself_at_home.metric: 'uri_count'
       import_infrequent_rollout_make_yourself_at_home.statistic: mean
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: import_infrequent_rollout_make_yourself_at_home.submission_date
@@ -64,8 +85,8 @@
     filters:
       import_infrequent_rollout_make_yourself_at_home.metric: 'memory_total'
       import_infrequent_rollout_make_yourself_at_home.statistic: percentile
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: import_infrequent_rollout_make_yourself_at_home.submission_date
@@ -100,7 +121,7 @@
       import_infrequent_rollout_make_yourself_at_home.metric: 'active_hours'
       import_infrequent_rollout_make_yourself_at_home.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: import_infrequent_rollout_make_yourself_at_home.submission_date
@@ -133,8 +154,8 @@
     filters:
       import_infrequent_rollout_make_yourself_at_home.metric: 'search_count'
       import_infrequent_rollout_make_yourself_at_home.statistic: mean
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: import_infrequent_rollout_make_yourself_at_home.submission_date
@@ -168,7 +189,7 @@
       import_infrequent_rollout_make_yourself_at_home.metric: 'ad_clicks'
       import_infrequent_rollout_make_yourself_at_home.statistic: mean
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: import_infrequent_rollout_make_yourself_at_home.submission_date
@@ -201,8 +222,8 @@
     filters:
       import_infrequent_rollout_make_yourself_at_home.metric: 'retained'
       import_infrequent_rollout_make_yourself_at_home.statistic: mean
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: import_infrequent_rollout_make_yourself_at_home.submission_date
@@ -236,7 +257,7 @@
       import_infrequent_rollout_make_yourself_at_home.metric: 'qualified_cumulative_days_of_use'
       import_infrequent_rollout_make_yourself_at_home.statistic: mean
     row: 30
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: import_infrequent_rollout_make_yourself_at_home.submission_date
@@ -269,8 +290,8 @@
     filters:
       import_infrequent_rollout_make_yourself_at_home.metric: 'days_of_use'
       import_infrequent_rollout_make_yourself_at_home.statistic: mean
-    row: 30
-    col: 12
+    row: 40
+    col: 0
     width: 12
     height: 8
     field_x: import_infrequent_rollout_make_yourself_at_home.submission_date

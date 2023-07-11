@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Metric
     name: Metric_percentile
     explore: telemetry_alerts_prototype
@@ -25,7 +46,7 @@
       telemetry_alerts_prototype.branch
     ]
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: telemetry_alerts_prototype.build_id
@@ -97,7 +118,7 @@
     series_types: {}
     listen:
       Date: telemetry_alerts_prototype_alerts.build_id_date
-    row: 0
+    row: 10
     col: 0
     width: 24
     height: 6
@@ -132,7 +153,7 @@
   - name: Metric
     title: Metric
     type: field_filter
-    default_value: 'subsession_length'
+    default_value: 'memory_total'
     allow_multiple_values: false
     required: true
     ui_config:

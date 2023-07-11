@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Ad Clicks
     name: Ad Clicks_mean
     note_state: expanded
@@ -29,7 +50,7 @@
       server_knobs_validation.metric: 'ad_clicks'
       server_knobs_validation.statistic: mean
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: server_knobs_validation.submission_date
@@ -62,8 +83,8 @@
     filters:
       server_knobs_validation.metric: 'retained'
       server_knobs_validation.statistic: mean
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: server_knobs_validation.submission_date
@@ -97,7 +118,7 @@
       server_knobs_validation.metric: 'uri_count'
       server_knobs_validation.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: server_knobs_validation.submission_date
@@ -132,8 +153,8 @@
     filters:
       server_knobs_validation.metric: 'memory_total'
       server_knobs_validation.statistic: percentile
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: server_knobs_validation.submission_date
@@ -168,7 +189,7 @@
       server_knobs_validation.metric: 'days_of_use'
       server_knobs_validation.statistic: mean
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: server_knobs_validation.submission_date
@@ -201,8 +222,8 @@
     filters:
       server_knobs_validation.metric: 'qualified_cumulative_days_of_use'
       server_knobs_validation.statistic: mean
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: server_knobs_validation.submission_date
@@ -236,7 +257,7 @@
       server_knobs_validation.metric: 'search_count'
       server_knobs_validation.statistic: mean
     row: 30
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: server_knobs_validation.submission_date
@@ -269,8 +290,8 @@
     filters:
       server_knobs_validation.metric: 'active_hours'
       server_knobs_validation.statistic: mean
-    row: 30
-    col: 12
+    row: 40
+    col: 0
     width: 12
     height: 8
     field_x: server_knobs_validation.submission_date

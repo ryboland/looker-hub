@@ -10,6 +10,98 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
+  - title: Memory Total
+    name: Memory Total_percentile
+    note_state: expanded
+    note_display: above
+    note_text: Percentile
+    explore: next_generation_accessibility_engine_powering_screen_readers
+    type: "ci-line-chart"
+    fields: [
+      next_generation_accessibility_engine_powering_screen_readers.submission_date,
+      next_generation_accessibility_engine_powering_screen_readers.branch,
+      next_generation_accessibility_engine_powering_screen_readers.upper,
+      next_generation_accessibility_engine_powering_screen_readers.lower,
+      next_generation_accessibility_engine_powering_screen_readers.point
+    ]
+    pivots: [
+      next_generation_accessibility_engine_powering_screen_readers.branch
+    ]
+    filters:
+      next_generation_accessibility_engine_powering_screen_readers.metric: 'memory_total'
+      next_generation_accessibility_engine_powering_screen_readers.statistic: percentile
+    row: 0
+    col: 12
+    width: 12
+    height: 8
+    field_x: next_generation_accessibility_engine_powering_screen_readers.submission_date
+    field_y: next_generation_accessibility_engine_powering_screen_readers.point
+    log_scale: false
+    ci_lower: next_generation_accessibility_engine_powering_screen_readers.lower
+    ci_upper: next_generation_accessibility_engine_powering_screen_readers.upper
+    show_grid: true
+    listen:
+      Date: next_generation_accessibility_engine_powering_screen_readers.submission_date
+      Percentile: next_generation_accessibility_engine_powering_screen_readers.parameter
+      
+    enabled: "#3FE1B0"
+    disabled: "#0060E0"
+    defaults_version: 0
+  - title: Uri Count
+    name: Uri Count_mean
+    note_state: expanded
+    note_display: above
+    note_text: Mean
+    explore: next_generation_accessibility_engine_powering_screen_readers
+    type: looker_line
+    fields: [
+      next_generation_accessibility_engine_powering_screen_readers.submission_date,
+      next_generation_accessibility_engine_powering_screen_readers.branch,
+      next_generation_accessibility_engine_powering_screen_readers.point
+    ]
+    pivots: [
+      next_generation_accessibility_engine_powering_screen_readers.branch
+    ]
+    filters:
+      next_generation_accessibility_engine_powering_screen_readers.metric: 'uri_count'
+      next_generation_accessibility_engine_powering_screen_readers.statistic: mean
+    row: 10
+    col: 0
+    width: 12
+    height: 8
+    field_x: next_generation_accessibility_engine_powering_screen_readers.submission_date
+    field_y: next_generation_accessibility_engine_powering_screen_readers.point
+    log_scale: false
+    ci_lower: next_generation_accessibility_engine_powering_screen_readers.lower
+    ci_upper: next_generation_accessibility_engine_powering_screen_readers.upper
+    show_grid: true
+    listen:
+      Date: next_generation_accessibility_engine_powering_screen_readers.submission_date
+      
+    enabled: "#3FE1B0"
+    disabled: "#0060E0"
+    defaults_version: 0
   - title: Retained
     name: Retained_mean
     note_state: expanded
@@ -28,76 +120,8 @@
     filters:
       next_generation_accessibility_engine_powering_screen_readers.metric: 'retained'
       next_generation_accessibility_engine_powering_screen_readers.statistic: mean
-    row: 0
-    col: 0
-    width: 12
-    height: 8
-    field_x: next_generation_accessibility_engine_powering_screen_readers.submission_date
-    field_y: next_generation_accessibility_engine_powering_screen_readers.point
-    log_scale: false
-    ci_lower: next_generation_accessibility_engine_powering_screen_readers.lower
-    ci_upper: next_generation_accessibility_engine_powering_screen_readers.upper
-    show_grid: true
-    listen:
-      Date: next_generation_accessibility_engine_powering_screen_readers.submission_date
-      
-    enabled: "#3FE1B0"
-    disabled: "#0060E0"
-    defaults_version: 0
-  - title: Search Count
-    name: Search Count_mean
-    note_state: expanded
-    note_display: above
-    note_text: Mean
-    explore: next_generation_accessibility_engine_powering_screen_readers
-    type: looker_line
-    fields: [
-      next_generation_accessibility_engine_powering_screen_readers.submission_date,
-      next_generation_accessibility_engine_powering_screen_readers.branch,
-      next_generation_accessibility_engine_powering_screen_readers.point
-    ]
-    pivots: [
-      next_generation_accessibility_engine_powering_screen_readers.branch
-    ]
-    filters:
-      next_generation_accessibility_engine_powering_screen_readers.metric: 'search_count'
-      next_generation_accessibility_engine_powering_screen_readers.statistic: mean
-    row: 0
-    col: 12
-    width: 12
-    height: 8
-    field_x: next_generation_accessibility_engine_powering_screen_readers.submission_date
-    field_y: next_generation_accessibility_engine_powering_screen_readers.point
-    log_scale: false
-    ci_lower: next_generation_accessibility_engine_powering_screen_readers.lower
-    ci_upper: next_generation_accessibility_engine_powering_screen_readers.upper
-    show_grid: true
-    listen:
-      Date: next_generation_accessibility_engine_powering_screen_readers.submission_date
-      
-    enabled: "#3FE1B0"
-    disabled: "#0060E0"
-    defaults_version: 0
-  - title: Active Hours
-    name: Active Hours_mean
-    note_state: expanded
-    note_display: above
-    note_text: Mean
-    explore: next_generation_accessibility_engine_powering_screen_readers
-    type: looker_line
-    fields: [
-      next_generation_accessibility_engine_powering_screen_readers.submission_date,
-      next_generation_accessibility_engine_powering_screen_readers.branch,
-      next_generation_accessibility_engine_powering_screen_readers.point
-    ]
-    pivots: [
-      next_generation_accessibility_engine_powering_screen_readers.branch
-    ]
-    filters:
-      next_generation_accessibility_engine_powering_screen_readers.metric: 'active_hours'
-      next_generation_accessibility_engine_powering_screen_readers.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: next_generation_accessibility_engine_powering_screen_readers.submission_date
@@ -130,40 +154,6 @@
     filters:
       next_generation_accessibility_engine_powering_screen_readers.metric: 'ad_clicks'
       next_generation_accessibility_engine_powering_screen_readers.statistic: mean
-    row: 10
-    col: 12
-    width: 12
-    height: 8
-    field_x: next_generation_accessibility_engine_powering_screen_readers.submission_date
-    field_y: next_generation_accessibility_engine_powering_screen_readers.point
-    log_scale: false
-    ci_lower: next_generation_accessibility_engine_powering_screen_readers.lower
-    ci_upper: next_generation_accessibility_engine_powering_screen_readers.upper
-    show_grid: true
-    listen:
-      Date: next_generation_accessibility_engine_powering_screen_readers.submission_date
-      
-    enabled: "#3FE1B0"
-    disabled: "#0060E0"
-    defaults_version: 0
-  - title: Uri Count
-    name: Uri Count_mean
-    note_state: expanded
-    note_display: above
-    note_text: Mean
-    explore: next_generation_accessibility_engine_powering_screen_readers
-    type: looker_line
-    fields: [
-      next_generation_accessibility_engine_powering_screen_readers.submission_date,
-      next_generation_accessibility_engine_powering_screen_readers.branch,
-      next_generation_accessibility_engine_powering_screen_readers.point
-    ]
-    pivots: [
-      next_generation_accessibility_engine_powering_screen_readers.branch
-    ]
-    filters:
-      next_generation_accessibility_engine_powering_screen_readers.metric: 'uri_count'
-      next_generation_accessibility_engine_powering_screen_readers.statistic: mean
     row: 20
     col: 0
     width: 12
@@ -180,26 +170,24 @@
     enabled: "#3FE1B0"
     disabled: "#0060E0"
     defaults_version: 0
-  - title: Memory Total
-    name: Memory Total_percentile
+  - title: Active Hours
+    name: Active Hours_mean
     note_state: expanded
     note_display: above
-    note_text: Percentile
+    note_text: Mean
     explore: next_generation_accessibility_engine_powering_screen_readers
-    type: "ci-line-chart"
+    type: looker_line
     fields: [
       next_generation_accessibility_engine_powering_screen_readers.submission_date,
       next_generation_accessibility_engine_powering_screen_readers.branch,
-      next_generation_accessibility_engine_powering_screen_readers.upper,
-      next_generation_accessibility_engine_powering_screen_readers.lower,
       next_generation_accessibility_engine_powering_screen_readers.point
     ]
     pivots: [
       next_generation_accessibility_engine_powering_screen_readers.branch
     ]
     filters:
-      next_generation_accessibility_engine_powering_screen_readers.metric: 'memory_total'
-      next_generation_accessibility_engine_powering_screen_readers.statistic: percentile
+      next_generation_accessibility_engine_powering_screen_readers.metric: 'active_hours'
+      next_generation_accessibility_engine_powering_screen_readers.statistic: mean
     row: 20
     col: 12
     width: 12
@@ -212,7 +200,40 @@
     show_grid: true
     listen:
       Date: next_generation_accessibility_engine_powering_screen_readers.submission_date
-      Percentile: next_generation_accessibility_engine_powering_screen_readers.parameter
+      
+    enabled: "#3FE1B0"
+    disabled: "#0060E0"
+    defaults_version: 0
+  - title: Search Count
+    name: Search Count_mean
+    note_state: expanded
+    note_display: above
+    note_text: Mean
+    explore: next_generation_accessibility_engine_powering_screen_readers
+    type: looker_line
+    fields: [
+      next_generation_accessibility_engine_powering_screen_readers.submission_date,
+      next_generation_accessibility_engine_powering_screen_readers.branch,
+      next_generation_accessibility_engine_powering_screen_readers.point
+    ]
+    pivots: [
+      next_generation_accessibility_engine_powering_screen_readers.branch
+    ]
+    filters:
+      next_generation_accessibility_engine_powering_screen_readers.metric: 'search_count'
+      next_generation_accessibility_engine_powering_screen_readers.statistic: mean
+    row: 30
+    col: 0
+    width: 12
+    height: 8
+    field_x: next_generation_accessibility_engine_powering_screen_readers.submission_date
+    field_y: next_generation_accessibility_engine_powering_screen_readers.point
+    log_scale: false
+    ci_lower: next_generation_accessibility_engine_powering_screen_readers.lower
+    ci_upper: next_generation_accessibility_engine_powering_screen_readers.upper
+    show_grid: true
+    listen:
+      Date: next_generation_accessibility_engine_powering_screen_readers.submission_date
       
     enabled: "#3FE1B0"
     disabled: "#0060E0"
@@ -236,7 +257,7 @@
       next_generation_accessibility_engine_powering_screen_readers.metric: 'qualified_cumulative_days_of_use'
       next_generation_accessibility_engine_powering_screen_readers.statistic: mean
     row: 30
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: next_generation_accessibility_engine_powering_screen_readers.submission_date
@@ -269,8 +290,8 @@
     filters:
       next_generation_accessibility_engine_powering_screen_readers.metric: 'days_of_use'
       next_generation_accessibility_engine_powering_screen_readers.statistic: mean
-    row: 30
-    col: 12
+    row: 40
+    col: 0
     width: 12
     height: 8
     field_x: next_generation_accessibility_engine_powering_screen_readers.submission_date

@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Perf First Contentful Paint Ms
     name: Perf First Contentful Paint Ms_percentile
     note_state: expanded
@@ -31,7 +52,7 @@
       tcp_rollout_phase_2_demo.metric: 'perf_first_contentful_paint_ms'
       tcp_rollout_phase_2_demo.statistic: percentile
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: tcp_rollout_phase_2_demo.submission_date
@@ -66,8 +87,8 @@
     filters:
       tcp_rollout_phase_2_demo.metric: 'tagged_search_count'
       tcp_rollout_phase_2_demo.statistic: sum
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: tcp_rollout_phase_2_demo.submission_date
@@ -102,7 +123,7 @@
       tcp_rollout_phase_2_demo.metric: 'tagged_search_count'
       tcp_rollout_phase_2_demo.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: tcp_rollout_phase_2_demo.submission_date
@@ -136,8 +157,8 @@
     filters:
       tcp_rollout_phase_2_demo.metric: 'daily_active_clients'
       tcp_rollout_phase_2_demo.statistic: sum
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: tcp_rollout_phase_2_demo.submission_date
@@ -172,7 +193,7 @@
       tcp_rollout_phase_2_demo.metric: 'ad_click'
       tcp_rollout_phase_2_demo.statistic: sum
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: tcp_rollout_phase_2_demo.submission_date
@@ -206,8 +227,8 @@
     filters:
       tcp_rollout_phase_2_demo.metric: 'ad_click'
       tcp_rollout_phase_2_demo.statistic: mean
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: tcp_rollout_phase_2_demo.submission_date
@@ -242,7 +263,7 @@
       tcp_rollout_phase_2_demo.metric: 'search_with_ads'
       tcp_rollout_phase_2_demo.statistic: sum
     row: 30
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: tcp_rollout_phase_2_demo.submission_date
@@ -276,8 +297,8 @@
     filters:
       tcp_rollout_phase_2_demo.metric: 'search_with_ads'
       tcp_rollout_phase_2_demo.statistic: mean
-    row: 30
-    col: 12
+    row: 40
+    col: 0
     width: 12
     height: 8
     field_x: tcp_rollout_phase_2_demo.submission_date

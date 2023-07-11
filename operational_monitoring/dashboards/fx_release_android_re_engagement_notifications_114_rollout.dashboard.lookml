@@ -10,6 +10,27 @@
   preferred_viewer: dashboards-next
 
   elements:
+  - name: ''
+    type: text
+    title_text:
+    body_text: |-
+    ### Description
+    
+        Dashboard description
+      
+        `test`
+
+        * item 1
+        * item 2
+
+        `test`
+        * item 3
+        * item4
+        
+    row: 0
+    col: 0
+    width: 24
+    height: 10
   - title: Days Of Use
     name: Days Of Use_mean
     note_state: expanded
@@ -29,7 +50,7 @@
       fx_release_android_re_engagement_notifications_114_rollout.metric: 'days_of_use'
       fx_release_android_re_engagement_notifications_114_rollout.statistic: mean
     row: 0
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: fx_release_android_re_engagement_notifications_114_rollout.submission_date
@@ -62,8 +83,8 @@
     filters:
       fx_release_android_re_engagement_notifications_114_rollout.metric: 'retained'
       fx_release_android_re_engagement_notifications_114_rollout.statistic: mean
-    row: 0
-    col: 12
+    row: 10
+    col: 0
     width: 12
     height: 8
     field_x: fx_release_android_re_engagement_notifications_114_rollout.submission_date
@@ -97,7 +118,7 @@
       fx_release_android_re_engagement_notifications_114_rollout.metric: 'search_count'
       fx_release_android_re_engagement_notifications_114_rollout.statistic: mean
     row: 10
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: fx_release_android_re_engagement_notifications_114_rollout.submission_date
@@ -130,8 +151,8 @@
     filters:
       fx_release_android_re_engagement_notifications_114_rollout.metric: 'ad_clicks'
       fx_release_android_re_engagement_notifications_114_rollout.statistic: mean
-    row: 10
-    col: 12
+    row: 20
+    col: 0
     width: 12
     height: 8
     field_x: fx_release_android_re_engagement_notifications_114_rollout.submission_date
@@ -167,7 +188,7 @@
       fx_release_android_re_engagement_notifications_114_rollout.metric: 'memory_total'
       fx_release_android_re_engagement_notifications_114_rollout.statistic: percentile
     row: 20
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: fx_release_android_re_engagement_notifications_114_rollout.submission_date
@@ -201,8 +222,8 @@
     filters:
       fx_release_android_re_engagement_notifications_114_rollout.metric: 'active_hours'
       fx_release_android_re_engagement_notifications_114_rollout.statistic: mean
-    row: 20
-    col: 12
+    row: 30
+    col: 0
     width: 12
     height: 8
     field_x: fx_release_android_re_engagement_notifications_114_rollout.submission_date
@@ -236,7 +257,7 @@
       fx_release_android_re_engagement_notifications_114_rollout.metric: 'tagged_sap_searches'
       fx_release_android_re_engagement_notifications_114_rollout.statistic: mean
     row: 30
-    col: 0
+    col: 12
     width: 12
     height: 8
     field_x: fx_release_android_re_engagement_notifications_114_rollout.submission_date
@@ -269,8 +290,8 @@
     filters:
       fx_release_android_re_engagement_notifications_114_rollout.metric: 'uri_count'
       fx_release_android_re_engagement_notifications_114_rollout.statistic: mean
-    row: 30
-    col: 12
+    row: 40
+    col: 0
     width: 12
     height: 8
     field_x: fx_release_android_re_engagement_notifications_114_rollout.submission_date
