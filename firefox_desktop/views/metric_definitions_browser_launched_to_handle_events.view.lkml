@@ -27,8 +27,8 @@ view: metric_definitions_browser_launched_to_handle_events {
     )
               )
               WHERE submission_date BETWEEN 
-                SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %}) AND 
-                SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %})
+                SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %} AS DATE) AND 
+                SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %} AS DATE)
               GROUP BY
                 client_id,
                 submission_date ;;
