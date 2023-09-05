@@ -55,7 +55,7 @@ view: metric_definitions_normandy_events {
     label: "Submission"
     timeframes: [
       raw,
-      day,
+      date,
       week,
       month,
       quarter,

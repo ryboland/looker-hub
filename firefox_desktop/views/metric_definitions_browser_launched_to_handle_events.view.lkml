@@ -55,7 +55,7 @@ view: metric_definitions_browser_launched_to_handle_events {
     label: "Submission"
     timeframes: [
       raw,
-      day,
+      date,
       week,
       month,
       quarter,

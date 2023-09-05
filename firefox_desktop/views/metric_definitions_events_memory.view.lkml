@@ -55,7 +55,7 @@ view: metric_definitions_events_memory {
     label: "Submission"
     timeframes: [
       raw,
-      day,
+      date,
       week,
       month,
       quarter,

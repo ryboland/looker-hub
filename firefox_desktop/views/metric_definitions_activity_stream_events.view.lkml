@@ -127,7 +127,7 @@ view: metric_definitions_activity_stream_events {
     label: "Submission"
     timeframes: [
       raw,
-      day,
+      date,
       week,
       month,
       quarter,

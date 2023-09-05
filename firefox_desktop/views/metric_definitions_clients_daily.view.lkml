@@ -197,7 +197,7 @@ view: metric_definitions_clients_daily {
     label: "Submission"
     timeframes: [
       raw,
-      day,
+      date,
       week,
       month,
       quarter,

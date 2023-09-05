@@ -75,7 +75,7 @@ view: metric_definitions_active_users_aggregates_v1 {
     label: "Submission"
     timeframes: [
       raw,
-      day,
+      date,
       week,
       month,
       quarter,

@@ -154,7 +154,7 @@ view: metric_definitions_search_clients_engines_sources_daily {
     label: "Submission"
     timeframes: [
       raw,
-      day,
+      date,
       week,
       month,
       quarter,

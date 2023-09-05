@@ -71,7 +71,7 @@ view: metric_definitions_events {
     label: "Submission"
     timeframes: [
       raw,
-      day,
+      date,
       week,
       month,
       quarter,

@@ -175,7 +175,7 @@ view: metric_definitions_newtab_interactions {
     label: "Submission"
     timeframes: [
       raw,
-      day,
+      date,
       week,
       month,
       quarter,

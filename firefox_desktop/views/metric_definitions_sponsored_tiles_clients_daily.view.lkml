@@ -46,7 +46,7 @@ view: metric_definitions_sponsored_tiles_clients_daily {
     label: "Submission"
     timeframes: [
       raw,
-      day,
+      date,
       week,
       month,
       quarter,

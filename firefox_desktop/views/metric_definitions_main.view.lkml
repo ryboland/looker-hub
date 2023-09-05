@@ -498,7 +498,7 @@ view: metric_definitions_main {
     label: "Submission"
     timeframes: [
       raw,
-      day,
+      date,
       week,
       month,
       quarter,
