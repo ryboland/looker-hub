@@ -28,8 +28,8 @@ explore: metric_definitions_firefox_desktop {
     relationship: one_to_one
     type: full_outer
     sql_on: SAFE_CAST(${submission_date} AS TIMESTAMP) = SAFE_CAST(${metric_definitions_browser_launched_to_handle_events.submission_date} AS TIMESTAMP)
-                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_browser_launched_to_handle_events.client_id} AS STRING)) = 
-                  COALESCE(SAFE_CAST(${metric_definitions_browser_launched_to_handle_events.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING)) ;;
+                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_browser_launched_to_handle_events.client_id} AS STRING), "") = 
+                  COALESCE(SAFE_CAST(${metric_definitions_browser_launched_to_handle_events.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING), "") ;;
   }
 
   join: metric_definitions_active_users_aggregates_v1 {
@@ -37,8 +37,8 @@ explore: metric_definitions_firefox_desktop {
     relationship: one_to_one
     type: full_outer
     sql_on: SAFE_CAST(${submission_date} AS TIMESTAMP) = SAFE_CAST(${metric_definitions_active_users_aggregates_v1.submission_date} AS TIMESTAMP)
-                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_active_users_aggregates_v1.client_id} AS STRING)) = 
-                  COALESCE(SAFE_CAST(${metric_definitions_active_users_aggregates_v1.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING)) ;;
+                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_active_users_aggregates_v1.client_id} AS STRING), "") = 
+                  COALESCE(SAFE_CAST(${metric_definitions_active_users_aggregates_v1.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING), "") ;;
   }
 
   join: metric_definitions_main {
@@ -46,8 +46,8 @@ explore: metric_definitions_firefox_desktop {
     relationship: one_to_one
     type: full_outer
     sql_on: SAFE_CAST(${submission_date} AS TIMESTAMP) = SAFE_CAST(${metric_definitions_main.submission_date} AS TIMESTAMP)
-                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_main.client_id} AS STRING)) = 
-                  COALESCE(SAFE_CAST(${metric_definitions_main.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING)) ;;
+                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_main.client_id} AS STRING), "") = 
+                  COALESCE(SAFE_CAST(${metric_definitions_main.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING), "") ;;
   }
 
   join: metric_definitions_crash {
@@ -55,8 +55,8 @@ explore: metric_definitions_firefox_desktop {
     relationship: one_to_one
     type: full_outer
     sql_on: SAFE_CAST(${submission_date} AS TIMESTAMP) = SAFE_CAST(${metric_definitions_crash.submission_date} AS TIMESTAMP)
-                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_crash.client_id} AS STRING)) = 
-                  COALESCE(SAFE_CAST(${metric_definitions_crash.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING)) ;;
+                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_crash.client_id} AS STRING), "") = 
+                  COALESCE(SAFE_CAST(${metric_definitions_crash.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING), "") ;;
   }
 
   join: metric_definitions_events_memory {
@@ -64,8 +64,8 @@ explore: metric_definitions_firefox_desktop {
     relationship: one_to_one
     type: full_outer
     sql_on: SAFE_CAST(${submission_date} AS TIMESTAMP) = SAFE_CAST(${metric_definitions_events_memory.submission_date} AS TIMESTAMP)
-                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_events_memory.client_id} AS STRING)) = 
-                  COALESCE(SAFE_CAST(${metric_definitions_events_memory.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING)) ;;
+                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_events_memory.client_id} AS STRING), "") = 
+                  COALESCE(SAFE_CAST(${metric_definitions_events_memory.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING), "") ;;
   }
 
   join: metric_definitions_search_clients_engines_sources_daily {
@@ -73,8 +73,8 @@ explore: metric_definitions_firefox_desktop {
     relationship: one_to_one
     type: full_outer
     sql_on: SAFE_CAST(${submission_date} AS TIMESTAMP) = SAFE_CAST(${metric_definitions_search_clients_engines_sources_daily.submission_date} AS TIMESTAMP)
-                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_search_clients_engines_sources_daily.client_id} AS STRING)) = 
-                  COALESCE(SAFE_CAST(${metric_definitions_search_clients_engines_sources_daily.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING)) ;;
+                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_search_clients_engines_sources_daily.client_id} AS STRING), "") = 
+                  COALESCE(SAFE_CAST(${metric_definitions_search_clients_engines_sources_daily.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING), "") ;;
   }
 
   join: metric_definitions_clients_daily {
@@ -82,8 +82,8 @@ explore: metric_definitions_firefox_desktop {
     relationship: one_to_one
     type: full_outer
     sql_on: SAFE_CAST(${submission_date} AS TIMESTAMP) = SAFE_CAST(${metric_definitions_clients_daily.submission_date} AS TIMESTAMP)
-                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_clients_daily.client_id} AS STRING)) = 
-                  COALESCE(SAFE_CAST(${metric_definitions_clients_daily.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING)) ;;
+                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_clients_daily.client_id} AS STRING), "") = 
+                  COALESCE(SAFE_CAST(${metric_definitions_clients_daily.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING), "") ;;
   }
 
   join: metric_definitions_events {
@@ -91,8 +91,8 @@ explore: metric_definitions_firefox_desktop {
     relationship: one_to_one
     type: full_outer
     sql_on: SAFE_CAST(${submission_date} AS TIMESTAMP) = SAFE_CAST(${metric_definitions_events.submission_date} AS TIMESTAMP)
-                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_events.client_id} AS STRING)) = 
-                  COALESCE(SAFE_CAST(${metric_definitions_events.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING)) ;;
+                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_events.client_id} AS STRING), "") = 
+                  COALESCE(SAFE_CAST(${metric_definitions_events.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING), "") ;;
   }
 
   join: metric_definitions_newtab_interactions {
@@ -100,8 +100,8 @@ explore: metric_definitions_firefox_desktop {
     relationship: one_to_one
     type: full_outer
     sql_on: SAFE_CAST(${submission_date} AS TIMESTAMP) = SAFE_CAST(${metric_definitions_newtab_interactions.submission_date} AS TIMESTAMP)
-                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_newtab_interactions.client_id} AS STRING)) = 
-                  COALESCE(SAFE_CAST(${metric_definitions_newtab_interactions.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING)) ;;
+                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_newtab_interactions.client_id} AS STRING), "") = 
+                  COALESCE(SAFE_CAST(${metric_definitions_newtab_interactions.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING), "") ;;
   }
 
   join: metric_definitions_normandy_events {
@@ -109,8 +109,8 @@ explore: metric_definitions_firefox_desktop {
     relationship: one_to_one
     type: full_outer
     sql_on: SAFE_CAST(${submission_date} AS TIMESTAMP) = SAFE_CAST(${metric_definitions_normandy_events.submission_date} AS TIMESTAMP)
-                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_normandy_events.client_id} AS STRING)) = 
-                  COALESCE(SAFE_CAST(${metric_definitions_normandy_events.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING)) ;;
+                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_normandy_events.client_id} AS STRING), "") = 
+                  COALESCE(SAFE_CAST(${metric_definitions_normandy_events.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING), "") ;;
   }
 
   join: metric_definitions_activity_stream_events {
@@ -118,8 +118,8 @@ explore: metric_definitions_firefox_desktop {
     relationship: one_to_one
     type: full_outer
     sql_on: SAFE_CAST(${submission_date} AS TIMESTAMP) = SAFE_CAST(${metric_definitions_activity_stream_events.submission_date} AS TIMESTAMP)
-                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_activity_stream_events.client_id} AS STRING)) = 
-                  COALESCE(SAFE_CAST(${metric_definitions_activity_stream_events.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING)) ;;
+                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_activity_stream_events.client_id} AS STRING), "") = 
+                  COALESCE(SAFE_CAST(${metric_definitions_activity_stream_events.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING), "") ;;
   }
 
   join: metric_definitions_sponsored_tiles_clients_daily {
@@ -127,8 +127,8 @@ explore: metric_definitions_firefox_desktop {
     relationship: one_to_one
     type: full_outer
     sql_on: SAFE_CAST(${submission_date} AS TIMESTAMP) = SAFE_CAST(${metric_definitions_sponsored_tiles_clients_daily.submission_date} AS TIMESTAMP)
-                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_sponsored_tiles_clients_daily.client_id} AS STRING)) = 
-                  COALESCE(SAFE_CAST(${metric_definitions_sponsored_tiles_clients_daily.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING)) ;;
+                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_sponsored_tiles_clients_daily.client_id} AS STRING), "") = 
+                  COALESCE(SAFE_CAST(${metric_definitions_sponsored_tiles_clients_daily.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING), "") ;;
   }
 
   always_filter: {
