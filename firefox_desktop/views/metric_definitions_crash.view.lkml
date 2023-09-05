@@ -99,4 +99,17 @@ view: metric_definitions_crash {
     type: date
     description: "Date Range"
   }
+
+  set: {
+    metrics: {
+      fields: [
+        content_shutdown_crashes,
+        content_crashes,
+        shutdown_hangs,
+        oom_crashes,
+        main_crashes,
+        startup_crashes,
+      ]
+    }
+  }
 }

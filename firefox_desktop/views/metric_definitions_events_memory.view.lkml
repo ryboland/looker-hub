@@ -67,4 +67,10 @@ view: metric_definitions_events_memory {
     type: date
     description: "Date Range"
   }
+
+  set: {
+    metrics: {
+      fields: [memory_pressure_count]
+    }
+  }
 }

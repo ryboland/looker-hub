@@ -87,4 +87,10 @@ view: metric_definitions_active_users_aggregates_v1 {
     type: date
     description: "Date Range"
   }
+
+  set: {
+    metrics: {
+      fields: [daily_active_users_v2, desktop_dau_kpi_v2]
+    }
+  }
 }
