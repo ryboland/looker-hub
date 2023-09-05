@@ -68,9 +68,7 @@ view: metric_definitions_normandy_events {
     description: "Date Range"
   }
 
-  set: {
-    metrics: {
-      fields: [unenroll]
-    }
+  set: metrics {
+    fields: [unenroll]
   }
 }

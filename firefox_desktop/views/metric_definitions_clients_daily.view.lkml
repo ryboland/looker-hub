@@ -210,27 +210,25 @@ view: metric_definitions_clients_daily {
     description: "Date Range"
   }
 
-  set: {
-    metrics: {
-      fields: [
-        active_hours,
-        uri_count,
-        days_of_use,
-        qualified_cumulative_days_of_use,
-        daily_active_users,
-        client_level_daily_active_users_v1,
-        desktop_dau_kpi,
-        is_default_browser,
-        is_pinned,
-        imported_bookmarks,
-        imported_bookmarks_count,
-        imported_logins,
-        imported_logins_count,
-        imported_history,
-        imported_history_count,
-        fxa_signed_in,
-        retained,
-      ]
-    }
+  set: metrics {
+    fields: [
+      active_hours,
+      uri_count,
+      days_of_use,
+      qualified_cumulative_days_of_use,
+      daily_active_users,
+      client_level_daily_active_users_v1,
+      desktop_dau_kpi,
+      is_default_browser,
+      is_pinned,
+      imported_bookmarks,
+      imported_bookmarks_count,
+      imported_logins,
+      imported_logins_count,
+      imported_history,
+      imported_history_count,
+      fxa_signed_in,
+      retained,
+    ]
   }
 }

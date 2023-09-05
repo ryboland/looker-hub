@@ -68,9 +68,7 @@ view: metric_definitions_browser_launched_to_handle_events {
     description: "Date Range"
   }
 
-  set: {
-    metrics: {
-      fields: [notification_clicks]
-    }
+  set: metrics {
+    fields: [notification_clicks]
   }
 }

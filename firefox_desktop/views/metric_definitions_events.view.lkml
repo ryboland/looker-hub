@@ -84,9 +84,7 @@ view: metric_definitions_events {
     description: "Date Range"
   }
 
-  set: {
-    metrics: {
-      fields: [view_about_logins, view_about_protections, connect_fxa]
-    }
+  set: metrics {
+    fields: [view_about_logins, view_about_protections, connect_fxa]
   }
 }

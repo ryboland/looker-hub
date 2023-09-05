@@ -188,27 +188,25 @@ view: metric_definitions_newtab_interactions {
     description: "Date Range"
   }
 
-  set: {
-    metrics: {
-      fields: [
-        newtab_searches,
-        newtab_searches_with_ads,
-        newtab_ad_clicks,
-        newtab_ad_click_rate,
-        organic_pocket_clicks,
-        sponsered_pocket_clicks,
-        organic_pocket_impressions,
-        sponsored_pocket_impressions,
-        sponsored_tile_impressions,
-        sponsored_tile_clicks,
-        newtab_newtab_enabled,
-        newtab_homepage_enabled,
-        newtab_search_enabled,
-        newtab_tiles_enabled,
-        newtab_pocket_enabled,
-        newtab_sponsored_pocket_stories_enabled,
-        newtab_engagement,
-      ]
-    }
+  set: metrics {
+    fields: [
+      newtab_searches,
+      newtab_searches_with_ads,
+      newtab_ad_clicks,
+      newtab_ad_click_rate,
+      organic_pocket_clicks,
+      sponsered_pocket_clicks,
+      organic_pocket_impressions,
+      sponsored_pocket_impressions,
+      sponsored_tile_impressions,
+      sponsored_tile_clicks,
+      newtab_newtab_enabled,
+      newtab_homepage_enabled,
+      newtab_search_enabled,
+      newtab_tiles_enabled,
+      newtab_pocket_enabled,
+      newtab_sponsored_pocket_stories_enabled,
+      newtab_engagement,
+    ]
   }
 }

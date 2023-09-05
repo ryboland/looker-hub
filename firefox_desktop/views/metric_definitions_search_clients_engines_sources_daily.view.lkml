@@ -167,22 +167,20 @@ view: metric_definitions_search_clients_engines_sources_daily {
     description: "Date Range"
   }
 
-  set: {
-    metrics: {
-      fields: [
-        search_count,
-        tagged_search_count,
-        tagged_follow_on_search_count,
-        ad_clicks,
-        searches_with_ads,
-        organic_search_count,
-        search_with_ads_organic,
-        ad_clicks_organic,
-        search_with_ads,
-        ad_click,
-        sap,
-        ad_click_organic,
-      ]
-    }
+  set: metrics {
+    fields: [
+      search_count,
+      tagged_search_count,
+      tagged_follow_on_search_count,
+      ad_clicks,
+      searches_with_ads,
+      organic_search_count,
+      search_with_ads_organic,
+      ad_clicks_organic,
+      search_with_ads,
+      ad_click,
+      sap,
+      ad_click_organic,
+    ]
   }
 }

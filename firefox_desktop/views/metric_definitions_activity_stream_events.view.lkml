@@ -140,17 +140,15 @@ view: metric_definitions_activity_stream_events {
     description: "Date Range"
   }
 
-  set: {
-    metrics: {
-      fields: [
-        pocket_rec_clicks,
-        pocket_spoc_clicks,
-        disable_pocket_clicks,
-        disable_pocket_spocs_clicks,
-        sponsored_tiles_dismissals,
-        any_sponsored_tiles_dismissals,
-        sponsored_tiles_dismissals_pos1_2,
-      ]
-    }
+  set: metrics {
+    fields: [
+      pocket_rec_clicks,
+      pocket_spoc_clicks,
+      disable_pocket_clicks,
+      disable_pocket_spocs_clicks,
+      sponsored_tiles_dismissals,
+      any_sponsored_tiles_dismissals,
+      sponsored_tiles_dismissals_pos1_2,
+    ]
   }
 }

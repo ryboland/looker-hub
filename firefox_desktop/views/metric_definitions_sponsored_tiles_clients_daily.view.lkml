@@ -59,9 +59,7 @@ view: metric_definitions_sponsored_tiles_clients_daily {
     description: "Date Range"
   }
 
-  set: {
-    metrics: {
-      fields: [sponsored_tiles_disabled]
-    }
+  set: metrics {
+    fields: [sponsored_tiles_disabled]
   }
 }
