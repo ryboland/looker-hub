@@ -36,6 +36,7 @@ view: metric_definitions_normandy_events {
     sql: ${TABLE}.client_id ;;
     label: "Client ID"
     description: "Unique client identifier"
+    hidden: yes
   }
 
   dimension: unenroll {
@@ -58,10 +59,6 @@ view: metric_definitions_normandy_events {
       quarter,
       year,
     ]
-  }
-
-  measure: total_clients {
-    type: count_distinct
-    sql: ${client_id} ;;
+    hidden: yes
   }
 }

@@ -38,6 +38,7 @@ view: metric_definitions_main {
     sql: ${TABLE}.client_id ;;
     label: "Client ID"
     description: "Unique client identifier"
+    hidden: yes
   }
 
   dimension: gmplugin_crashes {
@@ -501,10 +502,6 @@ view: metric_definitions_main {
       quarter,
       year,
     ]
-  }
-
-  measure: total_clients {
-    type: count_distinct
-    sql: ${client_id} ;;
+    hidden: yes
   }
 }

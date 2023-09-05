@@ -35,6 +35,7 @@ view: metric_definitions_clients_daily {
     sql: ${TABLE}.client_id ;;
     label: "Client ID"
     description: "Unique client identifier"
+    hidden: yes
   }
 
   dimension: active_hours {
@@ -200,10 +201,6 @@ view: metric_definitions_clients_daily {
       quarter,
       year,
     ]
-  }
-
-  measure: total_clients {
-    type: count_distinct
-    sql: ${client_id} ;;
+    hidden: yes
   }
 }

@@ -28,6 +28,7 @@ view: metric_definitions_search_clients_engines_sources_daily {
     sql: ${TABLE}.client_id ;;
     label: "Client ID"
     description: "Unique client identifier"
+    hidden: yes
   }
 
   dimension: search_count {
@@ -157,10 +158,6 @@ view: metric_definitions_search_clients_engines_sources_daily {
       quarter,
       year,
     ]
-  }
-
-  measure: total_clients {
-    type: count_distinct
-    sql: ${client_id} ;;
+    hidden: yes
   }
 }

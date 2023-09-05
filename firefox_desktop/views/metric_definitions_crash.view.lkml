@@ -34,6 +34,7 @@ view: metric_definitions_crash {
     sql: ${TABLE}.client_id ;;
     label: "Client ID"
     description: "Unique client identifier"
+    hidden: yes
   }
 
   dimension: content_shutdown_crashes {
@@ -90,10 +91,6 @@ view: metric_definitions_crash {
       quarter,
       year,
     ]
-  }
-
-  measure: total_clients {
-    type: count_distinct
-    sql: ${client_id} ;;
+    hidden: yes
   }
 }

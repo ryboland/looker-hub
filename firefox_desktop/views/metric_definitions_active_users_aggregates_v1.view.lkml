@@ -32,6 +32,7 @@ view: metric_definitions_active_users_aggregates_v1 {
     sql: ${TABLE}.client_id ;;
     label: "Client ID"
     description: "Unique client identifier"
+    hidden: yes
   }
 
   dimension: daily_active_users_v2 {
@@ -78,10 +79,6 @@ view: metric_definitions_active_users_aggregates_v1 {
       quarter,
       year,
     ]
-  }
-
-  measure: total_clients {
-    type: count_distinct
-    sql: ${client_id} ;;
+    hidden: yes
   }
 }
