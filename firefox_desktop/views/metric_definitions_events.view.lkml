@@ -14,7 +14,7 @@ view: metric_definitions_events {
          ), FALSE) AS view_about_protections,COALESCE(LOGICAL_OR(            event_method = 'connect'
             AND event_object = 'account'
          ), FALSE) AS connect_fxa,
-                client_id AS client_id,
+                COALESCE(client_id, 'NULL') AS client_id,
                 submission_date AS submission_date
               FROM 
                 (
@@ -33,7 +33,7 @@ view: metric_definitions_events {
 
   dimension: client_id {
     type: string
-    sql: COALESCE(COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING), 'NULL')
+    sql: COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING)
                         {% if  metric_definitions_browser_launched_to_handle_events._in_query %}
                         , SAFE_CAST(metric_definitions_browser_launched_to_handle_events.client_id AS STRING)
                         {% endif %}

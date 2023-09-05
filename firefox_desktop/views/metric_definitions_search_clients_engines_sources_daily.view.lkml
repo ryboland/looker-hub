@@ -8,7 +8,7 @@ view: metric_definitions_search_clients_engines_sources_daily {
   derived_table: {
     sql: SELECT
                 COALESCE(SUM(sap), 0) AS search_count,COALESCE(SUM(tagged_sap), 0) AS tagged_search_count,COALESCE(SUM(tagged_follow_on), 0) AS tagged_follow_on_search_count,COALESCE(SUM(ad_click), 0) AS ad_clicks,COALESCE(SUM(search_with_ads), 0) AS searches_with_ads,COALESCE(SUM(organic), 0) AS organic_search_count,COALESCE(SUM(search_with_ads_organic), 0) AS search_with_ads_organic,COALESCE(SUM(ad_click_organic), 0) AS ad_clicks_organic,SUM(search_with_ads) AS search_with_ads,SUM(ad_click) AS ad_click,SUM(sap) AS sap,SUM(ad_click_organic) AS ad_click_organic,
-                client_id AS client_id,
+                COALESCE(client_id, 'NULL') AS client_id,
                 submission_date AS submission_date
               FROM 
                 (
@@ -27,7 +27,7 @@ view: metric_definitions_search_clients_engines_sources_daily {
 
   dimension: client_id {
     type: string
-    sql: COALESCE(COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING), 'NULL')
+    sql: COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING)
                         {% if  metric_definitions_browser_launched_to_handle_events._in_query %}
                         , SAFE_CAST(metric_definitions_browser_launched_to_handle_events.client_id AS STRING)
                         {% endif %}

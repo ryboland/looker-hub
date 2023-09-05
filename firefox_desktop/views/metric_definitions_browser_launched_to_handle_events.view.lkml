@@ -11,7 +11,7 @@ view: metric_definitions_browser_launched_to_handle_events {
     AND event_object = 'toast'
     AND STARTS_WITH(mozfun.map.get_key(event_map_values, 'name'), '{experiment_slug}:')
      ), FALSE) AS notification_clicks,
-                client_id AS client_id,
+                COALESCE(client_id, 'NULL') AS client_id,
                 submission_date AS submission_date
               FROM 
                 (
@@ -35,7 +35,7 @@ view: metric_definitions_browser_launched_to_handle_events {
 
   dimension: client_id {
     type: string
-    sql: COALESCE(COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING), 'NULL')
+    sql: COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING)
                         {% if  metric_definitions_browser_launched_to_handle_events._in_query %}
                         , SAFE_CAST(metric_definitions_browser_launched_to_handle_events.client_id AS STRING)
                         {% endif %}

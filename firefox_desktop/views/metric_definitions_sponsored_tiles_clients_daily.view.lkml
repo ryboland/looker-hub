@@ -8,7 +8,7 @@ view: metric_definitions_sponsored_tiles_clients_daily {
   derived_table: {
     sql: SELECT
                 COALESCE(LOGICAL_OR(sponsored_tiles_disable_count > 0), FALSE) AS sponsored_tiles_disabled,
-                client_id AS client_id,
+                COALESCE(client_id, 'NULL') AS client_id,
                 submission_date AS submission_date
               FROM 
                 (
@@ -27,7 +27,7 @@ view: metric_definitions_sponsored_tiles_clients_daily {
 
   dimension: client_id {
     type: string
-    sql: COALESCE(COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING), 'NULL')
+    sql: COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING)
                         {% if  metric_definitions_browser_launched_to_handle_events._in_query %}
                         , SAFE_CAST(metric_definitions_browser_launched_to_handle_events.client_id AS STRING)
                         {% endif %}

@@ -8,7 +8,7 @@ view: metric_definitions_crash {
   derived_table: {
     sql: SELECT
                 SUM(IF(REGEXP_CONTAINS(payload.process_type, 'content') AND REGEXP_CONTAINS(payload.metadata.ipc_channel_error, 'ShutDownKill'), 1, 0)) AS content_shutdown_crashes,SUM(IF(REGEXP_CONTAINS(payload.process_type, 'content') AND NOT REGEXP_CONTAINS(COALESCE(payload.metadata.ipc_channel_error, ''), 'ShutDownKill'), 1, 0)) AS content_crashes,SUM(IF(payload.metadata.moz_crash_reason LIKE 'MOZ_CRASH%', 1, 0)) AS shutdown_hangs,SUM(IF(payload.metadata.oom_allocation_size IS NOT NULL, 1, 0)) AS oom_crashes,SUM(IF(payload.process_type = 'main' OR payload.process_type IS NULL, 1, 0)) AS main_crashes,SUM(IF(payload.metadata.startup_crash = '1', 1, 0)) AS startup_crashes,
-                client_id AS client_id,
+                COALESCE(client_id, 'NULL') AS client_id,
                 submission_date AS submission_date
               FROM 
                 (
@@ -33,7 +33,7 @@ view: metric_definitions_crash {
 
   dimension: client_id {
     type: string
-    sql: COALESCE(COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING), 'NULL')
+    sql: COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING)
                         {% if  metric_definitions_browser_launched_to_handle_events._in_query %}
                         , SAFE_CAST(metric_definitions_browser_launched_to_handle_events.client_id AS STRING)
                         {% endif %}

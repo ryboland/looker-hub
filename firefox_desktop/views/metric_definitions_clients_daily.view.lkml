@@ -15,7 +15,7 @@ view: metric_definitions_clients_daily {
     total_uri_count > 0 AND
     FORMAT_DATE('%m-%d', submission_date) BETWEEN '11-18' AND '12-15'
     ) / 28 AS desktop_dau_kpi,COALESCE(LOGICAL_OR(is_default_browser), FALSE) AS is_default_browser,COALESCE(LOGICAL_OR(scalar_parent_os_environment_is_taskbar_pinned), FALSE) AS is_pinned,LOGICAL_OR(bookmark_migrations_quantity_all IS NOT NULL AND bookmark_migrations_quantity_all != 0) AS imported_bookmarks,NULLIF(SUM(bookmark_migrations_quantity_all), 0) AS imported_bookmarks_count,LOGICAL_OR(logins_migrations_quantity_all IS NOT NULL AND logins_migrations_quantity_all != 0) AS imported_logins,NULLIF(SUM(logins_migrations_quantity_all), 0) AS imported_logins_count,LOGICAL_OR(history_migrations_quantity_all IS NOT NULL AND history_migrations_quantity_all != 0) AS imported_history,NULLIF(SUM(history_migrations_quantity_all), 0) AS imported_history_count,CAST(COALESCE(SUM(CASE WHEN fxa_configured IS TRUE THEN 1 ELSE 0 END),0) > 0 AS INT) AS fxa_signed_in,COALESCE(SUM(pings_aggregated_by_this_row), 0) > 0 AS retained,
-                client_id AS client_id,
+                COALESCE(client_id, 'NULL') AS client_id,
                 submission_date AS submission_date
               FROM 
                 (
@@ -34,7 +34,7 @@ view: metric_definitions_clients_daily {
 
   dimension: client_id {
     type: string
-    sql: COALESCE(COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING), 'NULL')
+    sql: COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING)
                         {% if  metric_definitions_browser_launched_to_handle_events._in_query %}
                         , SAFE_CAST(metric_definitions_browser_launched_to_handle_events.client_id AS STRING)
                         {% endif %}

@@ -37,7 +37,7 @@ view: metric_definitions_activity_stream_events {
         AND SOURCE = 'TOP_SITES'
         AND action_position <= 1
       ) AS sponsored_tiles_dismissals_pos1_2,
-                client_id AS client_id,
+                COALESCE(client_id, 'NULL') AS client_id,
                 submission_date AS submission_date
               FROM 
                 (
@@ -61,7 +61,7 @@ view: metric_definitions_activity_stream_events {
 
   dimension: client_id {
     type: string
-    sql: COALESCE(COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING), 'NULL')
+    sql: COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING)
                         {% if  metric_definitions_browser_launched_to_handle_events._in_query %}
                         , SAFE_CAST(metric_definitions_browser_launched_to_handle_events.client_id AS STRING)
                         {% endif %}
