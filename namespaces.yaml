@@ -68,7 +68,6 @@ firefox_desktop:
         - metric_definitions_normandy_events
         - metric_definitions_activity_stream_events
         - metric_definitions_sponsored_tiles_clients_daily
-        - metric_definitions_active_users_aggregates_v1
     metrics:
       type: glean_ping_explore
       views:

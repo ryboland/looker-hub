@@ -17,12 +17,11 @@ include: "/looker-hub/firefox_desktop/views/metric_definitions_newtab_interactio
 include: "/looker-hub/firefox_desktop/views/metric_definitions_normandy_events.view.lkml"
 include: "/looker-hub/firefox_desktop/views/metric_definitions_activity_stream_events.view.lkml"
 include: "/looker-hub/firefox_desktop/views/metric_definitions_sponsored_tiles_clients_daily.view.lkml"
-include: "/looker-hub/firefox_desktop/views/metric_definitions_active_users_aggregates_v1.view.lkml"
 
 explore: metric_definitions_firefox_desktop {
   sql_always_where: ${metric_definitions_active_users_aggregates_v1.submission_date} >= '2010-01-01' ;;
-  view_name: metric_definitions_active_users_aggregates_v1
-  view_label: "metric_definitions_firefox_desktop"
+  from: metric_definitions_active_users_aggregates_v1
+  view_label: "Metric Definitions Firefox Desktop"
 
   join: metric_definitions_browser_launched_to_handle_events {
     view_label: "Metric Definitions Browser Launched To Handle Events"
@@ -132,20 +131,11 @@ explore: metric_definitions_firefox_desktop {
                   COALESCE(SAFE_CAST(${metric_definitions_sponsored_tiles_clients_daily.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING)) ;;
   }
 
-  join: metric_definitions_active_users_aggregates_v1 {
-    view_label: "Metric Definitions Active Users Aggregates V1"
-    relationship: one_to_one
-    type: full_outer
-    sql_on: SAFE_CAST(${submission_date} AS TIMESTAMP) = SAFE_CAST(${metric_definitions_active_users_aggregates_v1.submission_date} AS TIMESTAMP)
-                  AND COALESCE(SAFE_CAST(${client_id} AS STRING), SAFE_CAST(${metric_definitions_active_users_aggregates_v1.client_id} AS STRING)) = 
-                  COALESCE(SAFE_CAST(${metric_definitions_active_users_aggregates_v1.client_id} AS STRING), SAFE_CAST(${client_id} AS STRING)) ;;
-  }
-
   always_filter: {
     filters: [
-      submission_date: "7 days",
+      date: "7 days",
     ]
   }
 
-  fields: [client_id, submission_date]
+  fields: [ALL_FIELDS*, <itertools.chain object at 0x1468bf700>]
 }

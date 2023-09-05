@@ -18,6 +18,9 @@ view: metric_definitions_search_clients_engines_sources_daily {
         (mozdata.search.search_clients_engines_sources_daily)
     )
               )
+              WHERE submission_date BETWEEN 
+                SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %}) AND 
+                SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %})
               GROUP BY
                 client_id,
                 submission_date ;;
@@ -28,7 +31,6 @@ view: metric_definitions_search_clients_engines_sources_daily {
     sql: ${TABLE}.client_id ;;
     label: "Client ID"
     description: "Unique client identifier"
-    hidden: yes
   }
 
   dimension: search_count {
@@ -158,6 +160,5 @@ view: metric_definitions_search_clients_engines_sources_daily {
       quarter,
       year,
     ]
-    hidden: yes
   }
 }

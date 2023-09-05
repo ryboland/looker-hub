@@ -27,6 +27,9 @@ view: metric_definitions_events_memory {
 )
     )
               )
+              WHERE DATE(submission_date) BETWEEN 
+                SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %}) AND 
+                SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %})
               GROUP BY
                 client_id,
                 submission_date ;;
@@ -37,7 +40,6 @@ view: metric_definitions_events_memory {
     sql: ${TABLE}.client_id ;;
     label: "Client ID"
     description: "Unique client identifier"
-    hidden: yes
   }
 
   dimension: memory_pressure_count {
@@ -59,6 +61,5 @@ view: metric_definitions_events_memory {
       quarter,
       year,
     ]
-    hidden: yes
   }
 }

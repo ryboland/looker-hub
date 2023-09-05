@@ -28,6 +28,9 @@ view: metric_definitions_main {
 ))
     )
               )
+              WHERE submission_date BETWEEN 
+                SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %}) AND 
+                SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %})
               GROUP BY
                 client_id,
                 submission_date ;;
@@ -38,7 +41,6 @@ view: metric_definitions_main {
     sql: ${TABLE}.client_id ;;
     label: "Client ID"
     description: "Unique client identifier"
-    hidden: yes
   }
 
   dimension: gmplugin_crashes {
@@ -502,6 +504,5 @@ view: metric_definitions_main {
       quarter,
       year,
     ]
-    hidden: yes
   }
 }

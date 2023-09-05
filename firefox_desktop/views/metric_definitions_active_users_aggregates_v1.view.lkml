@@ -22,6 +22,9 @@ view: metric_definitions_active_users_aggregates_v1 {
 ))
     )
               )
+              WHERE submission_date BETWEEN 
+                SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %}) AND 
+                SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %})
               GROUP BY
                 client_id,
                 submission_date ;;
@@ -32,7 +35,6 @@ view: metric_definitions_active_users_aggregates_v1 {
     sql: ${TABLE}.client_id ;;
     label: "Client ID"
     description: "Unique client identifier"
-    hidden: yes
   }
 
   dimension: daily_active_users_v2 {
@@ -79,6 +81,5 @@ view: metric_definitions_active_users_aggregates_v1 {
       quarter,
       year,
     ]
-    hidden: yes
   }
 }

@@ -18,6 +18,9 @@ view: metric_definitions_newtab_interactions {
         (mozdata.telemetry.newtab_interactions)
     )
               )
+              WHERE submission_date BETWEEN 
+                SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %}) AND 
+                SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %})
               GROUP BY
                 client_id,
                 submission_date ;;
@@ -28,7 +31,6 @@ view: metric_definitions_newtab_interactions {
     sql: ${TABLE}.client_id ;;
     label: "Client ID"
     description: "Unique client identifier"
-    hidden: yes
   }
 
   dimension: newtab_searches {
@@ -179,6 +181,5 @@ view: metric_definitions_newtab_interactions {
       quarter,
       year,
     ]
-    hidden: yes
   }
 }
