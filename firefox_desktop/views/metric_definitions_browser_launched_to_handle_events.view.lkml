@@ -18,12 +18,12 @@ view: metric_definitions_browser_launched_to_handle_events {
     SELECT
         *
     FROM
-        ((
+        (
     SELECT
         *
     FROM `mozdata.telemetry.events`
     WHERE event_category = 'browser.launched_to_handle'
-))
+)
     )
               WHERE submission_date BETWEEN 
                 SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %} AS DATE) AND 
@@ -35,53 +35,53 @@ view: metric_definitions_browser_launched_to_handle_events {
 
   dimension: client_id {
     type: string
-    sql: COALESCE(SAFE_CAST(COALESCE(${TABLE}.client_id, 'NULL') AS STRING)
+    sql: COALESCE(COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING), 'NULL')
                         {% if  metric_definitions_browser_launched_to_handle_events._in_query %}
-                        , metric_definitions_browser_launched_to_handle_events.client_id
+                        , SAFE_CAST(metric_definitions_browser_launched_to_handle_events.client_id AS STRING)
                         {% endif %}
                     
                         {% if  metric_definitions_active_users_aggregates_v1._in_query %}
-                        , metric_definitions_active_users_aggregates_v1.client_id
+                        , SAFE_CAST(metric_definitions_active_users_aggregates_v1.client_id AS STRING)
                         {% endif %}
                     
                         {% if  metric_definitions_main._in_query %}
-                        , metric_definitions_main.client_id
+                        , SAFE_CAST(metric_definitions_main.client_id AS STRING)
                         {% endif %}
                     
                         {% if  metric_definitions_crash._in_query %}
-                        , metric_definitions_crash.client_id
+                        , SAFE_CAST(metric_definitions_crash.client_id AS STRING)
                         {% endif %}
                     
                         {% if  metric_definitions_events_memory._in_query %}
-                        , metric_definitions_events_memory.client_id
+                        , SAFE_CAST(metric_definitions_events_memory.client_id AS STRING)
                         {% endif %}
                     
                         {% if  metric_definitions_search_clients_engines_sources_daily._in_query %}
-                        , metric_definitions_search_clients_engines_sources_daily.client_id
+                        , SAFE_CAST(metric_definitions_search_clients_engines_sources_daily.client_id AS STRING)
                         {% endif %}
                     
                         {% if  metric_definitions_clients_daily._in_query %}
-                        , metric_definitions_clients_daily.client_id
+                        , SAFE_CAST(metric_definitions_clients_daily.client_id AS STRING)
                         {% endif %}
                     
                         {% if  metric_definitions_events._in_query %}
-                        , metric_definitions_events.client_id
+                        , SAFE_CAST(metric_definitions_events.client_id AS STRING)
                         {% endif %}
                     
                         {% if  metric_definitions_newtab_interactions._in_query %}
-                        , metric_definitions_newtab_interactions.client_id
+                        , SAFE_CAST(metric_definitions_newtab_interactions.client_id AS STRING)
                         {% endif %}
                     
                         {% if  metric_definitions_normandy_events._in_query %}
-                        , metric_definitions_normandy_events.client_id
+                        , SAFE_CAST(metric_definitions_normandy_events.client_id AS STRING)
                         {% endif %}
                     
                         {% if  metric_definitions_activity_stream_events._in_query %}
-                        , metric_definitions_activity_stream_events.client_id
+                        , SAFE_CAST(metric_definitions_activity_stream_events.client_id AS STRING)
                         {% endif %}
                     
                         {% if  metric_definitions_sponsored_tiles_clients_daily._in_query %}
-                        , metric_definitions_sponsored_tiles_clients_daily.client_id
+                        , SAFE_CAST(metric_definitions_sponsored_tiles_clients_daily.client_id AS STRING)
                         {% endif %}
                     ) ;;
     label: "Client ID"
