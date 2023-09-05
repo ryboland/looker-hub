@@ -87,11 +87,16 @@ view: metric_definitions_crash {
     label: "Submission"
     timeframes: [
       raw,
-      date,
+      day,
       week,
       month,
       quarter,
       year,
     ]
+  }
+
+  filter: date {
+    type: date
+    description: "Date Range"
   }
 }

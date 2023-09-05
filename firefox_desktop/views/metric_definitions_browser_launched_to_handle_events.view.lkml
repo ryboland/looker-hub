@@ -55,11 +55,16 @@ view: metric_definitions_browser_launched_to_handle_events {
     label: "Submission"
     timeframes: [
       raw,
-      date,
+      day,
       week,
       month,
       quarter,
       year,
     ]
+  }
+
+  filter: date {
+    type: date
+    description: "Date Range"
   }
 }

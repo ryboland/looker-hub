@@ -175,11 +175,16 @@ view: metric_definitions_newtab_interactions {
     label: "Submission"
     timeframes: [
       raw,
-      date,
+      day,
       week,
       month,
       quarter,
       year,
     ]
+  }
+
+  filter: date {
+    type: date
+    description: "Date Range"
   }
 }

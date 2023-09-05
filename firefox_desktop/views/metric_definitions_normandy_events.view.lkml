@@ -55,11 +55,16 @@ view: metric_definitions_normandy_events {
     label: "Submission"
     timeframes: [
       raw,
-      date,
+      day,
       week,
       month,
       quarter,
       year,
     ]
+  }
+
+  filter: date {
+    type: date
+    description: "Date Range"
   }
 }

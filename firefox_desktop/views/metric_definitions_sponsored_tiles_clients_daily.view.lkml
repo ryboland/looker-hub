@@ -46,11 +46,16 @@ view: metric_definitions_sponsored_tiles_clients_daily {
     label: "Submission"
     timeframes: [
       raw,
-      date,
+      day,
       week,
       month,
       quarter,
       year,
     ]
+  }
+
+  filter: date {
+    type: date
+    description: "Date Range"
   }
 }
