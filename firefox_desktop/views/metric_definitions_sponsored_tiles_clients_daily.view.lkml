@@ -10,14 +10,13 @@ view: metric_definitions_sponsored_tiles_clients_daily {
                 COALESCE(LOGICAL_OR(sponsored_tiles_disable_count > 0), FALSE) AS sponsored_tiles_disabled,
                 client_id AS client_id,
                 submission_date AS submission_date
-              FROM (
+              FROM 
                 (
     SELECT
         *
     FROM
         (mozdata.telemetry.sponsored_tiles_clients_daily)
     )
-              )
               WHERE submission_date BETWEEN 
                 SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %} AS DATE) AND 
                 SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %} AS DATE)

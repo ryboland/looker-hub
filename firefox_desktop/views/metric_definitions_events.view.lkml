@@ -16,14 +16,13 @@ view: metric_definitions_events {
          ), FALSE) AS connect_fxa,
                 client_id AS client_id,
                 submission_date AS submission_date
-              FROM (
+              FROM 
                 (
     SELECT
         *
     FROM
         (mozdata.telemetry.events)
     )
-              )
               WHERE submission_date BETWEEN 
                 SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %} AS DATE) AND 
                 SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %} AS DATE)

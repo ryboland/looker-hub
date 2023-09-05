@@ -39,7 +39,7 @@ view: metric_definitions_activity_stream_events {
       ) AS sponsored_tiles_dismissals_pos1_2,
                 client_id AS client_id,
                 submission_date AS submission_date
-              FROM (
+              FROM 
                 (
     SELECT
         *
@@ -51,7 +51,6 @@ view: metric_definitions_activity_stream_events {
     FROM mozdata.activity_stream.events
 ))
     )
-              )
               WHERE submission_date BETWEEN 
                 SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %} AS DATE) AND 
                 SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %} AS DATE)

@@ -13,7 +13,7 @@ view: metric_definitions_browser_launched_to_handle_events {
      ), FALSE) AS notification_clicks,
                 client_id AS client_id,
                 submission_date AS submission_date
-              FROM (
+              FROM 
                 (
     SELECT
         *
@@ -25,7 +25,6 @@ view: metric_definitions_browser_launched_to_handle_events {
     WHERE event_category = 'browser.launched_to_handle'
 ))
     )
-              )
               WHERE submission_date BETWEEN 
                 SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %} AS DATE) AND 
                 SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %} AS DATE)

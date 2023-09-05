@@ -10,7 +10,7 @@ view: metric_definitions_events_memory {
                 SUM(SAFE_CAST(SPLIT(event_string_value, ',')[OFFSET(1)] AS NUMERIC)) AS memory_pressure_count,
                 client_id AS client_id,
                 DATE(submission_date) AS submission_date
-              FROM (
+              FROM 
                 (
     SELECT
         *
@@ -26,7 +26,6 @@ view: metric_definitions_events_memory {
     )
 )
     )
-              )
               WHERE DATE(submission_date) BETWEEN 
                 SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %} AS DATE) AND 
                 SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %} AS DATE)
