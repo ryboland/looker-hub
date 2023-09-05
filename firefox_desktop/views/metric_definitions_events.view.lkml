@@ -64,8 +64,8 @@ view: metric_definitions_events {
 
   dimension_group: submission {
     type: time
-    sql: ${TABLE}.submission_date ;;
-    label: "Submission Date"
+    sql: CAST(${TABLE}.submission_date AS TIMESTAMP) ;;
+    label: "Submission"
     timeframes: [
       raw,
       date,
@@ -76,7 +76,7 @@ view: metric_definitions_events {
     ]
   }
 
-  measure: clients {
+  measure: total_clients {
     type: count_distinct
     sql: ${client_id} ;;
   }
