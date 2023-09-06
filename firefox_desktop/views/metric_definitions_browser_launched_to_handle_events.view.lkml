@@ -98,7 +98,7 @@ view: metric_definitions_browser_launched_to_handle_events {
 
   dimension_group: submission {
     type: time
-    sql: CAST(${TABLE}.submission_date AS TIMESTAMP)
+    sql: COALESCE(CAST(${TABLE}.submission_date AS TIMESTAMP)
                 {% if  metric_definitions_browser_launched_to_handle_events._in_query %}
                 , CAST(metric_definitions_browser_launched_to_handle_events.submission_date AS TIMESTAMP)
                 {% endif %}
@@ -145,7 +145,8 @@ view: metric_definitions_browser_launched_to_handle_events {
             
                 {% if  metric_definitions_sponsored_tiles_clients_daily._in_query %}
                 , CAST(metric_definitions_sponsored_tiles_clients_daily.submission_date AS TIMESTAMP)
-                {% endif %} ;;
+                {% endif %}
+            ) ;;
     label: "Submission"
     timeframes: [
       raw,
