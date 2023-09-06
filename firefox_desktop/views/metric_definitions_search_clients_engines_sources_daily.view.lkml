@@ -10,16 +10,16 @@ view: metric_definitions_search_clients_engines_sources_daily {
                 COALESCE(SUM(sap), 0) AS search_count,COALESCE(SUM(tagged_sap), 0) AS tagged_search_count,COALESCE(SUM(tagged_follow_on), 0) AS tagged_follow_on_search_count,COALESCE(SUM(ad_click), 0) AS ad_clicks,COALESCE(SUM(search_with_ads), 0) AS searches_with_ads,COALESCE(SUM(organic), 0) AS organic_search_count,COALESCE(SUM(search_with_ads_organic), 0) AS search_with_ads_organic,COALESCE(SUM(ad_click_organic), 0) AS ad_clicks_organic,SUM(search_with_ads) AS search_with_ads,SUM(ad_click) AS ad_click,SUM(sap) AS sap,SUM(ad_click_organic) AS ad_click_organic,
                 COALESCE(client_id, 'NULL') AS client_id,
                 submission_date AS submission_date
-              FROM 
+              FROM
                 (
     SELECT
         *
     FROM
         mozdata.search.search_clients_engines_sources_daily
     )
-              WHERE submission_date BETWEEN 
-                SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %} AS DATE) AND 
-                SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %} AS DATE)
+              WHERE submission_date BETWEEN
+                SAFE_CAST({% date_start metric_definitions_firefox_desktop.submission_date %} AS DATE) AND
+                SAFE_CAST({% date_end metric_definitions_firefox_desktop.submission_date %} AS DATE)
               GROUP BY
                 client_id,
                 submission_date ;;
@@ -77,6 +77,7 @@ view: metric_definitions_search_clients_engines_sources_daily {
                 {% endif %}
             ) ;;
     label: "Client ID"
+    primary_key: yes
     description: "Unique client identifier"
   }
 
@@ -255,11 +256,6 @@ view: metric_definitions_search_clients_engines_sources_daily {
       quarter,
       year,
     ]
-  }
-
-  filter: date {
-    type: date
-    description: "Date Range"
   }
 
   set: metrics {

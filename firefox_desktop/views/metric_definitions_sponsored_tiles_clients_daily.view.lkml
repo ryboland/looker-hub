@@ -10,16 +10,16 @@ view: metric_definitions_sponsored_tiles_clients_daily {
                 COALESCE(LOGICAL_OR(sponsored_tiles_disable_count > 0), FALSE) AS sponsored_tiles_disabled,
                 COALESCE(client_id, 'NULL') AS client_id,
                 submission_date AS submission_date
-              FROM 
+              FROM
                 (
     SELECT
         *
     FROM
         mozdata.telemetry.sponsored_tiles_clients_daily
     )
-              WHERE submission_date BETWEEN 
-                SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %} AS DATE) AND 
-                SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %} AS DATE)
+              WHERE submission_date BETWEEN
+                SAFE_CAST({% date_start metric_definitions_firefox_desktop.submission_date %} AS DATE) AND
+                SAFE_CAST({% date_end metric_definitions_firefox_desktop.submission_date %} AS DATE)
               GROUP BY
                 client_id,
                 submission_date ;;
@@ -77,6 +77,7 @@ view: metric_definitions_sponsored_tiles_clients_daily {
                 {% endif %}
             ) ;;
     label: "Client ID"
+    primary_key: yes
     description: "Unique client identifier"
   }
 
@@ -147,11 +148,6 @@ view: metric_definitions_sponsored_tiles_clients_daily {
       quarter,
       year,
     ]
-  }
-
-  filter: date {
-    type: date
-    description: "Date Range"
   }
 
   set: metrics {

@@ -16,16 +16,16 @@ view: metric_definitions_events {
          ), FALSE) AS connect_fxa,
                 COALESCE(client_id, 'NULL') AS client_id,
                 submission_date AS submission_date
-              FROM 
+              FROM
                 (
     SELECT
         *
     FROM
         mozdata.telemetry.events
     )
-              WHERE submission_date BETWEEN 
-                SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %} AS DATE) AND 
-                SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %} AS DATE)
+              WHERE submission_date BETWEEN
+                SAFE_CAST({% date_start metric_definitions_firefox_desktop.submission_date %} AS DATE) AND
+                SAFE_CAST({% date_end metric_definitions_firefox_desktop.submission_date %} AS DATE)
               GROUP BY
                 client_id,
                 submission_date ;;
@@ -83,6 +83,7 @@ view: metric_definitions_events {
                 {% endif %}
             ) ;;
     label: "Client ID"
+    primary_key: yes
     description: "Unique client identifier"
   }
 
@@ -172,11 +173,6 @@ view: metric_definitions_events {
       quarter,
       year,
     ]
-  }
-
-  filter: date {
-    type: date
-    description: "Date Range"
   }
 
   set: metrics {

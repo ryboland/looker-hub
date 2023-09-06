@@ -54,19 +54,19 @@ firefox_desktop:
     metric_definitions_firefox_desktop:
       type: metric_definitions_explore
       views:
-        base_view: metric_definitions_active_users_aggregates_v1
+        base_view: client_counts
         joined_views:
-        - metric_definitions_browser_launched_to_handle_events
         - metric_definitions_active_users_aggregates_v1
-        - metric_definitions_main
-        - metric_definitions_crash
-        - metric_definitions_events_memory
-        - metric_definitions_search_clients_engines_sources_daily
+        - metric_definitions_activity_stream_events
+        - metric_definitions_browser_launched_to_handle_events
         - metric_definitions_clients_daily
+        - metric_definitions_crash
         - metric_definitions_events
+        - metric_definitions_events_memory
+        - metric_definitions_main
         - metric_definitions_newtab_interactions
         - metric_definitions_normandy_events
-        - metric_definitions_activity_stream_events
+        - metric_definitions_search_clients_engines_sources_daily
         - metric_definitions_sponsored_tiles_clients_daily
     metrics:
       type: glean_ping_explore
@@ -379,90 +379,8 @@ firefox_desktop:
       - channel: null
         table: mozdata.firefox_desktop.top_sites
       type: table_view
-firefox_desktop_background_tasks:
-  explores:
-    background_tasks:
-      type: glean_ping_explore
-      views:
-        base_view: background_tasks
-    baseline:
-      type: glean_ping_explore
-      views:
-        base_view: baseline
-    deletion_request:
-      type: glean_ping_explore
-      views:
-        base_view: deletion_request
-    events:
-      type: events_explore
-      views:
-        base_view: events
-        extended_view: events_unnested_table
-    metrics:
-      type: glean_ping_explore
-      views:
-        base_view: metrics
-  glean_app: true
-  owners:
-  - necko@mozilla.com
-  - krosylight@mozilla.com
-  - vgosu@mozilla.com
-  pretty_name: Firefox Desktop background tasks
-  spoke: looker-spoke-default
-  views:
-    background_tasks:
-      tables:
-      - table: mozdata.firefox_desktop_background_tasks.background_tasks
-      type: glean_ping_view
-    background_tasks_table:
+    urlbar_events_table:
       tables:
       - channel: null
-        table: mozdata.firefox_desktop_background_tasks.background_tasks
-      type: table_view
-    baseline:
-      tables:
-      - table: mozdata.firefox_desktop_background_tasks.baseline
-      type: glean_ping_view
-    baseline_table:
-      tables:
-      - channel: null
-        table: mozdata.firefox_desktop_background_tasks.baseline
-      type: table_view
-    deletion_request:
-      tables:
-      - table: mozdata.firefox_desktop_background_tasks.deletion_request
-      type: glean_ping_view
-    deletion_request_table:
-      tables:
-      - channel: null
-        table: mozdata.firefox_desktop_background_tasks.deletion_request
-      type: table_view
-    events:
-      tables:
-      - base_table: mozdata.firefox_desktop_background_tasks.events_unnested
-        events_table_view: events_unnested_table
-      type: events_view
-    events_table:
-      tables:
-      - channel: null
-        table: mozdata.firefox_desktop_background_tasks.events
-      type: table_view
-    events_unnested_table:
-      tables:
-      - channel: null
-        table: mozdata.firefox_desktop_background_tasks.events_unnested
-      type: table_view
-    metrics:
-      tables:
-      - table: mozdata.firefox_desktop_background_tasks.metrics
-      type: glean_ping_view
-    metrics_clients_daily_table:
-      tables:
-      - channel: null
-        table: mozdata.firefox_desktop_background_tasks.metrics_clients_daily
-      type: table_view
-    metrics_table:
-      tables:
-      - channel: null
-        table: mozdata.firefox_desktop_background_tasks.metrics
+        table: mozdata.firefox_desktop.urlbar_events
       type: table_view

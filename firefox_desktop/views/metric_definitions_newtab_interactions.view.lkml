@@ -10,16 +10,16 @@ view: metric_definitions_newtab_interactions {
                 SUM(COALESCE(searches, 0)) AS newtab_searches,SUM(COALESCE(tagged_search_ad_impressions, 0)) AS newtab_searches_with_ads,SUM(COALESCE(tagged_search_ad_clicks, 0)) AS newtab_ad_clicks,SAFE_DIVIDE(SUM(COALESCE(tagged_search_ad_clicks, 0)),  SUM(COALESCE(tagged_search_ad_impressions, 0))) AS newtab_ad_click_rate,SUM(COALESCE(organic_pocket_clicks, 0)) AS organic_pocket_clicks,SUM(COALESCE(sponsored_pocket_clicks, 0)) AS sponsered_pocket_clicks,SUM(COALESCE(organic_pocket_impressions, 0)) AS organic_pocket_impressions,SUM(COALESCE(sponsored_pocket_impressions, 0)) AS sponsored_pocket_impressions,SUM(COALESCE(sponsored_topsite_impressions, 0)) AS sponsored_tile_impressions,SUM(COALESCE(sponsored_topsite_clicks, 0)) AS sponsored_tile_clicks,COALESCE(MAX(IF(newtab_newtab_category = 'enabled', 1, 0)), 0) AS newtab_newtab_enabled,COALESCE(MAX(IF(newtab_homepage_category = 'enabled', 1, 0)), 0) AS newtab_homepage_enabled,COALESCE(MAX(CAST(newtab_search_enabled AS INT)), 0) AS newtab_search_enabled,COALESCE(MAX(CAST(topsites_enabled AS INT)), 0) AS newtab_tiles_enabled,COALESCE(MAX(CAST(pocket_enabled AS INT)), 0) AS newtab_pocket_enabled,COALESCE(MAX(CAST(pocket_sponsored_stories_enabled AS INT)), 0) AS newtab_sponsored_pocket_stories_enabled,COALESCE(MAX(case when searches > 0 OR pocket_clicks > 0 OR topsite_clicks > 0 then 1 else 0 end), 0) AS newtab_engagement,
                 COALESCE(client_id, 'NULL') AS client_id,
                 submission_date AS submission_date
-              FROM 
+              FROM
                 (
     SELECT
         *
     FROM
         mozdata.telemetry.newtab_interactions
     )
-              WHERE submission_date BETWEEN 
-                SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %} AS DATE) AND 
-                SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %} AS DATE)
+              WHERE submission_date BETWEEN
+                SAFE_CAST({% date_start metric_definitions_firefox_desktop.submission_date %} AS DATE) AND
+                SAFE_CAST({% date_end metric_definitions_firefox_desktop.submission_date %} AS DATE)
               GROUP BY
                 client_id,
                 submission_date ;;
@@ -77,6 +77,7 @@ view: metric_definitions_newtab_interactions {
                 {% endif %}
             ) ;;
     label: "Client ID"
+    primary_key: yes
     description: "Unique client identifier"
   }
 
@@ -276,11 +277,6 @@ view: metric_definitions_newtab_interactions {
       quarter,
       year,
     ]
-  }
-
-  filter: date {
-    type: date
-    description: "Date Range"
   }
 
   set: metrics {

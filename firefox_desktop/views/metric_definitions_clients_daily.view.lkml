@@ -17,16 +17,16 @@ view: metric_definitions_clients_daily {
     ) / 28 AS desktop_dau_kpi,COALESCE(LOGICAL_OR(is_default_browser), FALSE) AS is_default_browser,COALESCE(LOGICAL_OR(scalar_parent_os_environment_is_taskbar_pinned), FALSE) AS is_pinned,LOGICAL_OR(bookmark_migrations_quantity_all IS NOT NULL AND bookmark_migrations_quantity_all != 0) AS imported_bookmarks,NULLIF(SUM(bookmark_migrations_quantity_all), 0) AS imported_bookmarks_count,LOGICAL_OR(logins_migrations_quantity_all IS NOT NULL AND logins_migrations_quantity_all != 0) AS imported_logins,NULLIF(SUM(logins_migrations_quantity_all), 0) AS imported_logins_count,LOGICAL_OR(history_migrations_quantity_all IS NOT NULL AND history_migrations_quantity_all != 0) AS imported_history,NULLIF(SUM(history_migrations_quantity_all), 0) AS imported_history_count,CAST(COALESCE(SUM(CASE WHEN fxa_configured IS TRUE THEN 1 ELSE 0 END),0) > 0 AS INT) AS fxa_signed_in,COALESCE(SUM(pings_aggregated_by_this_row), 0) > 0 AS retained,
                 COALESCE(client_id, 'NULL') AS client_id,
                 submission_date AS submission_date
-              FROM 
+              FROM
                 (
     SELECT
         *
     FROM
         mozdata.telemetry.clients_daily
     )
-              WHERE submission_date BETWEEN 
-                SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %} AS DATE) AND 
-                SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %} AS DATE)
+              WHERE submission_date BETWEEN
+                SAFE_CAST({% date_start metric_definitions_firefox_desktop.submission_date %} AS DATE) AND
+                SAFE_CAST({% date_end metric_definitions_firefox_desktop.submission_date %} AS DATE)
               GROUP BY
                 client_id,
                 submission_date ;;
@@ -84,6 +84,7 @@ view: metric_definitions_clients_daily {
                 {% endif %}
             ) ;;
     label: "Client ID"
+    primary_key: yes
     description: "Unique client identifier"
   }
 
@@ -298,11 +299,6 @@ view: metric_definitions_clients_daily {
       quarter,
       year,
     ]
-  }
-
-  filter: date {
-    type: date
-    description: "Date Range"
   }
 
   set: metrics {

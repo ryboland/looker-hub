@@ -10,7 +10,7 @@ view: metric_definitions_events_memory {
                 SUM(SAFE_CAST(SPLIT(event_string_value, ',')[OFFSET(1)] AS NUMERIC)) AS memory_pressure_count,
                 COALESCE(client_id, 'NULL') AS client_id,
                 DATE(submission_date) AS submission_date
-              FROM 
+              FROM
                 (
     SELECT
         *
@@ -26,9 +26,9 @@ view: metric_definitions_events_memory {
     )
 
     )
-              WHERE DATE(submission_date) BETWEEN 
-                SAFE_CAST({% date_start metric_definitions_firefox_desktop.date %} AS DATE) AND 
-                SAFE_CAST({% date_end metric_definitions_firefox_desktop.date %} AS DATE)
+              WHERE DATE(submission_date) BETWEEN
+                SAFE_CAST({% date_start metric_definitions_firefox_desktop.submission_date %} AS DATE) AND
+                SAFE_CAST({% date_end metric_definitions_firefox_desktop.submission_date %} AS DATE)
               GROUP BY
                 client_id,
                 submission_date ;;
@@ -86,6 +86,7 @@ view: metric_definitions_events_memory {
                 {% endif %}
             ) ;;
     label: "Client ID"
+    primary_key: yes
     description: "Unique client identifier"
   }
 
@@ -156,11 +157,6 @@ view: metric_definitions_events_memory {
       quarter,
       year,
     ]
-  }
-
-  filter: date {
-    type: date
-    description: "Date Range"
   }
 
   set: metrics {
