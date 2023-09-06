@@ -11,7 +11,7 @@ view: metric_definitions_normandy_events {
         AND event_method = 'unenroll'
         AND event_string_value = '{experiment_slug}'
      ), FALSE) AS unenroll,
-                COALESCE(client_id, 'NULL') AS client_id,
+                client_id AS client_id,
                 submission_date AS submission_date
               FROM
                 (

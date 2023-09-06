@@ -14,7 +14,7 @@ view: metric_definitions_events {
          ), FALSE) AS view_about_protections,COALESCE(LOGICAL_OR(            event_method = 'connect'
             AND event_object = 'account'
          ), FALSE) AS connect_fxa,
-                COALESCE(client_id, 'NULL') AS client_id,
+                client_id AS client_id,
                 submission_date AS submission_date
               FROM
                 (

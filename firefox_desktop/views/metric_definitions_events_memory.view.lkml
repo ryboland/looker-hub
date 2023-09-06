@@ -8,7 +8,7 @@ view: metric_definitions_events_memory {
   derived_table: {
     sql: SELECT
                 SUM(SAFE_CAST(SPLIT(event_string_value, ',')[OFFSET(1)] AS NUMERIC)) AS memory_pressure_count,
-                COALESCE(client_id, 'NULL') AS client_id,
+                client_id AS client_id,
                 DATE(submission_date) AS submission_date
               FROM
                 (

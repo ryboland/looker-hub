@@ -8,7 +8,7 @@ view: metric_definitions_active_users_aggregates_v1 {
   derived_table: {
     sql: SELECT
                 SUM(dau) AS daily_active_users_v2,SUM(IF(FORMAT_DATE('%m-%d', submission_date) BETWEEN '11-18' AND '12-15', dau, 0)) / 28 AS desktop_dau_kpi_v2,
-                COALESCE(NULL, 'NULL') AS client_id,
+                NULL AS client_id,
                 submission_date AS submission_date
               FROM
                 (

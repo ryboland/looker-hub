@@ -12,7 +12,7 @@ view: metric_definitions_main {
 ) AS non_ssl_loads_v1,SUM(
     mozfun.map.get_key(mozfun.hist.extract(payload.histograms.http_pageload_is_ssl).values, 1)
 ) AS ssl_loads_v1,COUNT(payload.histograms.http_pageload_is_ssl) / COUNT(*) AS http_pageload_is_ssl_ratio_v1,
-                COALESCE(client_id, 'NULL') AS client_id,
+                client_id AS client_id,
                 submission_date AS submission_date
               FROM
                 (

@@ -37,7 +37,7 @@ view: metric_definitions_activity_stream_events {
         AND SOURCE = 'TOP_SITES'
         AND action_position <= 1
       ) AS sponsored_tiles_dismissals_pos1_2,
-                COALESCE(client_id, 'NULL') AS client_id,
+                client_id AS client_id,
                 submission_date AS submission_date
               FROM
                 (

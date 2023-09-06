@@ -8,7 +8,7 @@ view: metric_definitions_sponsored_tiles_clients_daily {
   derived_table: {
     sql: SELECT
                 COALESCE(LOGICAL_OR(sponsored_tiles_disable_count > 0), FALSE) AS sponsored_tiles_disabled,
-                COALESCE(client_id, 'NULL') AS client_id,
+                client_id AS client_id,
                 submission_date AS submission_date
               FROM
                 (
