@@ -100,53 +100,53 @@ view: metric_definitions_browser_launched_to_handle_events {
   dimension_group: submission {
     type: time
     sql: COALESCE(CAST(${TABLE}.submission_date AS TIMESTAMP)
-                {% if  metric_definitions_browser_launched_to_handle_events._in_query %}
+                {%- if  metric_definitions_browser_launched_to_handle_events._in_query %}
                 , CAST(metric_definitions_browser_launched_to_handle_events.submission_date AS TIMESTAMP)
-                {% endif %}
+                {%- endif -%}
             
-                {% if  metric_definitions_active_users_aggregates_v1._in_query %}
+                {%- if  metric_definitions_active_users_aggregates_v1._in_query %}
                 , CAST(metric_definitions_active_users_aggregates_v1.submission_date AS TIMESTAMP)
-                {% endif %}
+                {%- endif -%}
             
-                {% if  metric_definitions_main._in_query %}
+                {%- if  metric_definitions_main._in_query %}
                 , CAST(metric_definitions_main.submission_date AS TIMESTAMP)
-                {% endif %}
+                {%- endif -%}
             
-                {% if  metric_definitions_crash._in_query %}
+                {%- if  metric_definitions_crash._in_query %}
                 , CAST(metric_definitions_crash.submission_date AS TIMESTAMP)
-                {% endif %}
+                {%- endif -%}
             
-                {% if  metric_definitions_events_memory._in_query %}
+                {%- if  metric_definitions_events_memory._in_query %}
                 , CAST(metric_definitions_events_memory.submission_date AS TIMESTAMP)
-                {% endif %}
+                {%- endif -%}
             
-                {% if  metric_definitions_search_clients_engines_sources_daily._in_query %}
+                {%- if  metric_definitions_search_clients_engines_sources_daily._in_query %}
                 , CAST(metric_definitions_search_clients_engines_sources_daily.submission_date AS TIMESTAMP)
-                {% endif %}
+                {%- endif -%}
             
-                {% if  metric_definitions_clients_daily._in_query %}
+                {%- if  metric_definitions_clients_daily._in_query %}
                 , CAST(metric_definitions_clients_daily.submission_date AS TIMESTAMP)
-                {% endif %}
+                {%- endif -%}
             
-                {% if  metric_definitions_events._in_query %}
+                {%- if  metric_definitions_events._in_query %}
                 , CAST(metric_definitions_events.submission_date AS TIMESTAMP)
-                {% endif %}
+                {%- endif -%}
             
-                {% if  metric_definitions_newtab_interactions._in_query %}
+                {%- if  metric_definitions_newtab_interactions._in_query %}
                 , CAST(metric_definitions_newtab_interactions.submission_date AS TIMESTAMP)
-                {% endif %}
+                {%- endif -%}
             
-                {% if  metric_definitions_normandy_events._in_query %}
+                {%- if  metric_definitions_normandy_events._in_query %}
                 , CAST(metric_definitions_normandy_events.submission_date AS TIMESTAMP)
-                {% endif %}
+                {%- endif -%}
             
-                {% if  metric_definitions_activity_stream_events._in_query %}
+                {%- if  metric_definitions_activity_stream_events._in_query %}
                 , CAST(metric_definitions_activity_stream_events.submission_date AS TIMESTAMP)
-                {% endif %}
+                {%- endif -%}
             
-                {% if  metric_definitions_sponsored_tiles_clients_daily._in_query %}
+                {%- if  metric_definitions_sponsored_tiles_clients_daily._in_query %}
                 , CAST(metric_definitions_sponsored_tiles_clients_daily.submission_date AS TIMESTAMP)
-                {% endif %}
+                {%- endif -%}
             ) ;;
     label: "Submission"
     timeframes: [

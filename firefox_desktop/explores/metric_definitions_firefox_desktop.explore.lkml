@@ -20,12 +20,12 @@ include: "/looker-hub/firefox_desktop/views/metric_definitions_sponsored_tiles_c
 
 explore: metric_definitions_firefox_desktop {
   from: client_counts
-  view_label: "Metric Definitions Firefox Desktop"
+  view_label: "Base Fields"
 
   join: metric_definitions_active_users_aggregates_v1 {
     view_label: "Metric Definitions Active Users Aggregates V1"
     relationship: many_to_many
-    type: outer_join
+    type: full_outer
     fields: [
       submission_date,
       submission_week,
@@ -42,7 +42,7 @@ explore: metric_definitions_firefox_desktop {
   join: metric_definitions_activity_stream_events {
     view_label: "Metric Definitions Activity Stream Events"
     relationship: many_to_many
-    type: outer_join
+    type: full_outer
     fields: [
       submission_date,
       submission_week,
@@ -60,7 +60,7 @@ explore: metric_definitions_firefox_desktop {
   join: metric_definitions_browser_launched_to_handle_events {
     view_label: "Metric Definitions Browser Launched To Handle Events"
     relationship: many_to_many
-    type: outer_join
+    type: full_outer
     fields: [
       submission_date,
       submission_week,
@@ -78,7 +78,7 @@ explore: metric_definitions_firefox_desktop {
   join: metric_definitions_clients_daily {
     view_label: "Metric Definitions Clients Daily"
     relationship: many_to_many
-    type: outer_join
+    type: full_outer
     fields: [
       submission_date,
       submission_week,
@@ -96,7 +96,7 @@ explore: metric_definitions_firefox_desktop {
   join: metric_definitions_crash {
     view_label: "Metric Definitions Crash"
     relationship: many_to_many
-    type: outer_join
+    type: full_outer
     fields: [
       submission_date,
       submission_week,
@@ -114,7 +114,7 @@ explore: metric_definitions_firefox_desktop {
   join: metric_definitions_events {
     view_label: "Metric Definitions Events"
     relationship: many_to_many
-    type: outer_join
+    type: full_outer
     fields: [
       submission_date,
       submission_week,
@@ -132,7 +132,7 @@ explore: metric_definitions_firefox_desktop {
   join: metric_definitions_events_memory {
     view_label: "Metric Definitions Events Memory"
     relationship: many_to_many
-    type: outer_join
+    type: full_outer
     fields: [
       submission_date,
       submission_week,
@@ -150,7 +150,7 @@ explore: metric_definitions_firefox_desktop {
   join: metric_definitions_main {
     view_label: "Metric Definitions Main"
     relationship: many_to_many
-    type: outer_join
+    type: full_outer
     fields: [
       submission_date,
       submission_week,
@@ -168,7 +168,7 @@ explore: metric_definitions_firefox_desktop {
   join: metric_definitions_newtab_interactions {
     view_label: "Metric Definitions Newtab Interactions"
     relationship: many_to_many
-    type: outer_join
+    type: full_outer
     fields: [
       submission_date,
       submission_week,
@@ -186,7 +186,7 @@ explore: metric_definitions_firefox_desktop {
   join: metric_definitions_normandy_events {
     view_label: "Metric Definitions Normandy Events"
     relationship: many_to_many
-    type: outer_join
+    type: full_outer
     fields: [
       submission_date,
       submission_week,
@@ -204,7 +204,7 @@ explore: metric_definitions_firefox_desktop {
   join: metric_definitions_search_clients_engines_sources_daily {
     view_label: "Metric Definitions Search Clients Engines Sources Daily"
     relationship: many_to_many
-    type: outer_join
+    type: full_outer
     fields: [
       submission_date,
       submission_week,
@@ -222,7 +222,7 @@ explore: metric_definitions_firefox_desktop {
   join: metric_definitions_sponsored_tiles_clients_daily {
     view_label: "Metric Definitions Sponsored Tiles Clients Daily"
     relationship: many_to_many
-    type: outer_join
+    type: full_outer
     fields: [
       submission_date,
       submission_week,
