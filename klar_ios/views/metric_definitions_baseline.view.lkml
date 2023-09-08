@@ -33,17 +33,17 @@ view: metric_definitions_baseline {
   dimension: client_id {
     type: string
     sql: COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING)
-                {% if  metric_definitions_baseline._in_query %}
+                {%- if  metric_definitions_baseline._in_query %}
                 , SAFE_CAST(metric_definitions_baseline.client_id AS STRING)
-                {% endif %}
+                {%- endif -%}
             
-                {% if  metric_definitions_metrics._in_query %}
+                {%- if  metric_definitions_metrics._in_query %}
                 , SAFE_CAST(metric_definitions_metrics.client_id AS STRING)
-                {% endif %}
+                {%- endif -%}
             
-                {% if  metric_definitions_mobile_search_clients_engines_sources_daily._in_query %}
+                {%- if  metric_definitions_mobile_search_clients_engines_sources_daily._in_query %}
                 , SAFE_CAST(metric_definitions_mobile_search_clients_engines_sources_daily.client_id AS STRING)
-                {% endif %}
+                {%- endif -%}
             ) ;;
     label: "Client ID"
     primary_key: yes

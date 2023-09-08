@@ -19,15 +19,7 @@ explore: metric_definitions_focus_android {
     view_label: "Metric Definitions Active Users Aggregates V1"
     relationship: many_to_many
     type: full_outer
-    fields: [
-      submission_date,
-      submission_week,
-      submission_month,
-      submission_quarter,
-      submission_year,
-      submission_raw,
-      metrics*,
-    ]
+    fields: [metrics*]
     sql_on: SAFE_CAST(metric_definitions_focus_android.submission_date AS TIMESTAMP) =
                   SAFE_CAST(metric_definitions_active_users_aggregates_v1.submission_date AS TIMESTAMP) ;;
   }
@@ -36,15 +28,7 @@ explore: metric_definitions_focus_android {
     view_label: "Metric Definitions Baseline"
     relationship: many_to_many
     type: full_outer
-    fields: [
-      submission_date,
-      submission_week,
-      submission_month,
-      submission_quarter,
-      submission_year,
-      submission_raw,
-      metrics*,
-    ]
+    fields: [metrics*]
     sql_on: SAFE_CAST(metric_definitions_focus_android.submission_date AS TIMESTAMP) =
                   SAFE_CAST(metric_definitions_baseline.submission_date AS TIMESTAMP) AND SAFE_CAST(metric_definitions_focus_android.client_id AS STRING) =
                   SAFE_CAST(metric_definitions_baseline.client_id AS STRING) ;;
@@ -54,15 +38,7 @@ explore: metric_definitions_focus_android {
     view_label: "Metric Definitions Baseline V2"
     relationship: many_to_many
     type: full_outer
-    fields: [
-      submission_date,
-      submission_week,
-      submission_month,
-      submission_quarter,
-      submission_year,
-      submission_raw,
-      metrics*,
-    ]
+    fields: [metrics*]
     sql_on: SAFE_CAST(metric_definitions_focus_android.submission_date AS TIMESTAMP) =
                   SAFE_CAST(metric_definitions_baseline_v2.submission_date AS TIMESTAMP) AND SAFE_CAST(metric_definitions_focus_android.client_id AS STRING) =
                   SAFE_CAST(metric_definitions_baseline_v2.client_id AS STRING) ;;
@@ -72,15 +48,7 @@ explore: metric_definitions_focus_android {
     view_label: "Metric Definitions Metrics"
     relationship: many_to_many
     type: full_outer
-    fields: [
-      submission_date,
-      submission_week,
-      submission_month,
-      submission_quarter,
-      submission_year,
-      submission_raw,
-      metrics*,
-    ]
+    fields: [metrics*]
     sql_on: SAFE_CAST(metric_definitions_focus_android.submission_date AS TIMESTAMP) =
                   SAFE_CAST(metric_definitions_metrics.submission_date AS TIMESTAMP) AND SAFE_CAST(metric_definitions_focus_android.client_id AS STRING) =
                   SAFE_CAST(metric_definitions_metrics.client_id AS STRING) ;;
@@ -90,15 +58,7 @@ explore: metric_definitions_focus_android {
     view_label: "Metric Definitions Mobile Search Clients Engines Sources Daily"
     relationship: many_to_many
     type: full_outer
-    fields: [
-      submission_date,
-      submission_week,
-      submission_month,
-      submission_quarter,
-      submission_year,
-      submission_raw,
-      metrics*,
-    ]
+    fields: [metrics*]
     sql_on: SAFE_CAST(metric_definitions_focus_android.submission_date AS TIMESTAMP) =
                   SAFE_CAST(metric_definitions_mobile_search_clients_engines_sources_daily.submission_date AS TIMESTAMP) AND SAFE_CAST(metric_definitions_focus_android.client_id AS STRING) =
                   SAFE_CAST(metric_definitions_mobile_search_clients_engines_sources_daily.client_id AS STRING) ;;

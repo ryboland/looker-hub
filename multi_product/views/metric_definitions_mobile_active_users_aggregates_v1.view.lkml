@@ -32,9 +32,9 @@ view: metric_definitions_mobile_active_users_aggregates_v1 {
   dimension: client_id {
     type: string
     sql: COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING)
-                {% if  metric_definitions_mobile_active_users_aggregates_v1._in_query %}
+                {%- if  metric_definitions_mobile_active_users_aggregates_v1._in_query %}
                 , SAFE_CAST(metric_definitions_mobile_active_users_aggregates_v1.client_id AS STRING)
-                {% endif %}
+                {%- endif -%}
             ) ;;
     label: "Client ID"
     primary_key: yes

@@ -15,15 +15,7 @@ explore: metric_definitions_multi_product {
     view_label: "Metric Definitions Mobile Active Users Aggregates V1"
     relationship: many_to_many
     type: full_outer
-    fields: [
-      submission_date,
-      submission_week,
-      submission_month,
-      submission_quarter,
-      submission_year,
-      submission_raw,
-      metrics*,
-    ]
+    fields: [metrics*]
     sql_on: SAFE_CAST(metric_definitions_multi_product.submission_date AS TIMESTAMP) =
                   SAFE_CAST(metric_definitions_mobile_active_users_aggregates_v1.submission_date AS TIMESTAMP) ;;
   }
