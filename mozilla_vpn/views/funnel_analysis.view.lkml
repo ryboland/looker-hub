@@ -125,12 +125,29 @@ view: event_types {
     sql: SELECT
   mozfun.event_analysis.aggregate_match_strings(
     ARRAY_AGG(
-      DISTINCT CONCAT(
-        {% if _filters['property_name'] or _filters['property_value'] -%}
-        COALESCE(mozfun.event_analysis.escape_metachars(property_value.value), ''),
-        {% endif -%}
+      DISTINCT
+      {% if _filters['property_value'] -%}
+        CONCAT(
+          mozfun.event_analysis.escape_metachars(property_value.value),
+          -- Event property values are stored in `events_daily.events` strings in reverse order,
+          -- so we expect the Nth property value to be followed by N-1 other property values.
+          IF(properties.index > 1, CONCAT('[^,]{', (properties.index - 1), '}'), ''),
+          mozfun.event_analysis.event_index_to_match_string(et.index)
+        )
+      {% elsif _filters['property_name'] -%}
+        CONCAT(
+          -- Double-quote characters are used in `events_daily.events` strings to indicate missing properties.
+          '[^",]',
+          -- Event property values are stored in `events_daily.events` strings in reverse order,
+          -- so we expect the Nth property value to be followed by N-1 other property values.
+          IF(properties.index > 1, CONCAT('[^,]{', (properties.index - 1), '}'), ''),
+          mozfun.event_analysis.event_index_to_match_string(et.index)
+        )
+      {% else -%}
         mozfun.event_analysis.event_index_to_match_string(et.index)
       )
+      {% endif -%}
+      IGNORE NULLS
     )
   ) AS match_string
 FROM
