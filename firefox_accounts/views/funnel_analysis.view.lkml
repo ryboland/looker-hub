@@ -145,7 +145,6 @@ view: event_types {
         )
       {% else -%}
         mozfun.event_analysis.event_index_to_match_string(et.index)
-      )
       {% endif -%}
       IGNORE NULLS
     )
