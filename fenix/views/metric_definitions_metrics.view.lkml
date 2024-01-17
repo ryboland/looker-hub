@@ -7,7 +7,7 @@
 view: metric_definitions_metrics {
   derived_table: {
     sql: SELECT
-                COUNT(document_id) AS metric_ping_count,ARRAY_AGG(metrics.timing_distribution.performance_pageload_load_time IGNORE NULLS) AS performance_pageload_load_time,ARRAY_AGG(metrics.timing_distribution.performance_pageload_load_time_responsestart IGNORE NULLS) AS performance_pageload_load_time_responsestart,ARRAY_AGG(metrics.timing_distribution.performance_page_non_blank_paint IGNORE NULLS) AS performance_page_non_blank_paint,ARRAY_AGG(metrics.timing_distribution.performance_pageload_req_anim_frame_callback IGNORE NULLS) AS performance_pageload_req_anim_frame_callback,ARRAY_AGG(metrics.timing_distribution.performance_pageload_dcl IGNORE NULLS) AS performance_pageload_dcl,ARRAY_AGG(metrics.timing_distribution.performance_pageload_dcl_responsestart IGNORE NULLS) AS performance_pageload_dcl_responsestart,ARRAY_AGG(metrics.timing_distribution.performance_pageload_fcp IGNORE NULLS) AS performance_pageload_fcp,ARRAY_AGG(metrics.timing_distribution.performance_pageload_fcp_responsestart IGNORE NULLS) AS performance_pageload_fcp_responsestart,ARRAY_AGG(metrics.timing_distribution.perf_startup_cold_main_app_to_first_frame IGNORE NULLS) AS perf_startup_cold_main_app_to_first_frame,ARRAY_AGG(metrics.timing_distribution.perf_startup_cold_view_app_to_first_frame IGNORE NULLS) AS perf_startup_cold_view_app_to_first_frame,ARRAY_AGG(metrics.memory_distribution.storage_stats_app_bytes IGNORE NULLS) AS storage_stats_app_bytes,ARRAY_AGG(metrics.memory_distribution.storage_stats_cache_bytes IGNORE NULLS) AS storage_stats_cache_bytes,ARRAY_AGG(metrics.memory_distribution.storage_stats_data_dir_bytes IGNORE NULLS) AS storage_stats_data_dir_bytes,  COALESCE(MAX(
+                IF(SUM(CASE WHEN metrics.boolean.metrics_default_browser THEN 1 ELSE 0 END) > 0, 1, 0) AS is_default_browser_v1,COUNT(document_id) AS metric_ping_count,ARRAY_AGG(metrics.timing_distribution.performance_pageload_load_time IGNORE NULLS) AS performance_pageload_load_time,ARRAY_AGG(metrics.timing_distribution.performance_pageload_load_time_responsestart IGNORE NULLS) AS performance_pageload_load_time_responsestart,ARRAY_AGG(metrics.timing_distribution.performance_page_non_blank_paint IGNORE NULLS) AS performance_page_non_blank_paint,ARRAY_AGG(metrics.timing_distribution.performance_pageload_req_anim_frame_callback IGNORE NULLS) AS performance_pageload_req_anim_frame_callback,ARRAY_AGG(metrics.timing_distribution.performance_pageload_dcl IGNORE NULLS) AS performance_pageload_dcl,ARRAY_AGG(metrics.timing_distribution.performance_pageload_dcl_responsestart IGNORE NULLS) AS performance_pageload_dcl_responsestart,ARRAY_AGG(metrics.timing_distribution.performance_pageload_fcp IGNORE NULLS) AS performance_pageload_fcp,ARRAY_AGG(metrics.timing_distribution.performance_pageload_fcp_responsestart IGNORE NULLS) AS performance_pageload_fcp_responsestart,ARRAY_AGG(metrics.timing_distribution.perf_startup_cold_main_app_to_first_frame IGNORE NULLS) AS perf_startup_cold_main_app_to_first_frame,ARRAY_AGG(metrics.timing_distribution.perf_startup_cold_view_app_to_first_frame IGNORE NULLS) AS perf_startup_cold_view_app_to_first_frame,ARRAY_AGG(metrics.memory_distribution.storage_stats_app_bytes IGNORE NULLS) AS storage_stats_app_bytes,ARRAY_AGG(metrics.memory_distribution.storage_stats_cache_bytes IGNORE NULLS) AS storage_stats_cache_bytes,ARRAY_AGG(metrics.memory_distribution.storage_stats_data_dir_bytes IGNORE NULLS) AS storage_stats_data_dir_bytes,  COALESCE(MAX(
     CAST(
        metrics.boolean.customize_home_contile AS int )
   ),0) AS spoc_tiles_disable_rate,MAX(IF(metrics.boolean.preferences_signed_in_sync, 1, 0)) AS fxa_sign_in,
@@ -26,8 +26,8 @@ view: metric_definitions_metrics {
 )
     )
               WHERE submission_date BETWEEN
-                SAFE_CAST({% date_start metric_definitions_fenix.submission_date %} AS DATE) AND
-                SAFE_CAST({% date_end metric_definitions_fenix.submission_date %} AS DATE)
+                SAFE_CAST({% date_start metric_definitions_metrics.submission_date %} AS DATE) AND
+                SAFE_CAST({% date_end metric_definitions_metrics.submission_date %} AS DATE)
               GROUP BY
                 client_id,
                 submission_date ;;
@@ -35,42 +35,18 @@ view: metric_definitions_metrics {
 
   dimension: client_id {
     type: string
-    sql: COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING)
-                {%- if  metric_definitions_active_users_aggregates_v1._in_query %}
-                , SAFE_CAST(metric_definitions_active_users_aggregates_v1.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_baseline._in_query %}
-                , SAFE_CAST(metric_definitions_baseline.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_baseline_v2._in_query %}
-                , SAFE_CAST(metric_definitions_baseline_v2.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_events._in_query %}
-                , SAFE_CAST(metric_definitions_events.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_metrics._in_query %}
-                , SAFE_CAST(metric_definitions_metrics.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_mobile_search_clients_engines_sources_daily._in_query %}
-                , SAFE_CAST(metric_definitions_mobile_search_clients_engines_sources_daily.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_new_profile_activation._in_query %}
-                , SAFE_CAST(metric_definitions_new_profile_activation.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_special_onboarding_events._in_query %}
-                , SAFE_CAST(metric_definitions_special_onboarding_events.client_id AS STRING)
-                {%- endif -%}
-            ) ;;
+    sql: SAFE_CAST(${TABLE}.client_id AS STRING) ;;
     label: "Client ID"
     primary_key: yes
     description: "Unique client identifier"
+  }
+
+  dimension: is_default_browser_v1 {
+    label: "Is Default Browser"
+    description: "Was Firefox the default browser at any point during the interval?
+    "
+    type: number
+    sql: ${TABLE}.is_default_browser_v1 ;;
   }
 
   dimension: metric_ping_count {
@@ -139,8 +115,8 @@ view: metric_definitions_metrics {
   dimension: perf_startup_cold_main_app_to_first_frame {
     label: "Startup Cold Main App to First Frame"
     description: "The duration from `*Application`'s initializer to the first Android frame
-being drawn in a [COLD MAIN start
-up](https://wiki.mozilla.org/index.php?title=Performance/Fenix/Glossary)."
+    being drawn in a [COLD MAIN start
+    up](https://wiki.mozilla.org/index.php?title=Performance/Fenix/Glossary)."
     type: number
     sql: ${TABLE}.perf_startup_cold_main_app_to_first_frame ;;
   }
@@ -148,8 +124,8 @@ up](https://wiki.mozilla.org/index.php?title=Performance/Fenix/Glossary)."
   dimension: perf_startup_cold_view_app_to_first_frame {
     label: "Startup Cold View App to First Frame"
     description: "The duration from `*Application`'s initializer to the first Android frame
-being drawn in a [COLD VIEW start
-up](https://wiki.mozilla.org/index.php?title=Performance/Fenix/Glossary)."
+    being drawn in a [COLD VIEW start
+    up](https://wiki.mozilla.org/index.php?title=Performance/Fenix/Glossary)."
     type: number
     sql: ${TABLE}.perf_startup_cold_view_app_to_first_frame ;;
   }
@@ -157,7 +133,7 @@ up](https://wiki.mozilla.org/index.php?title=Performance/Fenix/Glossary)."
   dimension: storage_stats_app_bytes {
     label: "App Byte Size"
     description: "The size of the app's APK and related files as installed: this is expected
-to be larger than download size."
+    to be larger than download size."
     type: number
     sql: ${TABLE}.storage_stats_app_bytes ;;
   }
@@ -192,39 +168,7 @@ to be larger than download size."
 
   dimension_group: submission {
     type: time
-    sql: COALESCE(CAST(${TABLE}.submission_date AS TIMESTAMP)
-                {%- if  metric_definitions_active_users_aggregates_v1._in_query %}
-                , CAST(metric_definitions_active_users_aggregates_v1.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_baseline._in_query %}
-                , CAST(metric_definitions_baseline.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_baseline_v2._in_query %}
-                , CAST(metric_definitions_baseline_v2.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_events._in_query %}
-                , CAST(metric_definitions_events.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_metrics._in_query %}
-                , CAST(metric_definitions_metrics.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_mobile_search_clients_engines_sources_daily._in_query %}
-                , CAST(metric_definitions_mobile_search_clients_engines_sources_daily.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_new_profile_activation._in_query %}
-                , CAST(metric_definitions_new_profile_activation.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_special_onboarding_events._in_query %}
-                , CAST(metric_definitions_special_onboarding_events.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            ) ;;
+    sql: CAST(${TABLE}.submission_date AS TIMESTAMP) ;;
     label: "Submission"
     timeframes: [
       raw,
@@ -236,8 +180,23 @@ to be larger than download size."
     ]
   }
 
+  measure: is_default_browser_v1_client_count {
+    type: count_distinct
+    label: "Is Default Browser Client Count"
+    sql: IF(SAFE_CAST(${TABLE}.is_default_browser_v1 AS BOOL), ${TABLE}.client_id, SAFE_CAST(NULL AS STRING)) ;;
+    description: "Number of clients with Is Default Browser"
+  }
+
+  measure: is_default_browser_v1_sum {
+    type: sum
+    sql: ${TABLE}.is_default_browser_v1 ;;
+    label: "Is Default Browser Sum"
+    description: "Sum of Is Default Browser"
+  }
+
   set: metrics {
     fields: [
+      is_default_browser_v1,
       metric_ping_count,
       performance_pageload_load_time,
       performance_pageload_load_time_responsestart,
@@ -254,6 +213,8 @@ to be larger than download size."
       storage_stats_data_dir_bytes,
       spoc_tiles_disable_rate,
       fxa_sign_in,
+      is_default_browser_v1_client_count,
+      is_default_browser_v1_sum,
     ]
   }
 }

@@ -5,6 +5,7 @@
 # You can extend this view in the looker-spoke-default project (https://github.com/mozilla/looker-spoke-default)
 
 include: "/looker-hub/fenix/views/metrics.view.lkml"
+include: "/looker-hub/fenix/views/metric_definitions_metrics.view.lkml"
 
 explore: metrics {
   sql_always_where: ${metrics.submission_date} >= '2010-01-01' ;;
@@ -32,11 +33,6 @@ explore: metrics {
   join: metrics__metrics__labeled_counter__avif_alpha {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__avif_alpha}) AS metrics__metrics__labeled_counter__avif_alpha ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__avif_alpha.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__avif_aom_decode_error {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__avif_aom_decode_error}) AS metrics__metrics__labeled_counter__avif_aom_decode_error ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__avif_aom_decode_error.document_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__avif_bit_depth {
@@ -139,39 +135,9 @@ explore: metrics {
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__browser_search_with_ads}) AS metrics__metrics__labeled_counter__browser_search_with_ads ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__browser_search_with_ads.document_id} ;;
   }
 
-  join: metrics__metrics__labeled_counter__codec_stats_audio_preferred_codec {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__codec_stats_audio_preferred_codec}) AS metrics__metrics__labeled_counter__codec_stats_audio_preferred_codec ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__codec_stats_audio_preferred_codec.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__codec_stats_other_fec_signaled {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__codec_stats_other_fec_signaled}) AS metrics__metrics__labeled_counter__codec_stats_other_fec_signaled ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__codec_stats_other_fec_signaled.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__codec_stats_ulpfec_negotiated {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__codec_stats_ulpfec_negotiated}) AS metrics__metrics__labeled_counter__codec_stats_ulpfec_negotiated ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__codec_stats_ulpfec_negotiated.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__codec_stats_video_preferred_codec {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__codec_stats_video_preferred_codec}) AS metrics__metrics__labeled_counter__codec_stats_video_preferred_codec ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__codec_stats_video_preferred_codec.document_id} ;;
-  }
-
   join: metrics__metrics__labeled_counter__cookie_banners_click_result {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__cookie_banners_click_result}) AS metrics__metrics__labeled_counter__cookie_banners_click_result ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__cookie_banners_click_result.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__cookie_banners_cmp_detected_cmp {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__cookie_banners_cmp_detected_cmp}) AS metrics__metrics__labeled_counter__cookie_banners_cmp_detected_cmp ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__cookie_banners_cmp_detected_cmp.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__cookie_banners_cmp_result {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__cookie_banners_cmp_result}) AS metrics__metrics__labeled_counter__cookie_banners_cmp_result ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__cookie_banners_cmp_result.document_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__cookie_banners_rule_lookup_by_domain {
@@ -189,11 +155,6 @@ explore: metrics {
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__crash_metrics_crash_count}) AS metrics__metrics__labeled_counter__crash_metrics_crash_count ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__crash_metrics_crash_count.document_id} ;;
   }
 
-  join: metrics__metrics__labeled_counter__data_storage_entries {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__data_storage_entries}) AS metrics__metrics__labeled_counter__data_storage_entries ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__data_storage_entries.document_id} ;;
-  }
-
   join: metrics__metrics__labeled_counter__dotprint_failure {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__dotprint_failure}) AS metrics__metrics__labeled_counter__dotprint_failure ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__dotprint_failure.document_id} ;;
@@ -209,44 +170,9 @@ explore: metrics {
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__extensions_apis_dnr_startup_cache_entries}) AS metrics__metrics__labeled_counter__extensions_apis_dnr_startup_cache_entries ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__extensions_apis_dnr_startup_cache_entries.document_id} ;;
   }
 
-  join: metrics__metrics__labeled_counter__extensions_counters_browser_action_preload_result {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__extensions_counters_browser_action_preload_result}) AS metrics__metrics__labeled_counter__extensions_counters_browser_action_preload_result ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__extensions_counters_browser_action_preload_result.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__extensions_counters_event_page_idle_result {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__extensions_counters_event_page_idle_result}) AS metrics__metrics__labeled_counter__extensions_counters_event_page_idle_result ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__extensions_counters_event_page_idle_result.document_id} ;;
-  }
-
   join: metrics__metrics__labeled_counter__extensions_process_event {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__extensions_process_event}) AS metrics__metrics__labeled_counter__extensions_process_event ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__extensions_process_event.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__extensions_startup_cache_read_errors {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__extensions_startup_cache_read_errors}) AS metrics__metrics__labeled_counter__extensions_startup_cache_read_errors ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__extensions_startup_cache_read_errors.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__fog_validation_gvsv_audio_stream_init {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__fog_validation_gvsv_audio_stream_init}) AS metrics__metrics__labeled_counter__fog_validation_gvsv_audio_stream_init ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__fog_validation_gvsv_audio_stream_init.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__fog_validation_gvsv_audio_stream_init_gecko {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__fog_validation_gvsv_audio_stream_init_gecko}) AS metrics__metrics__labeled_counter__fog_validation_gvsv_audio_stream_init_gecko ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__fog_validation_gvsv_audio_stream_init_gecko.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__fog_validation_gvsv_audio_stream_init_gvst {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__fog_validation_gvsv_audio_stream_init_gvst}) AS metrics__metrics__labeled_counter__fog_validation_gvsv_audio_stream_init_gvst ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__fog_validation_gvsv_audio_stream_init_gvst.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__fxa_client_error_count {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__fxa_client_error_count}) AS metrics__metrics__labeled_counter__fxa_client_error_count ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__fxa_client_error_count.document_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__gfx_content_frame_time_reason {
@@ -287,11 +213,6 @@ explore: metrics {
   join: metrics__metrics__labeled_counter__gmp_update_xml_fetch_result {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__gmp_update_xml_fetch_result}) AS metrics__metrics__labeled_counter__gmp_update_xml_fetch_result ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__gmp_update_xml_fetch_result.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__gpu_process_crash_fallbacks {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__gpu_process_crash_fallbacks}) AS metrics__metrics__labeled_counter__gpu_process_crash_fallbacks ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__gpu_process_crash_fallbacks.document_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__ipc_received_messages_content_background {
@@ -424,11 +345,6 @@ explore: metrics {
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__networking_cookie_timestamp_fixed_count}) AS metrics__metrics__labeled_counter__networking_cookie_timestamp_fixed_count ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__networking_cookie_timestamp_fixed_count.document_id} ;;
   }
 
-  join: metrics__metrics__labeled_counter__networking_residual_cache_folder_removal {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__networking_residual_cache_folder_removal}) AS metrics__metrics__labeled_counter__networking_residual_cache_folder_removal ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__networking_residual_cache_folder_removal.document_id} ;;
-  }
-
   join: metrics__metrics__labeled_counter__networking_speculative_connect_outcome {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__networking_speculative_connect_outcome}) AS metrics__metrics__labeled_counter__networking_speculative_connect_outcome ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__networking_speculative_connect_outcome.document_id} ;;
@@ -437,11 +353,6 @@ explore: metrics {
   join: metrics__metrics__labeled_counter__networking_speculative_connection_outcome {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__networking_speculative_connection_outcome}) AS metrics__metrics__labeled_counter__networking_speculative_connection_outcome ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__networking_speculative_connection_outcome.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__networking_trr_request_count {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__networking_trr_request_count}) AS metrics__metrics__labeled_counter__networking_trr_request_count ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__networking_trr_request_count.document_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__pdfjs_buttons {
@@ -457,11 +368,6 @@ explore: metrics {
   join: metrics__metrics__labeled_counter__pdfjs_geckoview {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__pdfjs_geckoview}) AS metrics__metrics__labeled_counter__pdfjs_geckoview ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__pdfjs_geckoview.document_id} ;;
-  }
-
-  join: metrics__metrics__labeled_counter__pdfjs_stamp {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__pdfjs_stamp}) AS metrics__metrics__labeled_counter__pdfjs_stamp ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__pdfjs_stamp.document_id} ;;
   }
 
   join: metrics__metrics__labeled_counter__perf_startup_startup_type {
@@ -593,6 +499,17 @@ explore: metrics {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__wallpapers_new_wallpaper_applied}) AS metrics__metrics__labeled_counter__wallpapers_new_wallpaper_applied ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__wallpapers_new_wallpaper_applied.document_id} ;;
   }
+
+  join: metric_definitions_metrics {
+    view_label: "Metric Definitions Metrics"
+    relationship: many_to_many
+    type: full_outer
+    fields: [metrics*]
+    sql_on: SAFE_CAST(metrics.submission_date AS TIMESTAMP) =
+                                SAFE_CAST(metric_definitions_metrics.submission_date AS TIMESTAMP) AND
+                                AND SAFE_CAST(metrics.client_info__client_id AS STRING) =
+                                SAFE_CAST(metric_definitions_metrics.client_id AS STRING) ;;
+  }
 }
 
 explore: suggest__metrics__metrics__labeled_counter__avif_a1lx {
@@ -604,10 +521,6 @@ explore: suggest__metrics__metrics__labeled_counter__avif_a1op {
 }
 
 explore: suggest__metrics__metrics__labeled_counter__avif_alpha {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__avif_aom_decode_error {
   hidden: yes
 }
 
@@ -691,31 +604,7 @@ explore: suggest__metrics__metrics__labeled_counter__browser_search_with_ads {
   hidden: yes
 }
 
-explore: suggest__metrics__metrics__labeled_counter__codec_stats_audio_preferred_codec {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__codec_stats_other_fec_signaled {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__codec_stats_ulpfec_negotiated {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__codec_stats_video_preferred_codec {
-  hidden: yes
-}
-
 explore: suggest__metrics__metrics__labeled_counter__cookie_banners_click_result {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__cookie_banners_cmp_detected_cmp {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__cookie_banners_cmp_result {
   hidden: yes
 }
 
@@ -731,10 +620,6 @@ explore: suggest__metrics__metrics__labeled_counter__crash_metrics_crash_count {
   hidden: yes
 }
 
-explore: suggest__metrics__metrics__labeled_counter__data_storage_entries {
-  hidden: yes
-}
-
 explore: suggest__metrics__metrics__labeled_counter__dotprint_failure {
   hidden: yes
 }
@@ -747,35 +632,7 @@ explore: suggest__metrics__metrics__labeled_counter__extensions_apis_dnr_startup
   hidden: yes
 }
 
-explore: suggest__metrics__metrics__labeled_counter__extensions_counters_browser_action_preload_result {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__extensions_counters_event_page_idle_result {
-  hidden: yes
-}
-
 explore: suggest__metrics__metrics__labeled_counter__extensions_process_event {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__extensions_startup_cache_read_errors {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__fog_validation_gvsv_audio_stream_init {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__fog_validation_gvsv_audio_stream_init_gecko {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__fog_validation_gvsv_audio_stream_init_gvst {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__fxa_client_error_count {
   hidden: yes
 }
 
@@ -808,10 +665,6 @@ explore: suggest__metrics__metrics__labeled_counter__glean_validation_pings_subm
 }
 
 explore: suggest__metrics__metrics__labeled_counter__gmp_update_xml_fetch_result {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__gpu_process_crash_fallbacks {
   hidden: yes
 }
 
@@ -919,19 +772,11 @@ explore: suggest__metrics__metrics__labeled_counter__networking_cookie_timestamp
   hidden: yes
 }
 
-explore: suggest__metrics__metrics__labeled_counter__networking_residual_cache_folder_removal {
-  hidden: yes
-}
-
 explore: suggest__metrics__metrics__labeled_counter__networking_speculative_connect_outcome {
   hidden: yes
 }
 
 explore: suggest__metrics__metrics__labeled_counter__networking_speculative_connection_outcome {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__networking_trr_request_count {
   hidden: yes
 }
 
@@ -944,10 +789,6 @@ explore: suggest__metrics__metrics__labeled_counter__pdfjs_editing {
 }
 
 explore: suggest__metrics__metrics__labeled_counter__pdfjs_geckoview {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__pdfjs_stamp {
   hidden: yes
 }
 
