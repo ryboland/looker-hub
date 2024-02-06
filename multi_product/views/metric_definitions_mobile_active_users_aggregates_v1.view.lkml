@@ -11,34 +11,33 @@ view: metric_definitions_mobile_active_users_aggregates_v1 {
 SUM(IF(FORMAT_DATE('%m-%d', submission_date) BETWEEN '11-18' AND '12-15', dau, 0)) / 28 AS mobile_dau_kpi_v1,
 
                 
-                metrics.NULL AS client_id,
+                m.NULL AS client_id,
                 {% if aggregate_metrics_by._parameter_value == 'day' %}
-                metrics.submission_date AS analysis_basis,
+                m.submission_date AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'week'  %}
                 (FORMAT_DATE(
                     '%F',
-                    DATE_TRUNC(metrics.submission_date,
+                    DATE_TRUNC(m.submission_date,
                     WEEK(MONDAY)))
-                ) AS analysis_basis,
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'month'  %}
                 (FORMAT_DATE(
                     '%Y-%m',
-                    metrics.submission_date)
-                ) AS analysis_basis,
+                    m.submission_date)
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'quarter'  %}
                 (FORMAT_DATE(
                     '%Y-%m',
-                    DATE_TRUNC(metrics.submission_date,
+                    DATE_TRUNC(m.submission_date,
                     QUARTER))
-                ) AS analysis_basis,
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'year'  %}
                 (EXTRACT(
-                    YEAR FROM metrics.submission_date)
-                ) AS analysis_basis,
+                    YEAR FROM m.submission_date)
+                ) AS analysis_basis
                 {% else %}
-                NULL as analysis_basis,
+                NULL as analysis_basis
                 {% endif %}
-                metrics.submission_date AS submission_date
             FROM
                 (
     SELECT
@@ -50,8 +49,15 @@ SUM(IF(FORMAT_DATE('%m-%d', submission_date) BETWEEN '11-18' AND '12-15', dau, 0
     WHERE app_name IN ('Fenix',  'Firefox iOS', 'Focus Android', 'Focus iOS')
 )
     )
-            AS metrics
+            AS m
             
+            WHERE m.submission_date BETWEEN
+                SAFE_CAST(
+                    {% date_start submission_date %} AS DATE
+                ) AND
+                SAFE_CAST(
+                    {% date_end submission_date %} AS DATE
+                )
             GROUP BY
                 
                 client_id,
@@ -104,7 +110,7 @@ SUM(IF(FORMAT_DATE('%m-%d', submission_date) BETWEEN '11-18' AND '12-15', dau, 0
   dimension_group: submission {
     type: time
     group_label: "Base Fields"
-    sql: CAST(${TABLE}.submission_date AS TIMESTAMP) ;;
+    sql: CAST(${TABLE}.analysis_basis AS TIMESTAMP) ;;
     label: "Submission"
     timeframes: [
       raw,
@@ -121,6 +127,7 @@ SUM(IF(FORMAT_DATE('%m-%d', submission_date) BETWEEN '11-18' AND '12-15', dau, 0
   }
 
   parameter: aggregate_metrics_by {
+    label: "Aggregate Client Metrics Per"
     type: unquoted
     default_value: "day"
 

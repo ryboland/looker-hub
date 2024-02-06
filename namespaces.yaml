@@ -17864,6 +17864,10 @@ revenue:
       tables:
       - table: moz-fx-data-shared-prod.fenix_derived.google_ads_campaign_cost_breakdowns_v1
       type: table_view
+    fenix_ltv:
+      tables:
+      - table: mozdata.ltv.fenix_client_ltv
+      type: table_view
     firefox_ltv:
       tables:
       - table: mozdata.revenue.firefox_ltv

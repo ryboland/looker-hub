@@ -23,12 +23,6 @@ view: desktop_installs_table {
     description: "Attribution Download Source"
   }
 
-  dimension: attribution_dltoken {
-    sql: ${TABLE}.attribution_dltoken ;;
-    type: string
-    description: "Attribution Download Token - Unique token generated for the Firefox download"
-  }
-
   dimension: attribution_experiment {
     sql: ${TABLE}.attribution_experiment ;;
     type: string
@@ -242,6 +236,22 @@ view: desktop_installs_table {
     sql: ${TABLE}.version ;;
     type: string
     description: "Version of the installed product.  May be different from installer_version for a stub install.  Absent for a failed stub installation."
+  }
+
+  dimension_group: attribution_dltoken {
+    sql: ${TABLE}.attribution_dltoken_date ;;
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year,
+    ]
+    convert_tz: no
+    datatype: date
+    description: "Attribution Download Token Date"
   }
 
   dimension_group: submission {

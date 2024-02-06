@@ -35,34 +35,33 @@ base.normalized_os_version,
 base.sample_id,
 base.telemetry_sdk_build,
 
-                metrics.client_info.client_id AS client_id,
+                m.client_info.client_id AS client_id,
                 {% if aggregate_metrics_by._parameter_value == 'day' %}
-                metrics.DATE(submission_timestamp) AS analysis_basis,
+                m.DATE(submission_timestamp) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'week'  %}
                 (FORMAT_DATE(
                     '%F',
-                    DATE_TRUNC(metrics.DATE(submission_timestamp),
+                    DATE_TRUNC(m.DATE(submission_timestamp),
                     WEEK(MONDAY)))
-                ) AS analysis_basis,
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'month'  %}
                 (FORMAT_DATE(
                     '%Y-%m',
-                    metrics.DATE(submission_timestamp))
-                ) AS analysis_basis,
+                    m.DATE(submission_timestamp))
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'quarter'  %}
                 (FORMAT_DATE(
                     '%Y-%m',
-                    DATE_TRUNC(metrics.DATE(submission_timestamp),
+                    DATE_TRUNC(m.DATE(submission_timestamp),
                     QUARTER))
-                ) AS analysis_basis,
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'year'  %}
                 (EXTRACT(
-                    YEAR FROM metrics.DATE(submission_timestamp))
-                ) AS analysis_basis,
+                    YEAR FROM m.DATE(submission_timestamp))
+                ) AS analysis_basis
                 {% else %}
-                NULL as analysis_basis,
+                NULL as analysis_basis
                 {% endif %}
-                metrics.DATE(submission_timestamp) AS submission_date
             FROM
                 (
     SELECT
@@ -75,12 +74,12 @@ base.telemetry_sdk_build,
     FROM `moz-fx-data-shared-prod.focus_ios.baseline` p
 )
     )
-            AS metrics
+            AS m
             
             INNER JOIN mozdata.org_mozilla_ios_focus.baseline_clients_daily base
             ON
-                base.submission_date = metrics.DATE(submission_timestamp) AND
-                base.client_id = metrics.client_info.client_id
+                base.submission_date = m.DATE(submission_timestamp) AND
+                base.client_id = m.client_info.client_id
             WHERE base.submission_date BETWEEN
                 SAFE_CAST(
                     {% date_start DATE(submission_timestamp) %} AS DATE
@@ -89,6 +88,13 @@ base.telemetry_sdk_build,
                     {% date_end DATE(submission_timestamp) %} AS DATE
                 )
             
+            AND m.submission_date BETWEEN
+                SAFE_CAST(
+                    {% date_start DATE(submission_timestamp) %} AS DATE
+                ) AND
+                SAFE_CAST(
+                    {% date_end DATE(submission_timestamp) %} AS DATE
+                )
             GROUP BY
                 android_sdk_version,
 app_build,
@@ -297,7 +303,7 @@ For more information, refer to [the DAU description in Confluence](https://mozil
   dimension_group: submission {
     type: time
     group_label: "Base Fields"
-    sql: CAST(${TABLE}.submission_date AS TIMESTAMP) ;;
+    sql: CAST(${TABLE}.analysis_basis AS TIMESTAMP) ;;
     label: "Submission"
     timeframes: [
       raw,
@@ -314,6 +320,7 @@ For more information, refer to [the DAU description in Confluence](https://mozil
   }
 
   parameter: aggregate_metrics_by {
+    label: "Aggregate Client Metrics Per"
     type: unquoted
     default_value: "day"
 

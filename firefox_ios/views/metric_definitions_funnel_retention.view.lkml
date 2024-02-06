@@ -33,34 +33,33 @@ base.normalized_os_version,
 base.sample_id,
 base.telemetry_sdk_build,
 
-                metrics.NULL AS client_id,
+                m.NULL AS client_id,
                 {% if aggregate_metrics_by._parameter_value == 'day' %}
-                metrics.submission_date AS analysis_basis,
+                m.submission_date AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'week'  %}
                 (FORMAT_DATE(
                     '%F',
-                    DATE_TRUNC(metrics.submission_date,
+                    DATE_TRUNC(m.submission_date,
                     WEEK(MONDAY)))
-                ) AS analysis_basis,
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'month'  %}
                 (FORMAT_DATE(
                     '%Y-%m',
-                    metrics.submission_date)
-                ) AS analysis_basis,
+                    m.submission_date)
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'quarter'  %}
                 (FORMAT_DATE(
                     '%Y-%m',
-                    DATE_TRUNC(metrics.submission_date,
+                    DATE_TRUNC(m.submission_date,
                     QUARTER))
-                ) AS analysis_basis,
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'year'  %}
                 (EXTRACT(
-                    YEAR FROM metrics.submission_date)
-                ) AS analysis_basis,
+                    YEAR FROM m.submission_date)
+                ) AS analysis_basis
                 {% else %}
-                NULL as analysis_basis,
+                NULL as analysis_basis
                 {% endif %}
-                metrics.submission_date AS submission_date
             FROM
                 (
     SELECT
@@ -71,12 +70,12 @@ base.telemetry_sdk_build,
      FROM `mozdata.firefox_ios.funnel_retention_week_4`
 )
     )
-            AS metrics
+            AS m
             
             INNER JOIN mozdata.firefox_ios.baseline_clients_daily base
             ON
-                base.submission_date = metrics.submission_date AND
-                base.client_id = metrics.NULL
+                base.submission_date = m.submission_date AND
+                base.client_id = m.NULL
             WHERE base.submission_date BETWEEN
                 SAFE_CAST(
                     {% date_start submission_date %} AS DATE
@@ -85,6 +84,13 @@ base.telemetry_sdk_build,
                     {% date_end submission_date %} AS DATE
                 )
             
+            AND m.submission_date BETWEEN
+                SAFE_CAST(
+                    {% date_start submission_date %} AS DATE
+                ) AND
+                SAFE_CAST(
+                    {% date_end submission_date %} AS DATE
+                )
             GROUP BY
                 android_sdk_version,
 app_build,
@@ -287,7 +293,7 @@ telemetry_sdk_build,
   dimension_group: submission {
     type: time
     group_label: "Base Fields"
-    sql: CAST(${TABLE}.submission_date AS TIMESTAMP) ;;
+    sql: CAST(${TABLE}.analysis_basis AS TIMESTAMP) ;;
     label: "Submission"
     timeframes: [
       raw,
@@ -304,6 +310,7 @@ telemetry_sdk_build,
   }
 
   parameter: aggregate_metrics_by {
+    label: "Aggregate Client Metrics Per"
     type: unquoted
     default_value: "day"
 

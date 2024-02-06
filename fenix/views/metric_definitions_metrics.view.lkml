@@ -8,19 +8,6 @@ view: metric_definitions_metrics {
   derived_table: {
     sql: SELECT
                 COUNT(document_id) AS metric_ping_count,
-ARRAY_AGG(metrics.timing_distribution.performance_pageload_load_time IGNORE NULLS) AS performance_pageload_load_time,
-ARRAY_AGG(metrics.timing_distribution.performance_pageload_load_time_responsestart IGNORE NULLS) AS performance_pageload_load_time_responsestart,
-ARRAY_AGG(metrics.timing_distribution.performance_page_non_blank_paint IGNORE NULLS) AS performance_page_non_blank_paint,
-ARRAY_AGG(metrics.timing_distribution.performance_pageload_req_anim_frame_callback IGNORE NULLS) AS performance_pageload_req_anim_frame_callback,
-ARRAY_AGG(metrics.timing_distribution.performance_pageload_dcl IGNORE NULLS) AS performance_pageload_dcl,
-ARRAY_AGG(metrics.timing_distribution.performance_pageload_dcl_responsestart IGNORE NULLS) AS performance_pageload_dcl_responsestart,
-ARRAY_AGG(metrics.timing_distribution.performance_pageload_fcp IGNORE NULLS) AS performance_pageload_fcp,
-ARRAY_AGG(metrics.timing_distribution.performance_pageload_fcp_responsestart IGNORE NULLS) AS performance_pageload_fcp_responsestart,
-ARRAY_AGG(metrics.timing_distribution.perf_startup_cold_main_app_to_first_frame IGNORE NULLS) AS perf_startup_cold_main_app_to_first_frame,
-ARRAY_AGG(metrics.timing_distribution.perf_startup_cold_view_app_to_first_frame IGNORE NULLS) AS perf_startup_cold_view_app_to_first_frame,
-ARRAY_AGG(metrics.memory_distribution.storage_stats_app_bytes IGNORE NULLS) AS storage_stats_app_bytes,
-ARRAY_AGG(metrics.memory_distribution.storage_stats_cache_bytes IGNORE NULLS) AS storage_stats_cache_bytes,
-ARRAY_AGG(metrics.memory_distribution.storage_stats_data_dir_bytes IGNORE NULLS) AS storage_stats_data_dir_bytes,
   COALESCE(MAX(
     CAST(
        metrics.boolean.customize_home_contile AS int )
@@ -49,34 +36,33 @@ base.normalized_os_version,
 base.sample_id,
 base.telemetry_sdk_build,
 
-                metrics.client_info.client_id AS client_id,
+                m.client_info.client_id AS client_id,
                 {% if aggregate_metrics_by._parameter_value == 'day' %}
-                metrics.submission_date AS analysis_basis,
+                m.submission_date AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'week'  %}
                 (FORMAT_DATE(
                     '%F',
-                    DATE_TRUNC(metrics.submission_date,
+                    DATE_TRUNC(m.submission_date,
                     WEEK(MONDAY)))
-                ) AS analysis_basis,
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'month'  %}
                 (FORMAT_DATE(
                     '%Y-%m',
-                    metrics.submission_date)
-                ) AS analysis_basis,
+                    m.submission_date)
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'quarter'  %}
                 (FORMAT_DATE(
                     '%Y-%m',
-                    DATE_TRUNC(metrics.submission_date,
+                    DATE_TRUNC(m.submission_date,
                     QUARTER))
-                ) AS analysis_basis,
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'year'  %}
                 (EXTRACT(
-                    YEAR FROM metrics.submission_date)
-                ) AS analysis_basis,
+                    YEAR FROM m.submission_date)
+                ) AS analysis_basis
                 {% else %}
-                NULL as analysis_basis,
+                NULL as analysis_basis
                 {% endif %}
-                metrics.submission_date AS submission_date
             FROM
                 (
     SELECT
@@ -89,12 +75,12 @@ base.telemetry_sdk_build,
     FROM `moz-fx-data-shared-prod.fenix.metrics` p
 )
     )
-            AS metrics
+            AS m
             
             INNER JOIN mozdata.fenix.baseline_clients_daily base
             ON
-                base.submission_date = metrics.submission_date AND
-                base.client_id = metrics.client_info.client_id
+                base.submission_date = m.submission_date AND
+                base.client_id = m.client_info.client_id
             WHERE base.submission_date BETWEEN
                 SAFE_CAST(
                     {% date_start submission_date %} AS DATE
@@ -103,6 +89,13 @@ base.telemetry_sdk_build,
                     {% date_end submission_date %} AS DATE
                 )
             
+            AND m.submission_date BETWEEN
+                SAFE_CAST(
+                    {% date_start submission_date %} AS DATE
+                ) AND
+                SAFE_CAST(
+                    {% date_end submission_date %} AS DATE
+                )
             GROUP BY
                 android_sdk_version,
 app_build,
@@ -145,115 +138,6 @@ telemetry_sdk_build,
     description: "Counts the number of `metrics` pings received from each client."
     type: number
     sql: ${TABLE}.metric_ping_count ;;
-  }
-
-  dimension: performance_pageload_load_time {
-    group_label: "Metrics"
-    label: "Pageload Load Time"
-    description: "Time in milliseconds from navigationStart to loadEventStart for the foreground http or https root content document."
-    type: number
-    sql: ${TABLE}.performance_pageload_load_time ;;
-  }
-
-  dimension: performance_pageload_load_time_responsestart {
-    group_label: "Metrics"
-    label: "Pageload Load Time Response Start"
-    description: "Time in milliseconds from responseStart to loadEventStart for the foreground http or https root content document."
-    type: number
-    sql: ${TABLE}.performance_pageload_load_time_responsestart ;;
-  }
-
-  dimension: performance_page_non_blank_paint {
-    group_label: "Metrics"
-    label: "Page Non Blank Paint"
-    description: "The time between navigationStart and the first non-blank paint of a foreground root content document, in milliseconds."
-    type: number
-    sql: ${TABLE}.performance_page_non_blank_paint ;;
-  }
-
-  dimension: performance_pageload_req_anim_frame_callback {
-    group_label: "Metrics"
-    label: "Pageload Load Req Animation Frame Callback"
-    description: "Time spent in milliseconds calling all request animation frame callbacks for a document before it has reached readystate complete."
-    type: number
-    sql: ${TABLE}.performance_pageload_req_anim_frame_callback ;;
-  }
-
-  dimension: performance_pageload_dcl {
-    group_label: "Metrics"
-    label: "Pageload DCL"
-    description: "Time in milliseconds from navigationStart to domContentLoaded for the foreground http or https root content document."
-    type: number
-    sql: ${TABLE}.performance_pageload_dcl ;;
-  }
-
-  dimension: performance_pageload_dcl_responsestart {
-    group_label: "Metrics"
-    label: "Pageload DCL Response Start"
-    description: "Time in milliseconds from responseStart to domContentLoaded for the foreground http or https root content document."
-    type: number
-    sql: ${TABLE}.performance_pageload_dcl_responsestart ;;
-  }
-
-  dimension: performance_pageload_fcp {
-    group_label: "Metrics"
-    label: "Pageload FCP"
-    description: "The time between navigationStart and the first contentful paint of a foreground http or https root content document, in milliseconds. The contentful paint timestamp is taken during display list building and does not include rasterization or compositing of that paint."
-    type: number
-    sql: ${TABLE}.performance_pageload_fcp ;;
-  }
-
-  dimension: performance_pageload_fcp_responsestart {
-    group_label: "Metrics"
-    label: "Pageload FCP Response Start"
-    description: "The time between responseStart and the first contentful paint of a foreground http or https root content document, in milliseconds. The contentful paint timestamp is taken during display list building and does not include rasterization or compositing of that paint."
-    type: number
-    sql: ${TABLE}.performance_pageload_fcp_responsestart ;;
-  }
-
-  dimension: perf_startup_cold_main_app_to_first_frame {
-    group_label: "Metrics"
-    label: "Startup Cold Main App to First Frame"
-    description: "The duration from `*Application`'s initializer to the first Android frame
-being drawn in a [COLD MAIN start
-up](https://wiki.mozilla.org/index.php?title=Performance/Fenix/Glossary)."
-    type: number
-    sql: ${TABLE}.perf_startup_cold_main_app_to_first_frame ;;
-  }
-
-  dimension: perf_startup_cold_view_app_to_first_frame {
-    group_label: "Metrics"
-    label: "Startup Cold View App to First Frame"
-    description: "The duration from `*Application`'s initializer to the first Android frame
-being drawn in a [COLD VIEW start
-up](https://wiki.mozilla.org/index.php?title=Performance/Fenix/Glossary)."
-    type: number
-    sql: ${TABLE}.perf_startup_cold_view_app_to_first_frame ;;
-  }
-
-  dimension: storage_stats_app_bytes {
-    group_label: "Metrics"
-    label: "App Byte Size"
-    description: "The size of the app's APK and related files as installed: this is expected
-to be larger than download size."
-    type: number
-    sql: ${TABLE}.storage_stats_app_bytes ;;
-  }
-
-  dimension: storage_stats_cache_bytes {
-    group_label: "Metrics"
-    label: "Cache Byte Size"
-    description: "The size of all cached data in the app."
-    type: number
-    sql: ${TABLE}.storage_stats_cache_bytes ;;
-  }
-
-  dimension: storage_stats_data_dir_bytes {
-    group_label: "Metrics"
-    label: "Data Dir Byte Size"
-    description: "The size of all data minus `cache_bytes`."
-    type: number
-    sql: ${TABLE}.storage_stats_data_dir_bytes ;;
   }
 
   dimension: spoc_tiles_disable_rate {
@@ -402,7 +286,7 @@ to be larger than download size."
   dimension_group: submission {
     type: time
     group_label: "Base Fields"
-    sql: CAST(${TABLE}.submission_date AS TIMESTAMP) ;;
+    sql: CAST(${TABLE}.analysis_basis AS TIMESTAMP) ;;
     label: "Submission"
     timeframes: [
       raw,
@@ -415,27 +299,11 @@ to be larger than download size."
   }
 
   set: metrics {
-    fields: [
-      metric_ping_count,
-      performance_pageload_load_time,
-      performance_pageload_load_time_responsestart,
-      performance_page_non_blank_paint,
-      performance_pageload_req_anim_frame_callback,
-      performance_pageload_dcl,
-      performance_pageload_dcl_responsestart,
-      performance_pageload_fcp,
-      performance_pageload_fcp_responsestart,
-      perf_startup_cold_main_app_to_first_frame,
-      perf_startup_cold_view_app_to_first_frame,
-      storage_stats_app_bytes,
-      storage_stats_cache_bytes,
-      storage_stats_data_dir_bytes,
-      spoc_tiles_disable_rate,
-      fxa_sign_in,
-    ]
+    fields: [metric_ping_count, spoc_tiles_disable_rate, fxa_sign_in]
   }
 
   parameter: aggregate_metrics_by {
+    label: "Aggregate Client Metrics Per"
     type: unquoted
     default_value: "day"
 

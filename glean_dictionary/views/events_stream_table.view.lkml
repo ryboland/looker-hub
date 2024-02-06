@@ -104,11 +104,6 @@ view: events_stream_table {
     hidden: yes
   }
 
-  dimension: event {
-    sql: ${TABLE}.event ;;
-    type: string
-  }
-
   dimension: event_category {
     sql: ${TABLE}.event_category ;;
     type: string
@@ -348,6 +343,20 @@ view: events_stream_table {
   dimension: sample_id {
     sql: ${TABLE}.sample_id ;;
     type: number
+  }
+
+  dimension_group: event {
+    sql: ${TABLE}.event_timestamp ;;
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year,
+    ]
   }
 
   dimension_group: metadata__header__parsed {

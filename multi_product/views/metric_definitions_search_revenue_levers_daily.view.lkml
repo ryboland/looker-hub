@@ -14,34 +14,33 @@ COALESCE(SUM(sap), 0) AS search_forecasting_search_count,
 COALESCE(SUM(ad_click), 0) AS search_forecasting_ad_clicks,
 
                 
-                metrics.NULL AS client_id,
+                m.NULL AS client_id,
                 {% if aggregate_metrics_by._parameter_value == 'day' %}
-                metrics.submission_date AS analysis_basis,
+                m.submission_date AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'week'  %}
                 (FORMAT_DATE(
                     '%F',
-                    DATE_TRUNC(metrics.submission_date,
+                    DATE_TRUNC(m.submission_date,
                     WEEK(MONDAY)))
-                ) AS analysis_basis,
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'month'  %}
                 (FORMAT_DATE(
                     '%Y-%m',
-                    metrics.submission_date)
-                ) AS analysis_basis,
+                    m.submission_date)
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'quarter'  %}
                 (FORMAT_DATE(
                     '%Y-%m',
-                    DATE_TRUNC(metrics.submission_date,
+                    DATE_TRUNC(m.submission_date,
                     QUARTER))
-                ) AS analysis_basis,
+                ) AS analysis_basis
                 {% elsif aggregate_metrics_by._parameter_value == 'year'  %}
                 (EXTRACT(
-                    YEAR FROM metrics.submission_date)
-                ) AS analysis_basis,
+                    YEAR FROM m.submission_date)
+                ) AS analysis_basis
                 {% else %}
-                NULL as analysis_basis,
+                NULL as analysis_basis
                 {% endif %}
-                metrics.submission_date AS submission_date
             FROM
                 (
     SELECT
@@ -49,8 +48,15 @@ COALESCE(SUM(ad_click), 0) AS search_forecasting_ad_clicks,
     FROM
         mozdata.search.search_revenue_levers_daily
     )
-            AS metrics
+            AS m
             
+            WHERE m.submission_date BETWEEN
+                SAFE_CAST(
+                    {% date_start submission_date %} AS DATE
+                ) AND
+                SAFE_CAST(
+                    {% date_end submission_date %} AS DATE
+                )
             GROUP BY
                 
                 client_id,
@@ -118,7 +124,7 @@ COALESCE(SUM(ad_click), 0) AS search_forecasting_ad_clicks,
   dimension_group: submission {
     type: time
     group_label: "Base Fields"
-    sql: CAST(${TABLE}.submission_date AS TIMESTAMP) ;;
+    sql: CAST(${TABLE}.analysis_basis AS TIMESTAMP) ;;
     label: "Submission"
     timeframes: [
       raw,
@@ -141,6 +147,7 @@ COALESCE(SUM(ad_click), 0) AS search_forecasting_ad_clicks,
   }
 
   parameter: aggregate_metrics_by {
+    label: "Aggregate Client Metrics Per"
     type: unquoted
     default_value: "day"
 
