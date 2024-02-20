@@ -37,6 +37,26 @@ explore: new_metric_capture_emulation {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${new_metric_capture_emulation.metrics__labeled_counter__glean_error_invalid_value}) AS new_metric_capture_emulation__metrics__labeled_counter__glean_error_invalid_value ON ${new_metric_capture_emulation.document_id} = ${new_metric_capture_emulation__metrics__labeled_counter__glean_error_invalid_value.document_id} ;;
   }
+
+  join: new_metric_capture_emulation__events {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${new_metric_capture_emulation.events}) AS new_metric_capture_emulation__events ;;
+  }
+
+  join: new_metric_capture_emulation__events__extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${new_metric_capture_emulation__events.extra}) AS new_metric_capture_emulation__events__extra ;;
+  }
+
+  join: new_metric_capture_emulation__metrics__timing_distribution__wr_renderer_time__values {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${new_metric_capture_emulation.metrics__timing_distribution__wr_renderer_time__values}) AS new_metric_capture_emulation__metrics__timing_distribution__wr_renderer_time__values ;;
+  }
+
+  join: new_metric_capture_emulation__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${new_metric_capture_emulation.ping_info__experiments}) AS new_metric_capture_emulation__ping_info__experiments ;;
+  }
 }
 
 explore: suggest__new_metric_capture_emulation__metrics__labeled_counter__glean_error_invalid_label {

@@ -9115,7 +9115,7 @@ view: use_counters {
 
   dimension: metrics__counter__use_counter_css_doc_css_user_find {
     label: "Use Counter Css Doc Css User Find"
-    hidden: no
+    hidden: yes
     sql: ${TABLE}.metrics.counter.use_counter_css_doc_css_user_find ;;
     type: number
     group_label: "Use Counter Css Doc"
@@ -21661,7 +21661,7 @@ view: use_counters {
 
   dimension: metrics__counter__use_counter_css_page_css_user_find {
     label: "Use Counter Css Page Css User Find"
-    hidden: no
+    hidden: yes
     sql: ${TABLE}.metrics.counter.use_counter_css_page_css_user_find ;;
     type: number
     group_label: "Use Counter Css Page"
@@ -99771,5 +99771,67 @@ view: use_counters__metrics__labeled_counter__use_counter_error_unknown_counter 
     type: count_distinct
     sql: case when ${value} > 0 then ${use_counters.client_info__client_id} end ;;
     hidden: yes
+  }
+}
+
+view: use_counters__events {
+  dimension: category {
+    sql: ${TABLE}.category ;;
+    type: string
+  }
+
+  dimension: extra {
+    sql: ${TABLE}.extra ;;
+    hidden: yes
+  }
+
+  dimension: name {
+    sql: ${TABLE}.name ;;
+    type: string
+  }
+
+  dimension: timestamp {
+    sql: ${TABLE}.timestamp ;;
+    type: number
+  }
+}
+
+view: use_counters__events__extra {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: use_counters__ping_info__experiments {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value__branch {
+    sql: ${TABLE}.value.branch ;;
+    type: string
+    group_label: "Value"
+    group_item_label: "Branch"
+  }
+
+  dimension: value__extra__enrollment_id {
+    sql: ${TABLE}.value.extra.enrollment_id ;;
+    type: string
+    group_label: "Value Extra"
+    group_item_label: "Enrollment Id"
+  }
+
+  dimension: value__extra__type {
+    sql: ${TABLE}.value.extra.type ;;
+    type: string
+    group_label: "Value Extra"
+    group_item_label: "Type"
   }
 }
