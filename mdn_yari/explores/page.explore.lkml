@@ -48,11 +48,6 @@ explore: page {
     sql: LEFT JOIN UNNEST(${page__events.extra}) AS page__events__extra ;;
   }
 
-  join: page__metrics__labeled_string__page_utm {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${page.metrics__labeled_string__page_utm}) AS page__metrics__labeled_string__page_utm ;;
-  }
-
   join: page__ping_info__experiments {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${page.ping_info__experiments}) AS page__ping_info__experiments ;;

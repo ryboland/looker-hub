@@ -48,11 +48,6 @@ explore: new_metric_capture_emulation {
     sql: LEFT JOIN UNNEST(${new_metric_capture_emulation__events.extra}) AS new_metric_capture_emulation__events__extra ;;
   }
 
-  join: new_metric_capture_emulation__metrics__timing_distribution__wr_renderer_time__values {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${new_metric_capture_emulation.metrics__timing_distribution__wr_renderer_time__values}) AS new_metric_capture_emulation__metrics__timing_distribution__wr_renderer_time__values ;;
-  }
-
   join: new_metric_capture_emulation__ping_info__experiments {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${new_metric_capture_emulation.ping_info__experiments}) AS new_metric_capture_emulation__ping_info__experiments ;;

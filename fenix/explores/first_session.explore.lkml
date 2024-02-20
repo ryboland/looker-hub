@@ -49,11 +49,6 @@ explore: first_session {
     sql: LEFT JOIN UNNEST(${first_session__events.extra}) AS first_session__events__extra ;;
   }
 
-  join: first_session__metrics__timing_distribution__first_session_adjust_attribution_time__values {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${first_session.metrics__timing_distribution__first_session_adjust_attribution_time__values}) AS first_session__metrics__timing_distribution__first_session_adjust_attribution_time__values ;;
-  }
-
   join: first_session__ping_info__experiments {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${first_session.ping_info__experiments}) AS first_session__ping_info__experiments ;;

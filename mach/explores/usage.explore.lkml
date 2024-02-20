@@ -48,11 +48,6 @@ explore: usage {
     sql: LEFT JOIN UNNEST(${usage__events.extra}) AS usage__events__extra ;;
   }
 
-  join: usage__metrics__memory_distribution__mach_system_memory__values {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${usage.metrics__memory_distribution__mach_system_memory__values}) AS usage__metrics__memory_distribution__mach_system_memory__values ;;
-  }
-
   join: usage__ping_info__experiments {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${usage.ping_info__experiments}) AS usage__ping_info__experiments ;;

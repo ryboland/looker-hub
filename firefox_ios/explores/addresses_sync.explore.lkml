@@ -69,16 +69,6 @@ explore: addresses_sync {
     sql: LEFT JOIN UNNEST(${addresses_sync__events.extra}) AS addresses_sync__events__extra ;;
   }
 
-  join: addresses_sync__metrics__labeled_string__addresses_sync_failure_reason {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.metrics__labeled_string__addresses_sync_failure_reason}) AS addresses_sync__metrics__labeled_string__addresses_sync_failure_reason ;;
-  }
-
-  join: addresses_sync__metrics__labeled_string__addresses_sync_v2_failure_reason {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${addresses_sync.metrics__labeled_string__addresses_sync_v2_failure_reason}) AS addresses_sync__metrics__labeled_string__addresses_sync_v2_failure_reason ;;
-  }
-
   join: addresses_sync__ping_info__experiments {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${addresses_sync.ping_info__experiments}) AS addresses_sync__ping_info__experiments ;;

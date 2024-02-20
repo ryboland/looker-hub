@@ -49,16 +49,6 @@ explore: sync {
     sql: LEFT JOIN UNNEST(${sync__events.extra}) AS sync__events__extra ;;
   }
 
-  join: sync__metrics__labeled_string__sync_failure_reason {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync.metrics__labeled_string__sync_failure_reason}) AS sync__metrics__labeled_string__sync_failure_reason ;;
-  }
-
-  join: sync__metrics__labeled_string__sync_v2_failure_reason {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${sync.metrics__labeled_string__sync_v2_failure_reason}) AS sync__metrics__labeled_string__sync_v2_failure_reason ;;
-  }
-
   join: sync__ping_info__experiments {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${sync.ping_info__experiments}) AS sync__ping_info__experiments ;;

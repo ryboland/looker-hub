@@ -48,11 +48,6 @@ explore: non_interaction {
     sql: LEFT JOIN UNNEST(${non_interaction__events.extra}) AS non_interaction__events__extra ;;
   }
 
-  join: non_interaction__metrics__labeled_string__page_query_params {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${non_interaction.metrics__labeled_string__page_query_params}) AS non_interaction__metrics__labeled_string__page_query_params ;;
-  }
-
   join: non_interaction__ping_info__experiments {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${non_interaction.ping_info__experiments}) AS non_interaction__ping_info__experiments ;;

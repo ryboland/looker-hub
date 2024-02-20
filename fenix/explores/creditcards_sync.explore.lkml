@@ -69,16 +69,6 @@ explore: creditcards_sync {
     sql: LEFT JOIN UNNEST(${creditcards_sync__events.extra}) AS creditcards_sync__events__extra ;;
   }
 
-  join: creditcards_sync__metrics__labeled_string__creditcards_sync_failure_reason {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${creditcards_sync.metrics__labeled_string__creditcards_sync_failure_reason}) AS creditcards_sync__metrics__labeled_string__creditcards_sync_failure_reason ;;
-  }
-
-  join: creditcards_sync__metrics__labeled_string__creditcards_sync_v2_failure_reason {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${creditcards_sync.metrics__labeled_string__creditcards_sync_v2_failure_reason}) AS creditcards_sync__metrics__labeled_string__creditcards_sync_v2_failure_reason ;;
-  }
-
   join: creditcards_sync__ping_info__experiments {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${creditcards_sync.ping_info__experiments}) AS creditcards_sync__ping_info__experiments ;;

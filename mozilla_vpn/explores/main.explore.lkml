@@ -48,11 +48,6 @@ explore: main {
     sql: LEFT JOIN UNNEST(${main__events.extra}) AS main__events__extra ;;
   }
 
-  join: main__metrics__timing_distribution__performance_time_to_main_screen__values {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${main.metrics__timing_distribution__performance_time_to_main_screen__values}) AS main__metrics__timing_distribution__performance_time_to_main_screen__values ;;
-  }
-
   join: main__ping_info__experiments {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${main.ping_info__experiments}) AS main__ping_info__experiments ;;

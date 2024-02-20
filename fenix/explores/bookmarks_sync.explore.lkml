@@ -79,16 +79,6 @@ explore: bookmarks_sync {
     sql: LEFT JOIN UNNEST(${bookmarks_sync__events.extra}) AS bookmarks_sync__events__extra ;;
   }
 
-  join: bookmarks_sync__metrics__labeled_string__bookmarks_sync_failure_reason {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${bookmarks_sync.metrics__labeled_string__bookmarks_sync_failure_reason}) AS bookmarks_sync__metrics__labeled_string__bookmarks_sync_failure_reason ;;
-  }
-
-  join: bookmarks_sync__metrics__labeled_string__bookmarks_sync_v2_failure_reason {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${bookmarks_sync.metrics__labeled_string__bookmarks_sync_v2_failure_reason}) AS bookmarks_sync__metrics__labeled_string__bookmarks_sync_v2_failure_reason ;;
-  }
-
   join: bookmarks_sync__ping_info__experiments {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${bookmarks_sync.ping_info__experiments}) AS bookmarks_sync__ping_info__experiments ;;

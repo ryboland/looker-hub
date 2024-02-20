@@ -69,16 +69,6 @@ explore: tabs_sync {
     sql: LEFT JOIN UNNEST(${tabs_sync__events.extra}) AS tabs_sync__events__extra ;;
   }
 
-  join: tabs_sync__metrics__labeled_string__tabs_sync_failure_reason {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${tabs_sync.metrics__labeled_string__tabs_sync_failure_reason}) AS tabs_sync__metrics__labeled_string__tabs_sync_failure_reason ;;
-  }
-
-  join: tabs_sync__metrics__labeled_string__tabs_sync_v2_failure_reason {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${tabs_sync.metrics__labeled_string__tabs_sync_v2_failure_reason}) AS tabs_sync__metrics__labeled_string__tabs_sync_v2_failure_reason ;;
-  }
-
   join: tabs_sync__ping_info__experiments {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${tabs_sync.ping_info__experiments}) AS tabs_sync__ping_info__experiments ;;
