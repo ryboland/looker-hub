@@ -29,12 +29,6 @@ view: acoustic_email_events {
     description: "The ID of the content associated with the event."
   }
 
-  dimension: email {
-    sql: ${TABLE}.email ;;
-    type: string
-    description: "The contact’s email address."
-  }
-
   dimension: event_type {
     sql: ${TABLE}.event_type ;;
     type: string
