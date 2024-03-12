@@ -4,95 +4,364 @@
 # This file has been generated via https://github.com/mozilla/lookml-generator
 # You can extend this view in the looker-spoke-default project (https://github.com/mozilla/looker-spoke-default)
 
-view: first_startup {
-  dimension: metrics__quantity__first_startup_delete_tasks_time {
-    label: "First Startup Delete Tasks Time"
+view: user_characteristics {
+  dimension: metrics__uuid__characteristics_client_identifier {
+    label: "Characteristics Client Identifier"
     hidden: no
-    sql: ${TABLE}.metrics.quantity.first_startup_delete_tasks_time ;;
-    type: number
-    group_label: "First Startup"
-    group_item_label: "Delete Tasks Time"
+    sql: ${TABLE}.metrics.uuid.characteristics_client_identifier ;;
+    type: string
+    group_label: "Characteristics"
+    group_item_label: "Client Identifier"
 
     link: {
-      label: "Glean Dictionary reference for First Startup Delete Tasks Time"
-      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/first_startup_delete_tasks_time"
+      label: "Glean Dictionary reference for Characteristics Client Identifier"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_client_identifier"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
 
-    description: "Number of milliseconds until TaskScheduler.deleteAllTasks resolved in FirstStartup.
+    description: "A unique identifier for a user, not the same as the normal Telemetry client_id, but needed so we can deduplicate reports and only take the most recent one per user.
 "
   }
 
-  dimension: metrics__quantity__first_startup_elapsed {
-    label: "First Startup Elapsed"
+  dimension: metrics__quantity__characteristics_color_depth {
+    label: "Characteristics Color Depth"
     hidden: no
-    sql: ${TABLE}.metrics.quantity.first_startup_elapsed ;;
+    sql: ${TABLE}.metrics.quantity.characteristics_color_depth ;;
     type: number
-    group_label: "First Startup"
-    group_item_label: "Elapsed"
+    group_label: "Characteristics"
+    group_item_label: "Color Depth"
 
     link: {
-      label: "Glean Dictionary reference for First Startup Elapsed"
-      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/first_startup_elapsed"
+      label: "Glean Dictionary reference for Characteristics Color Depth"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_color_depth"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
 
-    description: "Number of milliseconds the FirstStartup service took to run.
+    description: "The Color Depth reported by CSS
 "
   }
 
-  dimension: metrics__boolean__first_startup_new_profile {
-    label: "First Startup New Profile"
+  dimension: metrics__quantity__characteristics_color_gamut {
+    label: "Characteristics Color Gamut"
     hidden: no
-    sql: ${TABLE}.metrics.boolean.first_startup_new_profile ;;
+    sql: ${TABLE}.metrics.quantity.characteristics_color_gamut ;;
+    type: number
+    group_label: "Characteristics"
+    group_item_label: "Color Gamut"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Color Gamut"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_color_gamut"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The Color Gamut reported by CSS
+"
+  }
+
+  dimension: metrics__quantity__characteristics_color_scheme {
+    label: "Characteristics Color Scheme"
+    hidden: no
+    sql: ${TABLE}.metrics.quantity.characteristics_color_scheme ;;
+    type: number
+    group_label: "Characteristics"
+    group_item_label: "Color Scheme"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Color Scheme"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_color_scheme"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The Color Scheme used for Content, from ContentPrefs() Preference Sheet.
+"
+  }
+
+  dimension: metrics__boolean__characteristics_inverted_colors {
+    label: "Characteristics Inverted Colors"
+    hidden: no
+    sql: ${TABLE}.metrics.boolean.characteristics_inverted_colors ;;
     type: yesno
-    group_label: "First Startup"
-    group_item_label: "New Profile"
+    group_label: "Characteristics"
+    group_item_label: "Inverted Colors"
 
     link: {
-      label: "Glean Dictionary reference for First Startup New Profile"
-      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/first_startup_new_profile"
+      label: "Glean Dictionary reference for Characteristics Inverted Colors"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_inverted_colors"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
 
-    description: "True if FirstStartup was initted after a new profile was just created. If false, this means that FirstStartup was initted with a pre-existing profile, which is a no-op.
+    description: "What LookAndFeel(InvertedColors) reports.
 "
   }
 
-  dimension: metrics__quantity__first_startup_normandy_init_time {
-    label: "First Startup Normandy Init Time"
+  dimension: metrics__quantity__characteristics_max_touch_points {
+    label: "Characteristics Max Touch Points"
     hidden: no
-    sql: ${TABLE}.metrics.quantity.first_startup_normandy_init_time ;;
+    sql: ${TABLE}.metrics.quantity.characteristics_max_touch_points ;;
     type: number
-    group_label: "First Startup"
-    group_item_label: "Normandy Init Time"
+    group_label: "Characteristics"
+    group_item_label: "Max Touch Points"
 
     link: {
-      label: "Glean Dictionary reference for First Startup Normandy Init Time"
-      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/first_startup_normandy_init_time"
+      label: "Glean Dictionary reference for Characteristics Max Touch Points"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_max_touch_points"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
 
-    description: "Number of milliseconds until Normandy.init resolved in FirstStartup.
+    description: "The number of touch points we will report to the web. On Android, this is based on Android's FEATURE_TOUCHSCREEN* constants - Mozilla caps this at 5 as Android stops distinguishing between numbers greater than 5.  On Windows this comes from the SM_MAXIMUMTOUCHES System Metric.
 "
   }
 
-  dimension: metrics__quantity__first_startup_status_code {
-    label: "First Startup Status Code"
+  dimension: metrics__text2__characteristics_missing_fonts {
+    label: "Characteristics Missing Fonts"
     hidden: no
-    sql: ${TABLE}.metrics.quantity.first_startup_status_code ;;
-    type: number
-    group_label: "First Startup"
-    group_item_label: "Status Code"
+    sql: ${TABLE}.metrics.text2.characteristics_missing_fonts ;;
+    type: string
+    group_label: "Characteristics"
+    group_item_label: "Missing Fonts"
 
     link: {
-      label: "Glean Dictionary reference for First Startup Status Code"
-      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/first_startup_status_code"
+      label: "Glean Dictionary reference for Characteristics Missing Fonts"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_missing_fonts"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
 
-    description: "Status of the FirstStartup service, which runs
-post-install/early-startup in Firefox.
+    description: "If a Font List is available for the user's platform, this string_list contains the fonts that are missing from the user's computer.
+"
+  }
+
+  dimension: metrics__quantity__characteristics_prefers_contrast {
+    label: "Characteristics Prefers Contrast"
+    hidden: no
+    sql: ${TABLE}.metrics.quantity.characteristics_prefers_contrast ;;
+    type: number
+    group_label: "Characteristics"
+    group_item_label: "Prefers Contrast"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Prefers Contrast"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_prefers_contrast"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "What Gecko_MediaFeatures_PrefersContrast reports for a ContentDocument
+"
+  }
+
+  dimension: metrics__boolean__characteristics_prefers_reduced_motion {
+    label: "Characteristics Prefers Reduced Motion"
+    hidden: no
+    sql: ${TABLE}.metrics.boolean.characteristics_prefers_reduced_motion ;;
+    type: yesno
+    group_label: "Characteristics"
+    group_item_label: "Prefers Reduced Motion"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Prefers Reduced Motion"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_prefers_reduced_motion"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "What LookAndFeel(PrefersReducedMotion) reports.
+"
+  }
+
+  dimension: metrics__boolean__characteristics_prefers_reduced_transparency {
+    label: "Characteristics Prefers Reduced Transparency"
+    hidden: no
+    sql: ${TABLE}.metrics.boolean.characteristics_prefers_reduced_transparency ;;
+    type: yesno
+    group_label: "Characteristics"
+    group_item_label: "Prefers Reduced Transparency"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Prefers Reduced Transparency"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_prefers_reduced_transparency"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "What LookAndFeel(PrefersReducedTransparency) reports.
+"
+  }
+
+  dimension: metrics__string__characteristics_prefs_intl_accept_languages {
+    label: "Characteristics Prefs Intl Accept Languages"
+    hidden: no
+    sql: ${TABLE}.metrics.string.characteristics_prefs_intl_accept_languages ;;
+    type: string
+    group_label: "Characteristics"
+    group_item_label: "Prefs Intl Accept Languages"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Prefs Intl Accept Languages"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_prefs_intl_accept_languages"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Value of the intl.accept_languages pref.
+"
+  }
+
+  dimension: metrics__boolean__characteristics_prefs_media_eme_enabled {
+    label: "Characteristics Prefs Media Eme Enabled"
+    hidden: no
+    sql: ${TABLE}.metrics.boolean.characteristics_prefs_media_eme_enabled ;;
+    type: yesno
+    group_label: "Characteristics"
+    group_item_label: "Prefs Media Eme Enabled"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Prefs Media Eme Enabled"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_prefs_media_eme_enabled"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Value of the media.eme.enabled pref.
+"
+  }
+
+  dimension: metrics__boolean__characteristics_prefs_zoom_text_only {
+    label: "Characteristics Prefs Zoom Text Only"
+    hidden: no
+    sql: ${TABLE}.metrics.boolean.characteristics_prefs_zoom_text_only ;;
+    type: yesno
+    group_label: "Characteristics"
+    group_item_label: "Prefs Zoom Text Only"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Prefs Zoom Text Only"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_prefs_zoom_text_only"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Text-only zoom enabled (vs. full-zoom)
+"
+  }
+
+  dimension: metrics__quantity__characteristics_processor_count {
+    label: "Characteristics Processor Count"
+    hidden: no
+    sql: ${TABLE}.metrics.quantity.characteristics_processor_count ;;
+    type: number
+    group_label: "Characteristics"
+    group_item_label: "Processor Count"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Processor Count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_processor_count"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Number of processors.
+"
+  }
+
+  dimension: metrics__quantity__characteristics_screen_height {
+    label: "Characteristics Screen Height"
+    hidden: no
+    sql: ${TABLE}.metrics.quantity.characteristics_screen_height ;;
+    type: number
+    group_label: "Characteristics"
+    group_item_label: "Screen Height"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Screen Height"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_screen_height"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Height of the primary screen in pixels.
+"
+  }
+
+  dimension: metrics__quantity__characteristics_screen_width {
+    label: "Characteristics Screen Width"
+    hidden: no
+    sql: ${TABLE}.metrics.quantity.characteristics_screen_width ;;
+    type: number
+    group_label: "Characteristics"
+    group_item_label: "Screen Width"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Screen Width"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_screen_width"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Width of the primary screen in pixels.
+"
+  }
+
+  dimension: metrics__quantity__characteristics_submission_schema {
+    label: "Characteristics Submission Schema"
+    hidden: no
+    sql: ${TABLE}.metrics.quantity.characteristics_submission_schema ;;
+    type: number
+    group_label: "Characteristics"
+    group_item_label: "Submission Schema"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Submission Schema"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_submission_schema"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "An incrementing constant that represents the current schema/source of the data present in a ping. By referring to this value in a ping, one can know for certain the provenance of other data present in the ping, and what data may or may not be present.
+"
+  }
+
+  dimension: metrics__quantity__characteristics_target_frame_rate {
+    label: "Characteristics Target Frame Rate"
+    hidden: no
+    sql: ${TABLE}.metrics.quantity.characteristics_target_frame_rate ;;
+    type: number
+    group_label: "Characteristics"
+    group_item_label: "Target Frame Rate"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Target Frame Rate"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_target_frame_rate"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The target frame rate in frames-per-second.
+"
+  }
+
+  dimension: metrics__string__characteristics_timezone {
+    label: "Characteristics Timezone"
+    hidden: no
+    sql: ${TABLE}.metrics.string.characteristics_timezone ;;
+    type: string
+    group_label: "Characteristics"
+    group_item_label: "Timezone"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Timezone"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_timezone"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The the current timezone of the system
+"
+  }
+
+  dimension: metrics__boolean__characteristics_video_dynamic_range {
+    label: "Characteristics Video Dynamic Range"
+    hidden: no
+    sql: ${TABLE}.metrics.boolean.characteristics_video_dynamic_range ;;
+    type: yesno
+    group_label: "Characteristics"
+    group_item_label: "Video Dynamic Range"
+
+    link: {
+      label: "Glean Dictionary reference for Characteristics Video Dynamic Range"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/characteristics_video_dynamic_range"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "What LookAndFeel(VideoDynamicRange) reports. Note that CSSVideoDynamicRange has an additional dependency on Color Depth.
 "
   }
 
@@ -651,187 +920,15 @@ The labels are the `category.name` identifier of the metric.
     type: count
   }
 
-  sql_table_name: `mozdata.firefox_desktop.first_startup` ;;
+  sql_table_name: `mozdata.firefox_desktop.user_characteristics` ;;
 }
 
-view: first_startup__metrics__labeled_counter__glean_error_invalid_label {
-  label: "Glean Error - Invalid Label"
-
-  dimension: document_id {
-    type: string
-    sql: ${first_startup.document_id} ;;
-    hidden: yes
-  }
-
-  dimension: document_label_id {
-    type: string
-    sql: ${first_startup.document_id}-${label} ;;
-    primary_key: yes
-    hidden: yes
-  }
-
-  dimension: label {
-    type: string
-    sql: ${TABLE}.key ;;
-    suggest_explore: suggest__first_startup__metrics__labeled_counter__glean_error_invalid_label
-    suggest_dimension: suggest__first_startup__metrics__labeled_counter__glean_error_invalid_label.key
-    hidden: no
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-
-  measure: count {
-    type: sum
-    sql: ${value} ;;
-    hidden: no
-  }
-
-  measure: client_count {
-    type: count_distinct
-    sql: case when ${value} > 0 then ${first_startup.client_info__client_id} end ;;
-    hidden: no
-  }
-}
-
-view: first_startup__metrics__labeled_counter__glean_error_invalid_overflow {
-  label: "Glean Error - Invalid Overflow"
-
-  dimension: document_id {
-    type: string
-    sql: ${first_startup.document_id} ;;
-    hidden: yes
-  }
-
-  dimension: document_label_id {
-    type: string
-    sql: ${first_startup.document_id}-${label} ;;
-    primary_key: yes
-    hidden: yes
-  }
-
-  dimension: label {
-    type: string
-    sql: ${TABLE}.key ;;
-    suggest_explore: suggest__first_startup__metrics__labeled_counter__glean_error_invalid_overflow
-    suggest_dimension: suggest__first_startup__metrics__labeled_counter__glean_error_invalid_overflow.key
-    hidden: no
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-
-  measure: count {
-    type: sum
-    sql: ${value} ;;
-    hidden: no
-  }
-
-  measure: client_count {
-    type: count_distinct
-    sql: case when ${value} > 0 then ${first_startup.client_info__client_id} end ;;
-    hidden: no
-  }
-}
-
-view: first_startup__metrics__labeled_counter__glean_error_invalid_state {
-  label: "Glean Error - Invalid State"
-
-  dimension: document_id {
-    type: string
-    sql: ${first_startup.document_id} ;;
-    hidden: yes
-  }
-
-  dimension: document_label_id {
-    type: string
-    sql: ${first_startup.document_id}-${label} ;;
-    primary_key: yes
-    hidden: yes
-  }
-
-  dimension: label {
-    type: string
-    sql: ${TABLE}.key ;;
-    suggest_explore: suggest__first_startup__metrics__labeled_counter__glean_error_invalid_state
-    suggest_dimension: suggest__first_startup__metrics__labeled_counter__glean_error_invalid_state.key
-    hidden: no
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-
-  measure: count {
-    type: sum
-    sql: ${value} ;;
-    hidden: no
-  }
-
-  measure: client_count {
-    type: count_distinct
-    sql: case when ${value} > 0 then ${first_startup.client_info__client_id} end ;;
-    hidden: no
-  }
-}
-
-view: first_startup__metrics__labeled_counter__glean_error_invalid_value {
-  label: "Glean Error - Invalid Value"
-
-  dimension: document_id {
-    type: string
-    sql: ${first_startup.document_id} ;;
-    hidden: yes
-  }
-
-  dimension: document_label_id {
-    type: string
-    sql: ${first_startup.document_id}-${label} ;;
-    primary_key: yes
-    hidden: yes
-  }
-
-  dimension: label {
-    type: string
-    sql: ${TABLE}.key ;;
-    suggest_explore: suggest__first_startup__metrics__labeled_counter__glean_error_invalid_value
-    suggest_dimension: suggest__first_startup__metrics__labeled_counter__glean_error_invalid_value.key
-    hidden: no
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
-  }
-
-  measure: count {
-    type: sum
-    sql: ${value} ;;
-    hidden: no
-  }
-
-  measure: client_count {
-    type: count_distinct
-    sql: case when ${value} > 0 then ${first_startup.client_info__client_id} end ;;
-    hidden: no
-  }
-}
-
-view: suggest__first_startup__metrics__labeled_counter__glean_error_invalid_label {
+view: suggest__user_characteristics__metrics__labeled_counter__glean_error_invalid_label {
   derived_table: {
     sql: select
     m.key,
     count(*) as n
-from mozdata.firefox_desktop.first_startup as t,
+from mozdata.firefox_desktop.user_characteristics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_label) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -845,12 +942,12 @@ order by n desc ;;
   }
 }
 
-view: suggest__first_startup__metrics__labeled_counter__glean_error_invalid_overflow {
+view: suggest__user_characteristics__metrics__labeled_counter__glean_error_invalid_overflow {
   derived_table: {
     sql: select
     m.key,
     count(*) as n
-from mozdata.firefox_desktop.first_startup as t,
+from mozdata.firefox_desktop.user_characteristics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -864,12 +961,12 @@ order by n desc ;;
   }
 }
 
-view: suggest__first_startup__metrics__labeled_counter__glean_error_invalid_state {
+view: suggest__user_characteristics__metrics__labeled_counter__glean_error_invalid_state {
   derived_table: {
     sql: select
     m.key,
     count(*) as n
-from mozdata.firefox_desktop.first_startup as t,
+from mozdata.firefox_desktop.user_characteristics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_state) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -883,12 +980,12 @@ order by n desc ;;
   }
 }
 
-view: suggest__first_startup__metrics__labeled_counter__glean_error_invalid_value {
+view: suggest__user_characteristics__metrics__labeled_counter__glean_error_invalid_value {
   derived_table: {
     sql: select
     m.key,
     count(*) as n
-from mozdata.firefox_desktop.first_startup as t,
+from mozdata.firefox_desktop.user_characteristics as t,
 unnest(metrics.labeled_counter.glean_error_invalid_value) as m
 where date(submission_timestamp) > date_sub(current_date, interval 30 day)
     and sample_id = 0
@@ -902,7 +999,179 @@ order by n desc ;;
   }
 }
 
-view: first_startup__events {
+view: user_characteristics__metrics__labeled_counter__glean_error_invalid_label {
+  label: "Glean Error - Invalid Label"
+
+  dimension: document_id {
+    type: string
+    sql: ${user_characteristics.document_id} ;;
+    hidden: yes
+  }
+
+  dimension: document_label_id {
+    type: string
+    sql: ${user_characteristics.document_id}-${label} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__user_characteristics__metrics__labeled_counter__glean_error_invalid_label
+    suggest_dimension: suggest__user_characteristics__metrics__labeled_counter__glean_error_invalid_label.key
+    hidden: no
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+    hidden: no
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${user_characteristics.client_info__client_id} end ;;
+    hidden: no
+  }
+}
+
+view: user_characteristics__metrics__labeled_counter__glean_error_invalid_overflow {
+  label: "Glean Error - Invalid Overflow"
+
+  dimension: document_id {
+    type: string
+    sql: ${user_characteristics.document_id} ;;
+    hidden: yes
+  }
+
+  dimension: document_label_id {
+    type: string
+    sql: ${user_characteristics.document_id}-${label} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__user_characteristics__metrics__labeled_counter__glean_error_invalid_overflow
+    suggest_dimension: suggest__user_characteristics__metrics__labeled_counter__glean_error_invalid_overflow.key
+    hidden: no
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+    hidden: no
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${user_characteristics.client_info__client_id} end ;;
+    hidden: no
+  }
+}
+
+view: user_characteristics__metrics__labeled_counter__glean_error_invalid_state {
+  label: "Glean Error - Invalid State"
+
+  dimension: document_id {
+    type: string
+    sql: ${user_characteristics.document_id} ;;
+    hidden: yes
+  }
+
+  dimension: document_label_id {
+    type: string
+    sql: ${user_characteristics.document_id}-${label} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__user_characteristics__metrics__labeled_counter__glean_error_invalid_state
+    suggest_dimension: suggest__user_characteristics__metrics__labeled_counter__glean_error_invalid_state.key
+    hidden: no
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+    hidden: no
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${user_characteristics.client_info__client_id} end ;;
+    hidden: no
+  }
+}
+
+view: user_characteristics__metrics__labeled_counter__glean_error_invalid_value {
+  label: "Glean Error - Invalid Value"
+
+  dimension: document_id {
+    type: string
+    sql: ${user_characteristics.document_id} ;;
+    hidden: yes
+  }
+
+  dimension: document_label_id {
+    type: string
+    sql: ${user_characteristics.document_id}-${label} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    suggest_explore: suggest__user_characteristics__metrics__labeled_counter__glean_error_invalid_value
+    suggest_dimension: suggest__user_characteristics__metrics__labeled_counter__glean_error_invalid_value.key
+    hidden: no
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+    hidden: no
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${user_characteristics.client_info__client_id} end ;;
+    hidden: no
+  }
+}
+
+view: user_characteristics__events {
   dimension: category {
     sql: ${TABLE}.category ;;
     type: string
@@ -924,7 +1193,7 @@ view: first_startup__events {
   }
 }
 
-view: first_startup__events__extra {
+view: user_characteristics__events__extra {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -936,7 +1205,7 @@ view: first_startup__events__extra {
   }
 }
 
-view: first_startup__ping_info__experiments {
+view: user_characteristics__ping_info__experiments {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

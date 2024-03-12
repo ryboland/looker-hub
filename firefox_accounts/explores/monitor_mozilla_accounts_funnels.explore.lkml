@@ -4,11 +4,11 @@
 # This file has been generated via https://github.com/mozilla/lookml-generator
 # You can extend this view in the looker-spoke-default project (https://github.com/mozilla/looker-spoke-default)
 
-include: "/looker-hub/firefox_ios/views/firefox_ios_clients.view.lkml"
+include: "/looker-hub/firefox_accounts/views/monitor_mozilla_accounts_funnels.view.lkml"
 
-explore: firefox_ios_clients {
-  sql_always_where: ${firefox_ios_clients.submission_date} >= '2010-01-01' ;;
-  view_name: firefox_ios_clients
+explore: monitor_mozilla_accounts_funnels {
+  sql_always_where: ${monitor_mozilla_accounts_funnels.submission_date} >= '2010-01-01' ;;
+  view_name: monitor_mozilla_accounts_funnels
 
   always_filter: {
     filters: [
