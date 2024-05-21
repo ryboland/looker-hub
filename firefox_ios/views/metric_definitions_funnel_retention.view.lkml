@@ -190,22 +190,6 @@ funnel_retention_retained_week_4,
     group_label: "Base Fields"
   }
 
-  dimension: first_seen {
-    sql: ${TABLE}.funnel_retention_first_seen ;;
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year,
-    ]
-    convert_tz: no
-    datatype: date
-    group_label: "Base Fields"
-  }
-
   dimension: new_profiles {
     sql: ${TABLE}.funnel_retention_new_profiles ;;
     type: number
@@ -237,6 +221,22 @@ funnel_retention_retained_week_4,
       quarter,
       year,
     ]
+  }
+
+  dimension_group: first_seen {
+    sql: ${TABLE}.funnel_retention_first_seen ;;
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year,
+    ]
+    convert_tz: no
+    datatype: date
+    group_label: "Base Fields"
   }
 
   set: metrics {

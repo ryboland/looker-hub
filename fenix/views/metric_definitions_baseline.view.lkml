@@ -478,22 +478,6 @@ looker_base_fields_sample_id,
     group_item_label: "Dnt"
   }
 
-  dimension: metadata__header__parsed {
-    sql: ${TABLE}.looker_base_fields_metadata__header__parsed ;;
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year,
-    ]
-    label: "Metadata Header: Parsed Date"
-    group_label: "Base Fields"
-  }
-
   dimension: metadata__header__parsed_x_lb_tags__tls_cipher_hex {
     sql: ${TABLE}.looker_base_fields_metadata__header__parsed_x_lb_tags__tls_cipher_hex ;;
     type: string
@@ -653,6 +637,22 @@ looker_base_fields_sample_id,
       quarter,
       year,
     ]
+  }
+
+  dimension_group: metadata__header__parsed {
+    sql: ${TABLE}.looker_base_fields_metadata__header__parsed ;;
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year,
+    ]
+    label: "Metadata Header: Parsed Date"
+    group_label: "Base Fields"
   }
 
   measure: active_hours_average {

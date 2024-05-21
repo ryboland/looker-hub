@@ -302,22 +302,6 @@ desktop_cohort_daily_retention_vendor,
     group_label: "Base Fields"
   }
 
-  dimension: first_seen {
-    sql: ${TABLE}.desktop_cohort_daily_retention_first_seen ;;
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year,
-    ]
-    convert_tz: no
-    datatype: date
-    group_label: "Base Fields"
-  }
-
   dimension: locale {
     sql: ${TABLE}.desktop_cohort_daily_retention_locale ;;
     type: string
@@ -475,6 +459,22 @@ desktop_cohort_daily_retention_vendor,
       quarter,
       year,
     ]
+  }
+
+  dimension_group: first_seen {
+    sql: ${TABLE}.desktop_cohort_daily_retention_first_seen ;;
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year,
+    ]
+    convert_tz: no
+    datatype: date
+    group_label: "Base Fields"
   }
 
   set: metrics {

@@ -774,22 +774,6 @@ feature_usage_metrics_v1_ping,
     group_label: "Base Fields"
   }
 
-  dimension: ping {
-    sql: ${TABLE}.feature_usage_metrics_v1_ping ;;
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year,
-    ]
-    convert_tz: no
-    datatype: date
-    group_label: "Base Fields"
-  }
-
   dimension_group: submission {
     type: time
     group_label: "Base Fields"
@@ -803,6 +787,22 @@ feature_usage_metrics_v1_ping,
       quarter,
       year,
     ]
+  }
+
+  dimension_group: ping {
+    sql: ${TABLE}.feature_usage_metrics_v1_ping ;;
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year,
+    ]
+    convert_tz: no
+    datatype: date
+    group_label: "Base Fields"
   }
 
   measure: bookmarks_add_v1_sum {

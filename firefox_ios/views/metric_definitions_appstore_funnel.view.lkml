@@ -136,22 +136,6 @@ appstore_funnel_total_downloads,
     group_label: "Base Fields"
   }
 
-  dimension: first_seen {
-    sql: ${TABLE}.appstore_funnel_first_seen ;;
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year,
-    ]
-    convert_tz: no
-    datatype: date
-    group_label: "Base Fields"
-  }
-
   dimension: first_time_downloads {
     sql: ${TABLE}.appstore_funnel_first_time_downloads ;;
     type: number
@@ -189,6 +173,22 @@ appstore_funnel_total_downloads,
       quarter,
       year,
     ]
+  }
+
+  dimension_group: first_seen {
+    sql: ${TABLE}.appstore_funnel_first_seen ;;
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year,
+    ]
+    convert_tz: no
+    datatype: date
+    group_label: "Base Fields"
   }
 
   set: metrics {
