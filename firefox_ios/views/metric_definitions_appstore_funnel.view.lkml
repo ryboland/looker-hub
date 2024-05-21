@@ -11,7 +11,6 @@ view: metric_definitions_appstore_funnel {
 SUM(total_downloads) AS downloads,
 
                 appstore_funnel_country,
-appstore_funnel_first_seen,
 appstore_funnel_first_time_downloads,
 appstore_funnel_new_profiles,
 appstore_funnel_redownloads,
@@ -49,7 +48,6 @@ appstore_funnel_total_downloads,
                     SELECT
                         appstore_funnel.*,
                         appstore_funnel.country AS appstore_funnel_country,
-appstore_funnel.first_seen AS appstore_funnel_first_seen,
 appstore_funnel.first_time_downloads AS appstore_funnel_first_time_downloads,
 appstore_funnel.new_profiles AS appstore_funnel_new_profiles,
 appstore_funnel.redownloads AS appstore_funnel_redownloads,
@@ -57,10 +55,6 @@ appstore_funnel.total_downloads AS appstore_funnel_total_downloads,
 
                     FROM
                     (
-SELECT
-    *
-FROM
-    (
             SELECT
                 *
             FROM
@@ -70,7 +64,6 @@ FROM
 )
             ) AS appstore_funnel
         
-)
                     WHERE 
                     appstore_funnel.submission_date
                     BETWEEN
@@ -86,7 +79,6 @@ FROM
                 )
             GROUP BY
                 appstore_funnel_country,
-appstore_funnel_first_seen,
 appstore_funnel_first_time_downloads,
 appstore_funnel_new_profiles,
 appstore_funnel_redownloads,
@@ -173,22 +165,6 @@ appstore_funnel_total_downloads,
       quarter,
       year,
     ]
-  }
-
-  dimension_group: first_seen {
-    sql: ${TABLE}.appstore_funnel_first_seen ;;
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year,
-    ]
-    convert_tz: no
-    datatype: date
-    group_label: "Base Fields"
   }
 
   set: metrics {

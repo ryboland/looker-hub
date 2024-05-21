@@ -24,7 +24,6 @@ desktop_cohort_daily_retention_city,
 desktop_cohort_daily_retention_country,
 desktop_cohort_daily_retention_db_version,
 desktop_cohort_daily_retention_distribution_id,
-desktop_cohort_daily_retention_first_seen,
 desktop_cohort_daily_retention_locale,
 desktop_cohort_daily_retention_normalized_app_name,
 desktop_cohort_daily_retention_normalized_channel,
@@ -93,7 +92,6 @@ desktop_cohort_daily_retention.city AS desktop_cohort_daily_retention_city,
 desktop_cohort_daily_retention.country AS desktop_cohort_daily_retention_country,
 desktop_cohort_daily_retention.db_version AS desktop_cohort_daily_retention_db_version,
 desktop_cohort_daily_retention.distribution_id AS desktop_cohort_daily_retention_distribution_id,
-desktop_cohort_daily_retention.first_seen AS desktop_cohort_daily_retention_first_seen,
 desktop_cohort_daily_retention.locale AS desktop_cohort_daily_retention_locale,
 desktop_cohort_daily_retention.normalized_app_name AS desktop_cohort_daily_retention_normalized_app_name,
 desktop_cohort_daily_retention.normalized_channel AS desktop_cohort_daily_retention_normalized_channel,
@@ -121,17 +119,12 @@ desktop_cohort_daily_retention.vendor AS desktop_cohort_daily_retention_vendor,
 
                     FROM
                     (
-SELECT
-    *
-FROM
-    (
             SELECT
                 *
             FROM
                 `moz-fx-data-shared-prod.telemetry.desktop_cohort_daily_retention`
             ) AS desktop_cohort_daily_retention
         
-)
                     WHERE 
                     desktop_cohort_daily_retention.submission_date
                     BETWEEN
@@ -158,7 +151,6 @@ desktop_cohort_daily_retention_city,
 desktop_cohort_daily_retention_country,
 desktop_cohort_daily_retention_db_version,
 desktop_cohort_daily_retention_distribution_id,
-desktop_cohort_daily_retention_first_seen,
 desktop_cohort_daily_retention_locale,
 desktop_cohort_daily_retention_normalized_app_name,
 desktop_cohort_daily_retention_normalized_channel,
@@ -459,22 +451,6 @@ desktop_cohort_daily_retention_vendor,
       quarter,
       year,
     ]
-  }
-
-  dimension_group: first_seen {
-    sql: ${TABLE}.desktop_cohort_daily_retention_first_seen ;;
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year,
-    ]
-    convert_tz: no
-    datatype: date
-    group_label: "Base Fields"
   }
 
   set: metrics {

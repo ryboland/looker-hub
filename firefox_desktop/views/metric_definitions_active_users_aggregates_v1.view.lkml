@@ -105,10 +105,6 @@ active_users_aggregates_v1.wau AS active_users_aggregates_v1_wau,
 
                     FROM
                     (
-SELECT
-    *
-FROM
-    (
             SELECT
                 *
             FROM
@@ -119,7 +115,6 @@ FROM
 )
             ) AS active_users_aggregates_v1
         
-)
                     WHERE 
                     active_users_aggregates_v1.submission_date
                     BETWEEN

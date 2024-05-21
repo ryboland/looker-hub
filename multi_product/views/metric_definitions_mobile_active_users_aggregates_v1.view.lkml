@@ -105,10 +105,6 @@ mobile_active_users_aggregates_v1.wau AS mobile_active_users_aggregates_v1_wau,
 
                     FROM
                     (
-SELECT
-    *
-FROM
-    (
             SELECT
                 *
             FROM
@@ -119,7 +115,6 @@ FROM
 )
             ) AS mobile_active_users_aggregates_v1
         
-)
                     WHERE 
                     mobile_active_users_aggregates_v1.submission_date
                     BETWEEN

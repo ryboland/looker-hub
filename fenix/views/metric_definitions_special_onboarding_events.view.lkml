@@ -35,7 +35,6 @@ looker_base_fields_metadata__geo__subdivision1,
 looker_base_fields_metadata__geo__subdivision2,
 looker_base_fields_metadata__header__date,
 looker_base_fields_metadata__header__dnt,
-looker_base_fields_metadata__header__parsed,
 looker_base_fields_metadata__header__parsed_x_lb_tags__tls_cipher_hex,
 looker_base_fields_metadata__header__parsed_x_lb_tags__tls_version,
 looker_base_fields_metadata__header__x_debug_id,
@@ -89,44 +88,43 @@ looker_base_fields_sample_id,
                 (
                     SELECT
                         special_onboarding_events.*,
-                        looker_base_fields.client_info__android_sdk_version AS looker_base_fields_client_info__android_sdk_version,
-looker_base_fields.client_info__app_build AS looker_base_fields_client_info__app_build,
-looker_base_fields.client_info__app_channel AS looker_base_fields_client_info__app_channel,
-looker_base_fields.client_info__app_display_version AS looker_base_fields_client_info__app_display_version,
-looker_base_fields.client_info__architecture AS looker_base_fields_client_info__architecture,
-looker_base_fields.client_info__build_date AS looker_base_fields_client_info__build_date,
-looker_base_fields.client_info__device_manufacturer AS looker_base_fields_client_info__device_manufacturer,
-looker_base_fields.client_info__device_model AS looker_base_fields_client_info__device_model,
-looker_base_fields.client_info__first_run_date AS looker_base_fields_client_info__first_run_date,
-looker_base_fields.client_info__locale AS looker_base_fields_client_info__locale,
-looker_base_fields.client_info__os AS looker_base_fields_client_info__os,
-looker_base_fields.client_info__os_version AS looker_base_fields_client_info__os_version,
-looker_base_fields.client_info__session_count AS looker_base_fields_client_info__session_count,
-looker_base_fields.client_info__session_id AS looker_base_fields_client_info__session_id,
-looker_base_fields.client_info__telemetry_sdk_build AS looker_base_fields_client_info__telemetry_sdk_build,
-looker_base_fields.client_info__windows_build_number AS looker_base_fields_client_info__windows_build_number,
-looker_base_fields.metadata__geo__city AS looker_base_fields_metadata__geo__city,
-looker_base_fields.metadata__geo__country AS looker_base_fields_metadata__geo__country,
-looker_base_fields.metadata__geo__db_version AS looker_base_fields_metadata__geo__db_version,
-looker_base_fields.metadata__geo__subdivision1 AS looker_base_fields_metadata__geo__subdivision1,
-looker_base_fields.metadata__geo__subdivision2 AS looker_base_fields_metadata__geo__subdivision2,
-looker_base_fields.metadata__header__date AS looker_base_fields_metadata__header__date,
-looker_base_fields.metadata__header__dnt AS looker_base_fields_metadata__header__dnt,
-looker_base_fields.metadata__header__parsed AS looker_base_fields_metadata__header__parsed,
-looker_base_fields.metadata__header__parsed_x_lb_tags__tls_cipher_hex AS looker_base_fields_metadata__header__parsed_x_lb_tags__tls_cipher_hex,
-looker_base_fields.metadata__header__parsed_x_lb_tags__tls_version AS looker_base_fields_metadata__header__parsed_x_lb_tags__tls_version,
-looker_base_fields.metadata__header__x_debug_id AS looker_base_fields_metadata__header__x_debug_id,
-looker_base_fields.metadata__header__x_foxsec_ip_reputation AS looker_base_fields_metadata__header__x_foxsec_ip_reputation,
-looker_base_fields.metadata__header__x_lb_tags AS looker_base_fields_metadata__header__x_lb_tags,
-looker_base_fields.metadata__header__x_pingsender_version AS looker_base_fields_metadata__header__x_pingsender_version,
-looker_base_fields.metadata__header__x_source_tags AS looker_base_fields_metadata__header__x_source_tags,
-looker_base_fields.metadata__header__x_telemetry_agent AS looker_base_fields_metadata__header__x_telemetry_agent,
-looker_base_fields.metadata__isp__db_version AS looker_base_fields_metadata__isp__db_version,
-looker_base_fields.metadata__isp__name AS looker_base_fields_metadata__isp__name,
-looker_base_fields.metadata__isp__organization AS looker_base_fields_metadata__isp__organization,
-looker_base_fields.metadata__user_agent__browser AS looker_base_fields_metadata__user_agent__browser,
-looker_base_fields.metadata__user_agent__os AS looker_base_fields_metadata__user_agent__os,
-looker_base_fields.metadata__user_agent__version AS looker_base_fields_metadata__user_agent__version,
+                        looker_base_fields.client_info.android_sdk_version AS looker_base_fields_client_info__android_sdk_version,
+looker_base_fields.client_info.app_build AS looker_base_fields_client_info__app_build,
+looker_base_fields.client_info.app_channel AS looker_base_fields_client_info__app_channel,
+looker_base_fields.client_info.app_display_version AS looker_base_fields_client_info__app_display_version,
+looker_base_fields.client_info.architecture AS looker_base_fields_client_info__architecture,
+looker_base_fields.client_info.build_date AS looker_base_fields_client_info__build_date,
+looker_base_fields.client_info.device_manufacturer AS looker_base_fields_client_info__device_manufacturer,
+looker_base_fields.client_info.device_model AS looker_base_fields_client_info__device_model,
+looker_base_fields.client_info.first_run_date AS looker_base_fields_client_info__first_run_date,
+looker_base_fields.client_info.locale AS looker_base_fields_client_info__locale,
+looker_base_fields.client_info.os AS looker_base_fields_client_info__os,
+looker_base_fields.client_info.os_version AS looker_base_fields_client_info__os_version,
+looker_base_fields.client_info.session_count AS looker_base_fields_client_info__session_count,
+looker_base_fields.client_info.session_id AS looker_base_fields_client_info__session_id,
+looker_base_fields.client_info.telemetry_sdk_build AS looker_base_fields_client_info__telemetry_sdk_build,
+looker_base_fields.client_info.windows_build_number AS looker_base_fields_client_info__windows_build_number,
+looker_base_fields.metadata.geo.city AS looker_base_fields_metadata__geo__city,
+looker_base_fields.metadata.geo.country AS looker_base_fields_metadata__geo__country,
+looker_base_fields.metadata.geo.db_version AS looker_base_fields_metadata__geo__db_version,
+looker_base_fields.metadata.geo.subdivision1 AS looker_base_fields_metadata__geo__subdivision1,
+looker_base_fields.metadata.geo.subdivision2 AS looker_base_fields_metadata__geo__subdivision2,
+looker_base_fields.metadata.header.date AS looker_base_fields_metadata__header__date,
+looker_base_fields.metadata.header.dnt AS looker_base_fields_metadata__header__dnt,
+looker_base_fields.metadata.header.parsed_x_lb_tags.tls_cipher_hex AS looker_base_fields_metadata__header__parsed_x_lb_tags__tls_cipher_hex,
+looker_base_fields.metadata.header.parsed_x_lb_tags.tls_version AS looker_base_fields_metadata__header__parsed_x_lb_tags__tls_version,
+looker_base_fields.metadata.header.x_debug_id AS looker_base_fields_metadata__header__x_debug_id,
+looker_base_fields.metadata.header.x_foxsec_ip_reputation AS looker_base_fields_metadata__header__x_foxsec_ip_reputation,
+looker_base_fields.metadata.header.x_lb_tags AS looker_base_fields_metadata__header__x_lb_tags,
+looker_base_fields.metadata.header.x_pingsender_version AS looker_base_fields_metadata__header__x_pingsender_version,
+looker_base_fields.metadata.header.x_source_tags AS looker_base_fields_metadata__header__x_source_tags,
+looker_base_fields.metadata.header.x_telemetry_agent AS looker_base_fields_metadata__header__x_telemetry_agent,
+looker_base_fields.metadata.isp.db_version AS looker_base_fields_metadata__isp__db_version,
+looker_base_fields.metadata.isp.name AS looker_base_fields_metadata__isp__name,
+looker_base_fields.metadata.isp.organization AS looker_base_fields_metadata__isp__organization,
+looker_base_fields.metadata.user_agent.browser AS looker_base_fields_metadata__user_agent__browser,
+looker_base_fields.metadata.user_agent.os AS looker_base_fields_metadata__user_agent__os,
+looker_base_fields.metadata.user_agent.version AS looker_base_fields_metadata__user_agent__version,
 looker_base_fields.normalized_app_id AS looker_base_fields_normalized_app_id,
 looker_base_fields.normalized_app_name AS looker_base_fields_normalized_app_name,
 looker_base_fields.normalized_channel AS looker_base_fields_normalized_channel,
@@ -137,10 +135,6 @@ looker_base_fields.sample_id AS looker_base_fields_sample_id,
 
                     FROM
                     (
-SELECT
-    *
-FROM
-    (
             SELECT
                 *
             FROM
@@ -195,9 +189,8 @@ GROUP BY 1, 2, 3, 4, 5, 6
 )
 
             ) AS special_onboarding_events
-        INNER JOIN
+        JOIN
     (
-        (
             SELECT
                 *
             FROM
@@ -207,19 +200,18 @@ GROUP BY 1, 2, 3, 4, 5, 6
     DATE(submission_timestamp) AS submission_date,
     * EXCEPT(ping_info, metrics, events, additional_properties)
   FROM
-    moz-fx-data-shared-prod.fenix.baseline
+    `moz-fx-data-shared-prod`.fenix.baseline
 )
 
             ) AS looker_base_fields
         
-    ) ON 
-    special_onboarding_events.client_id ==
+    ON 
+    special_onboarding_events.client_id =
         looker_base_fields.client_id AND
-        special_onboarding_events.submission_date ==
+        special_onboarding_events.submission_date =
         looker_base_fields.submission_date
     
             
-)
                     WHERE 
                     special_onboarding_events.submission_date
                     BETWEEN
@@ -271,7 +263,6 @@ looker_base_fields_metadata__geo__subdivision1,
 looker_base_fields_metadata__geo__subdivision2,
 looker_base_fields_metadata__header__date,
 looker_base_fields_metadata__header__dnt,
-looker_base_fields_metadata__header__parsed,
 looker_base_fields_metadata__header__parsed_x_lb_tags__tls_cipher_hex,
 looker_base_fields_metadata__header__parsed_x_lb_tags__tls_version,
 looker_base_fields_metadata__header__x_debug_id,
@@ -672,22 +663,6 @@ looker_base_fields_sample_id,
       quarter,
       year,
     ]
-  }
-
-  dimension_group: metadata__header__parsed {
-    sql: ${TABLE}.looker_base_fields_metadata__header__parsed ;;
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year,
-    ]
-    label: "Metadata Header: Parsed Date"
-    group_label: "Base Fields"
   }
 
   set: metrics {

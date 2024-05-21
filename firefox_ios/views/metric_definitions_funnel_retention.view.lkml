@@ -17,7 +17,6 @@ funnel_retention_adjust_creative,
 funnel_retention_adjust_network,
 funnel_retention_first_reported_country,
 funnel_retention_first_reported_isp,
-funnel_retention_first_seen,
 funnel_retention_new_profiles,
 funnel_retention_repeat_user,
 funnel_retention_retained_week_4,
@@ -59,17 +58,12 @@ funnel_retention.adjust_creative AS funnel_retention_adjust_creative,
 funnel_retention.adjust_network AS funnel_retention_adjust_network,
 funnel_retention.first_reported_country AS funnel_retention_first_reported_country,
 funnel_retention.first_reported_isp AS funnel_retention_first_reported_isp,
-funnel_retention.first_seen AS funnel_retention_first_seen,
 funnel_retention.new_profiles AS funnel_retention_new_profiles,
 funnel_retention.repeat_user AS funnel_retention_repeat_user,
 funnel_retention.retained_week_4 AS funnel_retention_retained_week_4,
 
                     FROM
                     (
-SELECT
-    *
-FROM
-    (
             SELECT
                 *
             FROM
@@ -79,7 +73,6 @@ FROM
 )
             ) AS funnel_retention
         
-)
                     WHERE 
                     funnel_retention.submission_date
                     BETWEEN
@@ -100,7 +93,6 @@ funnel_retention_adjust_creative,
 funnel_retention_adjust_network,
 funnel_retention_first_reported_country,
 funnel_retention_first_reported_isp,
-funnel_retention_first_seen,
 funnel_retention_new_profiles,
 funnel_retention_repeat_user,
 funnel_retention_retained_week_4,
@@ -221,22 +213,6 @@ funnel_retention_retained_week_4,
       quarter,
       year,
     ]
-  }
-
-  dimension_group: first_seen {
-    sql: ${TABLE}.funnel_retention_first_seen ;;
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year,
-    ]
-    convert_tz: no
-    datatype: date
-    group_label: "Base Fields"
   }
 
   set: metrics {

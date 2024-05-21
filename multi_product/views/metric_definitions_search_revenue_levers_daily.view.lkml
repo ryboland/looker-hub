@@ -80,17 +80,12 @@ search_revenue_levers_daily.tagged_sap AS search_revenue_levers_daily_tagged_sap
 
                     FROM
                     (
-SELECT
-    *
-FROM
-    (
             SELECT
                 *
             FROM
                 mozdata.search.search_revenue_levers_daily
             ) AS search_revenue_levers_daily
         
-)
                     WHERE 
                     search_revenue_levers_daily.submission_date
                     BETWEEN

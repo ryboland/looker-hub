@@ -83,7 +83,6 @@ feature_usage_metrics_v1_metrics_private_tabs_open_count,
 feature_usage_metrics_v1_metrics_private_tabs_open_count_users,
 feature_usage_metrics_v1_metrics_tabs_open_count,
 feature_usage_metrics_v1_metrics_tabs_open_count_users,
-feature_usage_metrics_v1_ping,
 
                 NULL AS client_id,
                 {% if aggregate_metrics_by._parameter_value == 'day' %}
@@ -186,14 +185,9 @@ feature_usage_metrics_v1.metrics_private_tabs_open_count AS feature_usage_metric
 feature_usage_metrics_v1.metrics_private_tabs_open_count_users AS feature_usage_metrics_v1_metrics_private_tabs_open_count_users,
 feature_usage_metrics_v1.metrics_tabs_open_count AS feature_usage_metrics_v1_metrics_tabs_open_count,
 feature_usage_metrics_v1.metrics_tabs_open_count_users AS feature_usage_metrics_v1_metrics_tabs_open_count_users,
-feature_usage_metrics_v1.ping AS feature_usage_metrics_v1_ping,
 
                     FROM
                     (
-SELECT
-    *
-FROM
-    (
             SELECT
                 *
             FROM
@@ -213,7 +207,6 @@ FROM
 )
             ) AS feature_usage_metrics_v1
         
-)
                     WHERE 
                     feature_usage_metrics_v1.submission_date
                     BETWEEN
@@ -298,7 +291,6 @@ feature_usage_metrics_v1_metrics_private_tabs_open_count,
 feature_usage_metrics_v1_metrics_private_tabs_open_count_users,
 feature_usage_metrics_v1_metrics_tabs_open_count,
 feature_usage_metrics_v1_metrics_tabs_open_count_users,
-feature_usage_metrics_v1_ping,
 
                 client_id,
                 analysis_basis ;;
@@ -787,22 +779,6 @@ feature_usage_metrics_v1_ping,
       quarter,
       year,
     ]
-  }
-
-  dimension_group: ping {
-    sql: ${TABLE}.feature_usage_metrics_v1_ping ;;
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year,
-    ]
-    convert_tz: no
-    datatype: date
-    group_label: "Base Fields"
   }
 
   measure: bookmarks_add_v1_sum {

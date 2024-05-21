@@ -18,7 +18,6 @@ looker_base_fields_is_default_browser,
 looker_base_fields_locale,
 looker_base_fields_normalized_channel,
 looker_base_fields_normalized_os_version,
-looker_base_fields_normalized_os_version_1,
 looker_base_fields_os,
 looker_base_fields_partner_id,
 looker_base_fields_sample_id,
@@ -63,17 +62,12 @@ looker_base_fields.is_default_browser AS looker_base_fields_is_default_browser,
 looker_base_fields.locale AS looker_base_fields_locale,
 looker_base_fields.normalized_channel AS looker_base_fields_normalized_channel,
 looker_base_fields.normalized_os_version AS looker_base_fields_normalized_os_version,
-looker_base_fields.normalized_os_version_1 AS looker_base_fields_normalized_os_version_1,
 looker_base_fields.os AS looker_base_fields_os,
 looker_base_fields.partner_id AS looker_base_fields_partner_id,
 looker_base_fields.sample_id AS looker_base_fields_sample_id,
 
                     FROM
                     (
-SELECT
-    *
-FROM
-    (
             SELECT
                 *
             FROM
@@ -88,9 +82,8 @@ FROM
     )
 
             ) AS events_memory
-        INNER JOIN
+        JOIN
     (
-        (
             SELECT
                 *
             FROM
@@ -105,7 +98,6 @@ FROM
     country,
     experiments,
     os,
-    normalized_os_version,
     locale,
     is_default_browser,
     partner_id,
@@ -113,19 +105,18 @@ FROM
     default_search_engine,
     normalized_os_version
   FROM
-    moz-fx-data-shared-prod.telemetry_derived.clients_daily_v6
+    `moz-fx-data-shared-prod`.telemetry_derived.clients_daily_v6
 )
 
             ) AS looker_base_fields
         
-    ) ON 
-    events_memory.client_id ==
+    ON 
+    events_memory.client_id =
         looker_base_fields.client_id AND
-        events_memory.submission_date ==
+        events_memory.submission_date =
         looker_base_fields.submission_date
     
             
-)
                     WHERE 
                     events_memory.submission_date
                     BETWEEN
@@ -163,7 +154,6 @@ looker_base_fields_is_default_browser,
 looker_base_fields_locale,
 looker_base_fields_normalized_channel,
 looker_base_fields_normalized_os_version,
-looker_base_fields_normalized_os_version_1,
 looker_base_fields_os,
 looker_base_fields_partner_id,
 looker_base_fields_sample_id,
@@ -246,12 +236,6 @@ looker_base_fields_sample_id,
 
   dimension: normalized_os_version {
     sql: ${TABLE}.looker_base_fields_normalized_os_version ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: normalized_os_version_1 {
-    sql: ${TABLE}.looker_base_fields_normalized_os_version_1 ;;
     type: string
     group_label: "Base Fields"
   }
