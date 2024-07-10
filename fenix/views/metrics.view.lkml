@@ -3754,6 +3754,24 @@ ensure it's not too expensive.  This value is only available on Android
 "
   }
 
+  dimension: metrics__custom_distribution__bounce_tracking_protection_num_hosts_per_purge_run__sum {
+    label: "Bounce Tracking Protection Num Hosts Per Purge Run Sum"
+    hidden: no
+    sql: ${TABLE}.metrics.custom_distribution.bounce_tracking_protection_num_hosts_per_purge_run.sum ;;
+    type: number
+    group_label: "Bounce Tracking Protection"
+    group_item_label: "Num Hosts Per Purge Run Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Bounce Tracking Protection Num Hosts Per Purge Run Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/bounce_tracking_protection_num_hosts_per_purge_run"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Number of bounce trackers purged successfully per scheduled purge.
+"
+  }
+
   dimension: metrics__labeled_counter__bounce_tracking_protection_purge_count {
     label: "Bounce Tracking Protection Purge Count"
     hidden: yes
@@ -3885,6 +3903,23 @@ ensure it's not too expensive.  This value is only available on Android
     link: {
       label: "Glean Dictionary reference for Cert Compression Zlib Saved Bytes Sum"
       url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/cert_compression_zlib_saved_bytes"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The difference between the length of encoded certificate vs the actual certificate."
+  }
+
+  dimension: metrics__custom_distribution__cert_compression_zstd_saved_bytes__sum {
+    label: "Cert Compression Zstd Saved Bytes Sum"
+    hidden: no
+    sql: ${TABLE}.metrics.custom_distribution.cert_compression_zstd_saved_bytes.sum ;;
+    type: number
+    group_label: "Cert Compression"
+    group_item_label: "Zstd Saved Bytes Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Cert Compression Zstd Saved Bytes Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/cert_compression_zstd_saved_bytes"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
 
@@ -4669,7 +4704,7 @@ builds.
 
   dimension: metrics__string__extensions_quarantined_domains_listhash {
     label: "Extensions Quarantined Domains Listhash"
-    hidden: no
+    hidden: yes
     sql: ${TABLE}.metrics.string.extensions_quarantined_domains_listhash ;;
     type: string
     group_label: "Extensions Quarantined Domains"
@@ -4687,7 +4722,7 @@ builds.
 
   dimension: metrics__quantity__extensions_quarantined_domains_listsize {
     label: "Extensions Quarantined Domains Listsize"
-    hidden: no
+    hidden: yes
     sql: ${TABLE}.metrics.quantity.extensions_quarantined_domains_listsize ;;
     type: number
     group_label: "Extensions Quarantined Domains"
@@ -4705,7 +4740,7 @@ builds.
 
   dimension: metrics__string__extensions_quarantined_domains_remotehash {
     label: "Extensions Quarantined Domains Remotehash"
-    hidden: no
+    hidden: yes
     sql: ${TABLE}.metrics.string.extensions_quarantined_domains_remotehash ;;
     type: string
     group_label: "Extensions Quarantined Domains"
@@ -6937,6 +6972,41 @@ To be used to validate GIFFT.
 "
   }
 
+  dimension: metrics__labeled_counter__netwerk_eh_response_version {
+    label: "Netwerk Eh Response Version"
+    hidden: yes
+    sql: ${TABLE}.metrics.labeled_counter.netwerk_eh_response_version ;;
+    group_label: "Netwerk"
+    group_item_label: "Eh Response Version"
+
+    link: {
+      label: "Glean Dictionary reference for Netwerk Eh Response Version"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/netwerk_eh_response_version"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "HTTP protocol version from Early Hints response
+"
+  }
+
+  dimension: metrics__counter__netwerk_parent_connect_timeout {
+    label: "Netwerk Parent Connect Timeout"
+    hidden: no
+    sql: ${TABLE}.metrics.counter.netwerk_parent_connect_timeout ;;
+    type: number
+    group_label: "Netwerk"
+    group_item_label: "Parent Connect Timeout"
+
+    link: {
+      label: "Glean Dictionary reference for Netwerk Parent Connect Timeout"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/netwerk_parent_connect_timeout"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Counts how often the parent-connect-timeout timer is necessary to clear up EarlyHintPreloader
+"
+  }
+
   dimension: metrics__labeled_counter__network_byte_range_request {
     label: "Network Byte Range Request"
     hidden: yes
@@ -7216,6 +7286,24 @@ To be used to validate GIFFT.
     }
 
     description: "If we fix up a cookie lastAccessed timestamp that is in the future this metric records the number of seconds that timestamp was off from NOW.
+"
+  }
+
+  dimension: metrics__custom_distribution__networking_cookie_chips_partition_limit_overflow__sum {
+    label: "Networking Cookie Chips Partition Limit Overflow Sum"
+    hidden: no
+    sql: ${TABLE}.metrics.custom_distribution.networking_cookie_chips_partition_limit_overflow.sum ;;
+    type: number
+    group_label: "Networking"
+    group_item_label: "Cookie Chips Partition Limit Overflow Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Networking Cookie Chips Partition Limit Overflow Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/networking_cookie_chips_partition_limit_overflow"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The number of cookie bytes exceeding chips partition limit capacity for a single partition
 "
   }
 
@@ -8175,6 +8263,23 @@ To be used to validate GIFFT.
     }
 
     description: "Count of the HTTP redirection that triggered by top-level document, keyed by the URL scheme redirected to
+"
+  }
+
+  dimension: metrics__labeled_counter__networking_http_response_status_code {
+    label: "Networking Http Response Status Code"
+    hidden: yes
+    sql: ${TABLE}.metrics.labeled_counter.networking_http_response_status_code ;;
+    group_label: "Networking"
+    group_item_label: "Http Response Status Code"
+
+    link: {
+      label: "Glean Dictionary reference for Networking Http Response Status Code"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/networking_http_response_status_code"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "HTTP Response Status Code (200, 301, 302, 304, 307, 308, 400, 401, 403, 404, 421, 425, 429, other 400 and 500)
 "
   }
 
@@ -9436,6 +9541,95 @@ To be used to validate GIFFT.
 
     description: "Time from navigationStart to responseStart as per the W3C Performance Timing API. (Migrated from the geckoview metric of the same name.)
 "
+  }
+
+  dimension: metrics__rate__pkcs11_built_in_roots_module__numerator {
+    label: "Pkcs11 Built In Roots Module Numerator"
+    hidden: yes
+    sql: ${TABLE}.metrics.rate.pkcs11_built_in_roots_module.numerator ;;
+    type: number
+    group_label: "Pkcs11"
+    group_item_label: "Built In Roots Module Numerator"
+
+    link: {
+      label: "Glean Dictionary reference for Pkcs11 Built In Roots Module Numerator"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/pkcs11_built_in_roots_module"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "How many successfully-built certificate chains used a certificate from the built-in roots module.
+"
+  }
+
+  dimension: metrics__rate__pkcs11_built_in_roots_module__denominator {
+    label: "Pkcs11 Built In Roots Module Denominator"
+    hidden: yes
+    sql: ${TABLE}.metrics.rate.pkcs11_built_in_roots_module.denominator ;;
+    type: number
+    group_label: "Pkcs11"
+    group_item_label: "Built In Roots Module Denominator"
+
+    link: {
+      label: "Glean Dictionary reference for Pkcs11 Built In Roots Module Denominator"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/pkcs11_built_in_roots_module"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "How many successfully-built certificate chains used a certificate from the built-in roots module.
+"
+  }
+
+  dimension: metrics__rate__pkcs11_nss_cert_db__numerator {
+    label: "Pkcs11 Nss Cert Db Numerator"
+    hidden: yes
+    sql: ${TABLE}.metrics.rate.pkcs11_nss_cert_db.numerator ;;
+    type: number
+    group_label: "Pkcs11"
+    group_item_label: "Nss Cert Db Numerator"
+
+    link: {
+      label: "Glean Dictionary reference for Pkcs11 Nss Cert Db Numerator"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/pkcs11_nss_cert_db"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "How many successfully-built certificate chains used a certificate from the NSS cert DB.
+"
+  }
+
+  dimension: metrics__rate__pkcs11_nss_cert_db__denominator {
+    label: "Pkcs11 Nss Cert Db Denominator"
+    hidden: yes
+    sql: ${TABLE}.metrics.rate.pkcs11_nss_cert_db.denominator ;;
+    type: number
+    group_label: "Pkcs11"
+    group_item_label: "Nss Cert Db Denominator"
+
+    link: {
+      label: "Glean Dictionary reference for Pkcs11 Nss Cert Db Denominator"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/pkcs11_nss_cert_db"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "How many successfully-built certificate chains used a certificate from the NSS cert DB.
+"
+  }
+
+  dimension: metrics__quantity__pkcs11_third_party_modules_loaded {
+    label: "Pkcs11 Third Party Modules Loaded"
+    hidden: no
+    sql: ${TABLE}.metrics.quantity.pkcs11_third_party_modules_loaded ;;
+    type: number
+    group_label: "Pkcs11"
+    group_item_label: "Third Party Modules Loaded"
+
+    link: {
+      label: "Glean Dictionary reference for Pkcs11 Third Party Modules Loaded"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/pkcs11_third_party_modules_loaded"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The number of third-party PKCS#11 modules loaded."
   }
 
   dimension: metrics__custom_distribution__power_battery_percentage_when_user_active__sum {
@@ -14505,6 +14699,31 @@ Deprecated: `native_code_crash`, `fatal_native_code_crash` and `nonfatal_native_
     }
   }
 
+  measure: netwerk_parent_connect_timeout {
+    type: sum
+    sql: ${metrics__counter__netwerk_parent_connect_timeout} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Netwerk Parent Connect Timeout"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/netwerk_parent_connect_timeout"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: netwerk_parent_connect_timeout_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__netwerk_parent_connect_timeout: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Netwerk Parent Connect Timeout"
+      url: "https://dictionary.telemetry.mozilla.org/apps/fenix/metrics/netwerk_parent_connect_timeout"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
   measure: networking_residual_cache_folder_count {
     type: sum
     sql: ${metrics__counter__networking_residual_cache_folder_count} ;;
@@ -18996,6 +19215,47 @@ view: metrics__metrics__labeled_counter__netwerk_eh_link_type {
   }
 }
 
+view: metrics__metrics__labeled_counter__netwerk_eh_response_version {
+  label: "Netwerk - Eh Response Version"
+
+  dimension: document_id {
+    type: string
+    sql: ${metrics.document_id} ;;
+    hidden: yes
+  }
+
+  dimension: document_label_id {
+    type: string
+    sql: ${metrics.document_id}-${label} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    hidden: no
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+    hidden: no
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+    hidden: no
+  }
+}
+
 view: metrics__metrics__labeled_counter__network_byte_range_request {
   label: "Network - Byte Range Request"
 
@@ -19718,19 +19978,19 @@ view: metrics__metrics__labeled_counter__networking_http_redirect_to_scheme_subr
   dimension: label {
     type: string
     sql: ${TABLE}.key ;;
-    hidden: yes
+    hidden: no
   }
 
   measure: count {
     type: sum
     sql: ${value} ;;
-    hidden: yes
+    hidden: no
   }
 
   measure: client_count {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
-    hidden: yes
+    hidden: no
   }
 }
 
@@ -19759,19 +20019,60 @@ view: metrics__metrics__labeled_counter__networking_http_redirect_to_scheme_top_
   dimension: label {
     type: string
     sql: ${TABLE}.key ;;
-    hidden: yes
+    hidden: no
   }
 
   measure: count {
     type: sum
     sql: ${value} ;;
-    hidden: yes
+    hidden: no
   }
 
   measure: client_count {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+    hidden: no
+  }
+}
+
+view: metrics__metrics__labeled_counter__networking_http_response_status_code {
+  label: "Networking - Http Response Status Code"
+
+  dimension: document_id {
+    type: string
+    sql: ${metrics.document_id} ;;
     hidden: yes
+  }
+
+  dimension: document_label_id {
+    type: string
+    sql: ${metrics.document_id}-${label} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    hidden: no
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+    hidden: no
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+    hidden: no
   }
 }
 
@@ -19841,19 +20142,19 @@ view: metrics__metrics__labeled_counter__networking_http_to_https_upgrade_reason
   dimension: label {
     type: string
     sql: ${TABLE}.key ;;
-    hidden: yes
+    hidden: no
   }
 
   measure: count {
     type: sum
     sql: ${value} ;;
-    hidden: yes
+    hidden: no
   }
 
   measure: client_count {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
-    hidden: yes
+    hidden: no
   }
 }
 
@@ -19923,19 +20224,19 @@ view: metrics__metrics__labeled_counter__networking_https_upgrade_with_https_rr 
   dimension: label {
     type: string
     sql: ${TABLE}.key ;;
-    hidden: no
+    hidden: yes
   }
 
   measure: count {
     type: sum
     sql: ${value} ;;
-    hidden: no
+    hidden: yes
   }
 
   measure: client_count {
     type: count_distinct
     sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
-    hidden: no
+    hidden: yes
   }
 }
 
@@ -22001,6 +22302,18 @@ view: metrics__events__extra {
   }
 }
 
+view: metrics__metrics__custom_distribution__bounce_tracking_protection_num_hosts_per_purge_run__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
 view: metrics__metrics__custom_distribution__cert_compression_brotli_saved_bytes__values {
   dimension: key {
     sql: ${TABLE}.key ;;
@@ -22014,6 +22327,18 @@ view: metrics__metrics__custom_distribution__cert_compression_brotli_saved_bytes
 }
 
 view: metrics__metrics__custom_distribution__cert_compression_zlib_saved_bytes__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics__metrics__custom_distribution__cert_compression_zstd_saved_bytes__values {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -22266,6 +22591,18 @@ view: metrics__metrics__custom_distribution__network_tls_early_data_bytes_writte
 }
 
 view: metrics__metrics__custom_distribution__networking_cookie_access_fixup_diff__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics__metrics__custom_distribution__networking_cookie_chips_partition_limit_overflow__values {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
