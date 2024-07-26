@@ -216,7 +216,7 @@ The labels are the `category.name` identifier of the metric.
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
 
-    description: "Entrypoint to the service"
+    description: "entrypoint to the service"
   }
 
   dimension: metrics__string__session_flow_id {
