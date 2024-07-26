@@ -668,6 +668,13 @@ view: metrics_table {
     group_item_label: "Netwerk Parent Connect Timeout"
   }
 
+  dimension: metrics__counter__networking_os_socket_limit_reached {
+    sql: ${TABLE}.metrics.counter.networking_os_socket_limit_reached ;;
+    type: number
+    group_label: "Metrics Counter"
+    group_item_label: "Networking Os Socket Limit Reached"
+  }
+
   dimension: metrics__counter__networking_residual_cache_folder_count {
     sql: ${TABLE}.metrics.counter.networking_residual_cache_folder_count ;;
     type: number
@@ -1096,6 +1103,25 @@ view: metrics_table {
 
   dimension: metrics__custom_distribution__geckoview_per_document_site_origins__values {
     sql: ${TABLE}.metrics.custom_distribution.geckoview_per_document_site_origins.values ;;
+    hidden: yes
+  }
+
+  dimension: metrics__custom_distribution__geolocation_accuracy__count {
+    sql: ${TABLE}.metrics.custom_distribution.geolocation_accuracy.count ;;
+    type: number
+    group_label: "Metrics Custom Distribution Geolocation Accuracy"
+    group_item_label: "Count"
+  }
+
+  dimension: metrics__custom_distribution__geolocation_accuracy__sum {
+    sql: ${TABLE}.metrics.custom_distribution.geolocation_accuracy.sum ;;
+    type: number
+    group_label: "Metrics Custom Distribution Geolocation Accuracy"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__custom_distribution__geolocation_accuracy__values {
+    sql: ${TABLE}.metrics.custom_distribution.geolocation_accuracy.values ;;
     hidden: yes
   }
 
@@ -1650,6 +1676,63 @@ view: metrics_table {
     hidden: yes
   }
 
+  dimension: metrics__custom_distribution__networking_http_3_download_throughput_100__count {
+    sql: ${TABLE}.metrics.custom_distribution.networking_http_3_download_throughput_100.count ;;
+    type: number
+    group_label: "Metrics Custom Distribution Networking Http 3 Download Throughput 100"
+    group_item_label: "Count"
+  }
+
+  dimension: metrics__custom_distribution__networking_http_3_download_throughput_100__sum {
+    sql: ${TABLE}.metrics.custom_distribution.networking_http_3_download_throughput_100.sum ;;
+    type: number
+    group_label: "Metrics Custom Distribution Networking Http 3 Download Throughput 100"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__custom_distribution__networking_http_3_download_throughput_100__values {
+    sql: ${TABLE}.metrics.custom_distribution.networking_http_3_download_throughput_100.values ;;
+    hidden: yes
+  }
+
+  dimension: metrics__custom_distribution__networking_http_3_download_throughput_10_50__count {
+    sql: ${TABLE}.metrics.custom_distribution.networking_http_3_download_throughput_10_50.count ;;
+    type: number
+    group_label: "Metrics Custom Distribution Networking Http 3 Download Throughput 10 50"
+    group_item_label: "Count"
+  }
+
+  dimension: metrics__custom_distribution__networking_http_3_download_throughput_10_50__sum {
+    sql: ${TABLE}.metrics.custom_distribution.networking_http_3_download_throughput_10_50.sum ;;
+    type: number
+    group_label: "Metrics Custom Distribution Networking Http 3 Download Throughput 10 50"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__custom_distribution__networking_http_3_download_throughput_10_50__values {
+    sql: ${TABLE}.metrics.custom_distribution.networking_http_3_download_throughput_10_50.values ;;
+    hidden: yes
+  }
+
+  dimension: metrics__custom_distribution__networking_http_3_download_throughput_50_100__count {
+    sql: ${TABLE}.metrics.custom_distribution.networking_http_3_download_throughput_50_100.count ;;
+    type: number
+    group_label: "Metrics Custom Distribution Networking Http 3 Download Throughput 50 100"
+    group_item_label: "Count"
+  }
+
+  dimension: metrics__custom_distribution__networking_http_3_download_throughput_50_100__sum {
+    sql: ${TABLE}.metrics.custom_distribution.networking_http_3_download_throughput_50_100.sum ;;
+    type: number
+    group_label: "Metrics Custom Distribution Networking Http 3 Download Throughput 50 100"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__custom_distribution__networking_http_3_download_throughput_50_100__values {
+    sql: ${TABLE}.metrics.custom_distribution.networking_http_3_download_throughput_50_100.values ;;
+    hidden: yes
+  }
+
   dimension: metrics__custom_distribution__networking_http_3_upload_throughput__count {
     sql: ${TABLE}.metrics.custom_distribution.networking_http_3_upload_throughput.count ;;
     type: number
@@ -1890,6 +1973,11 @@ view: metrics_table {
     hidden: yes
   }
 
+  dimension: metrics__labeled_boolean__geolocation_linux_provider {
+    sql: ${TABLE}.metrics.labeled_boolean.geolocation_linux_provider ;;
+    hidden: yes
+  }
+
   dimension: metrics__labeled_boolean__media_playback_device_hardware_decoder_support {
     sql: ${TABLE}.metrics.labeled_boolean.media_playback_device_hardware_decoder_support ;;
     hidden: yes
@@ -1897,6 +1985,11 @@ view: metrics_table {
 
   dimension: metrics__labeled_boolean__oskeystore_self_test {
     sql: ${TABLE}.metrics.labeled_boolean.oskeystore_self_test ;;
+    hidden: yes
+  }
+
+  dimension: metrics__labeled_boolean__pdfjs_image_alt_text_edit {
+    sql: ${TABLE}.metrics.labeled_boolean.pdfjs_image_alt_text_edit ;;
     hidden: yes
   }
 
@@ -2030,8 +2123,18 @@ view: metrics_table {
     hidden: yes
   }
 
+  dimension: metrics__labeled_counter__cert_verifier_cert_revocation_mechanisms {
+    sql: ${TABLE}.metrics.labeled_counter.cert_verifier_cert_revocation_mechanisms ;;
+    hidden: yes
+  }
+
   dimension: metrics__labeled_counter__cert_verifier_crlite_status {
     sql: ${TABLE}.metrics.labeled_counter.cert_verifier_crlite_status ;;
+    hidden: yes
+  }
+
+  dimension: metrics__labeled_counter__cert_verifier_crlite_vs_ocsp_result {
+    sql: ${TABLE}.metrics.labeled_counter.cert_verifier_crlite_vs_ocsp_result ;;
     hidden: yes
   }
 
@@ -2132,6 +2235,16 @@ view: metrics_table {
 
   dimension: metrics__labeled_counter__formautofill_form_submission_heuristic {
     sql: ${TABLE}.metrics.labeled_counter.formautofill_form_submission_heuristic ;;
+    hidden: yes
+  }
+
+  dimension: metrics__labeled_counter__geolocation_fallback {
+    sql: ${TABLE}.metrics.labeled_counter.geolocation_fallback ;;
+    hidden: yes
+  }
+
+  dimension: metrics__labeled_counter__geolocation_request_result {
+    sql: ${TABLE}.metrics.labeled_counter.geolocation_request_result ;;
     hidden: yes
   }
 
@@ -2437,6 +2550,11 @@ view: metrics_table {
 
   dimension: metrics__labeled_counter__pdfjs_geckoview {
     sql: ${TABLE}.metrics.labeled_counter.pdfjs_geckoview ;;
+    hidden: yes
+  }
+
+  dimension: metrics__labeled_counter__pdfjs_image_added {
+    sql: ${TABLE}.metrics.labeled_counter.pdfjs_image_added ;;
     hidden: yes
   }
 
@@ -5304,6 +5422,65 @@ view: metrics_table {
 
   dimension: metrics__timing_distribution__gfx_scroll_present_latency__values {
     sql: ${TABLE}.metrics.timing_distribution.gfx_scroll_present_latency.values ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__glean_database_write_time__bucket_count {
+    sql: ${TABLE}.metrics.timing_distribution.glean_database_write_time.bucket_count ;;
+    type: number
+    group_label: "Metrics Timing Distribution Glean Database Write Time"
+    group_item_label: "Bucket Count"
+  }
+
+  dimension: metrics__timing_distribution__glean_database_write_time__count {
+    sql: ${TABLE}.metrics.timing_distribution.glean_database_write_time.count ;;
+    type: number
+    group_label: "Metrics Timing Distribution Glean Database Write Time"
+    group_item_label: "Count"
+  }
+
+  dimension: metrics__timing_distribution__glean_database_write_time__histogram_type {
+    sql: ${TABLE}.metrics.timing_distribution.glean_database_write_time.histogram_type ;;
+    type: string
+    group_label: "Metrics Timing Distribution Glean Database Write Time"
+    group_item_label: "Histogram Type"
+  }
+
+  dimension: metrics__timing_distribution__glean_database_write_time__overflow {
+    sql: ${TABLE}.metrics.timing_distribution.glean_database_write_time.overflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Glean Database Write Time"
+    group_item_label: "Overflow"
+  }
+
+  dimension: metrics__timing_distribution__glean_database_write_time__range {
+    sql: ${TABLE}.metrics.timing_distribution.glean_database_write_time.range ;;
+    hidden: yes
+  }
+
+  dimension: metrics__timing_distribution__glean_database_write_time__sum {
+    sql: ${TABLE}.metrics.timing_distribution.glean_database_write_time.sum ;;
+    type: number
+    group_label: "Metrics Timing Distribution Glean Database Write Time"
+    group_item_label: "Sum"
+  }
+
+  dimension: metrics__timing_distribution__glean_database_write_time__time_unit {
+    sql: ${TABLE}.metrics.timing_distribution.glean_database_write_time.time_unit ;;
+    type: string
+    group_label: "Metrics Timing Distribution Glean Database Write Time"
+    group_item_label: "Time Unit"
+  }
+
+  dimension: metrics__timing_distribution__glean_database_write_time__underflow {
+    sql: ${TABLE}.metrics.timing_distribution.glean_database_write_time.underflow ;;
+    type: number
+    group_label: "Metrics Timing Distribution Glean Database Write Time"
+    group_item_label: "Underflow"
+  }
+
+  dimension: metrics__timing_distribution__glean_database_write_time__values {
+    sql: ${TABLE}.metrics.timing_distribution.glean_database_write_time.values ;;
     hidden: yes
   }
 
@@ -11272,6 +11449,18 @@ view: metrics_table__metrics__custom_distribution__geckoview_per_document_site_o
   }
 }
 
+view: metrics_table__metrics__custom_distribution__geolocation_accuracy__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
 view: metrics_table__metrics__custom_distribution__gfx_checkerboard_peak_pixel_count__values {
   dimension: key {
     sql: ${TABLE}.key ;;
@@ -11620,6 +11809,42 @@ view: metrics_table__metrics__custom_distribution__networking_http_3_download_th
   }
 }
 
+view: metrics_table__metrics__custom_distribution__networking_http_3_download_throughput_100__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics_table__metrics__custom_distribution__networking_http_3_download_throughput_10_50__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics_table__metrics__custom_distribution__networking_http_3_download_throughput_50_100__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
 view: metrics_table__metrics__custom_distribution__networking_http_3_upload_throughput__values {
   dimension: key {
     sql: ${TABLE}.key ;;
@@ -11776,6 +12001,18 @@ view: metrics_table__metrics__labeled_boolean__data_storage_migration {
   }
 }
 
+view: metrics_table__metrics__labeled_boolean__geolocation_linux_provider {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: yesno
+  }
+}
+
 view: metrics_table__metrics__labeled_boolean__media_playback_device_hardware_decoder_support {
   dimension: key {
     sql: ${TABLE}.key ;;
@@ -11789,6 +12026,18 @@ view: metrics_table__metrics__labeled_boolean__media_playback_device_hardware_de
 }
 
 view: metrics_table__metrics__labeled_boolean__oskeystore_self_test {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: yesno
+  }
+}
+
+view: metrics_table__metrics__labeled_boolean__pdfjs_image_alt_text_edit {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -12257,6 +12506,18 @@ view: metrics_table__metrics__timing_distribution__gfx_content_paint_time__value
 }
 
 view: metrics_table__metrics__timing_distribution__gfx_scroll_present_latency__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics_table__metrics__timing_distribution__glean_database_write_time__values {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string

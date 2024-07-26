@@ -23,6 +23,24 @@ view: metrics {
 "
   }
 
+  dimension: metrics__memory_distribution__browser_backup_compressed_archive_size__sum {
+    label: "Browser Backup Compressed Archive Size Sum"
+    hidden: no
+    sql: ${TABLE}.metrics.memory_distribution.browser_backup_compressed_archive_size.sum ;;
+    type: number
+    group_label: "Browser Backup"
+    group_item_label: "Compressed Archive Size Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Browser Backup Compressed Archive Size Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/browser_backup_compressed_archive_size"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The total compressed size of a single-file profile data backup archive. To reduce fingerprintability, we round to the nearest 1 mebibyte.
+"
+  }
+
   dimension: metrics__quantity__browser_backup_cookies_size {
     label: "Browser Backup Cookies Size"
     hidden: no
@@ -153,6 +171,24 @@ view: metrics {
 "
   }
 
+  dimension: metrics__timing_distribution__browser_backup_favicons_time__sum {
+    label: "Browser Backup Favicons Time Sum"
+    hidden: no
+    sql: ${TABLE}.metrics.timing_distribution.browser_backup_favicons_time.sum ;;
+    type: number
+    group_label: "Browser Backup"
+    group_item_label: "Favicons Time Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Browser Backup Favicons Time Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/browser_backup_favicons_time"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total time, in milliseconds, required to back up a profile's favicons database.
+"
+  }
+
   dimension: metrics__quantity__browser_backup_form_history_size {
     label: "Browser Backup Form History Size"
     hidden: no
@@ -204,6 +240,24 @@ view: metrics {
     }
 
     description: "The total file size of the places.sqlite db located in the current profile directory, in kilobytes.
+"
+  }
+
+  dimension: metrics__timing_distribution__browser_backup_places_time__sum {
+    label: "Browser Backup Places Time Sum"
+    hidden: no
+    sql: ${TABLE}.metrics.timing_distribution.browser_backup_places_time.sum ;;
+    type: number
+    group_label: "Browser Backup"
+    group_item_label: "Places Time Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Browser Backup Places Time Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/browser_backup_places_time"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total time, in milliseconds, required to back up a profile's places database.
 "
   }
 
@@ -330,6 +384,24 @@ view: metrics {
     }
 
     description: "The total uncompressed size of all profile data included in a completed backup. To reduce fingerprintability, we round to the nearest 1 mebibyte.
+"
+  }
+
+  dimension: metrics__timing_distribution__browser_backup_total_backup_time__sum {
+    label: "Browser Backup Total Backup Time Sum"
+    hidden: no
+    sql: ${TABLE}.metrics.timing_distribution.browser_backup_total_backup_time.sum ;;
+    type: number
+    group_label: "Browser Backup"
+    group_item_label: "Total Backup Time Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Browser Backup Total Backup Time Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/browser_backup_total_backup_time"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Total time elapsed, in milliseconds, between the start and end of the profile backup creation process
 "
   }
 
@@ -1152,6 +1224,24 @@ broken down by structured ingestion namespace.
 "
   }
 
+  dimension: metrics__labeled_string__places_places_database_corruption_handling_stage {
+    label: "Places Places Database Corruption Handling Stage"
+    hidden: no
+    sql: ${TABLE}.metrics.labeled_string.places_places_database_corruption_handling_stage ;;
+    type: string
+    group_label: "Places"
+    group_item_label: "Places Database Corruption Handling Stage"
+
+    link: {
+      label: "Glean Dictionary reference for Places Places Database Corruption Handling Stage"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/places_places_database_corruption_handling_stage"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "PLACES - stage reached when trying to fix a database corruption, see Places::Database::eCorruptDBReplaceStage.
+"
+  }
+
   dimension: metrics__labeled_counter__private_attribution_database {
     label: "Private Attribution Database"
     hidden: yes
@@ -1569,6 +1659,23 @@ success - search service successfully initialized.
 "
   }
 
+  dimension: metrics__labeled_counter__serp_ads_blocked_count {
+    label: "Serp Ads Blocked Count"
+    hidden: yes
+    sql: ${TABLE}.metrics.labeled_counter.serp_ads_blocked_count ;;
+    group_label: "Serp"
+    group_item_label: "Ads Blocked Count"
+
+    link: {
+      label: "Glean Dictionary reference for Serp Ads Blocked Count"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/serp_ads_blocked_count"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Counts the specific type of block.
+"
+  }
+
   dimension: metrics__timing_distribution__serp_categorization_duration__sum {
     label: "Serp Categorization Duration Sum"
     hidden: no
@@ -1735,6 +1842,24 @@ in browser.
     }
 
     description: "The outcome after the app detected that it was running from DMG or an app translocated location and should offer to install and relaunch itself.
+"
+  }
+
+  dimension: metrics__timing_distribution__urlbar_quick_suggest_ingest_time__sum {
+    label: "Urlbar Quick Suggest Ingest Time Sum"
+    hidden: no
+    sql: ${TABLE}.metrics.timing_distribution.urlbar_quick_suggest_ingest_time.sum ;;
+    type: number
+    group_label: "Urlbar"
+    group_item_label: "Quick Suggest Ingest Time Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Urlbar Quick Suggest Ingest Time Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/urlbar_quick_suggest_ingest_time"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Counts how long each successful ingest takes in the Firefox Suggest Rust component. Ingests that fail for whatever reason are not included.
 "
   }
 
@@ -2305,6 +2430,23 @@ in browser.
     description: "The difference between the length of encoded certificate vs the actual certificate."
   }
 
+  dimension: metrics__labeled_counter__cert_verifier_cert_revocation_mechanisms {
+    label: "Cert Verifier Cert Revocation Mechanisms"
+    hidden: yes
+    sql: ${TABLE}.metrics.labeled_counter.cert_verifier_cert_revocation_mechanisms ;;
+    group_label: "Cert Verifier"
+    group_item_label: "Cert Revocation Mechanisms"
+
+    link: {
+      label: "Glean Dictionary reference for Cert Verifier Cert Revocation Mechanisms"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/cert_verifier_cert_revocation_mechanisms"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Which revocation checking mechanisms were used in a TLS handshake?
+"
+  }
+
   dimension: metrics__timing_distribution__cert_verifier_cert_trust_evaluation_time__sum {
     label: "Cert Verifier Cert Trust Evaluation Time Sum"
     hidden: no
@@ -2337,6 +2479,23 @@ in browser.
     }
 
     description: "Counts the number of times different CRLite statuses were returned.
+"
+  }
+
+  dimension: metrics__labeled_counter__cert_verifier_crlite_vs_ocsp_result {
+    label: "Cert Verifier Crlite Vs Ocsp Result"
+    hidden: yes
+    sql: ${TABLE}.metrics.labeled_counter.cert_verifier_crlite_vs_ocsp_result ;;
+    group_label: "Cert Verifier"
+    group_item_label: "Crlite Vs Ocsp Result"
+
+    link: {
+      label: "Glean Dictionary reference for Cert Verifier Crlite Vs Ocsp Result"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/cert_verifier_crlite_vs_ocsp_result"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The OCSP result when CRLite claims a certificate is revoked.
 "
   }
 
@@ -3745,6 +3904,76 @@ API for the purposes of Validation (hence GVSV).
     }
 
     description: "The version of the Gecko engine, example: 74.0a1 Mirror of `geckoview.version` for validation of migrated data.
+"
+  }
+
+  dimension: metrics__custom_distribution__geolocation_accuracy__sum {
+    label: "Geolocation Accuracy Sum"
+    hidden: no
+    sql: ${TABLE}.metrics.custom_distribution.geolocation_accuracy.sum ;;
+    type: number
+    group_label: "Geolocation"
+    group_item_label: "Accuracy Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Geolocation Accuracy Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/geolocation_accuracy"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Accuracy returned by the Geolocation API
+"
+  }
+
+  dimension: metrics__labeled_counter__geolocation_fallback {
+    label: "Geolocation Fallback"
+    hidden: yes
+    sql: ${TABLE}.metrics.labeled_counter.geolocation_fallback ;;
+    group_label: "Geolocation"
+    group_item_label: "Fallback"
+
+    link: {
+      label: "Glean Dictionary reference for Geolocation Fallback"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/geolocation_fallback"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Whether the default provider falled back to NetworkGeolocationProvider.
+"
+  }
+
+  dimension: metrics__labeled_boolean__geolocation_linux_provider {
+    label: "Geolocation Linux Provider"
+    hidden: no
+    sql: ${TABLE}.metrics.labeled_boolean.geolocation_linux_provider ;;
+    type: string
+    group_label: "Geolocation"
+    group_item_label: "Linux Provider"
+
+    link: {
+      label: "Glean Dictionary reference for Geolocation Linux Provider"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/geolocation_linux_provider"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Which system provider are we using on Linux
+"
+  }
+
+  dimension: metrics__labeled_counter__geolocation_request_result {
+    label: "Geolocation Request Result"
+    hidden: yes
+    sql: ${TABLE}.metrics.labeled_counter.geolocation_request_result ;;
+    group_label: "Geolocation"
+    group_item_label: "Request Result"
+
+    link: {
+      label: "Glean Dictionary reference for Geolocation Request Result"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/geolocation_request_result"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The result for each geolocation request. Success label will only happen once for each request, even if it's a watch request.
 "
   }
 
@@ -5953,6 +6182,60 @@ To be used to validate GIFFT.
 "
   }
 
+  dimension: metrics__custom_distribution__networking_http_3_download_throughput_100__sum {
+    label: "Networking Http 3 Download Throughput 100 Sum"
+    hidden: no
+    sql: ${TABLE}.metrics.custom_distribution.networking_http_3_download_throughput_100.sum ;;
+    type: number
+    group_label: "Networking"
+    group_item_label: "Http 3 Download Throughput 100 Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Networking Http 3 Download Throughput 100 Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/networking_http_3_download_throughput_100"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The download throughput for http/3 requests size larger than 100MB. Measured in megabits per second, Mbps.
+"
+  }
+
+  dimension: metrics__custom_distribution__networking_http_3_download_throughput_10_50__sum {
+    label: "Networking Http 3 Download Throughput 10 50 Sum"
+    hidden: no
+    sql: ${TABLE}.metrics.custom_distribution.networking_http_3_download_throughput_10_50.sum ;;
+    type: number
+    group_label: "Networking"
+    group_item_label: "Http 3 Download Throughput 10 50 Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Networking Http 3 Download Throughput 10 50 Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/networking_http_3_download_throughput_10_50"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The download throughput for http/3 requests between 10MB and 50MB. Measured in megabits per second, Mbps.
+"
+  }
+
+  dimension: metrics__custom_distribution__networking_http_3_download_throughput_50_100__sum {
+    label: "Networking Http 3 Download Throughput 50 100 Sum"
+    hidden: no
+    sql: ${TABLE}.metrics.custom_distribution.networking_http_3_download_throughput_50_100.sum ;;
+    type: number
+    group_label: "Networking"
+    group_item_label: "Http 3 Download Throughput 50 100 Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Networking Http 3 Download Throughput 50 100 Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/networking_http_3_download_throughput_50_100"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The download throughput for http/3 requests between 50MB and 100MB. Measured in megabits per second, Mbps.
+"
+  }
+
   dimension: metrics__custom_distribution__networking_http_3_upload_throughput__sum {
     label: "Networking Http 3 Upload Throughput Sum"
     hidden: no
@@ -6531,6 +6814,24 @@ To be used to validate GIFFT.
 "
   }
 
+  dimension: metrics__counter__networking_os_socket_limit_reached {
+    label: "Networking Os Socket Limit Reached"
+    hidden: no
+    sql: ${TABLE}.metrics.counter.networking_os_socket_limit_reached ;;
+    type: number
+    group_label: "Networking"
+    group_item_label: "Os Socket Limit Reached"
+
+    link: {
+      label: "Glean Dictionary reference for Networking Os Socket Limit Reached"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/networking_os_socket_limit_reached"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Counts the number of times the os socket limit was reached. i.e. CanAttachSocket() returned false.
+"
+  }
+
   dimension: metrics__labeled_counter__networking_proxy_info_type {
     label: "Networking Proxy Info Type"
     hidden: yes
@@ -7091,6 +7392,41 @@ To be used to validate GIFFT.
     }
 
     description: "Counts the number of times some actions are executed in the PDF viewer.
+"
+  }
+
+  dimension: metrics__labeled_counter__pdfjs_image_added {
+    label: "Pdfjs Image Added"
+    hidden: yes
+    sql: ${TABLE}.metrics.labeled_counter.pdfjs_image_added ;;
+    group_label: "Pdfjs Image"
+    group_item_label: "Added"
+
+    link: {
+      label: "Glean Dictionary reference for Pdfjs Image Added"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/pdfjs_image_added"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Number of images added with/without alt text.
+"
+  }
+
+  dimension: metrics__labeled_boolean__pdfjs_image_alt_text_edit {
+    label: "Pdfjs Image Alt Text Edit"
+    hidden: no
+    sql: ${TABLE}.metrics.labeled_boolean.pdfjs_image_alt_text_edit ;;
+    type: string
+    group_label: "Pdfjs Image"
+    group_item_label: "Alt Text Edit"
+
+    link: {
+      label: "Glean Dictionary reference for Pdfjs Image Alt Text Edit"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/pdfjs_image_alt_text_edit"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Stores alt text modal settings for the user.
 "
   }
 
@@ -9540,6 +9876,24 @@ for the purpose of experimentation enrollment.
 "
   }
 
+  dimension: metrics__timing_distribution__glean_database_write_time__sum {
+    label: "Glean Database Write Time Sum"
+    hidden: no
+    sql: ${TABLE}.metrics.timing_distribution.glean_database_write_time.sum ;;
+    type: number
+    group_label: "Glean Database"
+    group_item_label: "Write Time Sum"
+
+    link: {
+      label: "Glean Dictionary reference for Glean Database Write Time Sum"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/glean_database_write_time"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The time it takes for a write-commit for the Glean database.
+"
+  }
+
   dimension: metrics__labeled_counter__glean_error_invalid_label {
     label: "Glean Error Invalid Label"
     hidden: yes
@@ -11161,6 +11515,31 @@ documented in the ping's pings.yaml file.
     link: {
       label: "Glean Dictionary reference for Netwerk Parent Connect Timeout"
       url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/netwerk_parent_connect_timeout"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: networking_os_socket_limit_reached {
+    type: sum
+    sql: ${metrics__counter__networking_os_socket_limit_reached} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Networking Os Socket Limit Reached"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/networking_os_socket_limit_reached"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+  }
+
+  measure: networking_os_socket_limit_reached_client_count {
+    type: count_distinct
+    filters: [
+      metrics__counter__networking_os_socket_limit_reached: ">0",
+    ]
+    sql: ${client_info__client_id} ;;
+
+    link: {
+      label: "Glean Dictionary reference for Networking Os Socket Limit Reached"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop/metrics/networking_os_socket_limit_reached"
       icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
     }
   }
@@ -12920,8 +13299,90 @@ view: metrics__metrics__labeled_counter__cert_compression_used {
   }
 }
 
+view: metrics__metrics__labeled_counter__cert_verifier_cert_revocation_mechanisms {
+  label: "Cert Verifier - Cert Revocation Mechanisms"
+
+  dimension: document_id {
+    type: string
+    sql: ${metrics.document_id} ;;
+    hidden: yes
+  }
+
+  dimension: document_label_id {
+    type: string
+    sql: ${metrics.document_id}-${label} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    hidden: no
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+    hidden: no
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+    hidden: no
+  }
+}
+
 view: metrics__metrics__labeled_counter__cert_verifier_crlite_status {
   label: "Cert Verifier - Crlite Status"
+
+  dimension: document_id {
+    type: string
+    sql: ${metrics.document_id} ;;
+    hidden: yes
+  }
+
+  dimension: document_label_id {
+    type: string
+    sql: ${metrics.document_id}-${label} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    hidden: no
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+    hidden: no
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+    hidden: no
+  }
+}
+
+view: metrics__metrics__labeled_counter__cert_verifier_crlite_vs_ocsp_result {
+  label: "Cert Verifier - Crlite Vs Ocsp Result"
 
   dimension: document_id {
     type: string
@@ -13865,6 +14326,88 @@ view: metrics__metrics__labeled_counter__fog_validation_gvsv_audio_stream_init_g
 
 view: metrics__metrics__labeled_counter__formautofill_form_submission_heuristic {
   label: "Formautofill - Form Submission Heuristic"
+
+  dimension: document_id {
+    type: string
+    sql: ${metrics.document_id} ;;
+    hidden: yes
+  }
+
+  dimension: document_label_id {
+    type: string
+    sql: ${metrics.document_id}-${label} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    hidden: no
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+    hidden: no
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+    hidden: no
+  }
+}
+
+view: metrics__metrics__labeled_counter__geolocation_fallback {
+  label: "Geolocation - Fallback"
+
+  dimension: document_id {
+    type: string
+    sql: ${metrics.document_id} ;;
+    hidden: yes
+  }
+
+  dimension: document_label_id {
+    type: string
+    sql: ${metrics.document_id}-${label} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    hidden: no
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+    hidden: no
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+    hidden: no
+  }
+}
+
+view: metrics__metrics__labeled_counter__geolocation_request_result {
+  label: "Geolocation - Request Result"
 
   dimension: document_id {
     type: string
@@ -16448,6 +16991,47 @@ view: metrics__metrics__labeled_counter__pdfjs_geckoview {
   }
 }
 
+view: metrics__metrics__labeled_counter__pdfjs_image_added {
+  label: "Pdfjs Image - Added"
+
+  dimension: document_id {
+    type: string
+    sql: ${metrics.document_id} ;;
+    hidden: yes
+  }
+
+  dimension: document_label_id {
+    type: string
+    sql: ${metrics.document_id}-${label} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    hidden: no
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+    hidden: no
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+    hidden: no
+  }
+}
+
 view: metrics__metrics__labeled_counter__pdfjs_stamp {
   label: "Pdfjs - Stamp"
 
@@ -17637,6 +18221,47 @@ view: metrics__metrics__labeled_counter__search_service_initialization_status {
   }
 }
 
+view: metrics__metrics__labeled_counter__serp_ads_blocked_count {
+  label: "Serp - Ads Blocked Count"
+
+  dimension: document_id {
+    type: string
+    sql: ${metrics.document_id} ;;
+    hidden: yes
+  }
+
+  dimension: document_label_id {
+    type: string
+    sql: ${metrics.document_id}-${label} ;;
+    primary_key: yes
+    hidden: yes
+  }
+
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    hidden: no
+  }
+
+  measure: count {
+    type: sum
+    sql: ${value} ;;
+    hidden: no
+  }
+
+  measure: client_count {
+    type: count_distinct
+    sql: case when ${value} > 0 then ${metrics.client_info__client_id} end ;;
+    hidden: no
+  }
+}
+
 view: metrics__metrics__labeled_counter__tls_xyber_intolerance_reason {
   label: "Tls - Xyber Intolerance Reason"
 
@@ -18203,6 +18828,18 @@ view: metrics__metrics__custom_distribution__geckoview_per_document_site_origins
   }
 }
 
+view: metrics__metrics__custom_distribution__geolocation_accuracy__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
 view: metrics__metrics__custom_distribution__gfx_checkerboard_peak_pixel_count__values {
   dimension: key {
     sql: ${TABLE}.key ;;
@@ -18551,6 +19188,42 @@ view: metrics__metrics__custom_distribution__networking_http_3_download_throughp
   }
 }
 
+view: metrics__metrics__custom_distribution__networking_http_3_download_throughput_100__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics__metrics__custom_distribution__networking_http_3_download_throughput_10_50__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics__metrics__custom_distribution__networking_http_3_download_throughput_50_100__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
 view: metrics__metrics__custom_distribution__networking_http_3_upload_throughput__values {
   dimension: key {
     sql: ${TABLE}.key ;;
@@ -18695,6 +19368,18 @@ view: metrics__metrics__labeled_boolean__data_storage_migration {
   }
 }
 
+view: metrics__metrics__labeled_boolean__geolocation_linux_provider {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: yesno
+  }
+}
+
 view: metrics__metrics__labeled_boolean__media_playback_device_hardware_decoder_support {
   dimension: key {
     sql: ${TABLE}.key ;;
@@ -18708,6 +19393,18 @@ view: metrics__metrics__labeled_boolean__media_playback_device_hardware_decoder_
 }
 
 view: metrics__metrics__labeled_boolean__oskeystore_self_test {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: yesno
+  }
+}
+
+view: metrics__metrics__labeled_boolean__pdfjs_image_alt_text_edit {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -18740,6 +19437,30 @@ view: metrics__metrics__labeled_string__cookie_banners_google_gdpr_choice_cookie
   dimension: value {
     sql: ${TABLE}.value ;;
     type: string
+  }
+}
+
+view: metrics__metrics__labeled_string__places_places_database_corruption_handling_stage {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: metrics__metrics__memory_distribution__browser_backup_compressed_archive_size__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
   }
 }
 
@@ -18840,6 +19561,42 @@ view: metrics__metrics__memory_distribution__performance_clone_deserialize_size_
 }
 
 view: metrics__metrics__timing_distribution__bounce_tracking_protection_purge_duration__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics__metrics__timing_distribution__browser_backup_favicons_time__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics__metrics__timing_distribution__browser_backup_places_time__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics__metrics__timing_distribution__browser_backup_total_backup_time__values {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -19200,6 +19957,18 @@ view: metrics__metrics__timing_distribution__gfx_content_paint_time__values {
 }
 
 view: metrics__metrics__timing_distribution__gfx_scroll_present_latency__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics__metrics__timing_distribution__glean_database_write_time__values {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
@@ -20220,6 +20989,18 @@ view: metrics__metrics__timing_distribution__search_service_startup_time__values
 }
 
 view: metrics__metrics__timing_distribution__serp_categorization_duration__values {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: number
+  }
+}
+
+view: metrics__metrics__timing_distribution__urlbar_quick_suggest_ingest_time__values {
   dimension: key {
     sql: ${TABLE}.key ;;
     type: string
