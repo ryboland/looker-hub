@@ -11,7 +11,6 @@ view: metric_definitions_feature_usage_metrics_v1 {
 SUM(bookmarks_delete) AS bookmarks_delete_v1,
 SUM(bookmarks_add_users) AS bookmarks_add_users_v1,
 SUM(bookmarks_delete_users) AS bookmarks_delete_users_v1,
-SUM(dau) AS feature_usage_dau_v1,
 
                 feature_usage_metrics_v1_addresses_deleted,
 feature_usage_metrics_v1_addresses_deleted_users,
@@ -335,14 +334,6 @@ feature_usage_metrics_v1_metrics_tabs_open_count_users,
     description: "Number of Users that Deleted Bookmarks"
     type: number
     sql: ${TABLE}.bookmarks_delete_users_v1 ;;
-  }
-
-  dimension: feature_usage_dau_v1 {
-    group_label: "Metrics"
-    label: "Feature Usage DAU"
-    description: "Daily Active Users associated with feature usage"
-    type: number
-    sql: ${TABLE}.feature_usage_dau_v1 ;;
   }
 
   dimension: addresses_deleted {
@@ -781,103 +772,8 @@ feature_usage_metrics_v1_metrics_tabs_open_count_users,
     ]
   }
 
-  measure: bookmarks_add_v1_sum {
-    type: sum
-    sql: ${TABLE}.bookmarks_add_v1*1 ;;
-    label: "Added Bookmarks Sum"
-    group_label: "Statistics"
-    description: "Sum of Added Bookmarks"
-  }
-
-  measure: bookmarks_add_v1_ratio {
-    type: number
-    label: "Added Bookmarks Ratio"
-    sql: SAFE_DIVIDE(${bookmarks_add_v1_sum}, ${bookmarks_add_users_v1_sum}) ;;
-    group_label: "Statistics"
-    description: "\"
-                                        Ratio between bookmarks_add_v1.sum and
-                                        bookmarks_add_users_v1.sum"
-  }
-
-  measure: bookmarks_delete_v1_sum {
-    type: sum
-    sql: ${TABLE}.bookmarks_delete_v1*1 ;;
-    label: "Deleted Bookmarks Sum"
-    group_label: "Statistics"
-    description: "Sum of Deleted Bookmarks"
-  }
-
-  measure: bookmarks_delete_v1_ratio {
-    type: number
-    label: "Deleted Bookmarks Ratio"
-    sql: SAFE_DIVIDE(${bookmarks_delete_v1_sum}, ${bookmarks_delete_users_v1_sum}) ;;
-    group_label: "Statistics"
-    description: "\"
-                                        Ratio between bookmarks_delete_v1.sum and
-                                        bookmarks_delete_users_v1.sum"
-  }
-
-  measure: bookmarks_add_users_v1_sum {
-    type: sum
-    sql: ${TABLE}.bookmarks_add_users_v1*1 ;;
-    label: "Added Bookmarks Users Sum"
-    group_label: "Statistics"
-    description: "Sum of Added Bookmarks Users"
-  }
-
-  measure: bookmarks_add_users_v1_ratio {
-    type: number
-    label: "Added Bookmarks Users Ratio"
-    sql: SAFE_DIVIDE(${bookmarks_add_users_v1_sum}, ${feature_usage_dau_v1_sum}) ;;
-    group_label: "Statistics"
-    description: "\"
-                                        Ratio between bookmarks_add_users_v1.sum and
-                                        feature_usage_dau_v1.sum"
-  }
-
-  measure: bookmarks_delete_users_v1_sum {
-    type: sum
-    sql: ${TABLE}.bookmarks_delete_users_v1*1 ;;
-    label: "Deleted Bookmarks Users Sum"
-    group_label: "Statistics"
-    description: "Sum of Deleted Bookmarks Users"
-  }
-
-  measure: bookmarks_delete_users_v1_ratio {
-    type: number
-    label: "Deleted Bookmarks Users Ratio"
-    sql: SAFE_DIVIDE(${bookmarks_delete_users_v1_sum}, ${feature_usage_dau_v1_sum}) ;;
-    group_label: "Statistics"
-    description: "\"
-                                        Ratio between bookmarks_delete_users_v1.sum and
-                                        feature_usage_dau_v1.sum"
-  }
-
-  measure: feature_usage_dau_v1_sum {
-    type: sum
-    sql: ${TABLE}.feature_usage_dau_v1*1 ;;
-    label: "Feature Usage DAU Sum"
-    group_label: "Statistics"
-    description: "Sum of Feature Usage DAU"
-  }
-
   set: metrics {
-    fields: [
-      bookmarks_add_v1,
-      bookmarks_delete_v1,
-      bookmarks_add_users_v1,
-      bookmarks_delete_users_v1,
-      feature_usage_dau_v1,
-      bookmarks_add_v1_sum,
-      bookmarks_add_v1_ratio,
-      bookmarks_delete_v1_sum,
-      bookmarks_delete_v1_ratio,
-      bookmarks_add_users_v1_sum,
-      bookmarks_add_users_v1_ratio,
-      bookmarks_delete_users_v1_sum,
-      bookmarks_delete_users_v1_ratio,
-      feature_usage_dau_v1_sum,
-    ]
+    fields: [bookmarks_add_v1, bookmarks_delete_v1, bookmarks_add_users_v1, bookmarks_delete_users_v1]
   }
 
   parameter: aggregate_metrics_by {

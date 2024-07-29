@@ -35,18 +35,7 @@ SUM(socket_crash_count) AS socket_crash_count_v1,
 SUM(IF(socket_crash_count > 0, active_hours_sum, 0)) AS socket_crash_active_hours_v1,
 COUNTIF(socket_crash_count > 0) AS socket_crash_dau_v1,
 
-                looker_base_fields_app_name,
-looker_base_fields_app_version,
-looker_base_fields_country,
-looker_base_fields_default_search_engine,
-looker_base_fields_distribution_id,
-looker_base_fields_locale,
-looker_base_fields_normalized_channel,
-looker_base_fields_normalized_os_version,
-looker_base_fields_os,
-looker_base_fields_partner_id,
-looker_base_fields_sample_id,
-
+                
                 client_id AS client_id,
                 {% if aggregate_metrics_by._parameter_value == 'day' %}
                 submission_date AS analysis_basis
@@ -78,18 +67,7 @@ looker_base_fields_sample_id,
                 (
                     SELECT
                         clients_daily.*,
-                        looker_base_fields.app_name AS looker_base_fields_app_name,
-looker_base_fields.app_version AS looker_base_fields_app_version,
-looker_base_fields.country AS looker_base_fields_country,
-looker_base_fields.default_search_engine AS looker_base_fields_default_search_engine,
-looker_base_fields.distribution_id AS looker_base_fields_distribution_id,
-looker_base_fields.locale AS looker_base_fields_locale,
-looker_base_fields.normalized_channel AS looker_base_fields_normalized_channel,
-looker_base_fields.normalized_os_version AS looker_base_fields_normalized_os_version,
-looker_base_fields.os AS looker_base_fields_os,
-looker_base_fields.partner_id AS looker_base_fields_partner_id,
-looker_base_fields.sample_id AS looker_base_fields_sample_id,
-
+                        
                     FROM
                     (
             SELECT
@@ -97,41 +75,7 @@ looker_base_fields.sample_id AS looker_base_fields_sample_id,
             FROM
                 mozdata.telemetry.clients_daily
             ) AS clients_daily
-        JOIN
-    (
-            SELECT
-                *
-            FROM
-                (
-  SELECT
-    client_id,
-    submission_date,
-    sample_id,
-    app_name,
-    app_version,
-    normalized_channel,
-    country,
-    experiments,
-    os,
-    locale,
-    is_default_browser,
-    partner_id,
-    distribution_id,
-    default_search_engine,
-    normalized_os_version
-  FROM
-    `moz-fx-data-shared-prod`.telemetry_derived.clients_daily_v6
-)
-
-            ) AS looker_base_fields
         
-    ON 
-    clients_daily.client_id =
-        looker_base_fields.client_id AND
-        clients_daily.submission_date =
-        looker_base_fields.submission_date
-    
-                
                     WHERE 
                     clients_daily.submission_date
                     BETWEEN
@@ -143,35 +87,10 @@ looker_base_fields.sample_id AS looker_base_fields_sample_id,
                         SAFE_CAST(
                             {% date_end submission_date %} AS DATE
                         ), CURRENT_DATE())
-                 AND 
-                    looker_base_fields.submission_date
-                    BETWEEN
-                    COALESCE(
-                        SAFE_CAST(
-                            {% date_start submission_date %} AS DATE
-                        ), CURRENT_DATE()) AND
-                    COALESCE(
-                        SAFE_CAST(
-                            {% date_end submission_date %} AS DATE
-                        ), CURRENT_DATE())
-                
-                    AND
-                        looker_base_fields.sample_id < {% parameter sampling %}
                 
                 )
             GROUP BY
-                looker_base_fields_app_name,
-looker_base_fields_app_version,
-looker_base_fields_country,
-looker_base_fields_default_search_engine,
-looker_base_fields_distribution_id,
-looker_base_fields_locale,
-looker_base_fields_normalized_channel,
-looker_base_fields_normalized_os_version,
-looker_base_fields_os,
-looker_base_fields_partner_id,
-looker_base_fields_sample_id,
-
+                
                 client_id,
                 analysis_basis ;;
   }
@@ -377,79 +296,6 @@ looker_base_fields_sample_id,
     sql: ${TABLE}.socket_crash_dau_v1 ;;
   }
 
-  dimension: app_name {
-    sql: ${TABLE}.looker_base_fields_app_name ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: app_version {
-    sql: ${TABLE}.looker_base_fields_app_version ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: country {
-    sql: ${TABLE}.looker_base_fields_country ;;
-    type: string
-    map_layer_name: countries
-    group_label: "Base Fields"
-  }
-
-  dimension: default_search_engine {
-    sql: ${TABLE}.looker_base_fields_default_search_engine ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: distribution_id {
-    sql: ${TABLE}.looker_base_fields_distribution_id ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: experiments {
-    sql: ${TABLE}.looker_base_fields_experiments ;;
-    hidden: yes
-    group_label: "Base Fields"
-  }
-
-  dimension: locale {
-    sql: ${TABLE}.looker_base_fields_locale ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: normalized_channel {
-    sql: ${TABLE}.looker_base_fields_normalized_channel ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: normalized_os_version {
-    sql: ${TABLE}.looker_base_fields_normalized_os_version ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: os {
-    sql: ${TABLE}.looker_base_fields_os ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: partner_id {
-    sql: ${TABLE}.looker_base_fields_partner_id ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: sample_id {
-    sql: ${TABLE}.looker_base_fields_sample_id ;;
-    type: number
-    group_label: "Base Fields"
-  }
-
   dimension_group: submission {
     type: time
     group_label: "Base Fields"
@@ -463,65 +309,6 @@ looker_base_fields_sample_id,
       quarter,
       year,
     ]
-  }
-
-  measure: days_of_use_average {
-    type: average
-    sql: ${TABLE}.days_of_use ;;
-    label: "Days of use Average"
-    group_label: "Statistics"
-    description: "Average of Days of use"
-  }
-
-  measure: socket_crash_count_v1_sum {
-    type: sum
-    sql: ${TABLE}.socket_crash_count_v1*100 / {% parameter sampling %} ;;
-    label: "Client Crash Count Sum"
-    group_label: "Statistics"
-    description: "Sum of Client Crash Count"
-  }
-
-  measure: socket_crash_count_v1_ratio {
-    type: number
-    label: "Client Crash Count Ratio"
-    sql: SAFE_DIVIDE(${socket_crash_count_v1_sum}, ${socket_crash_active_hours_v1_sum}) ;;
-    group_label: "Statistics"
-    description: "\"
-                                        Ratio between socket_crash_count_v1.sum and
-                                        socket_crash_active_hours_v1.sum"
-  }
-
-  measure: socket_crash_active_hours_v1_sum {
-    type: sum
-    sql: ${TABLE}.socket_crash_active_hours_v1*100 / {% parameter sampling %} ;;
-    label: "Client Crash Active Hours Sum"
-    group_label: "Statistics"
-    description: "Sum of Client Crash Active Hours"
-  }
-
-  measure: socket_crash_active_hours_v1_client_count_sampled {
-    type: count_distinct
-    label: "Client Crash Active Hours Client Count"
-    group_label: "Statistics"
-    sql: IF(${TABLE}.socket_crash_active_hours_v1 > 0, ${TABLE}.client_id, SAFE_CAST(NULL AS STRING)) ;;
-    description: "Number of clients with Client Crash Active Hours"
-    hidden: yes
-  }
-
-  measure: socket_crash_active_hours_v1_client_count {
-    type: number
-    label: "Client Crash Active Hours Client Count"
-    group_label: "Statistics"
-    sql: ${socket_crash_active_hours_v1_client_count_sampled} *100 / {% parameter sampling %} ;;
-    description: "Number of clients with Client Crash Active Hours"
-  }
-
-  measure: socket_crash_dau_v1_sum {
-    type: sum
-    sql: ${TABLE}.socket_crash_dau_v1*100 / {% parameter sampling %} ;;
-    label: "Daily Active Users with socket crashes Sum"
-    group_label: "Statistics"
-    description: "Sum of Daily Active Users with socket crashes"
   }
 
   set: metrics {
@@ -546,13 +333,6 @@ looker_base_fields_sample_id,
       socket_crash_count_v1,
       socket_crash_active_hours_v1,
       socket_crash_dau_v1,
-      days_of_use_average,
-      socket_crash_count_v1_sum,
-      socket_crash_count_v1_ratio,
-      socket_crash_active_hours_v1_sum,
-      socket_crash_active_hours_v1_client_count_sampled,
-      socket_crash_active_hours_v1_client_count,
-      socket_crash_dau_v1_sum,
     ]
   }
 
@@ -596,6 +376,6 @@ looker_base_fields_sample_id,
     label: "Sample of source data in %"
     type: unquoted
     default_value: "100"
-    hidden: no
+    hidden: yes
   }
 }

@@ -9,19 +9,7 @@ view: metric_definitions_desktop_engagement_view {
     sql: SELECT
                 SUM(dau) / SUM(mau) AS engagement_rate_v1,
 
-                looker_base_fields_app_name,
-looker_base_fields_app_version,
-looker_base_fields_country,
-looker_base_fields_default_search_engine,
-looker_base_fields_distribution_id,
-looker_base_fields_is_default_browser,
-looker_base_fields_locale,
-looker_base_fields_normalized_channel,
-looker_base_fields_normalized_os_version,
-looker_base_fields_os,
-looker_base_fields_partner_id,
-looker_base_fields_sample_id,
-desktop_engagement_view_app_version,
+                desktop_engagement_view_app_version,
 desktop_engagement_view_attribution_campaign,
 desktop_engagement_view_attribution_content,
 desktop_engagement_view_attribution_dlsource,
@@ -74,19 +62,7 @@ desktop_engagement_view_wau,
                 (
                     SELECT
                         desktop_engagement_view.*,
-                        looker_base_fields.app_name AS looker_base_fields_app_name,
-looker_base_fields.app_version AS looker_base_fields_app_version,
-looker_base_fields.country AS looker_base_fields_country,
-looker_base_fields.default_search_engine AS looker_base_fields_default_search_engine,
-looker_base_fields.distribution_id AS looker_base_fields_distribution_id,
-looker_base_fields.is_default_browser AS looker_base_fields_is_default_browser,
-looker_base_fields.locale AS looker_base_fields_locale,
-looker_base_fields.normalized_channel AS looker_base_fields_normalized_channel,
-looker_base_fields.normalized_os_version AS looker_base_fields_normalized_os_version,
-looker_base_fields.os AS looker_base_fields_os,
-looker_base_fields.partner_id AS looker_base_fields_partner_id,
-looker_base_fields.sample_id AS looker_base_fields_sample_id,
-desktop_engagement_view.app_version AS desktop_engagement_view_app_version,
+                        desktop_engagement_view.app_version AS desktop_engagement_view_app_version,
 desktop_engagement_view.attribution_campaign AS desktop_engagement_view_attribution_campaign,
 desktop_engagement_view.attribution_content AS desktop_engagement_view_attribution_content,
 desktop_engagement_view.attribution_dlsource AS desktop_engagement_view_attribution_dlsource,
@@ -131,36 +107,10 @@ desktop_engagement_view.wau AS desktop_engagement_view_wau,
                         SAFE_CAST(
                             {% date_end submission_date %} AS DATE
                         ), CURRENT_DATE())
-                 AND 
-                    looker_base_fields.submission_date
-                    BETWEEN
-                    COALESCE(
-                        SAFE_CAST(
-                            {% date_start submission_date %} AS DATE
-                        ), CURRENT_DATE()) AND
-                    COALESCE(
-                        SAFE_CAST(
-                            {% date_end submission_date %} AS DATE
-                        ), CURRENT_DATE())
-                
-                    AND
-                        looker_base_fields.sample_id < {% parameter sampling %}
                 
                 )
             GROUP BY
-                looker_base_fields_app_name,
-looker_base_fields_app_version,
-looker_base_fields_country,
-looker_base_fields_default_search_engine,
-looker_base_fields_distribution_id,
-looker_base_fields_is_default_browser,
-looker_base_fields_locale,
-looker_base_fields_normalized_channel,
-looker_base_fields_normalized_os_version,
-looker_base_fields_os,
-looker_base_fields_partner_id,
-looker_base_fields_sample_id,
-desktop_engagement_view_app_version,
+                desktop_engagement_view_app_version,
 desktop_engagement_view_attribution_campaign,
 desktop_engagement_view_attribution_content,
 desktop_engagement_view_attribution_dlsource,
@@ -207,82 +157,9 @@ desktop_engagement_view_wau,
     sql: ${TABLE}.engagement_rate_v1 ;;
   }
 
-  dimension: app_name {
-    sql: ${TABLE}.looker_base_fields_app_name ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
   dimension: app_version {
-    sql: ${TABLE}.looker_base_fields_app_version ;;
+    sql: ${TABLE}.desktop_engagement_view_app_version ;;
     type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: country {
-    sql: ${TABLE}.looker_base_fields_country ;;
-    type: string
-    map_layer_name: countries
-    group_label: "Base Fields"
-  }
-
-  dimension: default_search_engine {
-    sql: ${TABLE}.looker_base_fields_default_search_engine ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: distribution_id {
-    sql: ${TABLE}.looker_base_fields_distribution_id ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: experiments {
-    sql: ${TABLE}.looker_base_fields_experiments ;;
-    hidden: yes
-    group_label: "Base Fields"
-  }
-
-  dimension: is_default_browser {
-    sql: ${TABLE}.looker_base_fields_is_default_browser ;;
-    type: yesno
-    group_label: "Base Fields"
-  }
-
-  dimension: locale {
-    sql: ${TABLE}.looker_base_fields_locale ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: normalized_channel {
-    sql: ${TABLE}.looker_base_fields_normalized_channel ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: normalized_os_version {
-    sql: ${TABLE}.looker_base_fields_normalized_os_version ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: os {
-    sql: ${TABLE}.looker_base_fields_os ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: partner_id {
-    sql: ${TABLE}.looker_base_fields_partner_id ;;
-    type: string
-    group_label: "Base Fields"
-  }
-
-  dimension: sample_id {
-    sql: ${TABLE}.looker_base_fields_sample_id ;;
-    type: number
     group_label: "Base Fields"
   }
 
@@ -328,9 +205,22 @@ desktop_engagement_view_wau,
     group_label: "Base Fields"
   }
 
+  dimension: country {
+    sql: ${TABLE}.desktop_engagement_view_country ;;
+    type: string
+    map_layer_name: countries
+    group_label: "Base Fields"
+  }
+
   dimension: dau {
     sql: ${TABLE}.desktop_engagement_view_dau ;;
     type: number
+    group_label: "Base Fields"
+  }
+
+  dimension: distribution_id {
+    sql: ${TABLE}.desktop_engagement_view_distribution_id ;;
+    type: string
     group_label: "Base Fields"
   }
 
@@ -346,14 +236,32 @@ desktop_engagement_view_wau,
     group_label: "Base Fields"
   }
 
+  dimension: locale {
+    sql: ${TABLE}.desktop_engagement_view_locale ;;
+    type: string
+    group_label: "Base Fields"
+  }
+
   dimension: mau {
     sql: ${TABLE}.desktop_engagement_view_mau ;;
     type: number
     group_label: "Base Fields"
   }
 
+  dimension: normalized_channel {
+    sql: ${TABLE}.desktop_engagement_view_normalized_channel ;;
+    type: string
+    group_label: "Base Fields"
+  }
+
   dimension: normalized_os {
     sql: ${TABLE}.desktop_engagement_view_normalized_os ;;
+    type: string
+    group_label: "Base Fields"
+  }
+
+  dimension: normalized_os_version {
+    sql: ${TABLE}.desktop_engagement_view_normalized_os_version ;;
     type: string
     group_label: "Base Fields"
   }
@@ -435,6 +343,6 @@ desktop_engagement_view_wau,
     label: "Sample of source data in %"
     type: unquoted
     default_value: "100"
-    hidden: no
+    hidden: yes
   }
 }
