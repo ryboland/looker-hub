@@ -113,6 +113,22 @@ view: default_agent_table {
     description: "The user-visible version of the operating system (e.g. \"1.2.3\"). If the version detection fails, this metric gets set to `Unknown`."
   }
 
+  dimension: client_info__session_count {
+    sql: ${TABLE}.client_info.session_count ;;
+    type: number
+    group_label: "Client Info"
+    group_item_label: "Session Count"
+    description: "An optional running counter of the number of sessions for a client."
+  }
+
+  dimension: client_info__session_id {
+    sql: ${TABLE}.client_info.session_id ;;
+    type: string
+    group_label: "Client Info"
+    group_item_label: "Session Id"
+    description: "An optional UUID uniquely identifying the client's current session."
+  }
+
   dimension: client_info__telemetry_sdk_build {
     sql: ${TABLE}.client_info.telemetry_sdk_build ;;
     type: string
@@ -349,6 +365,15 @@ The labels are the `category.name` identifier of the metric.
 "
   }
 
+  dimension: metrics__string__do_task_implementation {
+    sql: ${TABLE}.metrics.string.do_task_implementation ;;
+    type: string
+    group_label: "Metrics String"
+    group_item_label: "Do Task Implementation"
+    description: "Which implementation of `do-task` was used: \"JavaScript\" by default or \"C++\" if a Nimbus rollback was acted upon.
+"
+  }
+
   dimension: metrics__string__glean_client_annotation_experimentation_id {
     sql: ${TABLE}.metrics.string.glean_client_annotation_experimentation_id ;;
     type: string
@@ -386,6 +411,16 @@ Possible values currently include the following (from [DefaultBrowser.cpp](https
 "
   }
 
+  dimension: metrics__string__system_default_pdf_handler {
+    sql: ${TABLE}.metrics.string.system_default_pdf_handler ;;
+    type: string
+    group_label: "Metrics String"
+    group_item_label: "System Default Pdf Handler"
+    description: "Which pdf handler is currently set as the system default handler. This is simply a string with the name of the handler binned to a fixed set of known handlers.
+Possible values currently include the following (from [DefaultPDF.cpp](https://searchfox.org/mozilla-central/source/toolkit/mozapps/defaultagent/DefaultPDF.cpp)): * \"Error\" * \"\" (unknown) * \"Firefox\" * \"Microsoft Edge\" * \"Google Chrome\" * \"Adobe Acrobat\" * \"WPS\" * \"Nitro\" * \"Foxit\" * \"PDF-XChange\" * \"Avast\" * \"Sumatra\"
+"
+  }
+
   dimension: metrics__string__system_default_previous_browser {
     sql: ${TABLE}.metrics.string.system_default_previous_browser ;;
     type: string
@@ -394,6 +429,26 @@ Possible values currently include the following (from [DefaultBrowser.cpp](https
     description: "Which browser was set as the system default before it was changed to the current setting. The possible values are the same as for `system_default.browser`.
 The OS does not keep track of previous default settings, so the agent records this information itself. That means that it will be inaccurate until the first time the default is changed after the agent task begins running. Before then, the value of `previous_browser` will be the same as `browser`.
 This value is updated every time the Default Agent runs, so when the default browser is first changed the values for `browser` and `previous_browser` will be different. But on subsequent executions of the Default Agent, the two values will be the same.
+"
+  }
+
+  dimension: metrics__string__system_os_version {
+    sql: ${TABLE}.metrics.string.system_os_version ;;
+    type: string
+    group_label: "Metrics String"
+    group_item_label: "System Os Version"
+    description: "The current Windows OS version, usually as a dotted quad (\"x.y.z.w\") with Windows Update Build Revision (UBR), but potentially as a dotted triple (\"x.y.z\") without UBR.
+"
+  }
+
+  dimension: metrics__string__system_previous_os_version {
+    sql: ${TABLE}.metrics.string.system_previous_os_version ;;
+    type: string
+    group_label: "Metrics String"
+    group_item_label: "System Previous Os Version"
+    description: "The Windows OS version before it was changed to the current setting. The possible values are the same as for `system.os_version`.
+The OS does not keep track of the previous OS version, so the agent records this information itself. That means that it will be inaccurate until the first time the default is changed after the agent task begins running. Before then, the value of `previous_os_version` will be the same as `os_version`.
+This value is updated every time the Default Agent runs, so when the default browser is first changed the values for `os_version` and `previous_os_version` will be different. But on subsequent executions of the Default Agent, the two values will be the same.
 "
   }
 

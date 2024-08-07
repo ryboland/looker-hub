@@ -111,6 +111,11 @@ view: mobile_search_clients_engines_sources_daily {
     type: string
   }
 
+  dimension: normalized_app_name_os {
+    sql: ${TABLE}.normalized_app_name_os ;;
+    type: string
+  }
+
   dimension: normalized_engine {
     sql: ${TABLE}.normalized_engine ;;
     type: string
@@ -129,6 +134,16 @@ view: mobile_search_clients_engines_sources_daily {
   dimension: os_version {
     sql: ${TABLE}.os_version ;;
     type: string
+  }
+
+  dimension: os_version_major {
+    sql: ${TABLE}.os_version_major ;;
+    type: number
+  }
+
+  dimension: os_version_minor {
+    sql: ${TABLE}.os_version_minor ;;
+    type: number
   }
 
   dimension: profile_age_in_days {
@@ -158,6 +173,11 @@ view: mobile_search_clients_engines_sources_daily {
 
   dimension: search_with_ads {
     sql: ${TABLE}.search_with_ads ;;
+    type: number
+  }
+
+  dimension: search_with_ads_organic {
+    sql: ${TABLE}.search_with_ads_organic ;;
     type: number
   }
 

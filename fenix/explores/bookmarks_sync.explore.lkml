@@ -68,44 +68,23 @@ explore: bookmarks_sync {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${bookmarks_sync.metrics__labeled_counter__glean_error_invalid_value}) AS bookmarks_sync__metrics__labeled_counter__glean_error_invalid_value ON ${bookmarks_sync.document_id} = ${bookmarks_sync__metrics__labeled_counter__glean_error_invalid_value.document_id} ;;
   }
-}
 
-explore: suggest__bookmarks_sync__metrics__labeled_counter__bookmarks_sync_incoming {
-  hidden: yes
-}
+  join: bookmarks_sync__events {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${bookmarks_sync.events}) AS bookmarks_sync__events ;;
+  }
 
-explore: suggest__bookmarks_sync__metrics__labeled_counter__bookmarks_sync_outgoing {
-  hidden: yes
-}
+  join: bookmarks_sync__events__extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${bookmarks_sync__events.extra}) AS bookmarks_sync__events__extra ;;
+  }
 
-explore: suggest__bookmarks_sync__metrics__labeled_counter__bookmarks_sync_remote_tree_problems {
-  hidden: yes
-}
-
-explore: suggest__bookmarks_sync__metrics__labeled_counter__bookmarks_sync_v2_incoming {
-  hidden: yes
-}
-
-explore: suggest__bookmarks_sync__metrics__labeled_counter__bookmarks_sync_v2_outgoing {
-  hidden: yes
-}
-
-explore: suggest__bookmarks_sync__metrics__labeled_counter__bookmarks_sync_v2_remote_tree_problems {
-  hidden: yes
+  join: bookmarks_sync__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${bookmarks_sync.ping_info__experiments}) AS bookmarks_sync__ping_info__experiments ;;
+  }
 }
 
 explore: suggest__bookmarks_sync__metrics__labeled_counter__glean_error_invalid_label {
-  hidden: yes
-}
-
-explore: suggest__bookmarks_sync__metrics__labeled_counter__glean_error_invalid_overflow {
-  hidden: yes
-}
-
-explore: suggest__bookmarks_sync__metrics__labeled_counter__glean_error_invalid_state {
-  hidden: yes
-}
-
-explore: suggest__bookmarks_sync__metrics__labeled_counter__glean_error_invalid_value {
   hidden: yes
 }

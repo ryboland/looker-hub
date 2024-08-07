@@ -11,6 +11,12 @@ view: bigquery_tables_inventory {
     description: "The name of the dataset that contains the table or view"
   }
 
+  dimension: deprecated {
+    sql: ${TABLE}.deprecated ;;
+    type: yesno
+    description: "Whether the table has been deprecated and pending deletion"
+  }
+
   dimension: owners {
     sql: ${TABLE}.owners ;;
     hidden: yes
@@ -49,6 +55,22 @@ view: bigquery_tables_inventory {
     convert_tz: no
     datatype: date
     description: "The table's creation date"
+  }
+
+  dimension_group: deletion {
+    sql: ${TABLE}.deletion_date ;;
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year,
+    ]
+    convert_tz: no
+    datatype: date
+    description: "The date when the tables was scheduled for deletion"
   }
 
   dimension_group: last_modified {

@@ -210,6 +210,20 @@ The labels are the `category.name` identifier of the metric.
     group_item_label: "Os Version"
   }
 
+  dimension: client_info__session_count {
+    sql: ${TABLE}.client_info.session_count ;;
+    type: number
+    group_label: "Client Info"
+    group_item_label: "Session Count"
+  }
+
+  dimension: client_info__session_id {
+    sql: ${TABLE}.client_info.session_id ;;
+    type: string
+    group_label: "Client Info"
+    group_item_label: "Session Id"
+  }
+
   dimension: client_info__telemetry_sdk_build {
     sql: ${TABLE}.client_info.telemetry_sdk_build ;;
     type: string
@@ -560,18 +574,18 @@ view: cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_l
     hidden: yes
   }
 
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
   dimension: label {
     type: string
     sql: ${TABLE}.key ;;
     suggest_explore: suggest__cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_label
     suggest_dimension: suggest__cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_label.key
     hidden: no
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
   }
 
   measure: count {
@@ -603,18 +617,16 @@ view: cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_o
     hidden: yes
   }
 
-  dimension: label {
-    type: string
-    sql: ${TABLE}.key ;;
-    suggest_explore: suggest__cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_overflow
-    suggest_dimension: suggest__cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_overflow.key
-    hidden: no
-  }
-
   dimension: value {
     type: number
     sql: ${TABLE}.value ;;
     hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    hidden: no
   }
 
   measure: count {
@@ -646,18 +658,16 @@ view: cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_s
     hidden: yes
   }
 
-  dimension: label {
-    type: string
-    sql: ${TABLE}.key ;;
-    suggest_explore: suggest__cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_state
-    suggest_dimension: suggest__cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_state.key
-    hidden: no
-  }
-
   dimension: value {
     type: number
     sql: ${TABLE}.value ;;
     hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    hidden: no
   }
 
   measure: count {
@@ -689,18 +699,16 @@ view: cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_v
     hidden: yes
   }
 
-  dimension: label {
-    type: string
-    sql: ${TABLE}.key ;;
-    suggest_explore: suggest__cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_value
-    suggest_dimension: suggest__cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_value.key
-    hidden: no
-  }
-
   dimension: value {
     type: number
     sql: ${TABLE}.value ;;
     hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    hidden: no
   }
 
   measure: count {
@@ -735,59 +743,64 @@ order by n desc ;;
   }
 }
 
-view: suggest__cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_overflow {
-  derived_table: {
-    sql: select
-    m.key,
-    count(*) as n
-from mozdata.fenix.cookie_banner_report_site as t,
-unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
-where date(submission_timestamp) > date_sub(current_date, interval 30 day)
-    and sample_id = 0
-group by key
-order by n desc ;;
+view: cookie_banner_report_site__events {
+  dimension: category {
+    sql: ${TABLE}.category ;;
+    type: string
   }
 
-  dimension: key {
+  dimension: extra {
+    sql: ${TABLE}.extra ;;
+    hidden: yes
+  }
+
+  dimension: name {
+    sql: ${TABLE}.name ;;
     type: string
-    sql: ${TABLE}.key ;;
+  }
+
+  dimension: timestamp {
+    sql: ${TABLE}.timestamp ;;
+    type: number
   }
 }
 
-view: suggest__cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_state {
-  derived_table: {
-    sql: select
-    m.key,
-    count(*) as n
-from mozdata.fenix.cookie_banner_report_site as t,
-unnest(metrics.labeled_counter.glean_error_invalid_state) as m
-where date(submission_timestamp) > date_sub(current_date, interval 30 day)
-    and sample_id = 0
-group by key
-order by n desc ;;
+view: cookie_banner_report_site__events__extra {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
   }
 
-  dimension: key {
+  dimension: value {
+    sql: ${TABLE}.value ;;
     type: string
-    sql: ${TABLE}.key ;;
   }
 }
 
-view: suggest__cookie_banner_report_site__metrics__labeled_counter__glean_error_invalid_value {
-  derived_table: {
-    sql: select
-    m.key,
-    count(*) as n
-from mozdata.fenix.cookie_banner_report_site as t,
-unnest(metrics.labeled_counter.glean_error_invalid_value) as m
-where date(submission_timestamp) > date_sub(current_date, interval 30 day)
-    and sample_id = 0
-group by key
-order by n desc ;;
+view: cookie_banner_report_site__ping_info__experiments {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
   }
 
-  dimension: key {
+  dimension: value__branch {
+    sql: ${TABLE}.value.branch ;;
     type: string
-    sql: ${TABLE}.key ;;
+    group_label: "Value"
+    group_item_label: "Branch"
+  }
+
+  dimension: value__extra__enrollment_id {
+    sql: ${TABLE}.value.extra.enrollment_id ;;
+    type: string
+    group_label: "Value Extra"
+    group_item_label: "Enrollment Id"
+  }
+
+  dimension: value__extra__type {
+    sql: ${TABLE}.value.extra.type ;;
+    type: string
+    group_label: "Value Extra"
+    group_item_label: "Type"
   }
 }

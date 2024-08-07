@@ -99,6 +99,20 @@ view: baseline_table {
     group_item_label: "Os Version"
   }
 
+  dimension: client_info__session_count {
+    sql: ${TABLE}.client_info.session_count ;;
+    type: number
+    group_label: "Client Info"
+    group_item_label: "Session Count"
+  }
+
+  dimension: client_info__session_id {
+    sql: ${TABLE}.client_info.session_id ;;
+    type: string
+    group_label: "Client Info"
+    group_item_label: "Session Id"
+  }
+
   dimension: client_info__telemetry_sdk_build {
     sql: ${TABLE}.client_info.telemetry_sdk_build ;;
     type: string
@@ -347,6 +361,13 @@ view: baseline_table {
   dimension: metrics__labeled_counter__metrics_search_count {
     sql: ${TABLE}.metrics.labeled_counter.metrics_search_count ;;
     hidden: yes
+  }
+
+  dimension: metrics__string__first_session_install_source {
+    sql: ${TABLE}.metrics.string.first_session_install_source ;;
+    type: string
+    group_label: "Metrics String"
+    group_item_label: "First Session Install Source"
   }
 
   dimension: metrics__string__glean_baseline_locale {

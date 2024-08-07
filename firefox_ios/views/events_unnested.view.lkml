@@ -122,6 +122,11 @@ view: events_unnested {
     hidden: yes
   }
 
+  dimension: event_id {
+    sql: ${TABLE}.event_id ;;
+    type: string
+  }
+
   dimension: event_name {
     sql: ${TABLE}.event_name ;;
     type: string
@@ -429,4 +434,44 @@ view: events_unnested {
   }
 
   sql_table_name: `mozdata.firefox_ios.events_unnested` ;;
+}
+
+view: events_unnested__event_extra {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value {
+    sql: ${TABLE}.value ;;
+    type: string
+  }
+}
+
+view: events_unnested__ping_info__experiments {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
+  }
+
+  dimension: value__branch {
+    sql: ${TABLE}.value.branch ;;
+    type: string
+    group_label: "Value"
+    group_item_label: "Branch"
+  }
+
+  dimension: value__extra__enrollment_id {
+    sql: ${TABLE}.value.extra.enrollment_id ;;
+    type: string
+    group_label: "Value Extra"
+    group_item_label: "Enrollment Id"
+  }
+
+  dimension: value__extra__type {
+    sql: ${TABLE}.value.extra.type ;;
+    type: string
+    group_label: "Value Extra"
+    group_item_label: "Type"
+  }
 }

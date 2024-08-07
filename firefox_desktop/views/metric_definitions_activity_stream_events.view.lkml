@@ -11,115 +11,183 @@ view: metric_definitions_activity_stream_events {
     event = 'CLICK'
     AND source = 'CARDGRID'
     AND JSON_EXTRACT_SCALAR(value, '$.card_type') = 'organic'
-) AS pocket_rec_clicks,COUNTIF(
+) AS pocket_rec_clicks,
+COUNTIF(
     event = 'CLICK'
     AND source = 'CARDGRID'
     AND JSON_EXTRACT_SCALAR(value, '$.card_type') = 'spoc'
-) AS pocket_spoc_clicks,COUNTIF(
+) AS pocket_spoc_clicks,
+COUNTIF(
     event = 'PREF_CHANGED'
     AND source = 'TOP_STORIES'
     AND JSON_EXTRACT_SCALAR(value, '$.status') = 'false'
-) AS disable_pocket_clicks,COUNTIF(
+) AS disable_pocket_clicks,
+COUNTIF(
     event = 'PREF_CHANGED'
     AND source = 'POCKET_SPOCS'
     AND JSON_EXTRACT_SCALAR(value, '$.status') = 'false'
-) AS disable_pocket_spocs_clicks,COUNTIF(
-        event = 'BLOCK'
-        AND value LIKE '%spoc%'
-        AND SOURCE = 'TOP_SITES'
-      ) AS sponsored_tiles_dismissals,COALESCE(LOGICAL_OR(
-        event = 'BLOCK'
-        AND value LIKE '%spoc%'
-        AND SOURCE = 'TOP_SITES'
-      ), FALSE) AS any_sponsored_tiles_dismissals,COUNTIF(
-        event = 'BLOCK'
-        AND value LIKE '%spoc%'
-        AND SOURCE = 'TOP_SITES'
-        AND action_position <= 1
-      ) AS sponsored_tiles_dismissals_pos1_2,
+) AS disable_pocket_spocs_clicks,
+
+                looker_base_fields_app_name,
+looker_base_fields_app_version,
+looker_base_fields_country,
+looker_base_fields_default_search_engine,
+looker_base_fields_distribution_id,
+looker_base_fields_is_default_browser,
+looker_base_fields_locale,
+looker_base_fields_normalized_channel,
+looker_base_fields_normalized_os_version,
+looker_base_fields_os,
+looker_base_fields_partner_id,
+looker_base_fields_sample_id,
+
                 client_id AS client_id,
-                submission_date AS submission_date
-              FROM
+                {% if aggregate_metrics_by._parameter_value == 'day' %}
+                submission_date AS analysis_basis
+                {% elsif aggregate_metrics_by._parameter_value == 'week'  %}
+                (FORMAT_DATE(
+                    '%F',
+                    DATE_TRUNC(submission_date,
+                    WEEK(MONDAY)))
+                ) AS analysis_basis
+                {% elsif aggregate_metrics_by._parameter_value == 'month'  %}
+                (FORMAT_DATE(
+                    '%Y-%m',
+                    submission_date)
+                ) AS analysis_basis
+                {% elsif aggregate_metrics_by._parameter_value == 'quarter'  %}
+                (FORMAT_DATE(
+                    '%Y-%m',
+                    DATE_TRUNC(submission_date,
+                    QUARTER))
+                ) AS analysis_basis
+                {% elsif aggregate_metrics_by._parameter_value == 'year'  %}
+                (EXTRACT(
+                    YEAR FROM submission_date)
+                ) AS analysis_basis
+                {% else %}
+                NULL as analysis_basis
+                {% endif %}
+            FROM
                 (
-    SELECT
-        *
-    FROM
-        (
+                    SELECT
+                        activity_stream_events.*,
+                        looker_base_fields.app_name AS looker_base_fields_app_name,
+looker_base_fields.app_version AS looker_base_fields_app_version,
+looker_base_fields.country AS looker_base_fields_country,
+looker_base_fields.default_search_engine AS looker_base_fields_default_search_engine,
+looker_base_fields.distribution_id AS looker_base_fields_distribution_id,
+looker_base_fields.is_default_browser AS looker_base_fields_is_default_browser,
+looker_base_fields.locale AS looker_base_fields_locale,
+looker_base_fields.normalized_channel AS looker_base_fields_normalized_channel,
+looker_base_fields.normalized_os_version AS looker_base_fields_normalized_os_version,
+looker_base_fields.os AS looker_base_fields_os,
+looker_base_fields.partner_id AS looker_base_fields_partner_id,
+looker_base_fields.sample_id AS looker_base_fields_sample_id,
+
+                    FROM
+                    (
+            SELECT
+                *
+            FROM
+                (
     SELECT
         *,
         DATE(submission_timestamp) AS submission_date
     FROM mozdata.activity_stream.events
 )
-    )
-              WHERE submission_date BETWEEN
-                SAFE_CAST({% date_start metric_definitions_firefox_desktop.submission_date %} AS DATE) AND
-                SAFE_CAST({% date_end metric_definitions_firefox_desktop.submission_date %} AS DATE)
-              GROUP BY
+            ) AS activity_stream_events
+        JOIN
+    (
+            SELECT
+                *
+            FROM
+                (
+  SELECT
+    client_id,
+    submission_date,
+    sample_id,
+    app_name,
+    app_version,
+    normalized_channel,
+    country,
+    experiments,
+    os,
+    locale,
+    is_default_browser,
+    partner_id,
+    distribution_id,
+    default_search_engine,
+    normalized_os_version
+  FROM
+    `moz-fx-data-shared-prod`.telemetry_derived.clients_daily_v6
+)
+
+            ) AS looker_base_fields
+        
+    ON 
+    activity_stream_events.client_id =
+        looker_base_fields.client_id AND
+        activity_stream_events.submission_date =
+        looker_base_fields.submission_date
+    
+                
+                    WHERE 
+                    activity_stream_events.submission_date
+                    BETWEEN
+                    COALESCE(
+                        SAFE_CAST(
+                            {% date_start submission_date %} AS DATE
+                        ), CURRENT_DATE()) AND
+                    COALESCE(
+                        SAFE_CAST(
+                            {% date_end submission_date %} AS DATE
+                        ), CURRENT_DATE())
+                 AND 
+                    looker_base_fields.submission_date
+                    BETWEEN
+                    COALESCE(
+                        SAFE_CAST(
+                            {% date_start submission_date %} AS DATE
+                        ), CURRENT_DATE()) AND
+                    COALESCE(
+                        SAFE_CAST(
+                            {% date_end submission_date %} AS DATE
+                        ), CURRENT_DATE())
+                
+                    AND
+                        looker_base_fields.sample_id < {% parameter sampling %}
+                
+                )
+            GROUP BY
+                looker_base_fields_app_name,
+looker_base_fields_app_version,
+looker_base_fields_country,
+looker_base_fields_default_search_engine,
+looker_base_fields_distribution_id,
+looker_base_fields_is_default_browser,
+looker_base_fields_locale,
+looker_base_fields_normalized_channel,
+looker_base_fields_normalized_os_version,
+looker_base_fields_os,
+looker_base_fields_partner_id,
+looker_base_fields_sample_id,
+
                 client_id,
-                submission_date ;;
+                analysis_basis ;;
   }
 
   dimension: client_id {
     type: string
-    sql: COALESCE(SAFE_CAST(${TABLE}.client_id AS STRING)
-                {%- if  metric_definitions_browser_launched_to_handle_events._in_query %}
-                , SAFE_CAST(metric_definitions_browser_launched_to_handle_events.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_active_users_aggregates_v1._in_query %}
-                , SAFE_CAST(metric_definitions_active_users_aggregates_v1.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_main._in_query %}
-                , SAFE_CAST(metric_definitions_main.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_crash._in_query %}
-                , SAFE_CAST(metric_definitions_crash.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_events_memory._in_query %}
-                , SAFE_CAST(metric_definitions_events_memory.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_search_clients_engines_sources_daily._in_query %}
-                , SAFE_CAST(metric_definitions_search_clients_engines_sources_daily.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_clients_daily._in_query %}
-                , SAFE_CAST(metric_definitions_clients_daily.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_events._in_query %}
-                , SAFE_CAST(metric_definitions_events.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_newtab_interactions._in_query %}
-                , SAFE_CAST(metric_definitions_newtab_interactions.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_normandy_events._in_query %}
-                , SAFE_CAST(metric_definitions_normandy_events.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_activity_stream_events._in_query %}
-                , SAFE_CAST(metric_definitions_activity_stream_events.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_sponsored_tiles_clients_daily._in_query %}
-                , SAFE_CAST(metric_definitions_sponsored_tiles_clients_daily.client_id AS STRING)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_clients_first_seen_v2._in_query %}
-                , SAFE_CAST(metric_definitions_clients_first_seen_v2.client_id AS STRING)
-                {%- endif -%}
-            ) ;;
+    sql: SAFE_CAST(${TABLE}.client_id AS STRING) ;;
     label: "Client ID"
     primary_key: yes
+    group_label: "Base Fields"
     description: "Unique client identifier"
   }
 
   dimension: pocket_rec_clicks {
+    group_label: "Metrics"
     label: "Clicked Pocket organic recs in New Tab"
     description: "    Counts the number of Pocket rec clicks made by each client.
 "
@@ -128,6 +196,7 @@ view: metric_definitions_activity_stream_events {
   }
 
   dimension: pocket_spoc_clicks {
+    group_label: "Metrics"
     label: "Clicked Pocket sponsored content in New Tab"
     description: "    Counts the number of Pocket sponsored content clicks made by each client.
 "
@@ -136,6 +205,7 @@ view: metric_definitions_activity_stream_events {
   }
 
   dimension: disable_pocket_clicks {
+    group_label: "Metrics"
     label: "Disabled Pocket in New Tab"
     description: "    Counts the number of clicks to disable Pocket in New Tab made by each client.
 "
@@ -144,6 +214,7 @@ view: metric_definitions_activity_stream_events {
   }
 
   dimension: disable_pocket_spocs_clicks {
+    group_label: "Metrics"
     label: "Disabled Pocket sponsored content in New Tab"
     description: "    Counts the number of clicks to disable Pocket sponsored content
     in New Tab made by each client.
@@ -152,82 +223,89 @@ view: metric_definitions_activity_stream_events {
     sql: ${TABLE}.disable_pocket_spocs_clicks ;;
   }
 
-  dimension: sponsored_tiles_dismissals {
-    label: "Sponsored Tiles Dismissals Count"
-    description: "Count of sponsored tiles dismissals in all positions"
-    type: number
-    sql: ${TABLE}.sponsored_tiles_dismissals ;;
+  dimension: app_name {
+    sql: ${TABLE}.looker_base_fields_app_name ;;
+    type: string
+    group_label: "Base Fields"
   }
 
-  dimension: any_sponsored_tiles_dismissals {
-    label: "Any Sponsored Tiles Dismissed"
-    description: "Clients that dismissed any sponsored tiles"
-    type: number
-    sql: ${TABLE}.any_sponsored_tiles_dismissals ;;
+  dimension: app_version {
+    sql: ${TABLE}.looker_base_fields_app_version ;;
+    type: string
+    group_label: "Base Fields"
   }
 
-  dimension: sponsored_tiles_dismissals_pos1_2 {
-    label: "Sponsored Tiles Dismissals Count (Positions 1 and 2)"
-    description: "Count of sponsored tiles dismissals in the first two positions"
+  dimension: country {
+    sql: ${TABLE}.looker_base_fields_country ;;
+    type: string
+    map_layer_name: countries
+    group_label: "Base Fields"
+  }
+
+  dimension: default_search_engine {
+    sql: ${TABLE}.looker_base_fields_default_search_engine ;;
+    type: string
+    group_label: "Base Fields"
+  }
+
+  dimension: distribution_id {
+    sql: ${TABLE}.looker_base_fields_distribution_id ;;
+    type: string
+    group_label: "Base Fields"
+  }
+
+  dimension: experiments {
+    sql: ${TABLE}.looker_base_fields_experiments ;;
+    hidden: yes
+    group_label: "Base Fields"
+  }
+
+  dimension: is_default_browser {
+    sql: ${TABLE}.looker_base_fields_is_default_browser ;;
+    type: yesno
+    group_label: "Base Fields"
+  }
+
+  dimension: locale {
+    sql: ${TABLE}.looker_base_fields_locale ;;
+    type: string
+    group_label: "Base Fields"
+  }
+
+  dimension: normalized_channel {
+    sql: ${TABLE}.looker_base_fields_normalized_channel ;;
+    type: string
+    group_label: "Base Fields"
+  }
+
+  dimension: normalized_os_version {
+    sql: ${TABLE}.looker_base_fields_normalized_os_version ;;
+    type: string
+    group_label: "Base Fields"
+  }
+
+  dimension: os {
+    sql: ${TABLE}.looker_base_fields_os ;;
+    type: string
+    group_label: "Base Fields"
+  }
+
+  dimension: partner_id {
+    sql: ${TABLE}.looker_base_fields_partner_id ;;
+    type: string
+    group_label: "Base Fields"
+  }
+
+  dimension: sample_id {
+    sql: ${TABLE}.looker_base_fields_sample_id ;;
     type: number
-    sql: ${TABLE}.sponsored_tiles_dismissals_pos1_2 ;;
+    group_label: "Base Fields"
   }
 
   dimension_group: submission {
     type: time
-    sql: COALESCE(CAST(${TABLE}.submission_date AS TIMESTAMP)
-                {%- if  metric_definitions_browser_launched_to_handle_events._in_query %}
-                , CAST(metric_definitions_browser_launched_to_handle_events.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_active_users_aggregates_v1._in_query %}
-                , CAST(metric_definitions_active_users_aggregates_v1.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_main._in_query %}
-                , CAST(metric_definitions_main.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_crash._in_query %}
-                , CAST(metric_definitions_crash.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_events_memory._in_query %}
-                , CAST(metric_definitions_events_memory.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_search_clients_engines_sources_daily._in_query %}
-                , CAST(metric_definitions_search_clients_engines_sources_daily.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_clients_daily._in_query %}
-                , CAST(metric_definitions_clients_daily.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_events._in_query %}
-                , CAST(metric_definitions_events.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_newtab_interactions._in_query %}
-                , CAST(metric_definitions_newtab_interactions.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_normandy_events._in_query %}
-                , CAST(metric_definitions_normandy_events.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_activity_stream_events._in_query %}
-                , CAST(metric_definitions_activity_stream_events.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_sponsored_tiles_clients_daily._in_query %}
-                , CAST(metric_definitions_sponsored_tiles_clients_daily.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            
-                {%- if  metric_definitions_clients_first_seen_v2._in_query %}
-                , CAST(metric_definitions_clients_first_seen_v2.submission_date AS TIMESTAMP)
-                {%- endif -%}
-            ) ;;
+    group_label: "Base Fields"
+    sql: CAST(${TABLE}.analysis_basis AS TIMESTAMP) ;;
     label: "Submission"
     timeframes: [
       raw,
@@ -240,14 +318,49 @@ view: metric_definitions_activity_stream_events {
   }
 
   set: metrics {
-    fields: [
-      pocket_rec_clicks,
-      pocket_spoc_clicks,
-      disable_pocket_clicks,
-      disable_pocket_spocs_clicks,
-      sponsored_tiles_dismissals,
-      any_sponsored_tiles_dismissals,
-      sponsored_tiles_dismissals_pos1_2,
-    ]
+    fields: [pocket_rec_clicks, pocket_spoc_clicks, disable_pocket_clicks, disable_pocket_spocs_clicks]
+  }
+
+  parameter: aggregate_metrics_by {
+    label: "Aggregate Client Metrics Per"
+    type: unquoted
+    default_value: "day"
+
+    allowed_value: {
+      label: "Per Day"
+      value: "day"
+    }
+
+    allowed_value: {
+      label: "Per Week"
+      value: "week"
+    }
+
+    allowed_value: {
+      label: "Per Month"
+      value: "month"
+    }
+
+    allowed_value: {
+      label: "Per Quarter"
+      value: "quarter"
+    }
+
+    allowed_value: {
+      label: "Per Year"
+      value: "year"
+    }
+
+    allowed_value: {
+      label: "Overall"
+      value: "overall"
+    }
+  }
+
+  parameter: sampling {
+    label: "Sample of source data in %"
+    type: unquoted
+    default_value: "100"
+    hidden: no
   }
 }

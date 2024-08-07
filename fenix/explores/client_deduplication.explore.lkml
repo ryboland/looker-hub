@@ -57,36 +57,23 @@ explore: client_deduplication {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${client_deduplication.metrics__labeled_counter__metrics_search_count}) AS client_deduplication__metrics__labeled_counter__metrics_search_count ON ${client_deduplication.document_id} = ${client_deduplication__metrics__labeled_counter__metrics_search_count.document_id} ;;
   }
-}
 
-explore: suggest__client_deduplication__metrics__labeled_counter__browser_search_ad_clicks {
-  hidden: yes
-}
+  join: client_deduplication__events {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${client_deduplication.events}) AS client_deduplication__events ;;
+  }
 
-explore: suggest__client_deduplication__metrics__labeled_counter__browser_search_in_content {
-  hidden: yes
-}
+  join: client_deduplication__events__extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${client_deduplication__events.extra}) AS client_deduplication__events__extra ;;
+  }
 
-explore: suggest__client_deduplication__metrics__labeled_counter__browser_search_with_ads {
-  hidden: yes
+  join: client_deduplication__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${client_deduplication.ping_info__experiments}) AS client_deduplication__ping_info__experiments ;;
+  }
 }
 
 explore: suggest__client_deduplication__metrics__labeled_counter__glean_error_invalid_label {
-  hidden: yes
-}
-
-explore: suggest__client_deduplication__metrics__labeled_counter__glean_error_invalid_overflow {
-  hidden: yes
-}
-
-explore: suggest__client_deduplication__metrics__labeled_counter__glean_error_invalid_state {
-  hidden: yes
-}
-
-explore: suggest__client_deduplication__metrics__labeled_counter__glean_error_invalid_value {
-  hidden: yes
-}
-
-explore: suggest__client_deduplication__metrics__labeled_counter__metrics_search_count {
   hidden: yes
 }

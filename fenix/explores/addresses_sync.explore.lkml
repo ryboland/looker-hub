@@ -58,36 +58,23 @@ explore: addresses_sync {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${addresses_sync.metrics__labeled_counter__glean_error_invalid_value}) AS addresses_sync__metrics__labeled_counter__glean_error_invalid_value ON ${addresses_sync.document_id} = ${addresses_sync__metrics__labeled_counter__glean_error_invalid_value.document_id} ;;
   }
-}
 
-explore: suggest__addresses_sync__metrics__labeled_counter__addresses_sync_incoming {
-  hidden: yes
-}
+  join: addresses_sync__events {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${addresses_sync.events}) AS addresses_sync__events ;;
+  }
 
-explore: suggest__addresses_sync__metrics__labeled_counter__addresses_sync_outgoing {
-  hidden: yes
-}
+  join: addresses_sync__events__extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${addresses_sync__events.extra}) AS addresses_sync__events__extra ;;
+  }
 
-explore: suggest__addresses_sync__metrics__labeled_counter__addresses_sync_v2_incoming {
-  hidden: yes
-}
-
-explore: suggest__addresses_sync__metrics__labeled_counter__addresses_sync_v2_outgoing {
-  hidden: yes
+  join: addresses_sync__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${addresses_sync.ping_info__experiments}) AS addresses_sync__ping_info__experiments ;;
+  }
 }
 
 explore: suggest__addresses_sync__metrics__labeled_counter__glean_error_invalid_label {
-  hidden: yes
-}
-
-explore: suggest__addresses_sync__metrics__labeled_counter__glean_error_invalid_overflow {
-  hidden: yes
-}
-
-explore: suggest__addresses_sync__metrics__labeled_counter__glean_error_invalid_state {
-  hidden: yes
-}
-
-explore: suggest__addresses_sync__metrics__labeled_counter__glean_error_invalid_value {
   hidden: yes
 }

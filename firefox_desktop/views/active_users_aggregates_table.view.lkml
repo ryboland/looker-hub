@@ -5,16 +5,6 @@
 # You can extend this view in the looker-spoke-default project (https://github.com/mozilla/looker-spoke-default)
 
 view: active_users_aggregates_table {
-  dimension: active_hours {
-    sql: ${TABLE}.active_hours ;;
-    type: number
-  }
-
-  dimension: ad_clicks {
-    sql: ${TABLE}.ad_clicks ;;
-    type: number
-  }
-
   dimension: app_name {
     sql: ${TABLE}.app_name ;;
     type: string
@@ -76,6 +66,11 @@ view: active_users_aggregates_table {
     map_layer_name: countries
   }
 
+  dimension: daily_users {
+    sql: ${TABLE}.daily_users ;;
+    type: number
+  }
+
   dimension: dau {
     sql: ${TABLE}.dau ;;
     type: number
@@ -96,8 +91,8 @@ view: active_users_aggregates_table {
     type: yesno
   }
 
-  dimension: language_name {
-    sql: ${TABLE}.language_name ;;
+  dimension: locale {
+    sql: ${TABLE}.locale ;;
     type: string
   }
 
@@ -106,13 +101,8 @@ view: active_users_aggregates_table {
     type: number
   }
 
-  dimension: new_profiles {
-    sql: ${TABLE}.new_profiles ;;
-    type: number
-  }
-
-  dimension: organic_search_count {
-    sql: ${TABLE}.organic_search_count ;;
+  dimension: monthly_users {
+    sql: ${TABLE}.monthly_users ;;
     type: number
   }
 
@@ -141,33 +131,18 @@ view: active_users_aggregates_table {
     type: number
   }
 
-  dimension: qdau {
-    sql: ${TABLE}.qdau ;;
-    type: number
-  }
-
-  dimension: search_count {
-    sql: ${TABLE}.search_count ;;
-    type: number
-  }
-
-  dimension: search_with_ads {
-    sql: ${TABLE}.search_with_ads ;;
-    type: number
-  }
-
   dimension: segment {
     sql: ${TABLE}.segment ;;
     type: string
   }
 
-  dimension: uri_count {
-    sql: ${TABLE}.uri_count ;;
+  dimension: wau {
+    sql: ${TABLE}.wau ;;
     type: number
   }
 
-  dimension: wau {
-    sql: ${TABLE}.wau ;;
+  dimension: weekly_users {
+    sql: ${TABLE}.weekly_users ;;
     type: number
   }
 

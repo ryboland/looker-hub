@@ -63,40 +63,23 @@ explore: baseline {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${baseline.metrics__labeled_counter__search_in_content}) AS baseline__metrics__labeled_counter__search_in_content ON ${baseline.document_id} = ${baseline__metrics__labeled_counter__search_in_content.document_id} ;;
   }
-}
 
-explore: suggest__baseline__metrics__labeled_counter__browser_search_ad_clicks {
-  hidden: yes
-}
+  join: baseline__events {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${baseline.events}) AS baseline__events ;;
+  }
 
-explore: suggest__baseline__metrics__labeled_counter__browser_search_with_ads {
-  hidden: yes
+  join: baseline__events__extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${baseline__events.extra}) AS baseline__events__extra ;;
+  }
+
+  join: baseline__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${baseline.ping_info__experiments}) AS baseline__ping_info__experiments ;;
+  }
 }
 
 explore: suggest__baseline__metrics__labeled_counter__glean_error_invalid_label {
-  hidden: yes
-}
-
-explore: suggest__baseline__metrics__labeled_counter__glean_error_invalid_overflow {
-  hidden: yes
-}
-
-explore: suggest__baseline__metrics__labeled_counter__glean_error_invalid_state {
-  hidden: yes
-}
-
-explore: suggest__baseline__metrics__labeled_counter__glean_error_invalid_value {
-  hidden: yes
-}
-
-explore: suggest__baseline__metrics__labeled_counter__glean_validation_pings_submitted {
-  hidden: yes
-}
-
-explore: suggest__baseline__metrics__labeled_counter__search_counts {
-  hidden: yes
-}
-
-explore: suggest__baseline__metrics__labeled_counter__search_in_content {
   hidden: yes
 }

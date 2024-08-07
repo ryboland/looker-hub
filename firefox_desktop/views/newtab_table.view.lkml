@@ -113,6 +113,22 @@ view: newtab_table {
     description: "The user-visible version of the operating system (e.g. \"1.2.3\"). If the version detection fails, this metric gets set to `Unknown`."
   }
 
+  dimension: client_info__session_count {
+    sql: ${TABLE}.client_info.session_count ;;
+    type: number
+    group_label: "Client Info"
+    group_item_label: "Session Count"
+    description: "An optional running counter of the number of sessions for a client."
+  }
+
+  dimension: client_info__session_id {
+    sql: ${TABLE}.client_info.session_id ;;
+    type: string
+    group_label: "Client Info"
+    group_item_label: "Session Id"
+    description: "An optional UUID uniquely identifying the client's current session."
+  }
+
   dimension: client_info__telemetry_sdk_build {
     sql: ${TABLE}.client_info.telemetry_sdk_build ;;
     type: string
@@ -317,6 +333,15 @@ view: newtab_table {
 "
   }
 
+  dimension: metrics__boolean__newtab_weather_enabled {
+    sql: ${TABLE}.metrics.boolean.newtab_weather_enabled ;;
+    type: yesno
+    group_label: "Metrics Boolean"
+    group_item_label: "Newtab Weather Enabled"
+    description: "Whether the weather widget is enabled on the newtab. Corresponds to the value of the `browser.newtabpage.activity-stream.showWeather` pref.
+"
+  }
+
   dimension: metrics__boolean__pocket_enabled {
     sql: ${TABLE}.metrics.boolean.pocket_enabled ;;
     type: yesno
@@ -403,13 +428,22 @@ The labels are the `category.name` identifier of the metric.
 "
   }
 
+  dimension: metrics__quantity__topsites_sponsored_tiles_configured {
+    sql: ${TABLE}.metrics.quantity.topsites_sponsored_tiles_configured ;;
+    type: number
+    group_label: "Metrics Quantity"
+    group_item_label: "Topsites Sponsored Tiles Configured"
+    description: "The number of topsite tiles configured to be shown on newtab.
+"
+  }
+
   dimension: metrics__string__glean_client_annotation_experimentation_id {
     sql: ${TABLE}.metrics.string.glean_client_annotation_experimentation_id ;;
     type: string
     group_label: "Metrics String"
     group_item_label: "Glean Client Annotation Experimentation Id"
     description: "An experimentation identifier derived and provided by the application
-for the purpose of experimenation enrollment.
+for the purpose of experimentation enrollment.
 "
   }
 
@@ -474,9 +508,30 @@ default engine, and hence both versions of these fields will be filled in.
     hidden: yes
   }
 
+  dimension: metrics__string_list__newtab_selected_topics {
+    sql: ${TABLE}.metrics.string_list.newtab_selected_topics ;;
+    hidden: yes
+  }
+
   dimension: metrics__string_list__newtab_sov_allocation {
     sql: ${TABLE}.metrics.string_list.newtab_sov_allocation ;;
     hidden: yes
+  }
+
+  dimension: metrics__text__topsites_sponsored_tiles_received {
+    sql: ${TABLE}.metrics.text.topsites_sponsored_tiles_received ;;
+    type: string
+    group_label: "Metrics Text"
+    group_item_label: "Topsites Sponsored Tiles Received"
+  }
+
+  dimension: metrics__text2__topsites_sponsored_tiles_received {
+    sql: ${TABLE}.metrics.text2.topsites_sponsored_tiles_received ;;
+    type: string
+    group_label: "Metrics Text2"
+    group_item_label: "Topsites Sponsored Tiles Received"
+    description: "The stringified JSON of tiles processed for display (array of objects). Includes tiles not displayed and reason for not displaying. Fields included: advertiser, provider, display_position, display_fail_reason.
+"
   }
 
   dimension: metrics__uuid__legacy_telemetry_client_id {
@@ -491,6 +546,18 @@ Value may be the canary client id `c0ffeec0-ffee-c0ff-eec0-ffeec0ffeec0`
 in pings near when the data upload pref is disabled (if Telemetry gets
 to go first), or between when a client_id has been removed and when it
 has been regenerated.
+Does not need to be sent in the Glean \"deletion-request\" ping.
+"
+  }
+
+  dimension: metrics__uuid__legacy_telemetry_profile_group_id {
+    sql: ${TABLE}.metrics.uuid.legacy_telemetry_profile_group_id ;;
+    type: string
+    group_label: "Metrics Uuid"
+    group_item_label: "Legacy Telemetry Profile Group Id"
+    description: "The profile_group_id according to Telemetry.
+Might not always have a value due to being too early for it to have
+loaded.
 Does not need to be sent in the Glean \"deletion-request\" ping.
 "
   }

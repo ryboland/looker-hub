@@ -53,32 +53,23 @@ explore: migration {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${migration.metrics__labeled_counter__migration_logins_failure_counts}) AS migration__metrics__labeled_counter__migration_logins_failure_counts ON ${migration.document_id} = ${migration__metrics__labeled_counter__migration_logins_failure_counts.document_id} ;;
   }
+
+  join: migration__events {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${migration.events}) AS migration__events ;;
+  }
+
+  join: migration__events__extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${migration__events.extra}) AS migration__events__extra ;;
+  }
+
+  join: migration__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${migration.ping_info__experiments}) AS migration__ping_info__experiments ;;
+  }
 }
 
 explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_label {
-  hidden: yes
-}
-
-explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_overflow {
-  hidden: yes
-}
-
-explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_state {
-  hidden: yes
-}
-
-explore: suggest__migration__metrics__labeled_counter__glean_error_invalid_value {
-  hidden: yes
-}
-
-explore: suggest__migration__metrics__labeled_counter__migration_bookmarks_migrated {
-  hidden: yes
-}
-
-explore: suggest__migration__metrics__labeled_counter__migration_history_migrated {
-  hidden: yes
-}
-
-explore: suggest__migration__metrics__labeled_counter__migration_logins_failure_counts {
   hidden: yes
 }

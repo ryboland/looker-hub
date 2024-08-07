@@ -5,6 +5,24 @@
 # You can extend this view in the looker-spoke-default project (https://github.com/mozilla/looker-spoke-default)
 
 view: default_agent {
+  dimension: metrics__string__do_task_implementation {
+    label: "Do Task Implementation"
+    hidden: yes
+    sql: ${TABLE}.metrics.string.do_task_implementation ;;
+    type: string
+    group_label: "Do Task"
+    group_item_label: "Implementation"
+
+    link: {
+      label: "Glean Dictionary reference for Do Task Implementation"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_tasks/metrics/do_task_implementation"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Which implementation of `do-task` was used: \"JavaScript\" by default or \"C++\" if a Nimbus rollback was acted upon.
+"
+  }
+
   dimension: metrics__string__notification_action {
     label: "Notification Action"
     hidden: no
@@ -49,6 +67,44 @@ Many of the values correspond to buttons on the notification and should be prett
 "
   }
 
+  dimension: metrics__string__system_os_version {
+    label: "System Os Version"
+    hidden: no
+    sql: ${TABLE}.metrics.string.system_os_version ;;
+    type: string
+    group_label: "System"
+    group_item_label: "Os Version"
+
+    link: {
+      label: "Glean Dictionary reference for System Os Version"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_tasks/metrics/system_os_version"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The current Windows OS version, usually as a dotted quad (\"x.y.z.w\") with Windows Update Build Revision (UBR), but potentially as a dotted triple (\"x.y.z\") without UBR.
+"
+  }
+
+  dimension: metrics__string__system_previous_os_version {
+    label: "System Previous Os Version"
+    hidden: no
+    sql: ${TABLE}.metrics.string.system_previous_os_version ;;
+    type: string
+    group_label: "System"
+    group_item_label: "Previous Os Version"
+
+    link: {
+      label: "Glean Dictionary reference for System Previous Os Version"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_tasks/metrics/system_previous_os_version"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "The Windows OS version before it was changed to the current setting. The possible values are the same as for `system.os_version`.
+The OS does not keep track of the previous OS version, so the agent records this information itself. That means that it will be inaccurate until the first time the default is changed after the agent task begins running. Before then, the value of `previous_os_version` will be the same as `os_version`.
+This value is updated every time the Default Agent runs, so when the default browser is first changed the values for `os_version` and `previous_os_version` will be different. But on subsequent executions of the Default Agent, the two values will be the same.
+"
+  }
+
   dimension: metrics__string__system_default_browser {
     label: "System Default Browser"
     hidden: no
@@ -65,6 +121,25 @@ Many of the values correspond to buttons on the notification and should be prett
 
     description: "Which browser is currently set as the system default web browser. This is simply a string with the name of the browser binned to a fixed set of known browsers.
 Possible values currently include the following (from [DefaultBrowser.cpp](https://searchfox.org/mozilla-central/source/toolkit/mozapps/defaultagent/DefaultBrowser.cpp)): * \"error\" * \"\" (unknown) * \"firefox\" * \"chrome\" * \"edge\" * \"edge-chrome\" * \"ie\" * \"opera\" * \"brave\" * \"yandex\" * \"qq-browser\" * \"360-browser\" * \"sogou\" * \"duckduckgo\"
+"
+  }
+
+  dimension: metrics__string__system_default_pdf_handler {
+    label: "System Default Pdf Handler"
+    hidden: no
+    sql: ${TABLE}.metrics.string.system_default_pdf_handler ;;
+    type: string
+    group_label: "System Default"
+    group_item_label: "Pdf Handler"
+
+    link: {
+      label: "Glean Dictionary reference for System Default Pdf Handler"
+      url: "https://dictionary.telemetry.mozilla.org/apps/firefox_desktop_background_tasks/metrics/system_default_pdf_handler"
+      icon_url: "https://dictionary.telemetry.mozilla.org/favicon.png"
+    }
+
+    description: "Which pdf handler is currently set as the system default handler. This is simply a string with the name of the handler binned to a fixed set of known handlers.
+Possible values currently include the following (from [DefaultPDF.cpp](https://searchfox.org/mozilla-central/source/toolkit/mozapps/defaultagent/DefaultPDF.cpp)): * \"Error\" * \"\" (unknown) * \"Firefox\" * \"Microsoft Edge\" * \"Google Chrome\" * \"Adobe Acrobat\" * \"WPS\" * \"Nitro\" * \"Foxit\" * \"PDF-XChange\" * \"Avast\" * \"Sumatra\"
 "
   }
 
@@ -285,6 +360,22 @@ The labels are the `category.name` identifier of the metric.
     group_label: "Client Info"
     group_item_label: "Os Version"
     description: "The user-visible version of the operating system (e.g. \"1.2.3\"). If the version detection fails, this metric gets set to `Unknown`."
+  }
+
+  dimension: client_info__session_count {
+    sql: ${TABLE}.client_info.session_count ;;
+    type: number
+    group_label: "Client Info"
+    group_item_label: "Session Count"
+    description: "An optional running counter of the number of sessions for a client."
+  }
+
+  dimension: client_info__session_id {
+    sql: ${TABLE}.client_info.session_id ;;
+    type: string
+    group_label: "Client Info"
+    group_item_label: "Session Id"
+    description: "An optional UUID uniquely identifying the client's current session."
   }
 
   dimension: client_info__telemetry_sdk_build {
@@ -646,18 +737,18 @@ view: default_agent__metrics__labeled_counter__glean_error_invalid_label {
     hidden: yes
   }
 
+  dimension: value {
+    type: number
+    sql: ${TABLE}.value ;;
+    hidden: yes
+  }
+
   dimension: label {
     type: string
     sql: ${TABLE}.key ;;
     suggest_explore: suggest__default_agent__metrics__labeled_counter__glean_error_invalid_label
     suggest_dimension: suggest__default_agent__metrics__labeled_counter__glean_error_invalid_label.key
     hidden: no
-  }
-
-  dimension: value {
-    type: number
-    sql: ${TABLE}.value ;;
-    hidden: yes
   }
 
   measure: count {
@@ -689,18 +780,16 @@ view: default_agent__metrics__labeled_counter__glean_error_invalid_overflow {
     hidden: yes
   }
 
-  dimension: label {
-    type: string
-    sql: ${TABLE}.key ;;
-    suggest_explore: suggest__default_agent__metrics__labeled_counter__glean_error_invalid_overflow
-    suggest_dimension: suggest__default_agent__metrics__labeled_counter__glean_error_invalid_overflow.key
-    hidden: no
-  }
-
   dimension: value {
     type: number
     sql: ${TABLE}.value ;;
     hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    hidden: no
   }
 
   measure: count {
@@ -732,18 +821,16 @@ view: default_agent__metrics__labeled_counter__glean_error_invalid_state {
     hidden: yes
   }
 
-  dimension: label {
-    type: string
-    sql: ${TABLE}.key ;;
-    suggest_explore: suggest__default_agent__metrics__labeled_counter__glean_error_invalid_state
-    suggest_dimension: suggest__default_agent__metrics__labeled_counter__glean_error_invalid_state.key
-    hidden: no
-  }
-
   dimension: value {
     type: number
     sql: ${TABLE}.value ;;
     hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    hidden: no
   }
 
   measure: count {
@@ -775,18 +862,16 @@ view: default_agent__metrics__labeled_counter__glean_error_invalid_value {
     hidden: yes
   }
 
-  dimension: label {
-    type: string
-    sql: ${TABLE}.key ;;
-    suggest_explore: suggest__default_agent__metrics__labeled_counter__glean_error_invalid_value
-    suggest_dimension: suggest__default_agent__metrics__labeled_counter__glean_error_invalid_value.key
-    hidden: no
-  }
-
   dimension: value {
     type: number
     sql: ${TABLE}.value ;;
     hidden: yes
+  }
+
+  dimension: label {
+    type: string
+    sql: ${TABLE}.key ;;
+    hidden: no
   }
 
   measure: count {
@@ -821,59 +906,64 @@ order by n desc ;;
   }
 }
 
-view: suggest__default_agent__metrics__labeled_counter__glean_error_invalid_overflow {
-  derived_table: {
-    sql: select
-    m.key,
-    count(*) as n
-from mozdata.firefox_desktop_background_tasks.default_agent as t,
-unnest(metrics.labeled_counter.glean_error_invalid_overflow) as m
-where date(submission_timestamp) > date_sub(current_date, interval 30 day)
-    and sample_id = 0
-group by key
-order by n desc ;;
+view: default_agent__events {
+  dimension: category {
+    sql: ${TABLE}.category ;;
+    type: string
   }
 
-  dimension: key {
+  dimension: extra {
+    sql: ${TABLE}.extra ;;
+    hidden: yes
+  }
+
+  dimension: name {
+    sql: ${TABLE}.name ;;
     type: string
-    sql: ${TABLE}.key ;;
+  }
+
+  dimension: timestamp {
+    sql: ${TABLE}.timestamp ;;
+    type: number
   }
 }
 
-view: suggest__default_agent__metrics__labeled_counter__glean_error_invalid_state {
-  derived_table: {
-    sql: select
-    m.key,
-    count(*) as n
-from mozdata.firefox_desktop_background_tasks.default_agent as t,
-unnest(metrics.labeled_counter.glean_error_invalid_state) as m
-where date(submission_timestamp) > date_sub(current_date, interval 30 day)
-    and sample_id = 0
-group by key
-order by n desc ;;
+view: default_agent__events__extra {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
   }
 
-  dimension: key {
+  dimension: value {
+    sql: ${TABLE}.value ;;
     type: string
-    sql: ${TABLE}.key ;;
   }
 }
 
-view: suggest__default_agent__metrics__labeled_counter__glean_error_invalid_value {
-  derived_table: {
-    sql: select
-    m.key,
-    count(*) as n
-from mozdata.firefox_desktop_background_tasks.default_agent as t,
-unnest(metrics.labeled_counter.glean_error_invalid_value) as m
-where date(submission_timestamp) > date_sub(current_date, interval 30 day)
-    and sample_id = 0
-group by key
-order by n desc ;;
+view: default_agent__ping_info__experiments {
+  dimension: key {
+    sql: ${TABLE}.key ;;
+    type: string
   }
 
-  dimension: key {
+  dimension: value__branch {
+    sql: ${TABLE}.value.branch ;;
     type: string
-    sql: ${TABLE}.key ;;
+    group_label: "Value"
+    group_item_label: "Branch"
+  }
+
+  dimension: value__extra__enrollment_id {
+    sql: ${TABLE}.value.extra.enrollment_id ;;
+    type: string
+    group_label: "Value Extra"
+    group_item_label: "Enrollment Id"
+  }
+
+  dimension: value__extra__type {
+    sql: ${TABLE}.value.extra.type ;;
+    type: string
+    group_label: "Value Extra"
+    group_item_label: "Type"
   }
 }

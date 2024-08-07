@@ -52,32 +52,23 @@ explore: messaging_system {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${messaging_system.metrics__labeled_counter__messaging_system_unknown_keys}) AS messaging_system__metrics__labeled_counter__messaging_system_unknown_keys ON ${messaging_system.document_id} = ${messaging_system__metrics__labeled_counter__messaging_system_unknown_keys.document_id} ;;
   }
+
+  join: messaging_system__events {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${messaging_system.events}) AS messaging_system__events ;;
+  }
+
+  join: messaging_system__events__extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${messaging_system__events.extra}) AS messaging_system__events__extra ;;
+  }
+
+  join: messaging_system__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${messaging_system.ping_info__experiments}) AS messaging_system__ping_info__experiments ;;
+  }
 }
 
 explore: suggest__messaging_system__metrics__labeled_counter__glean_error_invalid_label {
-  hidden: yes
-}
-
-explore: suggest__messaging_system__metrics__labeled_counter__glean_error_invalid_overflow {
-  hidden: yes
-}
-
-explore: suggest__messaging_system__metrics__labeled_counter__glean_error_invalid_state {
-  hidden: yes
-}
-
-explore: suggest__messaging_system__metrics__labeled_counter__glean_error_invalid_value {
-  hidden: yes
-}
-
-explore: suggest__messaging_system__metrics__labeled_counter__messaging_system_attribution_unknown_keys {
-  hidden: yes
-}
-
-explore: suggest__messaging_system__metrics__labeled_counter__messaging_system_invalid_nested_data {
-  hidden: yes
-}
-
-explore: suggest__messaging_system__metrics__labeled_counter__messaging_system_unknown_keys {
   hidden: yes
 }

@@ -139,11 +139,6 @@ explore: metrics {
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__history_selected_item}) AS metrics__metrics__labeled_counter__history_selected_item ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__history_selected_item.document_id} ;;
   }
 
-  join: metrics__metrics__labeled_counter__inactive_tabs_tray_toggle_inactive_tab_tray {
-    relationship: one_to_many
-    sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__inactive_tabs_tray_toggle_inactive_tab_tray}) AS metrics__metrics__labeled_counter__inactive_tabs_tray_toggle_inactive_tab_tray ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__inactive_tabs_tray_toggle_inactive_tab_tray.document_id} ;;
-  }
-
   join: metrics__metrics__labeled_counter__library_panel_pressed {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__library_panel_pressed}) AS metrics__metrics__labeled_counter__library_panel_pressed ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__library_panel_pressed.document_id} ;;
@@ -228,172 +223,23 @@ explore: metrics {
     relationship: one_to_many
     sql: LEFT JOIN UNNEST(${metrics.metrics__labeled_counter__wallpaper_analytics_themed_wallpaper}) AS metrics__metrics__labeled_counter__wallpaper_analytics_themed_wallpaper ON ${metrics.document_id} = ${metrics__metrics__labeled_counter__wallpaper_analytics_themed_wallpaper.document_id} ;;
   }
-}
 
-explore: suggest__metrics__metrics__labeled_counter__bookmarks_add {
-  hidden: yes
-}
+  join: metrics__events {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${metrics.events}) AS metrics__events ;;
+  }
 
-explore: suggest__metrics__metrics__labeled_counter__bookmarks_delete {
-  hidden: yes
-}
+  join: metrics__events__extra {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${metrics__events.extra}) AS metrics__events__extra ;;
+  }
 
-explore: suggest__metrics__metrics__labeled_counter__bookmarks_edit {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__bookmarks_open {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__bookmarks_view_list {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__browser_search_ad_clicks {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__browser_search_with_ads {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__firefox_home_page_firefox_homepage_origin {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__firefox_home_page_jump_back_in_group_open_origin {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__firefox_home_page_jump_back_in_show_all_origin {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__firefox_home_page_jump_back_in_tab_opened_origin {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__firefox_home_page_recently_saved_bookmark_origin {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__firefox_home_page_recently_saved_read_origin {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__firefox_home_page_recently_saved_show_all_origin {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__firefox_home_page_synced_tab_opened_origin {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__firefox_home_page_synced_tab_show_all_origin {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__firefox_home_page_your_library {
-  hidden: yes
+  join: metrics__ping_info__experiments {
+    relationship: one_to_many
+    sql: LEFT JOIN UNNEST(${metrics.ping_info__experiments}) AS metrics__ping_info__experiments ;;
+  }
 }
 
 explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_label {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_overflow {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_state {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__glean_error_invalid_value {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__glean_upload_ping_upload_failure {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__glean_validation_pings_submitted {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__history_selected_item {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__inactive_tabs_tray_toggle_inactive_tab_tray {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__library_panel_pressed {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__logins_store_read_query_error_count {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__logins_store_unlock_error_count {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__logins_store_write_query_error_count {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__pocket_open_story_origin {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__pocket_open_story_position {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__reading_list_add {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__reading_list_delete {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__search_counts {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__search_google_topsite_pressed {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__search_in_content {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__tabs_close {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__tabs_close_all {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__tabs_open {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__top_site_pressed_tile_origin {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__top_sites_pressed_tile_origin {
-  hidden: yes
-}
-
-explore: suggest__metrics__metrics__labeled_counter__wallpaper_analytics_themed_wallpaper {
   hidden: yes
 }
